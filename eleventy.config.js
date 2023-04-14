@@ -114,12 +114,17 @@ module.exports = function (eleventyConfig) {
         // console.log(
         //   "description: " + $("meta[name=description]").attr("content")
         // );
-        return $("meta[name=description]").attr("content");
+        const description = $("meta[name=description]").attr("content");
+        if (link.includes("youtube.com") || description == undefined) {
+          return "";
+        } else {
+          return description;
+        }
       } catch (e) {
         console.log(
           "Error fetching description for " + link + ": " + e.message
         );
-        return "(no description available)";
+        return "";
       }
     }
   );
@@ -136,6 +141,21 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Extract a list of the unique blog post authors used in all of the issues
+  // of The 11ty Bundle from Airtable data. Authors are sorted alphabetically
+  // by first name.
+  eleventyConfig.addFilter("getBundleAuthors", (collection) => {
+    let authorSet = new Set();
+    for (let item of collection) {
+      if (item.Author && item.Type == "blog post") {
+        authorSet.add(item.Author);
+      }
+    }
+    return Array.from(authorSet).sort((a, b) => {
+      return a > b ? 1 : -1;
+    });
+  });
+
   // Get all 11ty Bundle (Airtable) blog posts for a specific category
   eleventyConfig.addFilter(
     "postsInCategory",
@@ -144,6 +164,20 @@ module.exports = function (eleventyConfig) {
         .filter(
           (item) =>
             item.Type == "blog post" && item.Categories.includes(category)
+        )
+        .sort((a, b) => {
+          return a.Date > b.Date ? -1 : 1;
+        });
+    }
+  );
+
+  // Get all 11ty Bundle (Airtable) blog posts by a specific author
+  eleventyConfig.addFilter(
+    "postsByAuthor",
+    function postsbyAuthor(bundleitems, author) {
+      return bundleitems
+        .filter(
+          (item) => item.Type === "blog post" && item.Author.includes(author)
         )
         .sort((a, b) => {
           return a.Date > b.Date ? -1 : 1;

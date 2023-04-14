@@ -1,0 +1,41 @@
+---js
+{
+  eleventyComputed: {
+    title: "Posts by {{ Author }}",
+    description: "Posts in the 11ty Bundle written by: '{{ author }}'",
+  },
+  permalink: "/authors/{{ author | slugify }}/",
+  keywords: "authors, 11ty Bundle, 11ty, eleventy, blog posts",
+  eleventyExcludeFromCollections: "true",
+  pagination:  {
+    data: "getpostauthors",
+    size: 1,
+    alias: "author",
+    before: function(data) {
+      let authorSet = new Set();
+      for (let item of data) {
+        authorSet.add(item.Author);
+    }
+    return Array.from(authorSet).sort((a, b) => {
+      return a > b ? 1 : -1;
+    });
+    }
+  },
+  image: {
+    source: "young-bob.jpg",
+    alt: "a picture of Bob's face as a boy"
+  }
+}
+---
+
+<h2>Posts by {{ author }}</h2>
+
+<p><em>Newest listed first, links open in a new tab</em></p>
+
+<ul>
+{% for item in airtableitems | postsByAuthor(author) %}
+
+<li><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>, {{ item.Date }}</li>
+<p><em>{{ item.Link | getDescription }}</em></p>
+{% endfor %}
+</ul>
