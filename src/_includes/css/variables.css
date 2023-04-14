@@ -1,0 +1,34 @@
+:root {
+  /* Page structure */
+  --page-width-max: 1200px;
+
+  /* Type scale from https://www.fluid-type-scale.com/, smallest to largest */
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+  --radius-blob: 49% 51% 48% 52% / 57% 44% 56% 43%;
+
+  /* Accent Colors */
+  --dark-accent-color: #005bbb;
+  --light-accent-color: #ffd500;
+
+  /* Brand Styles */
+  --brand-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+  --brand-color: black;
+  --brand-link-radius: var(--radius-blob);
+
+  /* Post Styles */
+  --post-title-full-size: var(--font-size-xl);
+  --post-title-card-size: var(--font-size-lg);
+  --post-info-full-size: var(--font-size-base);
+  --post-info-card-size: var(--font-size-base);
+  --post-excerpt-card-size: var(--font-size-md);
+  --post-tag-size: var(--font-size-base);
+  --caption-size: var(--font-size-base);
+  --main-element-max: 65ch;
+}

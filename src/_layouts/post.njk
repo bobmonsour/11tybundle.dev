@@ -1,0 +1,39 @@
+---
+layout: default.njk
+---
+{# only include syntax highlighter CSS on blog posts that have code #}
+{% if pageHasCode %}
+  {%- css "pageHasCode" %}{% include "css/prism-okaidia.css" %}{% endcss %}
+{% endif %}
+
+{% from "macros.njk" import tagList %}
+
+<article class="post">
+  <h1 class="post-title">{{ title }}</h1>
+  <p class="post-date">{{ date | formatPostDate }}</p>
+  <p class="post-readingtime">{{ content | readingTime }}</p>
+  {{ tagList(tags) }}
+  {% if showImage %}
+    {% set imageSource %}{{ imageDir + image.source }}{% endset %}
+    {% image imageSource, image.alt, "100vw", "eager" %}
+  {% endif %}
+  {% if showImage and image.creditPerson and image.creditLink%}
+    <p>Photo by <a href="{{ image.creditLink }}">{{ image.creditPerson }}</a></p>
+  {% endif %}
+  {% if showImage and image.caption %}
+    <p>{{ image.caption }}</p>
+  {% endif %}
+  {{ content | safe }}
+  <hr>
+  {{ tagList(tags) }}
+  {%- if collections.posts %}
+    {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+    {%- set nextPost = collections.posts | getNextCollectionItem %}
+    {%- if nextPost or previousPost %}
+      <ul class="post-nextprev">
+        {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+        {%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+      </ul>
+    {%- endif %}
+  {%- endif %}
+</article>

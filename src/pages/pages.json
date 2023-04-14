@@ -1,0 +1,4 @@
+{
+  "layout": "default.njk",
+  "imageDir": "src/assets/img/"
+}

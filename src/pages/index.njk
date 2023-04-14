@@ -1,0 +1,15 @@
+---
+title: Bob Monsour | Home
+description: The personal website of Bob Monsour. Enjoying learning and deploying websites with 11ty and Netlify.
+keywords: retired, web development, eleventy, tennis
+image:
+  source: "young-bob.jpg"
+  alt: "a picture of Bob's face as a boy"
+permalink: /index.html
+---
+
+{% set latest_posts = collections.posts | reverse %}
+{% set postlist = latest_posts.slice(0,3) %}
+{% include "postlist.njk" %}
+
+<h3><a href="/archive/" title="link to more blog posts in the archive">More posts in the Archive...</a></h3>

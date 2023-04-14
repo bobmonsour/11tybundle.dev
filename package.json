@@ -1,0 +1,37 @@
+{
+  "name": "bobmonsour.com",
+  "version": "1.0.0",
+  "description": "It's my personal site...and a work in progress. It's built with [eleventy](https://www.11ty.dev/)...something I'm enjoying learning and using.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "debug": "cross-env ELEVENTY_ENV=dev DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "clean": "rimraf ./_site"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Bob Monsour",
+    "email": "bob.monsour@gmail.com",
+    "url": "https://bobmonsour.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.0",
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-plugin-bundle": "^1.0.4",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "airtable": "^0.11.6",
+    "cheerio": "^1.0.0-rc.12",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "lodash": "^4.17.21",
+    "netlify-plugin-cache": "^1.0.3",
+    "path": "^0.12.7",
+    "postcss": "^8.4.21",
+    "postcss-minify": "^1.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

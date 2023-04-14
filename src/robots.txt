@@ -1,0 +1,4 @@
+Sitemap: https://www.bobmonsour.com/sitemap.xml
+
+User-agent: *
+Disallow:

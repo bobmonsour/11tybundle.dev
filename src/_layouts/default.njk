@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'partials/head.njk' %}
+<body>
+	<a href="#main-content" id="visually-hidden">Skip to main content</a>
+  {% include 'partials/header.njk' %}
+  <main id="main-content">
+    {# provide per-page styling via frontmatter #}
+    {% if pageID %}
+      <div id="{{ pageID }}">
+        {{ content | safe }}
+      </div>
+    {% else %}
+      {{ content | safe }}
+    {% endif %}
+  </main>
+  {% include 'partials/footer.njk' %}
+</body>
+</html>

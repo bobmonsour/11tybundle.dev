@@ -1,0 +1,14 @@
+<header>
+  <nav class="brand">
+    <a href="/" class="brand-name" title="link to home page">Bob Monsour</a>
+    <img class="brand-image" alt="picture of Bob" src="/assets/img/bob-small.jpg">
+    <ul class="brand-nav">
+      {% for link in site.mainNavLinks %}
+        <li>
+          <a href="{{ link.url }}"
+            {% if page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

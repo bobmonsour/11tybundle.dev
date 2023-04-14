@@ -1,0 +1,26 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+description: Posts tagged with a particular tag
+keywords: tags, Bob Monsour, website, 11ty, eleventy, blog
+image:
+  source: "young-bob.jpg"
+  alt: "a picture of Bob's face as a boy"
+---
+
+<h2>Tagged “{{ tag }}”</h2>
+
+{% set postlist = collections[ tag ] | reverse %}
+{% include "postlist.njk" %}
+
+<h3><a href="/archive/" title="link to more blog posts in the archive">More posts in the Archive...</a></h3>

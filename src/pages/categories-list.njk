@@ -1,0 +1,19 @@
+---
+layout: default.njk
+permalink: /categories/
+description: A list of all tags used on this site
+keywords: categories, 11ty Bundle, 11ty, eleventy
+image:
+  source: "young-bob.jpg"
+  alt: "a picture of Bob's face as a boy"
+eleventyExcludeFromCollections: true
+---
+<div class="allcategories-list">
+<h2>11ty Bundle Blog Post Categories</h2>
+  <ul>
+    {% for category in airtableitems | getBundleCategories %}
+      {% set categoryUrl %}/categories/{{ category | slugify }}/{% endset %}
+      <li><a href="{{categoryUrl}}">{{ category }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

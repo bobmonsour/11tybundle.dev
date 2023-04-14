@@ -1,0 +1,41 @@
+---js
+{
+  eleventyComputed: {
+    title: "Posts in '{{ category }}'",
+    description: "Posts in the 11ty Bundle with the category: '{{ category }}'",
+  },
+  permalink: "/categories/{{ category | slugify }}/",
+  keywords: "categories, 11ty Bundle, 11ty, eleventy, blog posts",
+  eleventyExcludeFromCollections: "true",
+  pagination:  {
+    data: "getpostcategories",
+    size: 1,
+    alias: "category",
+    before: function(data) {
+      let categorySet = new Set();
+      for (let item of data) {
+      (item.Categories || []).forEach((category) => categorySet.add(category));
+    }
+    return Array.from(categorySet).sort((a, b) => {
+      return a > b ? 1 : -1;
+    });
+    }
+  },
+  image: {
+    source: "young-bob.jpg",
+    alt: "a picture of Bob's face as a boy"
+  }
+}
+---
+
+<h2>Posts in category “{{ category }}”</h2>
+
+<p><em>Newest listed first, links open in a new tab</em></p>
+
+<ul>
+{% for item in airtableitems | postsInCategory(category) %}
+
+<li><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a> by <a href="{{ item.AuthorLink }}" target="_blank">{{ item.Author }}</a>, {{ item.Date }}
+<p><em>{{ item.Link | getDescription }}</em></p>
+{% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+---
+layout: default.njk
+permalink: /descriptions/
+description: A list of all tags used on this site
+keywords: categories, 11ty Bundle, 11ty, eleventy
+image:
+  source: "young-bob.jpg"
+  alt: "a picture of Bob's face as a boy"
+eleventyExcludeFromCollections: true
+---
+<h2>11ty Bundle Blog Post Descriptions</h2>
+
+{% set link = "https://jamesdoc.com/blog/2023/11ty-daily-rebuilds/" %}
+<p>{{ link | getDescription }}</p>
+
+<ul>
+  {% for item in airtableitems | getBundleItems(0, "blog post") %}
+    <li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
+    <p>{{ item.Link | getDescription }}</p>
+  {% endfor %}
+</ul>
