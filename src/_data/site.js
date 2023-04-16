@@ -1,9 +1,8 @@
 module.exports = {
   env: process.env.ELEVENTY_ENV,
-  title: "Bob Monsour | Home",
-  description:
-    "The personal website of Bob Monsour. Enjoying learning and deploying websites with 11ty and Netlify.",
-  url: "https://www.bobmonsour.com",
+  title: "The 11ty Bundle | Home",
+  description: "A bundle of Eleventy resources, mostly blog posts.",
+  url: "https://www.11tybundle.dev",
   language: "en",
   author: {
     name: "Bob Monsour",

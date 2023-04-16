@@ -1,4 +1,4 @@
-Sitemap: https://www.bobmonsour.com/sitemap.xml
+Sitemap: https://www.11tybundle.dev/sitemap.xml
 
 User-agent: *
 Disallow:
