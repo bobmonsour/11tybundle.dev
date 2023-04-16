@@ -108,7 +108,8 @@ main {
 .brand-image {
   aspect-ratio: 1 / 1;
   width: min(100px, 10vw);
-  clip-path: circle(45%);
+  margin-block-start: 0.75em;
+  /* clip-path: circle(50%); */
 }
 .brand-nav {
   display: flex;
