@@ -32,10 +32,8 @@
 
 <p><em>Newest listed first, links open in a new tab</em></p>
 
-<ul>
-{% for item in airtableitems | postsByAuthor(author) %}
 
-<li><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>, {{ item.Date }}</li>
+{% for item in airtableitems | postsByAuthor(author) %}
+<p><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>, {{ item.Date }}</p>
 <p><em>{{ item.Link | getDescription }}</em></p>
 {% endfor %}
-</ul>

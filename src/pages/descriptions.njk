@@ -1,5 +1,6 @@
 ---
 layout: default.njk
+title: 11ty Bundle Blog Post Descriptions
 permalink: /descriptions/
 description: A list of all tags used on this site
 keywords: categories, 11ty Bundle, 11ty, eleventy
@@ -8,11 +9,9 @@ image:
   alt: "an address plate for house number 11"
 eleventyExcludeFromCollections: true
 ---
-<h2>11ty Bundle Blog Post Descriptions</h2>
+<h2>{{ title }}</h2>
 
-<ul>
-  {% for item in airtableitems | getBundleItems(0, "blog post") %}
-    <li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
-    <p>{{ item.Link | getDescription }}</p>
-  {% endfor %}
-</ul>
+{% for item in airtableitems | getBundleItems(0, "blog post") %}
+<p><a href="{{ item.Link }}">{{ item.Title }}</a></p>
+<p>{{ item.Link | getDescription }}</p>
+{% endfor %}

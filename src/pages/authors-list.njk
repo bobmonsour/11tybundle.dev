@@ -1,5 +1,6 @@
 ---
 layout: default.njk
+title: 11ty Bundle Blog Post Authors
 permalink: /authors/
 description: A list of all of the blog post authors
 keywords: authors, 11ty Bundle, 11ty, eleventy
@@ -9,7 +10,7 @@ image:
 eleventyExcludeFromCollections: true
 ---
 <div class="allcategories-list">
-<h2>11ty Bundle Blog Post Authors</h2>
+<h2>{{ title }}</h2>
   <ul>
     {% for author in airtableitems | getBundleAuthors %}
       {% set authorUrl %}/authors/{{ author | slugify }}/{% endset %}

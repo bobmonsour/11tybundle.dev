@@ -1,5 +1,6 @@
 ---
 layout: default.njk
+title: 11ty Bundle Blog Post Categories
 permalink: /categories/
 description: A list of all tags used on this site
 keywords: categories, 11ty Bundle, 11ty, eleventy
@@ -9,7 +10,7 @@ image:
 eleventyExcludeFromCollections: true
 ---
 <div class="allcategories-list">
-<h2>11ty Bundle Blog Post Categories</h2>
+<h2>{{ title }}</h2>
   <ul>
     {% for category in airtableitems | getBundleCategories %}
       {% set categoryUrl %}/categories/{{ category | slugify }}/{% endset %}

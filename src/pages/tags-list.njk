@@ -1,5 +1,6 @@
 ---
 layout: default.njk
+title: All Tags
 permalink: /tags/
 description: A list of all tags used on this site
 keywords: tags, Bob Monsour, website, 11ty, eleventy, blog
@@ -8,7 +9,7 @@ image:
   alt: "an address plate for house number 11"
 ---
 <div class="alltags-list">
-<h2>All Tags</h2>
+<h2>{{ title }}</h2>
   <ul>
     {% for tag in collections.all | getAllTags | filterTagList %}
       {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
