@@ -116,7 +116,7 @@ module.exports = function (eleventyConfig) {
         // );
         const description = $("meta[name=description]").attr("content");
         if (link.includes("youtube.com") || description == undefined) {
-          return "";
+          return "YouTube video";
         } else {
           return description;
         }
@@ -141,18 +141,52 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Extract a list of the unique categories used in all of the issues
+  // of The 11ty Bundle from Airtable data. Items are sorted alphabetically.
+  eleventyConfig.addFilter("getCategoriesAndCounts", (collection) => {
+    let categoryMap = new Map();
+    for (let item of collection) {
+      (item.Categories || []).forEach((category) =>
+        categoryMap.set(category, categoryMap.get(category) + 1 || 1)
+      );
+    }
+    return Array.from(categoryMap).sort((a, b) => {
+      return a[0] > b[0] ? 1 : -1;
+    });
+  });
+
   // Extract a list of the unique blog post authors used in all of the issues
   // of The 11ty Bundle from Airtable data. Authors are sorted alphabetically
   // by first name.
-  eleventyConfig.addFilter("getBundleAuthors", (collection) => {
-    let authorSet = new Set();
+  //
+  // AS OF NOW, THIS IS NO LONGER NEEDED AS IT HAS BEEN REPLACED WITH
+  // getAuthorsAndCounts, WHICH ALSO RETURNS A COUNT OF THE NUMBER OF POSTS
+  // BY EACH AUTHOR.
+  //
+  // eleventyConfig.addFilter("getBundleAuthors", (collection) => {
+  //   let authorSet = new Set();
+  //   for (let item of collection) {
+  //     if (item.Author && item.Type == "blog post") {
+  //       authorSet.add(item.Author);
+  //     }
+  //   }
+  //   return Array.from(authorSet).sort((a, b) => {
+  //     return a > b ? 1 : -1;
+  //   });
+  // });
+
+  // Extract a list of the unique blog post authors used in all of the issues
+  // of The 11ty Bundle from Airtable data along with a count of their posts.
+  // Authors are sorted alphabetically by first name.
+  eleventyConfig.addFilter("getAuthorsAndCounts", (collection) => {
+    const authorMap = new Map();
     for (let item of collection) {
       if (item.Author && item.Type == "blog post") {
-        authorSet.add(item.Author);
+        authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
       }
     }
-    return Array.from(authorSet).sort((a, b) => {
-      return a > b ? 1 : -1;
+    return Array.from(authorMap).sort((a, b) => {
+      return a[0] > b[0] ? 1 : -1;
     });
   });
 
@@ -176,9 +210,7 @@ module.exports = function (eleventyConfig) {
     "postsByAuthor",
     function postsbyAuthor(bundleitems, author) {
       return bundleitems
-        .filter(
-          (item) => item.Type === "blog post" && item.Author.includes(author)
-        )
+        .filter((item) => item.Type === "blog post" && item.Author === author)
         .sort((a, b) => {
           return a.Date > b.Date ? -1 : 1;
         });

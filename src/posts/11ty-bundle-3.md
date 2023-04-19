@@ -16,7 +16,9 @@ bundleIssue: 3
 
 {% include 'partials/bundlehead.md' %}
 
-> _Since there are so manu different topics covered the blog posts, I may start creating bundles that are focused on a particular topic; either that, or organize the list of posts by topic. And maybe, just maybe, I'll move all of this to a dedicated site (yes, I've already purchased a domain)._
+> _UPDATED: 2023-04-18 - I have added descriptions to each of the blog post entries. These are extracted from the blog post page itself as provided by the post's author._
+
+> _Since there are so many different topics covered the blog posts, I may start creating bundles that are focused on a particular topic; either that, or organize the list of posts by topic. And maybe, just maybe, I'll move all of this to a dedicated site (yes, I've already purchased a domain)._
 
 ## Recent releases
 
@@ -34,7 +36,7 @@ _Newest listed first_
 
 {% for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
 
-- [{{ item.Title }}]({{ item.Link }}) by [{{ item.Author }}]({{ item.AuthorLink }}), {{ item.Date }}
+- [{{ item.Title }}]({{ item.Link }}) by [{{ item.Author }}]({{ item.AuthorLink }}){% if item.Date %}, {{ item.Date }}{% endif %} - {{ item.Link | getDescription }}
 
 {% endfor %}
 

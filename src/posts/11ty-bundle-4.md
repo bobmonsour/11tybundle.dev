@@ -34,7 +34,7 @@ _Newest listed first_
 
 {% for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
 
-- [{{ item.Title }}]({{ item.Link }}) by [{{ item.Author }}]({{ item.AuthorLink }}), {{ item.Date }}
+- [{{ item.Title }}]({{ item.Link }}) by [{{ item.Author }}]({{ item.AuthorLink }}){% if item.Date %}, {{ item.Date }}{% endif %} - {{ item.Link | getDescription }}
 
 {% endfor %}
 

@@ -34,6 +34,6 @@
 
 
 {% for item in airtableitems | postsByAuthor(author) %}
-<p><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>, {{ item.Date }}</p>
+<p><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>{% if item.Date %}, {{ item.Date }}{% endif %}</p>
 <p><em>{{ item.Link | getDescription }}</em></p>
 {% endfor %}
