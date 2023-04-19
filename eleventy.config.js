@@ -115,6 +115,8 @@ module.exports = function (eleventyConfig) {
         //   "description: " + $("meta[name=description]").attr("content")
         // );
         const description = $("meta[name=description]").attr("content");
+        // console.log("link: " + link);
+        // console.log("type of link: " + typeof link);
         if (link.includes("youtube.com") || description == undefined) {
           return "YouTube video";
         } else {
@@ -194,14 +196,29 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter(
     "postsInCategory",
     function postsInCategory(bundleitems, category) {
-      return bundleitems
-        .filter(
-          (item) =>
-            item.Type == "blog post" && item.Categories.includes(category)
-        )
-        .sort((a, b) => {
-          return a.Date > b.Date ? -1 : 1;
-        });
+      // console.log("category typeof: " + typeof category);
+      // console.log("category: " + category);
+      function postInCategory(item) {
+        // console.log("item.Link: " + item.Link);
+        // console.log("typeof item: " + typeof item);
+        // console.log("typeof item.Type: " + typeof item.Type);
+        // console.log("item.Type: " + item.Type);
+        if (item.Categories) {
+          return item.Type == "blog post" && item.Categories.includes(category)
+            ? true
+            : false;
+        } else {
+          if (item.Type == "blog post") {
+            console.log(
+              "Error: blog post entry has no categories: " + item.Link
+            );
+            return false;
+          }
+        }
+      }
+      return bundleitems.filter(postInCategory).sort((a, b) => {
+        return a.Date > b.Date ? -1 : 1;
+      });
     }
   );
 

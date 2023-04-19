@@ -2,7 +2,6 @@
 title: The 11ty Bundle - Issue 2
 date: 2023-04-03
 tags:
-  - 11ty
   - 11ty Bundle
 description: An occasional bundle of Eleventy releases, blog posts, sites, and resources.
 keywords: eleventy, newsletter, roundup, news
