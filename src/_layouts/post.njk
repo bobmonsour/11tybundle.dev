@@ -12,7 +12,6 @@ layout: default.njk
   <h1 class="post-title">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }}</p>
   <p class="post-readingtime">{{ content | readingTime }}</p>
-  {{ tagList(tags) }}
   {% if showImage %}
     {% set imageSource %}{{ imageDir + image.source }}{% endset %}
     {% image imageSource, image.alt, "100vw", "eager" %}
@@ -25,7 +24,6 @@ layout: default.njk
   {% endif %}
   {{ content | safe }}
   <hr>
-  {{ tagList(tags) }}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}

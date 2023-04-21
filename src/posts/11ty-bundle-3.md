@@ -9,7 +9,7 @@ image:
   source: "11ty-bundle-3.jpg"
   alt: "an AI-generated image of the number eleven"
   caption: "An AI-generated image of the number eleven"
-pageID: bundle
+pageId: bundle
 bundleIssue: 3
 ---
 

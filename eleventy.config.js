@@ -43,6 +43,14 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("formatItemDate", function formatItemDate(date) {
+    const { DateTime } = require("luxon");
+    const itemDate = Date.parse(date);
+    return DateTime.fromMillis(itemDate, { zone: "utc" }).toLocaleString(
+      DateTime.DATE_MED
+    );
+  });
+
   eleventyConfig.addFilter("getAllTags", (collection) => {
     let tagSet = new Set();
     for (let item of collection) {
@@ -79,6 +87,15 @@ module.exports = function (eleventyConfig) {
         });
     }
   );
+
+  // Extract a list of the categories assigned to the selected link.
+  // These are appended to each blog post item in the Bundle.
+  eleventyConfig.addFilter("getItemCategories", (bundleitems, link) => {
+    // console.log("link: " + link);
+    // const thisitem = bundleitems.filter((item) => item.Link == link);
+    // console.log("thisitem isArray?: " + Array.isArray(thisitem));
+    return bundleitems.filter((item) => item.Link == link);
+  });
 
   // getDescription - given a url, this Eleventy filter extracts the meta
   // description from within the <head> element of a web page using the cheerio

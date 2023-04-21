@@ -6,7 +6,7 @@ image:
   source: "11ty-bundle-dev.jpg"
   alt: "an address plate for house number 11"
 permalink: /about/
-pageID: about
+pageId: about
 ---
 
 Brooklyn-born, New Jersey-raised, educated in Florida and Los Angeles. I'm now retired and living in Northern California.
