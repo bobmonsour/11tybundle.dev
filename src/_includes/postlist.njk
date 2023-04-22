@@ -15,7 +15,7 @@
     </div>
     <div class="post-image">
       <a href="{{ post.url }}">
-        {# if the post is 1st or 2nd diplayed, load thier images eagerly #}
+        {# if the post is 1st or 2nd displayed, load their images eagerly #}
         {%- if loop.index === 1 or loop.index === 2 %}
           {% set loading = "eager" %}
         {%- else %}
