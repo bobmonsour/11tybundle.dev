@@ -1,0 +1,15 @@
+---
+title: The 11ty Bundle
+description: An occasional bundle of Eleventy releases, blog posts, sites, and resources.
+keywords: eleventy, 11ty, newsletter, roundup, news
+image:
+  source: "11ty-bundle-dev.jpg"
+  alt: "an address plate for house number 11"
+permalink: /index.html
+---
+
+{% set latest_posts = collections.posts | reverse %}
+{% set postlist = latest_posts.slice(0,1) %}
+{% include "postlist.njk" %}
+
+<h3><a href="/archive/" title="link to more Bundles in the archive">More Bundles in the Archive...</a></h3>

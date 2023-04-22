@@ -11,8 +11,7 @@
           post.content | readingTime
         }}
       </p>
-      {{ tagList(post.data.tags) }}
-      <p class="post-excerpt">{{ post.data.description }}</p>
+      <p class="post-excerpt">{% if post.data.specialNote %}{{ post.data.specialNote }}{% else %}{{ post.data.description }}{% endif %}</p>
     </div>
     <div class="post-image">
       <a href="{{ post.url }}">

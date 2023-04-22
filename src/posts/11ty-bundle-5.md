@@ -1,20 +1,18 @@
 ---
-layout: post.njk
 title: The 11ty Bundle - Issue 5
-date: 2021-04-25
+date: 2023-04-25
+tags:
+  - 11ty Bundle
 description: An occasional bundle of Eleventy releases, blog posts, sites, and resources.
+specialNote: "IN FOCUS: In this issue, we highlight stories of Eleventy users who have migrated from other tools and platforms."
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
-  source: "11ty-bundle-dev.jpg"
-  alt: "an address plate for house number 11"
-permalink: /index.html
-imageDir: src/assets/img/
-tags: posts
+  source: "11ty-bundle-5.jpg"
+  alt: "an AI-generated image of the number eleven"
+  caption: "An AI-generated image of the number eleven"
 pageId: bundle
 bundleIssue: 5
 ---
-
-<article class="post">
 
 {% include 'partials/bundlehead.md' %}
 
@@ -28,14 +26,9 @@ bundleIssue: 5
 
 ## Blog posts and other resources from around the web
 
-_Newest listed first_
+_Newest first, post links open in a new tab, category links stay here_
 
-{% for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
-
-<div class="bundleitem">
-<p class="bundleitem-link"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
-<p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}{% if item.Categories %}, Categories: {% for item in airtableitems | getItemCategories(item.Link) | sort %}{% for category in item.Categories | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}{% endfor %}{% endif %}</p>
-<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>{% endfor %}
+{% include 'partials/bundleposts.njk' %}
 
 ## Built with Eleventy
 
@@ -48,5 +41,3 @@ This list is a little light this week, but not really...since all of the above b
 {% endfor %}
 
 {% include 'partials/bundlefoot.md' %}
-
-</article>

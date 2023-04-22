@@ -4,7 +4,7 @@
   "description": "It's my personal site...and a work in progress. It's built with [eleventy](https://www.11ty.dev/)...something I'm enjoying learning and using.",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental",
+    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "debug": "cross-env ELEVENTY_ENV=dev DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "clean": "rimraf ./_site"

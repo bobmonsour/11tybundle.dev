@@ -107,6 +107,10 @@ main {
   align-items: center;
   margin-block-end: 2rem;
 }
+.brand-name {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+}
 .brand-image {
   aspect-ratio: 1 / 1;
   width: min(100px, 10vw);
@@ -268,7 +272,7 @@ footer .text {
   font-size: var(--font-size-base);
 }
 
-.bundleitem-link {
+.bundleitem-title {
   font-size: var(--font-size-md);
   padding-block: 0;
 }
