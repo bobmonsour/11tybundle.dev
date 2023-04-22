@@ -1,7 +1,6 @@
 <header>
   <nav class="brand">
-    <a href="/" class="brand-name" title="link to home page">{% raw %}{% The 11ty Bundle %}{% endraw %}</a>
-    {# <img class="brand-image" alt="picture of Bob" src="/assets/img/11ty-bundle-dev-small.jpg"> #}
+    <a href="/" class="brand-name" title="link to home page">{% raw %}{% getBundle "11ty" %}{% endraw %}</a>
     <ul class="brand-nav">
       {% for link in site.mainNavLinks %}
         <li>

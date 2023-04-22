@@ -1,0 +1,84 @@
+form {
+  background: var(--body-bg-color);
+  color: var(--brand-color);
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px 10px 10px 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: var(--contact-form-radius);
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+// hide spam protection field
+.other-form-field {
+  display: none;
+}
+
+#contact label {
+  padding-left: 0.25em;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="subject"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-family: var(--default-font);
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="subject"],
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 200px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 200px;
+  border: none;
+  border-radius: var(--contact-button-radius);
+  background-color: var(--brand-color);
+  color: var(--default-color);
+  padding: 10px;
+  font-family: var(--default-font);
+  font-size: var(--default-size);
+}
+
+#contact button[type="submit"]:hover {
+  background-color: var(--brand-color);
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}

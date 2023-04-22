@@ -4,7 +4,7 @@ date: 2023-04-25
 tags:
   - 11ty Bundle
 description: An occasional bundle of Eleventy releases, blog posts, sites, and resources.
-specialNote: "IN FOCUS: In this issue, we highlight stories of Eleventy users who have migrated from other tools and platforms."
+specialNote: In this issue, we highlight stories of Eleventy adopters who have migrated from other static site generators, tools, and platforms.
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11ty-bundle-5.jpg"
@@ -13,8 +13,6 @@ image:
 pageId: bundle
 bundleIssue: 5
 ---
-
-{% include 'partials/bundlehead.md' %}
 
 ## Recent releases
 

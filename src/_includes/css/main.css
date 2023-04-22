@@ -108,7 +108,7 @@ main {
   margin-block-end: 2rem;
 }
 .brand-name {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: bold;
 }
 .brand-image {
@@ -263,8 +263,11 @@ footer .text {
   font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
     Manjari, Calibri, source-sans-pro, sans-serif;
 }
-#bundle h2 {
+#bundle h2,
+#bundle h3 {
   font-size: var(--font-size-md);
+}
+#bundle h3 {
   font-style: italic;
 }
 #bundle p,
