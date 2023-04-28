@@ -19,7 +19,7 @@ bundleIssue: 5
 <div class="bundleitem">
 <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
 <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-<p class="bundleitem-dateline">{% if item.AuthorLink %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {% endif %}{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
+<p class="bundleitem-dateline">{% if item.Author %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {% endif %}{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
 </div>
 {% endfor %}
 

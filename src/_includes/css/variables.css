@@ -16,8 +16,12 @@
   /* Accent Colors */
   --site-bg: #eee9da;
   --bundleitem-bg: #bdcdd6;
+  --bundlepostitem-bg: #93bfcf;
+  --resources-bg: #bdcdd6;
   --dark-accent-color: #005bbb;
   --light-accent-color: #ffd500;
+  --link-border-color: #6096b4;
+  --link-hover-color: #6096b4;
 
   /* Brand Styles */
   --brand-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;

@@ -42,7 +42,7 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 
 {% for item in airtableitems | getBundleItems(bundleIssue, "site") %}
 
-- [{{ item.Title }}]({{ item.Link }}){% if item.Author %} by [{{ item.Author }}]({{ item.AuthorLink }}) {% endif %}
+- [{{ item.Title }}]({{ item.Link }}){% if item.Author and item.AuthorLink %} by [{{ item.Author }}]({{ item.AuthorLink }}){% elif item.Author %} by {{ item.Author }} {% endif %}
 
 {% endfor %}
 
