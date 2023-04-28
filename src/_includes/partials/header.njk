@@ -1,11 +1,11 @@
 <header>
+  <p class="brand-name">{% raw %}{{ 11tybundle.dev }}{% endraw %}</p>
   <nav class="brand">
-    <a href="/" class="brand-name" title="link to home page">{% raw %}{% getBundle "11ty" %}{% endraw %}</a>
     <ul class="brand-nav">
       {% for link in site.mainNavLinks %}
         <li>
           <a href="{{ link.url }}"
-            {% if page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
+            {% if page.url !== "/" and page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
         </li>
       {% endfor %}
     </ul>

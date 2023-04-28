@@ -1,4 +1,5 @@
 <footer>
-  <p class="text">It's {% year %}.</p>
-  <a href="/about/">About</a>
+  {% for link in site.mainNavLinks %}
+    <a href="{{ link.url }}"{% if page.url !== "/" and page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
+  {% endfor %}
 </footer>

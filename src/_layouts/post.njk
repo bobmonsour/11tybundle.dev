@@ -8,19 +8,8 @@ layout: default.njk
 
 <article class="post">
   <h1 class="post-title">{{ title }}</h1>
-  <p class="post-date">{{ date | formatPostDate }}</p>
-  <p class="post-readingtime">{{ content | readingTime }}</p>
-  <h3>{% if specialNote %}{{ specialNote }}{% else %}{{ description }}{% endif %}</h3>
-  {% if showImage %}
-    {% set imageSource %}{{ imageDir + image.source }}{% endset %}
-    {% image imageSource, image.alt, "100vw", "eager" %}
-  {% endif %}
-  {% if showImage and image.creditPerson and image.creditLink%}
-    <p>Photo by <a href="{{ image.creditLink }}">{{ image.creditPerson }}</a></p>
-  {% endif %}
-  {% if showImage and image.caption %}
-    <p>{{ image.caption }}</p>
-  {% endif %}
+  <p class="post-date">{{ date | formatPostDate }} &middot; {{ content | readingTime }}</p>
+  <p class="post-description">{{ description }}</p>
   {{ content | safe }}
   <hr>
   {%- if collections.posts %}
@@ -28,9 +17,10 @@ layout: default.njk
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
       <ul class="post-nextprev">
-        {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-        {%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+        {%- if previousPost %}<li>Previous post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+        {%- if nextPost %}<li>Next post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
       </ul>
     {%- endif %}
   {%- endif %}
+  <p><em>Don't miss an issue. Grab the <a href="https://www.11tybundle.dev/feed.xml">RSS feed</a>. Feedback is welcome; drop me a line at bob dot monsour at gmail.com.</em></p>
 </article>

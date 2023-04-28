@@ -134,8 +134,10 @@ module.exports = function (eleventyConfig) {
         const description = $("meta[name=description]").attr("content");
         // console.log("link: " + link);
         // console.log("type of link: " + typeof link);
-        if (link.includes("youtube.com") || description == undefined) {
+        if (link.includes("youtube.com")) {
           return "YouTube video";
+        } else if (description == undefined) {
+          return "";
         } else {
           return description;
         }

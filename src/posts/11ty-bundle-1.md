@@ -1,9 +1,9 @@
 ---
-title: The 11ty Bundle - Issue 1
+title: Issue 1
 date: 2023-03-28
 tags:
   - 11ty Bundle
-description: An occasional bundle of Eleventy releases, blog posts, sites, and resources.
+description: This is the first of an occasional roundup of Eleventy releases, related blog posts, and resources.
 keywords: eleventy, newsletter, roundup, news
 image:
   source: "11ty-bundle-1.jpg"
@@ -12,8 +12,6 @@ image:
 pageId: bundle
 bundleIssue: 1
 ---
-
-This is the first of an occasional roundup of Eleventy releases, related blog posts, and resources.
 
 Why, you ask?
 
@@ -27,59 +25,25 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 
 ## Recent releases
 
-_Newest listed first_
-
 {% for item in airtableitems | getBundleItems(bundleIssue, "release") %}
 
-- [{{ item.Title }}]({{ item.Link }}), {{ item.Date }}
+<div class="bundleitem">
+<p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
+<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+<p class="bundleitem-dateline">{% if item.AuthorLink %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {% endif %}{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
+</div>
+{% endfor %}
+
+## Blog posts from around the web
+
+{% include 'partials/bundleposts.njk' %}
+
+## Built with Eleventy
+
+{% for item in airtableitems | getBundleItems(bundleIssue, "site") %}
+
+- [{{ item.Title }}]({{ item.Link }}){% if item.Author %} by [{{ item.Author }}]({{ item.AuthorLink }}) {% endif %}
 
 {% endfor %}
 
-## Blog posts: from Discord, Mastodon, and around the web
-
-_Newest listed first_
-
-{% for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
-
-- [{{ item.Title }}]({{ item.Link }}) by [{{ item.Author }}]({{ item.AuthorLink }}){% if item.Date %}, {{ item.Date }}{% endif %} - {{ item.Link | getDescription }}
-
-{% endfor %}
-
-## Recent sites being built or redesigned with Eleventy
-
-- [Keith J. Grant](https://keithjgrant.com/posts/2023/03/redesign-2023/)
-- [pie design system](https://www.pie.design/)
-- [Nicholas Hoizey Photography](https://nicolas-hoizey.photo/)
-- [CloudCannon](https://cloudcannon.com/blog/cloudcannon-com-is-now-built-with-eleventy/)
-- [Jerome Stephan](https://jeromestephan.de/sites/Home/)
-- [Molly White](https://www.mollywhite.net/)
-- [Delete Twitter](https://deletetwitter.com/)
-- [Václav Eliáš](https://www.vaclavelias.com/)
-- [Naz Hamid](https://nazhamid.com/)
-- [Vadim Makeev](https://pepelsbey.dev/)
-- [Gabrielle Wee](https://gabriellew.ee/)
-- [Javan](https://javan.us/)
-- [CSS In Real Life](https://css-irl.info/)
-- [Rafael Conde](https://rafa.design/ "this one is very cool")
-- [Web Components Today](https://webcomponents.today/)
-- [Anil Dash](https://anildash.com//)
-
-## [Here's a very long list of sites built with Eleventy.](https://www.11ty.dev/speedlify/)
-
-## [Add yours to the list.](https://github.com/11ty/11ty-community/issues/new/choose)
-
-## Here's a list of general resources for Eleventy
-
-- [11ty docs](https://www.11ty.dev/docs/)
-- [11ty Rocks!](https://11ty.rocks/)
-- [The Eleventy Meetup](https://11tymeetup.dev/)
-- [The Discord Server](https://www.11ty.dev/blog/discord/)
-- [Github discussion on the Eleventy repo](https://github.com/11ty/eleventy/discussions)
-- [YouTube channel](https://www.youtube.com/@EleventyVideo)
-- [Eleventy Hub](https://11tyhub.dev/)
-
-## A note on getting help or support
-
-I can say that, without a doubt, if you have any questions or run into problems with Eleventy, the community on the [Discord Server](<(https://www.11ty.dev/blog/discord/)>) is amazing. In the forum-help channel, you can get any question answered, regardless of how simple or complex.
-
-Keep on bundlin...
+{% include 'partials/bundlefoot.njk' %}

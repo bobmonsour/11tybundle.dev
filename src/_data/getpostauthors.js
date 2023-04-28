@@ -9,6 +9,7 @@ var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
 
 module.exports = function () {
   return new Promise((resolve, reject) => {
+    console.log("running getpostauthors.js");
     const bundlePostAuthors = [];
 
     base("11tyBundleArchive")

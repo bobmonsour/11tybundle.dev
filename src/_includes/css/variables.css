@@ -14,6 +14,8 @@
   --radius-blob: 49% 51% 48% 52% / 57% 44% 56% 43%;
 
   /* Accent Colors */
+  --site-bg: #eee9da;
+  --bundleitem-bg: #bdcdd6;
   --dark-accent-color: #005bbb;
   --light-accent-color: #ffd500;
 
@@ -31,4 +33,10 @@
   --post-tag-size: var(--font-size-base);
   --caption-size: var(--font-size-base);
   --main-element-max: 65ch;
+  --bundle-font: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
+    Manjari, Calibri, source-sans-pro, sans-serif;
+  --test-font: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  --test-font2: "Nimbus Mono PS", "Courier New", "Cutive Mono", monospace;
+  --test-font3: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 }

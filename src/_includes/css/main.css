@@ -3,70 +3,73 @@ body {
   /* forces footer to bottom of page for short pages */
   min-height: 100vh;
   min-height: 100dvh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   max-width: min(var(--page-width-max), 100vw - 1em);
   margin-inline: auto;
-  font-family: var(--brand-font);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: var(--test-font3);
   font-size: var(--font-size-md);
   color: black;
   line-height: 1.3;
-  background-color: #fff1e5; /* color from ft.com background */
+  background-color: var(--site-bg);
+  /* background-color: #fff1e5; color from ft.com background */
   /* background-color: #f8f5d7; color from semafor.com background */
 }
 
 /* default <h1> */
-h1 {
+:where(h1) {
+  font-weight: normal;
   text-align: center;
 }
 
 /* default <h2> and <h3> */
-h2,
-h3 {
+:where(h2, h3) {
   font-size: var(--font-size-lg);
   line-height: 1.2;
-  margin-block: 1em 0.5em;
+  padding-block: 0.5em 0.25em;
   text-align: left;
 }
 
-h3 {
+:where(h3) {
   font-size: var(--font-size-md);
   font-style: italic;
 }
 
 /* default <p> */
 :where(p) {
-  margin-block: 0.5em 1.25em;
   line-height: 1.5;
+  padding-block-end: 1em;
 }
 
 /* default <a> */
-a {
+:where(a) {
   color: var(--brand-color);
   text-decoration: none;
   border-bottom: 1px solid var(--dark-accent-color);
 }
 a:hover,
 a:focus {
-  background-color: var(--light-accent-color);
-  border-radius: var(--brand-link-radius);
+  color: var(--site-bg);
+  background-color: var(--dark-accent-color);
+  border-radius: 0.5rem;
+  padding: 0.25em;
 }
 
 /* default <ol> & <li> */
-ol {
+:where(ol) {
   margin: 0.5em auto 1.5em auto;
 }
-li {
+:where(li) {
   margin-block-end: 0.5em;
 }
 
 /* default <hr> */
-hr {
+:where(hr) {
   border-block-start: 2px solid var(--dark-accent-color);
 }
 
 /* default <blockquote> */
-blockquote {
+:where(blockquote) {
   border-inline-start: thick solid var(--dark-accent-color);
   font-style: italic;
   padding: 0 min(1em, 4vw);
@@ -74,7 +77,7 @@ blockquote {
 }
 
 /* default audio */
-audio {
+:where(audio) {
   display: block;
   max-width: var(--main-element-max);
   margin: 0 auto 1.5em auto;
@@ -101,41 +104,39 @@ main {
 }
 
 /* brand & navigation (inside <header>) */
-.brand {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-block-end: 2rem;
-}
 .brand-name {
+  display: block;
+  /* width: 50vw; */
+  margin-inline: auto;
+  text-align: center;
   font-size: var(--font-size-lg);
-  font-weight: bold;
-}
-.brand-image {
-  aspect-ratio: 1 / 1;
-  width: min(100px, 10vw);
-  margin-block-start: 0.75em;
-  clip-path: circle(50%);
+  border: none;
+  padding-block: 0.5em;
+  font-family: var(--test-font2);
 }
 .brand-nav {
+  max-width: min(var(--page-width-max), 100vw - 1em);
+  margin: 0;
+  padding-inline: 0;
   display: flex;
-  gap: 1em;
-  text-align: center;
+  justify-content: space-around;
+  gap: 0.25em;
   list-style: none;
-  padding: 0;
 }
 .brand-nav a {
-  padding: 0 5px;
+  font-size: var(--font-size-base);
+  padding: 0.25em;
 }
 /* highlight the nav element of the current page  */
 .nav-link[aria-current="page"] {
-  background-color: var(--light-accent-color);
+  color: white;
+  background-color: var(--dark-accent-color);
 }
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* used for skip-to-main-content link */
 #visually-hidden {
-  background: var(--light-accent-color);
-  color: var(--dark-accent-color);
+  background: var(--dark-accent-color);
+  color: var(--site-bg);
   font-weight: bold;
   padding: 0.5rem 1.5rem;
   border: none;
@@ -180,7 +181,10 @@ main {
   font-size: var(--post-info-full-size);
   text-align: center;
   font-style: italic;
-  margin-block: 0.25em;
+}
+.post-description {
+  font-size: var(--font-size-md);
+  font-weight: normal;
 }
 .post-taglist {
   display: inline-flex;
@@ -206,12 +210,7 @@ picture + p {
 
 /* used in list of posts */
 .post-card {
-  margin-block-start: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1em;
+  margin-block: 1em 1.5em;
 }
 .post-card .post-metadata,
 .post-card .post-image {
@@ -237,50 +236,53 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--light-accent-color);
-  padding-block: 0.5em;
-  margin-block-start: 1em;
+  gap: 0.25em;
+  margin-block: 1em;
 }
 footer .text {
   margin: 0;
 }
-/* social media icons within footer */
-.social-link {
-  border: none;
+footer a {
+  font-size: var(--font-size-base);
+  padding: 0.25em;
 }
-.social-link:hover,
-.social-link:focus {
-  cursor: pointer;
-}
-.icon {
-  width: 48px;
-  height: 48px;
-}
+
 /* end footer */
 
-/* styles specific to The Bundle posts */
-#bundle {
-  font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
-    Manjari, Calibri, source-sans-pro, sans-serif;
-}
-#bundle h2,
-#bundle h3 {
-  font-size: var(--font-size-md);
-}
-#bundle h3 {
-  font-style: italic;
-}
-#bundle p,
-#bundle li {
-  font-size: var(--font-size-base);
+.bundleitem {
+  display: flex;
+  flex-direction: column;
+  border: 1px dotted darkgray;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  width: min(var(--main-element-max), 100vw - 1em);
+  margin-inline: auto;
+  background-color: var(--bundleitem-bg);
 }
 
 .bundleitem-title {
   font-size: var(--font-size-md);
+  font-weight: bold;
   padding-block: 0;
 }
 .bundleitem-description {
   font-style: italic;
+  font-size: var(--font-size-base);
+  margin-block-end: 0.25rem;
+}
+.bundleitem-dateline,
+.bundleitem-categories {
+  font-size: var(--font-size-base);
+  padding-block: 0;
+}
+
+.resources * {
   font-size: var(--font-size-md);
-  margin-block: 0 2rem;
+}
+/* .resources h3 {
+  font-size: var(--font-size-md);
+} */
+.resources ul {
+  margin-block-start: 0.25em;
 }

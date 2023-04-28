@@ -30,9 +30,12 @@
 
 <h2>Posts in category “{{ category }}”</h2>
 
-<p><em>Newest listed first, links open in a new tab</em></p>
-
 {% for item in airtableitems | postsInCategory(category) %}
-<p><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a> by {% if item.AuthorLink %}<a href="{{ item.AuthorLink }}" target="_blank">{{ item.Author }}</a>{% else %}{{ item.Author }}{% endif %}{% if item.Date %}, {{ item.Date }}{% endif %}</p>
-<p><em>{{ item.Link | getDescription }}</em></p>
+<div class="bundleitem">
+<p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
+<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+<p class="bundleitem-dateline">{% if item.AuthorLink %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {% endif %}{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
+{# <p class="bundleitem-dateline">{% if item.AuthorLink %}<a href="{{ item.AuthorLink }}" target="_blank">{{ item.Author }}</a>{% endif %}{% if item.Date %} &middot; {{ item.Date | formatItemDate }}{% endif %}</p> #}
+<p class="bundleitem-categories">{% if item.Categories %}Categories: {% for item in airtableitems | getItemCategories(item.Link) | sort %}{% for category in item.Categories | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}{% endfor %}{% endif %}</p>
+</div>
 {% endfor %}

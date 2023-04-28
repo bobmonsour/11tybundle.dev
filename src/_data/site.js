@@ -10,6 +10,7 @@ module.exports = {
     url: "https://bobmonsour.com/",
   },
   mainNavLinks: [
+    { url: "/", text: "Home" },
     { url: "/categories/", text: "Categories" },
     { url: "/authors/", text: "Authors" },
     { url: "/archive/", text: "Archive" },
