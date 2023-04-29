@@ -128,7 +128,7 @@ main {
   list-style: none;
 }
 .brand-nav a {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   padding: 0.25em;
 }
 /* highlight the nav element of the current page  */
