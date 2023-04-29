@@ -93,7 +93,7 @@ img[width][height] {
 /* main content constrained by viewport */
 main {
   margin-inline: auto;
-  max-width: min(var(--page-width-max), 100vw - 1em);
+  max-width: var(--main-element-max);
 }
 
 /* brand & navigation (inside <header>) */
