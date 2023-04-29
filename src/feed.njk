@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <description>{{ post.data.description }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ site.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
