@@ -11,36 +11,26 @@
   --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
-  --radius-blob: 49% 51% 48% 52% / 57% 44% 56% 43%;
-
   /* Accent Colors */
-  --site-bg: #eee9da;
-  --bundleitem-bg: #bdcdd6;
-  --bundlepostitem-bg: #93bfcf;
-  --resources-bg: #bdcdd6;
-  --dark-accent-color: #005bbb;
-  --light-accent-color: #ffd500;
+  --site-bg-color: #eee9da;
+  --releaseitem-bg-color: #bdcdd6;
+  --postitem-bg-color: #93bfcf;
+  --siteitem-bg-color: #93bfcf;
+  --resources-bg-color: #bdcdd6;
   --link-border-color: #6096b4;
-  --link-hover-color: #6096b4;
+  --link-hover-bg-color: #6096b4;
+  --link-hover-text-color: #eee9da;
+  --dark-accent-color: var(--link-hover-bg-color);
+  --light-accent-color: var(--link-hover-text-color)
 
   /* Brand Styles */
-  --brand-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
-  --brand-color: black;
-  --brand-link-radius: var(--radius-blob);
+  --brand-font: "Nimbus Mono PS", "Courier New", "Cutive Mono", monospace;
+  --brand-text-color: black;
+  --body-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 
   /* Post Styles */
   --post-title-full-size: var(--font-size-xl);
   --post-title-card-size: var(--font-size-lg);
-  --post-info-full-size: var(--font-size-base);
-  --post-info-card-size: var(--font-size-base);
-  --post-excerpt-card-size: var(--font-size-md);
-  --post-tag-size: var(--font-size-base);
   --caption-size: var(--font-size-base);
   --main-element-max: 65ch;
-  --bundle-font: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
-    Manjari, Calibri, source-sans-pro, sans-serif;
-  --test-font: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-    "DejaVu Sans Mono", monospace;
-  --test-font2: "Nimbus Mono PS", "Courier New", "Cutive Mono", monospace;
-  --test-font3: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 }

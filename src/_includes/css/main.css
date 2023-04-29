@@ -1,19 +1,13 @@
 /* default body styles */
 body {
   /* forces footer to bottom of page for short pages */
-  min-height: 100vh;
-  min-height: 100dvh;
-  max-width: min(var(--page-width-max), 100vw - 1em);
-  margin-inline: auto;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  font-family: var(--test-font3);
+  background-color: var(--site-bg-color);
+  color: var(--brand-text-color);
+  font-family: var(--body-font);
   font-size: var(--font-size-md);
-  color: black;
   line-height: 1.3;
-  background-color: var(--site-bg);
-  /* background-color: #fff1e5; color from ft.com background */
-  /* background-color: #f8f5d7; color from semafor.com background */
+  margin-inline: auto;
+  max-width: min(var(--page-width-max), 100vw - 1em);
 }
 
 /* default <h1> */
@@ -43,17 +37,15 @@ body {
 
 /* default <a> */
 :where(a) {
+  border-bottom: 1px solid var(--link-border-color);
   color: var(--brand-color);
   text-decoration: none;
-  border-bottom: 1px solid var(--link-border-color);
-  /* padding-block: 0.25em; */
 }
 a:hover,
 a:focus {
-  color: var(--site-bg);
-  background-color: var(--link-hover-color);
+  color: var(--link-hover-text-color);
+  background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
-  /* padding: 0.25em; */
 }
 
 /* default <ol> & <li> */
@@ -79,17 +71,17 @@ a:focus {
 
 /* default audio */
 :where(audio) {
-  display: block;
-  max-width: var(--main-element-max);
-  margin: 0 auto 1.5em auto;
   background-color: var(--light-accent-color);
   border: 1px solid var(--dark-accent-color);
+  display: block;
+  margin: 0 auto 1.5em auto;
+  max-width: var(--main-element-max);
 }
 
 /* default img to handle fluid images */
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 img[width] {
   width: auto; /* Defer to max-width */
@@ -100,32 +92,32 @@ img[width][height] {
 
 /* main content constrained by viewport */
 main {
-  max-width: min(var(--page-width-max), 100vw - 1em);
   margin-inline: auto;
+  max-width: min(var(--page-width-max), 100vw - 1em);
 }
 
 /* brand & navigation (inside <header>) */
 .brand-name {
-  display: block;
-  margin-inline: auto;
-  text-align: center;
-  font-size: var(--font-size-lg);
   border: none;
+  display: block;
+  font-family: var(--brand-font);
+  font-size: var(--font-size-lg);
+  margin-inline: auto;
   padding-block: 0.5em;
-  font-family: var(--test-font2);
+  text-align: center;
 }
 .brand-link {
   border: none;
   padding: 0.25em;
 }
 .brand-nav {
-  max-width: min(var(--page-width-max), 100vw - 1em);
-  margin: 0;
-  padding-inline: 0;
   display: flex;
-  justify-content: space-around;
   gap: 0.25em;
+  justify-content: space-around;
   list-style: none;
+  margin: 0;
+  max-width: min(var(--page-width-max), 100vw - 1em);
+  padding-inline: 0;
 }
 .brand-nav a {
   font-size: var(--font-size-md);
@@ -133,37 +125,36 @@ main {
 }
 /* highlight the nav element of the current page  */
 .nav-link[aria-current="page"] {
-  color: white;
-  background-color: var(--link-hover-color);
+  background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
+  color: var(--link-hover-text-color);
 }
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* used for skip-to-main-content link */
 #visually-hidden {
-  background: var(--link-hover-color);
-  color: var(--site-bg);
-  font-weight: bold;
-  padding: 0.5rem 1.5rem;
+  color: var(--link-hover-text-color);
+  background: var(--link-hover-bg-color);
   border: none;
   border-radius: 0 0 0.25rem 0.25rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
   position: absolute;
   transform: translateY(-120%);
   transition: transform 325ms ease-in;
 }
 #visually-hidden:focus {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 /* end brand */
 
 /* about page, page-specific styling */
 #about {
-  max-width: var(--main-element-max);
   margin: 1em auto 0 auto;
+  max-width: var(--main-element-max);
 }
 
 /* list of All Tags and All Categories */
-.alltags-list *,
 .allcategories-list *,
 .allauthors-list * {
   list-style: none;
@@ -174,31 +165,18 @@ main {
 
 /* post elements */
 .post {
-  max-width: var(--main-element-max);
   margin-inline: auto;
+  max-width: var(--main-element-max);
 }
 .post-title {
   font-size: var(--post-title-full-size);
   line-height: 1.2;
   margin-block-start: 0.5em;
 }
-.post-date,
-.post-readingtime {
-  font-size: var(--post-info-full-size);
-  text-align: center;
+.post-date {
+  font-size: var(--font-size-base);
   font-style: italic;
-}
-.post-description {
-  font-size: var(--font-size-md);
-  font-weight: normal;
-}
-.post-taglist {
-  display: inline-flex;
-  align-items: center;
-  list-style: none;
-  margin-block: 0.5em;
-  padding-inline-start: 0;
-  font-size: var(--post-tag-size);
+  text-align: center;
 }
 .post-nextprev {
   list-style: none;
@@ -208,19 +186,10 @@ main {
 .post-nextprev li:first-child {
   margin-block: 1em;
 }
-/* first paragraph after an image is always a caption */
-picture + p {
-  text-align: center;
-  font-size: var(--caption-size);
-}
 
 /* used in list of posts */
 .post-card {
-  margin-block: 1em 1.5em;
-}
-.post-card .post-metadata,
-.post-card .post-image {
-  flex-basis: min(500px, 100% - 0.25em);
+  margin-block: 1.25em;
 }
 .post-card .post-title {
   font-size: var(--post-title-card-size);
@@ -230,11 +199,6 @@ picture + p {
 .post-card .post-date {
   text-align: left;
 }
-.post-card .post-excerpt {
-  font-size: var(--post-excerpt-card-size);
-  margin-block: 0.5em;
-  line-height: 1.25;
-}
 /* end post elements */
 
 footer {
@@ -242,24 +206,22 @@ footer {
 }
 
 .bundleitem {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--releaseitem-bg-color);
   border: 1px dotted darkgray;
-  padding: 1rem;
-  margin: 1rem 0;
   border-radius: 0.5rem;
-  width: min(var(--main-element-max), 100vw - 1em);
+  padding: 1rem;
+  margin-block-end: 1rem;
   margin-inline: auto;
-  background-color: var(--bundleitem-bg);
+  width: min(var(--main-element-max), 100vw - 1em);
 }
 
 .bundleposts > .bundleitem {
-  background-color: var(--bundlepostitem-bg);
+  background-color: var(--postitem-bg-color);
 }
 .bundlesites {
   border-radius: 0.5rem;
   padding: 1rem;
-  background-color: var(--bundlepostitem-bg);
+  background-color: var(--siteitem-bg-color);
 }
 .bundleitem-title {
   font-size: var(--font-size-md);
@@ -279,7 +241,7 @@ footer {
 
 .resources {
   font-size: var(--font-size-base);
-  background-color: var(--resources-bg);
+  background-color: var(--resources-bg-color);
   border-radius: 0.5rem;
   padding: 1em;
 }
