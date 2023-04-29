@@ -6,7 +6,7 @@ tags:
 description: Welcome to Issue 5 of The 11ty Bundle. Today is the launch of 11tybundle.dev. The site includes resources for all things Eleventy. Read on to learn more.
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
-  source: "11ty-bundle-5.jpg"
+  source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
   caption: "An AI-generated image of the number eleven"
 bundleIssue: 5

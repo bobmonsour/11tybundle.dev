@@ -6,7 +6,7 @@ tags:
 description: This is the first of an occasional roundup of Eleventy releases, related blog posts, and resources.
 keywords: eleventy, newsletter, roundup, news
 image:
-  source: "11ty-bundle-1.jpg"
+  source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
   caption: "An AI-generated image of the number eleven"
 pageId: bundle

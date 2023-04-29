@@ -6,7 +6,7 @@ tags:
 description: Welcome to Issue 2 of The 11ty Bundle, an occasional bundle of Eleventy releases, blog posts, sites, and resources.
 keywords: eleventy, newsletter, roundup, news
 image:
-  source: "11ty-bundle-2.jpg"
+  source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
   caption: "An AI-generated image of the number eleven"
 pageId: bundle
