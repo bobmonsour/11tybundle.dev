@@ -13,7 +13,7 @@ pageId: bundle
 bundleIssue: 1
 ---
 
-Why, you ask?
+Why?, you ask.
 
 I felt that there was so much happening in the world of Eleventy as I watch the Discord Server, Mastodon, and my RSS reader, it seemed appropriate to step back and put together a curated version of what I'm seeing in the hopes that others might find this useful.
 
@@ -25,14 +25,7 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 
 ## Recent releases
 
-{% for item in airtableitems | getBundleItems(bundleIssue, "release") %}
-
-<div class="bundleitem">
-<p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
-<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-<p class="bundleitem-dateline">{% if item.AuthorLink %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {% endif %}{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
-</div>
-{% endfor %}
+{% include 'partials/bundlereleases.njk' %}
 
 ## Blog posts from around the web
 
@@ -40,10 +33,6 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 
 ## Built with Eleventy
 
-{% for item in airtableitems | getBundleItems(bundleIssue, "site") %}
+{% include 'partials/bundlesites.njk' %}
 
-- [{{ item.Title }}]({{ item.Link }}){% if item.Author and item.AuthorLink %} by [{{ item.Author }}]({{ item.AuthorLink }}){% elif item.Author %} by {{ item.Author }} {% endif %}
-
-{% endfor %}
-
-{% include 'partials/bundlefoot.njk' %}
+{% include 'partials/bundleresources.njk' %}

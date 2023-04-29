@@ -3,7 +3,10 @@
   {% include 'partials/head.njk' %}
 <body>
 	<a href="#main-content" id="visually-hidden">Skip to main content</a>
-  {% include 'partials/header.njk' %}
+  <header>
+    <p class="brand-name"><a href="/" class="brand-link">{% raw %}{{ 11tybundle.dev }}{% endraw %}</a></p>
+    {% include "partials/sitenav.njk" %}
+  </header>
   <main id="main-content">
     {# provide per-page styling via frontmatter #}
     {% if pageId %}
@@ -14,6 +17,8 @@
       {{ content | safe }}
     {% endif %}
   </main>
-  {% include 'partials/footer.njk' %}
+  <footer>
+    {% include "partials/sitenav.njk" %}
+  </footer>
 </body>
 </html>

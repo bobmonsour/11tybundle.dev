@@ -12,6 +12,7 @@
     size: 1,
     alias: "author",
     before: function(data) {
+      // create a unique set of authors from the Airtable data, sorting them alphabetically by first name
       let authorSet = new Set();
       for (let item of data) {
         authorSet.add(item.Author);
@@ -41,4 +42,4 @@
   {% endfor %}
 </div>
 
-{% include 'partials/bundlefoot.njk' %}
+{% include 'partials/bundleresources.njk' %}

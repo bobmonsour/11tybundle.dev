@@ -1,5 +1,9 @@
-{% from "macros.njk" import tagList %}
-
+{#
+  Used to lists all posts in a given collection of blog posts tagged with "posts"
+  It is used on the index.njk template to list most recent posts.
+  It is also used on the Archive page to list all posts.
+  In each of those, a variable is set to the subset of posts to list.
+#}
 {% for post in postlist %}
   <section class="post-card">
     <div class="post-metadata">
@@ -13,16 +17,5 @@
       </p>
       <p class="post-description">{{ post.data.description }}</p>
     </div>
-    {# <div class="post-image">
-      <a href="{{ post.url }}">
-        {%- if loop.index === 1 or loop.index === 2 %}
-          {% set loading = "eager" %}
-        {%- else %}
-          {% set loading = "lazy" %}
-        {%- endif %}
-      {% set imageSource %}{{ post.data.imageDir + post.data.image.source }}{% endset %}
-      {% image imageSource, post.data.image.alt, "(min-width: 540px) 500px, 95.45vw", loading %}</a>
-    </div> #}
   </section>
-  {# {%- if not loop.last %}<hr>{% endif %} #}
 {% endfor %}

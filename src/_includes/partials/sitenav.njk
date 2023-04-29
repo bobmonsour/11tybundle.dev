@@ -1,0 +1,16 @@
+{#
+  The header of the page and the footer each include the main navigation.
+  As a result, we can simply include this file in both the header and the footer.
+  Those includes are in the default layout file. Styling can be accomplished
+  through the selection of the <header> and <footer> elements in CSS.
+#}
+<nav class="brand">
+  <ul class="brand-nav">
+    {% for link in site.mainNavLinks %}
+      <li>
+        <a href="{{ link.url }}"
+          {% if page.url !== "/" and page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

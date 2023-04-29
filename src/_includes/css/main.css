@@ -164,7 +164,8 @@ main {
 
 /* list of All Tags and All Categories */
 .alltags-list *,
-.allcategories-list * {
+.allcategories-list *,
+.allauthors-list * {
   list-style: none;
   text-align: center;
   margin: 1em auto;
@@ -236,23 +237,9 @@ picture + p {
 }
 /* end post elements */
 
-/* page footer */
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0.25em;
-  margin-block: 1em;
+  padding-block: 1.5em;
 }
-footer .text {
-  margin: 0;
-}
-footer a {
-  font-size: var(--font-size-base);
-  padding: 0.25em;
-}
-
-/* end footer */
 
 .bundleitem {
   display: flex;
@@ -267,6 +254,11 @@ footer a {
 }
 
 .bundleposts > .bundleitem {
+  background-color: var(--bundlepostitem-bg);
+}
+.bundlesites {
+  border-radius: 0.5rem;
+  padding: 1rem;
   background-color: var(--bundlepostitem-bg);
 }
 .bundleitem-title {
@@ -289,7 +281,7 @@ footer a {
   font-size: var(--font-size-base);
   background-color: var(--resources-bg);
   border-radius: 0.5rem;
-  padding: 0.25em;
+  padding: 1em;
 }
 .resources ul {
   margin-block-start: 0.25em;

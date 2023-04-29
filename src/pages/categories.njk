@@ -12,6 +12,7 @@
     size: 1,
     alias: "category",
     before: function(data) {
+      // create a unique set of categories from the Airtable data, sorting them alphabetically
       let categorySet = new Set();
       for (let item of data) {
       (item.Categories || []).forEach((category) => categorySet.add(category));
@@ -28,7 +29,7 @@
 }
 ---
 
-<h2>Posts in category “{{ category }}”</h2>
+<h2>Posts in “{{ category }}”</h2>
 
 <div class="bundleposts">
   {% for item in airtableitems | postsInCategory(category) %}
@@ -41,4 +42,4 @@
   {% endfor %}
 </div>
 
-{% include 'partials/bundlefoot.njk' %}
+{% include 'partials/bundleresources.njk' %}
