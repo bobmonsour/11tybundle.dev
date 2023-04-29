@@ -19,7 +19,8 @@
   --resources-bg-color: #bdcdd6;
   --link-border-color: #6096b4;
   --link-hover-bg-color: #6096b4;
-  --link-hover-text-color: #eee9da;
+  --link-hover-text-color: white;
+  /* --link-hover-text-color: #eee9da; */
   --dark-accent-color: var(--link-hover-bg-color);
   --light-accent-color: var(--link-hover-text-color)
 

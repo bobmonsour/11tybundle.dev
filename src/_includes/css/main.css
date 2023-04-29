@@ -43,8 +43,7 @@ body {
 }
 a:hover,
 a:focus {
-  color: white;
-  /* color: var(--link-hover-text-color); */
+  color: var(--link-hover-text-color);
   background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
 }
