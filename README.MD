@@ -1,4 +1,6 @@
-# 11tybundle.dev - A resource for all developers using Eleventy
+# 11tybundle.dev
+
+## _A resource for all developers using Eleventy_
 
 I started this project after producing several newsletter-type blog posts on my personal website, [bobmonsour.com](https://bobmonsour.com). I called those blog posts [The 11ty Bundle](https://www.bobmonsour.com/tags/11ty-bundle/). I wanted to create a single place where I could share resources and information about Eleventy.
 
