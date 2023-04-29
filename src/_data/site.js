@@ -4,7 +4,7 @@ module.exports = {
   subtitle:
     "Resources for developers using the Eleventy static site generator.",
   description: "A bundle of Eleventy resources, mostly blog posts.",
-  url: "https://www.11tybundle.dev",
+  url: "https://11tybundle.dev",
   language: "en",
   author: {
     name: "Bob Monsour",
