@@ -21,7 +21,7 @@ By the second post, a week after the first, I had already changed the name to "T
 
 By the fourth issue, I had had enough of manually creating all of these links in markdown. It was time to get more efficient as there seemed to be a lot of available content to keep the publication going for many weeks.
 
-First, I scoured all of the posts that I had previously gathered and subscribed to the RSS feeds of those blogs. Second, I created an Airtable database to house each tidbit of content. There, I could identify which issue each would appear in and I could categorize each post according to the topics I thought made sense based on the Eleventy documentation as well as the nature of the discussions on the Discord server.
+First, I scoured all of the posts that I had previously gathered and subscribed to the RSS feeds of many of those blogs. Second, I created an Airtable database to house each tidbit of content. There, I could identify which issue each would appear in and I could categorize each post according to the topics I thought made sense based on the Eleventy documentation as well as the nature of the discussions on the Discord server.
 
 Lastly, it seemed that this effort would of best use to the Eleventy community if it were on its own website with its own RSS feed.
 
