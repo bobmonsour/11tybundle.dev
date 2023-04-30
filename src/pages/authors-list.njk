@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
 
 <div class="allauthors-list">
 <h2>{{ title }}</h2>
-  <ul>
+  <ul class="authorslist">
     {% for author in airtableitems | getAuthorsAndCounts %}
       {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
       <li><a href="{{authorUrl}}">{{ author[0] }} ({{ author[1] }})</a></li>

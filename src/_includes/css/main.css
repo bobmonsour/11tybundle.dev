@@ -169,6 +169,19 @@ main {
   padding-inline: 0;
 }
 
+.categorieslist,
+.authorslist {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0;
+  gap: 0.5em;
+}
+.categorieslist a,
+.authorslist a {
+  font-weight: bold;
+  padding: 0.25em;
+}
+
 /* post elements */
 .post {
   margin-inline: auto;
@@ -240,7 +253,7 @@ footer {
   margin-block-end: 0.25rem;
 }
 .bundleitem-dateline,
-.bundleitem-categories {
+.bundleitem-.categoriesories {
   font-size: var(--font-size-base);
   padding-block: 0;
 }

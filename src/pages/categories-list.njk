@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
 
 <div class="allcategories-list">
 <h2>{{ title }}</h2>
-  <ul>
+  <ul class="categorieslist">
     {% for category in airtableitems | getCategoriesAndCounts %}
       {% set categoryUrl %}/categories/{{ category[0] | slugify }}/{% endset %}
       <li><a href="{{categoryUrl}}">{{ category[0] }} ({{ category[1] }})</a></li>
