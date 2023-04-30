@@ -45,13 +45,21 @@ module.exports = function (eleventyConfig) {
   });
 
   // This filter formats the date of the items that come from the Airtable
-  // database, which arrive as strings, not dates
+  // database, which arrive as strings, not dates; for use in the Bundle posts
   eleventyConfig.addFilter("formatItemDate", function formatItemDate(date) {
     const { DateTime } = require("luxon");
     const itemDate = Date.parse(date);
     return DateTime.fromMillis(itemDate, { zone: "utc" }).toLocaleString(
       DateTime.DATE_MED
     );
+  });
+
+  // This filter formats the date of the items that come from the Airtable
+  // database, which arrive as strings, not dates; for use in the firehose RSS feed
+  eleventyConfig.addFilter("formatFirehoseDate", function formatItemDate(date) {
+    const { DateTime } = require("luxon");
+    const newDate = DateTime.fromISO(date);
+    return newDate.toRFC2822();
   });
 
   // As of the launch date (May 2, 2023), these 2 filters is not used. It likely
