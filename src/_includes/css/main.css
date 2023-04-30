@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* default <h2> and <h3> */
+/* default <h2> and <text> */
 :where(h2, h3) {
   font-size: var(--font-size-lg);
   line-height: 1.2;
@@ -112,6 +112,7 @@ main {
 }
 .brand-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25em;
   justify-content: space-around;
   list-style: none;
@@ -236,6 +237,20 @@ footer {
 .bundleposts > .bundleitem {
   background-color: var(--postitem-bg-color);
 }
+.bundleposts h2,
+.bundleposts h3 {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  padding-block: 1em 0.5em;
+  text-align: center;
+}
+.bundleposts h3 {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  padding-block: 0.25em;
+  text-align: left;
+}
+
 .bundlesites {
   border-radius: 0.5rem;
   padding: 1rem;
@@ -252,7 +267,7 @@ footer {
   margin-block-end: 0.25rem;
 }
 .bundleitem-dateline,
-.bundleitem-.categoriesories {
+.bundleitem-categories {
   font-size: var(--font-size-base);
   padding-block: 0;
 }

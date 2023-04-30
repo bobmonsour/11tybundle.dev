@@ -15,6 +15,7 @@ module.exports = {
     { url: "/", text: "Home" },
     { url: "/categories/", text: "Categories" },
     { url: "/authors/", text: "Authors" },
+    { url: "/firehose/", text: "Firehose" },
     { url: "/archive/", text: "Archive" },
     { url: "/about/", text: "About" },
   ],
