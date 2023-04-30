@@ -142,7 +142,6 @@ main {
   transform: translateY(-120%);
 }
 #visually-hidden:focus {
-  /* opacity: 1; */
   transform: translateY(0%);
 }
 /* end brand */
