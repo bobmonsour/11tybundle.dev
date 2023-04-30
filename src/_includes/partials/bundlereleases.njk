@@ -1,3 +1,4 @@
+<div class="bundlereleases">
 {%- for item in airtableitems | getBundleItems(bundleIssue, "release") %}
   <div class="bundleitem">
     <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
@@ -5,3 +6,4 @@
     <p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
   </div>
 {%- endfor %}
+</div>
