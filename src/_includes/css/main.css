@@ -140,11 +140,10 @@ main {
   padding: 0.5rem 1.5rem;
   position: absolute;
   transform: translateY(-120%);
-  transition: transform 325ms ease-in;
 }
 #visually-hidden:focus {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1; */
+  transform: translateY(0%);
 }
 /* end brand */
 

@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
     require("./src/_includes/filters/readingtime.js")
   );
 
+  // This filter formats the date of blog posts for the site
   eleventyConfig.addFilter("formatPostDate", function formatPostDate(date) {
     const { DateTime } = require("luxon");
     return DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
@@ -43,6 +44,8 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // This filter formats the date of the items that come from the Airtable
+  // database, which arrive as strings, not dates
   eleventyConfig.addFilter("formatItemDate", function formatItemDate(date) {
     const { DateTime } = require("luxon");
     const itemDate = Date.parse(date);
@@ -51,6 +54,8 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // As of the launch date (May 2, 2023), these 2 filters is not used. It likely
+  // will be used in the future when the blog posts vary in content.
   eleventyConfig.addFilter("getAllTags", (collection) => {
     let tagSet = new Set();
     for (let item of collection) {
@@ -58,7 +63,6 @@ module.exports = function (eleventyConfig) {
     }
     return Array.from(tagSet);
   });
-
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
     return (tags || []).filter(
       (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
@@ -67,12 +71,12 @@ module.exports = function (eleventyConfig) {
 
   // Extract releases, blog posts, and site items from Airtable data.
   // Data is returned in descending date order.
-  // Data is extracted by Issue and Type
+  // Data is extracted by Issue and Type.
   // The accepted values for Issue are:
-  //  0 - items from all issues
-  //  issue number - for from a specific issue
+  //             0 - items of the specified type from all issues
+  //  issue number - items of the specified type from a specific issue
   // The accepted values for Type are:
-  //   "Release", "Blog post", and "Site"
+  //   "release", "blog post", and "site"
   eleventyConfig.addFilter(
     "getBundleItems",
     function getBundleItems(bundleitems, bundleIssue, itemType) {
@@ -88,12 +92,9 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  // Extract a list of the categories assigned to the selected link.
+  // Extract a list of the categories assigned to the selected link (blog post).
   // These are appended to each blog post item in the Bundle.
   eleventyConfig.addFilter("getItemCategories", (bundleitems, link) => {
-    // console.log("link: " + link);
-    // const thisitem = bundleitems.filter((item) => item.Link == link);
-    // console.log("thisitem isArray?: " + Array.isArray(thisitem));
     return bundleitems.filter((item) => item.Link == link);
   });
 
@@ -162,8 +163,9 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Extract a list of the unique categories used in all of the issues
-  // of The 11ty Bundle from Airtable data. Items are sorted alphabetically.
+  // Generate a list of the unique categories and the number of items in
+  // each category in all of the issues of The 11ty Bundle from Airtable data.
+  // Category names are sorted alphabetically.
   eleventyConfig.addFilter("getCategoriesAndCounts", (collection) => {
     let categoryMap = new Map();
     for (let item of collection) {
@@ -175,26 +177,6 @@ module.exports = function (eleventyConfig) {
       return a[0] > b[0] ? 1 : -1;
     });
   });
-
-  // Extract a list of the unique blog post authors used in all of the issues
-  // of The 11ty Bundle from Airtable data. Authors are sorted alphabetically
-  // by first name.
-  //
-  // AS OF NOW, THIS IS NO LONGER NEEDED AS IT HAS BEEN REPLACED WITH
-  // getAuthorsAndCounts, WHICH ALSO RETURNS A COUNT OF THE NUMBER OF POSTS
-  // BY EACH AUTHOR.
-  //
-  // eleventyConfig.addFilter("getBundleAuthors", (collection) => {
-  //   let authorSet = new Set();
-  //   for (let item of collection) {
-  //     if (item.Author && item.Type == "blog post") {
-  //       authorSet.add(item.Author);
-  //     }
-  //   }
-  //   return Array.from(authorSet).sort((a, b) => {
-  //     return a > b ? 1 : -1;
-  //   });
-  // });
 
   // Extract a list of the unique blog post authors used in all of the issues
   // of The 11ty Bundle from Airtable data along with a count of their posts.
@@ -211,17 +193,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Get all 11ty Bundle (Airtable) blog posts for a specific category
+  // Given a category, get all blog posts with that category from the Airtable data.
   eleventyConfig.addFilter(
     "postsInCategory",
     function postsInCategory(bundleitems, category) {
-      // console.log("category typeof: " + typeof category);
-      // console.log("category: " + category);
       function postInCategory(item) {
-        // console.log("item.Link: " + item.Link);
-        // console.log("typeof item: " + typeof item);
-        // console.log("typeof item.Type: " + typeof item.Type);
-        // console.log("item.Type: " + item.Type);
         if (item.Categories) {
           return item.Type == "blog post" && item.Categories.includes(category)
             ? true
@@ -241,7 +217,7 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  // Get all 11ty Bundle (Airtable) blog posts by a specific author
+  // Get all blog posts by a specific author from the Airtable data.
   eleventyConfig.addFilter(
     "postsByAuthor",
     function postsbyAuthor(bundleitems, author) {
