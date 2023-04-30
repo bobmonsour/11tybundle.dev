@@ -149,7 +149,8 @@ main {
 /* RSS feed link */
 .rssfeedlink {
   /* font-size: var(--font-size-base); */
-  padding-block-start: 0.5em;
+  padding-block: 1em;
+  padding-inline-end: 3em;
   text-align: right;
 }
 
