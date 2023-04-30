@@ -146,6 +146,13 @@ main {
 }
 /* end brand */
 
+/* RSS feed link */
+.rssfeedlink {
+  /* font-size: var(--font-size-base); */
+  padding-block-start: 0.5em;
+  text-align: right;
+}
+
 /* about page, page-specific styling */
 #about {
   margin: 1em auto 0 auto;
