@@ -173,7 +173,6 @@ main {
 .authorslist {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 0;
   gap: 0.5em;
 }
 .categorieslist a,
