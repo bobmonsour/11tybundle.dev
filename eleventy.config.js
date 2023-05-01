@@ -3,7 +3,6 @@ module.exports = function (eleventyConfig) {
   // Set up file and directory passthroughs
   //
   [
-    "src/assets/audio/",
     { "src/assets/favicon/*": "/" },
     "src/assets/img/",
     "src/robots.txt",
@@ -60,21 +59,6 @@ module.exports = function (eleventyConfig) {
     const { DateTime } = require("luxon");
     const newDate = DateTime.fromISO(date);
     return newDate.toRFC2822();
-  });
-
-  // As of the launch date (May 2, 2023), these 2 filters is not used. It likely
-  // will be used in the future when the blog posts vary in content.
-  eleventyConfig.addFilter("getAllTags", (collection) => {
-    let tagSet = new Set();
-    for (let item of collection) {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    }
-    return Array.from(tagSet);
-  });
-  eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-    );
   });
 
   // Extract releases, blog posts, and site items from Airtable data.
@@ -236,6 +220,22 @@ module.exports = function (eleventyConfig) {
         });
     }
   );
+
+  // sitemap.xml hack - It seems that the first of paginated pages is the only
+  // link that is included in the sitemap. What I really need for this site is
+  // for the main page to be in the sitemap, not any of the paginated pages.
+  // Specifically, I need for /categories/ and /authors/ to be in the sitemap.
+  // So this filter takes the page.url in sitemap.njk and ensures that those
+  // pages are included, rather than including the first of the paginated pages.
+  eleventyConfig.addFilter("sitemapUrl", function sitemapUrl(url) {
+    if (url.includes("/categories/")) {
+      return "/categories/";
+    } else if (url.includes("/authors/")) {
+      return "/authors/";
+    } else {
+      return url;
+    }
+  });
 
   const inspect = require("node:util").inspect;
   eleventyConfig.addFilter("inspect", function (obj = {}) {
