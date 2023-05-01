@@ -10,6 +10,7 @@
     data: "getpostcategories",
     size: 1,
     alias: "category",
+    addAllPagesToCollections: "true",
     before: function(data) {
       // create a unique set of categories from the Airtable data, sorting them alphabetically
       let categorySet = new Set();
