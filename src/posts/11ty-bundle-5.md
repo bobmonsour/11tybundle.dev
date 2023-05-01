@@ -1,6 +1,6 @@
 ---
 title: Issue 5 - LAUNCH DAY!
-date: 2023-05-02
+date: 2023-05-01
 tags:
   - 11ty Bundle
 description: Welcome to Issue 5 of The 11ty Bundle. It's LAUNCH DAY! The site includes resources for all things Eleventy. Read on to learn more.
