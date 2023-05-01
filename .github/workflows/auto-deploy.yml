@@ -1,0 +1,16 @@
+name: "Auto-Deploy"
+
+on:
+  schedule:
+    - cron: '30 1 * * *' # At 1:30am every day
+
+jobs:
+  deploy:
+    name: 'Auto Deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Netlify
+        env:
+          TOKEN: ${​{ secrets.NETLIFY_BUILD_HOOK_ID }​}
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/${TOKEN}
