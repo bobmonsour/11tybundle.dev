@@ -18,7 +18,7 @@ Each issue will contain the following sections: recent releases of official Elev
 
 Some issues will focus on a particular topic (or category). In this issue, we highlight posts from Eleventy adopters who have migrated from other static site generators, tools, and platforms. Other issues might add useful tips or code snippets or selected quotes commenting on Eleventy.
 
-I hope you find this to be a useful resource to help you get the most out of Eleventy. There are more than 300 blog posts across more than 25 [categories](/categories/) written by more than 100 [authors](/authors/).
+I hope you find this to be a useful resource so you get the most out of Eleventy. There are more than 300 blog posts across more than 25 [categories](/categories/) written by more than 100 [authors](/authors/).
 
 _Don't miss an issue. There are two RSS feeds, one is the [Blog RSS](/feed.xml) for posts like the one you're reading now and those in the [Archive](/archive) and a second one, [Firehose RSS](/firehosefeed.xml), which includes all of the [categorized](/categories/) posts written by numerous [authors](/authors/)._
 
