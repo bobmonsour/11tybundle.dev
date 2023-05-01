@@ -21,7 +21,7 @@ bundleIssue: 3
 
 {% include 'partials/bundlereleases.njk' %}
 
-## Blog posts from around the web
+## Posts from around the web
 
 {% include 'partials/bundleposts.njk' %}
 

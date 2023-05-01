@@ -18,5 +18,7 @@ module.exports = {
     { url: "/firehose/", text: "Firehose" },
     { url: "/archive/", text: "Archive" },
     { url: "/about/", text: "About" },
+    { url: "/feed.xml", text: "Blog RSS" },
+    { url: "/firehosefeed.xml", text: "Firehose RSS" },
   ],
 };

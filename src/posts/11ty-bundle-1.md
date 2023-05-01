@@ -27,7 +27,7 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 
 {% include 'partials/bundlereleases.njk' %}
 
-## Blog posts from around the web
+## Posts from around the web
 
 {% include 'partials/bundleposts.njk' %}
 
