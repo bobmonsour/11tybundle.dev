@@ -31,6 +31,8 @@
 
 <h2>Posts in “{{ category }}”</h2>
 
+<p class="titlemeta">Newest posts first, title links open in new tab</p>
+
 <div class="bundleposts">
   {% for item in airtableitems | postsInCategory(category) %}
   <div class="bundleitem">
