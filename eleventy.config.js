@@ -77,8 +77,13 @@ module.exports = function (eleventyConfig) {
         if (
           (bundleIssue == item["Issue"] && itemType == item["Type"]) ||
           (bundleIssue === 0 && itemType == item["Type"])
-        )
-          return true;
+        ) {
+          if (item["Date"]) {
+            return true;
+          } else {
+            throw "Post has no date";
+          }
+        }
       }
       return bundleitems.filter(validateItem).sort((a, b) => {
         return a.Date > b.Date ? -1 : 1;
