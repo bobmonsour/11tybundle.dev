@@ -31,6 +31,8 @@
 
 <h2>Posts by {{ author }}</h2>
 
+<p class="titlemeta">Newest posts first, title links open in new tab</p>
+
 <div class="bundleposts">
   {% for item in airtableitems | postsByAuthor(author) %}
   <div class="bundleitem">
