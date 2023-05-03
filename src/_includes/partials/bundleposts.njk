@@ -1,5 +1,6 @@
 <div class="bundleposts">
-  {%- for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
+  {%- for item in airtableitems | getBundlePosts(bundleIssue) %}
+  {# {%- for item in airtableitems | getBundleItems(bundleIssue, "blog post") %} #}
   <div class="bundleitem">
     <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>

@@ -69,20 +69,20 @@ module.exports = function (eleventyConfig) {
   //  issue number - items of the specified type from a specific issue
   // The accepted values for Type are:
   //   "release", "blog post", and "site"
-  eleventyConfig.addFilter(
-    "getBundleItems",
-    function getBundleItems(bundleitems, bundleIssue, itemType) {
-      return bundleitems
-        .filter(
-          (item) =>
-            (bundleIssue == item["Issue"] && itemType == item["Type"]) ||
-            (bundleIssue === 0 && itemType == item["Type"])
-        )
-        .sort((a, b) => {
-          return a.Date > b.Date ? -1 : 1;
-        });
-    }
-  );
+  // eleventyConfig.addFilter(
+  //   "getBundleItems",
+  //   function getBundleItems(bundleitems, bundleIssue, itemType) {
+  //     return bundleitems
+  //       .filter(
+  //         (item) =>
+  //           (bundleIssue == item["Issue"] && itemType == item["Type"]) ||
+  //           (bundleIssue === 0 && itemType == item["Type"])
+  //       )
+  //       .sort((a, b) => {
+  //         return a.Date > b.Date ? -1 : 1;
+  //       });
+  //   }
+  // );
 
   // Extract a list of the categories assigned to the selected link (blog post).
   // These are appended to each blog post item in the Bundle.
@@ -154,6 +154,63 @@ module.exports = function (eleventyConfig) {
       return a > b ? 1 : -1;
     });
   });
+
+  eleventyConfig.addFilter(
+    "getBundlePosts",
+    function getBundlePosts(bundleitems, bundleIssue) {
+      return bundleitems
+        .filter(
+          (item) =>
+            (bundleIssue == item["Issue"] && item["Type"] == "blog post") ||
+            (bundleIssue == 0 && item["Type" == "blog post"])
+        )
+        .sort((a, b) => {
+          return a.Date > b.Date ? -1 : 1;
+        });
+    }
+  );
+
+  eleventyConfig.addFilter(
+    "getBundleFirehose",
+    function getBundleFirehose(bundleitems) {
+      function validateFirehose(item) {
+        if (item["Type"] == "blog post") {
+          return true;
+        }
+      }
+      return bundleitems.filter(validateFirehose).sort((a, b) => {
+        return a.Date > b.Date ? -1 : 1;
+      });
+    }
+  );
+
+  eleventyConfig.addFilter(
+    "getBundleReleases",
+    function getBundleReleases(bundleitems, bundleIssue) {
+      function validateRelease(item) {
+        if (item["Issue"] == bundleIssue && item["Type"] == "release") {
+          // console.log("item[Type]: " + item["Type"]);
+          return true;
+        }
+      }
+      return bundleitems.filter(validateRelease).sort((a, b) => {
+        return a.Date > b.Date ? -1 : 1;
+      });
+    }
+  );
+
+  eleventyConfig.addFilter(
+    "getBundleSites",
+    function getBundleSites(bundleitems, bundleIssue) {
+      return bundleitems
+        .filter(
+          (item) => bundleIssue == item["Issue"] && item["Type"] == "site"
+        )
+        .sort((a, b) => {
+          return a.Date > b.Date ? -1 : 1;
+        });
+    }
+  );
 
   // Generate a list of the unique categories and the number of items in
   // each category in all of the issues of The 11ty Bundle from Airtable data.

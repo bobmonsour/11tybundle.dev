@@ -7,14 +7,13 @@ keywords: firehose, 11ty Bundle, 11ty, eleventy
 image:
   source: "11tybundle-dev.jpg"
   alt: "an address plate for house number 11"
-bundleIssue: 0
 ---
 
 <div class="bundleposts">
 <h2>{{ title }}</h2>
 <p>Firehose has <strong>ALL</strong> posts. Try find in page (ctrl-f Windows/Linux, cmd-f macOS).</p>
   {%- set prev_year = "" %}
-  {%- for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
+  {%- for item in airtableitems | getBundleFirehose %}
     {% set year = item.Date | truncate(4, true, '') %}
     {% if item.Date and year != prev_year %}
       <h3>{{ year }}</h3>
