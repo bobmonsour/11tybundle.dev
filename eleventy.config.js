@@ -69,32 +69,20 @@ module.exports = function (eleventyConfig) {
   //  issue number - items of the specified type from a specific issue
   // The accepted values for Type are:
   //   "release", "blog post", and "site"
-  // If the post has no date, throw an error and log it to the console.
   eleventyConfig.addFilter(
     "getBundleItems",
     function getBundleItems(bundleitems, bundleIssue, itemType) {
-      function validateItem(item) {
-        if (
-          (bundleIssue == item["Issue"] && itemType == item["Type"]) ||
-          (bundleIssue === 0 && itemType == item["Type"])
-        ) {
-          if (item["Date"]) {
-            return true;
-          } else {
-            throw "Post has no date";
-          }
-        }
-      }
-      return bundleitems.filter(validateItem).sort((a, b) => {
-        return a.Date > b.Date ? -1 : 1;
-      });
+      return bundleitems
+        .filter(
+          (item) =>
+            (bundleIssue == item["Issue"] && itemType == item["Type"]) ||
+            (bundleIssue === 0 && itemType == item["Type"])
+        )
+        .sort((a, b) => {
+          return a.Date > b.Date ? -1 : 1;
+        });
     }
   );
-
-  // eleventyConfig.setNunjucksEnvironmentOptions({
-  //   throwOnUndefined: true,
-  //   autoescape: false, // warning: don’t do this!
-  // });
 
   // Extract a list of the categories assigned to the selected link (blog post).
   // These are appended to each blog post item in the Bundle.
