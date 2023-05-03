@@ -12,13 +12,12 @@ bundleIssue: 0
 
 <div class="bundleposts">
 <h2>{{ title }}</h2>
-<p>Firehose has <strong>ALL</strong> posts. Try find in page (ctrl-f Windows/Linux, cmd-f macOS).</p>
+<p>The Firehose has <a href="https://www.11tybundle.dev/firehosefeed.xml">its own RSS feed</a> if you want to get each blog post as they're entered.</p>
   {%- set prev_year = "" %}
   {%- for item in airtableitems | getBundleItems(bundleIssue, "blog post") %}
     {% set year = item.Date | truncate(4, true, '') %}
     {% if item.Date and year != prev_year %}
       <h3>{{ year }}</h3>
-      <p class="titlemeta">Newest posts first, title links open in new tab</p>
     {% endif %}
     {% set prev_year = year %}
     <div class="bundleitem">

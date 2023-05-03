@@ -224,11 +224,6 @@ footer {
   padding-block: 1.5em;
 }
 
-.titlemeta {
-  font-style: italic;
-  font-size: var(--font-size-md);
-  padding-block-end: 0.25rem;
-}
 .bundleitem {
   background-color: var(--releaseitem-bg-color);
   border: 1px dotted darkgray;
@@ -250,7 +245,9 @@ footer {
   text-align: center;
 }
 .bundleposts h3 {
-  padding-block: 0;
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  padding-block: 0.25em;
   text-align: left;
 }
 
