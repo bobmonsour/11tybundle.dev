@@ -165,9 +165,11 @@ module.exports = function (eleventyConfig) {
         categoryMap.set(category, categoryMap.get(category) + 1 || 1)
       );
     }
-    return Array.from(categoryMap).sort((a, b) => {
+    let categoryList = Array.from(categoryMap).sort((a, b) => {
       return a[0] > b[0] ? 1 : -1;
     });
+    console.log("Category count is: " + categoryList.length);
+    return categoryList;
   });
 
   // Extract a list of the unique blog post authors used in all of the issues
@@ -180,9 +182,11 @@ module.exports = function (eleventyConfig) {
         authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
       }
     }
-    return Array.from(authorMap).sort((a, b) => {
+    let authorList = Array.from(authorMap).sort((a, b) => {
       return a[0] > b[0] ? 1 : -1;
     });
+    console.log("Author count is: " + authorList.length);
+    return authorList;
   });
 
   // Given a category, get all blog posts with that category from the Airtable data.
