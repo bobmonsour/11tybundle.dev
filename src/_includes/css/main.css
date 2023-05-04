@@ -155,6 +155,18 @@ main {
   text-align: right;
 }
 
+/* Home page site intro text */
+.site-intro {
+  margin-block-start: 1em;
+}
+.site-intro p {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  line-height: 1.5;
+  margin-block: 0.25em;
+  max-width: var(--main-element-max);
+}
+
 /* about page, page-specific styling */
 #about {
   margin: 1em auto 0 auto;
@@ -208,7 +220,7 @@ main {
 
 /* used in list of posts */
 .post-card {
-  margin-block: 1.25em;
+  margin-block: 0.25em;
 }
 .post-card .post-title {
   font-size: var(--post-title-card-size);
