@@ -72,6 +72,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter(
     "getBundleItems",
     function getBundleItems(bundleitems, bundleIssue, bundleType) {
+      if (bundleIssue == 0) {
+        let postCount = 0;
+        for (let i = 0; i < bundleitems.length; i++) {
+          if (bundleitems[i]["Type"] == "blog post") {
+            postCount++;
+          }
+        }
+        console.log("Post count is: " + postCount);
+      }
       return bundleitems
         .filter(
           (item) =>

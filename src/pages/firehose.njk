@@ -12,7 +12,7 @@ bundleIssue: 0
 
 <div class="bundleposts">
 <h2>{{ title }}</h2>
-<p>Firehose has <strong>ALL</strong> posts. Try find in page (ctrl-f Windows/Linux, cmd-f macOS).</p>
+<p><em>Firehose has <strong>ALL</strong> posts. Try find in page (ctrl-f Windows/Linux, cmd-f macOS).</em></p>
   {%- set prev_year = "" %}
   {%- for item in airtableitems | getBundleItems(bundleIssue) %}
     {% set year = item.Date | truncate(4, true, '') %}
