@@ -168,7 +168,7 @@ main {
 }
 .site-intro p {
   font-size: var(--font-size-lg);
-  font-style: italic;
+  /* font-style: italic; */
   line-height: 1.5;
   margin-block: 0.25em;
   max-width: var(--main-element-max);
