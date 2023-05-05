@@ -18,7 +18,7 @@ bundleIssue: 0
     {% set year = item.Date | truncate(4, true, '') %}
     {% if item.Date and year != prev_year %}
       <h3>{{ year }}</h3>
-      <p class="titlemeta">Newest posts first, title links open in new tab</p>
+      <p class="titlemeta">Newest posts first</p>
     {% endif %}
     {% set prev_year = year %}
     <div class="bundleitem">

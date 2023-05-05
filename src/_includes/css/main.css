@@ -48,6 +48,13 @@ a:focus {
   border-radius: 0.5rem;
 }
 
+/* indicator for all external links */
+a[target="_blank"]::after {
+  content: "";
+  background: no-repeat var(--icon-external-link);
+  padding-right: 1em;
+}
+
 /* default <ol> & <li> */
 :where(ol) {
   margin: 0.5em auto 1.5em auto;
