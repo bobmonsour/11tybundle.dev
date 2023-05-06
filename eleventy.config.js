@@ -152,18 +152,6 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  // Extract a list of the unique categories used in all of the issues
-  // of The 11ty Bundle from Airtable data. Items are sorted alphabetically.
-  eleventyConfig.addFilter("getBundleCategories", (collection) => {
-    let categorySet = new Set();
-    for (let item of collection) {
-      (item.Categories || []).forEach((category) => categorySet.add(category));
-    }
-    return Array.from(categorySet).sort((a, b) => {
-      return a > b ? 1 : -1;
-    });
-  });
-
   // Generate a list of the unique categories and the number of items in
   // each category in all of the issues of The 11ty Bundle from Airtable data.
   // Category names are sorted alphabetically.
