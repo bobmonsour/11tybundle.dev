@@ -1,0 +1,22 @@
+{
+  "Deployment": "https://www.11ty.dev/docs/deployment/",
+  "Layouts": "https://www.11ty.dev/docs/layouts/",
+  "Collections": "https://www.11ty.dev/docs/collections/",
+  "Getting Started": "https://www.11ty.dev/docs/getting-started/",
+  "Pagination": "https://www.11ty.dev/docs/pagination/",
+  "Dates": "https://www.11ty.dev/docs/dates/",
+  "Internationalization": "https://www.11ty.dev/docs/i18n/",
+  "Data Cascade": "https://www.11ty.dev/docs/data-cascade/",
+  "Front Matter": "https://www.11ty.dev/docs/data-frontmatter/",
+  "Global Data": "https://www.11ty.dev/docs/data-global/",
+  "Configuration": "https://www.11ty.dev/docs/config/",
+  "Filters": "https://www.11ty.dev/docs/filters/",
+  "Markdown": "https://www.11ty.dev/docs/languages/markdown/",
+  "Navigation": "https://www.11ty.dev/docs/plugins/navigation/",
+  "Plugins": "https://www.11ty.dev/docs/plugins/",
+  "Edge Functions": "https://www.11ty.dev/docs/plugins/edge/",
+  "Nunjucks/Macros": "https://www.11ty.dev/docs/languages/nunjucks/",
+  "Remote Data": "https://www.11ty.dev/docs/plugins/fetch/",
+  "Serverless": "https://www.11ty.dev/docs/plugins/serverless/",
+  "WebC": "https://www.11ty.dev/docs/languages/webc/"
+}

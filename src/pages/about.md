@@ -6,8 +6,9 @@ image:
   source: "11tybundle-dev.jpg"
   alt: "an address plate for house number 11"
 permalink: /about/
-pageId: about
 ---
+
+# About 11tybundle.dev
 
 Why?, you ask.
 

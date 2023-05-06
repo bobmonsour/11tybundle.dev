@@ -10,15 +10,13 @@ image:
 bundleIssue: 0
 ---
 
+<h1>{{ title }}</h1>
 <div class="bundleposts">
-<h2>{{ title }}</h2>
-<p><em>Firehose has <strong>ALL</strong> posts. Try find in page (ctrl-f Windows/Linux, cmd-f macOS).</em></p>
   {%- set prev_year = "" %}
   {%- for item in airtableitems | getBundleItems(bundleIssue) %}
     {% set year = item.Date | truncate(4, true, '') %}
     {% if item.Date and year != prev_year %}
-      <h3>{{ year }}</h3>
-      <p class="titlemeta">Newest posts first</p>
+      <h2>{{ year }}</h2>
     {% endif %}
     {% set prev_year = year %}
     <div class="bundleitem">

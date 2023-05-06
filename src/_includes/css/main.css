@@ -13,6 +13,7 @@ body {
 /* default <h1> */
 :where(h1) {
   font-weight: normal;
+  padding-block: 0.5em 0.25em;
   text-align: center;
 }
 
@@ -174,18 +175,12 @@ main {
   max-width: var(--main-element-max);
 }
 
-/* about page, page-specific styling */
-#about {
-  margin: 1em auto 0 auto;
-  max-width: var(--main-element-max);
-}
-
 /* list of All Tags and All Categories */
 .allcategories-list *,
 .allauthors-list * {
   list-style: none;
   text-align: center;
-  margin: 1em auto;
+  margin: 0.75em auto;
   padding-inline: 0;
 }
 
@@ -194,6 +189,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
+  margin: 0 auto;
 }
 .categorieslist a,
 .authorslist a {
@@ -261,18 +257,6 @@ footer {
 .bundleposts > .bundleitem {
   background-color: var(--postitem-bg-color);
 }
-.bundleposts h2,
-.bundleposts h3 {
-  font-size: var(--font-size-lg);
-  font-weight: bold;
-  padding-block: 1em 0.5em;
-  text-align: center;
-}
-.bundleposts h3 {
-  padding-block: 0;
-  text-align: left;
-}
-
 .bundlesites {
   border-radius: 0.5rem;
   padding: 1rem;
@@ -294,7 +278,8 @@ footer {
   padding-block: 0;
 }
 
-.resources {
+.resources,
+.officialdocs {
   font-size: var(--font-size-base);
   background-color: var(--resources-bg-color);
   border-radius: 0.5rem;

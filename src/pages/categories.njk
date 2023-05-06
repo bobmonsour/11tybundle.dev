@@ -29,9 +29,19 @@
 }
 ---
 
-<h2>Posts in “{{ category }}”</h2>
+{% if linkstodocs[category] %}
+<h2>The official 11ty docs</h2>
+<div class="officialdocs">
+  <p class="bundleitem-title"><a href="{{ linkstodocs[category] }}" target="_blank">{{ category }}</a></p>
+  <p class="bundleitem-description">{{ linkstodocs[category] | getDescription | truncate(100) }}</p>
+  {%- if category == "Deployment" %}
+  <p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" target="_blank">list of providers on the 11ty docs site.</a></p>
+  {%- endif %}
+</div>
+{% endif %}
 
-<p class="titlemeta">Newest posts first</p>
+
+<h1>{{ title }}</h1>
 
 <div class="bundleposts">
   {% for item in airtableitems | postsInCategory(category) %}
