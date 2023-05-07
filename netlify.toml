@@ -11,6 +11,6 @@ package = "netlify-plugin-cache"
   NODE_VERSION = "lts/*"
 
 [[redirects]]
-  from = "https://11tybundle.dev/categories/frontmatter/"
-  to = "https://11tybundle.dev/categories/front-matter/"
+  from = "https://www.11tybundle.dev/categories/frontmatter/"
+  to = "https://www.11tybundle.dev/categories/front-matter/"
   status = 301
