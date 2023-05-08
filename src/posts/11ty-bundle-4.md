@@ -11,6 +11,7 @@ image:
   caption: "An AI-generated image of the number eleven"
 pageId: bundle
 bundleIssue: 4
+draft: false
 ---
 
 > _Sneak peek: The next issue will be a SPECIAL issue focused on posts that discuss migration from another static site generator or platform to Eleventy._

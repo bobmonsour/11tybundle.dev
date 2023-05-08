@@ -11,6 +11,7 @@ image:
   caption: "An AI-generated image of the number eleven"
 pageId: bundle
 bundleIssue: 3
+draft: false
 ---
 
 > _UPDATED: 2023-04-18 - I have added descriptions to each of the blog post entries. These are extracted from the blog post page itself as provided by the post's author._

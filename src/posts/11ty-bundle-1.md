@@ -11,6 +11,7 @@ image:
   caption: "An AI-generated image of the number eleven"
 pageId: bundle
 bundleIssue: 1
+draft: false
 ---
 
 Why?, you ask.

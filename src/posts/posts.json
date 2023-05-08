@@ -4,5 +4,6 @@
   "imageDir": "src/assets/img/",
   "tags": "posts",
   "keywords": "eleventy, 11ty, newsletter, roundup, news",
+  "draft": "true",
   "__comment__": "The items above are added to the front matter of all of the posts in the src/posts directory; per 11ty rules. They can be overridden in the individual post's front matter."
 }
