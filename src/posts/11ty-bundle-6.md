@@ -10,7 +10,7 @@ image:
   alt: "an AI-generated image of the number eleven"
   caption: "An AI-generated image of the number eleven"
 bundleIssue: 6
-draft: true
+draft: false
 ---
 
 Since the last issue (May 1st) I've added 158 posts to the site. There are 114 posts just from this year. We've now got over 500 posts from more than 200 authors. Each post is categorized, and [each category](/categories/) is listed with the newest posts firsts. I've added a couple of new categories too. One is "Search." As of this writing, there are [5 good posts](/categories/search/) on adding search functionality to your Eleventy site.
