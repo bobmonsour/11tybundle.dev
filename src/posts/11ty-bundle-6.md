@@ -29,7 +29,7 @@ New to the site, you'll find that for categories that have a direct relation to 
 
 ## Built with Eleventy
 
-Just a handful of the many sites built with Eleventy are listed below. One has already shown up in the blog post section of an earlier issue, but it's worth a second look because it's so awesome. That would be Grease. It's a website starter. I plan to add a set of links to some of the more recent starters in coming issues.
+Listed below are just a handful of the many sites built with Eleventy. One site on the list has already shown up in the blog post section of an earlier issue. But it's worth a second look because it's so awesome. That would be Grease. It's a beautifully built open-source website starter. I plan to add a set of links to some of the more recent starters in coming issues.
 
 {% include 'partials/bundlesites.njk' %}
 
