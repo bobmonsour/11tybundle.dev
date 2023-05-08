@@ -3,12 +3,8 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [
-    "_site/assets/img/generated",
     ".cache"
   ]
-
-[build.environment]
-  NODE_VERSION = "lts/*"
 
 [[redirects]]
   from = "https://www.11tybundle.dev/categories/frontmatter/"
