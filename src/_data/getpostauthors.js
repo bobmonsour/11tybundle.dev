@@ -3,8 +3,8 @@
 require("dotenv").config();
 
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
-  "appFlsGzwzaMZDADf"
+var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
+  process.env.AIRTABLE_BASE_ID
 );
 
 module.exports = function () {
@@ -12,7 +12,7 @@ module.exports = function () {
     console.log("running getpostauthors.js");
     const bundlePostAuthors = [];
 
-    base("11tyBundleArchive")
+    base(process.env.AIRTABLE_TABLE_NAME)
       .select({ fields: ["Author"] })
       .eachPage(
         function page(records, fetchNextPage) {
