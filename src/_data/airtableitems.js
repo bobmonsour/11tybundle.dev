@@ -3,8 +3,8 @@
 require("dotenv").config();
 
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
-  "appFlsGzwzaMZDADf"
+var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
+  process.env.AIRTABLE_BASE_ID
 );
 
 module.exports = function () {
@@ -12,8 +12,8 @@ module.exports = function () {
     console.log("running airtableitems.js");
     const airtableData = [];
 
-    base("11tyBundleArchive")
-      .select({ view: "Database" })
+    base(process.env.AIRTABLE_TABLE_NAME)
+      .select({ view: process.env.AIRTABLE_VIEW })
       .eachPage(
         function page(records, fetchNextPage) {
           records.forEach((record) => {
