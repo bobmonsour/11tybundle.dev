@@ -9,7 +9,7 @@
     "debug": "cross-env ELEVENTY_ENV=dev DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "links": "npx check-html-links _site",
     "clean": "rimraf ./_site",
-    "restart": "npm run clean && npm run start"
+    "rs": "npm run clean && npm run start"
   },
   "keywords": [],
   "author": {
