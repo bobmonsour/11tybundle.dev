@@ -1,15 +1,15 @@
 ---
-title: Issue 5 - LAUNCH DAY!
+bundleIssue: 5
+eleventyComputed:
+  title: "Issue {{ bundleIssue }} - LAUNCH DAY!"
+  description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle. It's LAUNCH DAY! The site includes resources for all things Eleventy. Read on to learn more."
 date: 2023-05-01
 tags:
   - 11ty Bundle
-description: Welcome to Issue 5 of The 11ty Bundle. It's LAUNCH DAY! The site includes resources for all things Eleventy. Read on to learn more.
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
-  caption: "An AI-generated image of the number eleven"
-bundleIssue: 5
 draft: false
 ---
 

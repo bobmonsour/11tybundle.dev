@@ -30,7 +30,7 @@
 ---
 
 {% if linkstodocs[category] %}
-<h2>The official 11ty docs</h2>
+<h2>Official 11ty docs</h2>
 <div class="officialdocs">
   <p class="bundleitem-title"><a href="{{ linkstodocs[category] }}" target="_blank">{{ category }}</a></p>
   <p class="bundleitem-description">{{ linkstodocs[category] | getDescription | truncate(100) }}</p>
@@ -53,5 +53,3 @@
   </div>
   {% endfor %}
 </div>
-
-{% include 'partials/bundleresources.njk' %}

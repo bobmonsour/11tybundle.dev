@@ -1,15 +1,15 @@
 ---
-title: Issue 6 - Stats, a book, and a bit more
+bundleIssue: 6
+eleventyComputed:
+  title: "Issue {{ bundleIssue }} - Stats, a book, and a bit more"
+  description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle. We've now got over 500 posts from more than 200 authors."
 date: 2023-05-09
 tags:
   - 11ty Bundle
-description: Welcome to Issue 6 of The 11ty Bundle. We've now got over 500 posts from more than 200 authors.
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
-  caption: "An AI-generated image of the number eleven"
-bundleIssue: 6
 draft: false
 ---
 

@@ -1,16 +1,16 @@
 ---
-title: Issue 2
+bundleIssue: 2
+eleventyComputed:
+  title: "Issue {{ bundleIssue }}"
+  description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle, an occasional bundle of Eleventy releases, blog posts, sites, and resources."
 date: 2023-04-03
 tags:
   - 11ty Bundle
-description: Welcome to Issue 2 of The 11ty Bundle, an occasional bundle of Eleventy releases, blog posts, sites, and resources.
-keywords: eleventy, newsletter, roundup, news
+keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
-  caption: "An AI-generated image of the number eleven"
 pageId: bundle
-bundleIssue: 2
 draft: false
 ---
 

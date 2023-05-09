@@ -276,13 +276,29 @@ footer {
   padding-block: 0;
 }
 
-.resources,
 .officialdocs {
-  font-size: var(--font-size-base);
   background-color: var(--resources-bg-color);
   border-radius: 0.5rem;
+  font-size: var(--font-size-base);
   padding: 1em;
 }
+.resources {
+  background-color: var(--resources-bg-color);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  font-size: var(--font-size-base);
+  margin-block-end: 2em;
+  padding: 1em;
+}
+.resource-item {
+}
 .resources ul {
+  margin-block-start: 0;
+  padding-inline-start: 1.5em;
+}
+.resources li {
   margin-block-start: 0.25em;
+  padding-inline-start: 0;
 }
