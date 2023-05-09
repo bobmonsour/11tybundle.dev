@@ -7,6 +7,7 @@
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "debug": "cross-env ELEVENTY_ENV=dev DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "links": "npx check-html-links _site",
     "clean": "rimraf ./_site"
   },
   "keywords": [],
