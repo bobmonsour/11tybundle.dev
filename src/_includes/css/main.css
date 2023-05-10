@@ -179,9 +179,9 @@ main {
 .allcategories-list *,
 .allauthors-list * {
   list-style: none;
-  text-align: center;
   margin: 0.75em auto;
   padding-inline: 0;
+  text-align: center;
 }
 
 .categorieslist,
@@ -285,10 +285,10 @@ footer {
 .resources {
   background-color: var(--resources-bg-color);
   border-radius: 0.5rem;
+  font-size: var(--font-size-base);
   display: grid;
   gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  font-size: var(--font-size-base);
   margin-block-end: 2em;
   padding: 1em;
 }
