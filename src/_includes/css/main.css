@@ -12,6 +12,7 @@ body {
 
 /* default <h1> */
 :where(h1) {
+  font-size: var(--font-size-lg);
   font-weight: normal;
   padding-block: 0.5em 0.25em;
   text-align: center;
@@ -102,6 +103,16 @@ img[width][height] {
 main {
   margin-inline: auto;
   max-width: var(--main-element-max);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding-block-end: 0.5em;
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
 /* brand & navigation (inside <header>) */
@@ -234,7 +245,7 @@ main {
 /* end post elements */
 
 footer {
-  padding-block: 1.5em;
+  padding-block: 1.5em 1em;
 }
 
 .titlemeta {
