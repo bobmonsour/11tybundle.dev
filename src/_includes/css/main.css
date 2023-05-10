@@ -1,6 +1,5 @@
 /* default body styles */
 body {
-  /* forces footer to bottom of page for short pages */
   background-color: var(--site-bg-color);
   color: var(--brand-text-color);
   font-family: var(--body-font);
@@ -19,14 +18,17 @@ body {
 }
 
 /* default <h2> and <text> */
-:where(h2, h3) {
+:where(h2) {
   font-size: var(--font-size-lg);
-  line-height: 1.2;
+  font-weight: normal;
   padding-block: 0.5em 0.25em;
-  text-align: left;
+  text-align: center;
 }
 
 :where(h3) {
+  line-height: 1.2;
+  padding-block: 0.5em 0.25em;
+  text-align: left;
   font-size: var(--font-size-md);
   font-style: italic;
 }
@@ -245,7 +247,7 @@ header {
 /* end post elements */
 
 footer {
-  padding-block: 1.5em 1em;
+  padding-block-end: 1em;
 }
 
 .titlemeta {
