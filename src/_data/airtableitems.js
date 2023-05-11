@@ -1,36 +1,47 @@
-// _data/airtableitems.js
+// _data/airtableitems.js - get all the airtable records
 
-require("dotenv").config();
+const Airtable = require("airtable");
+const { AssetCache } = require("@11ty/eleventy-fetch");
 
-var Airtable = require("airtable");
-var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
-  process.env.AIRTABLE_BASE_ID
-);
+module.exports = async function () {
+  console.log("Getting Airtable items");
 
-module.exports = function () {
-  return new Promise((resolve, reject) => {
-    console.log("running airtableitems.js");
-    const airtableData = [];
+  // connect to the airtable base
+  var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
+    process.env.AIRTABLE_BASE_ID
+  );
 
-    base(process.env.AIRTABLE_TABLE_NAME)
+  // create a place to store the Airtable records
+  const airtableData = [];
+
+  // setup the cache asset
+  const asset = new AssetCache("bundle_items");
+
+  // check if the cache is fresh within the last day
+  if (asset.isCacheValid("1d")) {
+    // return the cached data
+    console.log("Returning cached");
+    return asset.getCachedValue();
+  }
+
+  try {
+    await base(process.env.AIRTABLE_TABLE_NAME)
       .select({ view: process.env.AIRTABLE_VIEW })
-      .eachPage(
-        function page(records, fetchNextPage) {
-          records.forEach((record) => {
-            airtableData.push({
-              id: record._rawJson.id,
-              ...record._rawJson.fields,
-            });
+      .eachPage(function page(records, fetchNextPage) {
+        records.forEach((record) => {
+          airtableData.push({
+            id: record._rawJson.id,
+            ...record._rawJson.fields,
           });
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(airtableData);
-          }
-        }
-      );
-  });
+        });
+        fetchNextPage();
+      });
+    console.log("saving");
+    await asset.save(airtableData, "json");
+    return airtableData;
+  } catch (err) {
+    console.log(err);
+    console.log("Returning cached");
+    return asset.getCachedValue();
+  }
 };

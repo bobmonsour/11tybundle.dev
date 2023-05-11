@@ -1,3 +1,6 @@
+// environment variable handling
+require("dotenv").config();
+
 // Shortcode references
 const imageShortcode = require("./config/shortcodes/image.js");
 // Filter references

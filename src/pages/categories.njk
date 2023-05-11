@@ -7,7 +7,7 @@
   permalink: "/categories/{{ category | slugify }}/",
   keywords: "categories, 11ty Bundle, 11ty, eleventy, blog posts",
   pagination:  {
-    data: "getpostcategories",
+    data: "airtableitems",
     size: 1,
     alias: "category",
     addAllPagesToCollections: "true",
@@ -15,7 +15,7 @@
       // create a unique set of categories from the Airtable data, sorting them alphabetically
       let categorySet = new Set();
       for (let item of data) {
-      (item.Categories || []).forEach((category) => categorySet.add(category));
+        (item.Categories || []).forEach((category) => categorySet.add(category));
     }
     return Array.from(categorySet).sort((a, b) => {
       return a > b ? 1 : -1;

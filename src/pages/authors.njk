@@ -7,7 +7,7 @@
   permalink: "/authors/{{ author | slugify }}/",
   keywords: "authors, 11ty Bundle, 11ty, eleventy, blog posts",
   pagination:  {
-    data: "getpostauthors",
+    data: "airtableitems",
     size: 1,
     alias: "author",
     addAllPagesToCollections: "true",
@@ -15,11 +15,12 @@
       // create a unique set of authors from the Airtable data, sorting them alphabetically by first name
       let authorSet = new Set();
       for (let item of data) {
-        authorSet.add(item.Author);
-    }
-    return Array.from(authorSet).sort((a, b) => {
-      return a > b ? 1 : -1;
-    });
+        if (item.Type == "blog post" && item.Author)
+          authorSet.add(item.Author);
+      }
+      return Array.from(authorSet).sort((a, b) => {
+        return a > b ? 1 : -1;
+      });
     }
   },
   image: {
