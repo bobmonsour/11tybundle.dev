@@ -107,17 +107,6 @@ main {
   max-width: var(--main-element-max);
 }
 
-header {
-  background-color: var(--header-bg-color);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  padding-block-end: 0.5em;
-  position: sticky;
-  opacity: 1;
-  top: 0;
-  width: 100%;
-}
-
 /* brand & navigation (inside <header>) */
 .brand-name {
   border: none;
@@ -152,6 +141,10 @@ header {
   border-radius: 0.5rem;
   color: var(--link-hover-text-color);
 }
+
+#main-content a {
+}
+
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* used for skip-to-main-content link */
 #visually-hidden {
@@ -159,7 +152,6 @@ header {
   background: var(--link-hover-bg-color);
   border: none;
   border-radius: 0 0 0.25rem 0.25rem;
-  font-weight: bold;
   padding: 0.5rem 1.5rem;
   position: absolute;
   transform: translateY(-120%);
