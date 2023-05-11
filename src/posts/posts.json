@@ -1,6 +1,6 @@
 {
   "layout": "post.njk",
-  "permalink": "posts/{{ page.fileSlug }}/",
+  "permalink": "blog/{{ page.fileSlug }}/",
   "imageDir": "src/assets/img/",
   "tags": "posts",
   "keywords": "eleventy, 11ty, newsletter, roundup, news",

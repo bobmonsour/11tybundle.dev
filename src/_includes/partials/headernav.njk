@@ -7,8 +7,8 @@
   <ul class="brand-nav">
     {% for link in site.mainNavLinks %}
       <li>
-        <a href="{{ link.url }}"
-          {% if page.url !== "/" and page.url == link.url %} aria-current="page" class="nav-link" {% else %}class="nav-link" {% endif %}>{{ link.text }}</a>
+        <a href="{{ link.url }}" class="nav-link"
+          {% if link.url in page.url and link.url !== "/" %} aria-current="page"{% endif %}>{{ link.text }}</a>
       </li>
     {% endfor %}
   </ul>
