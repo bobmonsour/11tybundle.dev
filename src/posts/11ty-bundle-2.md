@@ -29,5 +29,3 @@ draft: false
 ## Some nice art and photography sites using Eleventy
 
 {% include 'partials/bundlesites.njk' %}
-
-{% include 'partials/bundleresources.njk' %}

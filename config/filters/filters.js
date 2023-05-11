@@ -36,6 +36,7 @@ const formatFirehoseDate = (date) => {
 // The accepted values for Type are:
 //   "release", "blog post", and "site"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
+  console.log("bundleType = " + bundleType + " bundleIssue = " + bundleIssue);
   if (bundleIssue == 0) {
     let postCount = 0;
     for (let i = 0; i < bundleitems.length; i++) {

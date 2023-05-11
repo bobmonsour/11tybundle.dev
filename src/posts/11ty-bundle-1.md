@@ -35,5 +35,3 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 ## Built with Eleventy
 
 {% include 'partials/bundlesites.njk' %}
-
-{% include 'partials/bundleresources.njk' %}

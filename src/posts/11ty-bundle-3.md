@@ -29,5 +29,3 @@ draft: false
 ## Built with Eleventy
 
 {% include 'partials/bundlesites.njk' %}
-
-{% include 'partials/bundleresources.njk' %}

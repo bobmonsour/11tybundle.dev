@@ -1,7 +1,7 @@
 <div class="bundlereleases">
 {% set releaseItems = airtableitems | getBundleItems(bundleIssue, "release") %}
 {% if releaseItems.length != 0 %}
-{%- for item in releaseitems %}
+{%- for item in releaseItems %}
 <div class="bundleitem">
 <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
 <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>

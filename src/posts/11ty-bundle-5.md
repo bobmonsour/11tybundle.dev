@@ -38,5 +38,3 @@ Feedback is welcome; drop me a line at bob dot monsour at gmail.com.
 This list is a little light this week, but not really...since all of the above blog posts are about migrating to Eleventy, all of them _should_ be sites that are "Built with Eleventy."
 
 {% include 'partials/bundlesites.njk' %}
-
-{% include 'partials/bundleresources.njk' %}
