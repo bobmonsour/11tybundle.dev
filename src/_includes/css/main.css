@@ -6,12 +6,12 @@ body {
   font-size: var(--font-size-md);
   line-height: 1.3;
   margin-inline: auto;
-  max-width: min(var(--page-width-max), 100vw - 1em);
+  max-width: min(var(--page-width-max), 100vw - 0.5em);
 }
 
 /* default <h1> */
 :where(h1) {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: normal;
   padding-block: 0.5em 0.25em;
   text-align: center;
@@ -113,8 +113,9 @@ header {
   border-bottom-right-radius: 0.5rem;
   padding-block-end: 0.5em;
   position: sticky;
-  width: 100%;
+  opacity: 1;
   top: 0;
+  width: 100%;
 }
 
 /* brand & navigation (inside <header>) */
@@ -170,7 +171,6 @@ header {
 
 /* RSS feed link */
 .rssfeedlink {
-  /* font-size: var(--font-size-base); */
   padding-block: 1em;
   padding-inline-end: 3em;
   text-align: right;
@@ -182,7 +182,6 @@ header {
 }
 .site-intro p {
   font-size: var(--font-size-lg);
-  /* font-style: italic; */
   line-height: 1.5;
   margin-block: 0.25em;
   max-width: var(--main-element-max);
@@ -206,7 +205,6 @@ header {
 }
 .categorieslist a,
 .authorslist a {
-  font-weight: bold;
   padding: 0.25em;
 }
 
@@ -247,6 +245,13 @@ header {
 /* end post elements */
 
 footer {
+  border-top: 2px solid var(--resources-bg-color);
+  border-right: 2px solid var(--resources-bg-color);
+  border-bottom: 0;
+  border-left: 2px solid var(--resources-bg-color);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin-block-start: 1em;
   padding-block-end: 1em;
 }
 
@@ -296,13 +301,11 @@ footer {
   padding: 1em;
 }
 .resources {
-  background-color: var(--resources-bg-color);
-  border-radius: 0.5rem;
   font-size: var(--font-size-base);
   display: grid;
   gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  margin-block-end: 2em;
+  /* margin-block-end: 0.5em; */
   padding: 1em;
 }
 .resource-item {

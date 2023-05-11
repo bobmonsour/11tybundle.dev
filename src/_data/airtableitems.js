@@ -4,7 +4,7 @@ const Airtable = require("airtable");
 const { AssetCache } = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  console.log("Getting Airtable items");
+  console.log("Getting Airtable items: from Airtable or cache");
 
   // connect to the airtable base
   var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
@@ -20,7 +20,7 @@ module.exports = async function () {
   // check if the cache is fresh within the last day
   if (asset.isCacheValid("1d")) {
     // return the cached data
-    console.log("Returning cached");
+    console.log("Returning data from cache");
     return asset.getCachedValue();
   }
 
@@ -36,12 +36,12 @@ module.exports = async function () {
         });
         fetchNextPage();
       });
-    console.log("saving");
+    console.log("Saving Airtable data to cache");
     await asset.save(airtableData, "json");
     return airtableData;
   } catch (err) {
     console.log(err);
-    console.log("Returning cached");
+    console.log("Returning data from cache");
     return asset.getCachedValue();
   }
 };

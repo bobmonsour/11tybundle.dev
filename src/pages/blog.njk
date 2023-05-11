@@ -1,0 +1,12 @@
+---
+title: The Blog of The 11ty Bundle
+description: These are the blog archives of The 11ty Bundle.
+keywords: eleventy, 11ty, newsletter, roundup, news, blog, archives
+image:
+  source: "11tybundle-dev.jpg"
+  alt: "an address plate for house number 11"
+permalink: /blog/
+---
+
+{% set postlist = collections.posts | reverse %}
+{% include "postlist.njk" %}
