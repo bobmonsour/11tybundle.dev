@@ -6,7 +6,7 @@ I started this project after producing several newsletter-type blog posts on my 
 
 While I had already been working on some of the technical underpinnings for the site as inaccessible features on my personal site, I felt it was time to give it its own home.
 
-As of the launch date, May 1, 2023, you can find more than 300 blog posts across more than 25 [categories](https://www.11tybundle.dev/categories/) written by more than 100 [authors](https://www.11tybundle.dev/authors/).
+As of May 10, 2023, you can find more than 500 blog posts across more than 30 [categories](https://www.11tybundle.dev/categories/) written by more than 200 [authors](https://www.11tybundle.dev/authors/).
 
 Included in each Bundle blog post are: (1) releases of official Eleventy repos, (2) a list of just a few of the many sites built with Eleventy and, (3) a list of official and community resources. Some posts will cover specific topics and in others I'll share bits of how I used Eleventy to build site.
 
