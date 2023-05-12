@@ -24,6 +24,7 @@ const eleventyDrafts = require("./config/plugins/drafts");
 const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 const postcss = require("postcss");
 const postcssMinify = require("postcss-minify");
+const { get } = require("lodash");
 
 module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets

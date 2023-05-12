@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const cheerio = require("cheerio");
+const fetch = require("node-fetch");
 
 // Format the date of blog posts for the site
 const formatPostDate = (date) => {
