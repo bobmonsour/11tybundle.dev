@@ -32,7 +32,7 @@ const formatFirehoseDate = (date) => {
 // Data is extracted by Issue and Type.
 // The accepted values for Issue are:
 //  issue number - items of the specified type from a specific issue
-//             0 - all blog posts
+//             0 - all blog posts (verify that post has author & date)
 // The accepted values for Type are:
 //   "release", "blog post", and "site"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
@@ -50,7 +50,10 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
     .filter(
       (item) =>
         (item["Type"] == bundleType && item["Issue"] == bundleIssue) ||
-        (item["Type"] == "blog post" && bundleIssue === 0)
+        (item["Type"] == "blog post" &&
+          bundleIssue === 0 &&
+          item["Author"] &&
+          item["Date"])
     )
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
@@ -138,16 +141,22 @@ const getAuthorsAndCounts = (collection) => {
 };
 
 // Given a category, get all blog posts with that category
-// from the Airtable data.
+// from the Airtable data. Verify that post has author and date.
 const postsInCategory = (bundleitems, category) => {
   function postInCategory(item) {
     if (item.Categories) {
-      return item.Type == "blog post" && item.Categories.includes(category)
+      return item.Type == "blog post" &&
+        item.Categories.includes(category) &&
+        item.Date &&
+        item.Author
         ? true
         : false;
     } else {
       if (item.Type == "blog post") {
-        console.log("Error: blog post entry has no categories: " + item.Link);
+        console.log(
+          "Error: blog post is missing categories, author, or date: " +
+            item.Link
+        );
         return false;
       }
     }
@@ -158,9 +167,12 @@ const postsInCategory = (bundleitems, category) => {
 };
 
 // Get all blog posts by a specific author from the Airtable data.
+// Verify that post has author and date.
 const postsByAuthor = (bundleitems, author) => {
   return bundleitems
-    .filter((item) => item.Type === "blog post" && item.Author === author)
+    .filter(
+      (item) => item.Type === "blog post" && item.Author === author && item.Date
+    )
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });

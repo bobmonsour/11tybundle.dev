@@ -36,7 +36,7 @@ module.exports = async function () {
         });
         fetchNextPage();
       });
-    console.log("Saving Airtable data to cache");
+    console.log("Retrieved data from Airtable, saving data to cache");
     await asset.save(airtableData, "json");
     return airtableData;
   } catch (err) {
