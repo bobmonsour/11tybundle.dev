@@ -18,7 +18,7 @@ module.exports = async function () {
   const asset = new AssetCache("bundle_items");
 
   // check if the cache is fresh within the last day
-  if (asset.isCacheValid("0s")) {
+  if (asset.isCacheValid("1d")) {
     // return the cached data
     console.log("Returning data from cache");
     return asset.getCachedValue();
