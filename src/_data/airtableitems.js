@@ -1,9 +1,9 @@
 // _data/airtableitems.js - get all the airtable records
-
 const Airtable = require("airtable");
 const { AssetCache } = require("@11ty/eleventy-fetch");
 
-module.exports = async function () {
+const airtableitems = async function () {
+  // module.exports = async function () {
   console.log("Getting Airtable items: from Airtable or cache");
 
   // connect to the airtable base
@@ -45,3 +45,5 @@ module.exports = async function () {
     return asset.getCachedValue();
   }
 };
+
+module.exports = airtableitems;

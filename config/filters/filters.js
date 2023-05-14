@@ -37,7 +37,6 @@ const formatFirehoseDate = (date) => {
 // The accepted values for Type are:
 //   "release", "blog post", and "site"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
-  // console.log("bundleType = " + bundleType + " bundleIssue = " + bundleIssue);
   if (bundleIssue == 0) {
     let postCount = 0;
     for (let i = 0; i < bundleitems.length; i++) {
@@ -45,7 +44,6 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
         postCount++;
       }
     }
-    console.log("Post count is: " + postCount);
   }
   return bundleitems
     .filter(
@@ -120,7 +118,6 @@ const getCategoriesAndCounts = (collection) => {
   let categoryList = Array.from(categoryMap).sort((a, b) => {
     return a[0] > b[0] ? 1 : -1;
   });
-  console.log("Category count is: " + categoryList.length);
   return categoryList;
 };
 
@@ -137,7 +134,6 @@ const getAuthorsAndCounts = (collection) => {
   let authorList = Array.from(authorMap).sort((a, b) => {
     return a[0] > b[0] ? 1 : -1;
   });
-  console.log("Author count is: " + authorList.length);
   return authorList;
 };
 
