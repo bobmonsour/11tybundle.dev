@@ -8,5 +8,9 @@ module.exports = async function () {
     console.log(err);
   }
   // return tabledata.length;
-  return tabledata.filter((item) => item["Type"] == "blog post").length;
+  const postcount = tabledata.filter(
+    (item) => item["Type"] == "blog post"
+  ).length;
+  console.log("postcount.js: " + postcount);
+  return postcount;
 };

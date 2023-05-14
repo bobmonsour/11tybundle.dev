@@ -18,5 +18,6 @@ module.exports = async function () {
       return a > b ? 1 : -1;
     });
   };
+  console.log("categorycount.js: " + getCategories(tabledata).length);
   return getCategories(tabledata).length;
 };

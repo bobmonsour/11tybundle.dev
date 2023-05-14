@@ -18,5 +18,6 @@ module.exports = async function () {
       return a > b ? 1 : -1;
     });
   };
+  console.log("authorcount.js: " + getAuthors(tabledata).length);
   return getAuthors(tabledata).length;
 };
