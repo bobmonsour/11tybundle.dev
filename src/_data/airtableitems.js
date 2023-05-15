@@ -2,8 +2,8 @@
 const Airtable = require("airtable");
 const { AssetCache } = require("@11ty/eleventy-fetch");
 
-const airtableitems = async function () {
-  // module.exports = async function () {
+// const airtableitems = async function () {
+module.exports = async function () {
   console.log("Getting Airtable items: from Airtable or cache");
 
   // connect to the airtable base
@@ -46,4 +46,4 @@ const airtableitems = async function () {
   }
 };
 
-module.exports = airtableitems;
+// module.exports = airtableitems;

@@ -8,7 +8,7 @@ module.exports = async function () {
     console.log(err);
   }
   // return tabledata.length;
-  const count = tabledata.filter((item) => item["Type"] == "blog post").length;
-  console.log("postcount.js: " + count);
+  const count = tabledata.filter((item) => item["Type"] == "starter").length;
+  console.log("startercount.js: " + count);
   return count;
 };

@@ -14,10 +14,9 @@ module.exports = async function () {
     for (let item of data) {
       (item.Categories || []).forEach((category) => categorySet.add(category));
     }
-    return Array.from(categorySet).sort((a, b) => {
-      return a > b ? 1 : -1;
-    });
+    return Array.from(categorySet);
   };
   console.log("categorycount.js: " + getCategories(tabledata).length);
-  return getCategories(tabledata).length;
+  const count = getCategories(tabledata).length;
+  return count;
 };

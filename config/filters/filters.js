@@ -1,7 +1,6 @@
 const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const cheerio = require("cheerio");
-const fetch = require("node-fetch");
 
 // Format the date of blog posts for the site
 const formatPostDate = (date) => {
@@ -37,14 +36,6 @@ const formatFirehoseDate = (date) => {
 // The accepted values for Type are:
 //   "release", "blog post", and "site"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
-  if (bundleIssue == 0) {
-    let postCount = 0;
-    for (let i = 0; i < bundleitems.length; i++) {
-      if (bundleitems[i]["Type"] == "blog post") {
-        postCount++;
-      }
-    }
-  }
   return bundleitems
     .filter(
       (item) =>

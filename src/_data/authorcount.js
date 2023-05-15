@@ -14,10 +14,9 @@ module.exports = async function () {
     for (let item of data) {
       if (item.Type == "blog post" && item.Author) authorSet.add(item.Author);
     }
-    return Array.from(authorSet).sort((a, b) => {
-      return a > b ? 1 : -1;
-    });
+    return Array.from(authorSet);
   };
   console.log("authorcount.js: " + getAuthors(tabledata).length);
-  return getAuthors(tabledata).length;
+  const count = getAuthors(tabledata).length;
+  return count;
 };
