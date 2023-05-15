@@ -10,7 +10,7 @@ image:
 bundleIssue: 0
 ---
 
-<h1>{{ title }} ({{ postcount }})</h1>
+<h1>{{ title }} ({{ itemcounts.postcount }})</h1>
 <div class="bundleposts">
   {%- set prev_year = "" %}
   {%- for item in airtableitems | getBundleItems(bundleIssue) %}

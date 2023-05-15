@@ -9,7 +9,7 @@ image:
   alt: "an address plate for house number 11"
 ---
 
-<h1>{{ title }} ({{ categorycount }})</h1>
+<h1>{{ title }} ({{ itemcounts.categorycount }})</h1>
 <div class="allcategories-list">
   <ul class="categorieslist">
     {% for category in airtableitems | getCategoriesAndCounts %}
