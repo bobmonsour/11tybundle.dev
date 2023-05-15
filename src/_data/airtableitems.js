@@ -4,8 +4,6 @@ const { AssetCache } = require("@11ty/eleventy-fetch");
 
 // const airtableitems = async function () {
 module.exports = async function () {
-  console.log("Getting Airtable items: from Airtable or cache");
-
   // connect to the airtable base
   var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
     process.env.AIRTABLE_BASE_ID
@@ -20,7 +18,7 @@ module.exports = async function () {
   // check if the cache is fresh within the last day
   if (asset.isCacheValid("1d")) {
     // return the cached data
-    console.log("Returning data from cache");
+    console.log("Returning Airtable data from cache");
     return asset.getCachedValue();
   }
 
