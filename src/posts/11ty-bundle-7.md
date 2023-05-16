@@ -10,7 +10,7 @@ keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11tybundle-dev.jpg"
   alt: "an AI-generated image of the number eleven"
-draft: true
+draft: false
 ---
 
 > TL;DR With no new releases, just a few blog posts, and a handful of sites, I took the opportunity to dive into the process of gathering content for this site. You can [skip all that to get to the posts and sites](#releases).
