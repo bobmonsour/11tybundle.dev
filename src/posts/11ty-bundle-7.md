@@ -13,7 +13,7 @@ image:
 draft: true
 ---
 
-Since the number of [new releases and posts](#releases) since the last issue is on the light side, I thought I'd describe where I'm finding all of these blog posts and other resources and my process for ingesting all this data.
+Since the number of [new releases and posts](#releases) since the last issue is on the light side, I thought I'd describe where I'm finding all of these blog posts and other resources and the process that has evolved for ingesting all this data.
 
 When I created the first few issues of the 11ty Bundle blog, every item was hand-coded in markdown. After a few issues, I knew that would get old. So I started looking for ways to streamline the content creation process.
 
