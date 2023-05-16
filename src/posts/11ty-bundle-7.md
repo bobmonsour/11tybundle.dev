@@ -13,7 +13,7 @@ image:
 draft: false
 ---
 
-> TL;DR With no new releases, just a few blog posts, and a handful of sites, I took the opportunity to dive into the process of gathering content for this site. You can [skip all that to get to the posts and sites](#releases).
+> TL;DR With no new releases, just a few blog posts, and a handful of sites, I took the opportunity to dive into the process of gathering content for this site. If that's not of interest, feel free to [skip ahead to the posts and sites](#releases).
 
 Since the number of new releases and posts since the last issue is rather light, I thought I'd describe where I'm finding all of the content for the site and the process that has evolved for ingesting it all.
 
