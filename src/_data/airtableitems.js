@@ -18,7 +18,7 @@ module.exports = async function () {
   // check if the cache is fresh within the last day
   if (asset.isCacheValid("1d")) {
     // return the cached data
-    console.log("Returning Airtable data from cache");
+    console.log("Retrieved data from cache");
     return asset.getCachedValue();
   }
 
@@ -34,12 +34,12 @@ module.exports = async function () {
         });
         fetchNextPage();
       });
-    console.log("Retrieved data from Airtable, saving data to cache");
+    console.log("Retrieved data via Airtable API, saving data to cache");
     await asset.save(airtableData, "json");
     return airtableData;
   } catch (err) {
     console.log(err);
-    console.log("Returning data from cache");
+    console.log("Retrieved data from cache");
     return asset.getCachedValue();
   }
 };
