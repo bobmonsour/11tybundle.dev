@@ -1,8 +1,7 @@
-// _data/airtableitems.js - get all the airtable records
+// _data/bundledata.js - get all the airtable records
 const Airtable = require("airtable");
 const { AssetCache } = require("@11ty/eleventy-fetch");
 
-// const airtableitems = async function () {
 module.exports = async function () {
   // define functions to extract categories and authors from the data
   const getCategories = function (data) {
@@ -30,16 +29,16 @@ module.exports = async function () {
 
   // create a place to store the Airtable records
   const airtableData = [];
-  let tabledata = [];
+  let bundleRecords = [];
 
   // setup the cache asset
-  const asset = new AssetCache("bundle_items");
+  const asset = new AssetCache("bundle_records");
 
   // check if the cache is fresh within the last day
   if (asset.isCacheValid("1d")) {
     // return the cached data
     console.log("Retrieved data from cache");
-    tabledata = await asset.getCachedValue();
+    bundleRecords = await asset.getCachedValue();
     // return tabledata;
   } else {
     try {
@@ -56,34 +55,34 @@ module.exports = async function () {
         });
       console.log("Retrieved data via Airtable API, saving data to cache");
       await asset.save(airtableData, "json");
-      tabledata = airtableData;
+      bundleRecords = airtableData;
       // return tabledata;
     } catch (err) {
       console.log(err);
       console.log("Retrieved data from cache");
-      tabledata = await asset.getCachedValue();
+      bundleRecords = await asset.getCachedValue();
       // return tabledata;
     }
   }
-  const postcount = tabledata.filter(
+  const postCount = bundleRecords.filter(
     (item) => item["Type"] == "blog post"
   ).length;
-  const categorycount = getCategories(tabledata).length;
-  const authorcount = getAuthors(tabledata).length;
-  const startercount = tabledata.filter(
+  const categoryCount = getCategories(bundleRecords).length;
+  const authorCount = getAuthors(bundleRecords).length;
+  const starterCount = bundleRecords.filter(
     (item) => item["Type"] == "starter"
   ).length;
 
-  console.log("postcount: " + postcount);
-  console.log("categorycount: " + categorycount);
-  console.log("authorcount: " + authorcount);
-  console.log("startercount: " + startercount);
+  console.log("postCount: " + postCount);
+  console.log("categoryCount: " + categoryCount);
+  console.log("authorCount: " + authorCount);
+  console.log("starterCount: " + starterCount);
 
   return {
-    tabledata: tabledata,
-    postcount: postcount,
-    categorycount: categorycount,
-    authorcount: authorcount,
-    startercount: startercount,
+    bundleRecords: bundleRecords,
+    postCount: postCount,
+    categoryCount: categoryCount,
+    authorCount: authorCount,
+    starterCount: starterCount,
   };
 };

@@ -1,5 +1,5 @@
 <div class="bundlereleases">
-{% set releaseItems = airtableitems | getBundleItems(bundleIssue, "release") %}
+{% set releaseItems = bundledata.bundleRecords | getBundleItems(bundleIssue, "release") %}
 {% if releaseItems.length != 0 %}
 {%- for item in releaseItems %}
 <div class="bundleitem">
