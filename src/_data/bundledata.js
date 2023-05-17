@@ -39,7 +39,6 @@ module.exports = async function () {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
-    // return tabledata;
   } else {
     try {
       await base(process.env.AIRTABLE_TABLE_NAME)
@@ -56,14 +55,14 @@ module.exports = async function () {
       console.log("Retrieved data via Airtable API, saving data to cache");
       await asset.save(airtableData, "json");
       bundleRecords = airtableData;
-      // return tabledata;
     } catch (err) {
       console.log(err);
       console.log("Retrieved data from cache");
       bundleRecords = await asset.getCachedValue();
-      // return tabledata;
     }
   }
+  // generate counts of posts, categories, authors, and starters
+  // from the records in the Airtable database
   const postCount = bundleRecords.filter(
     (item) => item["Type"] == "blog post"
   ).length;
@@ -78,6 +77,8 @@ module.exports = async function () {
   console.log("authorCount: " + authorCount);
   console.log("starterCount: " + starterCount);
 
+  // return the full set of records and the counts for use
+  // on various pages of the site
   return {
     bundleRecords: bundleRecords,
     postCount: postCount,
