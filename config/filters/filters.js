@@ -43,7 +43,8 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
         (item["Type"] == "blog post" &&
           bundleIssue === 0 &&
           item["Author"] &&
-          item["Date"])
+          item["Date"]) ||
+        item["Type"] == "starter"
     )
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
