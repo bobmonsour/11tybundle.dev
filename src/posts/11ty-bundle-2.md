@@ -20,12 +20,15 @@ draft: false
 
 ## Recent releases
 
-{% include 'partials/bundlereleases.njk' %}
+{% set itemType = "release" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Posts from around the web
 
-{% include 'partials/bundleposts.njk' %}
+{% set itemType = "blog post" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Some nice art and photography sites using Eleventy
 
-{% include 'partials/bundlesites.njk' %}
+{% set itemType = "site" %}
+{% include 'partials/bundleitems.njk' %}

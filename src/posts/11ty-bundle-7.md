@@ -43,14 +43,17 @@ But wait...based on one of the latest blog posts from Simon Cox (see below), I f
 
 ## Recent releases
 
-{% include 'partials/bundlereleases.njk' %}
+{% set itemType = "release" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Posts from around the web since the last Bundle issue
 
-{% include 'partials/bundleposts.njk' %}
+{% set itemType = "blog post" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Built with Eleventy
 
 Listed below are just a handful of the many sites built with Eleventy. All of this week's sites are from web developers and designers. Aleksandr has been particularly prolific and writes some of the best in-depth tutorials that I've come across. He covers a wide range of web development topics and he's always worth a read.
 
-{% include 'partials/bundlesites.njk' %}
+{% set itemType = "site" %}
+{% include 'partials/bundleitems.njk' %}

@@ -27,14 +27,17 @@ Feedback is welcome; drop me a line at bob dot monsour at gmail.com.
 
 ## Recent releases
 
-{% include 'partials/bundlereleases.njk' %}
+{% set itemType = "release" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Posts from around the web
 
-{% include 'partials/bundleposts.njk' %}
+{% set itemType = "blog post" %}
+{% include 'partials/bundleitems.njk' %}
 
 ## Built with Eleventy
 
 This list is a little light this week, but not really...since all of the above blog posts are about migrating to Eleventy, all of them _should_ be sites that are "Built with Eleventy."
 
-{% include 'partials/bundlesites.njk' %}
+{% set itemType = "site" %}
+{% include 'partials/bundleitems.njk' %}
