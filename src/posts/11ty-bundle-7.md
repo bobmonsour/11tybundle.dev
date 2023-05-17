@@ -37,6 +37,8 @@ Well, that's pretty much where things stand at the moment. The most recent addit
 
 But wait...based on one of the latest blog posts from Simon Cox (see below), I feel compelled to add a "Debugging" category. A quick panning exercise has unearthed a treasure trove of blog posts (some of which may already be in the database). Stay tuned...
 
+> This just in...There's now a [Debugging](/categories/debugging/) category.
+
 <div id="releases"></div>
 
 ## Recent releases
