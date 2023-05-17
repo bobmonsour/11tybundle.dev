@@ -1,6 +1,0 @@
-<div class="bundlestarters">
-{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "starter") %}
-<p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>{% if item.Author and item.AuthorLink %} by <a href="{{ item.AuthorLink }}">{{ item.Author }}{% elif item.Author %} by {{ item.Author }}{% endif %}</a></p>
-<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-{%- endfor -%}
-</div>
