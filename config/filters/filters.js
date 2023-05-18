@@ -27,12 +27,15 @@ const formatFirehoseDate = (date) => {
   return newDate.toRFC2822();
 };
 
-// Extract releases, blog posts, and site items from Airtable data.
+// Extract releases, blog posts, sites, and items from Airtable data.
 // Data is returned in descending date order.
-// Data is extracted by Issue and Type.
+// For releases, blog posts, and sites, data is extracted by Issue and Type.
+// For starters, only Type is used.
+// bundleIssue is specified in the front matter of the calling template.
 // The accepted values for Issue are:
 //  issue number - items of the specified type from a specific issue
-//             0 - all blog posts (verify that post has author & date)
+//             0 - all blog posts
+//            -1 - all starters
 // The accepted values for Type are:
 //   "release", "blog post", "site", and "starter"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
@@ -40,7 +43,8 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
     .filter(
       (item) =>
         (item["Type"] == bundleType && item["Issue"] == bundleIssue) ||
-        (item["Type"] == "blog post" && bundleIssue === 0 && item["Author"])
+        (item["Type"] == "blog post" && bundleIssue === 0) ||
+        (item["Type"] == "starter" && bundleIssue === -1)
     )
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
