@@ -35,7 +35,7 @@ module.exports = async function () {
   const asset = new AssetCache("bundle_records");
 
   // check if the cache is fresh within the last day
-  if (asset.isCacheValid("1d")) {
+  if (asset.isCacheValid("0s")) {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
@@ -71,11 +71,21 @@ module.exports = async function () {
   const starterCount = bundleRecords.filter(
     (item) => item["Type"] == "starter"
   ).length;
-
   console.log("postCount: " + postCount);
   console.log("categoryCount: " + categoryCount);
   console.log("authorCount: " + authorCount);
   console.log("starterCount: " + starterCount);
+
+  // verify that all blog posts have:
+  //  - an author, a date, and one or more categories
+  for (let item of bundleRecords) {
+    if (item["Type"] == "blog post") {
+      if (!item["Author"]) console.log(item["Title"] + " is missing an author");
+      if (!item["Date"]) console.log(item["Title"] + " is missing a date");
+      if (!item["Categories"])
+        console.log(item["Title"] + " is missing categories");
+    }
+  }
 
   // return the full set of records and the counts for use
   // on various pages of the site

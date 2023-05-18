@@ -21,8 +21,8 @@
     <div class="bundleitem">
       <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
       <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-      <p class="bundleitem-dateline">{% if item.Author %}<a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>{% endif %}{% if item.Date %} &middot; {{ item.Date | formatItemDate }}{% endif %}</p>
-      <p class="bundleitem-categories">{% if item.Categories %}Categories: {% for item in bundledata.bundleRecords | getItemCategories(item.Link) | sort %}{% for category in item.Categories | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}{% endfor %}{% endif %}</p>
+      <p class="bundleitem-dateline"><a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {{ item.Date | formatItemDate }}</p>
+      <p class="bundleitem-categories">Categories: {% for item in bundledata.bundleRecords | getItemCategories(item.Link) | sort %}{% for category in item.Categories | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}{% endfor %}</p>
     </div>
   {%- endfor %}
   </div>
@@ -30,7 +30,7 @@
 {# sites #}
   <div class="bundlesites">
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
-    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>{% if item.Author and item.AuthorLink %} by <a href="{{ item.AuthorLink }}">{{ item.Author }}{% elif item.Author %} by {{ item.Author }}{% endif %}</a></p>
+    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
   {%- endfor -%}
   </div>
@@ -38,7 +38,7 @@
 {# starters #}
   <div class="bundlestarters">
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "starter") %}
-    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a>{% if item.Author and item.AuthorLink %} by <a href="{{ item.AuthorLink }}">{{ item.Author }}{% elif item.Author %} by {{ item.Author }}{% endif %}</a></p>
+    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
   {%- endfor -%}
   </div>
