@@ -51,8 +51,8 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
     });
 };
 
-// Extract a list of the categories assigned to the selected link (blog post).
-// These are appended to each blog post item in the Bundle.
+// Extract a list of the categories for a given link to a blog post.
+// These are appended to each blog post item displayed.
 const getItemCategories = (bundleitems, link) => {
   return bundleitems.filter((item) => item.Link == link);
 };
@@ -97,9 +97,9 @@ const getDescription = async (link) => {
   }
 };
 
-// Generate a list of the unique categories and the number of items in
-// each category in all of the issues of The 11ty Bundle from Airtable data.
-// Category names are sorted alphabetically.
+// Generate a list of the unique blog post categories and the number of items in
+// each category from the Airtable data. Category names are sorted alphabetically
+// and are returned as 2-dimensional array of category name and count.
 const getCategoriesAndCounts = (collection) => {
   let categoryMap = new Map();
   for (let item of collection) {
@@ -113,9 +113,10 @@ const getCategoriesAndCounts = (collection) => {
   return categoryList;
 };
 
-// Extract a list of the unique blog post authors used in all of the issues
-// of The 11ty Bundle from Airtable data along with a count of their posts.
-// Authors are sorted alphabetically by first name.
+// Extract a list of the unique blog post authors and the number of posts
+// written by each author from the Airtable data. Authors names are sorted
+// alphabetically by first name and are returned as a 2-dimensional array
+// of author name and count.
 const getAuthorsAndCounts = (collection) => {
   const authorMap = new Map();
   for (let item of collection) {
@@ -130,38 +131,23 @@ const getAuthorsAndCounts = (collection) => {
 };
 
 // Given a category, get all blog posts with that category
-// from the Airtable data. Verify that post has author and date.
+// from the Airtable data.
 const postsInCategory = (bundleitems, category) => {
   function postInCategory(item) {
-    if (item.Categories) {
-      return item.Type == "blog post" &&
-        item.Categories.includes(category) &&
-        item.Date &&
-        item.Author
-        ? true
-        : false;
-    } else {
-      if (item.Type == "blog post") {
-        console.log(
-          "Error: blog post is missing categories, author, or date: " +
-            item.Link
-        );
-        return false;
-      }
-    }
+    return item.Type == "blog post" && item.Categories.includes(category)
+      ? true
+      : false;
   }
   return bundleitems.filter(postInCategory).sort((a, b) => {
     return a.Date > b.Date ? -1 : 1;
   });
 };
 
-// Get all blog posts by a specific author from the Airtable data.
-// Verify that post has author and date.
+// Given an author, get all blog posts written by that author
+// from the Airtable data.
 const postsByAuthor = (bundleitems, author) => {
   return bundleitems
-    .filter(
-      (item) => item.Type === "blog post" && item.Author === author && item.Date
-    )
+    .filter((item) => item.Type === "blog post" && item.Author === author)
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
