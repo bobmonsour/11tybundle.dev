@@ -34,7 +34,7 @@ const formatFirehoseDate = (date) => {
 //  issue number - items of the specified type from a specific issue
 //             0 - all blog posts (verify that post has author & date)
 // The accepted values for Type are:
-//   "release", "blog post", and "site"
+//   "release", "blog post", "site", and "starter"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
   return bundleitems
     .filter(
