@@ -2,7 +2,7 @@
 
 ## _A resource for all developers using Eleventy_
 
-![screengrab of the homepage for 11tybundle.dev](home-screenshot.png)
+![screengrab of the homepage for 11tybundle.dev](homescreenshot.png)
 
 I started this project after producing several newsletter-type blog posts on my personal website, [bobmonsour.com](https://www.bobmonsour.com). I called those blog posts [The 11ty Bundle](https://www.bobmonsour.com/tags/11ty-bundle/). I wanted to create a single place where I could share resources and information about Eleventy.
 
