@@ -23,6 +23,9 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta name="generator" content="Eleventy">
 
+  {# enable view-transitions, currently behind a flag in Chrome Canary build #}
+  <meta name="view-transition" content="same-origin" />
+
   {# bundle the CSS content used on all pages and get the link to the bundle #}
   {%- css %}
     {% include "css/reset.css" %}
