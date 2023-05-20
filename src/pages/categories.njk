@@ -2,17 +2,18 @@
 {
   eleventyComputed: {
     title: "Posts in '{{ category }}'",
-    description: "Posts in the 11ty Bundle with the category: '{{ category }}'",
+    description: "Posts in the 11ty Bundle with the category: {{ category }}",
+    permalink: "/categories/{{ category | slugify }}/",
+    keywords: "categories, {{ category }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
-  permalink: "/categories/{{ category | slugify }}/",
-  keywords: "categories, 11ty Bundle, 11ty, eleventy, blog posts",
   pagination:  {
     data: "bundledata.bundleRecords",
     size: 1,
     alias: "category",
     addAllPagesToCollections: "true",
     before: function(data) {
-      // create a unique set of categories from the Airtable data, sorting them alphabetically
+      // create a unique set of categories from the Airtable data
+      // sorted alphabetically
       let categorySet = new Set();
       for (let item of data) {
         (item.Categories || []).forEach((category) => categorySet.add(category));

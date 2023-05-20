@@ -2,17 +2,18 @@
 {
   eleventyComputed: {
     title: "Posts by {{ author }}",
-    description: "Posts in the 11ty Bundle written by '{{ author }}'",
+    description: "Posts in the 11ty Bundle written by {{ author }}",
+    permalink: "/authors/{{ author | slugify }}/",
+    keywords: "authors, {{ author }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
-  permalink: "/authors/{{ author | slugify }}/",
-  keywords: "authors, 11ty Bundle, 11ty, eleventy, blog posts",
   pagination:  {
     data: "bundledata.bundleRecords",
     size: 1,
     alias: "author",
     addAllPagesToCollections: "true",
     before: function(data) {
-      // create a unique set of authors from the Airtable data, sorting them alphabetically by first name
+      // create a unique set of authors from the Airtable data
+      // sorted alphabetically by first name
       let authorSet = new Set();
       for (let item of data) {
         if (item.Type == "blog post" && item.Author)
