@@ -25,6 +25,7 @@ const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 const postcss = require("postcss");
 const postcssMinify = require("postcss-minify");
 const { get } = require("lodash");
+// const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 
 module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets
@@ -54,6 +55,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyDrafts);
+  // eleventyConfig.setQuietMode(true);
+  // eleventyConfig.addPlugin(directoryOutputPlugin, {
+  //   columns: {
+  //     filesize: true,
+  //     benchmark: true,
+  //   },
+  // });
   eleventyConfig.addPlugin(bundlerPlugin, {
     transforms: [
       async function (content) {
