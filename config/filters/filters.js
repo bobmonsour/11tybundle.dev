@@ -27,34 +27,21 @@ const formatFirehoseDate = (date) => {
   return newDate.toRFC2822();
 };
 
-// Extract releases, blog posts, sites, and items from Airtable data.
-// Data is returned in descending date order.
+// Extract releases, blog posts, and sites from the Airtable data for
+// the occasional 11ty Bundle blog post. Data is returned in descending date order.
 // For releases, blog posts, and sites, data is extracted by Issue and Type.
-// For starters, only Type is used.
-// bundleIssue is specified in the front matter of the calling template.
-// The accepted values for Issue are:
-//  issue number - items of the specified type from a specific issue
-//             0 - all blog posts
-//            -1 - all starters
+// bundleIssue is the Issue number and is specified in the front matter of the
+// calling blog template.
 // The accepted values for Type are:
-//   "release", "blog post", "site", and "starter"
+//   "release", "blog post", "site"
 const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
   return bundleitems
     .filter(
-      (item) =>
-        (item["Type"] == bundleType && item["Issue"] == bundleIssue) ||
-        (item["Type"] == "blog post" && bundleIssue === 0) ||
-        (item["Type"] == "starter" && bundleIssue === -1)
+      (item) => item["Type"] == bundleType && item["Issue"] == bundleIssue
     )
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
-};
-
-// Extract a list of the categories for a given link to a blog post.
-// These are appended to each blog post item displayed.
-const getItemCategories = (bundleitems, link) => {
-  return bundleitems.filter((item) => item.Link == link);
 };
 
 // getDescription - given a url, this Eleventy filter extracts the meta
@@ -95,39 +82,6 @@ const getDescription = async (link) => {
     console.log("Error fetching description for " + link + ": " + e.message);
     return "";
   }
-};
-
-// Generate a list of the unique blog post categories and the number of items in
-// each category from the Airtable data. Category names are sorted alphabetically
-// and are returned as 2-dimensional array of category name and count.
-const getCategoriesAndCounts = (collection) => {
-  let categoryMap = new Map();
-  for (let item of collection) {
-    (item.Categories || []).forEach((category) =>
-      categoryMap.set(category, categoryMap.get(category) + 1 || 1)
-    );
-  }
-  let categoryList = Array.from(categoryMap).sort((a, b) => {
-    return a[0] > b[0] ? 1 : -1;
-  });
-  return categoryList;
-};
-
-// Extract a list of the unique blog post authors and the number of posts
-// written by each author from the Airtable data. Authors names are sorted
-// alphabetically by first name and are returned as a 2-dimensional array
-// of author name and count.
-const getAuthorsAndCounts = (collection) => {
-  const authorMap = new Map();
-  for (let item of collection) {
-    if (item.Author && item.Type == "blog post") {
-      authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
-    }
-  }
-  let authorList = Array.from(authorMap).sort((a, b) => {
-    return a[0].localeCompare(b[0]);
-  });
-  return authorList;
 };
 
 // Given a category, get all blog posts with that category
@@ -198,10 +152,7 @@ module.exports = {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
-  getItemCategories,
   getDescription,
-  getCategoriesAndCounts,
-  getAuthorsAndCounts,
   postsInCategory,
   postsByAuthor,
   readingTime,

@@ -2,7 +2,6 @@
 layout: null
 permalink: /firehosefeed.xml
 eleventyExcludeFromCollections: true
-bundleIssue: 0
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ site.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -12,7 +11,7 @@ bundleIssue: 0
     <atom:link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ site.subtitle }}</description>
     <language>{{ site.language }}</language>
-    {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue) %}
+    {%- for item in bundledata.firehose %}
     <item>
       <title>{{ item.Title }}</title>
       <link>{{ item.Link }}</link>

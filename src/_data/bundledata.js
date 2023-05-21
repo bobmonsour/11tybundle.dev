@@ -1,28 +1,12 @@
-// _data/bundledata.js - get all the airtable records
+// _data/bundledata.js
+//
+// get all the Airtable records and return various subsets and
+// filtered extracts of the data for use in the site's templates
 const Airtable = require("airtable");
 const { AssetCache } = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  // define functions to extract categories and authors from the data
-  const getCategories = function (data) {
-    // create a unique set of categories from the data
-    let categorySet = new Set();
-    for (let item of data) {
-      (item.Categories || []).forEach((category) => categorySet.add(category));
-    }
-    return Array.from(categorySet);
-  };
-
-  const getAuthors = function (data) {
-    // create a unique set of authors from the data
-    let authorSet = new Set();
-    for (let item of data) {
-      if (item.Type == "blog post" && item.Author) authorSet.add(item.Author);
-    }
-    return Array.from(authorSet);
-  };
-
-  // connect to the airtable base
+  // connect to the Airtable base
   var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
     process.env.AIRTABLE_BASE_ID
   );
@@ -34,7 +18,8 @@ module.exports = async function () {
   // setup the cache asset
   const asset = new AssetCache("bundle_records");
 
-  // check if the cache is fresh within the last day
+  // check if the cache is fresh within the last day ("1d")
+  // use a cache duration of "0s" to force retrieval from Airtable
   if (asset.isCacheValid("1d")) {
     // return the cached data
     console.log("Retrieved data from cache");
@@ -61,20 +46,70 @@ module.exports = async function () {
       bundleRecords = await asset.getCachedValue();
     }
   }
-  // generate counts of posts, categories, authors, and starters
-  // from the records in the Airtable database
-  const postCount = bundleRecords.filter(
-    (item) => item["Type"] == "blog post"
-  ).length;
-  const categoryCount = getCategories(bundleRecords).length;
-  const authorCount = getAuthors(bundleRecords).length;
-  const starterCount = bundleRecords.filter(
-    (item) => item["Type"] == "starter"
-  ).length;
+
+  // generate the firehose, an array of all posts in descending date order
+  const firehose = bundleRecords
+    .filter((item) => item["Type"] == "blog post")
+    .sort((a, b) => {
+      return a.Date > b.Date ? -1 : 1;
+    });
+
+  // generate the list of starter projects, an array descending date order
+  const starters = bundleRecords
+    .filter((item) => item["Type"] == "starter")
+    .sort((a, b) => {
+      return a.Date > b.Date ? -1 : 1;
+    });
+
+  // generate a 2-dimensional array of author names and
+  // a count of each of their posts
+  const authorList = (records) => {
+    const authorMap = new Map();
+    for (let item of records) {
+      if (item.Author && item.Type == "blog post") {
+        authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
+      }
+    }
+    return Array.from(authorMap).sort((a, b) => {
+      return a[0].localeCompare(b[0]);
+    });
+  };
+
+  // generate a 2-dimensional array of categories and the
+  // count of posts in each category
+  const categoryList = (records) => {
+    let categoryMap = new Map();
+    for (let item of records) {
+      (item.Categories || []).forEach((category) =>
+        categoryMap.set(category, categoryMap.get(category) + 1 || 1)
+      );
+    }
+    let categoryList = Array.from(categoryMap).sort((a, b) => {
+      return a[0] > b[0] ? 1 : -1;
+    });
+    return categoryList;
+  };
+
+  // generate counts of posts, starters, authors, and categories
+  const postCount = firehose.length;
+
+  const starterCount = starters.length;
+
+  // list of authors and count of their posts
+  // and the total author count
+  const authors = authorList(bundleRecords);
+  const authorCount = authors.length;
+
+  // list of categories and count of posts with the category
+  // and the total category count
+  const categories = categoryList(bundleRecords);
+  const categoryCount = categories.length;
+
+  // log the counts of various items
   console.log("postCount: " + postCount);
-  console.log("categoryCount: " + categoryCount);
-  console.log("authorCount: " + authorCount);
   console.log("starterCount: " + starterCount);
+  console.log("authorCount: " + authorCount);
+  console.log("categoryCount: " + categoryCount);
 
   // verify that all blog posts have:
   //  - an author, a date, and one or more categories
@@ -91,9 +126,13 @@ module.exports = async function () {
   // on various pages of the site
   return {
     bundleRecords: bundleRecords,
+    firehose: firehose,
     postCount: postCount,
-    categoryCount: categoryCount,
-    authorCount: authorCount,
+    starters: starters,
     starterCount: starterCount,
+    authors: authors,
+    authorCount: authorCount,
+    categories: categories,
+    categoryCount: categoryCount,
   };
 };

@@ -9,10 +9,7 @@ const {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
-  getItemCategories,
   getDescription,
-  getCategoriesAndCounts,
-  getAuthorsAndCounts,
   postsInCategory,
   postsByAuthor,
   readingTime,
@@ -43,10 +40,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);
   eleventyConfig.addFilter("getBundleItems", getBundleItems);
-  eleventyConfig.addFilter("getItemCategories", getItemCategories);
   eleventyConfig.addFilter("getDescription", getDescription);
-  eleventyConfig.addFilter("getCategoriesAndCounts", getCategoriesAndCounts);
-  eleventyConfig.addFilter("getAuthorsAndCounts", getAuthorsAndCounts);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);
   eleventyConfig.addFilter("readingTime", readingTime);

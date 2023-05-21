@@ -1,16 +1,15 @@
 ---
-bundleIssue: -1
-layout: default.njk
-title: Starter Projects
-permalink: /starters/
-description: A list of starter projects for Eleventy
+eleventyComputed:
+  title: Starter Projects ({{ bundledata.starterCount }})
+  description: A list of {{ bundledata.starterCount }} starter projects for Eleventy
 keywords: starter projects, starters, 11ty Bundle, 11ty, eleventy
+permalink: /starters/
 image:
   source: "11tybundle-dev.jpg"
   alt: "an address plate for house number 11"
 ---
 
-<h1>{{ title }} ({{ bundledata.starterCount }})</h1>
+<h1>{{ title }}</h1>
 
 <p class="intro">Here's a list of starter projects you can use to jumpstart your use of Eleventy. I've selected these based on recency of updating, traction that they appear to have as subjectively determined by the number of Github stars on their respective repos, and the clarity of their READMEs.</p>
 
@@ -18,7 +17,10 @@ image:
 
 <p>And if you're new to Eleventy, you'll find links to more than 30 blog posts in the <a href="/categories/getting-started/">Getting Started</a> section of this site.</p>
 
-{# https://www.11ty.dev/docs/starter/ #}
-
-{% set itemType = "starter" %}
-{% include 'partials/bundleitems.njk' %}
+{# starters #}
+  <div class="bundlestarters">
+  {%- for item in bundledata.starters %}
+    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
+    <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+  {%- endfor -%}
+  </div>

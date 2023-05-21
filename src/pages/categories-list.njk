@@ -1,18 +1,18 @@
 ---
-layout: default.njk
-title: Post Categories
+eleventyComputed:
+  title: Post Categories ({{ bundledata.categoryCount }})
+  description: A list of {{ bundledata.categoryCount }} post categories
 permalink: /categories/
-description: A list of all post categories
 keywords: categories, 11ty Bundle, 11ty, eleventy
 image:
   source: "11tybundle-dev.jpg"
   alt: "an address plate for house number 11"
 ---
 
-<h1>{{ title }} ({{ bundledata.categoryCount }})</h1>
+<h1>{{ title }}</h1>
 <div class="allcategories-list">
   <ul class="categorieslist">
-    {% for category in bundledata.bundleRecords | getCategoriesAndCounts %}
+    {% for category in bundledata.categories %}
       {% set categoryUrl %}/categories/{{ category[0] | slugify }}/{% endset %}
       <li><a href="{{categoryUrl}}">{{ category[0] }} ({{ category[1] }})</a></li>
     {% endfor %}
