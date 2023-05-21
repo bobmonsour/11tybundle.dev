@@ -12,8 +12,15 @@
     alias: "category",
     addAllPagesToCollections: "true",
     before: function(data) {
-     let categories = [...new Set(data.flatMap(post => data.Categories))];
-     return categories.sort((a, b) => a.localeCompare(b));
+      // create a unique set of categories from the Airtable data
+      // sorted alphabetically
+      let categorySet = new Set();
+      for (let item of data) {
+        (item.Categories || []).forEach((category) => categorySet.add(category));
+      }
+      return Array.from(categorySet).sort((a, b) => {
+      return a > b ? 1 : -1;
+      });
     }
   },
   image: {
