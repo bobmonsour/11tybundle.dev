@@ -66,7 +66,7 @@ module.exports = async function () {
   const authorList = (records) => {
     const authorMap = new Map();
     for (let item of records) {
-      if (item.Author && item.Type == "blog post") {
+      if (item.Type == "blog post") {
         authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
       }
     }
@@ -84,10 +84,9 @@ module.exports = async function () {
         categoryMap.set(category, categoryMap.get(category) + 1 || 1)
       );
     }
-    let categoryList = Array.from(categoryMap).sort((a, b) => {
+    return Array.from(categoryMap).sort((a, b) => {
       return a[0] > b[0] ? 1 : -1;
     });
-    return categoryList;
   };
 
   // generate counts of posts, starters, authors, and categories
