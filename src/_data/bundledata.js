@@ -62,13 +62,13 @@ module.exports = async function () {
     });
 
   // generate a 2-dimensional array of author names and
-  // a count of each of their posts
+  // a count of each of their posts; records comes from
+  // the firehose array, which are all blog posts
   const authorList = (records) => {
     const authorMap = new Map();
     for (let item of records) {
-      if (item.Type == "blog post") {
-        authorMap.set(item.Author, authorMap.get(item.Author) + 1 || 1);
-      }
+      const postCount = authorMap.get(item.Author) || 0;
+      authorMap.set(item.Author, postCount + 1);
     }
     return Array.from(authorMap).sort((a, b) => {
       return a[0].localeCompare(b[0]);
@@ -76,13 +76,15 @@ module.exports = async function () {
   };
 
   // generate a 2-dimensional array of categories and the
-  // count of posts in each category
+  // count of posts in each category; ; records comes from
+  // the firehose array, which are all blog posts
   const categoryList = (records) => {
     let categoryMap = new Map();
     for (let item of records) {
-      (item.Categories || []).forEach((category) =>
-        categoryMap.set(category, categoryMap.get(category) + 1 || 1)
-      );
+      item.Categories.forEach((category) => {
+        const postCount = categoryMap.get(category) || 0;
+        categoryMap.set(category, postCount + 1);
+      });
     }
     return Array.from(categoryMap).sort((a, b) => {
       return a[0] > b[0] ? 1 : -1;
@@ -94,14 +96,14 @@ module.exports = async function () {
 
   const starterCount = starters.length;
 
-  // list of authors and count of their posts
-  // and the total author count
-  const authors = authorList(bundleRecords);
+  // list of authors and count of their blog posts
+  // and the total author count; firehose contains all blog posts
+  const authors = authorList(firehose);
   const authorCount = authors.length;
 
-  // list of categories and count of posts with the category
-  // and the total category count
-  const categories = categoryList(bundleRecords);
+  // list of categories and count of blog posts with the category
+  // and the total category count; firehose contains all blog posts
+  const categories = categoryList(firehose);
   const categoryCount = categories.length;
 
   // log the counts of various items
