@@ -1,19 +1,16 @@
 ---js
 {
   eleventyComputed: {
-    title: "Posts by {{ author }}",
-    description: "Posts in the 11ty Bundle written by {{ author }}",
-    permalink: "/authors/{{ author | slugify }}/",
-    keywords: "authors, {{ author }}, 11ty Bundle, 11ty, eleventy, blog posts",
+    title: "{{ author[1] }} posts by {{ author[0] }}",
+    description: "Posts in the 11ty Bundle written by {{ author[0] }}",
+    permalink: "/authors/{{ author[0] | slugify }}/",
+    keywords: "authors, {{ author[0] }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
   pagination:  {
     data: "bundledata.authors",
     size: 1,
     alias: "author",
-    addAllPagesToCollections: "true",
-    before: function(data) {
-      return Array.from(data, (row) => row[0]);
-    }
+    addAllPagesToCollections: "true"
   },
   image: {
     source: "11tybundle-dev.jpg",
@@ -25,7 +22,7 @@
 <h1>{{ title }}</h1>
 
 <div class="bundleposts">
-  {% for item in bundledata.bundleRecords | postsByAuthor(author) %}
+  {% for item in bundledata.bundleRecords | postsByAuthor(author[0]) %}
   <div class="bundleitem">
     <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>

@@ -1,19 +1,16 @@
 ---js
 {
   eleventyComputed: {
-    title: "Posts in '{{ category }}'",
-    description: "Posts in the 11ty Bundle with the category: {{ category }}",
-    permalink: "/categories/{{ category | slugify }}/",
-    keywords: "categories, {{ category }}, 11ty Bundle, 11ty, eleventy, blog posts",
+    title: "{{ category[1] }} posts in '{{ category[0] }}'",
+    description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
+    permalink: "/categories/{{ category[0] | slugify }}/",
+    keywords: "categories, {{ category[0] }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
   pagination:  {
     data: "bundledata.categories",
     size: 1,
     alias: "category",
-    addAllPagesToCollections: "true",
-    before: function(data) {
-      return Array.from(data, (row) => row[0]);
-    }
+    addAllPagesToCollections: "true"
   },
   image: {
     source: "11tybundle-dev.jpg",
@@ -22,12 +19,12 @@
 }
 ---
 
-{% if linkstodocs[category] %}
+{% if linkstodocs[category[0]] %}
 <h2>Official 11ty docs</h2>
 <div class="officialdocs">
-  <p class="bundleitem-title"><a href="{{ linkstodocs[category] }}" target="_blank">{{ category }}</a></p>
-  <p class="bundleitem-description">{{ linkstodocs[category] | getDescription | truncate(100) }}</p>
-  {%- if category == "Deployment" %}
+  <p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}" target="_blank">{{ category[0] }}</a></p>
+  <p class="bundleitem-description">{{ linkstodocs[category[0]] | getDescription | truncate(100) }}</p>
+  {%- if category[0] == "Deployment" %}
   <p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" target="_blank">list of providers on the 11ty docs site.</a></p>
   {%- endif %}
 </div>
@@ -37,7 +34,7 @@
 <h1>{{ title }}</h1>
 
 <div class="bundleposts">
-  {% for item in bundledata.bundleRecords | postsInCategory(category) %}
+  {% for item in bundledata.bundleRecords | postsInCategory(category[0]) %}
   <div class="bundleitem">
     <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
