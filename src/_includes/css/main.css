@@ -1,5 +1,9 @@
 /* default body styles */
 body {
+  /* use flex on body to force footer to bottom on short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--site-bg-color);
   color: var(--brand-text-color);
   font-family: var(--body-font);
@@ -243,7 +247,7 @@ footer {
   border-left: 2px solid var(--resources-bg-color);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  margin-block-start: 1em;
+  margin-top: auto;
   padding-block-end: 1em;
 }
 
