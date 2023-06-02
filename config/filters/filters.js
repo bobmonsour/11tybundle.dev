@@ -69,6 +69,9 @@ const getDescription = async (link) => {
       duration: "*",
       type: "buffer",
     });
+    const $ = cheerio.load(htmlcontent);
+    const description = $("meta[name=description]").attr("content");
+
     // const site1string = "childcare-vouchers";
     // const site2string = "samhermes";
     // const site3string = "time2hack";
@@ -78,9 +81,8 @@ const getDescription = async (link) => {
     //   link.includes(site3string)
     // ) {
     //   console.log("Link: " + link);
+    //   console.log("Description: " + description);
     // }
-    const $ = cheerio.load(htmlcontent);
-    const description = $("meta[name=description]").attr("content");
     if (link.includes("youtube.com")) {
       return "YouTube video";
     } else if (description == undefined) {
