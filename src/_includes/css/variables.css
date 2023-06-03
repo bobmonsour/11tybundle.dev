@@ -26,7 +26,8 @@
 
   /* Brand Styles */
   --brand-font: "Nimbus Mono PS", "Courier New", "Cutive Mono", monospace;
-  --brand-text-color: black;
+  --brand-text-color: #2a2c2c;
+  /* --brand-text-color: black; */
   --body-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 
   /* Post Styles */
