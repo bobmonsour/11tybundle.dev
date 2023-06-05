@@ -5,6 +5,7 @@ require("dotenv").config();
 const imageShortcode = require("./config/shortcodes/image.js");
 // Filter references
 const {
+  isCurrentPage,
   formatPostDate,
   formatItemDate,
   formatFirehoseDate,
@@ -36,6 +37,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // Custom filters
+  eleventyConfig.addFilter("isCurrentPage", isCurrentPage);
   eleventyConfig.addFilter("formatPostDate", formatPostDate);
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);

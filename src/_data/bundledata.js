@@ -20,7 +20,7 @@ module.exports = async function () {
 
   // check if the cache is fresh within the last day ("1d")
   // use a cache duration of "0s" to force retrieval from Airtable
-  if (asset.isCacheValid("0s")) {
+  if (asset.isCacheValid("1d")) {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
@@ -64,15 +64,21 @@ module.exports = async function () {
   // generate a 2-dimensional array of author names and
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
-  const authorList = (records) => {
+  // the sortField is the field to sort by (0 = name, 1 = count)
+  const authorList = (records, sortField) => {
+    function authorSort(a, b) {
+      if (sortField == "name") {
+        return a[0].localeCompare(b[0]);
+      } else {
+        return a[1] < b[1] ? 1 : -1;
+      }
+    }
     const authorMap = new Map();
     for (let item of records) {
       const postCount = authorMap.get(item.Author) || 0;
       authorMap.set(item.Author, postCount + 1);
     }
-    return Array.from(authorMap).sort((a, b) => {
-      return a[0].localeCompare(b[0]);
-    });
+    return Array.from(authorMap).sort(authorSort);
   };
 
   // generate a 2-dimensional array of categories and the
@@ -98,7 +104,9 @@ module.exports = async function () {
 
   // list of authors and count of their blog posts
   // and the total author count; firehose contains all blog posts
-  const authors = authorList(firehose);
+  // 2nd param of authorList is the field to sort by
+  const authors = authorList(firehose, "name");
+  const authorsByCount = authorList(firehose, "count");
   const authorCount = authors.length;
 
   // list of categories and count of blog posts with the category
@@ -132,6 +140,7 @@ module.exports = async function () {
     starters: starters,
     starterCount: starterCount,
     authors: authors,
+    authorsByCount: authorsByCount,
     authorCount: authorCount,
     categories: categories,
     categoryCount: categoryCount,

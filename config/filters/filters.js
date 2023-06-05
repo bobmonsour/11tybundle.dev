@@ -2,6 +2,16 @@ const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const cheerio = require("cheerio");
 
+// Determine whether or not to highlight current page in the nav
+// if the link text appears within the page url, then do highlight
+const isCurrentPage = (linkText, pageUrl) => {
+  lcLinkText = linkText.toLowerCase();
+  // console.log("lcLinkText = " + lcLinkText + " pageUrl = " + pageUrl);
+  if (pageUrl.includes(lcLinkText)) {
+    return 'aria-current="page"';
+  }
+};
+
 // Format the date of blog posts for the site
 const formatPostDate = (date) => {
   return DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
@@ -160,6 +170,7 @@ const readingTime = (text) => {
 };
 
 module.exports = {
+  isCurrentPage,
   formatPostDate,
   formatItemDate,
   formatFirehoseDate,
