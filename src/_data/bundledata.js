@@ -1,5 +1,3 @@
-// _data/bundledata.js
-//
 // get all the Airtable records and return various subsets and
 // filtered extracts of the data for use in the site's templates
 const Airtable = require("airtable");

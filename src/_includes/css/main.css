@@ -10,7 +10,7 @@ body {
   font-size: var(--font-size-md);
   line-height: 1.3;
   margin-inline: auto;
-  max-width: min(var(--page-width-max), 100vw - 0.5em);
+  max-inline-size: min(var(--page-width-max), 100vw - 0.5em);
 }
 
 /* default <h1> */
@@ -90,16 +90,16 @@ a[target="_blank"]::after {
   border: 1px solid var(--dark-accent-color);
   display: block;
   margin: 0 auto 1.5em auto;
-  max-width: var(--main-element-max);
+  max-inline-size: var(--main-element-max);
 }
 
 /* default img to handle fluid images */
 img {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 img[width] {
-  width: auto; /* Defer to max-width */
+  inline-size: auto; /* Defer to max-width */
 }
 img[width][height] {
   height: auto; /* Preserve aspect ratio */
@@ -108,7 +108,7 @@ img[width][height] {
 /* main content constrained by viewport */
 main {
   margin-inline: auto;
-  max-width: var(--main-element-max);
+  max-inline-size: var(--main-element-max);
 }
 
 /* brand & navigation (inside <header>) */
@@ -132,7 +132,7 @@ main {
   justify-content: space-around;
   list-style: none;
   margin: 0;
-  max-width: min(var(--page-width-max), 100vw - 1em);
+  max-inline-size: min(var(--page-width-max), 100vw - 1em);
   padding-inline: 0;
 }
 .brand-nav a {
@@ -180,7 +180,7 @@ main {
   font-size: var(--font-size-lg);
   line-height: 1.5;
   margin-block: 0.25em;
-  max-width: var(--main-element-max);
+  max-inline-size: var(--main-element-max);
 }
 
 /* list of All Tags and All Categories */
@@ -207,7 +207,7 @@ main {
 /* post elements */
 .post {
   margin-inline: auto;
-  max-width: var(--main-element-max);
+  max-inline-size: var(--main-element-max);
 }
 .post-title {
   font-size: var(--post-title-full-size);

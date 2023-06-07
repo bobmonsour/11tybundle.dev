@@ -6,7 +6,6 @@ const cheerio = require("cheerio");
 // if the link text appears within the page url, then do highlight
 const isCurrentPage = (linkText, pageUrl) => {
   lcLinkText = linkText.toLowerCase();
-  // console.log("lcLinkText = " + lcLinkText + " pageUrl = " + pageUrl);
   if (pageUrl.includes(lcLinkText)) {
     return 'aria-current="page"';
   }
