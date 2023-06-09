@@ -1,15 +1,15 @@
-// /functions/hello.js
+// /functions/countclicks.js - A Netlify function to count outbound link clicks
+
+// Using a Firebase Realtime Database to store the click counts
+// Each record in the database has an id that is identical to the record id
+// used in the Airtable base. In fact, the Airtable record id is used as the
+// key in the Firebase database. The record has two fields: count and type.
+// Each time a blog post link is clicked, the count is incremented and the
+// type is set to "blog post".
 
 require("dotenv").config();
 const { initializeApp } = require("firebase/app");
-const {
-  getDatabase,
-  increment,
-  update,
-  ref,
-  set,
-  runTransaction,
-} = require("firebase/database");
+const { getDatabase, ref, runTransaction } = require("firebase/database");
 var firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -24,11 +24,6 @@ var firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const dbRef = getDatabase(app);
-
-// Set the value of a specific record ID
-// set(ref(dbRef, recordId), {
-//   type: "blog post",
-// });
 
 exports.handler = async (event, context) => {
   console.log("netlify function triggered");
