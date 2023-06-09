@@ -25,11 +25,7 @@
 {%- endmacro -%}
 
 {%- macro itemTitle(title, link, id, type) -%}
-  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" ping="http://localhost:8888/.netlify/functions/countclicks?itemid={{ id }}&itemtype={{ type | urlencode }}">{{ title }}</a></p>
-{%- endmacro -%}
-
-{%- macro itemDescription(link) -%}
-  <p class="bundleitem-description">{{ link | getDescription | truncate(100) }}</p>
+  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" ping="{% if site.env == 'production' %}https://11tybundle.dev/{% else %}http://localhost:8888/{% endif %}.netlify/functions/countclicks?itemid={{ id }}&itemtype={{ type | urlencode }}">{{ title }}</a></p>
 {%- endmacro -%}
 
 {%- macro itemDateline(author, date) -%}

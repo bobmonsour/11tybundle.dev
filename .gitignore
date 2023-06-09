@@ -8,3 +8,6 @@ scratch/
 .env
 .cache
 .vscode
+
+# Local Netlify folder
+.netlify

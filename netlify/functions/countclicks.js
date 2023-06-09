@@ -44,7 +44,7 @@ exports.handler = async (event, context) => {
     }
   })
     .then(() => {
-      console.log("Transaction completed successfully");
+      console.log("Transaction successful");
     })
     .catch((error) => {
       console.error("Transaction failed: ", error);
