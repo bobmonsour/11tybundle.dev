@@ -6,6 +6,10 @@ package = "netlify-plugin-cache"
     ".cache"
   ]
 
+[build]
+  functions = "netlify/functions"
+  publish = "_site"
+
 [[redirects]]
   from = "https://11tybundle.dev/categories/frontmatter/"
   to = "https://11tybundle.dev/categories/front-matter/"
