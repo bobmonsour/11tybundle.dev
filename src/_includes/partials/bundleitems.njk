@@ -1,3 +1,5 @@
+{% from "macros.njk" import itemTitle, itemDateline %}
+
 {% if itemType == "release" %}
 {# releases #}
   <div class="bundlereleases">
@@ -19,9 +21,9 @@
   <div class="bundleposts">
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}
     <div class="bundleitem">
-      <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
+      {{ itemTitle(item.Title, item.Link, item.id, item.Type) }}
       <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-      <p class="bundleitem-dateline"><a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> &middot; {{ item.Date | formatItemDate }}</p>
+      {{ itemDateline(item.Author, item.Date) }}
       <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
     </div>
   {%- endfor %}

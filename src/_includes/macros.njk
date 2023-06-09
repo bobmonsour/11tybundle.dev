@@ -4,7 +4,7 @@
   Items displayed in the bundle make use of categories stored in the Airtable database.
   While currently unused, this will remain for possible future use.
 #}
-{% macro tagList(tags) %}
+{%- macro tagList(tags) -%}
   <ul class="post-taglist">
     <li>Tags:&nbsp;</li>
     {%- for tag in tags | filterTagList %}
@@ -13,4 +13,25 @@
     {%- endfor %}
     <li><a href="/tags/">All Tags</a></li>
   </ul>
-{% endmacro %}
+{%- endmacro -%}
+
+{%- macro bundlePost(title, link, author, date, categories, id, type) -%}
+<div class="bundleitem">
+  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" data-id="{{ id }}" data-type="{{ type }}">{{ title }}</a></p>
+  <p class="bundleitem-description">{{ link | getDescription | truncate(100) }}</p>
+  <p class="bundleitem-dateline"><a href="/authors/{{ author | slugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
+  <p class="bundleitem-categories">Categories: {% for category in categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
+</div>
+{%- endmacro -%}
+
+{%- macro itemTitle(title, link, id, type) -%}
+  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" ping="http://localhost:8888/.netlify/functions/countclicks?itemid={{ id }}&itemtype={{ type | urlencode }}">{{ title }}</a></p>
+{%- endmacro -%}
+
+{%- macro itemDescription(link) -%}
+  <p class="bundleitem-description">{{ link | getDescription | truncate(100) }}</p>
+{%- endmacro -%}
+
+{%- macro itemDateline(author, date) -%}
+  <p class="bundleitem-dateline"><a href="/authors/{{ author | slugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
+{%- endmacro -%}

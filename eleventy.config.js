@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);
   eleventyConfig.addFilter("getBundleItems", getBundleItems);
-  eleventyConfig.addFilter("getDescription", getDescription);
+  eleventyConfig.addAsyncFilter("getDescription", getDescription);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);
   eleventyConfig.addFilter("readingTime", readingTime);
