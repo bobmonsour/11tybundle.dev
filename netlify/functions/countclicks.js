@@ -32,23 +32,23 @@ exports.handler = async (event, context) => {
   const type = querystring.itemtype;
   const recordRef = ref(dbRef, recordId);
   // Run a transaction on the record to increment the count and set the type value
-  runTransaction(recordRef, (currentData) => {
-    if (!currentData) {
-      // If the record doesn't exist, create it with a count of 1 and the type value
-      return { count: 1, type: type };
-    } else {
-      // If the record exists, increment the count and set the type value
-      currentData.count = (currentData.count || 0) + 1;
-      currentData.type = type;
-      return currentData;
-    }
-  })
-    .then(() => {
-      console.log("Transaction successful");
-    })
-    .catch((error) => {
-      console.error("Transaction failed: ", error);
-    });
+  // runTransaction(recordRef, (currentData) => {
+  //   if (!currentData) {
+  //     // If the record doesn't exist, create it with a count of 1 and the type value
+  //     return { count: 1, type: type };
+  //   } else {
+  //     // If the record exists, increment the count and set the type value
+  //     currentData.count = (currentData.count || 0) + 1;
+  //     currentData.type = type;
+  //     return currentData;
+  //   }
+  // })
+  //   .then(() => {
+  //     console.log("Transaction successful");
+  //   })
+  //   .catch((error) => {
+  //     console.error("Transaction failed: ", error);
+  //   });
   return {
     statusCode: 200,
     body: ``,
