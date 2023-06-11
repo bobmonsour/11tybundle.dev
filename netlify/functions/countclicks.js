@@ -7,30 +7,31 @@
 // Each time a blog post link is clicked, the count is incremented and the
 // type is set to "blog post".
 
-require("dotenv").config();
-const { initializeApp } = require("firebase/app");
-const { getDatabase, ref, runTransaction } = require("firebase/database");
-var firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-};
+// require("dotenv").config();
+// const { initializeApp } = require("firebase/app");
+// const { getDatabase, ref, runTransaction } = require("firebase/database");
+// var firebaseConfig = {
+//   apiKey: process.env.FIREBASE_API_KEY,
+//   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+//   databaseURL: process.env.FIREBASE_DATABASE_URL,
+//   projectId: process.env.FIREBASE_PROJECT_ID,
+//   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+//   appId: process.env.FIREBASE_APP_ID,
+// };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
-const dbRef = getDatabase(app);
+// const dbRef = getDatabase(app);
 
 exports.handler = async (event, context) => {
   console.log("netlify function triggered");
   const querystring = event.queryStringParameters;
   const recordId = querystring.itemid;
-  const type = querystring.itemtype;
-  const recordRef = ref(dbRef, recordId);
+  const link = querystring.itemlink;
+  // console.log("link: " + link);
+  // const recordRef = ref(dbRef, recordId);
   // Run a transaction on the record to increment the count and set the type value
   // runTransaction(recordRef, (currentData) => {
   //   if (!currentData) {
@@ -51,6 +52,6 @@ exports.handler = async (event, context) => {
   //   });
   return {
     statusCode: 200,
-    body: ``,
+    body: `${recordId} ${link}`,
   };
 };
