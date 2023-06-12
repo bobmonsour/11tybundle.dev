@@ -1,9 +1,14 @@
 // /functions/countclicks.js - A Netlify function to count outbound link clicks
 
-// Using a Firebase Firestore Database to store the click counts
+// Using a Firebase Firestore Database to store the click counts.
+//
 // The Firestore database has a collection called posts. In each post document
-// there is a recordID (same as the Airtable record ID). Each record also has a
+// there is a recordID (same as the Airtable recordID). Each record also has a
 // count that will be incremented by 1 on each invocation of this function.
+//
+// Two query parameters are passed to this function:
+//   1. itemid - the recordID of the post (required)
+//   2. itemlink - the link to the post (for my viewing pleasure)
 
 require("dotenv").config();
 const admin = require("firebase-admin");
@@ -34,6 +39,8 @@ exports.handler = async function (event, context) {
   // get the post ID and link from the query string parameters
   postID = event.queryStringParameters.itemid;
   postLink = event.queryStringParameters.itemlink;
+
+  // announce that we're counting the click and which one
   console.log("Netlify Function `countclicks` invoked");
   console.log(`postID: ${postID}`);
   console.log(`postLink: ${postLink}`);
