@@ -141,7 +141,7 @@ Next up, I need to build the code to read the data from the database and match i
 
 Yes, this is fun. And I'm continuing to learn a lot.
 
-Until next time...
+Finally, if you're wondering if I had any help with this from the GitHub Co-Pilot extension and ChatGPT, the answer is yes. I used both of them to help me write the code for the function. And I studied the code and the Firestore docs to make sure that I understood it. And...it works!
 
 <div id="releases"></div>
 
