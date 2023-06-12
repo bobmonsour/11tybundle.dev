@@ -1,8 +1,8 @@
 ---
 bundleIssue: 9
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy Clock, grabbing your Goodreads data, and descent into various ratholes"
-  description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle...ratholes R us."
+  title: "Issue {{ bundleIssue }} - Eleventy Clock, grabbing your Goodreads data, descent into various ratholes...and AI helped me write the code"
+  description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle...a cool site, some great posts, and ratholes R us."
 date: 2023-06-12
 tags:
   - 11ty Bundle
