@@ -58,7 +58,11 @@ exports.handler = async function (event, context) {
         newCount = doc.data().postCount + 1;
       }
 
-      t.set(postRef, { postCount: newCount }, { merge: true });
+      t.set(
+        postRef,
+        { postLink: postLink, postCount: newCount },
+        { merge: true }
+      );
     });
 
     return {
