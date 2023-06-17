@@ -37,30 +37,38 @@ const db = admin.firestore();
 
 exports.handler = async function (event, context) {
   // get the post ID and link from the query string parameters
-  postID = event.queryStringParameters.itemid;
-  postLink = event.queryStringParameters.itemlink;
-
-  // announce that we're counting the click and which one
   console.log("Netlify Function `countclicks` invoked");
-  console.log(`postID: ${postID}`);
-  console.log(`postLink: ${postLink}`);
-
-  const postRef = db.collection("posts").doc(postID);
+  let linkType = event.queryStringParameters.itemtype;
+  console.log(`linkType: ${linkType}`);
+  switch (linkType) {
+    case "posts":
+      postID = event.queryStringParameters.itemid;
+      postLink = event.queryStringParameters.itemlink;
+      console.log(`postID: ${postID}`);
+      console.log(`postLink: ${postLink}`);
+      dbRef = db.collection("posts").doc(postID);      break;
+    case "categories":
+      categoryID = event.queryStringParameters.itemid.replace("/", "-");
+      console.log(`categoryID: ${categoryID}`);
+      dbRef = db.collection("categories").doc(categoryID);
+      break;
+    default:
+      console.log("I don't know that type.");
+  };
 
   try {
     await db.runTransaction(async (t) => {
-      const doc = await t.get(postRef);
-
+      const doc = await t.get(dbRef);
       let newCount;
       if (!doc.exists) {
         newCount = 1;
       } else {
-        newCount = doc.data().postCount + 1;
+        newCount = doc.data().clickCount + 1;
       }
 
       t.set(
-        postRef,
-        { postLink: postLink, postCount: newCount },
+        dbRef,
+        { clickCount: newCount },
         { merge: true }
       );
     });
