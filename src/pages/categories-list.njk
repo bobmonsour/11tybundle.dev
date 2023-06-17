@@ -14,7 +14,7 @@ image:
   <ul class="categorieslist">
     {% for category in bundledata.categories %}
       {% set categoryUrl %}/categories/{{ category[0] | slugify }}/{% endset %}
-      <li><a href="{{categoryUrl}}" ping="http://localhost:8888/.netlify/functions/countclicks?itemtype=categories&itemid={{ category[0] | urlencode }}">{{ category[0] }} ({{ category[1] }})</a></li
+      <li><a href="{{categoryUrl}}" ping="https://11tybundle.dev/.netlify/functions/countclicks?itemtype=categories&itemid={{ category[0] | urlencode }}">{{ category[0] }} ({{ category[1] }})</a></li
     {% endfor %}
   </ul>
 </div>
