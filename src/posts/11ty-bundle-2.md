@@ -9,7 +9,7 @@ tags:
 keywords: eleventy, 11ty, newsletter, roundup, news
 image:
   source: "11tybundle-dev.jpg"
-  alt: "an AI-generated image of the number eleven"
+  alt: "the number 11 as photographed by David Monje on Unsplash"
 pageId: bundle
 draft: false
 ---

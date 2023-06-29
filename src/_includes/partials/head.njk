@@ -15,13 +15,29 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  {# social media settings #}
+  {# Open Graph tags #}
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:type" content="website">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
+  <meta property="og:image:alt" content="the number 11 as photographed by David Monje on Unsplash">
   <meta name="generator" content="Eleventy">
+
+  {# Twitter tags #}
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ description }}">
+  <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="twitter:image:src" content="{{ site.url }}/assets/img/{{ image.source }}">
+  <meta property="twitter:image:alt" content="the number 11 as photographed by David Monje on Unsplash">
+  <meta property="twitter:site" content="@BobMonsour">
+  <meta property="twitter:creator" content="@BobMonsour">
+
+  <meta name="generator" content="Eleventy">
+
+  {# Apple tags #}
+  <meta name="apple-mobile-web-app-title" content="11ty Bundle" />
+  <meta name="application-name" content="11ty Bundle" />
 
   {# enable view-transitions, currently behind a flag in Chrome Canary build #}
   <meta name="view-transition" content="same-origin" />
