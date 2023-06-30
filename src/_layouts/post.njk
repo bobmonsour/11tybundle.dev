@@ -6,6 +6,8 @@ layout: default.njk
   {%- css "pageHasCode" %}{% include "css/prism-okaidia.css" %}{% endcss %}
 {% endif %}
 
+{%- if draft == true -%}<h1>DRAFT</h1>{%- endif -%}
+
 <article class="post">
   <h1 class="post-title">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }} &middot; {{ content | readingTime }}</p>
