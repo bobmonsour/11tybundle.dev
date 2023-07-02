@@ -1,10 +1,6 @@
 ---
 title: About 11tybundle.dev
 description: About the 11tybundle.dev website and the person behind it.
-keywords: eleventy, 11ty, web development, Bob Monsour
-image:
-  source: "11tybundle-dev.jpg"
-  alt: "an address plate for house number 11"
 permalink: /about/
 ---
 

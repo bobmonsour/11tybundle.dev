@@ -15,19 +15,19 @@
   </ul>
 {%- endmacro -%}
 
-{%- macro bundlePost(title, link, author, date, categories, id, type) -%}
-<div class="bundleitem">
-  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" data-id="{{ id }}" data-type="{{ type }}">{{ title }}</a></p>
-  <p class="bundleitem-description">{{ link | getDescription | truncate(100) }}</p>
-  <p class="bundleitem-dateline"><a href="/authors/{{ author | slugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
-  <p class="bundleitem-categories">Categories: {% for category in categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
-</div>
-{%- endmacro -%}
-
-{%- macro itemTitle(title, link, id, type) -%}
+{#
+  Generate the markup for the title line of each displayed post. The ping
+  attribute of the anchor link triggers a Netlify function to count each
+  post when it is clicked
+#}
+{%- macro itemTitle(title, link, id) -%}
   <p class="bundleitem-title"><a href="{{ link }}" target="_blank" ping="https://11tybundle.dev/.netlify/functions/countclicks?itemtype=posts&itemid={{ id }}&itemlink={{ link }}">{{ title }}</a></p>
 {%- endmacro -%}
 
+{#
+  Generate the markup for the dateline of each displayed post. It consists of
+  the author and date for the post. The author is a link to the author's page.
+#}
 {%- macro itemDateline(author, date) -%}
   <p class="bundleitem-dateline"><a href="/authors/{{ author | slugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
 {%- endmacro -%}

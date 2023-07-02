@@ -46,7 +46,8 @@ exports.handler = async function (event, context) {
       postLink = event.queryStringParameters.itemlink;
       console.log(`postID: ${postID}`);
       console.log(`postLink: ${postLink}`);
-      dbRef = db.collection("posts").doc(postID);      break;
+      dbRef = db.collection("posts").doc(postID);
+      break;
     case "categories":
       categoryID = event.queryStringParameters.itemid.replace("/", "-");
       console.log(`categoryID: ${categoryID}`);
@@ -54,7 +55,7 @@ exports.handler = async function (event, context) {
       break;
     default:
       console.log("I don't know that type.");
-  };
+  }
 
   try {
     await db.runTransaction(async (t) => {
@@ -66,11 +67,7 @@ exports.handler = async function (event, context) {
         newCount = doc.data().clickCount + 1;
       }
 
-      t.set(
-        dbRef,
-        { clickCount: newCount },
-        { merge: true }
-      );
+      t.set(dbRef, { clickCount: newCount }, { merge: true });
     });
 
     return {

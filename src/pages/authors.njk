@@ -4,17 +4,12 @@
     title: "{{ author[1] }} posts by {{ author[0] }}",
     description: "Posts in the 11ty Bundle written by {{ author[0] }}",
     permalink: "/authors/{{ author[0] | slugify }}/",
-    keywords: "authors, {{ author[0] }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
   pagination:  {
     data: "bundledata.authors",
     size: 1,
     alias: "author",
     addAllPagesToCollections: "true"
-  },
-  image: {
-    source: "11tybundle-dev.jpg",
-    alt: "an address plate for house number 11"
   }
 }
 ---
@@ -22,10 +17,16 @@
 
 <h1>{{ title }}</h1>
 
+{#
+  While the title and dateline lend themselves to the use of macros, the description
+  and categories list are a bit more complex. The description makes use of an async
+  filter (and that is why I believe it does not work in a macro). The categories list
+  uses a Nunjucks for loop as well as the slugify filter.
+#}
 <div class="bundleposts">
   {% for item in bundledata.bundleRecords | postsByAuthor(author[0]) %}
   <div class="bundleitem">
-    {{ itemTitle(item.Title, item.Link, item.id, item.Type) }}
+    {{ itemTitle(item.Title, item.Link, item.id) }}
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
     {{ itemDateline(item.Author, item.Date) }}
     <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>

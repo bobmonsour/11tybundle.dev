@@ -4,22 +4,24 @@
     title: "{{ category[1] }} posts in '{{ category[0] }}'",
     description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
     permalink: "/categories/{{ category[0] | slugify }}/",
-    keywords: "categories, {{ category[0] }}, 11ty Bundle, 11ty, eleventy, blog posts",
   },
   pagination:  {
     data: "bundledata.categories",
     size: 1,
     alias: "category",
     addAllPagesToCollections: "true"
-  },
-  image: {
-    source: "11tybundle-dev.jpg",
-    alt: "an address plate for house number 11"
   }
 }
 ---
 {% from "macros.njk" import itemTitle, itemDateline %}
 
+{#
+  If the category has an equivalent page on the 11ty docs site, then display a link to it.
+  The linkstodocs object is defined in the linkstodocs.json file in the _data directory.
+  Each key in the object is a category name, and the value is the URL of the page on the
+  11ty docs site. In the special case of the Deployment category, an additional link is
+  displayed, linking to the list of deployment providers on the 11ty docs site.
+#}
 {% if linkstodocs[category[0]] %}
 <h2>Official 11ty docs</h2>
 <div class="officialdocs">
@@ -31,13 +33,18 @@
 </div>
 {% endif %}
 
-
 <h1>{{ title }}</h1>
 
+{#
+  While the title and dateline lend themselves to the use of macros, the description
+  and categories list are a bit more complex. The description makes use of an async
+  filter (and that is why I believe it does not work in a macro). The categories list
+  uses a Nunjucks for loop as well as the slugify filter.
+#}
 <div class="bundleposts">
   {% for item in bundledata.bundleRecords | postsInCategory(category[0]) %}
   <div class="bundleitem">
-    {{ itemTitle(item.Title, item.Link, item.id, item.Type) }}
+    {{ itemTitle(item.Title, item.Link, item.id) }}
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
     {{ itemDateline(item.Author, item.Date) }}
     <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>

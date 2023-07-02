@@ -6,10 +6,6 @@ eleventyComputed:
 date: 2023-05-09
 tags:
   - 11ty Bundle
-keywords: eleventy, 11ty, newsletter, roundup, news
-image:
-  source: "11tybundle-dev.jpg"
-  alt: "the number 11 as photographed by David Monje on Unsplash"
 draft: false
 ---
 

@@ -6,11 +6,7 @@ eleventyComputed:
 date: 2023-06-30
 tags:
   - 11ty Bundle
-keywords: eleventy, 11ty, newsletter, roundup, news
-image:
-  source: "11tybundle-dev.jpg"
-  alt: "the number 11 as photographed by David Monje on Unsplash"
-draft: false
+draft: true
 ---
 
 If you haven't already taken the Eleventy Community Survey, please do so (if you have, thank you). It's important to show your support for the project and to help Zach make decisions about its future. [Take the survey](https://forms.gle/zFA4Jno1cfT8nt9J8). For more details, see [Zach's post](https://www.zachleat.com/web/eleventy-side-project/).
