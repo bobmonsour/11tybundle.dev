@@ -3,7 +3,7 @@ bundleIssue: 12
 eleventyComputed:
   title: "Issue {{ bundleIssue }} - A bunch of posts, a cool starter, and some new sites showed up"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
-date: 2023-06-30
+date: 2023-07-06
 tags:
   - 11ty Bundle
 draft: false
