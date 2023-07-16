@@ -18,7 +18,7 @@ module.exports = async function () {
 
   // check if the cache is fresh within the last day ("1d")
   // use a cache duration of "0s" to force retrieval from Airtable
-  if (asset.isCacheValid("1d")) {
+  if (asset.isCacheValid("0d")) {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
@@ -62,7 +62,9 @@ module.exports = async function () {
   // generate a 2-dimensional array of author names and
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
-  // the sortField is the field to sort by (0 = name, 1 = count)
+  // the sortField is the field to sort by:
+  //   name in column 0
+  //   count in column 1
   const authorList = (records, sortField) => {
     function authorSort(a, b) {
       if (sortField == "name") {
