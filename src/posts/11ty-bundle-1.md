@@ -7,7 +7,6 @@ date: 2023-03-28
 tags:
   - 11ty Bundle
 pageId: bundle
-draft: false
 ---
 
 Why?, you ask.

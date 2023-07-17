@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-05-01
 tags:
   - 11ty Bundle
-draft: false
 ---
 
 The 11ty Bundle started out as a series of blog posts on [my personal site](https://www.bobmonsour.com/). The first 4 issues of the 11ty Bundle were published there and they have been migrated to this site. This is the first issue to be published here. You can learn more about how the 11ty Bundle came to be on the [About page](/about/).

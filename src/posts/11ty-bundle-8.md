@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-05-31
 tags:
   - 11ty Bundle
-draft: false
 ---
 
 > TL;DR We've got a new author with a bunch of posts, I did some refactoring under the hood here, added a scroll-to-top button to the site, and we've lost some blog posts.

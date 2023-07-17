@@ -7,7 +7,6 @@ date: 2023-04-11
 tags:
   - 11ty Bundle
 pageId: bundle
-draft: false
 ---
 
 > _UPDATED: 2023-04-18 - I have added descriptions to each of the blog post entries. These are extracted from the blog post page itself as provided by the post's author._

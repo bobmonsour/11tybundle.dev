@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-07-06
 tags:
   - 11ty Bundle
-draft: false
 ---
 
 This issue has 6 new blog posts that came out since the [last issue](/blog/11ty-bundle-{{bundleIssue-1}}/). We're flirting with the magic 600 number, but not quite there yet...we're at 597 blog posts.

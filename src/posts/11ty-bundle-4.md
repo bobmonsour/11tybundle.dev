@@ -7,7 +7,6 @@ date: 2023-04-18
 tags:
   - 11ty Bundle
 pageId: bundle
-draft: false
 ---
 
 > _Sneak peek: The next issue will be a SPECIAL issue focused on posts that discuss migration from another static site generator or platform to Eleventy._

@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-06-20
 tags:
   - 11ty Bundle
-draft: false
 ---
 
 We've got some breaking news. As Zach Leatherman [posted earlier today](https://www.zachleat.com/web/eleventy-side-project/), as of now, Eleventy will no longer continue with full-time sponsorship. Netlify, where Zach works as a staff engineer, provided a full year of sponsorship that allowed Zach to pursue the project with the intensity that we all witnessed.

@@ -18,7 +18,6 @@ const {
 // Plugin references
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const eleventyDrafts = require("./config/plugins/drafts");
 const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 const postcss = require("postcss");
 const postcssMinify = require("postcss-minify");
@@ -50,7 +49,6 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(eleventyDrafts);
   // eleventyConfig.setQuietMode(true);
   // eleventyConfig.addPlugin(directoryOutputPlugin, {
   //   columns: {
