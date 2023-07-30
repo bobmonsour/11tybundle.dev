@@ -16,12 +16,10 @@
 {%- endmacro -%}
 
 {#
-  Generate the markup for the title line of each displayed post. The ping
-  attribute of the anchor link triggers a Netlify function to count each
-  post when it is clicked
+  Generate the markup for the title line of each displayed post.
 #}
 {%- macro itemTitle(title, link, id) -%}
-  <p class="bundleitem-title"><a href="{{ link }}" target="_blank" ping="https://11tybundle.dev/.netlify/functions/countclicks?itemtype=posts&itemid={{ id }}&itemlink={{ link }}">{{ title }}</a></p>
+  <p class="bundleitem-title"><a href="{{ link }}" target="_blank">{{ title }}</a></p>
 {%- endmacro -%}
 
 {#

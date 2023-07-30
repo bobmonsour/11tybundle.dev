@@ -7,7 +7,6 @@ package = "netlify-plugin-cache"
   ]
 
 [build]
-  functions = "netlify/functions"
   publish = "_site"
 
 [[redirects]]

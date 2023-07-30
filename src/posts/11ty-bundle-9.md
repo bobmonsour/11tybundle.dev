@@ -9,6 +9,8 @@ tags:
 pageHasCode: true
 ---
 
+> UPDATE 2023-07-30: I've abandoned this effort as the data was less than satisfying. The wide range of categories and posts does not lend itself to me creating my own bespoke analytics package. I am currently investigating the use of various third-party analytics packages. I'll report back when I have something to share.
+
 > TL;DR We've got a cool blog post in [this issue's list](#releases) about using pagination to build a clock with Eleventy (it's the last one in the list as it's from 2020). [Raymond Camden](/authors/raymond-camden/) shows us how to get our Goodreads data into an Eleventy site. We've got a site that will help you opt out from data brokers. And, finally, I am now crawling out of a rathole where I tried to figure out how to do something that might or might not be useful. Skip to [the posts and sites](#releases) if that's all you need.
 
 Warning...this is a long-ish one. [Skip it](#releases) if you want.
