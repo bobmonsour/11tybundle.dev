@@ -97,7 +97,7 @@ const getDescription = async (link) => {
     } else if (description == undefined) {
       return "";
     } else {
-      return description;
+      return description.trim();
     }
   } catch (e) {
     console.log("Error fetching description for " + link + " " + e.message);
