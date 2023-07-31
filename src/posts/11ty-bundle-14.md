@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-07-31
 tags:
   - 11ty Bundle
-draft: "true"
 ---
 
 > TL;DR Zach's now at CloudCannon. Eleventy has a future. Lots of new posts and sites. I'm back from vacation. If you want to jump to the posts...[go ahead](#newposts), I won't be offended.
@@ -48,6 +47,8 @@ This just in (on Friday, July 28), there's a new starter from [Łukasz Wójcik](
 With Zach's recent move to CloudCannon, I thought I'd share a link to a blog post by David Large of CloudCannon. Davis lists [11 Top Eleventy Blog Themes (Starters) in 2023](https://cloudcannon.com/blog/11-top-eleventy-blog-themes-starters-in-2023/). The post is from December 2022, but close enough. This same paragraph is also on the [Starters](/starters/) page...for persistence.
 
 For those of you who write about Eleventy and anything else, here's [a post to further inspire you to continue writing](https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html). Ignore the title and keep reading. It's a good one.
+
+And lastly, for those of you who remember back in [Issue 9](/blog/11ty-bundle-9/), what I affectionately refer to as the "rathole" issue, I have since abandoned the effort to capture blog link click data. While I did capture some data over the recent weeks, the data was less than satisfying and far too dispersed to be useful for what I had intended. That said, I can report that the [Getting Started](/categories/getting-started/) category is, by far, the most clicked category, which speaks to the continued interest in Eleventy. I am currently investigating the use of various lightweight third-party analytics packages. I'll let you know when, and if, I have something to share.
 
 <div id="releases"></div>
 
