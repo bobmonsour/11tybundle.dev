@@ -296,6 +296,7 @@ footer {
   font-size: var(--font-size-base);
   padding: 1em;
 }
+
 .resources {
   font-size: var(--font-size-base);
   display: grid;
@@ -304,8 +305,7 @@ footer {
   /* margin-block-end: 0.5em; */
   padding: 1em;
 }
-.resource-item {
-}
+
 .resources ul {
   margin-block-start: 0;
   padding-inline-start: 1.5em;
@@ -315,7 +315,7 @@ footer {
   padding-inline-start: 0;
 }
 
-.resources-heading {
+.resource-item p {
   line-height: 1.2;
   margin-block: 0;
   padding-block: 0.5em 0.25em;
