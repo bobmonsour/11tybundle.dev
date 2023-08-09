@@ -31,4 +31,11 @@ module.exports = {
     { url: "/feed.xml", text: "RSS (Blog)" },
     { url: "/firehosefeed.xml", text: "RSS (Firehose)" },
   ],
+  giscusConfig: {
+    repo: "bobmonsour/11tybundle",
+    repoId: "627727328",
+    category: "Comments",
+    categoryId: "DIC_kwDOJWpb4M4CYgB1",
+    mapping: "pathname",
+  },
 };
