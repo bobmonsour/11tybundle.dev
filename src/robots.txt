@@ -1,4 +1,7 @@
-Sitemap: https://www.11tybundle.dev/sitemap.xml
+User-agent: GPTBot
+Disallow: /
 
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://11tybundle.dev/sitemap.xml
