@@ -350,11 +350,11 @@ footer {
 }
 
 /* dark mode based on system setting */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     filter: invert(1) hue-rotate(180deg);
   }
-}
+} */
 form {
   background: var(--body-bg-color);
   width: 100%;
