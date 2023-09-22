@@ -1,7 +1,7 @@
 ---
 bundleIssue: 17
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We're back from Italy. Zach did a video panel on Jamstack. Oh, and 9 posts and 5 sites for you to check out."
+  title: "Issue {{ bundleIssue }} - We're back from Italy. Zach did a video panel on Jamstack. Oh, and 10 posts and 5 sites for you to check out."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-09-21
 tags:
@@ -14,7 +14,7 @@ First up, Zach did a 1-hour-ish video on the topic of Jamstack and what it means
 
 <iframe style="display:block; margin:0 auto 1em auto;" width="560" height="315" src="https://www.youtube.com/embed/xVmKdCi-Gpo?si=evHqS2NQFeK7smZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-And there are 9 new posts and 5 new sites to check out below.
+And there are 10 new posts and 5 new sites to check out below.
 
 Until next time...
 
