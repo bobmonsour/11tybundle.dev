@@ -8,7 +8,7 @@ tags:
   - 11ty Bundle
 ---
 
-Just back from a wonderful 2 weeks in Italy. Still not over the jet lag return, but I'm coping.
+Just back from a wonderful 2 weeks in Italy. Still not over the jet lag, but I'm coping. I'm headed to San Diego tomorrow to reunite with some other old-timers to commemorate the 40th anniversary of the founding of [Stac Electronics](https://en.wikipedia.org/wiki/Stac_Electronics). It's hard to believe it's been that long. I'm looking forward to seeing everyone.
 
 First up, Zach did a 1-hour-ish video on the topic of Jamstack and what it means and what it could mean. It's a great watch.
 
