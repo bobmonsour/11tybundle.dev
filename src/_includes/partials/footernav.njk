@@ -7,7 +7,7 @@
   <ul class="brand-nav">
     {% for link in site.footerNavLinks %}
       <li>
-        <a href="{{ link.url }}" class="nav-link" {{ link.text | isCurrentPage(page.url) | safe }}>{{ link.text }}</a>
+        <a href="{{ link.url }}" {% if link.rel %}rel="{{ link.rel }}" title="{{link.title}}" type="{{link.type}}" {% endif %}class="nav-link" {{ link.text | isCurrentPage(page.url) | safe }}>{{ link.text }}</a>
       </li>
     {% endfor %}
   </ul>

@@ -28,8 +28,20 @@ module.exports = {
     { url: "/blog/", text: "Blog" },
     { url: "/about/", text: "About" },
     { url: "/contact/", text: "Contact" },
-    { url: "/feed.xml", text: "RSS (Blog)" },
-    { url: "/firehosefeed.xml", text: "RSS (Firehose)" },
+    {
+      url: "/feed.xml",
+      text: "RSS (Blog)",
+      rel: "alternate",
+      title: "The Blog of the 11ty Bundle",
+      type: "application/rss+xml",
+    },
+    {
+      url: "/firehosefeed.xml",
+      text: "RSS (Firehose)",
+      rel: "alternate",
+      title: "The Firehose of the 11ty Bundle",
+      type: "application/rss+xml",
+    },
   ],
   giscusConfig: {
     repo: "bobmonsour/11tybundle.dev",
