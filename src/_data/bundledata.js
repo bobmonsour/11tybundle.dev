@@ -86,7 +86,8 @@ module.exports = async function () {
   const categoryList = (records) => {
     let categoryMap = new Map();
     for (let item of records) {
-      item.Categories.forEach((category) => {
+      let categoryArray = item.Categories.split(",");
+      categoryArray.forEach((category) => {
         const postCount = categoryMap.get(category) || 0;
         categoryMap.set(category, postCount + 1);
       });
