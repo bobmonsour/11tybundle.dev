@@ -2800,15 +2800,6 @@
     "Categories": "How to...,Filters"
   },
   {
-    "Issue": 18,
-    "Type": "blog post",
-    "Title": "Eleventy JSON Output",
-    "Link": "https://www.trovster.com/blog/2023/09/eleventy-json-output",
-    "Author": "Trevor Morris",
-    "Date": "2023-09-29T07:00:00.000Z",
-    "Categories": "How to...,Data Cascade"
-  },
-  {
     "Issue": 19,
     "Type": "site",
     "Title": "Francon Capital",
