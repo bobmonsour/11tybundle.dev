@@ -18,7 +18,7 @@ module.exports = async function () {
 
   // check if the cache is fresh within the last day ("1d")
   // use a cache duration of "0s" to force retrieval from Airtable
-  if (asset.isCacheValid("1d")) {
+  if (asset.isCacheValid("0d")) {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
