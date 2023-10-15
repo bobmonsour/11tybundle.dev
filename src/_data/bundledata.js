@@ -1,7 +1,6 @@
 // get all the Airtable records and return various subsets and
 // filtered extracts of the data for use in the site's templates
-const Airtable = require("airtable");
-const { AssetCache } = require("@11ty/eleventy-fetch");
+const sourceData = require("./allrecords.json");
 
 module.exports = async function () {
   // connect to the Airtable base
@@ -18,7 +17,7 @@ module.exports = async function () {
 
   // check if the cache is fresh within the last day ("1d")
   // use a cache duration of "0s" to force retrieval from Airtable
-  if (asset.isCacheValid("0d")) {
+  if (asset.isCacheValid("1d")) {
     // return the cached data
     console.log("Retrieved data from cache");
     bundleRecords = await asset.getCachedValue();
