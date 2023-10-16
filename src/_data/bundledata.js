@@ -4,7 +4,6 @@ const sourceData = require("./allrecords.json");
 
 module.exports = async function () {
   bundleRecords = sourceData;
-  console.log(bundleRecords);
 
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
