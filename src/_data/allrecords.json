@@ -735,7 +735,7 @@
   {
     "Issue": "3",
     "Type": "blog post",
-    "Title": "CSS and JavaScript as first-class citizens in Eleventy",
+    "Title": "CSS and JavaScript as first-class citizens in Eleventy",
     "Link": "https://pepelsbey.dev/articles/eleventy-css-js/",
     "Author": "Vadim Makeev",
     "Date": "2022-11-25",
@@ -1068,7 +1068,8 @@
     "Link": "https://reverentgeek.com/moving-from-ghost-to-eleventy/",
     "Author": "David Neal",
     "Date": "2020-04-29",
-    "Categories": ["Migrating to Eleventy"]
+    "Categories": ["Migrating to Eleventy"],
+    "": "#NAME?"
   },
   {
     "Issue": "5",
@@ -7515,5 +7516,20 @@
     "Author": "Zach Leatherman",
     "Date": "2021-09-13",
     "Categories": ["How to..."]
+  },
+  {
+    "Issue": "19",
+    "Type": "blog post",
+    "Title": "Speed up your CloudCannon Builds with Preserved Paths",
+    "Link": "https://www.youtube.com/watch?v=ULwVlFMth1U",
+    "Author": "CloudCannon",
+    "Date": "2023-10-16",
+    "Categories": ["Deployment", "How to...", "Remote Data", "YouTube"]
+  },
+  {
+    "Issue": "19",
+    "Type": "starter",
+    "Title": "eleventeen",
+    "Link": "https://github.com/rdela/eleventeen"
   }
 ]

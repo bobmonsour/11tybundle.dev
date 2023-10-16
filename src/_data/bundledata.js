@@ -3,46 +3,8 @@
 const sourceData = require("./allrecords.json");
 
 module.exports = async function () {
-  // connect to the Airtable base
-  var base = new Airtable({ apiKey: process.env.AIRTABLE_PAT }).base(
-    process.env.AIRTABLE_BASE_ID
-  );
-
-  // create a place to store the Airtable records
-  const airtableData = [];
-  let bundleRecords = [];
-
-  // setup the cache asset
-  const asset = new AssetCache("bundle_records");
-
-  // check if the cache is fresh within the last day ("1d")
-  // use a cache duration of "0s" to force retrieval from Airtable
-  if (asset.isCacheValid("1d")) {
-    // return the cached data
-    console.log("Retrieved data from cache");
-    bundleRecords = await asset.getCachedValue();
-  } else {
-    try {
-      await base(process.env.AIRTABLE_TABLE_NAME)
-        .select({ view: process.env.AIRTABLE_VIEW })
-        .eachPage(function page(records, fetchNextPage) {
-          records.forEach((record) => {
-            airtableData.push({
-              id: record._rawJson.id,
-              ...record._rawJson.fields,
-            });
-          });
-          fetchNextPage();
-        });
-      console.log("Retrieved data via Airtable API, saving data to cache");
-      await asset.save(airtableData, "json");
-      bundleRecords = airtableData;
-    } catch (err) {
-      console.log(err);
-      console.log("Retrieved data from cache");
-      bundleRecords = await asset.getCachedValue();
-    }
-  }
+  bundleRecords = sourceData;
+  console.log(bundleRecords);
 
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
