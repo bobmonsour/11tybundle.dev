@@ -52,8 +52,10 @@
   {% if pageHasCode %}
     <link rel="stylesheet" href="{% getBundleFileUrl "css", "pageHasCode" %}">
   {% endif %}
-  <!-- Fathom - beautiful, simple website analytics -->
-  <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+  <!-- Fathom - beautiful, simple website analytics - do not include when site is in development mode-->
+  {% if site.env != "development" %}
+    <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+  {% endif %}
   <!-- / Fathom -->
 
   <link rel="alternate" href="/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
