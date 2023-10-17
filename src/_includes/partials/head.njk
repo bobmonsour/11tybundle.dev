@@ -50,8 +50,13 @@
 
   {# if there's syntax highlighted code on the page, add the required stylesheet #}
   {% if pageHasCode %}
-    <link rel="stylesheet" href="{% getBundleFileUrl "css", "pageHasCode" %}">
+    <link rel="preload" href="{% getBundleFileUrl "css", "pageHasCode" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="{% getBundleFileUrl "css", "pageHasCode" %}" rel="stylesheet">
+    </noscript>
+    {# <link rel="stylesheet" href="{% getBundleFileUrl "css", "pageHasCode" %}"> #}
   {% endif %}
+
   <!-- Fathom - beautiful, simple website analytics - do not include when site is in development mode-->
   {% if site.env != "development" %}
     <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>

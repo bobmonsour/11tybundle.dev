@@ -1,5 +1,6 @@
-// get all the Airtable records and return various subsets and
-// filtered extracts of the data for use in the site's templates
+// get all the records (JSON exported from a Google Sheet) and return
+// various subsets and filtered extracts of the data for use in the
+// site's templates
 const sourceData = require("./allrecords.json");
 
 module.exports = async function () {
