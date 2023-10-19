@@ -81,18 +81,6 @@ const getDescription = async (link) => {
     });
     const $ = cheerio.load(htmlcontent);
     const description = $("meta[name=description]").attr("content");
-
-    // const site1string = "childcare-vouchers";
-    // const site2string = "samhermes";
-    // const site3string = "time2hack";
-    // if (
-    //   link.includes(site1string) ||
-    //   link.includes(site2string) ||
-    //   link.includes(site3string)
-    // ) {
-    //   console.log("Link: " + link);
-    //   console.log("Description: " + description);
-    // }
     if (link.includes("youtube.com")) {
       return "YouTube video";
     } else if (description == undefined) {
