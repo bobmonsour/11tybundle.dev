@@ -1345,12 +1345,6 @@
   {
     "Issue": "6",
     "Type": "site",
-    "Title": "Childcare Vouchers",
-    "Link": "https://childcare-vouchers.uk/"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
     "Title": "tinytip",
     "Link": "https://tinytip.co/"
   },
@@ -5964,7 +5958,7 @@
     "Author": "Oscar"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "Getting started with Eleventy (11ty)",
     "Link": "https://time2hack.com/getting-started-with-eleventy-11ty/",
     "Categories": ["Getting Started"],
@@ -6873,7 +6867,7 @@
     "Author": "Salma Alam-Naylor"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "Returning to Eleventy",
     "Link": "https://samhermes.com/posts/returning-to-eleventy/",
     "Categories": ["Migrating to Eleventy"],
@@ -6881,7 +6875,7 @@
     "Author": "Sam Hermes"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "My attempt to convert from Jekyll to Eleventy",
     "Link": "https://samhermes.com/posts/my-attempt-to-convert-from-jekyll-to-eleventy/",
     "Categories": ["Migrating to Eleventy"],
