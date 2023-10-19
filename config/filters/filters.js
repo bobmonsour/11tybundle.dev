@@ -75,6 +75,7 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
 const getDescription = async (link) => {
   try {
     let htmlcontent = await EleventyFetch(link, {
+      directory: ".cache",
       duration: "*",
       type: "buffer",
     });

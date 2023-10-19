@@ -961,12 +961,6 @@
   },
   {
     "Issue": "5",
-    "Type": "site",
-    "Title": "Storybook Brawl",
-    "Link": "https://storybookbrawl.com/"
-  },
-  {
-    "Issue": "5",
     "Type": "release",
     "Title": "Eleventy v2.02-alpha.1",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.2-alpha.1",
@@ -1467,12 +1461,6 @@
   },
   {
     "Issue": "8",
-    "Type": "site",
-    "Title": "Seb Mendez",
-    "Link": "https://guirdo.xyz/en/"
-  },
-  {
-    "Issue": "8",
     "Type": "blog post",
     "Title": "I hooked up Eleventy to WordPress API",
     "Link": "https://andy-bell.co.uk/i-hooked-up-eleventy-to-wordpress-api/",
@@ -1830,21 +1818,21 @@
   },
   {
     "Issue": "11",
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "Eleventy Tutorial",
     "Link": "https://dev.to/irishgeoff11/eleventy-tutorial-237b",
     "Categories": ["Getting Started"],
     "Date": "2023-07-01",
-    "Author": "Geoffrey Calaghan"
+    "Author": "Geoffrey Callaghan"
   },
   {
     "Issue": "11",
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "Eleventy Forms",
     "Link": "https://dev.to/irishgeoff11/eleventy-forms-39p",
     "Categories": ["How to..."],
     "Date": "2023-06-20",
-    "Author": "Geoffrey Calaghan"
+    "Author": "Geoffrey Callaghan"
   },
   {
     "Issue": "11",
@@ -1929,7 +1917,7 @@
   },
   {
     "Issue": "12",
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "How to create a eleventy template",
     "Link": "https://dev.to/irishgeoff11/how-to-create-a-eleventy-template-3cf3",
     "Categories": ["Getting Started", "How to..."],
@@ -1980,12 +1968,6 @@
     "Categories": ["How to...", "Configuration"],
     "Date": "2023-07-06",
     "Author": "Simon Cox"
-  },
-  {
-    "Issue": "13",
-    "Type": "site",
-    "Title": "Chetan Mittal",
-    "Link": "https://chetanmittaldev.com/"
   },
   {
     "Issue": "13",
@@ -5192,7 +5174,7 @@
   {
     "Type": "blog post",
     "Title": "Formatting Frontmatter in Eleventy",
-    "Link": "https://blog.lucheto.com/formatting-frontmatter-in-eleventy",
+    "Link": "https://lucheto.hashnode.dev/formatting-frontmatter-in-eleventy",
     "Categories": ["Front Matter", "How to..."],
     "Date": "2022-01-12",
     "Author": "Lucheto"
@@ -5264,7 +5246,7 @@
     "Author": "Luke Harris"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "How to set up a personal website with 11ty, Markdown, TailwindCSS, and Alpine.js",
     "Link": "https://janowski.dev/articles/how-to-set-up-personal-website-with-markdown-tailwind-alpinejs/",
     "Categories": ["How to..."],
@@ -5272,7 +5254,7 @@
     "Author": "Maciej Janowski"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "Adding Strapi as headless CMS to 11ty blog",
     "Link": "https://janowski.dev/articles/strapi-11ty-headless-cms-blog/",
     "Categories": ["CMS", "Blogging"],
@@ -5352,7 +5334,7 @@
   {
     "Type": "blog post",
     "Title": "How to add a sitemap to Eleventy",
-    "Link": "https://mtm.dev/eleventy-sitemap",
+    "Link": "https://mtm.dev/eleventy-sitemap.html",
     "Categories": ["How to..."],
     "Date": "2020-06-02",
     "Author": "Mark Thomas Miller"
@@ -5360,7 +5342,7 @@
   {
     "Type": "blog post",
     "Title": "How to set up a blog with Eleventy",
-    "Link": "https://mtm.dev/eleventy",
+    "Link": "https://mtm.dev/eleventy.html",
     "Categories": ["Blogging", "How to..."],
     "Date": "2020-06-06",
     "Author": "Mark Thomas Miller"
@@ -5368,7 +5350,7 @@
   {
     "Type": "blog post",
     "Title": "Automatic social sharing images for Eleventy",
-    "Link": "https://mtm.dev/eleventy-social-sharing-images",
+    "Link": "https://mtm.dev/eleventy-social-sharing-images.html",
     "Categories": ["Images", "Social Media", "How to..."],
     "Date": "2021-01-10",
     "Author": "Mark Thomas Miller"
@@ -5376,7 +5358,7 @@
   {
     "Type": "blog post",
     "Title": "Jekyll vs Hugo vs Gatsby vs Next vs Zola vs Eleventy",
-    "Link": "https://mtm.dev/static",
+    "Link": "https://mtm.dev/static.html",
     "Categories": ["Why Eleventy?"],
     "Date": "2020-06-01",
     "Author": "Mark Thomas Miller"
@@ -5384,7 +5366,7 @@
   {
     "Type": "blog post",
     "Title": "How to fix Eleventy's dates being off by one day",
-    "Link": "https://mtm.dev/eleventy-date-off-by-one-day",
+    "Link": "https://mtm.dev/eleventy-date-off-by-one-day.html",
     "Categories": ["Dates", "How to..."],
     "Date": "2020-07-12",
     "Author": "Mark Thomas Miller"
@@ -7001,7 +6983,7 @@
     "Author": "Sean McPherson"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "How to create a website with eleventy",
     "Link": "https://www.sezer.dev/blog/how-to-create-a-website-with-eleventy/",
     "Categories": ["Getting Started", "How to..."],
@@ -7009,7 +6991,7 @@
     "Author": "Sezer Ünlü"
   },
   {
-    "Type": "blog post",
+    "Type": "DoNotUse",
     "Title": "How to add a navigation bar to your eleventy website",
     "Link": "https://www.sezer.dev/blog/how-to-add-a-navigation-bar-to-your-eleventy-website/",
     "Categories": ["Navigation"],
@@ -7557,5 +7539,11 @@
     "Type": "site",
     "Title": "Jason Lengstorf",
     "Link": "https://jason.energy/"
+  },
+  {
+    "Issue": "19",
+    "Type": "site",
+    "Title": "Soft Clay Software",
+    "Link": "https://softclay.software/"
   }
 ]
