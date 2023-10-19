@@ -55,7 +55,7 @@ As before, I was able to get this working locally in a Netlify dev environment. 
 
 As sleep can sometimes do, on Monday morning (today) I realized that I had not uploaded the new set of environment variables to Netlify before trying to run the new function. So, here I sit having uploaded all of the new Firestore API-related environment variables. I did a redeploy so that the function would be re-uploaded. I opened the functions console on Netlify. I opened the Firebase database view. I launched the site in a new browser tab. I clicked on a link. I watched the function get triggered. There were no errors. I watched the database...and it caught what I was writing. In short, this thing works!
 
-For anyone interested in the code for the Netlify function, here it is. You can also [find it on the GitHub repo](https://github.com/bobmonsour/11tybundle.dev/blob/main/netlify/functions/countclicks.js) for this site.
+For anyone interested in the code for the Netlify function, here it is.
 
 ```js
 // /functions/countclicks.js - A Netlify function to count outbound link clicks

@@ -169,7 +169,7 @@
     "Issue": "1",
     "Type": "blog post",
     "Title": "Easy Date and Time Formatting with Luxon",
-    "Link": "https://11ty.webc.fun/recipes/easy-date-and-time-formatting/",
+    "Link": "https://11tywebcfun.netlify.app/recipes/easy-date-and-time-formatting/",
     "Categories": ["Dates"],
     "Date": "2023-03-29",
     "Author": "Evan Sheehan"
@@ -2052,15 +2052,13 @@
   },
   {
     "Issue": "14",
-    "Type": "site",
-    "Title": "Kirill Shmelev",
-    "Link": "https://kirshmelev.ru/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Gittings Studios",
-    "Link": "https://gittings.studio/"
+    "Type": "14",
+    "Title": "14",
+    "Link": "14",
+    "Categories": ["14"],
+    "Date": "14",
+    "Author": "14",
+    "": "14"
   },
   {
     "Issue": "14",
