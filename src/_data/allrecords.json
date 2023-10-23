@@ -1,118 +1,6 @@
 [
   {
     "Issue": "1",
-    "Type": "site",
-    "Title": "Anil Dash",
-    "Link": "https://anildash.com/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Web Components Today",
-    "Link": "https://webcomponents.today/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Rafael Conde",
-    "Link": "https://rafa.design/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "CSS In Real Life",
-    "Link": "https://css-irl.info/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Javan",
-    "Link": "https://javan.us/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Gabrielle Wee",
-    "Link": "https://gabriellew.ee/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Vadim Makeev",
-    "Link": "https://pepelsbey.dev/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Naz Hamid",
-    "Link": "https://nazhamid.com/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Václav Eliáš",
-    "Link": "https://www.vaclavelias.com/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Delete Twitter",
-    "Link": "https://deletetwitter.com/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Molly White",
-    "Link": "https://www.mollywhite.net/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "CloudCannon",
-    "Link": "https://cloudcannon.com/blog/cloudcannon-com-is-now-built-with-eleventy/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "pie design system",
-    "Link": "https://www.pie.design/"
-  },
-  {
-    "Issue": "1",
-    "Type": "site",
-    "Title": "Keith J. Grant",
-    "Link": "https://keithjgrant.com/posts/2023/03/redesign-2023/"
-  },
-  {
-    "Issue": "1",
-    "Type": "release",
-    "Title": "Eleventy Bundle Plugin v1.04",
-    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v1.0.4",
-    "Date": "2023-03-08"
-  },
-  {
-    "Issue": "1",
-    "Type": "release",
-    "Title": "Eleventy Dev Server v1.0.4",
-    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v1.0.4",
-    "Date": "2023-03-13"
-  },
-  {
-    "Issue": "1",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.10.1: New built-in `webc.*` helpers",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.10.1",
-    "Date": "2023-03-24"
-  },
-  {
-    "Issue": "1",
-    "Type": "release",
-    "Title": "Eleventy v2.0.1: a Bug Fix Release",
-    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.1",
-    "Date": "2023-03-02"
-  },
-  {
-    "Issue": "1",
     "Type": "blog post",
     "Title": "I Finally Understand Eleventy's Data Cascade",
     "Link": "https://benmyers.dev/blog/eleventy-data-cascade/",
@@ -275,27 +163,6 @@
   },
   {
     "Issue": "2",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.11.0: Child Components accessing Global Data",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.0",
-    "Date": "2023-03-30"
-  },
-  {
-    "Issue": "2",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.10.0",
-    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.10.0",
-    "Date": "2023-03-24"
-  },
-  {
-    "Issue": "2",
-    "Type": "release",
-    "Title": "Eleventy Image v3.10",
-    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v3.1.0",
-    "Date": "2023-03-27"
-  },
-  {
-    "Issue": "2",
     "Type": "blog post",
     "Title": "Blogging with Eleventy",
     "Link": "https://logicalcobwebs.com/blog/blogging-with-eleventy/",
@@ -386,13 +253,6 @@
   },
   {
     "Issue": "2",
-    "Type": "site",
-    "Title": "Emily Leatherman",
-    "Link": "https://emilyleatherman.com/",
-    "Author": "Emily Leatherman"
-  },
-  {
-    "Issue": "2",
     "Type": "blog post",
     "Title": "A Beginner's Guide to Eleventy - part two",
     "Link": "https://jakubiwanowski.dev/garden/programming/eleventy-guide-part-two/",
@@ -435,20 +295,6 @@
     "Categories": ["Remote Data"],
     "Date": "2023-03-22",
     "Author": "Mark Llobrera"
-  },
-  {
-    "Issue": "2",
-    "Type": "site",
-    "Title": "Photography",
-    "Link": "https://www.schmidtynotes.com/images/",
-    "Author": "Michael Schmidt"
-  },
-  {
-    "Issue": "2",
-    "Type": "site",
-    "Title": "Nicolas Hoizey Photography",
-    "Link": "https://nicolas-hoizey.photo/",
-    "Author": "Nicolas Hoizey"
   },
   {
     "Issue": "2",
@@ -497,20 +343,6 @@
   },
   {
     "Issue": "3",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.11.3: WebC inside Declarative Shadow DOM",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.3",
-    "Date": "2023-04-06"
-  },
-  {
-    "Issue": "3",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.11.2: Fixes for slottable content",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.2",
-    "Date": "2023-04-04"
-  },
-  {
-    "Issue": "3",
     "Type": "blog post",
     "Title": "GitLab CI Pipeline for Eleventy",
     "Link": "https://aarongoldenthal.com/posts/gitlab-ci-pipeline-for-eleventy/",
@@ -529,26 +361,12 @@
   },
   {
     "Issue": "3",
-    "Type": "site",
-    "Title": "Blake Leonard",
-    "Link": "https://blakes.dev/",
-    "Author": "Blake Leonard"
-  },
-  {
-    "Issue": "3",
     "Type": "blog post",
     "Title": "Adding a Stripe cart to a static Eleventy website with LiveState: Part 1",
     "Link": "https://launchscout.com/blog/add-stripe-cart-to-eleventy-with-livestate",
     "Categories": ["How to..."],
     "Date": "2022-11-09",
     "Author": "Chris Nelson"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Eleventy not so minimal blog starter",
-    "Link": "https://eleventy-not-so-minimal-blog-starter.netlify.app/",
-    "Author": "Claudia Reynders"
   },
   {
     "Issue": "3",
@@ -579,13 +397,6 @@
   },
   {
     "Issue": "3",
-    "Type": "site",
-    "Title": "The Vanilla JavaScript Repository",
-    "Link": "https://vanillalist.top/",
-    "Author": "Guérilla.Studio"
-  },
-  {
-    "Issue": "3",
     "Type": "blog post",
     "Title": "Rebuilding 11ty on a schedule",
     "Link": "https://jamesdoc.com/blog/2023/11ty-daily-rebuilds/",
@@ -601,20 +412,6 @@
     "Categories": ["Migrating to Eleventy"],
     "Date": "2023-04-05",
     "Author": "John Hobbs"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Jon Park",
-    "Link": "https://jonpark.co.uk/",
-    "Author": "Jon Park"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Sombriks Has A Plan",
-    "Link": "https://sombriks.com/",
-    "Author": "Leonardo Silveira"
   },
   {
     "Issue": "3",
@@ -636,33 +433,12 @@
   },
   {
     "Issue": "3",
-    "Type": "site",
-    "Title": "Vermont Beer Trail",
-    "Link": "https://www.vtbeertrail.com/",
-    "Author": "MooseDog Studios"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Vermont Cheese Makers",
-    "Link": "https://vermontcheesetrail.com/",
-    "Author": "MooseDog Studios"
-  },
-  {
-    "Issue": "3",
     "Type": "blog post",
     "Title": "Builder.io's Partytown with 11ty",
     "Link": "https://syntackle.live/blog/builder-io-s-partytown-with-11ty-lN6X2w/",
     "Categories": ["How to..."],
     "Date": "2023-04-05",
     "Author": "Murtuzaali Surti"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Kinopio Blog",
-    "Link": "https://blog.kinopio.club/",
-    "Author": "Pirijan"
   },
   {
     "Issue": "3",
@@ -690,20 +466,6 @@
     "Categories": ["YouTube"],
     "Date": "2023-04-07",
     "Author": "Ricky de Laveaga"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Eleventy Notes",
-    "Link": "https://eleventy-notes.sandroroth.com/",
-    "Author": "Sandro Roth"
-  },
-  {
-    "Issue": "3",
-    "Type": "site",
-    "Title": "Spencer Harston",
-    "Link": "https://www.spencerharston.com/",
-    "Author": "Spencer Harston"
   },
   {
     "Issue": "3",
@@ -743,46 +505,12 @@
   },
   {
     "Issue": "3",
-    "Type": "site",
-    "Title": "vanzasetia",
-    "Link": "https://vanzasetia.site/",
-    "Author": "Vanza Setia"
-  },
-  {
-    "Issue": "3",
     "Type": "blog post",
     "Title": "3 Methods for scoped styles in web components that work everywhere",
     "Link": "https://www.zachleat.com/web/styling-web-components/",
     "Categories": ["CSS/Sass", "WebC"],
     "Date": "2023-04-06",
     "Author": "Zach Leatherman"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "The Globe Church",
-    "Link": "https://www.globe.church/"
-  },
-  {
-    "Issue": "4",
-    "Type": "release",
-    "Title": "Eleventy Syntax Highlighter v5.0.0",
-    "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.0",
-    "Date": "2023-04-12"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "bram.is",
-    "Link": "https://bram.is/",
-    "Author": "Bram Smulders"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "Bruce Taylor",
-    "Link": "https://brootaylor.com/",
-    "Author": "Bruce Taylor"
   },
   {
     "Issue": "4",
@@ -813,20 +541,6 @@
   },
   {
     "Issue": "4",
-    "Type": "site",
-    "Title": "Francis Rubio",
-    "Link": "https://francisrubio.antaresph.dev/",
-    "Author": "Francis Rubio"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "Hidde",
-    "Link": "https://hidde.blog/",
-    "Author": "Hidde de Vries"
-  },
-  {
-    "Issue": "4",
     "Type": "blog post",
     "Title": "Basic custom taxonomies with Eleventy",
     "Link": "https://www.webstoemp.com/blog/basic-custom-taxonomies-with-eleventy/",
@@ -851,20 +565,6 @@
     "Categories": ["Collections", "Layouts"],
     "Date": "2022-01-04",
     "Author": "Josh Cunningham"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "Dogs of Dev",
-    "Link": "https://dogsof.dev/",
-    "Author": "Mike Aparicio"
-  },
-  {
-    "Issue": "4",
-    "Type": "site",
-    "Title": "PHPStan",
-    "Link": "https://phpstan.org/",
-    "Author": "Ondřej Mirtes"
   },
   {
     "Issue": "4",
@@ -913,13 +613,6 @@
   },
   {
     "Issue": "4",
-    "Type": "site",
-    "Title": "CSS Tip",
-    "Link": "https://css-tip.com/",
-    "Author": "Temani Afif"
-  },
-  {
-    "Issue": "4",
     "Type": "blog post",
     "Title": "Using parameters in your eleventy includes with nunjucks macros",
     "Link": "https://helloyes.dev/blog/2021/parameters-in-includes-with-nunjucks-macros/",
@@ -944,53 +637,6 @@
     "Categories": ["Nunjucks/Macros"],
     "Date": "2021-02-19",
     "Author": "Trys Mudford"
-  },
-  {
-    "Issue": "5",
-    "Type": "release",
-    "Title": "Eleventy v2.02-alpha.2",
-    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.2-alpha.2",
-    "Date": "2023-04-26"
-  },
-  {
-    "Issue": "5",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.11.4",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.4",
-    "Date": "2023-04-26"
-  },
-  {
-    "Issue": "5",
-    "Type": "release",
-    "Title": "Eleventy v2.02-alpha.1",
-    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.2-alpha.1",
-    "Date": "2023-04-19"
-  },
-  {
-    "Issue": "5",
-    "Type": "site",
-    "Title": "ProcessWire Recipes",
-    "Link": "https://processwire.recipes/"
-  },
-  {
-    "Issue": "5",
-    "Type": "site",
-    "Title": "Nostos Safari",
-    "Link": "https://nostossafari.com/"
-  },
-  {
-    "Issue": "5",
-    "Type": "release",
-    "Title": "eleventy-base-webc",
-    "Link": "https://github.com/11ty/eleventy-base-webc",
-    "Date": "2023-04-19"
-  },
-  {
-    "Issue": "5",
-    "Type": "release",
-    "Title": "Eleventy WebC v0.11.1: Quick fix for data access on slotted content",
-    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.1",
-    "Date": "2023-04-26"
   },
   {
     "Issue": "5",
@@ -1064,13 +710,6 @@
     "Date": "2020-04-29",
     "Author": "David Neal",
     "": "#NAME?"
-  },
-  {
-    "Issue": "5",
-    "Type": "site",
-    "Title": "Emily McCracken",
-    "Link": "https://emilymccracken.com/",
-    "Author": "Emily McCracken"
   },
   {
     "Issue": "5",
@@ -1209,13 +848,6 @@
   },
   {
     "Issue": "5",
-    "Type": "site",
-    "Title": "Maxim Orlov",
-    "Link": "https://maximorlov.com/",
-    "Author": "Maxim Orlov"
-  },
-  {
-    "Issue": "5",
     "Type": "blog post",
     "Title": "Escaping Jekyll, and moving to Eleventy",
     "Link": "https://code.mendhak.com/escaping-jekyll-to-eleventy/",
@@ -1297,56 +929,12 @@
   },
   {
     "Issue": "5",
-    "Type": "site",
-    "Title": "Tom Roseveare",
-    "Link": "https://www.tomroseveare.com/",
-    "Author": "Tom Roseveare"
-  },
-  {
-    "Issue": "5",
-    "Type": "site",
-    "Title": "Tyler Mercer",
-    "Link": "https://tylermercer.net/",
-    "Author": "Tyler Mercer"
-  },
-  {
-    "Issue": "5",
     "Type": "blog post",
     "Title": "Migrating This Blog From Jekyll to Eleventy",
     "Link": "https://savjee.be/blog/migrating-this-blog-from-jekyll-to-eleventy/",
     "Categories": ["Migrating to Eleventy", "Blogging"],
     "Date": "2021-04-18",
     "Author": "Xavier"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
-    "Title": "Grease",
-    "Link": "https://web-grease.netlify.app/"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
-    "Title": "Edukatte",
-    "Link": "https://edukatte.netlify.app/"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
-    "Title": "Deep House Mixes",
-    "Link": "https://deephouse.uk/"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
-    "Title": "Sarah L. Fossheim",
-    "Link": "https://fossheim.io/"
-  },
-  {
-    "Issue": "6",
-    "Type": "site",
-    "Title": "tinytip",
-    "Link": "https://tinytip.co/"
   },
   {
     "Issue": "6",
@@ -1386,36 +974,6 @@
   },
   {
     "Issue": "7",
-    "Type": "site",
-    "Title": "Aleksandr Hovhannisyan",
-    "Link": "https://www.aleksandrhovhannisyan.com/"
-  },
-  {
-    "Issue": "7",
-    "Type": "site",
-    "Title": "Kevin Healy",
-    "Link": "https://kevhealy.com/"
-  },
-  {
-    "Issue": "7",
-    "Type": "site",
-    "Title": "Luke Mitchell",
-    "Link": "https://www.interroban.gg/"
-  },
-  {
-    "Issue": "7",
-    "Type": "site",
-    "Title": "Simon Cox",
-    "Link": "https://www.simoncox.com/"
-  },
-  {
-    "Issue": "7",
-    "Type": "site",
-    "Title": "Erik Kroes",
-    "Link": "https://www.erikkroes.nl/"
-  },
-  {
-    "Issue": "7",
     "Type": "blog post",
     "Title": "Fetching & caching data from Airtable in my 11ty site",
     "Link": "https://www.cassey.dev/posts/2023-05-09-airtable-data-fetch/",
@@ -1440,18 +998,6 @@
     "Categories": ["Deployment"],
     "Date": "2023-05-15",
     "Author": "Simon Cox"
-  },
-  {
-    "Issue": "8",
-    "Type": "site",
-    "Title": "A Week in the Woods",
-    "Link": "https://aweekinthewoods.com/"
-  },
-  {
-    "Issue": "8",
-    "Type": "site",
-    "Title": "Jess Keoshian",
-    "Link": "https://jessicakeoshian.com/"
   },
   {
     "Issue": "8",
@@ -1533,48 +1079,6 @@
     "Categories": ["How to...", "Dates"],
     "Date": "2023-05-21",
     "Author": "Rob Anderson"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "Shoelace",
-    "Link": "https://next.shoelace.style/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "Software developer training courses with certification",
-    "Link": "https://dev.courses/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "wallabag",
-    "Link": "https://wallabag.org/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "The Raistlin Papers",
-    "Link": "https://c64demo.com/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "Ashur Cabrera",
-    "Link": "https://ashur.cab/rera/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "Opt-Out Machine",
-    "Link": "https://www.opt-out.ai/"
-  },
-  {
-    "Issue": "9",
-    "Type": "site",
-    "Title": "James Basoo",
-    "Link": "https://jamesbasoo.com/"
   },
   {
     "Issue": "9",
@@ -1686,12 +1190,6 @@
   },
   {
     "Issue": "10",
-    "Type": "site",
-    "Title": "wilks.co",
-    "Link": "https://wilks.co/"
-  },
-  {
-    "Issue": "10",
     "Type": "blog post",
     "Title": "WordPress to Eleventy - Part 1, The Why",
     "Link": "https://chrissmith.xyz/blog/wordpress-to-eleventy-part-1-the-why/",
@@ -1791,42 +1289,12 @@
   },
   {
     "Issue": "11",
-    "Type": "site",
-    "Title": "Gittings Studio",
-    "Link": "https://gittings.studio/"
-  },
-  {
-    "Issue": "11",
-    "Type": "site",
-    "Title": "DC Design Week",
-    "Link": "https://dcdesignweek.org/"
-  },
-  {
-    "Issue": "11",
     "Type": "blog post",
     "Title": "Displaying listening data from Apple Music using MusicKit.js",
     "Link": "https://coryd.dev/posts/2023/displaying-listening-data-from-apple-music-using-musickit/",
     "Categories": ["Remote Data", "How to..."],
     "Date": "2023-06-21",
     "Author": "Cory Dransfeldt"
-  },
-  {
-    "Issue": "11",
-    "Type": "DoNotUse",
-    "Title": "Eleventy Tutorial",
-    "Link": "https://dev.to/irishgeoff11/eleventy-tutorial-237b",
-    "Categories": ["Getting Started"],
-    "Date": "2023-07-01",
-    "Author": "Geoffrey Callaghan"
-  },
-  {
-    "Issue": "11",
-    "Type": "DoNotUse",
-    "Title": "Eleventy Forms",
-    "Link": "https://dev.to/irishgeoff11/eleventy-forms-39p",
-    "Categories": ["How to..."],
-    "Date": "2023-06-20",
-    "Author": "Geoffrey Callaghan"
   },
   {
     "Issue": "11",
@@ -1884,39 +1352,12 @@
   },
   {
     "Issue": "12",
-    "Type": "site",
-    "Title": "Andreia Ramos",
-    "Link": "https://andreiaramos.pt/"
-  },
-  {
-    "Issue": "12",
-    "Type": "site",
-    "Title": "TC39",
-    "Link": "https://tc39.es/"
-  },
-  {
-    "Issue": "12",
-    "Type": "site",
-    "Title": "The Eleventy form solution for developers",
-    "Link": "https://fabform.io/for/Eleventy"
-  },
-  {
-    "Issue": "12",
     "Type": "blog post",
     "Title": "Now page update: poster art for shows and movies",
     "Link": "https://flamedfury.com/posts/now-page-update-poster-art-for-shows-and-movies/",
     "Categories": ["Remote Data", "How to..."],
     "Date": "2023-07-02",
     "Author": "fLaMEd"
-  },
-  {
-    "Issue": "12",
-    "Type": "DoNotUse",
-    "Title": "How to create a eleventy template",
-    "Link": "https://dev.to/irishgeoff11/how-to-create-a-eleventy-template-3cf3",
-    "Categories": ["Getting Started", "How to..."],
-    "Date": "2023-06-29",
-    "Author": "Geoffrey Callaghan"
   },
   {
     "Issue": "12",
@@ -1962,12 +1403,6 @@
     "Categories": ["How to...", "Configuration"],
     "Date": "2023-07-06",
     "Author": "Simon Cox"
-  },
-  {
-    "Issue": "13",
-    "Type": "site",
-    "Title": "Thudfactor",
-    "Link": "https://www.thudfactor.com/"
   },
   {
     "Issue": "13",
@@ -2031,76 +1466,6 @@
     "Categories": ["Dates"],
     "Date": "2023-07-07",
     "Author": "Simon Cox"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Kristján Oddsson",
-    "Link": "https://koddsson.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Wilks.co",
-    "Link": "https://wilks.co/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "LaceySnr",
-    "Link": "https://laceysnr.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "14",
-    "Title": "14",
-    "Link": "14",
-    "Categories": ["14"],
-    "Date": "14",
-    "Author": "14",
-    "": "14"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Dolwen Solutions",
-    "Link": "https://www.dolwensolutions.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Neal Gamradt",
-    "Link": "https://nealgamradt.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Andreia Ramos",
-    "Link": "https://andreiaramos.pt/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Program Restoran (Restaurant Program)",
-    "Link": "https://programrestoran.axcora.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Lea Verou",
-    "Link": "https://lea.verou.me/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Carlo Van",
-    "Link": "https://carlovan.com/"
-  },
-  {
-    "Issue": "14",
-    "Type": "site",
-    "Title": "Jules Poulain (French)",
-    "Link": "https://jules.poulain.dev/"
   },
   {
     "Issue": "14",
@@ -2203,30 +1568,6 @@
   },
   {
     "Issue": "15",
-    "Type": "site",
-    "Title": "Jérôme Stephan (motion warning)",
-    "Link": "https://jeromestephan.de/Home/"
-  },
-  {
-    "Issue": "15",
-    "Type": "site",
-    "Title": "Project MB",
-    "Link": "https://www.projectmb.com/"
-  },
-  {
-    "Issue": "15",
-    "Type": "site",
-    "Title": "Alex Zappa",
-    "Link": "https://alex.zappa.dev/"
-  },
-  {
-    "Issue": "15",
-    "Type": "site",
-    "Title": "Shotstack",
-    "Link": "https://shotstack.io/"
-  },
-  {
-    "Issue": "15",
     "Type": "blog post",
     "Title": "Interactive HTML Code Demos in Eleventy",
     "Link": "https://www.aleksandrhovhannisyan.com/blog/eleventy-code-demos/",
@@ -2281,42 +1622,6 @@
   },
   {
     "Issue": "16",
-    "Type": "site",
-    "Title": "SurfScape",
-    "Link": "https://surfscape.neocities.org/"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Elva",
-    "Link": "https://elva.scott.ee/"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Alpine AJAX",
-    "Link": "https://alpine-ajax.js.org/"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Digital Latin Library",
-    "Link": "https://digitallatin.org/"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "THE IDEAL VIEWPORT DOESN’T EXIST",
-    "Link": "https://viewports.fyi/"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Tatiana Zappa",
-    "Link": "https://tatianazappa.com/"
-  },
-  {
-    "Issue": "16",
     "Type": "blog post",
     "Title": "Six Million NPM Downloads!",
     "Link": "https://www.11ty.dev/blog/six-million/",
@@ -2332,13 +1637,6 @@
     "Categories": ["Migrating to Eleventy"],
     "Date": "2023-08-13",
     "Author": "Alex Zappa"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Les Survenantes",
-    "Link": "https://www.lessurvenantesbalado.com/",
-    "Author": "Anghelos Coulon"
   },
   {
     "Issue": "16",
@@ -2360,13 +1658,6 @@
   },
   {
     "Issue": "16",
-    "Type": "site",
-    "Title": "Pride Flags",
-    "Link": "https://pride-flags.fynn.be/",
-    "Author": "Fynn Becker"
-  },
-  {
-    "Issue": "16",
     "Type": "blog post",
     "Title": "Migrer de Ghost à 11ty (Migrating from Ghost to 11ty)",
     "Link": "https://blog.foojin.com/2023/08/31/migrer-de-ghost-a-11ty/",
@@ -2382,13 +1673,6 @@
     "Categories": ["Remote Data", "How to..."],
     "Date": "2023-08-22",
     "Author": "Juha-Matti Santala"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Hamburg HTML meetup",
-    "Link": "https://hhtml.de/",
-    "Author": "Lea Rosema"
   },
   {
     "Issue": "16",
@@ -2461,44 +1745,6 @@
     "Categories": ["Why Eleventy?"],
     "Date": "2023-08-12",
     "Author": "Tyler Sticka"
-  },
-  {
-    "Issue": "16",
-    "Type": "site",
-    "Title": "Educational, Sensational, Inspirational, Foundational",
-    "Link": "https://esif.dev/",
-    "Author": "Zach Leatherman"
-  },
-  {
-    "Issue": "17",
-    "Type": "site",
-    "Title": "Fudge Sunday",
-    "Link": "https://fudge.org/"
-  },
-  {
-    "Issue": "17",
-    "Type": "site",
-    "Title": "Clayton Errington",
-    "Link": "https://claytonerrington.com/"
-  },
-  {
-    "Issue": "17",
-    "Type": "site",
-    "Title": "Nine Rakes",
-    "Link": "https://ninerakes.com/"
-  },
-  {
-    "Issue": "17",
-    "Type": "site",
-    "Title": "RkBlog",
-    "Link": "https://rkblog.dev/"
-  },
-  {
-    "Issue": "17",
-    "Type": "site",
-    "Title": "Written in Stone",
-    "Link": "https://writteninstone.photo/",
-    "Author": "Ashur Cabrera"
   },
   {
     "Issue": "17",
@@ -2595,73 +1841,6 @@
     "Categories": ["Configuration", "How to..."],
     "Date": "2023-09-01",
     "Author": "Simon Cox"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "GifGun",
-    "Link": "https://www.gifgun.io/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "GSAP",
-    "Link": "https://gsap.com/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Joe Sahlsa",
-    "Link": "https://joesahlsa.dev/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Fitness Web Components",
-    "Link": "https://fitness.trovster.com/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Eventually",
-    "Link": "https://eventua11y.com/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Contra",
-    "Link": "https://chromamine.com/contra/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Kevin Gimbel",
-    "Link": "https://kevin.gimbel.dev/ops/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Larry Hudson",
-    "Link": "https://larryhudson.io/"
-  },
-  {
-    "Issue": "18",
-    "Type": "release",
-    "Title": "Eleventy Image v3.1.1: `sharp` upgrade",
-    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v3.1.1",
-    "Date": "2023-09-22"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Red Hat design System",
-    "Link": "https://ux.redhat.com/"
-  },
-  {
-    "Issue": "18",
-    "Type": "site",
-    "Title": "Patternfly Elements",
-    "Link": "https://patternflyelements.org/"
   },
   {
     "Issue": "18",
@@ -2782,24 +1961,6 @@
   },
   {
     "Issue": "19",
-    "Type": "site",
-    "Title": "Francon Capital",
-    "Link": "https://franconcapital.com/"
-  },
-  {
-    "Issue": "19",
-    "Type": "site",
-    "Title": "Khoi",
-    "Link": "https://blog.khoiuna.info/"
-  },
-  {
-    "Issue": "19",
-    "Type": "site",
-    "Title": "Micah Torcellini's Website",
-    "Link": "https://micah.torcellini.org/"
-  },
-  {
-    "Issue": "19",
     "Type": "blog post",
     "Title": "Migrating Blogger to Eleventy",
     "Link": "https://sheetsj.com/blog/migrating-blogger-to-eleventy/",
@@ -2859,15 +2020,28 @@
     "Author": "Piotr Maliński"
   },
   {
-    "Type": "starter",
-    "Title": "Elva",
-    "Link": "https://github.com/scottsweb/elva"
+    "Issue": "19",
+    "Type": "blog post",
+    "Title": "Speed up your CloudCannon Builds with Preserved Paths",
+    "Link": "https://www.youtube.com/watch?v=ULwVlFMth1U",
+    "Categories": ["Deployment", "How to...", "Remote Data", "YouTube"],
+    "Date": "2023-10-16",
+    "Author": "CloudCannon"
   },
   {
-    "Type": "starter",
-    "Title": "11ty-tailscript",
-    "Link": "https://github.com/4lador/11ty-tailscript",
-    "Author": "4lador"
+    "Issue": "19",
+    "Type": "blog post",
+    "Title": "TinaCMS + 11ty",
+    "Link": "https://claytonerrington.com/blog/implementing-tinacms-with-11ty/",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Configuration",
+      "Deployment",
+      "How to..."
+    ],
+    "Date": "2023-10-17",
+    "Author": "Clayton Errington"
   },
   {
     "Type": "blog post",
@@ -2878,36 +2052,12 @@
     "Author": "11ty"
   },
   {
-    "Type": "starter",
-    "Title": "eleventy-base-webc",
-    "Link": "https://github.com/11ty/eleventy-base-webc",
-    "Author": "11ty"
-  },
-  {
-    "Type": "starter",
-    "Title": "eleventy-base-blog",
-    "Link": "https://github.com/11ty/eleventy-base-blog",
-    "Author": "11ty"
-  },
-  {
     "Type": "blog post",
     "Title": "Trigger a Netlify build every day with IFTTT",
     "Link": "https://www.11ty.dev/docs/quicktips/netlify-ifttt/",
     "Categories": ["Deployment", "Netlify"],
     "Date": "2021-01-01",
     "Author": "11ty"
-  },
-  {
-    "Type": "site",
-    "Title": "Eleventy Edge - demo",
-    "Link": "https://demo-eleventy-edge.netlify.app/",
-    "Author": "11ty"
-  },
-  {
-    "Type": "starter",
-    "Title": "Grease",
-    "Link": "https://github.com/adamstddrd/grease",
-    "Author": "Adam Stoddard"
   },
   {
     "Type": "blog post",
@@ -3798,12 +2948,6 @@
     "Author": "CloudCannon"
   },
   {
-    "Type": "starter",
-    "Title": "Nulite",
-    "Link": "https://github.com/codingpotions/nulite",
-    "Author": "CodingPotions"
-  },
-  {
     "Type": "blog post",
     "Title": "Exploring WebC",
     "Link": "https://www.constantvallee.dev/posts/exploring-webc/",
@@ -3914,12 +3058,6 @@
     "Categories": ["Pagination"],
     "Date": "2021-05-17",
     "Author": "crossingtheruby"
-  },
-  {
-    "Type": "starter",
-    "Title": "vredeburg",
-    "Link": "https://github.com/daflh/vredeburg",
-    "Author": "Daff"
   },
   {
     "Type": "blog post",
@@ -4095,12 +3233,6 @@
     "Link": "https://darn.es/post-previews-with-ghost-eleventy-netlify/",
     "Categories": ["CMS", "Deployment"],
     "Date": "2023-01-18",
-    "Author": "David Darnes"
-  },
-  {
-    "Type": "starter",
-    "Title": "eleventy-starter-ghost",
-    "Link": "https://github.com/TryGhost/eleventy-starter-ghost",
     "Author": "David Darnes"
   },
   {
@@ -4307,12 +3439,6 @@
     "Categories": ["How to...", "Remote Data"],
     "Date": "2023-04-19",
     "Author": "fLaMEd"
-  },
-  {
-    "Type": "starter",
-    "Title": "Polyglot Tech Blog",
-    "Link": "https://florent_tassy.gitlab.io/polyglot-tech-blog/en/",
-    "Author": "Florent Tassy"
   },
   {
     "Type": "blog post",
@@ -4561,68 +3687,6 @@
     "Categories": ["Getting Started"],
     "Date": "2020-04-09",
     "Author": "Jason Lengstorf"
-  },
-  {
-    "Type": "starter",
-    "Title": "reveal-eleventy-template",
-    "Link": "https://github.com/Bullrich/reveal-eleventy-template",
-    "Author": "Javier Bullrich"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Creating Filters, Shortcodes and Plugins",
-    "Link": "https://jec.fyi/blog/creating-filters-shortcodes-plugins",
-    "Categories": ["Getting Started", "Plugins", "Filters"],
-    "Date": "2020-06-06",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "How many favicons should you have in your site?",
-    "Link": "https://jec.fyi/blog/favicons-manifest",
-    "Categories": ["How to...", "Images", "Getting Started"],
-    "Date": "2020-05-29",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Minifying HTML, JavaScript, CSS - Automate Inline",
-    "Link": "https://jec.fyi/blog/minifying-html-js-css",
-    "Categories": ["CSS/Sass", "Asset Pipelines", "Getting Started"],
-    "Date": "2020-05-27",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Automating Image Optimization Workflow",
-    "Link": "https://jec.fyi/blog/automating-image-optimization-workflow",
-    "Categories": ["Images", "How to...", "Getting Started"],
-    "Date": "2020-05-23",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Customizing File Structure, URLs and Browsersync",
-    "Link": "https://jec.fyi/blog/customizing-file-structure-urls-browsersync",
-    "Categories": ["Getting Started", "How to..."],
-    "Date": "2020-05-21",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Setting up GitHub Actions and Firebase Hosting",
-    "Link": "https://jec.fyi/blog/setting-up-github-actions-and-firebase-hosting",
-    "Categories": ["Deployment", "How to...", "Getting Started"],
-    "Date": "2020-05-15",
-    "Author": "Jecelyn Yeen"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Building Personal Static Site with Eleventy",
-    "Link": "https://jec.fyi/blog/building-my-static-site-with-11ty",
-    "Categories": ["Blogging", "Getting Started"],
-    "Date": "2020-05-14",
-    "Author": "Jecelyn Yeen"
   },
   {
     "Type": "blog post",
@@ -5025,14 +4089,6 @@
     "Author": "Kevin Healy"
   },
   {
-    "Type": "DoNotUse",
-    "Title": "Eleventy: Building a simple E-commerce site.",
-    "Link": "https://techimperialist.com/javascript/building-a-simple-e-commerce-site-with-eleventy/",
-    "Categories": ["How to..."],
-    "Date": "2022-06-12",
-    "Author": "Kishor Kumar"
-  },
-  {
     "Type": "blog post",
     "Title": "Accessible amojis with 11ty",
     "Link": "https://kittygiraudel.com/2021/01/02/accessible-emojis-with-11ty/",
@@ -5095,12 +4151,6 @@
     "Categories": ["Pagination", "Collections", "Filters", "Dates"],
     "Date": "2023-07-19",
     "Author": "Lea Verou"
-  },
-  {
-    "Type": "starter",
-    "Title": "eleventy-excellent",
-    "Link": "https://github.com/madrilene/eleventy-excellent",
-    "Author": "Lene Saile"
   },
   {
     "Type": "blog post",
@@ -5196,23 +4246,11 @@
     "Author": "Luciano Mammino"
   },
   {
-    "Type": "starter",
-    "Title": "Multiplicity - RSS Aggregator Starter Based On Eleventy",
-    "Link": "https://github.com/lwojcik/eleventy-template-multiplicity#multiplicity---rss-aggregator-starter-based-on-eleventy",
-    "Author": "Łukasz Wójcik"
-  },
-  {
     "Type": "blog post",
     "Title": "New year, new me, new blog",
     "Link": "https://offbeatbits.com/new-year-new-me-new-blog/",
     "Categories": ["Why Eleventy?"],
     "Date": "2023-02-17",
-    "Author": "Łukasz Wójcik"
-  },
-  {
-    "Type": "starter",
-    "Title": "Bliss - Blog Theme For Eleventy",
-    "Link": "https://github.com/lwojcik/eleventy-template-bliss",
     "Author": "Łukasz Wójcik"
   },
   {
@@ -5230,28 +4268,6 @@
     "Categories": ["Deployment"],
     "Date": "2022-12-07",
     "Author": "Luke Bonaccorsi"
-  },
-  {
-    "Type": "starter",
-    "Title": "eleventy-simple",
-    "Link": "https://github.com/lkhrs/eleventy-simple",
-    "Author": "Luke Harris"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "How to set up a personal website with 11ty, Markdown, TailwindCSS, and Alpine.js",
-    "Link": "https://janowski.dev/articles/how-to-set-up-personal-website-with-markdown-tailwind-alpinejs/",
-    "Categories": ["How to..."],
-    "Date": "2021-08-23",
-    "Author": "Maciej Janowski"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Adding Strapi as headless CMS to 11ty blog",
-    "Link": "https://janowski.dev/articles/strapi-11ty-headless-cms-blog/",
-    "Categories": ["CMS", "Blogging"],
-    "Date": "2021-11-22",
-    "Author": "Maciej Janowski"
   },
   {
     "Type": "blog post",
@@ -5300,12 +4316,6 @@
     "Categories": ["Why Eleventy?"],
     "Date": "2021-05-12",
     "Author": "Marc Radziwill"
-  },
-  {
-    "Type": "starter",
-    "Title": "minimalism",
-    "Link": "https://github.com/MarcoMicale/Minimalism",
-    "Author": "Marco Micale"
   },
   {
     "Type": "blog post",
@@ -5420,12 +4430,6 @@
     "Author": "Mathieu Huot"
   },
   {
-    "Type": "starter",
-    "Title": "tea-stack",
-    "Link": "https://github.com/mattwaler/tea-stack",
-    "Author": "Matt Waller"
-  },
-  {
     "Type": "blog post",
     "Title": "A New LitLab Website",
     "Link": "https://litlab.stanford.edu/techne/new-litlab-website/",
@@ -5520,12 +4524,6 @@
     "Categories": ["How to...", "Data Cascade"],
     "Date": "2021-02-06",
     "Author": "Max Kohler"
-  },
-  {
-    "Type": "starter",
-    "Title": "Eleventy Satisfactory",
-    "Link": "https://github.com/mendhak/eleventy-satisfactory",
-    "Author": "mendhak"
   },
   {
     "Type": "blog post",
@@ -5918,12 +4916,6 @@
     "Author": "Nicolas Goutay"
   },
   {
-    "Type": "starter",
-    "Title": "Pack11ty",
-    "Link": "https://github.com/nhoizey/pack11ty",
-    "Author": "Nicolas Hoizey"
-  },
-  {
     "Type": "blog post",
     "Title": "Updating webmentions on a static site",
     "Link": "https://nicolas-hoizey.com/articles/2023/02/05/updating-webmentions-on-a-static-site/",
@@ -5954,14 +4946,6 @@
     "Categories": ["Images"],
     "Date": "2021-01-15",
     "Author": "Oscar"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Getting started with Eleventy (11ty)",
-    "Link": "https://time2hack.com/getting-started-with-eleventy-11ty/",
-    "Categories": ["Getting Started"],
-    "Date": "2023-01-17",
-    "Author": "Pankaj"
   },
   {
     "Type": "blog post",
@@ -6865,34 +5849,12 @@
     "Author": "Salma Alam-Naylor"
   },
   {
-    "Type": "DoNotUse",
-    "Title": "Returning to Eleventy",
-    "Link": "https://samhermes.com/posts/returning-to-eleventy/",
-    "Categories": ["Migrating to Eleventy"],
-    "Date": "2021-11-22",
-    "Author": "Sam Hermes"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "My attempt to convert from Jekyll to Eleventy",
-    "Link": "https://samhermes.com/posts/my-attempt-to-convert-from-jekyll-to-eleventy/",
-    "Categories": ["Migrating to Eleventy"],
-    "Date": "2021-10-15",
-    "Author": "Sam Hermes"
-  },
-  {
     "Type": "blog post",
     "Title": "Internationalization And Localization For Static Sites",
     "Link": "https://www.smashingmagazine.com/2020/11/internationalization-localization-static-sites/",
     "Categories": ["Internationalization"],
     "Date": "2020-11-04",
     "Author": "Sam Richard"
-  },
-  {
-    "Type": "starter",
-    "Title": "Eleventy Notes",
-    "Link": "https://eleventy-notes.sandroroth.com/",
-    "Author": "Sandro Roth"
   },
   {
     "Type": "blog post",
@@ -6973,28 +5935,6 @@
     "Categories": ["Debugging", "How to..."],
     "Date": "2020-05-12",
     "Author": "Sean McPherson"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "How to create a website with eleventy",
-    "Link": "https://www.sezer.dev/blog/how-to-create-a-website-with-eleventy/",
-    "Categories": ["Getting Started", "How to..."],
-    "Date": "2021-05-11",
-    "Author": "Sezer Ünlü"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "How to add a navigation bar to your eleventy website",
-    "Link": "https://www.sezer.dev/blog/how-to-add-a-navigation-bar-to-your-eleventy-website/",
-    "Categories": ["Navigation"],
-    "Date": "2021-05-13",
-    "Author": "Sezer Ünlü"
-  },
-  {
-    "Type": "starter",
-    "Title": "11ta-template",
-    "Link": "https://github.com/11ta/11ta-template",
-    "Author": "Shane Robinson"
   },
   {
     "Type": "blog post",
@@ -7123,12 +6063,6 @@
     "Categories": ["Layouts"],
     "Date": "2022-11-06",
     "Author": "Simon McManus"
-  },
-  {
-    "Type": "starter",
-    "Title": "11st-starter-kit",
-    "Link": "https://github.com/stefanfrede/11st-starter-kit",
-    "Author": "Stefan Frede"
   },
   {
     "Type": "blog post",
@@ -7275,12 +6209,6 @@
     "Author": "Steven Woodson"
   },
   {
-    "Type": "starter",
-    "Title": "eleventy-photo-gallery",
-    "Link": "https://github.com/tannerdolby/eleventy-photo-gallery",
-    "Author": "Tanner Dolby"
-  },
-  {
     "Type": "blog post",
     "Title": "Generate Page Content From a Global Data File Using Eleventy",
     "Link": "https://tannerdolby.com/writing/generate-page-content-from-a-global-data-file-using-eleventy/",
@@ -7361,14 +6289,6 @@
     "Author": "Tom Hazledine"
   },
   {
-    "Type": "DoNotUse",
-    "Title": "Why we chose Eleventy for the StackBlitz blog",
-    "Link": "https://blog.stackblitz.com/posts/new-stackblitz-blog-uses-eleventy/",
-    "Categories": ["Why Eleventy?"],
-    "Date": "2020-11-02",
-    "Author": "Tomek Sulkowski"
-  },
-  {
     "Type": "blog post",
     "Title": "Responsive Images in Markdown with Eleventy Image",
     "Link": "https://tomichen.com/blog/posts/20220416-responsive-images-in-markdown-with-eleventy-image/",
@@ -7398,14 +6318,6 @@
     "Link": "https://uncenter.dev/posts/thoughts-on-eleventy/",
     "Categories": ["Why Eleventy?"],
     "Date": "2023-03-16",
-    "Author": "uncenter"
-  },
-  {
-    "Type": "DoNotUse",
-    "Title": "Include icons selectively with 11ty",
-    "Link": "https://www.uncenter.org/posts/magical-icons/",
-    "Categories": ["Images", "How to..."],
-    "Date": "2023-02-22",
     "Author": "uncenter"
   },
   {
@@ -7497,34 +6409,806 @@
     "Author": "Zach Leatherman"
   },
   {
-    "Issue": "19",
-    "Type": "blog post",
-    "Title": "Speed up your CloudCannon Builds with Preserved Paths",
-    "Link": "https://www.youtube.com/watch?v=ULwVlFMth1U",
-    "Categories": ["Deployment", "How to...", "Remote Data", "YouTube"],
-    "Date": "2023-10-16",
-    "Author": "CloudCannon"
+    "Issue": "1",
+    "Type": "release",
+    "Title": "Eleventy Bundle Plugin v1.04",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v1.0.4",
+    "Date": "2023-03-08"
+  },
+  {
+    "Issue": "1",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v1.0.4",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v1.0.4",
+    "Date": "2023-03-13"
+  },
+  {
+    "Issue": "1",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.10.1: New built-in `webc.*` helpers",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.10.1",
+    "Date": "2023-03-24"
+  },
+  {
+    "Issue": "1",
+    "Type": "release",
+    "Title": "Eleventy v2.0.1: a Bug Fix Release",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.1",
+    "Date": "2023-03-02"
+  },
+  {
+    "Issue": "2",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.11.0: Child Components accessing Global Data",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.0",
+    "Date": "2023-03-30"
+  },
+  {
+    "Issue": "2",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.10.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.10.0",
+    "Date": "2023-03-24"
+  },
+  {
+    "Issue": "2",
+    "Type": "release",
+    "Title": "Eleventy Image v3.10",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v3.1.0",
+    "Date": "2023-03-27"
+  },
+  {
+    "Issue": "3",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.11.3: WebC inside Declarative Shadow DOM",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.3",
+    "Date": "2023-04-06"
+  },
+  {
+    "Issue": "3",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.11.2: Fixes for slottable content",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.2",
+    "Date": "2023-04-04"
+  },
+  {
+    "Issue": "4",
+    "Type": "release",
+    "Title": "Eleventy Syntax Highlighter v5.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.0",
+    "Date": "2023-04-12"
+  },
+  {
+    "Issue": "5",
+    "Type": "release",
+    "Title": "Eleventy v2.02-alpha.2",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.2-alpha.2",
+    "Date": "2023-04-26"
+  },
+  {
+    "Issue": "5",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.11.4",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.4",
+    "Date": "2023-04-26"
+  },
+  {
+    "Issue": "5",
+    "Type": "release",
+    "Title": "Eleventy v2.02-alpha.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v2.0.2-alpha.1",
+    "Date": "2023-04-19"
+  },
+  {
+    "Issue": "5",
+    "Type": "release",
+    "Title": "eleventy-base-webc",
+    "Link": "https://github.com/11ty/eleventy-base-webc",
+    "Date": "2023-04-19"
+  },
+  {
+    "Issue": "5",
+    "Type": "release",
+    "Title": "Eleventy WebC v0.11.1: Quick fix for data access on slotted content",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.11.1",
+    "Date": "2023-04-26"
+  },
+  {
+    "Issue": "18",
+    "Type": "release",
+    "Title": "Eleventy Image v3.1.1: `sharp` upgrade",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v3.1.1",
+    "Date": "2023-09-22"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Anil Dash",
+    "Link": "https://anildash.com/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Web Components Today",
+    "Link": "https://webcomponents.today/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Rafael Conde",
+    "Link": "https://rafa.design/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "CSS In Real Life",
+    "Link": "https://css-irl.info/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Javan",
+    "Link": "https://javan.us/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Gabrielle Wee",
+    "Link": "https://gabriellew.ee/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Vadim Makeev",
+    "Link": "https://pepelsbey.dev/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Naz Hamid",
+    "Link": "https://nazhamid.com/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Václav Eliáš",
+    "Link": "https://www.vaclavelias.com/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Delete Twitter",
+    "Link": "https://deletetwitter.com/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Molly White",
+    "Link": "https://www.mollywhite.net/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "CloudCannon",
+    "Link": "https://cloudcannon.com/blog/cloudcannon-com-is-now-built-with-eleventy/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "pie design system",
+    "Link": "https://www.pie.design/"
+  },
+  {
+    "Issue": "1",
+    "Type": "site",
+    "Title": "Keith J. Grant",
+    "Link": "https://keithjgrant.com/posts/2023/03/redesign-2023/"
+  },
+  {
+    "Issue": "2",
+    "Type": "site",
+    "Title": "Emily Leatherman",
+    "Link": "https://emilyleatherman.com/",
+    "Author": "Emily Leatherman"
+  },
+  {
+    "Issue": "2",
+    "Type": "site",
+    "Title": "Photography",
+    "Link": "https://www.schmidtynotes.com/images/",
+    "Author": "Michael Schmidt"
+  },
+  {
+    "Issue": "2",
+    "Type": "site",
+    "Title": "Nicolas Hoizey Photography",
+    "Link": "https://nicolas-hoizey.photo/",
+    "Author": "Nicolas Hoizey"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Blake Leonard",
+    "Link": "https://blakes.dev/",
+    "Author": "Blake Leonard"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Eleventy not so minimal blog starter",
+    "Link": "https://eleventy-not-so-minimal-blog-starter.netlify.app/",
+    "Author": "Claudia Reynders"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "The Vanilla JavaScript Repository",
+    "Link": "https://vanillalist.top/",
+    "Author": "Guérilla.Studio"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Jon Park",
+    "Link": "https://jonpark.co.uk/",
+    "Author": "Jon Park"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Sombriks Has A Plan",
+    "Link": "https://sombriks.com/",
+    "Author": "Leonardo Silveira"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Vermont Beer Trail",
+    "Link": "https://www.vtbeertrail.com/",
+    "Author": "MooseDog Studios"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Vermont Cheese Makers",
+    "Link": "https://vermontcheesetrail.com/",
+    "Author": "MooseDog Studios"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Kinopio Blog",
+    "Link": "https://blog.kinopio.club/",
+    "Author": "Pirijan"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Eleventy Notes",
+    "Link": "https://eleventy-notes.sandroroth.com/",
+    "Author": "Sandro Roth"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "Spencer Harston",
+    "Link": "https://www.spencerharston.com/",
+    "Author": "Spencer Harston"
+  },
+  {
+    "Issue": "3",
+    "Type": "site",
+    "Title": "vanzasetia",
+    "Link": "https://vanzasetia.site/",
+    "Author": "Vanza Setia"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "The Globe Church",
+    "Link": "https://www.globe.church/"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "bram.is",
+    "Link": "https://bram.is/",
+    "Author": "Bram Smulders"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "Bruce Taylor",
+    "Link": "https://brootaylor.com/",
+    "Author": "Bruce Taylor"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "Francis Rubio",
+    "Link": "https://francisrubio.antaresph.dev/",
+    "Author": "Francis Rubio"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "Hidde",
+    "Link": "https://hidde.blog/",
+    "Author": "Hidde de Vries"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "Dogs of Dev",
+    "Link": "https://dogsof.dev/",
+    "Author": "Mike Aparicio"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "PHPStan",
+    "Link": "https://phpstan.org/",
+    "Author": "Ondřej Mirtes"
+  },
+  {
+    "Issue": "4",
+    "Type": "site",
+    "Title": "CSS Tip",
+    "Link": "https://css-tip.com/",
+    "Author": "Temani Afif"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "ProcessWire Recipes",
+    "Link": "https://processwire.recipes/"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "Nostos Safari",
+    "Link": "https://nostossafari.com/"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "Emily McCracken",
+    "Link": "https://emilymccracken.com/",
+    "Author": "Emily McCracken"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "Maxim Orlov",
+    "Link": "https://maximorlov.com/",
+    "Author": "Maxim Orlov"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "Tom Roseveare",
+    "Link": "https://www.tomroseveare.com/",
+    "Author": "Tom Roseveare"
+  },
+  {
+    "Issue": "5",
+    "Type": "site",
+    "Title": "Tyler Mercer",
+    "Link": "https://tylermercer.net/",
+    "Author": "Tyler Mercer"
+  },
+  {
+    "Issue": "6",
+    "Type": "site",
+    "Title": "Grease",
+    "Link": "https://web-grease.netlify.app/"
+  },
+  {
+    "Issue": "6",
+    "Type": "site",
+    "Title": "Edukatte",
+    "Link": "https://edukatte.netlify.app/"
+  },
+  {
+    "Issue": "6",
+    "Type": "site",
+    "Title": "Deep House Mixes",
+    "Link": "https://deephouse.uk/"
+  },
+  {
+    "Issue": "6",
+    "Type": "site",
+    "Title": "Sarah L. Fossheim",
+    "Link": "https://fossheim.io/"
+  },
+  {
+    "Issue": "6",
+    "Type": "site",
+    "Title": "tinytip",
+    "Link": "https://tinytip.co/"
+  },
+  {
+    "Issue": "7",
+    "Type": "site",
+    "Title": "Aleksandr Hovhannisyan",
+    "Link": "https://www.aleksandrhovhannisyan.com/"
+  },
+  {
+    "Issue": "7",
+    "Type": "site",
+    "Title": "Kevin Healy",
+    "Link": "https://kevhealy.com/"
+  },
+  {
+    "Issue": "7",
+    "Type": "site",
+    "Title": "Luke Mitchell",
+    "Link": "https://www.interroban.gg/"
+  },
+  {
+    "Issue": "7",
+    "Type": "site",
+    "Title": "Simon Cox",
+    "Link": "https://www.simoncox.com/"
+  },
+  {
+    "Issue": "7",
+    "Type": "site",
+    "Title": "Erik Kroes",
+    "Link": "https://www.erikkroes.nl/"
+  },
+  {
+    "Issue": "8",
+    "Type": "site",
+    "Title": "A Week in the Woods",
+    "Link": "https://aweekinthewoods.com/"
+  },
+  {
+    "Issue": "8",
+    "Type": "site",
+    "Title": "Jess Keoshian",
+    "Link": "https://jessicakeoshian.com/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "Shoelace",
+    "Link": "https://next.shoelace.style/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "Software developer training courses with certification",
+    "Link": "https://dev.courses/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "wallabag",
+    "Link": "https://wallabag.org/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "The Raistlin Papers",
+    "Link": "https://c64demo.com/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "Ashur Cabrera",
+    "Link": "https://ashur.cab/rera/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "Opt-Out Machine",
+    "Link": "https://www.opt-out.ai/"
+  },
+  {
+    "Issue": "9",
+    "Type": "site",
+    "Title": "James Basoo",
+    "Link": "https://jamesbasoo.com/"
+  },
+  {
+    "Issue": "10",
+    "Type": "site",
+    "Title": "wilks.co",
+    "Link": "https://wilks.co/"
+  },
+  {
+    "Issue": "11",
+    "Type": "site",
+    "Title": "Gittings Studio",
+    "Link": "https://gittings.studio/"
+  },
+  {
+    "Issue": "11",
+    "Type": "site",
+    "Title": "DC Design Week",
+    "Link": "https://dcdesignweek.org/"
+  },
+  {
+    "Issue": "12",
+    "Type": "site",
+    "Title": "Andreia Ramos",
+    "Link": "https://andreiaramos.pt/"
+  },
+  {
+    "Issue": "12",
+    "Type": "site",
+    "Title": "TC39",
+    "Link": "https://tc39.es/"
+  },
+  {
+    "Issue": "12",
+    "Type": "site",
+    "Title": "The Eleventy form solution for developers",
+    "Link": "https://fabform.io/for/Eleventy"
+  },
+  {
+    "Issue": "13",
+    "Type": "site",
+    "Title": "Thudfactor",
+    "Link": "https://www.thudfactor.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Kristján Oddsson",
+    "Link": "https://koddsson.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Wilks.co",
+    "Link": "https://wilks.co/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "LaceySnr",
+    "Link": "https://laceysnr.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Dolwen Solutions",
+    "Link": "https://www.dolwensolutions.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Neal Gamradt",
+    "Link": "https://nealgamradt.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Andreia Ramos",
+    "Link": "https://andreiaramos.pt/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Program Restoran (Restaurant Program)",
+    "Link": "https://programrestoran.axcora.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Lea Verou",
+    "Link": "https://lea.verou.me/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Carlo Van",
+    "Link": "https://carlovan.com/"
+  },
+  {
+    "Issue": "14",
+    "Type": "site",
+    "Title": "Jules Poulain (French)",
+    "Link": "https://jules.poulain.dev/"
+  },
+  {
+    "Issue": "15",
+    "Type": "site",
+    "Title": "Jérôme Stephan (motion warning)",
+    "Link": "https://jeromestephan.de/Home/"
+  },
+  {
+    "Issue": "15",
+    "Type": "site",
+    "Title": "Project MB",
+    "Link": "https://www.projectmb.com/"
+  },
+  {
+    "Issue": "15",
+    "Type": "site",
+    "Title": "Alex Zappa",
+    "Link": "https://alex.zappa.dev/"
+  },
+  {
+    "Issue": "15",
+    "Type": "site",
+    "Title": "Shotstack",
+    "Link": "https://shotstack.io/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "SurfScape",
+    "Link": "https://surfscape.neocities.org/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Elva",
+    "Link": "https://elva.scott.ee/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Alpine AJAX",
+    "Link": "https://alpine-ajax.js.org/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Digital Latin Library",
+    "Link": "https://digitallatin.org/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "THE IDEAL VIEWPORT DOESN’T EXIST",
+    "Link": "https://viewports.fyi/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Tatiana Zappa",
+    "Link": "https://tatianazappa.com/"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Les Survenantes",
+    "Link": "https://www.lessurvenantesbalado.com/",
+    "Author": "Anghelos Coulon"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Pride Flags",
+    "Link": "https://pride-flags.fynn.be/",
+    "Author": "Fynn Becker"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Hamburg HTML meetup",
+    "Link": "https://hhtml.de/",
+    "Author": "Lea Rosema"
+  },
+  {
+    "Issue": "16",
+    "Type": "site",
+    "Title": "Educational, Sensational, Inspirational, Foundational",
+    "Link": "https://esif.dev/",
+    "Author": "Zach Leatherman"
+  },
+  {
+    "Issue": "17",
+    "Type": "site",
+    "Title": "Fudge Sunday",
+    "Link": "https://fudge.org/"
+  },
+  {
+    "Issue": "17",
+    "Type": "site",
+    "Title": "Clayton Errington",
+    "Link": "https://claytonerrington.com/"
+  },
+  {
+    "Issue": "17",
+    "Type": "site",
+    "Title": "Nine Rakes",
+    "Link": "https://ninerakes.com/"
+  },
+  {
+    "Issue": "17",
+    "Type": "site",
+    "Title": "RkBlog",
+    "Link": "https://rkblog.dev/"
+  },
+  {
+    "Issue": "17",
+    "Type": "site",
+    "Title": "Written in Stone",
+    "Link": "https://writteninstone.photo/",
+    "Author": "Ashur Cabrera"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "GifGun",
+    "Link": "https://www.gifgun.io/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "GSAP",
+    "Link": "https://gsap.com/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Joe Sahlsa",
+    "Link": "https://joesahlsa.dev/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Fitness Web Components",
+    "Link": "https://fitness.trovster.com/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Eventually",
+    "Link": "https://eventua11y.com/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Contra",
+    "Link": "https://chromamine.com/contra/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Kevin Gimbel",
+    "Link": "https://kevin.gimbel.dev/ops/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Larry Hudson",
+    "Link": "https://larryhudson.io/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Red Hat design System",
+    "Link": "https://ux.redhat.com/"
+  },
+  {
+    "Issue": "18",
+    "Type": "site",
+    "Title": "Patternfly Elements",
+    "Link": "https://patternflyelements.org/"
   },
   {
     "Issue": "19",
-    "Type": "starter",
-    "Title": "eleventeen",
-    "Link": "https://github.com/rdela/eleventeen"
+    "Type": "site",
+    "Title": "Francon Capital",
+    "Link": "https://franconcapital.com/"
   },
   {
     "Issue": "19",
-    "Type": "blog post",
-    "Title": "TinaCMS + 11ty",
-    "Link": "https://claytonerrington.com/blog/implementing-tinacms-with-11ty/",
-    "Categories": [
-      "Blogging",
-      "CMS",
-      "Configuration",
-      "Deployment",
-      "How to..."
-    ],
-    "Date": "2023-10-17",
-    "Author": "Clayton Errington"
+    "Type": "site",
+    "Title": "Khoi",
+    "Link": "https://blog.khoiuna.info/"
+  },
+  {
+    "Issue": "19",
+    "Type": "site",
+    "Title": "Micah Torcellini's Website",
+    "Link": "https://micah.torcellini.org/"
   },
   {
     "Issue": "19",
@@ -7537,5 +7221,157 @@
     "Type": "site",
     "Title": "Soft Clay Software",
     "Link": "https://softclay.software/"
+  },
+  {
+    "Issue": "19",
+    "Type": "starter",
+    "Title": "eleventeen",
+    "Link": "https://github.com/rdela/eleventeen"
+  },
+  {
+    "Type": "starter",
+    "Title": "Elva",
+    "Link": "https://github.com/scottsweb/elva"
+  },
+  {
+    "Type": "starter",
+    "Title": "11ty-tailscript",
+    "Link": "https://github.com/4lador/11ty-tailscript",
+    "Author": "4lador"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-base-webc",
+    "Link": "https://github.com/11ty/eleventy-base-webc",
+    "Author": "11ty"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-base-blog",
+    "Link": "https://github.com/11ty/eleventy-base-blog",
+    "Author": "11ty"
+  },
+  {
+    "Type": "starter",
+    "Title": "Grease",
+    "Link": "https://github.com/adamstddrd/grease",
+    "Author": "Adam Stoddard"
+  },
+  {
+    "Type": "starter",
+    "Title": "Nulite",
+    "Link": "https://github.com/codingpotions/nulite",
+    "Author": "CodingPotions"
+  },
+  {
+    "Type": "starter",
+    "Title": "vredeburg",
+    "Link": "https://github.com/daflh/vredeburg",
+    "Author": "Daff"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-starter-ghost",
+    "Link": "https://github.com/TryGhost/eleventy-starter-ghost",
+    "Author": "David Darnes"
+  },
+  {
+    "Type": "starter",
+    "Title": "Polyglot Tech Blog",
+    "Link": "https://florent_tassy.gitlab.io/polyglot-tech-blog/en/",
+    "Author": "Florent Tassy"
+  },
+  {
+    "Type": "starter",
+    "Title": "reveal-eleventy-template",
+    "Link": "https://github.com/Bullrich/reveal-eleventy-template",
+    "Author": "Javier Bullrich"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-excellent",
+    "Link": "https://github.com/madrilene/eleventy-excellent",
+    "Author": "Lene Saile"
+  },
+  {
+    "Type": "starter",
+    "Title": "Multiplicity - RSS Aggregator Starter Based On Eleventy",
+    "Link": "https://github.com/lwojcik/eleventy-template-multiplicity#multiplicity---rss-aggregator-starter-based-on-eleventy",
+    "Author": "Łukasz Wójcik"
+  },
+  {
+    "Type": "starter",
+    "Title": "Bliss - Blog Theme For Eleventy",
+    "Link": "https://github.com/lwojcik/eleventy-template-bliss",
+    "Author": "Łukasz Wójcik"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-simple",
+    "Link": "https://github.com/lkhrs/eleventy-simple",
+    "Author": "Luke Harris"
+  },
+  {
+    "Type": "starter",
+    "Title": "minimalism",
+    "Link": "https://github.com/MarcoMicale/Minimalism",
+    "Author": "Marco Micale"
+  },
+  {
+    "Type": "starter",
+    "Title": "tea-stack",
+    "Link": "https://github.com/mattwaler/tea-stack",
+    "Author": "Matt Waller"
+  },
+  {
+    "Type": "starter",
+    "Title": "Eleventy Satisfactory",
+    "Link": "https://github.com/mendhak/eleventy-satisfactory",
+    "Author": "mendhak"
+  },
+  {
+    "Type": "starter",
+    "Title": "Pack11ty",
+    "Link": "https://github.com/nhoizey/pack11ty",
+    "Author": "Nicolas Hoizey"
+  },
+  {
+    "Type": "starter",
+    "Title": "Eleventy Notes",
+    "Link": "https://eleventy-notes.sandroroth.com/",
+    "Author": "Sandro Roth"
+  },
+  {
+    "Type": "starter",
+    "Title": "11ta-template",
+    "Link": "https://github.com/11ta/11ta-template",
+    "Author": "Shane Robinson"
+  },
+  {
+    "Type": "starter",
+    "Title": "11st-starter-kit",
+    "Link": "https://github.com/stefanfrede/11st-starter-kit",
+    "Author": "Stefan Frede"
+  },
+  {
+    "Type": "starter",
+    "Title": "eleventy-photo-gallery",
+    "Link": "https://github.com/tannerdolby/eleventy-photo-gallery",
+    "Author": "Tanner Dolby"
+  },
+  {
+    "Issue": "19",
+    "Type": "site",
+    "Title": "rubenwardy",
+    "Link": "https://rubenwardy.com/"
+  },
+  {
+    "Issue": "19",
+    "Type": "blog post",
+    "Title": "SEVEN MILLION NPM DOWNLOADS!",
+    "Link": "https://www.11ty.dev/blog/seven-million/",
+    "Categories": ["Deployment"],
+    "Date": "2023-10-23",
+    "Author": "Eleventy"
   }
 ]
