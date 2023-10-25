@@ -3,7 +3,7 @@ const sourceData = require("../_data/allrecords.json");
 
 module.exports.data = function() {
   return {
-	  permalink: "/api/cms.json"
+    permalink: "/api/cms.json"
   }
 }
 module.exports.render = function(data) {
