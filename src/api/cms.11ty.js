@@ -8,9 +8,9 @@ module.exports.data = function() {
   }
 }
 module.exports.render = function(data) {
-  bundleRecords = sourceData;
+  const bundlePosts = sourceData;
   function isCategoryCMS(item) {
     return item["Type"] == "blog post" && item["Categories"].includes("CMS");
   }
-  return JSON.stringify(bundleRecords.filter(isCategoryCMS), null, 2)
+  return JSON.stringify(bundlePosts.filter(isCategoryCMS), null, 2)
 };
