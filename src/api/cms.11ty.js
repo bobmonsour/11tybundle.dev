@@ -17,5 +17,8 @@ module.exports.render = function (data) {
       item["Type"] == "blog post" && item["Categories"].includes(thisCategory)
     );
   }
-  return JSON.stringify(bundlePosts.filter(isCategory), null, 2);
+  const sortedPosts = bundlePosts.filter(isCategory).sort((a, b) => {
+    return a.Date > b.Date ? -1 : 1;
+  });
+  return JSON.stringify(sortedPosts, null, 2);
 };
