@@ -2,7 +2,7 @@
 // with the specified category
 const _ = require("lodash");
 
-const thisCategory = "CMS";
+const thisCategory = "Getting Started";
 const sourceData = require("../_data/allrecords.json");
 
 module.exports.data = function () {
