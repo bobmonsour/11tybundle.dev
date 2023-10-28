@@ -14,7 +14,8 @@ class CategoryJsonFiles {
         alias: "category",
       },
       // These are the categories that generate json files in the api directory
-      categories: ["Getting Started", "CMS"],
+      // For example, "CMS" in this list causes the file cms.json to be created
+      categories: ["Getting Started", "CMS", "Front Matter"],
       permalink: (data) => `/api/${_.kebabCase(data.pagination.items[0])}.json`,
     };
   }
