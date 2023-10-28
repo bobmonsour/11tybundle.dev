@@ -75,6 +75,14 @@ module.exports = async function () {
   const categories = categoryList(firehose);
   const categoryCount = categories.length;
 
+  // get the count of the number of posts in the Getting Started category
+  let cat = "Getting Started";
+  let row = categories.find((row) => row[0] === cat);
+  if (row) {
+    gettingStartedCount = row[1];
+  } else {
+    gettingStartedCount = "more than 40";
+  }
   // log the counts of various items
   console.log("postCount: " + postCount);
   console.log("starterCount: " + starterCount);
@@ -105,5 +113,6 @@ module.exports = async function () {
     authorCount: authorCount,
     categories: categories,
     categoryCount: categoryCount,
+    gettingStartedCount: gettingStartedCount,
   };
 };
