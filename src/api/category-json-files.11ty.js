@@ -5,7 +5,7 @@ const _ = require("lodash");
 
 const sourceData = require("../_data/allrecords.json");
 
-class MyJsonFiles {
+class CategoryJsonFiles {
   data() {
     return {
       pagination: {
@@ -34,4 +34,4 @@ class MyJsonFiles {
   }
 }
 
-module.exports = MyJsonFiles;
+module.exports = CategoryJsonFiles;
