@@ -1,7 +1,7 @@
 const { google } = require("googleapis");
 const sheets = google.sheets("v4");
 
-async function fetchSheetData() {
+module.exports = async function () {
   // Load client secrets from the downloaded service account key file.
   // ***TODO: MOVE SENSITIVE DATA TO ENV VARIABLES***
   const key = require("./tybundle-98a8d3f9fa2b.json");
@@ -49,6 +49,4 @@ async function fetchSheetData() {
   } catch (err) {
     console.error("API request encountered an error:", err);
   }
-}
-
-module.exports = fetchSheetData;
+};

@@ -14,6 +14,7 @@ class CategoryJsonFiles {
       // For example, "CMS" in this list causes the file cms.json to be created
       categories: ["Getting Started", "CMS", "Front Matter"],
       permalink: (data) => `/api/${_.kebabCase(data.pagination.items[0])}.json`,
+      firehose: firehose,
     };
   }
 
@@ -25,7 +26,7 @@ class CategoryJsonFiles {
         item["Categories"].includes(data.pagination.items[0])
       );
     }
-    const sortedPosts = bundledata.firehose.filter(isCategory).sort((a, b) => {
+    const sortedPosts = firehose.filter(isCategory).sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
     return JSON.stringify(sortedPosts, null, 2);

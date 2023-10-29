@@ -1,7 +1,7 @@
 // get all the records (JSON exported from a Google Sheet) and return
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-const fetchSheetData = require("./allrecords");
+const fetchSheetData = require("./fetchsheetdata");
 
 module.exports = async function () {
   const bundleRecords = await fetchSheetData();
