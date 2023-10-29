@@ -3,8 +3,22 @@ const sheets = google.sheets("v4");
 
 module.exports = async function () {
   // Load client secrets from the downloaded service account key file.
-  // ***TODO: MOVE SENSITIVE DATA TO ENV VARIABLES***
-  const key = require("./tybundle-98a8d3f9fa2b.json");
+  // Items from the file were placed into a .env file
+  const key = {
+    type: process.env.TYPE,
+    project_id: process.env.PROJECT_ID,
+    private_key_id: process.env.PRIVATE_KEY_ID,
+    private_key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"), // Remember, newlines in the private_key need special handling
+    client_email: process.env.CLIENT_EMAIL,
+    client_id: process.env.CLIENT_ID,
+    auth_uri: process.env.AUTH_URI,
+    token_uri: process.env.TOKEN_URI,
+    auth_provider_x509_cert_url: process.env.AUTH_PROVIDER_x509_CERT_URL,
+    client_x509_cert_url: process.env.CLIENT_x509_CERT_URL,
+    universe_domain: process.env.UNIVERSE_DOMAIN,
+    spreadsheetId: process.env.SPREADSHEET_ID,
+    spreadsheetRange: process.env.SPREADSHEET_RANGE,
+  };
 
   const jwtClient = new google.auth.JWT(
     key.client_email,
@@ -15,8 +29,8 @@ module.exports = async function () {
 
   await jwtClient.authorize();
 
-  const spreadsheetId = "1aeWtopIlqCUq_aJXebsIfqfm2RLtMC-_sJ8U5rHVgqM";
-  const range = "All Records";
+  const spreadsheetId = key.spreadsheetId;
+  const range = key.spreadsheetRange;
 
   const request = {
     spreadsheetId: spreadsheetId,
