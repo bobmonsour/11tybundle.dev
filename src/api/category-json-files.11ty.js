@@ -2,9 +2,6 @@
 // Files are created in the /api folder off the root of the site
 // The file name is the category name in kebab case
 const _ = require("lodash");
-
-const sourceData = require("../_data/allrecords.json");
-
 class CategoryJsonFiles {
   data() {
     return {
@@ -21,14 +18,14 @@ class CategoryJsonFiles {
   }
 
   render(data) {
-    const bundlePosts = sourceData;
+    // const bundlePosts = firehose;
     function isCategory(item) {
       return (
         item["Type"] == "blog post" &&
         item["Categories"].includes(data.pagination.items[0])
       );
     }
-    const sortedPosts = bundlePosts.filter(isCategory).sort((a, b) => {
+    const sortedPosts = bundledata.firehose.filter(isCategory).sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
     return JSON.stringify(sortedPosts, null, 2);
