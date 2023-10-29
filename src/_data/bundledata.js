@@ -103,16 +103,16 @@ module.exports = async function () {
   // return the full set of records and the counts for use
   // on various pages of the site
   return {
-    bundleRecords: bundleRecords,
-    firehose: firehose,
-    postCount: postCount,
-    starters: starters,
-    starterCount: starterCount,
-    authors: authors,
-    authorsByCount: authorsByCount,
-    authorCount: authorCount,
-    categories: categories,
-    categoryCount: categoryCount,
-    gettingStartedCount: gettingStartedCount,
+    bundleRecords,
+    firehose,
+    postCount,
+    starters,
+    starterCount,
+    authors,
+    authorsByCount,
+    authorCount,
+    categories,
+    categoryCount,
+    gettingStartedCount,
   };
 };
