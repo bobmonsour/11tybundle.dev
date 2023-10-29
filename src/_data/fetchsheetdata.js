@@ -3,7 +3,7 @@ const sheets = google.sheets("v4");
 
 module.exports = async function () {
   // Load client secrets from the downloaded service account key file.
-  // Items from the file were placed into a .env file
+  // Items from the file were placed into a .env file.
   const key = {
     type: process.env.TYPE,
     project_id: process.env.PROJECT_ID,
