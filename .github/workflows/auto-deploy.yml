@@ -2,7 +2,7 @@ name: "Auto-Deploy"
 
 on:
   schedule:
-    - cron: "30 3 * * *"
+    - cron: "30 5 * * *"
 
 jobs:
   deploy:
@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Deploy to Netlify
         env:
-          TOKEN: ${​{ secrets.NETLIFY_BUILD_HOOK_ID }​}
+          TOKEN: ${​{secrets.NETLIFY_BUILD_HOOK_ID}​}
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/${TOKEN}
