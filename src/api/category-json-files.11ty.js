@@ -8,7 +8,6 @@ class CategoryJsonFiles {
       pagination: {
         data: "categories",
         size: 1,
-        alias: "category",
       },
       // These are the categories that generate json files in the api directory
       // For example, "CMS" in this list causes the file cms.json to be created
