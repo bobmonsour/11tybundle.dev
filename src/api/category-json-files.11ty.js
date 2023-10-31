@@ -32,11 +32,10 @@ class CategoryJsonFiles {
 
   render(data) {
     // Filter the firehose posts for the paginated category
+    // "Categories" is the key in the json file for the array
+    // of categories for the post
     function isCategory(item) {
-      return (
-        item["Type"] == "blog post" &&
-        item["Categories"].includes(data.pagination.items[0])
-      );
+      return item["Categories"].includes(data.pagination.items[0]);
     }
     // The source data comes from the bundledata.js file that
     // returns the firehose, a json array of all the posts on
