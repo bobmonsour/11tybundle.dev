@@ -1,0 +1,14 @@
+name: Nightly Deploy
+
+on:
+  schedule:
+    # Run the action every night at 1:00 am
+    - cron: "0 1 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Netlify Webhook
+        run: curl -X POST ${{ secrets.NETLIFY_WEBHOOK_URL }}
