@@ -1,5 +1,7 @@
 # 11tybundle.dev
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c8646ab-709e-41a9-a8be-0608543e840a/deploy-status)](https://app.netlify.com/sites/11tybundle/deploys)
+
 ## _A resource for all developers using Eleventy_
 
 ![screengrab of the homepage for 11tybundle.dev](homescreenshot.png)
