@@ -8,7 +8,7 @@ module.exports = async function () {
     type: process.env.TYPE,
     project_id: process.env.PROJECT_ID,
     private_key_id: process.env.PRIVATE_KEY_ID,
-    private_key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"), // Remember, newlines in the private_key need special handling
+    private_key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
     client_email: process.env.CLIENT_EMAIL,
     client_id: process.env.CLIENT_ID,
     auth_uri: process.env.AUTH_URI,
@@ -29,6 +29,8 @@ module.exports = async function () {
 
   await jwtClient.authorize();
 
+  // Identify the specific spreadsheet
+  // The range is the sheet name within the spreadsheet
   const spreadsheetId = key.spreadsheetId;
   const range = key.spreadsheetRange;
 
@@ -48,9 +50,11 @@ module.exports = async function () {
       let row = rows[i];
       let obj = {};
       for (let j = 0; j < headers.length; j++) {
+        // Exclude empty cells (some item types don't have all fields)
         if (row[j]) {
           var itemKey = headers[j];
           var itemValue = row[j].toString();
+          // Convert string of comma-separated values to an array
           if (itemKey === "Categories") {
             itemValue = itemValue.split(",").map((item) => item.trim());
           }

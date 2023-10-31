@@ -12,7 +12,19 @@ class CategoryJsonFiles {
       },
       // These are the categories that generate json files in the api directory
       // For example, "CMS" in this list causes the file cms.json to be created
-      categories: ["Getting Started", "CMS", "Front Matter"],
+      categories: [
+        "CMS",
+        "Data Cascade",
+        "Dates",
+        "Deployment",
+        "Filters",
+        "Front Matter",
+        "Getting Started",
+        "Global Data",
+        "Images",
+        "Pagination",
+        "WebC",
+      ],
       permalink: (data) => `/api/${_.kebabCase(data.pagination.items[0])}.json`,
       eleventyExcludeFromCollections: true,
     };
