@@ -25,24 +25,29 @@ class CategoryJsonFiles {
         "Pagination",
         "WebC",
       ],
+      // Construct the permalink for the json file of the category
       permalink: (data) => `/api/${_.kebabCase(data.pagination.items[0])}.json`,
       eleventyExcludeFromCollections: true,
     };
   }
 
   render(data) {
-    // const bundlePosts = firehose;
+    // Filter the firehose posts for the paginated category
     function isCategory(item) {
       return (
         item["Type"] == "blog post" &&
         item["Categories"].includes(data.pagination.items[0])
       );
     }
+    // The source data comes from the bundledata.js file that
+    // returns the firehose, a json array of all the posts on
+    // the site
     const sortedPosts = data.bundledata.firehose
       .filter(isCategory)
       .sort((a, b) => {
         return a.Date > b.Date ? -1 : 1;
       });
+    // Return the json string of the posts in this category
     return JSON.stringify(sortedPosts, null, 2);
   }
 }
