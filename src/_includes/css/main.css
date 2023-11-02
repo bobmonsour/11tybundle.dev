@@ -432,3 +432,7 @@ fieldset {
   outline: 0;
   border: 1px solid #aaa;
 }
+
+.strikethrough {
+  text-decoration: line-through;
+}

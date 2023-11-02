@@ -43,11 +43,4 @@ module.exports = {
       type: "application/rss+xml",
     },
   ],
-  giscusConfig: {
-    repo: "bobmonsour/11tybundle.dev",
-    repoId: "R_kgDOJWpb4A",
-    category: "Comments",
-    categoryId: "DIC_kwDOJWpb4M4CYgB1",
-    mapping: "pathname",
-  },
 };

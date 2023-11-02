@@ -18,26 +18,10 @@ layout: default.njk
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
       <ul class="post-nextprev">
-        {%- if previousPost %}<li>Previous post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-        {%- if nextPost %}<li>Next post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+        {%- if previousPost %}<li><strong>Previous post:</strong> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+        {%- if nextPost %}<li><strong>Next post:</strong> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
       </ul>
     {%- endif %}
   {%- endif %}
 </article>
-<h2 id="comments">Comments</h2>
-<script src="https://giscus.app/client.js"
-        data-repo="{{site.giscusConfig.repo}}"
-        data-repo-id="{{site.giscusConfig.repoId}}"
-        data-category="{{site.giscusConfig.category}}"
-        data-category-id="{{site.giscusConfig.categoryId}}"
-        data-mapping="{{site.giscusConfig.mapping}}"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+
