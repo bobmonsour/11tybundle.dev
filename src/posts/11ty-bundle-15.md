@@ -10,7 +10,7 @@ tags:
 
 We've got 7 new posts since the last issue. We're over 700 posts now.
 
-I've added [giscus](https://giscus.app/) commenting to these blog posts. So if you have a GitHub account, you can comment here...[see below](#comments). Hat tip to [Bryce Wray](/authors/bryce-wray/) for the [inspiration](https://www.brycewray.com/posts/2023/08/making-giscus-less-gabby/). Though I have not used his details/summary approach to reduce javascript loading until necessary. I may change my mind later. Baby steps. In the mean time, please leave a comment if you're moved to do so.
+I've added [giscus](https://giscus.app/) commenting to these blog posts. So if you have a GitHub account, you can comment here. Hat tip to [Bryce Wray](/authors/bryce-wray/) for the [inspiration](https://www.brycewray.com/posts/2023/08/making-giscus-less-gabby/). Though I have not used his details/summary approach to reduce javascript loading until necessary. I may change my mind later. Baby steps. In the mean time, please leave a comment if you're moved to do so.
 
 _[UPDATE: 11-01-2023]: I have removed the giscus comments on the blog posts. Since adding them back in August, I have received one single comment (thanks Bryce) on any of the blog posts. In the interest of less javascript, they are hereby vanquished._
 

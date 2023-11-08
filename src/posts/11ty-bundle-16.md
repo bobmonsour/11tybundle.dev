@@ -28,7 +28,7 @@ Well, we're off again, but this time out of the country. We'll be in Italy for 2
 
 Then we head to LA to help our son move into a new place. And lastly, it's off to Minnesota to attend a cousin's wedding. It's going to be a busy 2 months. I'll do my best to keep up with the new content.
 
-If you've got ideas or suggestions, please [leave a comment below](#comments). I have a list of things I want to implement, but the concentrated time has just not been available recently.
+I have a list of things I want to implement, but the concentrated time has just not been available recently.
 
 Until next time...
 
