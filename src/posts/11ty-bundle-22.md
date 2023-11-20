@@ -1,0 +1,42 @@
+---
+bundleIssue: 22
+eleventyComputed:
+  title: "Issue {{ bundleIssue }}ty - Happy Thanksgiving!...We've crossed the 800 post threshold...And 14 posts and 11 sites to see."
+  description: "Welcome to Issue {{ bundleIssue }}ty of the 11ty Bundle."
+date: 2023-11-20
+tags:
+  - 11ty Bundle
+---
+
+I've got way too many things on my plate right now (some good, some not so much), so I'm going to keep this issue short and sweet.
+
+If you had told me back in March when I started this project that there would be more than 800 blog posts on this site by Thanksgiving, I'd have called you crazy. But here we are. Fortunately, I still enjoy cranking this stuff out and I hope that you are finding the content to be useful in your own Eleventy journey.
+
+Enjoy the new nuggets below. I hope you have a wonderful Thanksgiving, if you celebrate it. If not, I hope you have a wonderful day.
+
+<img src="/assets/img/turkey.png" alt="An artistic image of a turkey wearing a hat" style="width: 50%; margin: 0 auto;">
+
+Until next time...
+
+<div id="releases"></div>
+
+## Recent releases
+
+{% set itemType = "release" %}
+{% include 'partials/bundleitems.njk' %}
+
+<div id="newposts"></div>
+
+## Posts from around the web since the last Bundle issue
+
+{% set itemType = "blog post" %}
+{% include 'partials/bundleitems.njk' %}
+
+<div id="sites"></div>
+
+## Built with Eleventy
+
+Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
+
+{% set itemType = "site" %}
+{% include 'partials/bundleitems.njk' %}

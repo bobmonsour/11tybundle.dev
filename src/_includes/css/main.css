@@ -30,11 +30,12 @@ body {
 }
 
 :where(h3) {
-  line-height: 1.2;
-  padding-block: 0.5em 0.25em;
-  text-align: left;
   font-size: var(--font-size-md);
   font-style: italic;
+  font-weight: normal;
+  line-height: 1.2;
+  padding-block: 0.5em 0.25em;
+  text-align: center;
 }
 
 /* default <p> */
