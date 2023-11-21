@@ -433,17 +433,10 @@ fieldset {
 
 /* Firehose details and summary styles */
 details {
-  padding: 0 1rem;
   width: min(var(--main-element-max), 100vw - 1em);
 }
-details + details {
-  border-top: none;
-}
-details[open] {
-  padding-bottom: 1em;
-}
 summary {
-  padding: 1rem 2em 1rem 0;
+  padding: 1rem 0;
   font-size: var(--font-size-lg);
   font-weight: bold;
   cursor: pointer;
