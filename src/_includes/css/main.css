@@ -267,7 +267,7 @@ footer {
   width: min(var(--main-element-max), 100vw - 1em);
 }
 
-.bundleposts > .bundleitem {
+.bundleposts .bundleitem {
   background-color: var(--postitem-bg-color);
 }
 .bundlesites {
@@ -350,12 +350,6 @@ footer {
   opacity: 0.5;
 }
 
-/* dark mode based on system setting */
-/* @media (prefers-color-scheme: dark) {
-  html {
-    filter: invert(1) hue-rotate(180deg);
-  }
-} */
 form {
   background: var(--body-bg-color);
   width: 100%;
@@ -416,7 +410,6 @@ fieldset {
   background-color: var(--releaseitem-bg-color);
   color: var(--brand-text-color);
   padding: 10px;
-  /* font-size: var(--default-size); */
 }
 
 #contact button[type="submit"]:hover {
@@ -436,4 +429,22 @@ fieldset {
 
 .strikethrough {
   text-decoration: line-through;
+}
+
+/* Firehose details and summary styles */
+details {
+  padding: 0 1rem;
+  width: min(var(--main-element-max), 100vw - 1em);
+}
+details + details {
+  border-top: none;
+}
+details[open] {
+  padding-bottom: 1em;
+}
+summary {
+  padding: 1rem 2em 1rem 0;
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  cursor: pointer;
 }

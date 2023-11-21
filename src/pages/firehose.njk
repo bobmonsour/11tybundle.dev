@@ -13,7 +13,11 @@ permalink: /firehose/
   {%- for item in bundledata.firehose %}
     {% set year = item.Date | truncate(4, true, '') %}
     {% if item.Date and year != prev_year %}
-      <h2>{{ year }}</h2>
+    {% if prev_year != "" %}
+        </details>
+    {% endif %}
+    <details open>
+    <summary>{{ year }}</summary>
     {% endif %}
     {% set prev_year = year %}
     <div class="bundleitem">
