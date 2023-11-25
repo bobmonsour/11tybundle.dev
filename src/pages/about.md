@@ -24,7 +24,9 @@ Lastly, it seemed that this effort would of best use to the Eleventy community i
 
 So I duplicated my blog repo and began the transformation that would result in the site you are reading now.
 
-There were several learning challenges along the way, including figuring out how to get data from an Airtable database and using Javascript frontmatter to pre-process data for pagination. I also had to decide how to organize the data by category and author. I have learned a ton in the process and there is still more to do. I launched the site without any search capability, but with the size of the site at launch and the navigation by category and author, I don't see that as a critical shortcoming.
+There were several learning challenges along the way, including figuring out how to get data from an Airtable database and using Javascript front matter to pre-process data for pagination. I also had to decide how to organize the data by category and author. I have learned a ton in the process and there is still more to do. I launched the site without any search capability, but with the size of the site at launch and the navigation by category and author, I don't see that as a critical shortcoming.
+
+> [UPDATE] As of October 2023, I have migrated the data source to Google Sheets. I wrote about this transition in a [blog post on my personal site](https://www.bobmonsour.com/posts/scratch-that-use-google-sheets-api/).
 
 I'm very happy with the result and I hope that you find it useful. I don't know if this thing will continue to have any legs or how long I will be able to sustain it. Down the road, I plan to add functionality that will allow other community members to submit content as I am sure that I am not finding everything that could be here.
 
