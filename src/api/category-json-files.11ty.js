@@ -13,6 +13,7 @@ class CategoryJsonFiles {
       // For example, "CMS" in this list causes the file cms.json to be created
       categories: [
         "CMS",
+        "Collections",
         "Data Cascade",
         "Dates",
         "Deployment",
