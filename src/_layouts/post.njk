@@ -1,6 +1,12 @@
 ---
 layout: default.njk
 ---
+{% if snow == "true" %}
+<is-land on:media="(prefers-reduced-motion: no-preference)">
+  <snow-fall style="--snow-fall-color: lightgray"></snow-fall">
+</is-land>
+{% endif %}
+
 {# only include syntax highlighter CSS on blog posts that have code #}
 {% if pageHasCode %}
   {%- css "pageHasCode" %}{% include "css/prism-okaidia.css" %}{% endcss %}

@@ -33,6 +33,13 @@
   {# enable view-transitions, currently behind a flag in Chrome Canary build #}
   <meta name="view-transition" content="same-origin" />
 
+  {# Add snow fall component if snow == "true" in front matter #}
+  {% if snow == "true" %}
+    <script type="module" src="/assets/js/snow-fall.js"></script>
+    <script type="module" src="/assets/js/is-land.js"></script>
+  {% endif %}
+
+
   {# bundle the CSS content used on all pages and get the link to the bundle #}
   {%- css %}
     {% include "css/reset.css" %}
