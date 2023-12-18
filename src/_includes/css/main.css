@@ -107,10 +107,10 @@ img[width][height] {
 }
 
 /* main content constrained by viewport */
-main {
+/* main {
   margin-inline: auto;
   max-inline-size: var(--main-element-max);
-}
+} */
 
 /* brand & navigation (inside <header>) */
 .brand-name {
