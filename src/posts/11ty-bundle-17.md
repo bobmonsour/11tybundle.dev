@@ -12,7 +12,9 @@ Just back from a wonderful 2 weeks in Italy. Still not over the jet lag, but I'm
 
 First up, Zach did a 1-hour-ish video on the topic of Jamstack and what it means and what it could mean. It's a great watch.
 
-<iframe style="display:block; margin:0 auto 1em auto;" width="560" height="315" src="https://www.youtube.com/embed/xVmKdCi-Gpo?si=evHqS2NQFeK7smZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="iframe-wrapper">
+<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/xVmKdCi-Gpo?si=evHqS2NQFeK7smZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 And there are 10 new posts and 5 new sites to check out below.
 

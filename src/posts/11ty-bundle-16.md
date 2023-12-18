@@ -14,7 +14,9 @@ Wow! It's been more than 2 weeks since I've posted one of these. It feels like a
 
 Zach put out a cool video that you can watch here or [on YouTube](https://www.youtube.com/watch?v=yXcxvBJuULU). It's nice to get a look at how CloudCannon works, both the build part and the CMS part.
 
-<iframe style="display:block; margin:0 auto 1em auto;" width="560" height="315" src="https://www.youtube.com/embed/yXcxvBJuULU?si=7Do5I9l4vwA0OL-f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="iframe-wrapper">
+<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/yXcxvBJuULU?si=7Do5I9l4vwA0OL-f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 What's really cool is that he demo's the capabilities by building a microsite that he calls [Educational, Sensational, Inspirational, Foundational](https://esif.dev/), aka [esif.dev](https://esif.dev/). Zach asked the community to suggest "what blog posts were most influential to how you build for the web?" There's something for everyone to learn from. Be sure to [check it out](https://esif.dev/).
 

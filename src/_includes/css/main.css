@@ -107,10 +107,12 @@ img[width][height] {
 }
 
 /* main content constrained by viewport */
-/* main {
+/* max-inline-size: min(var(--page-width-max), 100vw - 0.5em); */
+
+main {
   margin-inline: auto;
-  max-inline-size: var(--main-element-max);
-} */
+  max-inline-size: min(var(--main-element-max), 100vw - .5em);
+}
 
 /* brand & navigation (inside <header>) */
 .brand-name {
@@ -440,4 +442,19 @@ summary {
   font-size: var(--font-size-lg);
   font-weight: bold;
   cursor: pointer;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: min(var(--main-element-max), 100vw - 1em);
+  padding-block-end: 56.25%; /* This creates a 16:9 aspect ratio (9 / 16 * 100) */
+  margin-block-end: 1em;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

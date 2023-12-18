@@ -16,13 +16,17 @@ First off, Zach put out a post on the [Tension and Future of JAMstack](https://w
 
 Second, Zach was interviewed by Mike Neumegen, the CEO of CloudCannon...and it's [All about Eleventy](https://www.youtube.com/watch?v=mZUTXX13X-I). This site gets a shout out, which I felt was pretty cool.
 
-<iframe style="display:block; margin:0 auto 1em auto;" width="560" height="315" src="https://www.youtube.com/embed/mZUTXX13X-I?si=_jc43SX9Sv3Sn39C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="iframe-wrapper">
+<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/mZUTXX13X-I?si=_jc43SX9Sv3Sn39C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Of the two releases, one is for the [IndieWeb Avatar](https://www.11ty.dev/docs/services/indieweb-avatar/), one of several [API Services](https://www.11ty.dev/docs/api-services/) that Zach has built. I'd guess that these largely go un-noticed, so I wanted to highlight them here.
 
 Lastly, and I don't know how new this is, but CloudCannon has a thing called Bookshop, which they describe as a "collection of tooling that provides a component development workflow for static websites, and aids in the creation of a page-building interface in the CloudCannon CMS." They've got a guide on [how to use Bookshop with Eleventy](https://cloudcannon.com/documentation/guides/bookshop-eleventy-guide/). And Zach recently [did a video](https://www.youtube.com/watch?v=AsWt6BTjzyk) to showcase it's use.
 
-<iframe style="display:block; margin:0 auto 1em auto;" width="560" height="315" src="https://www.youtube.com/embed/AsWt6BTjzyk?si=3dsVT3N9G55zWdQ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="iframe-wrapper">
+<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/AsWt6BTjzyk?si=3dsVT3N9G55zWdQ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 That's it for this issue. Until next time...
 
