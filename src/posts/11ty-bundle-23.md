@@ -24,9 +24,7 @@ Of the two releases, one is for the [IndieWeb Avatar](https://www.11ty.dev/docs/
 
 Lastly, and I don't know how new this is, but CloudCannon has a thing called Bookshop, which they describe as a "collection of tooling that provides a component development workflow for static websites, and aids in the creation of a page-building interface in the CloudCannon CMS." They've got a guide on [how to use Bookshop with Eleventy](https://cloudcannon.com/documentation/guides/bookshop-eleventy-guide/). And Zach recently [did a video](https://www.youtube.com/watch?v=AsWt6BTjzyk) to showcase it's use.
 
-<div class="iframe-wrapper">
-<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/AsWt6BTjzyk?si=3dsVT3N9G55zWdQ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+<iframe src="https://www.youtube.com/embed/AsWt6BTjzyk?si=3dsVT3N9G55zWdQ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 That's it for this issue. Until next time...
 
