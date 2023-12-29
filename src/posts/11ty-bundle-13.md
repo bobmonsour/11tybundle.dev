@@ -14,10 +14,6 @@ We've got 7 new posts since the last issue...and apparently, I've managed to mis
 
 Note that even without Ray's treasure trove, we've crossed the 600 post milestone.
 
-There are just two new sites to share. Regrettably, neither of them contain a meta description tag to share.
-
-Lastly, Geoffrey Callaghan and his team have built a [form backend service](https://fabform.io/for/Eleventy) to support your Eleventy sites. It's called [fabform.io](https://fabform.io/for/Eleventy). They also support a wide variety of other platforms. I have not had a chance to use it, but if your site needs form support, you should check it out.
-
 <div id="releases"></div>
 
 ## Recent releases
