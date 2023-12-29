@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2023-12-17
 tags:
   - 11ty Bundle
-pageHasCode: true
 snow: "true"
 ---
 
@@ -22,7 +21,7 @@ npm install @11ty/eleventy@canary --save-exact
 
 Read the instructions carefully as there are some other caveats that depend on certain plugins you may be using. This site runs pretty vanilla, so that was all I had to do to get the alpha of 3.0 running.
 
-Check out [Zach's blog post](https://www.11ty.dev/blog/canary-eleventy-v3/) and give it a try on one or a few of your side projects or other non-critical projects. It's incredibly easy to do. Let's help shake the bugs out of it. 
+Check out [Zach's blog post](https://www.11ty.dev/blog/canary-eleventy-v3/) and give it a try on one or a few of your side projects or other non-critical projects. It's incredibly easy to do. Let's help shake the bugs out of it.
 
 Earlier in the week Zach released some fun in the form of a [snow-fall web component](https://www.zachleat.com/web/snow-fall/). You're seeing it now on this blog post. I also have it running on my personal site. There, it's on every page. But for this site, I've set it up as a front matter setting so I can control where it appears. Right now, it's only on this post.
 
