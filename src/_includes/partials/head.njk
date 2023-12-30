@@ -6,6 +6,54 @@
   <meta name="description" content="{{ description }}">
   <meta name="keywords" content="{{ keywords }}">
 
+  {# enable view-transitions, currently behind a flag in Chrome Canary build #}
+  <meta name="view-transition" content="same-origin" />
+
+  {# add snow fall component if snow == "true" in front matter #}
+  {% if snow == "true" %}
+    <script type="module" src="/assets/js/snow-fall.js"></script>
+    <script type="module" src="/assets/js/is-land.js"></script>
+  {% endif %}
+
+  {#
+    conditionally load the syntax highlighting styles per
+    front matter 'pageHasCode' in blog posts. the post.njk
+    layout declares the appropriate prismjs styles
+  #}
+  {% if pageHasCode %}
+    <link rel="preload" href="{% getBundleFileUrl "css", "pageHasCode" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="{% getBundleFileUrl "css", "pageHasCode" %}" rel="stylesheet">
+    </noscript>
+  {% endif %}
+
+  {#
+    conditionally load any page-specific styles per front matter
+    'stylelink'. useful for selectively loading things like the
+    pagefind css (on the search page)
+  #}
+  {% if stylelink %}
+    <link href="{{stylelink}}" rel="stylesheet">
+  {% endif %}
+
+  {# bundle the CSS content used on all pages and get the link to the bundle #}
+  {%- css %}
+    {% include "css/reset.css" %}
+    {% include "css/variables.css" %}
+    {% include "css/main.css" %}
+    {% include "css/contact.css" %}
+  {% endcss %}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+
+  <!-- Fathom analytics - don't include in development mode -->
+  {% if site.env != "development" %}
+    <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+  {% endif %}
+
+  {# Improve RSS feed visibility #}
+  <link rel="alternate" href="/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
+  <link rel="alternate" href="/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
+
   {# favicon settings #}
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,46 +71,9 @@
   <meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
   <meta property="og:image:alt" content="the number 11 as photographed by David Monje on Unsplash">
 
-  <meta name="generator" content="{{ eleventy.generator }}">
-
   {# Apple tags #}
   <meta name="apple-mobile-web-app-title" content="11ty Bundle" />
   <meta name="application-name" content="11ty Bundle" />
 
-  {# enable view-transitions, currently behind a flag in Chrome Canary build #}
-  <meta name="view-transition" content="same-origin" />
-
-  {# Add snow fall component if snow == "true" in front matter #}
-  {% if snow == "true" %}
-    <script type="module" src="/assets/js/snow-fall.js"></script>
-    <script type="module" src="/assets/js/is-land.js"></script>
-  {% endif %}
-
-
-  {# bundle the CSS content used on all pages and get the link to the bundle #}
-  {%- css %}
-    {% include "css/reset.css" %}
-    {% include "css/variables.css" %}
-    {% include "css/main.css" %}
-  {% endcss %}
-
-  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-
-  {# if there's syntax highlighted code on the page, add the required stylesheet #}
-  {% if pageHasCode %}
-    <link rel="preload" href="{% getBundleFileUrl "css", "pageHasCode" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="{% getBundleFileUrl "css", "pageHasCode" %}" rel="stylesheet">
-    </noscript>
-    {# <link rel="stylesheet" href="{% getBundleFileUrl "css", "pageHasCode" %}"> #}
-  {% endif %}
-
-  <!-- Fathom - beautiful, simple website analytics - do not include when site is in development mode-->
-  {% if site.env != "development" %}
-    <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
-  {% endif %}
-  <!-- / Fathom -->
-
-  <link rel="alternate" href="/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
-  <link rel="alternate" href="/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
+  <meta name="generator" content="{{ eleventy.generator }}">
 </head>

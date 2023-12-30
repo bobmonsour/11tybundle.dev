@@ -1,11 +1,10 @@
 form {
   background: var(--body-bg-color);
-  color: var(--brand-color);
   width: 100%;
   margin: 30px auto;
   padding: 20px 10px 10px 10px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: var(--contact-form-radius);
+  border-radius: 0.5rem;
 }
 
 fieldset {
@@ -15,7 +14,7 @@ fieldset {
   padding: 0;
   width: 100%;
 }
-// hide spam protection field
+/* hide spam protection field */
 .other-form-field {
   display: none;
 }
@@ -33,16 +32,13 @@ fieldset {
   background: #fff;
   margin: 0 0 5px;
   padding: 10px;
-  font-family: var(--default-font);
+  /* font-family: var(--default-font); */
 }
 
 #contact input[type="text"]:hover,
 #contact input[type="email"]:hover,
 #contact input[type="subject"],
 #contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
   border: 1px solid #aaa;
 }
 
@@ -58,19 +54,15 @@ fieldset {
   cursor: pointer;
   width: 200px;
   border: none;
-  border-radius: var(--contact-button-radius);
-  background-color: var(--brand-color);
-  color: var(--default-color);
+  border-radius: 0.5rem;
+  background-color: var(--releaseitem-bg-color);
+  color: var(--brand-text-color);
   padding: 10px;
-  font-family: var(--default-font);
-  font-size: var(--default-size);
 }
 
 #contact button[type="submit"]:hover {
-  background-color: var(--brand-color);
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  background-color: var(--link-hover-bg-color);
+  color: var(--link-hover-text-color);
 }
 
 #contact button[type="submit"]:active {
