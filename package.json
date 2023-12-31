@@ -4,13 +4,17 @@
   "description": "A bundle of Eleventy releases, blog posts, sites, and resources. Over 500 posts from more than 200 authors.",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
+    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "postbuild": "npx -y pagefind --site _site",
+    "postdev": "npx -y pagefind --site _site --serve",
     "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "links": "npx check-html-links _site",
     "clean": "rimraf ./_site",
-    "rs": "npm run clean && npm run start"
+    "rs": "npm run clean && npm run start && npm run postdev",
+    "rsns": "npm run clean && npm run startns"
   },
   "keywords": [],
   "author": {
@@ -27,6 +31,7 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@rknightuk/eleventy-plugin-post-graph": "^1.0.6",
     "airtable": "^0.11.6",
     "check-html-links": "^0.2.4",
     "cheerio": "^1.0.0-rc.12",
@@ -35,6 +40,7 @@
     "lodash": "^4.17.21",
     "netlify-plugin-cache": "^1.0.3",
     "node-fetch": "^2.6.7",
+    "pagefind": "^1.0.4",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
     "postcss-minify": "^1.1.0",

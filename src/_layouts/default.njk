@@ -5,9 +5,6 @@
 
   {% include "partials/header.njk" %}
 
-  {# if we're in dev, say so on every page #}
-  {% if site.env == "development" %}<p>{{ site.env }}</p>{% endif %}
-
   <main id="main-content" class="content">
     {{ content | safe }}
   </main>

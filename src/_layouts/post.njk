@@ -14,7 +14,7 @@ layout: default.njk
 
 {%- if draft == "true" -%}<h1>DRAFT</h1>{%- endif -%}
 
-<article class="post">
+<article class="post" data-pagefind-body>
   <h1 class="post-title">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }}</p>
   <p class="post-readingtime">{{ content | readingTime }}</p>
@@ -23,7 +23,7 @@ layout: default.njk
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
-      <ul class="post-nextprev">
+      <ul class="post-nextprev" data-pagefind-ignore>
         {%- if previousPost %}<li><strong>Previous post:</strong> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
         {%- if nextPost %}<li><strong>Next post:</strong> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
       </ul>

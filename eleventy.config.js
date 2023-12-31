@@ -15,7 +15,9 @@ const {
   postsByAuthor,
   readingTime,
 } = require("./config/filters/filters.js");
+
 // Plugin references
+const postGraph = require("@rknightuk/eleventy-plugin-post-graph");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
@@ -48,6 +50,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readingTime", readingTime);
 
   // Plugins
+  eleventyConfig.addPlugin(postGraph, {
+    sort: "desc",
+    boxColor: "darkgray",
+    highlightColor: "red",
+    textColor: "#fff",
+  });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
   // eleventyConfig.setQuietMode(true);

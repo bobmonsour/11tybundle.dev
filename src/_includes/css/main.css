@@ -209,6 +209,15 @@ img[width][height] {
   padding: 0.25em;
 }
 
+.aux-links {
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  margin-top: 3em;
+}
+
 /* post elements */
 .post-title {
   font-size: var(--post-title-full-size);
@@ -216,7 +225,7 @@ img[width][height] {
 }
 .post-date,
 .post-readingtime {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-style: italic;
   margin-block: 0.25em 0;
   padding: 0;

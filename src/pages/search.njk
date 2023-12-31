@@ -1,0 +1,19 @@
+---
+title: Search the Blog
+description: Search the Blog
+keywords: search
+permalink: /blog/search/
+stylelink: /pagefind/pagefind-ui.css
+---
+<h1>{{ title }}</h1>
+<div class="aux-links">
+<a href="/blog/post-graph/">Post Graph</a>&nbsp;&nbsp;&nbsp;<a href="/blog/">Back to the Blog</a>
+</div>
+{# Let's put the pagefind search stuff here for now #}
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true, showImages: false });
+    });
+</script>

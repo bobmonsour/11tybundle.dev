@@ -5,7 +5,10 @@ eleventyComputed:
 permalink: /authors-by-count/
 ---
 
-<h1>{{ title }} (<a href="/authors/">sort by name</a>)</h1>
+<h1>{{ title }}</h1>
+<div class="aux-links">
+  <a href="/authors/">Sort by name</a>
+</div>
 <div class="allauthors-list">
   <ul class="authorslist">
     {% for author in bundledata.authorsByCount %}
