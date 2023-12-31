@@ -264,11 +264,10 @@ footer {
 .bundleposts .bundleitem {
   background-color: var(--postitem-bg-color);
 }
-.bundlesites {
-  border-radius: 0.5rem;
-  padding: 1rem;
+.bundlesites .bundleitem {
   background-color: var(--siteitem-bg-color);
 }
+
 .bundleitem-title {
   font-size: var(--font-size-md);
   font-weight: bold;

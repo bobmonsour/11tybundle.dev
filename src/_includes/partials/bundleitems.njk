@@ -32,8 +32,10 @@
 {# sites #}
   <div class="bundlesites">
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
-    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></a></p>
-    <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+    <div class="bundleitem">
+      <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></a></p>
+      <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+    </div>
   {%- endfor -%}
   </div>
 {% endif %}
