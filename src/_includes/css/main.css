@@ -211,7 +211,7 @@ img[width][height] {
 
 .aux-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 3rem;
 }
 
