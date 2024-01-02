@@ -97,15 +97,20 @@ img[width][height] {
   height: auto; /* Preserve aspect ratio */
 }
 
-/* main content constrained by body width */
+/*
+  main content constrained by body width
+  this is inspired/copyied-from Ryan Mulligan's blog
+  see it at: https://ryanmulligan.dev/blog/layout-breakouts/
+*/
 .content {
   --gap: clamp(0.25rem, 3vw, 1rem);
   --full: minmax(var(--gap), 1fr);
-  --content: min(65ch, 100% - var(--gap) * 2);
+  --content: min(70ch, 100% - var(--gap) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
 
   display: grid;
+  place-content: start;
   grid-template-columns:
     [full-start] var(--full)
     [feature-start] var(--feature)
@@ -136,11 +141,14 @@ img[width][height] {
 /* site name as 'home' link */
 .brand-link {
   border: none;
-  display: block;
   font-family: var(--brand-font);
   font-size: var(--font-size-lg);
-  padding: 0.5em 0;
+  margin: 0.5em auto;
   text-align: center;
+}
+.brand-link a {
+  border: none;
+  padding: 0.25em;
   text-decoration: none;
 }
 .brand-nav {
@@ -196,8 +204,8 @@ img[width][height] {
 
 .categorieslist,
 .authorslist {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(10em, 100%), 1fr));
   gap: 0.5em;
   margin: 0 auto;
 }
@@ -205,11 +213,19 @@ img[width][height] {
 .authorslist a {
   padding: 0.25em;
 }
-
+.reduced-to-base {
+  font-size: var(--font-size-base);
+  font-weight: normal;
+}
+.reduced-to-md {
+  font-size: var(--font-size-md);
+  font-weight: normal;
+}
 .aux-links {
-  display: flex;
-  justify-content: space-around;
-  gap: 3rem;
+  margin-inline: auto;
+}
+.aux-links a {
+  margin-inline: 0.5em;
 }
 
 #search {

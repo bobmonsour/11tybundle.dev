@@ -55,7 +55,14 @@ module.exports = async function () {
   // generate a 2-dimensional array of categories and the
   // count of posts in each category; ; records comes from
   // the firehose array, which are all blog posts
-  const categoryList = (records) => {
+  const categoryList = (records, sortField) => {
+    function categorySort(a, b) {
+      if (sortField == "category") {
+        return a[0].localeCompare(b[0]);
+      } else {
+        return a[1] < b[1] ? 1 : -1;
+      }
+    }
     let categoryMap = new Map();
     for (let item of records) {
       item.Categories.forEach((category) => {
@@ -63,9 +70,7 @@ module.exports = async function () {
         categoryMap.set(category, postCount + 1);
       });
     }
-    return Array.from(categoryMap).sort((a, b) => {
-      return a[0] > b[0] ? 1 : -1;
-    });
+    return Array.from(categoryMap).sort(categorySort);
   };
 
   // generate counts of posts, starters, authors, and categories
@@ -82,7 +87,9 @@ module.exports = async function () {
 
   // list of categories and count of blog posts with the category
   // and the total category count; firehose contains all blog posts
-  const categories = categoryList(firehose);
+  // 2nd param of categoryList is the field to sort by
+  const categories = categoryList(firehose, "category");
+  const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
 
   // get the count of the number of posts in the Getting Started category
@@ -123,6 +130,7 @@ module.exports = async function () {
     authorsByCount,
     authorCount,
     categories,
+    categoriesByCount,
     categoryCount,
     gettingStartedCount,
   };

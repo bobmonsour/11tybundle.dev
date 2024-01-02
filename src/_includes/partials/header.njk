@@ -2,7 +2,9 @@
   <a href="#main-content" id="visually-hidden">Skip to main content</a>
   {# <a href='#' class="stt" title="scroll to top"></a> #}
   {# if we're in dev, say so on every page #}
-  <a href="/" class="brand-link">{% raw %}{{ 11tybundle.dev }}{% endraw %}</a>
+  <div class="brand-link">
+    <a href="/">{% raw %}{{ 11tybundle.dev }}{% endraw %}</a>
+  </div>
   {# {% if site.env == "development" %}<p>{{ site.env }}</p>{% endif %} #}
 {#
   Note: the header and footer include different navigation.
