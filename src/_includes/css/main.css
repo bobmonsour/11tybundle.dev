@@ -278,17 +278,27 @@ footer {
 .bundleitem-title {
   font-size: var(--font-size-md);
   font-weight: bold;
+  margin-block: 0;
   padding-block: 0;
 }
 .bundleitem-description {
   font-style: italic;
   font-size: var(--font-size-base);
-  margin-block-end: 0.25rem;
+  margin-block: 0;
+  padding-block-start: 0;
+  padding-block-end: 1em;
 }
 .bundleitem-dateline,
 .bundleitem-categories {
   font-size: var(--font-size-base);
+  margin-block: 0;
   padding-block: 0;
+}
+.bundleitem-categories {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 0.15em;
 }
 
 .officialdocs {

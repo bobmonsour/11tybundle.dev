@@ -12,7 +12,16 @@ module.exports = async function () {
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
-  const testitems = firehose.slice(0, 3);
+
+  // for testing with mobile breakage
+  // const firehose = bundleRecords
+  //   .filter(
+  //     (item) => item["Type"] == "blog post" && item["Date"].startsWith("2020")
+  //   )
+  //   .sort((a, b) => {
+  //     return a.Date > b.Date ? -1 : 1;
+  //   });
+  // const testitems = firehose.slice(0, 26);
 
   // generate the list of starter projects, an array descending date order
   const starters = bundleRecords
@@ -106,7 +115,7 @@ module.exports = async function () {
   return {
     bundleRecords,
     firehose,
-    testitems,
+    // testitems,
     postCount,
     starters,
     starterCount,
