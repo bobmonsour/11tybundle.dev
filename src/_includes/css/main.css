@@ -105,7 +105,7 @@ img[width][height] {
 .content {
   --gap: clamp(0.25rem, 3vw, 1rem);
   --full: minmax(var(--gap), 1fr);
-  --content: min(70ch, 100% - var(--gap) * 2);
+  --content: min(65ch, 100% - var(--gap) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
 
