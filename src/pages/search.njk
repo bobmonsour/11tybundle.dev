@@ -9,7 +9,7 @@ stylelink: /pagefind/pagefind-ui.css
 <div class="aux-links">
   <a href="/blog/post-graph/">Post Graph</a>&nbsp;&nbsp;&nbsp;<a href="/blog/">Back to the Blog</a>
 </div>
-<p>Note: This only searches the issues of the <a href="/blog/">11ty Bundle Blog</a>, not the posts that are aggregated on the site. The <a href="/firehose">Firehose</a> has the complete list of those <a href="/firehose"><strong>{{ bundledata.postCount }} posts</strong></a>. You can use the "find on page" feature of your browser to search them.</p>
+<p>Note: This only searches the {{ collections.posts.length }} issues of the <a href="/blog/">11ty Bundle Blog</a>, not the posts that are aggregated on the site. The <a href="/firehose">Firehose</a> has the complete list of those <a href="/firehose"><strong>{{ bundledata.postCount }} posts</strong></a>. You can use the "find on page" feature of your browser to search them.</p>
 
 {# Let's put the pagefind search stuff here for now #}
 <script src="/pagefind/pagefind-ui.js"></script>
