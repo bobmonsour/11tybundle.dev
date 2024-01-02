@@ -16,9 +16,11 @@ permalink: /starters/
 <p>And if you're new to Eleventy, you'll find links to more than 40 blog posts in the <a href="/categories/getting-started/">Getting Started</a> section of this site.</p>
 
 {# starters #}
-  <div class="bundlestarters">
+<div class="bundleposts">
   {%- for item in bundledata.starters %}
+  <div class="bundleitem">
     <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-  {%- endfor -%}
   </div>
+  {%- endfor -%}
+</div>

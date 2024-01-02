@@ -283,7 +283,10 @@ footer {
   margin-block-end: 1rem;
   margin-inline: auto;
 }
-
+.bundleposts,
+.bundlesites {
+  padding-block-start: 1em;
+}
 .bundleposts .bundleitem {
   background-color: var(--postitem-bg-color);
 }
