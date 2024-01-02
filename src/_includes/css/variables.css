@@ -34,7 +34,6 @@
   --post-title-full-size: var(--font-size-xl);
   --post-title-card-size: var(--font-size-lg);
   --caption-size: var(--font-size-base);
-  --main-element-max: 65ch;
 
   /* Configure the Pagefind UI */
   --pagefind-ui-scale: 1;

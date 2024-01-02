@@ -4,34 +4,35 @@ eleventyComputed:
   description: "A list of {{ bundledata.postCount }} blog posts by year"
 permalink: /firehose/
 ---
-{% from "macros.njk" import itemTitle, itemDateline %}
+{%- from "macros.njk" import itemTitle, itemDateline -%}
 
 <h1>{{ title }}</h1>
 <h3>The Firehose has it's own <a href="/firehosefeed.xml">RSS feed</a>!</h3>
-<div class="bundleposts content">
+<div class="bundleposts">
   {# We've processed no posts...yet #}
-  {% set previous_year = "no posts yet" %}
-  {% for item in bundledata.firehose %}
-    {# Post dates are formatted as yyy-mm-yy, so we can extract the year #}
-    {% set current_year = item.Date | truncate(4, true, '') %}
-    {#
-      If there's a change from post to post in the year part of the date,
-      and if it's not the first post, close the previous details tag and
-      open a new one. And set the previous year to the current post's year.
-    #}
-    {% if current_year != previous_year %}
-      {% if previous_year != "no posts yet" %}
+  {%- set previous_year = "no posts yet" -%}
+  {#
+    Post dates are formatted as yyy-mm-yy, so we can extract the year.
+    If there's a change from post to post in the year part of the date,
+    and if it's not the first post, close the previous details tag and
+    open a new one. And set the previous year to the current post's year.
+  #}
+  {%- for item in bundledata.firehose -%}
+    {%- set current_year = item.Date | truncate(4, true, '') -%}
+    {%- if current_year != previous_year -%}
+      {%- if previous_year != "no posts yet" -%}
         </details>
-      {% endif %}
+      {%- endif -%}
       <details open>
       <summary>{{ current_year }}</summary>
-      {% set previous_year = current_year %}
-    {% endif %}
+      {%- set previous_year = current_year -%}
+    {%- endif -%}
     <div class="bundleitem">
       {{ itemTitle(item.Title, item.Link, item.id, item.Type) }}
       <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
       {{ itemDateline(item.Author, item.Date) }}
-      <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
+      <p class="bundleitem-categories">Categories: {%- for category in item.Categories  | sort -%}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{%- endfor -%}</p>
     </div>
-  {% endfor %}
+  {%- endfor -%}
+  </details>
 </div>

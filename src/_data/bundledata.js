@@ -12,6 +12,7 @@ module.exports = async function () {
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
     });
+  const testitems = firehose.slice(0, 3);
 
   // generate the list of starter projects, an array descending date order
   const starters = bundleRecords
@@ -105,6 +106,7 @@ module.exports = async function () {
   return {
     bundleRecords,
     firehose,
+    testitems,
     postCount,
     starters,
     starterCount,
