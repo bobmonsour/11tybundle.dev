@@ -25,10 +25,10 @@
 {% if linkstodocs[category[0]] %}
 <h2>Official 11ty docs</h2>
 <div class="officialdocs">
-  <p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}" target="_blank">{{ category[0] }}</a></p>
+  <p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}" data-link-type="external">{{ category[0] }}</a></p>
   <p class="bundleitem-description">{{ linkstodocs[category[0]] | getDescription | truncate(100) }}</p>
   {%- if category[0] == "Deployment" %}
-  <p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" target="_blank">list of providers on the 11ty docs site.</a></p>
+  <p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" data-link-type="external">list of providers on the 11ty docs site.</a></p>
   {%- endif %}
 </div>
 {% endif %}

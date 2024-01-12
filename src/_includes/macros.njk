@@ -19,7 +19,7 @@
   Generate the markup for the title line of each displayed post.
 #}
 {%- macro itemTitle(title, link, id) -%}
-  <p class="bundleitem-title"><a href="{{ link }}" target="_blank">{{ title }}</a></p>
+  <p class="bundleitem-title"><a href="{{ link }}" data-link-type="external">{{ title }}</a></p>
 {%- endmacro -%}
 
 {#

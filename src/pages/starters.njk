@@ -9,9 +9,9 @@ permalink: /starters/
 
 <p class="intro">Here's a list of starter projects you can use to jumpstart your use of Eleventy. I've selected these based on recency of updating, traction that they appear to have as subjectively determined by the number of Github stars on their respective repos, and the clarity of their READMEs.</p>
 
-<p>You'll also find links to <strong>eleventy billion</strong> <a href="https://www.11ty.dev/docs/starter/" target="_blank">more starter projects on the 11ty docs site</a>.</p>
+<p>You'll also find links to <strong>eleventy billion</strong> <a href="https://www.11ty.dev/docs/starter/" data-link-type="external">more starter projects on the 11ty docs site</a>.</p>
 
-<p>With Zach's recent move to CloudCannon, I thought I'd share a link to a blog post by David Large of CloudCannon. Davis lists <a href="https://cloudcannon.com/blog/11-top-eleventy-blog-themes-starters-in-2023/" target="_blank">11 Top Eleventy Blog Themes (Starters) in 2023</a>. The post is from December 2022, but close enough.</p>
+<p>With Zach's recent move to CloudCannon, I thought I'd share a link to a blog post by David Large of CloudCannon. Davis lists <a href="https://cloudcannon.com/blog/11-top-eleventy-blog-themes-starters-in-2023/" data-link-type="external">11 Top Eleventy Blog Themes (Starters) in 2023</a>. The post is from December 2022, but close enough.</p>
 
 <p>And if you're new to Eleventy, you'll find links to more than 40 blog posts in the <a href="/categories/getting-started/">Getting Started</a> section of this site.</p>
 
@@ -19,7 +19,7 @@ permalink: /starters/
 <div class="bundleposts">
   {%- for item in bundledata.starters %}
   <div class="bundleitem">
-    <p class="bundleitem-title"><a href="{{ item.Link }}" target="_blank">{{ item.Title }}</a></p>
+    <p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
   </div>
   {%- endfor -%}

@@ -58,7 +58,7 @@ a:focus {
 }
 
 /* indicator for all external links */
-a[target="_blank"]::after {
+a[data-link-type="external"]::after {
   content: "";
   background: no-repeat var(--icon-external-link);
   padding-right: 1em;
