@@ -79,7 +79,7 @@ a[data-link-type="external"]::after {
 
 /* default <blockquote> */
 :where(blockquote) {
-  border-inline-start: thick solid var(--dark-accent-color);
+  border-inline-start: 2vw solid var(--dark-accent-color);
   font-style: italic;
   padding: 0 min(1em, 4vw);
   margin: 1em 0;

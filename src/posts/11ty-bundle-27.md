@@ -8,6 +8,8 @@ tags:
   - 11ty Bundle
 ---
 
+> [UPDATE January 17, 2024]: I forgot to mention the upcoming [TheJam.dev](https://cfe.dev/events/the-jam-2024/) conference. It's a FREE, online conference on January 24th and 25th. [Check it out](https://cfe.dev/events/the-jam-2024/). Zach is one of the speakers along with several of more members of the Eleventy community.
+
 Well, we've crossed the 900 post threshold! I've got some ideas for what to do when we cross 1,000, so stay tuned.
 
 A new [Introduction to Eleventy](https://thenewstack.io/introduction-to-eleventy-a-modern-static-website-generator/) has been making the rounds. If you're brand new to Eleventy, it's not a bad place to start. There's not a lot of depth to it, but as it says..."This should be enough to stir some enthusiasm in you to write your own site, or perhaps be enough to put you off." David plans to write some deeper posts and I'll keep my eye out for them.
