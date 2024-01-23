@@ -79,9 +79,9 @@ a[data-link-type="external"]::after {
 
 /* default <blockquote> */
 :where(blockquote) {
-  border-inline-start: 2vw solid var(--dark-accent-color);
+  border-inline-start: 1vw solid var(--dark-accent-color);
   font-style: italic;
-  padding: 0 min(1em, 4vw);
+  padding: 1em min(1em, 4vw);
   margin: 1em 0;
 }
 
@@ -395,10 +395,13 @@ summary {
 }
 
 /* responsive video */
+.iframe-wrapper {
+  margin-block: 1em;
+}
 iframe[src*="youtube"] {
   aspect-ratio: 16 / 9;
   height: auto;
-  margin-block-end: 1em;
+  margin-block: 1em;
   max-width: 100%;
   width: 100%;
 }
