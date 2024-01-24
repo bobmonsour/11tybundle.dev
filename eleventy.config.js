@@ -14,7 +14,7 @@ const {
   postsInCategory,
   postsByAuthor,
   readingTime,
-} = require("./config/filters/filters.js");
+} = require("./config/filters/index.js");
 
 // Plugin references
 const postGraph = require("@rknightuk/eleventy-plugin-post-graph");

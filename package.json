@@ -37,6 +37,7 @@
     "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "netlify-plugin-cache": "^1.0.3",
     "node-fetch": "^2.6.7",
