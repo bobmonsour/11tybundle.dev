@@ -19,6 +19,7 @@ layout: default.njk
   <p class="post-date">{{ date | formatPostDate }}</p>
   <p class="post-readingtime">{{ content | readingTime }}</p>
   {{ content | safe }}
+  {% include 'webmentions.njk' %}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}

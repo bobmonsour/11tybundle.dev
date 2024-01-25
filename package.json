@@ -45,7 +45,8 @@
     "path": "^0.12.7",
     "postcss": "^8.4.21",
     "postcss-minify": "^1.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "sanitize-html": "^2.11.0"
   },
   "dependencies": {
     "googleapis": "^128.0.0"

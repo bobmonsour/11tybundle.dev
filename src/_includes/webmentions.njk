@@ -1,0 +1,43 @@
+{#
+  Determine if there are any mentions to display.
+  Loop over the various type of mentions. Includes
+  the following types of mentions:
+    - replies
+    - likes
+    - reposts
+#}
+{% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
+{% if  mentions.mentionCount > 0 %}
+  <div class="webmentions flow" id="webmentions">
+    {% if mentions.comments %}
+    <h3>Comments ({{ mentions.comments | length }})</h3>
+    <div class="comments">
+      {% for item in mentions.comments %}
+        <div class="comment">
+          <a href="{{ item.author.url }}" class="comment-author"><img src="{{ item.author.photo}}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+          <p class="comment-date">{{ item.published | plainDate }}</p>
+          <p class="comment-content">{{ item.content | safe }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if mentions.likes %}
+    <h3>Likes ({{ mentions.likes | length }})</h3>
+    <div class="likes">
+      {% for item in mentions.likes %}
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if mentions.reposts %}
+    <h3>Reposts ({{ mentions.reposts | length }})</h3>
+    <div class="reposts">
+      {% for item in mentions.reposts %}
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+{% endif %}

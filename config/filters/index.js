@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const cheerio = require("cheerio");
+const sanitizeHTML = require("sanitize-html");
 
 // Determine whether or not to highlight current page in the nav
 // if the link text appears within the page url, then do highlight
@@ -210,7 +211,7 @@ const webmentionsByUrl = (webmentions, url) => {
 
   const pageWebmentions = webmentions
     .filter(
-      (mention) => mention["wm-target"] === "https://www.bobmonsour.com" + url
+      (mention) => mention["wm-target"] === "https://11tybundle.dev" + url
     )
     .sort((a, b) => new Date(b.published) - new Date(a.published))
     .map(sanitize);
@@ -236,8 +237,17 @@ const webmentionsByUrl = (webmentions, url) => {
   // console.log(JSON.stringify(comments, null, 2));
 
   const mentionCount = likes.length + reposts.length + comments.length;
+  // console.log("mentionCount: ", mentionCount);
   const data = { likes, reposts, comments, mentionCount };
   return data;
+};
+
+// create a plain date from an ISO date (for webmentions)
+const plainDate = (isoDate) => {
+  let date = new Date(isoDate);
+  let options = { year: "numeric", month: "long", day: "numeric" };
+  let formattedDate = date.toLocaleDateString("en-US", options);
+  return formattedDate;
 };
 
 module.exports = {
@@ -251,4 +261,5 @@ module.exports = {
   postsByAuthor,
   readingTime,
   webmentionsByUrl,
+  plainDate,
 };

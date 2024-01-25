@@ -9,7 +9,7 @@ module.exports = async function () {
     type: "json",
   });
   const webmentions = await res;
-  // fs.writeFileSync("webmentions.json", JSON.stringify(webmentions, null, 2));
+  fs.writeFileSync("webmentions.json", JSON.stringify(webmentions, null, 2));
   // console.log(JSON.stringify(webmentions, null, 2));
   return {
     mentions: webmentions.children,

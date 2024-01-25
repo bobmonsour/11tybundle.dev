@@ -97,6 +97,10 @@ img[width][height] {
   height: auto; /* Preserve aspect ratio */
 }
 
+.flow > * + * {
+  margin-block-start: var(--flow-space);
+}
+
 /*
   main content constrained by body width
   this is inspired/copyied-from Ryan Mulligan's blog
@@ -264,6 +268,62 @@ img[width][height] {
   text-wrap: balance;
 }
 /* end post elements */
+
+/* webmention styles */
+.webmentions {
+  grid-column: popout;
+  margin-block-start: var(--space-l);
+}
+.mention-image {
+  border: 3px solid var(--dark-accent-color);
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+}
+.mention-image:is(:hover, :focus) {
+  background-color: transparent;
+  opacity: 0.8;
+  outline: 20px solid var(--light-accent-color);
+}
+.comment {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "image content"
+    "image date";
+  margin-block-end: var(--space-m);
+}
+.comment a:has(img) {
+  border: none;
+}
+.comment-author {
+  grid-area: image;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+}
+.comment-content {
+  margin: 0;
+}
+.comment-date {
+  font-size: var(--font-size-base);
+  font-style: italic;
+  justify-self: left;
+  line-height: 1;
+}
+.likes,
+.reposts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: var(--space-l);
+  row-gap: var(--space-s);
+}
+.likes a:has(img),
+.reposts a:has(img) {
+  border: none;
+  margin: -5px;
+}
 
 footer {
   border-bottom: 0;

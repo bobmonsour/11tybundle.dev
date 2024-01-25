@@ -14,6 +14,8 @@ const {
   postsInCategory,
   postsByAuthor,
   readingTime,
+  webmentionsByUrl,
+  plainDate,
 } = require("./config/filters/index.js");
 
 // Plugin references
@@ -48,6 +50,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);
   eleventyConfig.addFilter("readingTime", readingTime);
+  eleventyConfig.addFilter("webmentionsByUrl", webmentionsByUrl);
+  eleventyConfig.addFilter("plainDate", plainDate);
 
   // Plugins
   eleventyConfig.addPlugin(postGraph, {
