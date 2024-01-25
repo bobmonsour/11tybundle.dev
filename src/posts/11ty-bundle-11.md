@@ -16,7 +16,7 @@ I've got just two new sites for this issue. And I'm thinking that the [Eleventy 
 
 I will continue to list releases when they occur, though there are no new ones to report this issue.
 
-Funny things...since adding a [contact form](/contact/) to this site, I've received two inputs, both asking that I integrate a 3rd party service, one for using audio to read the blog posts aloud, and the second to replace Netlify forms with another service. I respectfully declined both.
+Funny things...since adding a contact form to this site, I've received two inputs, both asking that I integrate a 3rd party service, one for using audio to read the blog posts aloud, and the second to replace Netlify forms with another service. I respectfully declined both. [UPDATE January 25, 2024:] I have since removed the contact form.
 
 Thanks for reading...and for taking [the survey](https://forms.gle/zFA4Jno1cfT8nt9J8).
 

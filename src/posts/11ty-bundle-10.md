@@ -22,7 +22,7 @@ I urge everyone reading this to [take the survey](https://forms.gle/zFA4Jno1cfT8
 
 There are nearly a dozen new blog posts since the last issue and I haven't gotten around to creating a list of sites for this week due to the recent news from Zach.
 
-Other than that, as for this site, I've added a [contact form](/contact/) for anyone who wishes to get in touch with me, linked to in the footer.
+Other than that, as for this site, I've added a contact form for anyone who wishes to get in touch with me, linked to in the footer. [UPDATE January 25, 2024:] I have since removed the contact form.
 
 ## Posts from around the web since the last Bundle issue
 

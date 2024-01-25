@@ -27,7 +27,6 @@ module.exports = {
     { url: "/starters/", text: "Starters" },
     { url: "/blog/", text: "Blog" },
     { url: "/about/", text: "About" },
-    { url: "/contact/", text: "Contact" },
     {
       url: "/feed.xml",
       text: "RSS (Blog)",

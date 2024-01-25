@@ -50,9 +50,7 @@ body {
   color: var(--brand-color);
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: var(--link-hover-text-color);
+a:is(:hover, :focus) {
   background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
 }
@@ -265,6 +263,7 @@ img[width][height] {
 .post-card .post-title {
   font-size: var(--post-title-full-size);
   margin-block-start: 0;
+  text-align: center;
   text-wrap: balance;
 }
 /* end post elements */
@@ -273,6 +272,14 @@ img[width][height] {
 .webmentions {
   grid-column: popout;
   margin-block-start: var(--space-l);
+}
+.webmentions h2 {
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  font-style: italic;
+  margin-block: 0;
+  padding-block: 0;
+  text-align: left;
 }
 .mention-image {
   border: 3px solid var(--dark-accent-color);
@@ -283,15 +290,15 @@ img[width][height] {
 .mention-image:is(:hover, :focus) {
   background-color: transparent;
   opacity: 0.8;
-  outline: 20px solid var(--light-accent-color);
+  outline: 20px solid var(--dark-accent-color);
 }
 .comment {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "image content"
-    "image date";
+    "image date"
+    "image content";
   margin-block-end: var(--space-m);
 }
 .comment a:has(img) {
@@ -304,13 +311,17 @@ img[width][height] {
   justify-self: center;
 }
 .comment-content {
+  align-self: start;
   margin: 0;
+  padding: 0;
 }
 .comment-date {
+  align-self: end;
   font-size: var(--font-size-base);
   font-style: italic;
   justify-self: left;
   line-height: 1;
+  padding: 0;
 }
 .likes,
 .reposts {

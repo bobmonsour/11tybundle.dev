@@ -9,8 +9,8 @@
 {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
 {% if  mentions.mentionCount > 0 %}
   <div class="webmentions flow" id="webmentions">
-    {% if mentions.comments %}
-    <h3>Comments ({{ mentions.comments | length }})</h3>
+    {% if mentions.comments | length !== 0 %}
+    <h2>Comments ({{ mentions.comments | length }})</h2>
     <div class="comments">
       {% for item in mentions.comments %}
         <div class="comment">
@@ -23,7 +23,7 @@
     {% endif %}
 
     {% if mentions.likes %}
-    <h3>Likes ({{ mentions.likes | length }})</h3>
+    <h2>Likes ({{ mentions.likes | length }})</h2>
     <div class="likes">
       {% for item in mentions.likes %}
         <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
@@ -32,7 +32,7 @@
     {% endif %}
 
     {% if mentions.reposts %}
-    <h3>Reposts ({{ mentions.reposts | length }})</h3>
+    <h2>Reposts ({{ mentions.reposts | length }})</h2>
     <div class="reposts">
       {% for item in mentions.reposts %}
         <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
