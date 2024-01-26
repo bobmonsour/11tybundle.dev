@@ -3,7 +3,7 @@ bundleIssue: 21
 eleventyComputed:
   title: "Issue {{ bundleIssue }} - A new mascot for 11ty...Another free hosting option...A new front matter option...And 10 posts and 6 sites to see."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
-date: 2023-10-29
+date: 2023-11-08
 tags:
   - 11ty Bundle
 ---
@@ -16,7 +16,7 @@ Say hello to [our new little friend](https://www.11ty.dev/blog/mascot-david/), c
 
 ## Another free hosting option
 
-Kinsta, a hosting platform for web apps and sites has announced a free tier for hosting static sites, including support for Eleventy. According to [the page describing the features](https://kinsta.com/static-site-hosting/), you can have up to 100 sites, 600 build minutes, and 100GB bandwidth per month per account, and automatic deploys based on pushes to your repositories. I have no dog in this fight, but wanted to share this announcement. 
+Kinsta, a hosting platform for web apps and sites has announced a free tier for hosting static sites, including support for Eleventy. According to [the page describing the features](https://kinsta.com/static-site-hosting/), you can have up to 100 sites, 600 build minutes, and 100GB bandwidth per month per account, and automatic deploys based on pushes to your repositories. I have no dog in this fight, but wanted to share this announcement.
 
 ## A new front matter option
 
