@@ -7,8 +7,9 @@
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
-    "postbuild": "npx -y pagefind --site _site",
+    "postbuild": "npx -y pagefind --site _site && npm run mentions",
     "postdev": "npx -y pagefind --site _site --serve",
+    "mentions": "npx webmention _site/feed.xml --limit 0 --send",
     "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "links": "npx check-html-links _site",
@@ -46,9 +47,8 @@
     "postcss": "^8.4.21",
     "postcss-minify": "^1.1.0",
     "rimraf": "^3.0.2",
-    "sanitize-html": "^2.11.0"
-  },
-  "dependencies": {
+    "sanitize-html": "^2.11.0",
+    "@remy/webmention": "^1.0.4",
     "googleapis": "^128.0.0"
   }
 }

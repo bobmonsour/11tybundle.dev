@@ -1,10 +1,11 @@
 require("dotenv").config();
 module.exports = {
   env: process.env.ELEVENTY_ENV,
-  title: "The 11ty Bundle | Home",
+  title: "The 11ty Bundle",
   subtitle:
     "Resources for developers using the Eleventy static site generator.",
-  description: "A bundle of Eleventy resources, mostly blog posts.",
+  description:
+    "A bundle of Eleventy resources, releases, blog posts, and sites.",
   url: "https://www.11tybundle.dev",
   language: "en",
   author: {
