@@ -14,7 +14,7 @@
     <div class="comments">
       {% for item in mentions.comments %}
         <div class="comment">
-          <a href="{{ item.author.url }}" class="comment-author"><img src="{{ item.author.photo}}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+          <a href="{{ item.author.url }}" class="comment-author"><img src="{{ item.author.photo}}" loading="lazy" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
           <p class="comment-date">{{ item.published | plainDate }}</p>
           <p class="comment-content">{{ item.content | safe }}</p>
         </div>
@@ -26,7 +26,7 @@
     <h2>Likes ({{ mentions.likes | length }})</h2>
     <div class="likes">
       {% for item in mentions.likes %}
-        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" loading="lazy" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
       {% endfor %}
     </div>
     {% endif %}
@@ -35,7 +35,7 @@
     <h2>Reposts ({{ mentions.reposts | length }})</h2>
     <div class="reposts">
       {% for item in mentions.reposts %}
-        <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+        <a href="{{ item.url }}"><img src="{{ item.photo }}" loading="lazy" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
       {% endfor %}
     </div>
     {% endif %}
