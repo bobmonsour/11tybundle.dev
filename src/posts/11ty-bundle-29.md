@@ -13,7 +13,7 @@ image:
 
 Well, today Zach announced the [11ty International Symposium on Making Web Sites Real Good](https://conf.11ty.dev/). It's "A brand new exclusively (and extremely) online (virtual) single-day single-track conference dedicated to Web Development and the [Eleventy](https://www.11ty.dev) static site generator."
 
-Be sure to check out [the announcement site](https://conf.11ty.dev/) and [sign up for the related newsletter](https://buttondown.email/11ty/).
+It's happening in May of 2024. Be sure to check out [the announcement site](https://conf.11ty.dev/) and [sign up for the related newsletter](https://buttondown.email/11ty/).
 
 <a href="https://conf.11ty.dev/"><img src="/assets/img/11tysymposium2024.webp" alt="Announcement of the 11ty International Symposium on Making Web Sites Real Good" style="width: 100%; margin: 0 auto;"></a>
 
