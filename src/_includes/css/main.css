@@ -476,3 +476,17 @@ iframe[src*="youtube"] {
   max-width: 100%;
   width: 100%;
 }
+
+.header-announcement {
+  grid-column: popout;
+}
+.header-announcement p {
+  background-color: black;
+  color: white;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  margin-block: 1rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+}

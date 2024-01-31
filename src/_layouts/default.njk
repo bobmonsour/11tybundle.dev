@@ -6,6 +6,9 @@
   {% include "partials/header.njk" %}
 
   <main id="main-content" class="content">
+    {% if site.headerAnnouncement == "true" %}
+      {% include "partials/header-announcement.njk" %}
+    {% endif %}
     {{ content | safe }}
   </main>
 

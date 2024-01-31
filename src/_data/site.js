@@ -13,6 +13,7 @@ module.exports = {
     email: "bob.monsour@gmail.com",
     url: "https://bobmonsour.com/",
   },
+  headerAnnouncement: "true",
   mainNavLinks: [
     { url: "/categories/", text: "Categories" },
     { url: "/authors/", text: "Authors" },
