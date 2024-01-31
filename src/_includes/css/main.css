@@ -266,6 +266,17 @@ img[width][height] {
   text-align: center;
   text-wrap: balance;
 }
+
+.post a img {
+  border-radius: 2rem;
+  border: 5px solid var(--dark-accent-color);
+}
+.post a img:is(:hover, :focus) {
+  border: 3px solid var(--dark-accent-color);
+  border-radius: 2rem;
+  opacity: 0.8;
+  outline: 20px solid var(--dark-accent-color);
+}
 /* end post elements */
 
 /* webmention styles */
