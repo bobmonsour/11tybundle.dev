@@ -10,6 +10,7 @@ const {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
+  cachedSlugify,
   getDescription,
   postsInCategory,
   postsByAuthor,
@@ -46,6 +47,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);
   eleventyConfig.addFilter("getBundleItems", getBundleItems);
+  eleventyConfig.addFilter("cachedSlugify", cachedSlugify);
   eleventyConfig.addAsyncFilter("getDescription", getDescription);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);

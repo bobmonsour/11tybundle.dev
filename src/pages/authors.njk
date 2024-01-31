@@ -3,7 +3,7 @@
   eleventyComputed: {
     title: "{{ author[1] }} posts by {{ author[0] }}",
     description: "Posts in the 11ty Bundle written by {{ author[0] }}",
-    permalink: "/authors/{{ author[0] | slugify }}/",
+    permalink: "/authors/{{ author[0] | cachedSlugify }}/",
   },
   pagination:  {
     data: "bundledata.authors",
@@ -29,7 +29,7 @@
     {{ itemTitle(item.Title, item.Link, item.id) }}
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
     {{ itemDateline(item.Author, item.Date) }}
-    <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
+    <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | cachedSlugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
   </div>
   {% endfor %}
 </div>

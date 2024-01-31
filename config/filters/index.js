@@ -1,6 +1,9 @@
 const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
+const descriptionCache = {};
 const cheerio = require("cheerio");
+const slugify = require("slugify");
+const slugCache = {};
 const sanitizeHTML = require("sanitize-html");
 
 // Determine whether or not to highlight current page in the nav
@@ -54,6 +57,19 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
     });
 };
 
+// since slugify is run about 10,000 times for this site
+// we'll cache the results to speed up the build
+function cachedSlugify(input) {
+  // Check if the slug is in the cache
+  if (slugCache[input]) {
+    return slugCache[input];
+  }
+  // If not, generate the slug and store it in the cache
+  const slug = slugify(input);
+  slugCache[input] = slug;
+  return slug;
+}
+
 // getDescription - given a url, this Eleventy filter extracts the meta
 // description from within the <head> element of a web page using the cheerio
 // library.
@@ -74,6 +90,10 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
 // Note that I have a .cache folder in my project root and added .cache to my
 // .gitignore file. See https://www.11ty.dev/docs/plugins/fetch/#installation
 const getDescription = async (link) => {
+  // Check if the description is in the cache
+  if (descriptionCache[link]) {
+    return descriptionCache[link];
+  }
   try {
     let htmlcontent = await EleventyFetch(link, {
       directory: ".cache",
@@ -83,12 +103,13 @@ const getDescription = async (link) => {
     const $ = cheerio.load(htmlcontent);
     const description = $("meta[name=description]").attr("content");
     if (link.includes("youtube.com")) {
-      return "YouTube video";
+      descriptionCache[link] = "YouTube video";
     } else if (description == undefined) {
-      return "";
+      descriptionCache[link] = "";
     } else {
-      return description.trim();
+      descriptionCache[link] = description.trim();
     }
+    return descriptionCache[link];
   } catch (e) {
     console.log("Error fetching description for " + link + " " + e.message);
     return "";
@@ -256,6 +277,7 @@ module.exports = {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
+  cachedSlugify,
   getDescription,
   postsInCategory,
   postsByAuthor,
