@@ -47,13 +47,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);
   eleventyConfig.addFilter("getBundleItems", getBundleItems);
-  eleventyConfig.addFilter("cachedSlugify", cachedSlugify);
   eleventyConfig.addAsyncFilter("getDescription", getDescription);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("webmentionsByUrl", webmentionsByUrl);
   eleventyConfig.addFilter("plainDate", plainDate);
+  const slugCache = {};
+  eleventyConfig.addFilter("cachedSlugify", function (input) {
+    // Check if the slug is in the cache
+    if (slugCache[input]) {
+      return slugCache[input];
+    }
+    // If not, generate the slug and store it in the cache
+    const slug = eleventyConfig.getFilter("slugify")(input, {
+      customReplacements: [["'", "-"]],
+    });
+    slugCache[input] = slug;
+    return slug;
+  });
 
   // Plugins
   eleventyConfig.addPlugin(postGraph, {

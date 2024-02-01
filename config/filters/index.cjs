@@ -1,11 +1,11 @@
 const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
-const descriptionCache = {};
 const cheerio = require("cheerio");
 const sanitizeHTML = require("sanitize-html");
+// const slugify = require("slugify");
 
-const slugify = require("slugify");
-const slugCache = {};
+const descriptionCache = {};
+// const slugCache = {};
 
 // Determine whether or not to highlight current page in the nav
 // if the link text appears within the page url, then do highlight
@@ -60,22 +60,22 @@ const getBundleItems = (bundleitems, bundleIssue, bundleType) => {
 
 // since slugify is run about 10,000 times for this site
 // we'll cache the results to speed up the build
-function cachedSlugify(input) {
-  // Check if the slug is in the cache
-  if (slugCache[input]) {
-    return slugCache[input];
-  }
-  // If not, generate the slug and store it in the cache
-  const slug = slugify(input, {
-    customReplacements: [["'", "-"]],
-  });
-  if (slug.includes("Leary")) {
-    console.log("slugify input: ", input);
-    console.log("slugify slug: ", slug);
-  }
-  slugCache[input] = slug;
-  return slug;
-}
+// function cachedSlugify(input) {
+// Check if the slug is in the cache
+// if (slugCache[input]) {
+//   return slugCache[input];
+// }
+// If not, generate the slug and store it in the cache
+// const slug = slugify(input, {
+//   customReplacements: [["'", "-"]],
+// });
+// if (slug.includes("Leary")) {
+//   console.log("slugify input: ", input);
+//   console.log("slugify slug: ", slug);
+// }
+// slugCache[input] = slug;
+// return slug;
+// }
 
 // getDescription - given a url, this Eleventy filter extracts the meta
 // description from within the <head> element of a web page using the cheerio
@@ -284,7 +284,6 @@ module.exports = {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
-  cachedSlugify,
   getDescription,
   postsInCategory,
   postsByAuthor,

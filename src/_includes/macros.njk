@@ -8,7 +8,7 @@
   <ul class="post-taglist">
     <li>Tags:&nbsp;</li>
     {%- for tag in tags | filterTagList %}
-    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    {%- set tagUrl %}/tags/{{ tag | cachedSlugify }}/{% endset %}
     <li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>&nbsp;&nbsp;</li>
     {%- endfor %}
     <li><a href="/tags/">All Tags</a></li>
@@ -27,5 +27,5 @@
   the author and date for the post. The author is a link to the author's page.
 #}
 {%- macro itemDateline(author, date) -%}
-  <p class="bundleitem-dateline"><a href="/authors/{{ author | slugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
+  <p class="bundleitem-dateline"><a href="/authors/{{ author | cachedSlugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
 {%- endmacro -%}
