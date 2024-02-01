@@ -278,7 +278,7 @@ const plainDate = (isoDate) => {
   return formattedDate;
 };
 
-export default {
+export {
   isCurrentPage,
   formatPostDate,
   formatItemDate,
