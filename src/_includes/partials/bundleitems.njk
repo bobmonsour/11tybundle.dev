@@ -24,7 +24,7 @@
       {{ itemTitle(item.Title, item.Link, item.id, item.Type) }}
       <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
       {{ itemDateline(item.Author, item.Date) }}
-      <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | cachedSlugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
+      <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | slugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
     </div>
   {%- endfor %}
   </div>

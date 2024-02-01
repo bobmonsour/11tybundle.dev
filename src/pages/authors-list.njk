@@ -9,7 +9,7 @@ permalink: /authors/
 <div class="allauthors-list">
   <ul class="authorslist">
     {% for author in bundledata.authors %}
-      {% set authorUrl %}/authors/{{ author[0] | cachedSlugify }}/{% endset %}
+      {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
       <li><a href="{{authorUrl}}">{{ author[0] }} <span class="reduced-to-base">({{ author[1] }})</span></a></li>
     {% endfor %}
   </ul>

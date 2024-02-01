@@ -65,7 +65,13 @@ function cachedSlugify(input) {
     return slugCache[input];
   }
   // If not, generate the slug and store it in the cache
-  const slug = slugify(input);
+  const slug = slugify(input, {
+    customReplacements: [["'", "-"]],
+  });
+  if (slug.includes("Leary")) {
+    console.log("slugify input: ", input);
+    console.log("slugify slug: ", slug);
+  }
   slugCache[input] = slug;
   return slug;
 }
