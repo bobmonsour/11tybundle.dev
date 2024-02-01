@@ -1,5 +1,5 @@
 require("dotenv").config();
-module.exports = {
+export default {
   env: process.env.ELEVENTY_ENV,
   title: "The 11ty Bundle",
   subtitle:

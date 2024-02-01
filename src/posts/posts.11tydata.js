@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   layout: "post.njk",
   permalink: "blog/{{ page.fileSlug }}/",
   imageDir: "src/assets/img/",
@@ -7,5 +7,5 @@ module.exports = {
     source: "11tybundle-dev.jpg",
     alt: "the number 11 as photographed by David Monje on Unsplash",
   },
-  snow: "false"
+  snow: "false",
 };

@@ -1,10 +1,11 @@
 // environment variable handling
-require("dotenv").config();
+import "dotenv/config";
 
 // Shortcode references
-const imageShortcode = require("./config/shortcodes/image.js");
+import imageShortcode from "./config/shortcodes/image.js";
+
 // Filter references
-const {
+import {
   isCurrentPage,
   formatPostDate,
   formatItemDate,
@@ -17,19 +18,18 @@ const {
   readingTime,
   webmentionsByUrl,
   plainDate,
-} = require("./config/filters/index.js");
+} from "./config/filters/index.js";
 
 // Plugin references
-const postGraph = require("@rknightuk/eleventy-plugin-post-graph");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRSS = require("@11ty/eleventy-plugin-rss");
-const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
-const postcss = require("postcss");
-const postcssMinify = require("postcss-minify");
-const { get } = require("lodash");
-// const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
+import postGraph from "@rknightuk/eleventy-plugin-post-graph";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginRSS from "@11ty/eleventy-plugin-rss";
+import bundlerPlugin from "@11ty/eleventy-plugin-bundle";
+import postcss from "postcss";
+import postcssMinify from "postcss-minify";
+// import get from 'lodash';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Passthrough copy for static assets
   [
     { "src/assets/favicon/*": "/" },
@@ -103,4 +103,4 @@ module.exports = function (eleventyConfig) {
       data: "_data",
     },
   };
-};
+}

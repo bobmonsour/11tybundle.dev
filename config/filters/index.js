@@ -2,9 +2,10 @@ const { DateTime } = require("luxon");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const descriptionCache = {};
 const cheerio = require("cheerio");
+const sanitizeHTML = require("sanitize-html");
+
 const slugify = require("slugify");
 const slugCache = {};
-const sanitizeHTML = require("sanitize-html");
 
 // Determine whether or not to highlight current page in the nav
 // if the link text appears within the page url, then do highlight
@@ -277,7 +278,7 @@ const plainDate = (isoDate) => {
   return formattedDate;
 };
 
-module.exports = {
+export default {
   isCurrentPage,
   formatPostDate,
   formatItemDate,
