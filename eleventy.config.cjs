@@ -5,7 +5,7 @@ require("dotenv").config();
 const imageShortcode = require("./config/shortcodes/image.js");
 
 // Filter references
-import {
+const {
   isCurrentPage,
   formatPostDate,
   formatItemDate,
@@ -18,7 +18,7 @@ import {
   readingTime,
   webmentionsByUrl,
   plainDate,
-} from "./config/filters/index.js";
+} = require("./config/filters/index.js");
 
 // Plugin references
 const postGraph = require("@rknightuk/eleventy-plugin-post-graph");
@@ -29,7 +29,7 @@ const postcss = require("postcss");
 const postcssMinify = require("postcss-minify");
 // const { get } = require("lodash");
 
-export default function (eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets
   [
     { "src/assets/favicon/*": "/" },
@@ -103,4 +103,4 @@ export default function (eleventyConfig) {
       data: "_data",
     },
   };
-}
+};

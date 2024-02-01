@@ -2,7 +2,7 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 // const fs = require("fs");
 
-exports default async function () {
+module.exports = async function () {
   const WEBMENTIONS_BOBM = process.env.WEBMENTION_IO_TOKEN;
   const url = `https://webmention.io/api/mentions.jf2?token=${WEBMENTIONS_BOBM}&per-page=1000`;
   const res = EleventyFetch(url, {
