@@ -1,7 +1,7 @@
 const { google } = require("googleapis");
 const sheets = google.sheets("v4");
 
-export default async function () {
+module.exports = async function () {
   // Load client secrets from the downloaded service account key file.
   // Items from the file were placed into a .env file.
   const key = {
@@ -67,4 +67,4 @@ export default async function () {
   } catch (err) {
     console.error("API request encountered an error:", err);
   }
-}
+};

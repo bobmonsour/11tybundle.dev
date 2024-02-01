@@ -2,7 +2,7 @@
 require("dotenv").config();
 
 // Shortcode references
-const imageShortcode = require("./config/shortcodes/image.js");
+const imageShortcode = require("./config/shortcodes/image.cjs");
 
 // Filter references
 const {
@@ -18,7 +18,7 @@ const {
   readingTime,
   webmentionsByUrl,
   plainDate,
-} = require("./config/filters/index.js");
+} = require("./config/filters/index.cjs");
 
 // Plugin references
 const postGraph = require("@rknightuk/eleventy-plugin-post-graph");

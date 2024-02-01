@@ -1,9 +1,9 @@
 // get all the records (JSON exported from a Google Sheet) and return
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-import fetchSheetData from "./fetchsheetdata.js";
+const fetchSheetData = require("./fetchsheetdata.cjs");
 
-export default async function () {
+module.exports = async function () {
   const bundleRecords = await fetchSheetData();
 
   // generate the firehose, an array of all posts in descending date order
@@ -134,4 +134,4 @@ export default async function () {
     categoryCount,
     gettingStartedCount,
   };
-}
+};

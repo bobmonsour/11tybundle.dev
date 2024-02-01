@@ -51,4 +51,4 @@ class CategoryJsonFiles {
   }
 }
 
-export default CategoryJsonFiles;
+module.exports = CategoryJsonFiles;
