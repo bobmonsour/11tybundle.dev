@@ -13,7 +13,6 @@
   }
 }
 ---
-{% from "macros.njk" import itemTitle, itemDateline %}
 
 {#
   If the category has an equivalent page on the 11ty docs site, then display a link to it.
@@ -33,7 +32,7 @@
 </div>
 {% endif %}
 
-<h1>{{ title }}</h1>
+<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }}">{{ title }}</h1>
 
 {#
   While the title and dateline lend themselves to the use of macros, the description
@@ -41,12 +40,12 @@
   filter (and that is why I believe it does not work in a macro). The categories list
   uses a Nunjucks for loop as well as the slugify filter.
 #}
-<div class="bundleposts">
+<div class="bundleposts" data-pagefind-body>
   {% for item in bundledata.bundleRecords | postsInCategory(category[0]) %}
   <div class="bundleitem">
-    {{ itemTitle(item.Title, item.Link, item.id) }}
+    <h2 id="{{ category[0] }}-{{ item.Date }}" class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
-    {{ itemDateline(item.Author, item.Date) }}
+    <p class="bundleitem-dateline"><a href="/authors/{{ item.Author | cachedSlugify }}/">{{ item.Author }}</a> &middot; {{ item.Date | formatItemDate }}</p>
     <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | cachedSlugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
   </div>
   {% endfor %}

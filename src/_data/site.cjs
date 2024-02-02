@@ -20,7 +20,7 @@ module.exports = {
     { url: "/starters/", text: "Starters" },
     { url: "/firehose/", text: "Firehose" },
     { url: "/blog/", text: "Blog" },
-    { url: "/about/", text: "About" },
+    { url: "/search/", text: "Search" },
   ],
   footerNavLinks: [
     { url: "/categories/", text: "Categories" },
