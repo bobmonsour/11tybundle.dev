@@ -19,5 +19,6 @@
   "Nunjucks/Macros": "https://www.11ty.dev/docs/languages/nunjucks/",
   "Remote Data": "https://www.11ty.dev/docs/plugins/fetch/",
   "Serverless": "https://www.11ty.dev/docs/plugins/serverless/",
-  "WebC": "https://www.11ty.dev/docs/languages/webc/"
+  "WebC": "https://www.11ty.dev/docs/languages/webc/",
+  "Drafts": "https://www.11ty.dev/docs/quicktips/draft-posts/"
 }
