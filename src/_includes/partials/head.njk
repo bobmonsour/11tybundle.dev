@@ -27,14 +27,8 @@
     </noscript>
   {% endif %}
 
-  {#
-    conditionally load any page-specific styles per front matter
-    'stylelink'. useful for selectively loading things like the
-    pagefind css (on the search page)
-  #}
-  {% if stylelink %}
-    <link href="{{stylelink}}" rel="stylesheet">
-  {% endif %}
+  {# load the pagefind style sheet on every page  #}
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 
   {# bundle the CSS content used on all pages and get the link to the bundle #}
   {%- css %}

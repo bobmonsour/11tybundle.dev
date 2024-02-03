@@ -143,16 +143,40 @@ img[width][height] {
 /* site name as 'home' link */
 .brand-link {
   border: none;
+  display: flex;
+  flex-wrap: wrap;
   font-family: var(--brand-font);
   font-size: var(--font-size-lg);
+  justify-content: space-between;
   margin: 0.5em auto;
   text-align: center;
 }
-.brand-link a {
+.brand-link a.home {
   border: none;
-  padding: 0.25em;
+  margin: 0.25rem auto;
+  align-self: center;
   text-decoration: none;
 }
+.brand-link a.announce {
+  align-content: center;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: var(--body-font);
+  font-size: var(--font-size-md);
+  margin: 0.25rem auto;
+  outline: 5px solid gray;
+  padding: 0.5em 1em;
+  /* text-decoration: underline; */
+}
+.brand-link a.announce:is(:hover, :focus) {
+  background-color: white;
+  outline: 5px solid black;
+  opacity: 0.8;
+  color: black;
+}
+
 .brand-nav {
   display: flex;
   flex-wrap: wrap;
@@ -490,16 +514,14 @@ iframe[src*="youtube"] {
   width: 100%;
 }
 
-.header-announcement {
-  grid-column: popout;
-}
 .header-announcement p {
   background-color: black;
+  border-radius: 20px;
   color: white;
+  display: inline-block;
   font-size: var(--font-size-base);
   font-weight: bold;
-  margin-block: 1rem;
+  margin: 0.5rem auto;
   padding: 1rem;
   text-align: center;
-  border-radius: 20px;
 }

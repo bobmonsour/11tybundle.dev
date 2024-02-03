@@ -19,8 +19,6 @@ module.exports = {
     { url: "/authors/", text: "Authors" },
     { url: "/starters/", text: "Starters" },
     { url: "/firehose/", text: "Firehose" },
-    { url: "/blog/", text: "Blog" },
-    { url: "/search/", text: "Search" },
   ],
   footerNavLinks: [
     { url: "/categories/", text: "Categories" },
