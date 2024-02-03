@@ -17,6 +17,7 @@ class CategoryJsonFiles {
         "Data Cascade",
         "Dates",
         "Deployment",
+        "Drafts",
         "Filters",
         "Front Matter",
         "Getting Started",
