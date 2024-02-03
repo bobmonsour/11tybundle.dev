@@ -23,6 +23,7 @@ class CategoryJsonFiles {
         "Global Data",
         "Images",
         "Pagination",
+        "RSS",
         "WebC",
       ],
       // Construct the permalink for the json file of the category
