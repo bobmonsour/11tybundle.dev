@@ -46,9 +46,10 @@ body {
 
 /* default <a> */
 :where(a) {
-  border-bottom: 1px solid var(--link-border-color);
   color: var(--brand-color);
-  text-decoration: none;
+  text-decoration: solid var(--dark-accent-color) underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
 }
 a:is(:hover, :focus) {
   background-color: var(--link-hover-bg-color);
@@ -147,7 +148,6 @@ img[width][height] {
   flex-wrap: wrap;
   font-family: var(--brand-font);
   font-size: var(--font-size-lg);
-  justify-content: space-between;
   margin: 0.5em auto;
   text-align: center;
 }
@@ -168,7 +168,6 @@ img[width][height] {
   margin: 0.25rem auto;
   outline: 5px solid gray;
   padding: 0.5em 1em;
-  /* text-decoration: underline; */
 }
 .brand-link a.announce:is(:hover, :focus) {
   background-color: white;
@@ -180,7 +179,6 @@ img[width][height] {
 .brand-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25em;
   justify-content: space-around;
   list-style: none;
   margin: 0;
@@ -223,21 +221,44 @@ img[width][height] {
 .allcategories-list *,
 .allauthors-list * {
   list-style: none;
-  margin: 0.75em auto;
+  /* margin: 0.75em auto; */
   padding-inline: 0;
   text-align: center;
+}
+.allcategories-list {
+  grid-column: full;
+  margin-top: 1em;
 }
 
 .categorieslist,
 .authorslist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(10em, 100%), 1fr));
-  gap: 0.5em;
+  gap: 0.75em;
   margin: 0 auto;
 }
 .categorieslist a,
 .authorslist a {
   padding: 0.25em;
+}
+.onecategory {
+  background-color: var(--postitem-bg-color);
+  border-radius: 10px;
+  padding-inline: 0.5em;
+}
+.onecategory li {
+  margin-block: 0.5em;
+}
+.recentcatitems li {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin-block-end: 1.25em;
+  text-align: left;
+  text-indent: 0;
+}
+.recentcatitems a {
+  border: none;
+  padding-inline: 0;
 }
 .reduced-to-base {
   font-size: var(--font-size-base);
@@ -516,7 +537,7 @@ iframe[src*="youtube"] {
 
 .header-announcement p {
   background-color: black;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   color: white;
   display: inline-block;
   font-size: var(--font-size-base);

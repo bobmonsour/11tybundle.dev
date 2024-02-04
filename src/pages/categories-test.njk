@@ -1,0 +1,23 @@
+---
+eleventyComputed:
+  title: "{{ bundledata.categoryCount }} Categories"
+  description: A list of {{ bundledata.categoryCount }} post categories
+permalink: /categories-test/
+---
+
+<h1>{{ title }} <span class="reduced-to-md">(<a href="/categories-by-count/">by count</a>)</span></h1>
+<div class="allcategories-list">
+  <ul class="categorieslist">
+    {% for category in bundledata.categories %}
+      {% set categoryUrl %}/categories/{{ category[0] | cachedSlugify }}/{% endset %}
+      <div class="onecategory">
+        <li><a href="{{categoryUrl}}">{{ category[0] }} <span class="reduced-to-base">({{ category[1] }})</span></a></li>
+        <ul class="recentcatitems">
+          {% for item in bundledata.bundleRecords | postsInCategory(category[0], 3) %}
+            <li><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,6 +1,6 @@
 :root {
   /* Page structure */
-  --page-width-max: 1200px;
+  --page-width-max: 1500px;
 
   /* Type scale from https://www.fluid-type-scale.com/, smallest to largest */
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
@@ -68,7 +68,7 @@
   --pagefind-ui-text: #393939;
   --pagefind-ui-background: #ffffff;
   --pagefind-ui-border: #000000;
-  --pagefind-ui-tag: #eeeeee;
+  --pagefind-ui-tag: green;
   --pagefind-ui-border-width: 2px;
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 8px;

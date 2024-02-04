@@ -41,7 +41,7 @@
   uses a Nunjucks for loop as well as the slugify filter.
 #}
 <div class="bundleposts" data-pagefind-body>
-  {% for item in bundledata.bundleRecords | postsInCategory(category[0]) %}
+  {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
   <div class="bundleitem">
     <h2 id="{{ category[0] }}-{{ item.Date }}" class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>

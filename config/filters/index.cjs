@@ -103,16 +103,24 @@ const getDescription = async (link) => {
 };
 
 // Given a category, get all blog posts with that category
-// from the Airtable data.
-const postsInCategory = (bundleitems, category) => {
+// from the data.
+const postsInCategory = (bundleitems, category, count) => {
   function postInCategory(item) {
+    if (count == 0) {
+      sliceCount = 100000;
+    } else {
+      sliceCount = count;
+    }
     return item.Type == "blog post" && item.Categories.includes(category)
       ? true
       : false;
   }
-  return bundleitems.filter(postInCategory).sort((a, b) => {
-    return a.Date > b.Date ? -1 : 1;
-  });
+  return bundleitems
+    .filter(postInCategory)
+    .sort((a, b) => {
+      return a.Date > b.Date ? -1 : 1;
+    })
+    .slice(0, sliceCount);
 };
 
 // Given an author, get all blog posts written by that author
