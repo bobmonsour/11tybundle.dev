@@ -271,9 +271,6 @@ img[width][height] {
 .aux-links {
   margin-inline: auto;
 }
-.aux-links a {
-  margin-inline: 0.5em;
-}
 
 #search {
   margin-top: 1em;
