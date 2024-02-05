@@ -48,12 +48,14 @@ body {
 :where(a) {
   color: var(--brand-color);
   text-decoration: solid var(--dark-accent-color) underline;
+  text-decoration-color: rgb(121, 120, 120);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
 }
 a:is(:hover, :focus) {
   background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 
 /* indicator for all external links */
@@ -193,6 +195,7 @@ img[width][height] {
   background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
   color: var(--link-hover-text-color);
+  text-decoration: none;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -221,12 +224,11 @@ img[width][height] {
 .allcategories-list *,
 .allauthors-list * {
   list-style: none;
-  /* margin: 0.75em auto; */
   padding-inline: 0;
   text-align: center;
 }
 .allcategories-list {
-  grid-column: full;
+  grid-column: popout;
   margin-top: 1em;
 }
 
@@ -242,15 +244,20 @@ img[width][height] {
   padding: 0.25em;
 }
 .onecategory {
-  background-color: var(--postitem-bg-color);
+  background-color: rgb(223, 224, 225);
+  /* color: white; */
+  background-color: var(--releaseitem-bg-color);
   border-radius: 10px;
   padding-inline: 0.5em;
 }
 .onecategory li {
   margin-block: 0.5em;
 }
+.onecattitle {
+  font-weight: bold;
+}
 .recentcatitems li {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   line-height: 1.5;
   margin-block-end: 1.25em;
   text-align: left;
