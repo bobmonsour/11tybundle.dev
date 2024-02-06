@@ -47,21 +47,23 @@ body {
 /* default <a> */
 :where(a) {
   color: var(--brand-color);
-  text-decoration: solid var(--dark-accent-color) underline;
-  text-decoration-color: rgb(121, 120, 120);
-  text-decoration-thickness: 1px;
+  text-decoration: 1px solid underline rgb(121, 120, 120);
+  /* text-decoration-color: rgb(121, 120, 120); */
+  /* text-decoration-thickness: 1px; */
+  /* text-decoration-style: solid; */
   text-underline-offset: 0.25em;
 }
 a:is(:hover, :focus) {
   background-color: var(--link-hover-bg-color);
   border-radius: 0.5rem;
+  color: var(--link-hover-text-color);
   text-decoration: none;
 }
 
 /* indicator for all external links */
 a[data-link-type="external"]::after {
-  content: "";
   background: no-repeat var(--icon-external-link);
+  content: "";
   padding-right: 1em;
 }
 
@@ -244,27 +246,27 @@ img[width][height] {
   padding: 0.25em;
 }
 .onecategory {
-  background-color: rgb(223, 224, 225);
-  /* color: white; */
   background-color: var(--releaseitem-bg-color);
+  background-color: rgb(246, 236, 236);
+  border: 1px solid var(--dark-accent-color);
   border-radius: 10px;
   padding-inline: 0.5em;
 }
-.onecategory li {
-  margin-block: 0.5em;
-}
+
 .onecattitle {
+  display: block;
   font-weight: bold;
+  margin-block-start: 0.5em;
+}
+.recentcatitems {
+  margin-block: 0.25em 1em;
 }
 .recentcatitems li {
   font-size: var(--font-size-base);
-  line-height: 1.5;
-  margin-block-end: 1.25em;
+  line-height: 1.4;
   text-align: left;
-  text-indent: 0;
 }
 .recentcatitems a {
-  border: none;
   padding-inline: 0;
 }
 .reduced-to-base {

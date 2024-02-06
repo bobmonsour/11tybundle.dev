@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   layout: "default.njk",
   imageDir: "src/assets/img/",
   image: {

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A bundle of Eleventy releases, blog posts, sites, and resources. Over 500 posts from more than 200 authors.",
   "main": ".eleventy.js",
-  "type": "module",
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
@@ -26,7 +25,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.2",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
@@ -35,7 +34,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@remy/webmention": "^1.0.4",
     "@rknightuk/eleventy-plugin-post-graph": "^1.0.6",
-    "airtable": "^0.11.6",
     "check-html-links": "^0.2.4",
     "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
