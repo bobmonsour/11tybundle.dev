@@ -32,7 +32,7 @@
 </div>
 {% endif %}
 
-<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }}">{{ title }}</h1>
+<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}</h1>
 
 {#
   While the title and dateline lend themselves to the use of macros, the description
@@ -43,7 +43,7 @@
 <div class="bundleposts" data-pagefind-body>
   {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
   <div class="bundleitem">
-    <h2 id="{{ category[0] }}-{{ item.Date }}" class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>
+    <h2 id="{{ category[0] | cachedSlugify }}-{{ item.Date }}" class="bundleitem-title" data-pagefind-weight="3"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
     <p class="bundleitem-dateline"><a href="/authors/{{ item.Author | cachedSlugify }}/">{{ item.Author }}</a> &middot; {{ item.Date | formatItemDate }}</p>
     <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | cachedSlugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>

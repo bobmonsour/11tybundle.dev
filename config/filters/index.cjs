@@ -125,12 +125,18 @@ const postsInCategory = (bundleitems, category, count) => {
 
 // Given an author, get all blog posts written by that author
 // from the Airtable data.
-const postsByAuthor = (bundleitems, author) => {
+const postsByAuthor = (bundleitems, author, count) => {
+  if (count == 0) {
+    sliceCount = 100000;
+  } else {
+    sliceCount = count;
+  }
   return bundleitems
     .filter((item) => item.Type === "blog post" && item.Author === author)
     .sort((a, b) => {
       return a.Date > b.Date ? -1 : 1;
-    });
+    })
+    .slice(0, sliceCount);
 };
 
 // Calculate the reading time, in minutes, of a post

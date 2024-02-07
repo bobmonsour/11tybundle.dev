@@ -15,7 +15,7 @@ layout: default.njk
 {%- if draft == "true" -%}<h1>DRAFT</h1>{%- endif -%}
 
 <article class="post" data-pagefind-body>
-  <h1 class="post-title">{{ title }}</h1>
+  <h1 class="post-title" data-pagefind-weight="3">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }}</p>
   <p class="post-readingtime">{{ content | readingTime }}</p>
   {{ content | safe }}
