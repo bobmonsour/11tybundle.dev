@@ -20,5 +20,6 @@
   "Remote Data": "https://www.11ty.dev/docs/plugins/fetch/",
   "Serverless": "https://www.11ty.dev/docs/plugins/serverless/",
   "WebC": "https://www.11ty.dev/docs/languages/webc/",
-  "Drafts": "https://www.11ty.dev/docs/quicktips/draft-posts/"
+  "Drafts": "https://www.11ty.dev/docs/quicktips/draft-posts/",
+  "RSS": "https://www.11ty.dev/docs/plugins/rss/"
 }
