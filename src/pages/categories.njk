@@ -42,11 +42,15 @@
 #}
 <div class="bundleposts" data-pagefind-body>
   {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
-  <div class="bundleitem">
+    {%- set singleItem = item -%}
+    {%- set singleItemID -%}{{ category[0] | cachedSlugify }}-{{ item.Author | cachedSlugify }}-{{ item.Date }}{%- endset -%}
+		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
+    {%- include "partials/singleitem.njk" -%}
+  {# <div class="bundleitem">
     <h2 id="{{ category[0] | cachedSlugify }}-{{ item.Date }}" class="bundleitem-title" data-pagefind-weight="3"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>
     <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
     <p class="bundleitem-dateline"><a href="/authors/{{ item.Author | cachedSlugify }}/">{{ item.Author }}</a> &middot; {{ item.Date | formatItemDate }}</p>
     <p class="bundleitem-categories">Categories: {% for category in item.Categories  | sort %}<a href="/categories/{{category | cachedSlugify }}/">{{ category }}</a>&nbsp;&nbsp;{% endfor %}</p>
-  </div>
+  </div> #}
   {% endfor %}
 </div>

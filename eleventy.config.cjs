@@ -3,7 +3,6 @@ require("dotenv").config();
 
 // Shortcode references
 const imageShortcode = require("./config/shortcodes/image.cjs");
-
 // Filter references
 const {
   isCurrentPage,
@@ -11,7 +10,6 @@ const {
   formatItemDate,
   formatFirehoseDate,
   getBundleItems,
-  cachedSlugify,
   getDescription,
   postsInCategory,
   postsByAuthor,
