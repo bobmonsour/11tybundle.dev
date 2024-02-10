@@ -1,5 +1,5 @@
 <div class="bundleitem">
-  <h2 {% if singleItemID !== "" %} ID="{{ singleItemID }}"{% endif %} class="bundleitem-title"><a href="{{ singleItem.Link }}" data-link-type="external">{{ singleItem.Title | safe }}</a></h2>
+  <h2 {% if singleItemID !== "" %} ID="{{ singleItemID }}"{% endif %} class="bundleitem-title" data-pagefind-weight="{{ pagefindWeight }}"><a href="{{ singleItem.Link }}" data-link-type="external">{{ singleItem.Title | safe }}</a></h2>
   <p class="bundleitem-description">{{ singleItemDescription }}</p>
   <p class="bundleitem-dateline"><a href="/authors/{{ singleItem.Author | cachedSlugify }}/">{{ singleItem.Author | safe }}</a> &middot; {{ singleItem.Date | formatItemDate }}</p>
   <p class="bundleitem-categories">Categories: {% for category in singleItem.Categories  | sort -%}<a href="/categories/{{ category | cachedSlugify }}/">{{ category | safe }}</a>{%- endfor -%}</p>
