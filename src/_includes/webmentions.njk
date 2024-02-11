@@ -8,7 +8,7 @@
 #}
 {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
 {% if  mentions.mentionCount > 0 %}
-  <div class="webmentions flow" id="webmentions">
+  <div class="webmentions flow" id="webmentions" data-pagefind-ignore>
     {% if mentions.comments | length !== 0 %}
     <h2>Comments ({{ mentions.comments | length }})</h2>
     <div class="comments">

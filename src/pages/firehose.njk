@@ -29,6 +29,7 @@ permalink: /firehose/
     {%- set singleItem = item -%}
     {%- set singleItemID = "" -%}
 		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
+    {%- set pagefindWeight = "1" %}
     {%- include "partials/singleitem.njk" -%}
   {%- endfor -%}
   </details>
