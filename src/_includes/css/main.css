@@ -246,8 +246,8 @@ img[width][height] {
   padding: 0.25em;
 }
 .onecategory {
-  background-color: var(--releaseitem-bg-color);
-  background-color: rgb(246, 236, 236);
+  background-color: var(--one-category-bg-color);
+  /* background-color: rgb(246, 236, 236); */
   border: 1px solid var(--dark-accent-color);
   border-radius: 10px;
   padding-inline: 0.5em;

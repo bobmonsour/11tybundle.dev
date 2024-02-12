@@ -23,3 +23,8 @@ package = "netlify-plugin-cache"
   from = "https://11tybundle.dev/posts/*"
   to = "https://11tybundle.dev/blog/:splat"
   status = 301
+
+[[redirects]]
+  from = "https://11tybundle.dev/categories-test/"
+  to = "https://11tybundle.dev/categories/"
+  status = 301

@@ -45,7 +45,7 @@
     {%- set singleItem = item -%}
     {%- set singleItemID -%}{{ category[0] | cachedSlugify }}-{{ item.Author | cachedSlugify }}-{{ item.Date }}{%- endset -%}
 		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
-    {%- set pagefindWeight = "6" %}
+    {%- set pagefindWeight = "10" %}
     {%- include "partials/singleitem.njk" -%}
   {# <div class="bundleitem">
     <h2 id="{{ category[0] | cachedSlugify }}-{{ item.Date }}" class="bundleitem-title" data-pagefind-weight="3"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></h2>

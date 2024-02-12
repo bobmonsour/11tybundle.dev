@@ -39,17 +39,18 @@
   --space-3xs-l: clamp(0.3125rem, -0.4484rem + 3.8043vw, 2.5rem);
 
   /* Accent Colors */
+  --dark-accent-color: #6096b4;
+  --light-accent-color: white;
   --site-bg-color: #eee9da;
   --releaseitem-bg-color: #bdcdd6;
   --postitem-bg-color: #93bfcf;
+  --one-category-bg-color: #93bfcf;
   --siteitem-bg-color: #93bfcf;
   --header-bg-color: #eee9da;
   --resources-bg-color: #bdcdd6;
-  --link-border-color: #6096b4;
-  --link-hover-bg-color: #6096b4;
-  --link-hover-text-color: white;
-  --dark-accent-color: var(--link-hover-bg-color);
-  --light-accent-color: var(--link-hover-text-color);
+  --link-border-color: var(--dark-accent-color);
+  --link-hover-bg-color: var(--dark-accent-color);
+  --link-hover-text-color: var(--light-accent-color);
 
   /* Brand Styles */
   --brand-font: "Nimbus Mono PS", "Courier New", "Cutive Mono", monospace;
