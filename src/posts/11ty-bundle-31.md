@@ -19,7 +19,7 @@ A couple of releases this past week, with 11ty v3.0.0-alpha.5 dropping along wit
 - Adds fixOrientation
 - Adds minimumThreshold
 - Fix height on animated GIF sources
-- Experimental: new Eleventy Transform plugin for zero-config Image Optimization
+- Experimental: new Eleventy Transform plugin for zero-config Image Optimization ([see new docs](https://www.11ty.dev/docs/plugins/image/#eleventy-transform))
 
 And another reminder about the next Eleventy Meetup. It's on February 20th at 10am CST. The two speakers on tap are [Juha-Matti Santala](https://hamatti.org/) and [Robb Knight](https://rknight.me/). [Details here](https://11tymeetup.dev/).
 
