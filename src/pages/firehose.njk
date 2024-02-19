@@ -7,7 +7,7 @@ permalink: /firehose/
 
 <h1>{{ title }}</h1>
 <h3>The Firehose has it's own <a href="/firehosefeed.xml">RSS feed</a>!</h3>
-<div class="bundleposts">
+<div class="bundleposts" data-pagefind-ignore="all">
   {# We've processed no posts...yet #}
   {%- set previous_year = "no posts yet" -%}
   {#
@@ -26,11 +26,7 @@ permalink: /firehose/
       <summary>{{ current_year }}</summary>
       {%- set previous_year = current_year -%}
     {%- endif -%}
-    {%- set singleItem = item -%}
-    {%- set singleItemID = "" -%}
-		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
-    {%- set pagefindWeight = "1" %}
-    {%- include "partials/singleitem.njk" -%}
+    {% singlePost item, "firehose", item.Author %}
   {%- endfor -%}
   </details>
 </div>

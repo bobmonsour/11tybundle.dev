@@ -1,5 +1,3 @@
-{% from "macros.njk" import itemTitle, itemDateline %}
-
 {% if itemType == "release" %}
 {# releases #}
   <div class="bundlereleases" data-pagefind-ignore>
@@ -20,10 +18,7 @@
 {# posts #}
   <div class="bundleposts" data-pagefind-ignore>
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}
-    {%- set singleItem = item -%}
-		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
-    {%- set pagefindWeight = "2" %}
-    {%- include "partials/singleitem.njk" -%}
+    {%- singlePost item, "blog", item.Author -%}
   {%- endfor %}
   </div>
 {% elif itemType == "site" %}

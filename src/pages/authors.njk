@@ -16,18 +16,8 @@
 
 <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }}</h1>
 
-{#
-  While the title and dateline lend themselves to the use of macros, the description
-  and categories list are a bit more complex. The description makes use of an async
-  filter (and that is why I believe it does not work in a macro). The categories list
-  uses a Nunjucks for loop as well as the slugify filter.
-#}
 <div class="bundleposts" data-pagefind-body>
   {% for item in bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
-    {%- set singleItem = item -%}
-    {%- set singleItemID -%}{{ author[0] | cachedSlugify }}-{{ item.Title | cachedSlugify }}{%- endset -%}
-		{%- set singleItemDescription = singleItem.Link | getDescription | truncate(100) -%}
-    {%- set pagefindWeight = "5" %}
-    {%- include "partials/singleitem.njk" -%}
+    {% singlePost item, "author", author[0] %}
   {% endfor %}
 </div>

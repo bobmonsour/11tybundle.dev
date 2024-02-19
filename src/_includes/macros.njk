@@ -14,18 +14,3 @@
     <li><a href="/tags/">All Tags</a></li>
   </ul>
 {%- endmacro -%}
-
-{#
-  Generate the markup for the title line of each displayed post.
-#}
-{%- macro itemTitle(title, link, id) -%}
-  <p class="bundleitem-title"><a href="{{ link }}" data-link-type="external">{{ title }}</a></p>
-{%- endmacro -%}
-
-{#
-  Generate the markup for the dateline of each displayed post. It consists of
-  the author and date for the post. The author is a link to the author's page.
-#}
-{%- macro itemDateline(author, date) -%}
-  <p class="bundleitem-dateline"><a href="/authors/{{ author | cachedSlugify }}/">{{ author }}</a> &middot; {{ date | formatItemDate }}</p>
-{%- endmacro -%}

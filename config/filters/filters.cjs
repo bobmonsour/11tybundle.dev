@@ -21,8 +21,8 @@ const formatPostDate = (date) => {
   );
 };
 
-// Format the date of the items that come from the Airtable
-// database, which arrive as strings, not dates; for use in
+// Format the date of the items that come from the Google
+// Sheet, which arrive as strings, not dates; for use in
 // the Bundle posts
 const formatItemDate = (date) => {
   const itemDate = Date.parse(date);
