@@ -24,6 +24,7 @@ class CategoryJsonFiles {
         "Global Data",
         "Images",
         "Pagination",
+        "Permalinks",
         "RSS",
         "Shortcodes",
         "WebC",
