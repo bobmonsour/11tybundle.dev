@@ -134,7 +134,7 @@ module.exports = function (eleventyConfig) {
       	<h2 class="bundleitem-title" ID=${id} data-pagefind-weight="${pageWeight}"><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">${post.Author}</a> &middot; ${date}</p>
-				<p class="bundleitem-categories">Categories: ${categories}</p>
+				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
     }
   );
