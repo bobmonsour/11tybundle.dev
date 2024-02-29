@@ -39,6 +39,10 @@ const formatFirehoseDate = (date) => {
   return newDate.toRFC2822();
 };
 
+const formatNumber = (number) => {
+  return number.toLocaleString();
+};
+
 // Extract releases, blog posts, and sites from the Airtable data for
 // the occasional 11ty Bundle blog post. Data is returned in descending date order.
 // For releases, blog posts, and sites, data is extracted by Issue and Type.
@@ -276,6 +280,7 @@ module.exports = {
   formatPostDate,
   formatItemDate,
   formatFirehoseDate,
+  formatNumber,
   getBundleItems,
   getDescription,
   postsInCategory,

@@ -10,6 +10,7 @@ const {
   formatPostDate,
   formatItemDate,
   formatFirehoseDate,
+  formatNumber,
   getBundleItems,
   getDescription,
   postsInCategory,
@@ -44,6 +45,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatPostDate", formatPostDate);
   eleventyConfig.addFilter("formatItemDate", formatItemDate);
   eleventyConfig.addFilter("formatFirehoseDate", formatFirehoseDate);
+  eleventyConfig.addFilter("formatNumber", formatNumber);
   eleventyConfig.addFilter("getBundleItems", getBundleItems);
   eleventyConfig.addAsyncFilter("getDescription", getDescription);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
