@@ -84,6 +84,14 @@ const getDescription = async (link) => {
   if (descriptionCache[link]) {
     return descriptionCache[link];
   }
+  if (link.includes("youtube.com")) {
+    descriptionCache[link] = "YouTube video";
+    return descriptionCache[link];
+  }
+  if (link.includes("medium.com")) {
+    descriptionCache[link] = "Medium post";
+    return descriptionCache[link];
+  }
   try {
     let htmlcontent = await EleventyFetch(link, {
       directory: ".cache",
@@ -92,9 +100,7 @@ const getDescription = async (link) => {
     });
     const $ = cheerio.load(htmlcontent);
     const description = $("meta[name=description]").attr("content");
-    if (link.includes("youtube.com")) {
-      descriptionCache[link] = "YouTube video";
-    } else if (description == undefined) {
+    if (description == undefined) {
       descriptionCache[link] = "";
     } else {
       descriptionCache[link] = description.trim();
