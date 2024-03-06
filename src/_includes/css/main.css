@@ -100,6 +100,26 @@ img[width][height] {
   height: auto; /* Preserve aspect ratio */
 }
 
+.email-button {
+  background-color: var(--dark-accent-color);
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: var(--font-size-md);
+  margin: 0.5em auto;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 40%;
+}
+.email-button:is(:hover, :focus) {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
 .flow > * + * {
   margin-block-start: var(--flow-space);
 }
@@ -300,11 +320,11 @@ img[width][height] {
 }
 .post-nextprev {
   list-style: none;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 1em 0;
   padding-inline-start: 0;
 }
 .post-nextprev li:first-child {
-  margin-block: 1em;
+  margin-block: 2em;
 }
 
 /* used in list of posts */
