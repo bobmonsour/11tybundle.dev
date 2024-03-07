@@ -112,7 +112,7 @@ img[width][height] {
   padding: 0.5em 1em;
   text-align: center;
   text-decoration: none;
-  width: 40%;
+  width: fit-content;
 }
 .email-button:is(:hover, :focus) {
   background-color: white;
@@ -122,7 +122,7 @@ img[width][height] {
 
 .buy-beer {
   cursor: pointer;
-  margin: 1em auto;
+  margin: 0.25em auto;
 }
 .buy-beer:is(:hover, :focus) {
   border-radius: 15px;
@@ -333,7 +333,7 @@ img[width][height] {
   padding-inline-start: 0;
 }
 .post-nextprev li:first-child {
-  margin-block: 2em;
+  margin-block: 2em 1em;
 }
 
 /* used in list of posts */
