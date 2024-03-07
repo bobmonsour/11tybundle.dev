@@ -120,6 +120,15 @@ img[width][height] {
   color: black;
 }
 
+.buy-beer {
+  cursor: pointer;
+  margin: 1em auto;
+}
+.buy-beer:is(:hover, :focus) {
+  border-radius: 15px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
 .flow > * + * {
   margin-block-start: var(--flow-space);
 }
