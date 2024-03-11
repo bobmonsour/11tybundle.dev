@@ -35,7 +35,17 @@
 <h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}</h1>
 
 <div class="bundleposts" data-pagefind-body>
+  {% set v1cautionshown = false %}
+  {% set v2cautionshown = false %}
   {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
+    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
+      {% include "partials/v1caution.njk" %}
+      {% set v1cautionshown = true %}
+    {% endif %}
+    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
+      {% include "partials/v2caution.njk" %}
+      {% set v2cautionshown = true %}
+    {% endif %}
     {% singlePost item, "category", category[0] %}
   {% endfor %}
 </div>

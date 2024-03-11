@@ -1,0 +1,13 @@
+{# Place a warning before posts published prior to releases of v1 and v2 #}
+{% if item.Date < warninginfo.v1releasedate and not v1warningshown %}
+  <div class="caution">
+    <p>Caution: The posts below were published before the release of Eleventy v1.0.0. Some of the information in these posts may be out of date.</p>
+  </div>
+  {% set v1warningshown = true %}
+{% endif %}
+{% if item.Date < warninginfo.v2releasedate and not v2warningshown %}
+  <div class="caution">
+    <p>Caution: The posts below were published before the release of Eleventy v2.0.0. Some of the information in these posts may be out of date.</p>
+  </div>
+  {% set v2warningshown = true %}
+{% endif %}

@@ -16,6 +16,8 @@ permalink: /firehose/
     and if it's not the first post, close the previous details tag and
     open a new one. And set the previous year to the current post's year.
   #}
+  {% set v1cautionshown = false %}
+  {% set v2cautionshown = false %}
   {%- for item in bundledata.firehose -%}
     {%- set current_year = item.Date | truncate(4, true, '') -%}
     {%- if current_year != previous_year -%}
@@ -26,6 +28,14 @@ permalink: /firehose/
       <summary>{{ current_year }}</summary>
       {%- set previous_year = current_year -%}
     {%- endif -%}
+    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
+      {% include "partials/v1caution.njk" %}
+      {% set v1cautionshown = true %}
+    {% endif %}
+    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
+      {% include "partials/v2caution.njk" %}
+      {% set v2cautionshown = true %}
+    {% endif %}
     {% singlePost item, "firehose", item.Author %}
   {%- endfor -%}
   </details>
