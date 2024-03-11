@@ -484,20 +484,14 @@ h2.bundleitem-title {
   row-gap: 0.15em;
 }
 
-.caution {
+.bundleposts .caution {
   background-color: #eed202;
-  border: 1px dotted darkgray;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-block-end: 1rem;
-  margin-inline: auto;
 }
 .caution p {
   font-size: var(--font-size-base);
   font-style: italic;
   margin-block: 0;
   padding-block: 0;
-  /* text-align: center; */
 }
 .caution p:first-child {
   font-weight: bold;
