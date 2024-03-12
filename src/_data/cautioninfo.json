@@ -1,7 +1,5 @@
 {
   "currentrelease": "2.0.1",
   "v1releasedate": "2022-01-09",
-  "v2releasedate": "2023-02-08",
-  "v1cautiontext": "The posts below were published before the release of Eleventy v1.0.0 (Jan 9, 2022). Information in these posts may be out of date. The current stable release is v2.0.1.",
-  "v2cautiontext": "The posts below were published before the release of Eleventy v2.0.0 (Feb 8, 2023). Information in these posts may be out of date. The current stable release is v2.0.1."
+  "v2releasedate": "2023-02-08"
 }
