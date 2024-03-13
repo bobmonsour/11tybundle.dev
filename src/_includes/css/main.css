@@ -347,6 +347,14 @@ img[width][height] {
   text-wrap: balance;
 }
 
+.post h2 {
+  font-style: italic;
+  font-weight: bold;
+  margin-block: 1em 0;
+  padding-block-end: 0;
+  text-align: left;
+}
+
 .post a img {
   border-radius: 2rem;
   border: 5px solid var(--dark-accent-color);
