@@ -23,9 +23,9 @@ New on the docs: how to persist Eleventy Cache across builds to improve build ti
 
 If you've ever been looking for options to add forms to your static site, well [this CloudCannon page is for you](https://cloudcannon.com/jamstack-ecosystem/contact-forms/). I'd give you a count of all the options, but it's just too many to eyeball...and I'm in a hurry right now.
 
-## Eleventy Base Blog update
+## Eleventy Base WebC update
 
-The [Eleventy Base Blog using WebC](https://github.com/11ty/eleventy-base-webc) has been updated to Eleventy 3.0.0 using ESM. It's a great way to get your blogging started with Eleventy and WebC. It's just sitting there, waiting to be deployed.
+The [Eleventy Base WebC starter](https://github.com/11ty/eleventy-base-webc) has been updated to Eleventy 3.0.0 using ESM. It's a great way to get your blogging started with Eleventy and WebC. It's just sitting there, waiting to be deployed.
 
 ## Email or beer?
 
