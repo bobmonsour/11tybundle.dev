@@ -25,7 +25,7 @@ If you've ever been looking for options to add forms to your static site, well [
 
 ## Eleventy Base WebC update
 
-The [Eleventy Base WebC starter](https://github.com/11ty/eleventy-base-webc) has been updated to Eleventy 3.0.0 using ESM. It's a great way to get your blogging started with Eleventy and WebC. It's just sitting there, waiting to be deployed.
+The [Eleventy Base WebC starter](https://github.com/11ty/eleventy-base-webc) has been updated to Eleventy 3.0.0 using ESM. It's a great way to get started with Eleventy and WebC. It's just sitting there, waiting to be deployed.
 
 ## Email or beer?
 
