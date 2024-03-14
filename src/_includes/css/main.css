@@ -123,6 +123,7 @@ img[width][height] {
 .buy-beer {
   cursor: pointer;
   margin: 1em auto 0.5em auto;
+  width: fit-content;
 }
 .buy-beer:is(:hover, :focus) {
   border-radius: 15px;

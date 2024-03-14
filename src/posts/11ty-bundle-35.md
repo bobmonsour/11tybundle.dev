@@ -29,7 +29,7 @@ The [Eleventy Base Blog using WebC](https://github.com/11ty/eleventy-base-webc) 
 
 ## Email or beer?
 
-In case you haven't noticed, I've added a couple of buttons to this site. At the end of each of these blog posts, I invite you to send me an email...in the unlikely event that you want to send me your thoughts about the post. And at the end of every page of the site, you are now presented with the option to buy me a beer. I have plenty of coffee, but not enough beer. I'll leave it at that.
+In case you haven't noticed, I've added a couple of buttons to this site. At the end of each of these blog posts, I invite you to send me an email...in the unlikely event that you want to send me your thoughts about the post. And at the end of every ~~page~~ _post_ ~~of the site~~, you are now presented with the option to buy me a beer. I have plenty of coffee, but not enough beer. I'll leave it at that.
 
 That's all for now...until next time...
 
