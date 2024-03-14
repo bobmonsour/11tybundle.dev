@@ -99,6 +99,8 @@ module.exports = function (eleventyConfig) {
   //	- firehose: 0 (lowest priority)
   //	- blog: 0
   //
+  // A weight of 0 should result in those posts items being ignored by the pagefind app as they are duplicates of those already present in the category and author pages.
+  //
   // For usage on the category page, the CSS id is created by concatenating the slugified category name, the slugified title, and the date of the post.
   // For usage on the author page, the CSS id is created by concatenating the slugified author name, the slugified title, and the date of the post.
   // For usage on the firehose page, the CSS id is an empty string.
