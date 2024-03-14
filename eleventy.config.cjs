@@ -115,14 +115,14 @@ module.exports = function (eleventyConfig) {
         '"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
       switch (type) {
         case "category": // for category pages
-          pageWeight = 10;
+          pageWeightorIgnore = "data-pagefind-weight = 10";
           break;
         case "author": // for author pages
-          pageWeight = 5;
+          pageWeightorIgnore = "data-pagefind-weight = 5";
           break;
         case "firehose": // for the firehose page
         case "blog": // for the Bundle blog posts
-          pageWeight = 0;
+          pageWeightorIgnore = "data-pagefind-ignore";
       }
       let categories = "";
       post.Categories.forEach((category) => {
@@ -131,7 +131,7 @@ module.exports = function (eleventyConfig) {
       });
       return `
 			<div class="bundleitem">
-      	<h2 class="bundleitem-title" ID=${id} data-pagefind-weight="${pageWeight}"><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
+      	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">${post.Author}</a> &middot; ${date}</p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
