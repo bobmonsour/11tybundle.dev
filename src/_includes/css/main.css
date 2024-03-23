@@ -1,7 +1,8 @@
 /* default styles */
 body {
   /* use flex on body to force footer to bottom on short pages */
-  background-color: var(--site-bg-color);
+  background-color: white;
+  /* background-color: var(--site-bg-color); */
   color: var(--brand-text-color);
   display: grid;
   font-family: var(--body-font);
@@ -48,16 +49,16 @@ body {
 :where(a) {
   color: var(--brand-color);
   text-decoration: 1px solid underline rgb(121, 120, 120);
-  /* text-decoration-color: rgb(121, 120, 120); */
-  /* text-decoration-thickness: 1px; */
-  /* text-decoration-style: solid; */
   text-underline-offset: 0.25em;
 }
 a:is(:hover, :focus) {
-  background-color: var(--link-hover-bg-color);
+  background-color: black;
   border-radius: 0.5rem;
-  color: var(--link-hover-text-color);
+  color: white;
   text-decoration: none;
+  opacity: 0.8;
+  outline: thin dotted black;
+  outline-offset: 4px;
 }
 
 /* indicator for all external links */
@@ -224,10 +225,15 @@ img[width][height] {
 }
 /* highlight the nav element of the current page  */
 .nav-link[aria-current="page"] {
-  background-color: var(--link-hover-bg-color);
+  background-color: black;
   border-radius: 0.5rem;
-  color: var(--link-hover-text-color);
+  color: white;
   text-decoration: none;
+}
+.nav-link:is(:hover, :focus) {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
