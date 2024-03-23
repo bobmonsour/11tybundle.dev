@@ -51,7 +51,7 @@ body {
   text-decoration: 1px solid underline rgb(121, 120, 120);
   text-underline-offset: 0.25em;
 }
-a:is(:hover, :focus) {
+a:not([class^="pagefind-ui__result-link"]):is(:hover, :focus) {
   background-color: black;
   border-radius: 0.5rem;
   color: white;

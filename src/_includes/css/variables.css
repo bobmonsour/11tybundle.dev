@@ -66,7 +66,8 @@
   /* Configure the Pagefind UI */
   --pagefind-ui-scale: 1;
   --pagefind-ui-primary: #034ad8;
-  --pagefind-ui-text: #393939;
+  /* --pagefind-ui-text: #393939; */
+  --pagefind-ui-text: black;
   --pagefind-ui-background: #ffffff;
   --pagefind-ui-border: #000000;
   --pagefind-ui-tag: green;
