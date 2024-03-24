@@ -1,7 +1,7 @@
 /* default styles */
 body {
   /* use flex on body to force footer to bottom on short pages */
-  background-color: white;
+  background-color: #ffedde;
   /* background-color: var(--site-bg-color); */
   color: var(--brand-text-color);
   display: grid;
