@@ -109,7 +109,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode(
     "singlePost",
     async function (post, type, idKey) {
-      const titleSlug = cachedSlugify(post.Title);
+      const title = post.Title.replace(/[<>]/g, "");
+      const titleSlug = cachedSlugify(title);
       const description = await getDescription(post.Link);
       const authorSlug = cachedSlugify(post.Author);
       const date = formatItemDate(post.Date);
