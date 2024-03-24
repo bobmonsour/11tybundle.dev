@@ -103,7 +103,7 @@ const getDescription = async (link) => {
     if (description == undefined) {
       descriptionCache[link] = "";
     } else {
-      descriptionCache[link] = description.trim();
+      descriptionCache[link] = description.replace(/[<>]/g, "").trim();
     }
     return descriptionCache[link];
   } catch (e) {
