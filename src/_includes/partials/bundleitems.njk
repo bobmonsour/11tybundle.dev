@@ -10,9 +10,7 @@
       <p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
     </div>
   {%- endfor %}
-  {% else %}
-    <p>No new releases since the last issue.</p>
-  {% endif %}
+  {%- else %}<p>No new releases since the last issue.</p>{%- endif %}
   </div>
 {% elif itemType == "blog post" %}
 {# posts #}
