@@ -20,7 +20,7 @@ layout: default.njk
   <p class="post-readingtime">{{ content | readingTime }}</p>
   {% include 'partials/blog-welcome.njk' %}
   {{ content | safe }}
-  <a href="mailto:bob.monsour@gmail.com?subject=Issue {{ bundleIssue }} response" class="email-button">Send me an email...</a>
+  <a href="mailto:bob.monsour@gmail.com?subject=Issue%20{{ bundleIssue }}%20response" class="email-button">Send me an email...</a>
   {# {% include 'partials/webmentions.njk' %} #}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
