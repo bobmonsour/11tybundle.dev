@@ -18,9 +18,10 @@ layout: default.njk
   <h1 class="post-title" data-pagefind-weight="1">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }}</p>
   <p class="post-readingtime">{{ content | readingTime }}</p>
+  <p class="post-date"><a href="#newsletter-subscribe">Get this by email</a></p>
   {% include 'partials/blog-welcome.njk' %}
   {{ content | safe }}
-  <a href="mailto:bob.monsour@gmail.com?subject=Issue%20{{ bundleIssue }}%20response" class="email-button">Send me an email...</a>
+  {# <a href="mailto:bob.monsour@gmail.com?subject=Issue%20{{ bundleIssue }}%20response" class="email-button">Send me an email...</a> #}
   {# {% include 'partials/webmentions.njk' %} #}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}

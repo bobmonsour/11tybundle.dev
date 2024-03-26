@@ -610,3 +610,44 @@ iframe[src*="youtube"] {
   padding: 1rem;
   text-align: center;
 }
+
+/* newsletter subscription form styles */
+#newsletter-subscribe {
+  margin: 0 auto;
+}
+#newsletter-subscribe h2 {
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  margin-block: 0.25em;
+  padding-block-start: 1.5em;
+}
+input {
+  font-family: inherit;
+  font-size: var(--font-size-md);
+}
+#bd-email {
+  border: 1px solid var(--dark-accent-color);
+  justify-self: end;
+  width: 30ch;
+}
+.sub-button {
+  background-color: var(--postitem-bg-color);
+  color: black;
+  border: none;
+  font-size: var(--font-size-md);
+  justify-self: start;
+}
+.sub-button:is(:hover, :focus) {
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+  opacity: 0.8;
+  outline: thin dotted black;
+  outline-offset: 4px;
+}
+.powered-by-buttondown {
+  display: block;
+  font-size: var(--font-size-sm);
+  padding: 1em 0;
+  text-align: left;
+}
