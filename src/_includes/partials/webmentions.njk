@@ -9,7 +9,7 @@
 {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
 {% if  mentions.mentionCount > 0 %}
   <div class="webmentions flow" id="webmentions" data-pagefind-ignore>
-    {% if mentions.comments | length !== 0 %}
+    {# {% if mentions.comments | length !== 0 %}
     <h2>Comments ({{ mentions.comments | length }})</h2>
     <div class="comments">
       {% for item in mentions.comments %}
@@ -20,7 +20,7 @@
         </div>
       {% endfor %}
     </div>
-    {% endif %}
+    {% endif %} #}
 
     {% if mentions.likes %}
     <h2>Likes ({{ mentions.likes | length }})</h2>

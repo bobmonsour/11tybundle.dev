@@ -9,10 +9,10 @@
       <p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
       <p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
     </div>
-  {%- endfor %}
-  {%- else %}<p>No new releases since the last issue.</p>{%- endif %}
+  {%- endfor -%}
+  {%- else %}<p>No new releases since the last issue.</p>{%- endif -%}
   </div>
-{% elif itemType == "blog post" %}
+{%- elif itemType == "blog post" -%}
 {# posts #}
   <div class="bundleposts" data-pagefind-ignore>
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}

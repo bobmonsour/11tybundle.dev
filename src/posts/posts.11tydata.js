@@ -8,4 +8,5 @@ module.exports = {
     alt: "the number 11 as photographed by David Monje on Unsplash",
   },
   snow: "false",
+  confetti: "false",
 };

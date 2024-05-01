@@ -22,7 +22,7 @@ layout: default.njk
   {% include 'partials/blog-welcome.njk' %}
   {{ content | safe }}
   {# <a href="mailto:bob.monsour@gmail.com?subject=Issue%20{{ bundleIssue }}%20response" class="email-button">Send me an email...</a> #}
-  {# {% include 'partials/webmentions.njk' %} #}
+  {% include 'partials/webmentions.njk' %}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
@@ -34,3 +34,7 @@ layout: default.njk
     {%- endif %}
   {%- endif %}
 </article>
+
+{% if confetti == "true" %}
+  <script src="/assets/js/post-confetti.js"></script>
+{% endif %}

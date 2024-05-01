@@ -1,7 +1,7 @@
 ---
 bundleIssue: 40
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Another canary, Tolkien's 'eleventy', Transforms in the docs, Dev Server 2.0, eleventy-img beta, Validate your data, Embed everything, Two new starters, 11ty conference speakers...AND 3 releases, 7 posts, and 2 sites to see"
+  title: "Issue {{ bundleIssue }} - Another canary, Tolkien's 'eleventy', Transforms in the docs, Dev Server 2.0, eleventy-img beta, Validate your data, Embed everything, Two new starters, 11ty conference speakers...And 3 releases, 7 posts, and 2 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-04-23
 tags:
@@ -33,21 +33,15 @@ The email version of this blog is closing in on a whopping 30 subscribers. [Subs
 
 Until next time...
 
-<div id="releases"></div>
-
 ## Recent releases
 
 {% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
+{%- include 'partials/bundleitems.njk' -%}
 
 ## Posts from around the web since the last Bundle issue
 
 {% set itemType = "blog post" %}
 {% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
 
 ## Built with Eleventy
 
