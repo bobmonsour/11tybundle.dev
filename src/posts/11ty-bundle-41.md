@@ -22,7 +22,7 @@ Here's an early design sketch from April of last year:
 
 **11ty conference is next week, May 9th!** Here's the [list of speakers](https://conf.11ty.dev/#speakers) so far. It's **FREE**, single-track, and virtual. If you've waited until the last minute, now's the time to [register](https://conf.11ty.dev/#register).
 
-**Generate robots.txt** [Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/) has developed [eleventy-plugin-robotstxt](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt), an experimental plugin that is only compatible with elevetny v3.0.0-alpha.6 or later. It's purpose is to _"Automatically generate a robotx.txt file for your Eleventy site using front matter."_ He provides lots of examples. [Check it out](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt).
+**Generate robots.txt** [Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/) has developed [eleventy-plugin-robotstxt](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt), an experimental plugin that is only compatible with Eleventy v3.0.0-alpha.6 or later. It's purpose is to _"Automatically generate a robots.txt file for your Eleventy site using front matter."_ He provides lots of examples. [Check it out](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt).
 
 **Two new starters** There's a [resume template](https://github.com/devon-wolf/resume-template) by [Devon Wolf](https://github.com/devon-wolf) and an [image portfolio website template named halide](https://github.com/danurbanowicz/halide) that uses Tina CMS by [
 Dan Urbanowicz](https://github.com/danurbanowicz). Respective demos are [here](https://devon-wolf.github.io/resume-template/) and [here](https://halide.netlify.app).
