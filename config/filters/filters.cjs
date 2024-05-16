@@ -107,7 +107,8 @@ const getDescription = async (link) => {
     }
     return descriptionCache[link];
   } catch (e) {
-    console.log("Error fetching description for " + link + " " + e.message);
+    // console.log("Error fetching description for " + link + " " + e.message);
+    console.log("Error fetching description for " + link);
     return "";
   }
 };
