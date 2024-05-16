@@ -12,7 +12,7 @@ An email version of this blog is available. **[Subscribe here](#newsletter-subsc
 
 I've managed to find an hour here and an hour there, while traveling, so maybe there won't be a gap in my posting. Anyway...we've got a good one this week. Let's get to it!
 
-**The 11ty Conference happened...a roundup.** On May 9th, the 11ty conference aired live, and it was a real good conference about making web sites real good. If you want to watch it from start to finish, the entire conference is [right here on YouTube]().
+**The 11ty Conference happened...a roundup.** On May 9th, the 11ty conference aired live, and it was a real good conference about making web sites real good. If you want to watch it from start to finish, the entire conference is [right here on YouTube](https://www.youtube.com/watch?v=iLxJ6PtuF9M&t=1205s).
 
 Here's a set of talk-by-talk links in case you don't want to watch them in order. These links are also in the description of the full video. I'm skipping the [20-minute countdown](https://www.youtube.com/watch?v=iLxJ6PtuF9M&t=0s), but it was hilarious as at each 11-second mark past the minute, a random voice would say _"eleven"_ in a unique way.
 
