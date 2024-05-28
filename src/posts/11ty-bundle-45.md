@@ -16,7 +16,7 @@ On a related note, I'm thinking that we need a new category for the kind of post
 
 **2024 XOXO Fest.** One of the sites listed below is quite stunning, on desktop _and_ mobile. It's the site for the [2024 XOXO Fest](https://2024.xoxofest.com/). The event is billed as _"An experimental festival for independent artists and creators who work on the internet."_ While the event looks awesome, the site is gorgeous. It was created by [Ashur Cabrera](https://ashur.cab/rera/) & Emily Cabrera.
 
-**Slash Pages.** It seems that Robb Knight is at it again. As [he put it](https://rknight.me/blog/slash-pages/): _"While putting Baby Knight to bed I had an idea for a project: a website that acts as a guide to the different slash pages you can add to your website._" Enter [splashpages.net](https://splashpages.net/). The source is [on GitHub](https://github.com/rknightuk/slashpages). I've seen some ripples of this, indicating that it might be catching on.
+**Slash Pages.** It seems that Robb Knight is at it again. As [he put it](https://rknight.me/blog/slash-pages/): _"While putting Baby Knight to bed I had an idea for a project: a website that acts as a guide to the different slash pages you can add to your website._" Enter [slashpages.net](https://slashpages.net/). The source is [on GitHub](https://github.com/rknightuk/slashpages). I've seen some ripples of this, indicating that it might be catching on.
 
 **Nearing the magic 1,100.** As you can see, we're nearing the magic number of posts, i.e., **_11ty hundred_** blog posts, each covering some aspect of Eleventy. As of this writing, we're at 1,093 posts. Whoever writes the 1,100th post will get called out in the next issue. I'm not sure what that means, but I think of something. Now start writing.
 
