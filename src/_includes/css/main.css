@@ -548,7 +548,7 @@ h2.bundleitem-title {
 }
 
 /* Scroll to top button */
-.stt {
+#stt {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -561,14 +561,11 @@ h2.bundleitem-title {
   box-shadow: 0 0.25rem 0.5rem 0 gray;
   opacity: 0.5;
 }
-.stt:hover,
-.stt:focus {
+#stt:hover,
+#stt:focus {
   opacity: 0.5;
-  background-color: var(--link-hover-bg-color);
+  background-color: white;
   border-radius: 50%;
-}
-.stt:active {
-  opacity: 0.5;
 }
 
 .strikethrough {
