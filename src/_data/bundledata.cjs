@@ -1,10 +1,9 @@
-// get all the records (JSON exported from a Google Sheet) and return
+// All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-const fetchSheetData = require("./fetchsheetdata.cjs");
 
 module.exports = async function () {
-  const bundleRecords = await fetchSheetData();
+  const bundleRecords = require("./bundledb.json");
 
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords

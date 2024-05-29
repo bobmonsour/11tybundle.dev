@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 _site/
+/bundledb-backups
+/badlinks
 todo.md
 scratch/
 11news/
