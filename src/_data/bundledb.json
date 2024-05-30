@@ -8992,12 +8992,6 @@
   },
   {
     "Issue": 26,
-    "Type": "site",
-    "Title": "David Moll's Blog",
-    "Link": "https://blog.davidmoll.net/"
-  },
-  {
-    "Issue": 26,
     "Type": "blog post",
     "Title": "Addition of Post Graphs to Stats page",
     "Link": "https://photogabble.co.uk/changelog/addition-of-post-graphs-to-stats-page/",
@@ -9195,15 +9189,6 @@
     "Type": "site",
     "Title": "Team Oberberg",
     "Link": "https://team-oberberg.blog/"
-  },
-  {
-    "Issue": 26,
-    "Type": "blog post",
-    "Title": "Creating a complete RSS feed",
-    "Link": "https://blog.davidmoll.net/blog/2024-01-05-100-RSS/",
-    "Date": "2024-01-05T08:00:00.000Z",
-    "Author": "David Moll",
-    "Categories": ["Blogging", "How to...", "Plugins", "RSS"]
   },
   {
     "Issue": 26,
@@ -9480,15 +9465,6 @@
   {
     "Issue": 27,
     "Type": "blog post",
-    "Title": "How to host a 11ty-site on a Raspberry Pi",
-    "Link": "https://blog.davidmoll.net/blog/2024-01-14-How-to-host-a-blog/",
-    "Date": "2024-01-14T08:00:00.000Z",
-    "Author": "David Moll",
-    "Categories": ["Blogging", "Deployment", "How to..."]
-  },
-  {
-    "Issue": 27,
-    "Type": "blog post",
     "Title": "Added Monthly Posts Heatmap To The Site",
     "Link": "https://johnwargo.com/posts/2024/added-monthly-posts-heatmap/",
     "Date": "2024-01-15T08:00:00.000Z",
@@ -9530,15 +9506,6 @@
     "Date": "2024-01-13T08:00:00.000Z",
     "Author": "Cassey Lottman",
     "Categories": ["Blogging", "Front Matter"]
-  },
-  {
-    "Issue": 27,
-    "Type": "blog post",
-    "Title": "How to automatically generate a new boilerplate-post with inquirer",
-    "Link": "https://blog.davidmoll.net/blog/2024-01-15-How-to-automatically-generate-a-new-boilerplate-post-with-inquirer/",
-    "Date": "2024-01-15T08:00:00.000Z",
-    "Author": "David Moll",
-    "Categories": ["Blogging", "Front Matter", "How to..."]
   },
   {
     "Issue": 27,
@@ -9638,15 +9605,6 @@
     "Date": "2024-01-20T08:00:00.000Z",
     "Author": "Sophie Koonin",
     "Categories": ["How to...", "Webmentions"]
-  },
-  {
-    "Issue": 28,
-    "Type": "blog post",
-    "Title": "Track and display uptime of your blog",
-    "Link": "https://blog.davidmoll.net/blog/2024-01-21-Track-and-display-uptime-of-your-blog/",
-    "Date": "2024-01-21T08:00:00.000Z",
-    "Author": "David Moll",
-    "Categories": ["Deployment", "How to...", "Performance", "Remote Data"]
   },
   {
     "Issue": 28,
