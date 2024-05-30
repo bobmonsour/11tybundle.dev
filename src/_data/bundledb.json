@@ -15229,12 +15229,6 @@
   {
     "Issue": 45,
     "Type": "site",
-    "Title": "BinaryDigit's Cafe",
-    "Link": "https://binarydigit.cafe/"
-  },
-  {
-    "Issue": 45,
-    "Type": "site",
     "Title": "wargaluk",
     "Link": "https://wargaluk.com/"
   },
@@ -15265,7 +15259,7 @@
     "Link": "https://saeedmirshekari.com/"
   },
   {
-    "Issue": "46",
+    "Issue": 46,
     "Type": "blog post",
     "Title": "Getting started with Eleventy",
     "Link": "https://www.seanmcp.com/gardens/getting-started-with-eleventy/",
@@ -15276,6 +15270,78 @@
       "Configuration",
       "Getting Started",
       "Layouts",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": 46,
+    "Type": "site",
+    "Title": "Kobold Think Tank",
+    "Link": "https://koboldthinktank.site/"
+  },
+  {
+    "Issue": 46,
+    "Type": "site",
+    "Title": "Helen Chong",
+    "Link": "https://helenchong.dev/"
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "How To Deploy an Eleventy Site to Github Pages with a Custom Domain",
+    "Link": "https://www.justus.ws/tech/deploying-eleventy-to-github-pages/",
+    "Date": "2020-09-05",
+    "Author": "Justus Grunow",
+    "Categories": [
+      "Deployment"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Eleventy static-site generator: Making Liquid play nice with dates",
+    "Link": "https://www.justus.ws/tech/eleventy-utc-dates/",
+    "Date": "2020-04-16",
+    "Author": "Justus Grunow",
+    "Categories": [
+      "Dates"
+    ]
+  },
+  {
+    "Issue": 46,
+    "Type": "blog post",
+    "Title": "Rebuilding My Developer Portfolio with Eleventy",
+    "Link": "https://helenchong.dev/blog/posts/2024-04-11-rebuilding-my-developer-portfolio-with-eleventy/",
+    "Date": "2024-04-11",
+    "Author": "Helen Chong",
+    "Categories": [
+      "How to...",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": 46,
+    "Type": "blog post",
+    "Title": "Eleventy, Codeberg CI & Pages",
+    "Link": "https://mathilde.eu.org/blog/11ty-codeberg-ci-pages/",
+    "Date": "2024-05-29",
+    "Author": "Mathilde Grünig",
+    "Categories": [
+      "Deployment",
+      "Getting Started",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": 46,
+    "Type": "blog post",
+    "Title": "Convert Obsidian Image LInks to Nunjucks Shortcodes in Eleventy",
+    "Link": "https://www.amykhar.dev/convert-obsidian-image-links-to-nunjucks-short-codes-in-eleventy/",
+    "Date": "2024-05-29",
+    "Author": "Amy Khar",
+    "Categories": [
+      "How to...",
+      "Images",
       "Shortcodes"
     ]
   }

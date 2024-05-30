@@ -1,7 +1,7 @@
 ---
 bundleIssue: 45
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Make 11ty Fully Independent and Sustainable, 2024 XOXO Fest, Slash Pages, Nearing the magic 1,100, Tinkering under the hood...And 5 posts and 9 sites to see"
+  title: "Issue {{ bundleIssue }} - Make 11ty Fully Independent and Sustainable, 2024 XOXO Fest, Slash Pages, Nearing the magic 1,100, Tinkering under the hood...And 5 posts and 8 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-05-28
 tags:
