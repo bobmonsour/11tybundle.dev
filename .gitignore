@@ -3,6 +3,7 @@ node_modules/
 _site/
 /bundledb-backups
 /badlinks
+/dbtools
 todo.md
 scratch/
 11news/
