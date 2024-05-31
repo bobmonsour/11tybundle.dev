@@ -3,10 +3,7 @@ node_modules/
 _site/
 /devdata
 /dbtools
-todo.md
 scratch/
-11news/
-11news.md
 .env
 .cache
 .vscode
