@@ -12214,5 +12214,20 @@
     "Date": "2024-06-01",
     "Author": "Max Böck",
     "Categories": ["Collections", "How to...", "Images", "Plugins"]
+  },
+  {
+    "Issue": "46",
+    "Type": "blog post",
+    "Title": "Virtual Templates in Eleventy",
+    "Link": "https://www.aleksandrhovhannisyan.com/blog/eleventy-virtual-templates/",
+    "Date": "2024-06-01",
+    "Author": "Aleksandr Hovhannisyan",
+    "Categories": [
+      "Configuration",
+      "Front Matter",
+      "Global Data",
+      "How to...",
+      "Plugins"
+    ]
   }
 ]
