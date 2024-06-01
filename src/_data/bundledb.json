@@ -15335,5 +15335,31 @@
     "Type": "site",
     "Title": "live laugh blog",
     "Link": "https://livelaugh.blog/"
+  },
+  {
+    "Issue": "46",
+    "Type": "blog post",
+    "Title": "A post",
+    "Link": "https://bobmonsour.c",
+    "Date": "2024-05-31",
+    "Author": "BobM",
+    "Categories": [
+      "11ty Conference 2024",
+      "Blogging"
+    ]
+  },
+  {
+    "Issue": "46",
+    "Type": "blog post",
+    "Title": "Updating to Eleventy v3",
+    "Link": "https://mxb.dev/blog/eleventy-v3-update/",
+    "Date": "2024-06-01",
+    "Author": "Max Böck",
+    "Categories": [
+      "Collections",
+      "How to...",
+      "Images",
+      "Plugins"
+    ]
   }
 ]
