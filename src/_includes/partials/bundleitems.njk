@@ -16,7 +16,8 @@
 {# posts #}
   <div class="bundleposts" data-pagefind-ignore>
   {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}
-    {%- singlePost item, "blog", item.Author -%}
+        {%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
+        {%- singlePost item, "blog", item.Author, postCount -%}
   {%- endfor %}
   </div>
 {% elif itemType == "site" %}

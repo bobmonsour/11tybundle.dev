@@ -15,6 +15,7 @@ const {
   getDescription,
   postsInCategory,
   postsByAuthor,
+  postCountByAuthor,
   readingTime,
   webmentionsByUrl,
   plainDate,
@@ -50,6 +51,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addAsyncFilter("getDescription", getDescription);
   eleventyConfig.addFilter("postsInCategory", postsInCategory);
   eleventyConfig.addFilter("postsByAuthor", postsByAuthor);
+  eleventyConfig.addFilter("postCountByAuthor", postCountByAuthor);
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("webmentionsByUrl", webmentionsByUrl);
   eleventyConfig.addFilter("plainDate", plainDate);
@@ -108,7 +110,7 @@ module.exports = function (eleventyConfig) {
   // These CSS IDs are used to create a landing place for the links in the pagefind results.
   eleventyConfig.addNunjucksAsyncShortcode(
     "singlePost",
-    async function (post, type, idKey) {
+    async function (post, type, idKey, postCount) {
       const title = post.Title.replace(/[<>]/g, "");
       const titleSlug = cachedSlugify(title);
       const description = await getDescription(post.Link);
@@ -139,7 +141,7 @@ module.exports = function (eleventyConfig) {
       	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-date">${date}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">Posts by ${post.Author}</a> &middot; <a href="${siteUrl}">Their website</a></p>
+        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount})</a> &middot; <a href="${siteUrl}">Their website</a></p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
     }

@@ -32,7 +32,7 @@ const formatItemDate = (date) => {
 };
 
 // This filter formats the date of the items that come from
-// the Airtable database, which arrive as strings, not dates; for
+// the database, which arrive as strings, not dates; for
 // use in the firehose RSS feed
 const formatFirehoseDate = (date) => {
   const newDate = DateTime.fromISO(date);
@@ -43,7 +43,7 @@ const formatNumber = (number) => {
   return number.toLocaleString();
 };
 
-// Extract releases, blog posts, and sites from the Airtable data for
+// Extract releases, blog posts, and sites from the data for
 // the occasional 11ty Bundle blog post. Data is returned in descending date order.
 // For releases, blog posts, and sites, data is extracted by Issue and Type.
 // bundleIssue is the Issue number and is specified in the front matter of the
@@ -135,7 +135,7 @@ const postsInCategory = (bundleitems, category, count) => {
 };
 
 // Given an author, get all blog posts written by that author
-// from the Airtable data.
+// from the bundle data.
 const postsByAuthor = (bundleitems, author, count) => {
   if (count == 0) {
     sliceCount = 100000;
@@ -148,6 +148,12 @@ const postsByAuthor = (bundleitems, author, count) => {
       return a.Date > b.Date ? -1 : 1;
     })
     .slice(0, sliceCount);
+};
+
+// Given an author, get the number of blog posts written by that author
+// from the bundle data.
+const postCountByAuthor = (bundleitems, author) => {
+  return bundleitems.filter((item) => item.Author === author).length;
 };
 
 // Calculate the reading time, in minutes, of a post
@@ -292,6 +298,7 @@ module.exports = {
   getDescription,
   postsInCategory,
   postsByAuthor,
+  postCountByAuthor,
   readingTime,
   webmentionsByUrl,
   plainDate,

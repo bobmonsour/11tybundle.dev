@@ -36,7 +36,8 @@ permalink: /firehose/
       {% include "partials/v2caution.njk" %}
       {% set v2cautionshown = true %}
     {% endif %}
-    {% singlePost item, "firehose", item.Author %}
+    {% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
+    {% singlePost item, "firehose", item.Author, postCount %}
   {%- endfor -%}
   </details>
 </div>

@@ -28,6 +28,7 @@
       {% include "partials/v2caution.njk" %}
       {% set v2cautionshown = true %}
     {% endif %}
-    {% singlePost item, "author", author[0] %}
+    {% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
+    {% singlePost item, "author", author[0], postCount %}
   {% endfor %}
 </div>

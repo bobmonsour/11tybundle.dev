@@ -11,9 +11,7 @@ layout: default.njk
 {% if pageHasCode %}
   {%- css "pageHasCode" %}{% include "css/prism-okaidia.css" %}{% endcss %}
 {% endif %}
-
 {%- if draft == "true" -%}<h1>DRAFT</h1>{%- endif -%}
-
 <article class="post" data-pagefind-body>
   <h1 class="post-title" data-pagefind-weight="1">{{ title }}</h1>
   <p class="post-date">{{ date | formatPostDate }}</p>
@@ -21,7 +19,6 @@ layout: default.njk
   <p class="post-date"><a href="#newsletter-subscribe">Get this by email</a></p>
   {% include 'partials/blog-welcome.njk' %}
   {{ content | safe }}
-  {# <a href="mailto:bob.monsour@gmail.com?subject=Issue%20{{ bundleIssue }}%20response" class="email-button">Send me an email...</a> #}
   {% include 'partials/webmentions.njk' %}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
