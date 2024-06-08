@@ -113,6 +113,8 @@ module.exports = function (eleventyConfig) {
       const titleSlug = cachedSlugify(title);
       const description = await getDescription(post.Link);
       const authorSlug = cachedSlugify(post.Author);
+      const url = new URL(post.Link);
+      const siteUrl = url.origin;
       const date = formatItemDate(post.Date);
       const id =
         '"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
@@ -136,7 +138,8 @@ module.exports = function (eleventyConfig) {
 			<div class="bundleitem">
       	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">${post.Author}</a> &middot; ${date}</p>
+        <p class="bundleitem-date">${date}</p>
+        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">Posts by ${post.Author}</a> &middot; <a href="${siteUrl}">Their website</a></p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
     }
