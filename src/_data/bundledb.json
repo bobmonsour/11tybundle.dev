@@ -10980,14 +10980,15 @@
   {
     "Issue": 25,
     "Type": "blog post",
-    "Title": "Eleventy v3 with ESM support now on the Canary channel",
+    "Title": "ELEVENTY V3 WITH ESM SUPPORT NOW ON THE CANARY CHANNEL",
     "Link": "https://www.zachleat.com/web/eleventy-v3-alpha/",
     "Date": "2023-12-18T08:00:00.000Z",
     "Author": "Zach Leatherman",
     "Categories": [
       "Configuration",
       "Deployment",
-      "Migrating to Eleventy"
+      "Migrating to Eleventy",
+      "From the Source"
     ]
   },
   {
@@ -12744,14 +12745,15 @@
   {
     "Issue": 31,
     "Type": "blog post",
-    "Title": "Lessons Learned Moving Eleventy form CommonJS to ESM",
+    "Title": "LESSONS LEARNED MOVING ELEVENTY FROM COMMONJS TO ESM",
     "Link": "https://www.zachleat.com/web/eleventy-v3-esm/",
     "Date": "2024-02-07T08:00:00.000Z",
     "Author": "Zach Leatherman",
     "Categories": [
       "Configuration",
       "How to...",
-      "Plugins"
+      "Plugins",
+      "From the Source"
     ]
   },
   {
@@ -14825,12 +14827,13 @@
   {
     "Issue": 43,
     "Type": "blog post",
-    "Title": "An Organizer's Retrospective on the 11ty Conference",
+    "Title": "AN ORGANIZER'S RETROSPECTIVE ON THE 11ty CONFERENCE",
     "Link": "https://www.zachleat.com/web/11ty-conf-retro/",
     "Date": "2024-05-13T07:00:00.000Z",
     "Author": "Zach Leatherman",
     "Categories": [
-      "11ty Conference 2024"
+      "11ty Conference 2024",
+      "From the Source"
     ]
   },
   {
@@ -15015,14 +15018,15 @@
   {
     "Issue": 44,
     "Type": "blog post",
-    "Title": "The Future of 11ty (2024)",
+    "Title": "THE FUTURE OF 11TY (2024)",
     "Link": "https://www.zachleat.com/web/11tyconf-keynote-2024/",
     "Date": "2024-05-17T07:00:00.000Z",
     "Author": "Zach Leatherman",
     "Categories": [
       "11ty Conference 2024",
       "Why Eleventy?",
-      "YouTube"
+      "YouTube",
+      "From the Source"
     ]
   },
   {
@@ -15388,6 +15392,105 @@
       "Collections",
       "Layouts",
       "Remote Data"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "TWO MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/two-million-downloads/",
+    "Date": "2021-09-03",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "SEVEN MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/seven-million/",
+    "Date": "2023-10-23",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "SIX MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/six-million/",
+    "Date": "2023-07-03",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "FIVE MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/five-million/",
+    "Date": "2023-03-03",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "FOUR MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/four-million-downloads/",
+    "Date": "2022-09-30",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "THREE MILLION NPM DOWNLOADS FOR ELEVENTY",
+    "Link": "https://www.zachleat.com/web/three-million-downloads/",
+    "Date": "2022-04-22",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "A NEW ELEVENTY MASCOT FROM DAVID NEAL!",
+    "Link": "https://www.zachleat.com/web/david-neal/",
+    "Date": "2023-11-06",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "THE NEXT PHASE OF ELEVENTY: RETURN OF THE SIDE PROJECT",
+    "Link": "https://www.zachleat.com/web/eleventy-side-project/",
+    "Date": "2023-06-15",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "THE ELEVENTY V2.0 RELEASE, A TALK AT THE ELEVENTY MEETUP",
+    "Link": "https://www.zachleat.com/web/eleventy-meetup-eleventy-v2/",
+    "Date": "2023-03-16",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
     ]
   }
 ]

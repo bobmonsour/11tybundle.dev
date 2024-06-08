@@ -34,15 +34,19 @@
 
 <h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}</h1>
 
+{#
+  Note that in the case of the "From the Source" category, no caution items are inserted as
+  they are not relevant to this category.
+#}
 <div class="bundleposts" data-pagefind-body>
   {% set v1cautionshown = false %}
   {% set v2cautionshown = false %}
   {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
-    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
+    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown and category[0] != "From the Source" %}
       {% include "partials/v1caution.njk" %}
       {% set v1cautionshown = true %}
     {% endif %}
-    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
+    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown  and category[0] != "From the Source"%}
       {% include "partials/v2caution.njk" %}
       {% set v2cautionshown = true %}
     {% endif %}
