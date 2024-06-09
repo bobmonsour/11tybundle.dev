@@ -15633,5 +15633,12 @@
     "Type": "site",
     "Title": "Frank Fuchs",
     "Link": "https://frankfuchs.net/"
+  },
+  {
+    "Issue": "47",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.1",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.1",
+    "Date": "2024-06-04"
   }
 ]
