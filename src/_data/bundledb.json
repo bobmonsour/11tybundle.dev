@@ -15585,5 +15585,53 @@
     "Categories": [
       "How to..."
     ]
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Spaceninja Classic",
+    "Link": "https://classic.spaceninja.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "D&D Vandeventures",
+    "Link": "https://vandeventures.netlify.app/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Very Exciting Time",
+    "Link": "https://veryexcitingtime.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Transloadit",
+    "Link": "https://transloadit.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "JobBoardBox",
+    "Link": "https://jobboardbox.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Karolina Szczur",
+    "Link": "https://karolinaszczur.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Nihad Obralić",
+    "Link": "https://neehad.com/"
+  },
+  {
+    "Issue": "47",
+    "Type": "site",
+    "Title": "Frank Fuchs",
+    "Link": "https://frankfuchs.net/"
   }
 ]
