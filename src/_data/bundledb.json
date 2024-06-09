@@ -15492,5 +15492,98 @@
     "Categories": [
       "From the Source"
     ]
+  },
+  {
+    "Issue": "47",
+    "Type": "blog post",
+    "Title": "Get image pixed colours in Eleventy/Node",
+    "Link": "https://smth.uk/get-image-pixel-colours-in-eleventy-node/",
+    "Date": "2024-06-07",
+    "Author": "Sam Smith",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Images",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Making a Real Bonafide Plugin for 11ty",
+    "Link": "https://timothymiller.dev/posts/2020/making-a-real-bonefide-plugin-for-11ty/",
+    "Date": "2020-02-28",
+    "Author": "Timothy Miller",
+    "Categories": [
+      "How to...",
+      "Plugins",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Own Your Own Feedbin Data with 11ty",
+    "Link": "https://timothymiller.dev/posts/2020/own-your-own-feedbin-data-with-11ty/",
+    "Date": "2020-02-21",
+    "Author": "Timothy Miller",
+    "Categories": [
+      "How to...",
+      "Remote Data",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "47",
+    "Type": "blog post",
+    "Title": "Using Obsidian with 11ty",
+    "Link": "https://timothymiller.dev/posts/2024/using-obsidian-with-11ty/",
+    "Date": "2024-06-07",
+    "Author": "Timothy Miller",
+    "Categories": [
+      "Blogging",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "The Process of Switching to 11ty",
+    "Link": "https://kpwags.com/posts/2023/12/28/the-process-of-switching-to-11ty/",
+    "Date": "2023-12-28",
+    "Author": "Keith Wagner",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Markdown",
+      "Migrating to Eleventy",
+      "Permalinks",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "47",
+    "Type": "blog post",
+    "Title": "Eleventy - Convert a RSS Feed to a collection",
+    "Link": "https://www.roboleary.net/2024/06/05/eleventy-rss-collection.html",
+    "Date": "2024-06-05",
+    "Author": "Rob O'Leary",
+    "Categories": [
+      "Collections",
+      "How to...",
+      "Remote Data",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "47",
+    "Type": "blog post",
+    "Title": "How I use Shiki in Eleventy",
+    "Link": "https://stefanzweifel.dev/posts/2024/06/03/how-i-use-shiki-in-eleventy/",
+    "Date": "2024-06-03",
+    "Author": "Stefan Zweifel",
+    "Categories": [
+      "How to..."
+    ]
   }
 ]
