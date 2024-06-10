@@ -13,6 +13,7 @@ const {
   formatNumber,
   getBundleItems,
   getDescription,
+  getRSSlink,
   postsInCategory,
   postsByAuthor,
   postCountByAuthor,
@@ -117,6 +118,37 @@ module.exports = function (eleventyConfig) {
       const authorSlug = cachedSlugify(post.Author);
       const url = new URL(post.Link);
       const siteUrl = url.origin;
+      let siteUrlString = "";
+      let rssLinkString = "";
+      switch (siteUrl) {
+        case "https://www.youtube.com":
+        case "https://medium.com":
+          break;
+        default:
+          siteUrlString = ` &middot; <a href="${siteUrl}">Source website</a>`;
+          const rssLink = await getRSSlink(siteUrl);
+          if (rssLink === "") {
+            rssLinkString = "";
+          } else {
+            rssLinkString = ` & <a href="${rssLink}">RSS feed</a>`;
+          }
+          break;
+      }
+      // if (
+      //   siteUrl === "https://www.youtube.com" ||
+      //   siteUrl === "https://medium.com"
+      // ) {
+      //   siteUrlString = "";
+      // } else {
+      //   siteUrlString = ` &middot; <a href="${siteUrl}">Source website</a>`;
+      // } else {
+      //   const rssLink = await getRSSlink(siteUrl);
+      //   if (rssLink === "") {
+      //     rssLinkString = "";
+      //   } else {
+      //     rssLinkString = ` & <a href="${rssLink}">RSS feed</a>`;
+      //   }
+      // }
       const date = formatItemDate(post.Date);
       const id =
         '"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
@@ -141,7 +173,7 @@ module.exports = function (eleventyConfig) {
       	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-date">${date}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount})</a> &middot; <a href="${siteUrl}">Their website</a></p>
+        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount})</a>${siteUrlString}${rssLinkString}</p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
     }
