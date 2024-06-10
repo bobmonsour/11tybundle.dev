@@ -125,10 +125,10 @@ module.exports = function (eleventyConfig) {
         case "https://medium.com":
           break;
         default:
-          siteUrlString = ` &middot; <a href="${siteUrl}">Source website</a>`;
+          siteUrlString = ` &middot; <a href="${siteUrl}">Their website</a>`;
           let rssLink = await getRSSlink(siteUrl);
           rssLinkString =
-            rssLink === "" ? "" : ` &middot; <a href="${rssLink}">RSS feed</a>`;
+            rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
           break;
       }
       const date = formatItemDate(post.Date);
