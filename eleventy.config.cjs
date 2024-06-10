@@ -126,29 +126,11 @@ module.exports = function (eleventyConfig) {
           break;
         default:
           siteUrlString = ` &middot; <a href="${siteUrl}">Source website</a>`;
-          const rssLink = await getRSSlink(siteUrl);
-          if (rssLink === "") {
-            rssLinkString = "";
-          } else {
-            rssLinkString = ` & <a href="${rssLink}">RSS feed</a>`;
-          }
+          let rssLink = await getRSSlink(siteUrl);
+          rssLinkString =
+            rssLink === "" ? "" : ` &middot; <a href="${rssLink}">RSS feed</a>`;
           break;
       }
-      // if (
-      //   siteUrl === "https://www.youtube.com" ||
-      //   siteUrl === "https://medium.com"
-      // ) {
-      //   siteUrlString = "";
-      // } else {
-      //   siteUrlString = ` &middot; <a href="${siteUrl}">Source website</a>`;
-      // } else {
-      //   const rssLink = await getRSSlink(siteUrl);
-      //   if (rssLink === "") {
-      //     rssLinkString = "";
-      //   } else {
-      //     rssLinkString = ` & <a href="${rssLink}">RSS feed</a>`;
-      //   }
-      // }
       const date = formatItemDate(post.Date);
       const id =
         '"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';

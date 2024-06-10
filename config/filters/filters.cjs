@@ -137,9 +137,16 @@ const getRSSlink = async (siteOrigin) => {
       if (rssLink == undefined) {
         rssLink = "";
         rssLinkCache[siteOrigin] = "";
-      } else {
-        rssLink = rssLink.charAt(0) === "/" ? siteOrigin + rssLink : rssLink;
+      } else if (rssLink.startsWith("http")) {
         rssLinkCache[siteOrigin] = rssLink;
+      } else {
+        if (rssLink.charAt(0) === "/") {
+          rssLink = siteOrigin + rssLink;
+          rssLinkCache[siteOrigin] = rssLink;
+        } else {
+          rssLink = siteOrigin + "/" + rssLink;
+          rssLinkCache[siteOrigin] = rssLink;
+        }
         // console.log("RSS link for " + siteOrigin + " is " + rssLink);
       }
       return rssLink;
