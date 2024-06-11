@@ -125,7 +125,7 @@ module.exports = function (eleventyConfig) {
         case "https://medium.com":
           break;
         default:
-          siteUrlString = ` &middot; <a href="${siteUrl}">Their website</a>`;
+          siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
           let rssLink = await getRSSlink(siteUrl);
           rssLinkString =
             rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
@@ -155,7 +155,7 @@ module.exports = function (eleventyConfig) {
       	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-date">${date}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount})</a>${siteUrlString}${rssLinkString}</p>
+        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} posts)</a>${siteUrlString}${rssLinkString}</p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
     }
