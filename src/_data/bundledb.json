@@ -51,7 +51,7 @@
     "Link": "https://danabyerly.com/notes/upgrading-to-eleventy-2-0-0/",
     "Date": "2023-02-26",
     "Author": "Dana Byerly",
-    "Categories": ["How to..."]
+    "Categories": ["How to...", "Upgrading"]
   },
   {
     "Issue": 1,
@@ -6139,7 +6139,7 @@
     "Link": "https://www.roboleary.net/webdev/2023/03/13/upgrading-from-eleventy-1-to2.html",
     "Date": "2023-03-13",
     "Author": "Rob O'Leary",
-    "Categories": ["How to..."]
+    "Categories": ["How to...", "Upgrading"]
   },
   {
     "Issue": "",
@@ -9912,7 +9912,7 @@
     "Link": "https://www.11ty.dev/blog/canary-eleventy-v3/",
     "Date": "2023-12-17T08:00:00.000Z",
     "Author": "11ty",
-    "Categories": ["Why Eleventy?"]
+    "Categories": ["Why Eleventy?", "Upgrading"]
   },
   {
     "Issue": "",
@@ -10095,7 +10095,13 @@
     "Link": "https://www.zachleat.com/web/eleventy-v3-esm/",
     "Date": "2024-02-07T08:00:00.000Z",
     "Author": "Zach Leatherman",
-    "Categories": ["Configuration", "How to...", "Plugins", "From the Source"]
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Plugins",
+      "From the Source",
+      "Upgrading"
+    ]
   },
   {
     "Issue": 31,
@@ -11487,7 +11493,7 @@
     "Link": "https://www.markllobrera.com/posts/upgrading-eleventy-v1/",
     "Date": "2024-05-01T07:00:00.000Z",
     "Author": "Mark Llobrera",
-    "Categories": ["Images", "Markdown", "Shortcodes"]
+    "Categories": ["Images", "Markdown", "Shortcodes", "Upgrading"]
   },
   {
     "Issue": 42,
@@ -12028,7 +12034,7 @@
     "Link": "https://ttntm.me/blog/upgraded-to-eleventy-v3/",
     "Date": "2024-05-23T07:00:00.000Z",
     "Author": "Tom Doe",
-    "Categories": ["Configuration", "How to..."]
+    "Categories": ["Configuration", "How to...", "Upgrading"]
   },
   {
     "Issue": 45,
@@ -12223,7 +12229,7 @@
     "Link": "https://mxb.dev/blog/eleventy-v3-update/",
     "Date": "2024-06-01",
     "Author": "Max Böck",
-    "Categories": ["Collections", "How to...", "Images", "Plugins"]
+    "Categories": ["Collections", "How to...", "Images", "Plugins", "Upgrading"]
   },
   {
     "Issue": "46",
@@ -12483,5 +12489,102 @@
     "Title": "eleventy v3.0.0-alpha.11",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.11",
     "Date": "2024-06-10"
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Create an Interactive TOC from Markdown-Generated Content",
+    "Link": "https://blog.jonathanlau.io/posts/create-interactive-toc-in-markdown-generated-content/",
+    "Date": "2024-03-24",
+    "Author": "Jonathan Lau",
+    "Categories": ["CSS/Sass", "How to...", "Markdown", "Plugins"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Displaying Line Numbers in 11ty Code Blocks",
+    "Link": "https://blog.jonathanlau.io/posts/2024-06-10-displaying-line-numbers-in-11ty-code-blocks/",
+    "Date": "2024-06-10",
+    "Author": "Jonathan Lau",
+    "Categories": ["How to...", "Markdown", "Plugins"]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Automatic Eleventy (11ty) Site Updates with Github Hooks",
+    "Link": "https://codeandlife.com/2021/05/23/automatic-eleventy-site-updates-with-github-hooks/",
+    "Date": "2022-02-08",
+    "Author": "Joonas Pihlajamaa",
+    "Categories": ["Deployment", "How to..."]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "6 Months with 11ty",
+    "Link": "https://kpwags.com/posts/2024/06/11/6-months-with-11ty/",
+    "Date": "2024-06-11",
+    "Author": "Keith Wagner",
+    "Categories": ["Why Eleventy?"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Curso Eleventy (Spanish video)",
+    "Link": "https://www.youtube.com/watch?v=yCF9l4_E5rI",
+    "Date": "2024-05-14",
+    "Author": "Jon Mircha",
+    "Categories": ["Getting Started", "YouTube"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Umami API Top 10 Pages",
+    "Link": "https://claytonerrington.com/blog/umami-api-top-10-pages/",
+    "Date": "2024-06-11",
+    "Author": "Clayton Errington",
+    "Categories": ["Data Cascade", "Global Data", "How to...", "Remote Data"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Responsive Images in HTML: w and x",
+    "Link": "https://shivjm.blog/responsive-images-in-html-w-and-x/",
+    "Date": "2024-06-11",
+    "Author": "Shiv J.M.",
+    "Categories": ["How to...", "Images"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Readable HTML and CSS",
+    "Link": "https://shivjm.blog/colophon/readable-html-and-css/",
+    "Date": "2024-06-09",
+    "Author": "Shiv J.M.",
+    "Categories": ["CSS/Sass", "Configuration", "How to...", "Plugins"]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Upgrading to Eleventy 3.0",
+    "Link": "https://markllobrera.com/posts/upgrading-eleventy-v3/",
+    "Date": "2024-06-11",
+    "Author": "Mark Llobrera",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Image Galleries",
+      "Markdown",
+      "RSS",
+      "Upgrading"
+    ]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Eleventy - Add CSV data file support",
+    "Link": "https://www.roboleary.net/blog/eleventy-csv",
+    "Date": "2024-06-13",
+    "Author": "Rob O'Leary",
+    "Categories": ["Configuration", "Data Cascade", "How to..."]
   }
 ]
