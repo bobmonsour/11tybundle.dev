@@ -15,11 +15,11 @@ module.exports = {
   },
   headerAnnouncement: "true",
   mainNavLinks: [
-    { url: "/categories/", text: "Categories" },
-    { url: "/authors/", text: "Authors" },
-    { url: "/starters/", text: "Starters" },
-    { url: "/blog/", text: "Blog" },
-    { url: "/firehose/", text: "Firehose" },
+    { url: "/categories/", text: "Categories", count: "categoryCount" },
+    { url: "/authors/", text: "Authors", count: "authorCount" },
+    { url: "/starters/", text: "Starters", count: "starterCount" },
+    { url: "/blog/", text: "Blog", count: false },
+    { url: "/firehose/", text: "Firehose", count: "postCount" },
   ],
   footerNavLinks: [
     { url: "/categories/", text: "Categories" },

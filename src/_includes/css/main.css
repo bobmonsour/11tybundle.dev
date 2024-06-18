@@ -235,6 +235,11 @@ img[width][height] {
   color: white;
   opacity: 0.8;
 }
+/* Header nav item counts in smaller font */
+.nav-link > span {
+  font-size: var(--font-size-base);
+  /* font-weight: bold; */
+}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* used for skip-to-main-content link */
