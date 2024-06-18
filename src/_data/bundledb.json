@@ -12586,5 +12586,123 @@
     "Date": "2024-06-13",
     "Author": "Rob O'Leary",
     "Categories": ["Configuration", "Data Cascade", "How to..."]
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "YOZO",
+    "Link": "https://yozo.ooo/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Russ Lebo: Full-Stack Experience Designer",
+    "Link": "https://dataink.io/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Whimsica11y",
+    "Link": "https://whimsica11y.net/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Jonathan Lau",
+    "Link": "https://blog.jonathanlau.io/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "👋 – Jasper Lai",
+    "Link": "https://lai.nz/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Håvard Brynjulfsen",
+    "Link": "https://www.havardbrynjulfsen.design/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Hi, I'm Tim",
+    "Link": "https://timgilp.in/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "makotokw.com",
+    "Link": "https://makotokw.com/"
+  },
+  {
+    "Issue": "48",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.13",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.13",
+    "Date": "2024-06-12"
+  },
+  {
+    "Issue": "48",
+    "Type": "release",
+    "Title": "Eleventy RSS Plugin v2.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.0",
+    "Date": "2024-06-12"
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Blocking Bots With 11ty And Apache",
+    "Link": "https://flamedfury.com/posts/blocking-bots-with-11ty-and-apache/",
+    "Date": "2024-06-16",
+    "Author": "fLaMEd",
+    "Categories": ["How to..."]
+  },
+  {
+    "Issue": "48",
+    "Type": "blog post",
+    "Title": "Blocking Bots with Nginx",
+    "Link": "https://rknight.me/blog/blocking-bots-with-nginx/",
+    "Date": "2024-06-14",
+    "Author": "Robb Knight",
+    "Categories": ["How to..."]
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Kevin Rocker",
+    "Link": "https://www.kevinrocker.com/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "The Dress Avenue",
+    "Link": "https://www.thedressavenue.com/"
+  },
+  {
+    "Issue": "48",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.12",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.12",
+    "Date": "2024-06-11"
+  },
+  {
+    "Issue": "48",
+    "Type": "release",
+    "Title": "Eleventy RSS Plugin v2.0.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.1",
+    "Date": "2024-06-17"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "My Corner of the Internet",
+    "Link": "https://shanewrogers.lol/"
+  },
+  {
+    "Issue": "48",
+    "Type": "site",
+    "Title": "Fediverse Explorations",
+    "Link": "https://fediverseexplorations.org/"
   }
 ]
