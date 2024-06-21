@@ -13,7 +13,7 @@
     <ul class="brand-nav">
       {% for link in site.mainNavLinks %}
         <li>
-          <a href="{{ link.url }}" class="nav-link" {{ link.text | isCurrentPage(page.url) | safe }}>{{ link.text }}<span>{% if link.count %} ({{ bundledata[link.count] | formatNumber }})</span>{% endif %}</a>
+          <a href="{{ link.url }}" class="nav-link" {{ link.text | isCurrentPage(page.url) | safe }}>{{ link.text }}<span>{% if link.text === "Blog" %} ({{ collections.posts.length }}){% else %} ({{ bundledata[link.count] | formatNumber }})</span>{% endif %}</a>
         </li>
       {% endfor %}
     </ul>
