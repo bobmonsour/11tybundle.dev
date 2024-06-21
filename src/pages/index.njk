@@ -13,25 +13,25 @@ permalink: "/index.html"
     {% set latestPost = collections.posts | last %}
     <p>The latest from the blog...</p>
     <h2 class="bundleitem-title"><a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a></h2>
-    <p>{{ latestPost.date | formatPostDate }} &middot; {{ latestPost.content | readingTime }}</p>
+    <p class="bundleitem-date">{{ latestPost.date | formatPostDate }} &middot; {{ latestPost.content | readingTime }}</p>
   </div>
 
   <div class="home-grid">
-    <div class="home-posts flow">
-      <p>From the firehose...</p>
-      <ul>
-        {%- set recent = bundledata.firehose.slice(0,11) -%}
-        {%- for item in recent -%}
-          <li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
     <div class="home-releases flow">
       <p>Recent releases...</p>
       <ul>
         {%- set recent = bundledata.releaseList.slice(0,11) -%}
         {%- for item in recent -%}
-          <li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
+          <li><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="home-posts flow">
+      <p>From the firehose...</p>
+      <ul>
+        {%- set recent = bundledata.firehose.slice(0,11) -%}
+        {%- for item in recent -%}
+          <li><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -40,7 +40,7 @@ permalink: "/index.html"
       <ul>
         {%- set recent = bundledata.siteList.slice(0,11) -%}
         {%- for item in recent -%}
-          <li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
+          <li><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></li>
         {% endfor %}
       </ul>
     </div>

@@ -661,13 +661,10 @@ input {
   margin-block-start: 0;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [col3-end]; */
-  /* grid-template-rows: [row1-start] auto [row2-start] auto [row2-end]; */
 }
 
 .home-grid > * {
-  border: 1px solid black;
-  /* border: 1px solid var(--postitem-bg-color); */
+  border: 2px solid black;
   border-radius: 0.5rem;
 }
 .home-grid ul {
@@ -680,18 +677,6 @@ input {
 .home-grid li a {
   font-size: var(--font-size-base);
 }
-/* .home-posts {
-  grid-column: col1-start;
-  grid-row: row2-start;
-}
-.home-releases {
-  grid-column: col2-start;
-  grid-row: row2-start;
-}
-.home-sites {
-  grid-column: col3-start;
-  grid-row: row2-start;
-} */
 .home-grid p {
   font-size: var(--font-size-md);
   font-style: italic;
