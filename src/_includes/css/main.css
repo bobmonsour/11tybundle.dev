@@ -16,7 +16,7 @@ body {
 
 /* default <h1> */
 :where(h1) {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: normal;
   padding-block: 0.5em 0.25em;
   text-align: center;
@@ -42,7 +42,7 @@ body {
 /* default <p> */
 :where(p) {
   line-height: 1.5;
-  padding-block-start: 1em;
+  /* padding-block-start: 1em; */
 }
 
 /* default <a> */
@@ -257,12 +257,6 @@ img[width][height] {
 }
 /* end brand */
 
-/* Home page site intro text */
-.site-intro > p {
-  font-size: var(--font-size-lg);
-  line-height: 1.5;
-}
-
 /* list of All Tags and All Categories */
 .allcategories-list *,
 .allauthors-list * {
@@ -362,7 +356,6 @@ img[width][height] {
 .post h2 {
   font-style: italic;
   font-weight: bold;
-  margin-block: 1em 0;
   padding-block-end: 0;
   text-align: left;
 }
@@ -465,10 +458,6 @@ footer {
   margin-block-end: 1rem;
   margin-inline: auto;
 }
-.bundleposts,
-.bundlesites {
-  padding-block-start: 1em;
-}
 .bundleposts .bundleitem {
   background-color: var(--postitem-bg-color);
 }
@@ -489,7 +478,6 @@ h2.bundleitem-title {
   font-size: var(--font-size-base);
   margin-block: 0;
   padding-block: 0;
-  /* padding-block-end: 1em; */
 }
 .bundleitem-date {
   font-style: italic;
@@ -659,4 +647,55 @@ input {
   font-size: var(--font-size-sm);
   padding: 1em 0;
   text-align: left;
+}
+
+/* Home page specific styles */
+.home {
+  grid-column: popout;
+}
+.home > h1 {
+  font-weight: bold;
+}
+.home-grid {
+  display: grid;
+  margin-block-start: 0;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [col3-end]; */
+  /* grid-template-rows: [row1-start] auto [row2-start] auto [row2-end]; */
+}
+
+.home-grid > * {
+  border: 1px solid black;
+  /* border: 1px solid var(--postitem-bg-color); */
+  border-radius: 0.5rem;
+}
+.home-grid ul {
+  margin-block-start: 0.25em;
+  padding-inline: 0.5em;
+}
+.home-grid li {
+  list-style: none;
+}
+.home-grid li a {
+  font-size: var(--font-size-base);
+}
+/* .home-posts {
+  grid-column: col1-start;
+  grid-row: row2-start;
+}
+.home-releases {
+  grid-column: col2-start;
+  grid-row: row2-start;
+}
+.home-sites {
+  grid-column: col3-start;
+  grid-row: row2-start;
+} */
+.home-grid p {
+  font-size: var(--font-size-md);
+  font-style: italic;
+  font-weight: bold;
+  padding-inline: 0.5em;
+  padding-block: 0.5em 0;
 }

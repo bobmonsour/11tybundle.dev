@@ -22,6 +22,20 @@ module.exports = async function () {
   //   });
   // const testitems = firehose.slice(0, 26);
 
+  // generate a list of releases, an array of all releases in descending date order
+  const releaseList = bundleRecords
+    .filter((item) => item["Type"] == "release")
+    .sort((a, b) => {
+      return a.Date > b.Date ? -1 : 1;
+    });
+
+  // generate a list of sites, an array of all releases in descending date order
+  const siteList = bundleRecords
+    .filter((item) => item["Type"] == "site")
+    .sort((a, b) => {
+      return a.Issue > b.Issue ? -1 : 1;
+    });
+
   // generate the list of starter projects, an array descending date order
   const starters = bundleRecords
     .filter((item) => item["Type"] == "starter")
@@ -123,6 +137,8 @@ module.exports = async function () {
     firehose,
     // testitems,
     postCount,
+    releaseList,
+    siteList,
     starters,
     starterCount,
     authors,

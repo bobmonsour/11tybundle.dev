@@ -6,7 +6,19 @@ permalink: /about/
 
 # About 11tybundle.dev
 
-Why?, you ask.
+<div class="flow">
+
+Welcome! Here you'll find a collection of Eleventy resources, including [a Firehose of more than 1,100 blog posts](/firehose/) across a [whole bunch of Categories](/categories/) written by [boatload of Authors](/authors/) to help you get the most out of our favorite static site generator.
+
+And in each issue of the [Blog](/blog/), you'll find a curated collection of the latest Eleventy releases, posts, sites, and resources.</p>
+
+If you're new to Eleventy, we've got links to [posts all about Getting Started](/categories/getting-started/); and we've highlighted quite a few [high-quality Starters](/starters/) to choose from.</p>
+
+There are two RSS feeds, [one for the 11tybundle.dev Blog](/feed.xml) and [one for the Firehose](/firehosefeed.xml) with each post that has been collected and added to the collection of categorized posts.
+
+---
+
+_**So why does this exist? How did it come to be?**_
 
 It was in late March 2023 when I was sitting down to work on [my personal website](https://www.bobmonsour.com/) that I had this incredible rush of energy come over me. I had been doing a lot of googling and reading Eleventy documentation and blog posts. I had also been reading a lot of questions and answers on the [Eleventy Discord server](https://www.11ty.dev/blog/discord/). I was learning a lot and I was excited about it. I was also feeling a little overwhelmed by all of the information that I was taking in. I was trying to figure out how to organize it all and make it useful to me. I was also thinking about how I could share what I was learning with others.
 
@@ -26,12 +38,18 @@ So I duplicated my blog repo and began the transformation that would result in t
 
 There were several learning challenges along the way, including figuring out how to get data from an Airtable database and using Javascript front matter to pre-process data for pagination. I also had to decide how to organize the data by category and author. I have learned a ton in the process and there is still more to do. I launched the site without any search capability, but with the size of the site at launch and the navigation by category and author, I don't see that as a critical shortcoming.
 
-> [UPDATE] As of October 2023, I have migrated the data source to Google Sheets. I wrote about this transition in a [blog post on my personal site](https://www.bobmonsour.com/posts/scratch-that-use-google-sheets-api/).
+> [UPDATE] As of October 2023, I have migrated the data source from Airtable to Google Sheets. I wrote about this transition in a [blog post on my personal site](https://www.bobmonsour.com/posts/scratch-that-use-google-sheets-api/).
+
+<p></p>
+
+> [UPDATE] As of June 2024, I have migrated the data source from Google Sheets to a local JSON file. I wrote about this transition in a [blog post on my personal site](https://www.bobmonsour.com/posts/node-cli-of-my-dreams/).
 
 I'm very happy with the result and I hope that you find it useful. I don't know if this thing will continue to have any legs or how long I will be able to sustain it. Down the road, I plan to add functionality that will allow other community members to submit content as I am sure that I am not finding everything that could be here.
 
 If you want to know more about me, your best bet is to take a look at the [about page of my personal site](https://www.bobmonsour.com/about/).
 
-Oddly enough, this site is **Built with [Eleventy](https://www.11ty.dev/)**. The CSS is written by hand and uses no media queries. Rather it makes use of fluid type and some of the amazing work done by Stephanie Eckles on her [Modern CSS Solutions](https://moderncss.dev/) site. For fonts, it makes use of system fonts as defined on [Modern Font Stacks](https://modernfontstacks.com/). Two fonts are used, the site name at the top is [Monospace Slab Serif](https://github.com/system-fonts/modern-font-stacks#monospace-slab-serif) and all of the remaining text is in [Classical Humanist](https://github.com/system-fonts/modern-font-stacks#classical-humanist). The site is hosted on [Netlify](https://www.netlify.com/) and the source code is available on [Github](https://github.com/bobmonsour/11tybundle.dev).
+Oddly enough, this site is **Built with [Eleventy](https://www.11ty.dev/)**. The CSS is written by hand and uses no media queries. Rather it makes use of fluid type and some of the amazing work done by Stephanie Eckles on her [Modern CSS Solutions](https://moderncss.dev/) site. For fonts, it makes use of system fonts as defined on [Modern Font Stacks](https://modernfontstacks.com/). Two fonts are used, the site name at the top is [Monospace Slab Serif](https://github.com/system-fonts/modern-font-stacks#monospace-slab-serif) and all of the remaining text is in [Classical Humanist](https://github.com/system-fonts/modern-font-stacks#classical-humanist). The site is hosted on [Netlify](https://www.netlify.com/) and the source code is available on [GitHub](https://github.com/bobmonsour/11tybundle.dev).
 
 _Finally, there are two RSS feeds, one is the [Blog RSS](/feed.xml) for posts like the ones you'll find in the [Blog](/blog/) and a second one, [Firehose RSS](/firehosefeed.xml), which includes all of the [categorized](/categories/) posts written by numerous [authors](/authors/)._
+
+</div>
