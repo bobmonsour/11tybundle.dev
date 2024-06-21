@@ -664,7 +664,7 @@ input {
 }
 
 .home-grid > * {
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 0.5rem;
 }
 .home-grid ul {

@@ -8,11 +8,11 @@ permalink: /about/
 
 <div class="flow">
 
-Welcome! Here you'll find a collection of Eleventy resources, including [a Firehose of more than 1,100 blog posts](/firehose/) across a [whole bunch of Categories](/categories/) written by [boatload of Authors](/authors/) to help you get the most out of our favorite static site generator.
+Welcome! Here you'll find a collection of Eleventy resources, including a [Firehose](/firehose/) of more than 1,100 blog posts across a whole bunch of [Categories](/categories/) written by boatload of [Authors](/authors/) to help you get the most out of our favorite static site generator.
 
 And in each issue of the [Blog](/blog/), you'll find a curated collection of the latest Eleventy releases, posts, sites, and resources.</p>
 
-If you're new to Eleventy, we've got links to [posts all about Getting Started](/categories/getting-started/); and we've highlighted quite a few [high-quality Starters](/starters/) to choose from.</p>
+If you're new to Eleventy, we've got links to posts all about [Getting Started](/categories/getting-started/); and we've highlighted quite a few high-quality [Starters](/starters/) to choose from.</p>
 
 There are two RSS feeds, [one for the 11tybundle.dev Blog](/feed.xml) and [one for the Firehose](/firehosefeed.xml) with each post that has been collected and added to the collection of categorized posts.
 
