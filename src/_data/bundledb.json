@@ -16032,5 +16032,17 @@
     "Type": "starter",
     "Title": "Eleventy ESM Minimal",
     "Link": "https://github.com/madrilene/eleventy-esm-minimal"
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "hearse pileup",
+    "Link": "https://hearsepileup.rip/"
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Gaffen Creative Research & Development",
+    "Link": "https://gaffen.co.uk/"
   }
 ]
