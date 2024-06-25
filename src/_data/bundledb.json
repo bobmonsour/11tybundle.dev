@@ -16006,5 +16006,31 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "49",
+    "Type": "site",
+    "Title": "Peter Sefton",
+    "Link": "https://ptsefton.com/"
+  },
+  {
+    "Issue": "49",
+    "Type": "blog post",
+    "Title": "Twenty year celebration: Site update number three",
+    "Link": "https://ptsefton.com/2024/06/24/update/",
+    "Date": "2024-06-23",
+    "Author": "Peter Sefton",
+    "Categories": [
+      "Collections",
+      "How to...",
+      "Images",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "49",
+    "Type": "starter",
+    "Title": "Eleventy ESM Minimal",
+    "Link": "https://github.com/madrilene/eleventy-esm-minimal"
   }
 ]
