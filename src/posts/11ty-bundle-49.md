@@ -1,7 +1,7 @@
 ---
 bundleIssue: 49
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №4, Add a view count and a like button to 11ty, A post about javascript array performance, A minimal v3 starter with ESM, A facelift here...And 7 posts, 1, starter, and 3 sites to see"
+  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №4, Add a view count and a like button to 11ty, A post about javascript array performance, A minimal v3 starter with ESM, A facelift here...And 7 posts, 1 starter, and 3 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-06-25
 tags:
