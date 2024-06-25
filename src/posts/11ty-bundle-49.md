@@ -10,7 +10,7 @@ tags:
 
 An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
 
-**Zach's Eleventy Weekly Report №4.** Rather than put it into my own words, I thought I'd just share Zach's Mastodon post where he's been outlining his weekly progress on all things Eleventy.
+**Zach's Eleventy Weekly Report №4.** Rather than put it into my own words, I thought I'd just share [Zach's Mastodon post](https://fosstodon.org/@eleventy/112672038105630825) where he's been outlining his weekly progress on all things Eleventy.
 
 <img src="/assets/img/zachs-eleventy-progress-4.jpg" alt="Zach's weekly eleventy update number 4" style="width: 70%; margin: 0 auto;">
 
