@@ -1,7 +1,7 @@
 // Create json files for the listed set of categories
 // Files are created in the /api folder off the root of the site
 // The file name is the category name in kebab case
-const _ = require("lodash");
+import _ from "lodash";
 class CategoryJsonFiles {
   data() {
     return {
@@ -55,4 +55,4 @@ class CategoryJsonFiles {
   }
 }
 
-module.exports = CategoryJsonFiles;
+export default CategoryJsonFiles;
