@@ -1,9 +1,9 @@
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
+import bundleRecords from "./bundledb.json" with { "type": "json" };
 
-module.exports = async function () {
-  const bundleRecords = require("./bundledb.json");
+export default async function () {
 
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
@@ -107,6 +107,7 @@ module.exports = async function () {
 
   // get the count of the number of posts in the Getting Started category
   let cat = "Getting Started";
+  let gettingStartedCount = 0;
   let row = categories.find((row) => row[0] === cat);
   if (row) {
     gettingStartedCount = row[1];

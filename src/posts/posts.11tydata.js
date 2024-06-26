@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   layout: "post.njk",
   permalink: "blog/{{ page.fileSlug }}/",
   imageDir: "src/assets/img/",

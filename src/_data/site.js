@@ -1,5 +1,6 @@
-require("dotenv").config();
-module.exports = {
+import "dotenv/config";
+
+export const site = {
   env: process.env.ELEVENTY_ENV,
   title: "The 11ty Bundle",
   subtitle:

@@ -1,5 +1,11 @@
-const Image = require("@11ty/eleventy-img");
-const imageShortcode = async (src, alt, sizes = "100vw", loading = "lazy") => {
+import Image from "@11ty/eleventy-img";
+
+export const imageShortcode = async (
+  src,
+  alt,
+  sizes = "100vw",
+  loading = "lazy"
+) => {
   let metadata = await Image(src, {
     widths: [300, 600, 1200],
     formats: ["webp", "jpeg"],
@@ -29,4 +35,3 @@ const imageShortcode = async (src, alt, sizes = "100vw", loading = "lazy") => {
         decoding="async">
     </picture>`;
 };
-module.exports = imageShortcode;
