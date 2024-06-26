@@ -28,7 +28,6 @@
     "@11ty/eleventy": "3.0.0-alpha.13",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
-    "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
@@ -46,7 +45,7 @@
     "postcss": "^8.4.21",
     "postcss-minify": "^1.1.0",
     "rimraf": "^3.0.2",
-    "slugify": "^1.6.6",
-    "sanitize-html": "^2.11.0"
+    "sanitize-html": "^2.11.0",
+    "slugify": "^1.6.6"
   }
 }

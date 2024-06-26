@@ -7,7 +7,6 @@ import shortcodes from "./src/_config/shortcodes.js";
 import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
-import bundlerPlugin from "@11ty/eleventy-plugin-bundle";
 
 export default function (eleventyConfig) {
   // Passthrough copy for static assets
@@ -48,7 +47,11 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
-  eleventyConfig.addPlugin(bundlerPlugin);
+
+  // Configure the 11ty plugin bundle
+  eleventyConfig.addBundle("css", {
+    toFileDirectory: "bundle",
+  });
 
   eleventyConfig.setQuietMode(true);
 
