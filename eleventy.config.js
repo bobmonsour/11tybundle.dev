@@ -36,7 +36,7 @@ export default function (eleventyConfig) {
 
   // Add shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.imageShortcode);
-  eleventyConfig.addNunjucksShortcode("singlePost", shortcodes.singlePost);
+  eleventyConfig.addNunjucksAsyncShortcode("singlePost", shortcodes.singlePost);
 
   // Add Plugins
   eleventyConfig.addPlugin(postGraph, {
