@@ -29,9 +29,6 @@ const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 const postcss = require("postcss");
 const postcssMinify = require("postcss-minify");
-const { auth } = require("googleapis/build/src/apis/abusiveexperiencereport");
-const { concat } = require("lodash");
-// const { get } = require("lodash");
 
 module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets
