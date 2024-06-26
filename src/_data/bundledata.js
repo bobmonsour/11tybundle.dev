@@ -1,7 +1,9 @@
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-import bundleRecords from "./bundledb.json" assert { "type": "json" };
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const bundleRecords = require("./bundledb.json");
 
 export default async function () {
   // generate the firehose, an array of all posts in descending date order
