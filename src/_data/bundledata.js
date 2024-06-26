@@ -1,10 +1,9 @@
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-import bundleRecords from "./bundledb.json" with { "type": "json" };
+import bundleRecords from "./bundledb.json" assert { "type": "json" };
 
 export default async function () {
-
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post")
@@ -150,4 +149,4 @@ export default async function () {
     categoryCount,
     gettingStartedCount,
   };
-};
+}
