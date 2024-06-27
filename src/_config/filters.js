@@ -1,4 +1,4 @@
-import { cachedSlugify } from "./filters/cachedSlugify.js";
+import { cachedSlugify } from "./filters/cachedslugify.js";
 import { isCurrentPage } from "./filters/iscurrentpage.js";
 import { formatItemDate } from "./filters/formatting.js";
 import { formatPostDate } from "./filters/formatting.js";
