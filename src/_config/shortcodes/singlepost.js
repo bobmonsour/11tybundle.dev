@@ -1,4 +1,4 @@
-import { cachedSlugify } from "./../filters/cachedSlugify.js";
+import { cachedSlugify } from "./../filters/cachedslugify.js";
 import { getDescription } from "./../filters/getdescription.js";
 import { getRSSlink } from "./../filters/getrsslink.js";
 import { formatItemDate } from "./../filters/formatting.js";
