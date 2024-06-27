@@ -16044,5 +16044,18 @@
     "Type": "site",
     "Title": "Gaffen Creative Research & Development",
     "Link": "https://gaffen.co.uk/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Showing Omnivore links as Bookmarks",
+    "Link": "https://claytonerrington.com/blog/showing-omnivore-links-as-bookmarks/?utm_source=rss",
+    "Date": "2024-06-25",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
