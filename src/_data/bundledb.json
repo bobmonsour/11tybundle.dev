@@ -16057,5 +16057,12 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "50",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.14",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.14",
+    "Date": "2024-06-27"
   }
 ]
