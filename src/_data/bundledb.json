@@ -16064,5 +16064,55 @@
     "Title": "Eleventy v3.0.0-alpha.14",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.14",
     "Date": "2024-06-27"
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Ben White",
+    "Link": "https://benwhite.com.au/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Nested pagination with 11ty",
+    "Link": "https://benwhite.com.au/blog/nested-pagination/",
+    "Date": "2024-06-27",
+    "Author": "Ben White",
+    "Categories": [
+      "How to...",
+      "Pagination"
+    ]
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Fynn",
+    "Link": "https://fynn.be/"
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Josh Wayne",
+    "Link": "https://joshwayne.com/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Organizing NPM Build Scripts",
+    "Link": "https://www.trovster.com/blog/2024/06/organising-npm-build-scripts",
+    "Date": "2024-06-27",
+    "Author": "Trevor Morris",
+    "Categories": [
+      "Asset Pipelines",
+      "CSS/Sass",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "50",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v5.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.0-alpha.1",
+    "Date": "2024-06-27"
   }
 ]
