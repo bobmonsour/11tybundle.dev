@@ -16114,5 +16114,24 @@
     "Title": "eleventy-plugin-vite v5.0.0-alpha.1",
     "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.0-alpha.1",
     "Date": "2024-06-27"
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Keenan",
+    "Link": "https://gkeenan.co/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Upgrade 11ty to v3, reorg, ESM, and debug",
+    "Link": "https://www.bobmonsour.com/posts/upgrade-and-debug/",
+    "Date": "2024-06-28",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Configuration",
+      "Filters",
+      "Upgrading"
+    ]
   }
 ]
