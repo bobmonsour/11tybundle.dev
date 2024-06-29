@@ -16133,5 +16133,38 @@
       "Filters",
       "Upgrading"
     ]
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Raphaëlle Kerbrat",
+    "Link": "https://raphaellekerbrat.com/en/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Upgrading to Eleventy v3",
+    "Link": "https://alex.zappa.dev/blog/upgrading-to-eleventy-v3/",
+    "Date": "2024-06-23",
+    "Author": "Alex Zappa",
+    "Categories": [
+      "CSS/Sass",
+      "Images",
+      "Upgrading"
+    ]
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "New Reading page, powered by the Airtable API",
+    "Link": "https://melanie-richards.com/blog/new-reading-page/",
+    "Date": "2024-06-28",
+    "Author": "Melanie Richards",
+    "Categories": [
+      "Data Cascade",
+      "Global Data",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
