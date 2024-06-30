@@ -16166,5 +16166,24 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "50",
+    "Type": "site",
+    "Title": "Aram Zucker-Scharff",
+    "Link": "https://aramzs.xyz/"
+  },
+  {
+    "Issue": "50",
+    "Type": "blog post",
+    "Title": "Adding a post graph to an Eleventy blog the easy way",
+    "Link": "https://thomasrigby.com/posts/adding-a-post-graph-to-an-eleventy-blog-the-easy-way/",
+    "Date": "2024-06-30",
+    "Author": "Thomas Rigby",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Plugins"
+    ]
   }
 ]
