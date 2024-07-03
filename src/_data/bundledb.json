@@ -12955,5 +12955,41 @@
     "Date": "2024-07-03",
     "Author": "Chris McLeod",
     "Categories": ["Blogging", "Global Data", "How to...", "Social Media"]
+  },
+  {
+    "Issue": "51",
+    "Type": "site",
+    "Title": "compost.party",
+    "Link": "https://compost.party"
+  },
+  {
+    "Issue": "51",
+    "Type": "site",
+    "Title": "Larry Walters Tribute",
+    "Link": "https://larrywalterstribute.page/"
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "An alarmingly concise and very hinged summary of what it was like to build this site from scratch",
+    "Link": "https://gkeenan.co/avgb/an-alarmingly-concise-and-very-hinged-summary-of-what-it-was-like-to-build-this-site-from-scratch/",
+    "Date": "2024-07-02",
+    "Author": "Keenan",
+    "Categories": [
+      "Blogging",
+      "Getting Started",
+      "Markdown",
+      "RSS",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Building out a books page",
+    "Link": "https://coryd.dev/posts/2024/building-out-a-books-page/",
+    "Date": "2024-07-03",
+    "Author": "Cory Dransfeldt",
+    "Categories": ["Now Page", "How to...", "Remote Data"]
   }
 ]
