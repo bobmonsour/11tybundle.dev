@@ -16294,5 +16294,30 @@
       "Shortcodes",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Adding Github- or Obsidian-style callouts to an Eleventy blog the easy way",
+    "Link": "https://thomasrigby.com/posts/adding-github-or-obsidian-callouts-to-an-eleventy-blog-the-easy-way/",
+    "Date": "2024-07-05",
+    "Author": "Thomas Rigby",
+    "Categories": [
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "site",
+    "Title": "11 Weeks x 11ty",
+    "Link": "https://www.11weeks.xyz/"
+  },
+  {
+    "Issue": "51",
+    "Type": "site",
+    "Title": "Mystica",
+    "Link": "https://mystica.me/"
   }
 ]
