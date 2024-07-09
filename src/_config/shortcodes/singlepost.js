@@ -43,6 +43,7 @@ export const singlePost = async function (post, type, idKey, postCount) {
   const authorSlug = cachedSlugify(post.Author);
   const url = new URL(post.Link);
   const siteUrl = url.origin;
+  const postCountLabel = postCount == 1 ? "post" : "posts";
   let siteUrlString = "";
   let rssLinkString = "";
   let pageWeightorIgnore = "";
@@ -81,7 +82,7 @@ export const singlePost = async function (post, type, idKey, postCount) {
       	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
         <p class="bundleitem-description">${description}</p>
         <p class="bundleitem-date">${date}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} posts)</a>${siteUrlString}${rssLinkString}</p>
+        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
       </div>`;
 };

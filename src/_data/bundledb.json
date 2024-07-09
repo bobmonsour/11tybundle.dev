@@ -10969,7 +10969,7 @@
     "Issue": 25,
     "Type": "blog post",
     "Title": "Generating Open Graph Images in Eleventy",
-    "Link": "https://nonnullish.pages.dev/posts/generating-images-eleventy/",
+    "Link": "https://sometimes.digital/posts/generating-images-eleventy/",
     "Date": "2023-12-17T08:00:00.000Z",
     "Author": "nonnullish",
     "Categories": [
@@ -16325,5 +16325,103 @@
     "Type": "site",
     "Title": "nic lake",
     "Link": "https://niclake.me/"
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Adding a Photo Stream to an Eleventy Site",
+    "Link": "https://sometimes.digital/posts/adding-a-photostream-to-eleventy/",
+    "Date": "2024-06-30",
+    "Author": "nonnullish",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "Image Galleries",
+      "Images",
+      "Pagination",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Highlighting the Active Navigation Link in Eleventy Using Templates, Shortcodes, and the Page Object",
+    "Link": "https://sometimes.digital/posts/highlighting-the-active-navigation-link-in-eleventy/",
+    "Date": "2024-07-06",
+    "Author": "nonnullish",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "site",
+    "Title": "humankode",
+    "Link": "https://www.humankode.com/"
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Add Squirrelly Support to Eleventy",
+    "Link": "https://www.raymondcamden.com/2024/07/06/add-squirrelly-support-to-eleventy",
+    "Date": "2024-07-06",
+    "Author": "Raymond Camden",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Eleventy Buckets & Cascade Layers",
+    "Link": "https://www.miriamsuzanne.com/2024/07/06/buckets-layers/",
+    "Date": "2024-07-06",
+    "Author": "Miriam Suzanne",
+    "Categories": [
+      "Asset Pipelines",
+      "CSS/Sass",
+      "Configuration",
+      "How to...",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Fetching Achievements and Trophies for my Game Collection Page",
+    "Link": "https://rknight.me/blog/fetching-achievements-and-trophies-for-my-game-collection-page/",
+    "Date": "2024-07-07",
+    "Author": "Robb Knight",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "Hello World (from 11ty)!",
+    "Link": "https://niclake.me/hello-world-11ty/",
+    "Date": "2024-07-07",
+    "Author": "Nic Lake",
+    "Categories": [
+      "Blogging",
+      "Front Matter"
+    ]
+  },
+  {
+    "Issue": "51",
+    "Type": "blog post",
+    "Title": "(Don't) Add BASIC Support to Eleventy",
+    "Link": "https://www.raymondcamden.com/2024/07/07/dont-add-basic-support-to-eleventy",
+    "Date": "2024-07-07",
+    "Author": "Raymond Camden",
+    "Categories": [
+      "How to..."
+    ]
   }
 ]
