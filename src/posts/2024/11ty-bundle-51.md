@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2024-07-09
 tags:
 	- 11ty Bundle
-eleventyExcludeFromCollections: true
 ---
 
 _An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
