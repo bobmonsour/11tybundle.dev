@@ -16423,5 +16423,18 @@
     "Categories": [
       "How to..."
     ]
+  },
+  {
+    "Issue": "52",
+    "Type": "blog post",
+    "Title": "Dynamic Websites with Static Site Generators",
+    "Link": "https://darthmall.net/weblog/2024/dynamic-websites-with-static-site-generators/",
+    "Date": "2024-07-09",
+    "Author": "Evan Sheehan",
+    "Categories": [
+      "Edge Functions",
+      "Search",
+      "Webmentions"
+    ]
   }
 ]
