@@ -5654,18 +5654,6 @@
   {
     "Issue": "",
     "Type": "blog post",
-    "Title": "Formatting Frontmatter in Eleventy",
-    "Link": "https://lucheto.hashnode.dev/formatting-frontmatter-in-eleventy",
-    "Date": "2022-01-12",
-    "Author": "Lucheto",
-    "Categories": [
-      "Front Matter",
-      "How to..."
-    ]
-  },
-  {
-    "Issue": "",
-    "Type": "blog post",
     "Title": "Getting started with Eleventy in 11 minutes",
     "Link": "https://dev.to/loige/getting-started-with-eleventy-in-11-minutes-496j",
     "Date": "2020-10-31",
@@ -9790,17 +9778,6 @@
   },
   {
     "Issue": 20,
-    "Type": "blog post",
-    "Title": "Migrating from Hugo to Eleventy (11ty)",
-    "Link": "https://chringel.dev/blog/2023/10/migrating-from-hugo-to-eleventy-11ty/",
-    "Date": "2023-10-23",
-    "Author": "Christian Engel",
-    "Categories": [
-      "Migrating to Eleventy"
-    ]
-  },
-  {
-    "Issue": 20,
     "Type": "site",
     "Title": "Juan Mier",
     "Link": "https://mier.info/"
@@ -10090,17 +10067,6 @@
   {
     "Issue": 21,
     "Type": "blog post",
-    "Title": "Measure your website's performance with Speedlify",
-    "Link": "https://chringel.dev/blog/2023/11/measure-your-websites-performance-with-speedlify/",
-    "Date": "2023-11-03T07:00:00.000Z",
-    "Author": "Christian Engel",
-    "Categories": [
-      "Performance"
-    ]
-  },
-  {
-    "Issue": 21,
-    "Type": "blog post",
     "Title": "Using Wordpress as a headless CMS for Eleventy",
     "Link": "https://www.mikeaparicio.com/posts/2023-11-07-using-wordpress-as-a-headless-cms-for-eleventy/",
     "Date": "2023-11-07T08:00:00.000Z",
@@ -10159,19 +10125,6 @@
     "Categories": [
       "How to...",
       "Navigation"
-    ]
-  },
-  {
-    "Issue": 22,
-    "Type": "blog post",
-    "Title": "11ty Quick Tip: Minify inline JavaScript in WebC",
-    "Link": "https://chringel.dev/blog/2023/11/11ty-quick-tip-minify-inline-javascript-in-webc/",
-    "Date": "2023-11-10T08:00:00.000Z",
-    "Author": "Christian Engel",
-    "Categories": [
-      "Asset Pipelines",
-      "How to...",
-      "WebC"
     ]
   },
   {
@@ -16582,5 +16535,42 @@
     "Type": "site",
     "Title": "PSYCAREER",
     "Link": "https://www.psycareer.ru/"
+  },
+  {
+    "Issue": "52",
+    "Type": "site",
+    "Title": "Paul Shrycok",
+    "Link": "https://www.paulshryock.dev/"
+  },
+  {
+    "Issue": "52",
+    "Type": "site",
+    "Title": "Fedor Indutny's Blog",
+    "Link": "https://darksi.de/"
+  },
+  {
+    "Issue": "52",
+    "Type": "blog post",
+    "Title": "GitHub Pages Reboot With 11ty",
+    "Link": "https://velvetcache.org/2024/07/10/github-pages-reboot-with-11ty/",
+    "Date": "2024-07-10",
+    "Author": "John Hobbs",
+    "Categories": [
+      "Global Data",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Generating Open Graph preview images for 11ty",
+    "Link": "https://velvetcache.org/2024/03/19/generating-open-graph-preview-images-for-11ty/",
+    "Date": "2024-03-19",
+    "Author": "John Hobbs",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
   }
 ]
