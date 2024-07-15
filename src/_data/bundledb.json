@@ -16668,5 +16668,36 @@
       "How to...",
       "Search"
     ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Cheaply Rebuilding an 11ty site on Netlify",
+    "Link": "https://bennypowers.dev/posts/cheap-netlify-11ty-rebuilds/",
+    "Date": "2023-01-31",
+    "Author": "Benny Powers",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Scheduling"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "webc.nvim",
+    "Link": "https://bennypowers.dev/posts/webc-nvim/",
+    "Date": "2023-08-23",
+    "Author": "Benny Powers",
+    "Categories": [
+      "Plugins",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "52",
+    "Type": "site",
+    "Title": "Fresh Juice",
+    "Link": "https://freshjuice.dev/"
   }
 ]
