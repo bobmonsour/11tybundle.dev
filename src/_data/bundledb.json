@@ -16699,5 +16699,17 @@
     "Type": "site",
     "Title": "Fresh Juice",
     "Link": "https://freshjuice.dev/"
+  },
+  {
+    "Issue": "52",
+    "Type": "blog post",
+    "Title": "This site is under construction!",
+    "Link": "https://clhenrick.io/blog/eleventy-migration-and-redesign/",
+    "Date": "2024-07-14",
+    "Author": "Chris Henrick",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
   }
 ]
