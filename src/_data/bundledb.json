@@ -8949,7 +8949,7 @@
   {
     "Issue": 5,
     "Type": "release",
-    "Title": "eleventy-base-webc",
+    "Title": "Eleventy-base-webc",
     "Link": "https://github.com/11ty/eleventy-base-webc",
     "Date": "2023-04-19"
   },
@@ -10857,7 +10857,7 @@
   {
     "Issue": 24,
     "Type": "release",
-    "Title": "eleventy v3.0.0-alpha.2",
+    "Title": "Eleventy v3.0.0-alpha.2",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.2",
     "Date": "2023-12-17"
   },
@@ -11017,7 +11017,7 @@
   {
     "Issue": 25,
     "Type": "release",
-    "Title": "v3.0.0-alpha.3",
+    "Title": "Eleventy v3.0.0-alpha.3",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.3",
     "Date": "2023-12-20"
   },
@@ -11449,7 +11449,7 @@
   {
     "Issue": 26,
     "Type": "release",
-    "Title": "v3.0.0-alpha.4",
+    "Title": "Eleventy v3.0.0-alpha.4",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.4",
     "Date": "2024-01-02"
   },
@@ -12811,7 +12811,7 @@
   {
     "Issue": 31,
     "Type": "release",
-    "Title": "Eleventy Image v4.0.0",
+    "Title": "eleventy-image v4.0.0",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v4.0.0",
     "Date": "2024-02-09"
   },
@@ -14402,7 +14402,7 @@
   {
     "Issue": 42,
     "Type": "release",
-    "Title": "Eleventy Bundle Plugin v2.0 (bundled with Eleventy 3.0)",
+    "Title": "eleventy bundle plugin v2.0 (bundled with Eleventy 3.0)",
     "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v2.0.0",
     "Date": "2024-04-30"
   },
@@ -15610,7 +15610,7 @@
   {
     "Issue": "47",
     "Type": "release",
-    "Title": "eleventy-plugin-rss v2.0.0-beta.7",
+    "Title": "Eleventy RSS Plugin v2.0.0-beta.7",
     "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.0-beta.7",
     "Date": "2024-06-10"
   },
@@ -16707,6 +16707,46 @@
     "Link": "https://clhenrick.io/blog/eleventy-migration-and-redesign/",
     "Date": "2024-07-14",
     "Author": "Chris Henrick",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "52",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.15",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.15",
+    "Date": "2024-07-11"
+  },
+  {
+    "Issue": "52",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.16 (feel free to ignore this one)",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.16",
+    "Date": "2024-07-12"
+  },
+  {
+    "Issue": "52",
+    "Type": "release",
+    "Title": "Eleventy RSS Plugin v2.0.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.2",
+    "Date": "2024-07-12"
+  },
+  {
+    "Issue": "52",
+    "Type": "release",
+    "Title": "eleventy-img v5.0.0-beta.5",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0-beta.5",
+    "Date": "2024-07-12"
+  },
+  {
+    "Issue": "52",
+    "Type": "blog post",
+    "Title": "This site goes up to Eleventy.",
+    "Link": "https://ethanmarcotte.com/wrote/eleventy/",
+    "Date": "2024-07-14",
+    "Author": "Ethan Marcotte",
     "Categories": [
       "Migrating to Eleventy",
       "Why Eleventy?"
