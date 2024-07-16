@@ -54,7 +54,7 @@ export default function (eleventyConfig) {
     toFileDirectory: "bundle",
   });
 
-//   eleventyConfig.setQuietMode(true);
+  eleventyConfig.setQuietMode(true);
 
   return {
     markdownTemplateEngine: "njk",
