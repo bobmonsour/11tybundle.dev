@@ -688,3 +688,7 @@ input {
   padding-inline: 0.5em;
   padding-block: 0.5em 0;
 }
+.feedlink {
+  font-size: var(--font-size-base);
+  font-weight: normal;
+}

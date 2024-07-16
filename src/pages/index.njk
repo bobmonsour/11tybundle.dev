@@ -18,7 +18,7 @@ permalink: "/index.html"
 
   <div class="home-grid">
     <div class="home-releases flow">
-      <p>Recent releases...</p>
+      <p>Recent releases... <a class="feedlink" href="/releasefeed.xml">(RSS)</a></p>
       <ul>
         {%- set recent = bundledata.releaseList.slice(0,11) -%}
         {%- for item in recent -%}
