@@ -29,6 +29,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isCurrentPage", filters.isCurrentPage);
   eleventyConfig.addFilter("plainDate", filters.plainDate);
   eleventyConfig.addFilter("postCountByAuthor", filters.postCountByAuthor);
+  eleventyConfig.addFilter("postCountLabel", filters.postCountLabel);
   eleventyConfig.addFilter("postsByAuthor", filters.postsByAuthor);
   eleventyConfig.addFilter("postsInCategory", filters.postsInCategory);
   eleventyConfig.addFilter("readingTime", filters.readingTime);
@@ -53,7 +54,7 @@ export default function (eleventyConfig) {
     toFileDirectory: "bundle",
   });
 
-  eleventyConfig.setQuietMode(true);
+//   eleventyConfig.setQuietMode(true);
 
   return {
     markdownTemplateEngine: "njk",
