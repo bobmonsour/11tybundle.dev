@@ -16751,5 +16751,18 @@
       "Migrating to Eleventy",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "Ocontis",
+    "Link": "https://ocontis.com/"
+  },
+  {
+    "Issue": "53",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.17",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.17",
+    "Date": "2024-07-16"
   }
 ]
