@@ -27,7 +27,7 @@ permalink: "/index.html"
       </ul>
     </div>
     <div class="home-posts flow">
-      <p>From the firehose...</p>
+      <p>From the firehose... <a class="feedlink" href="/firehosefeed.xml">(RSS)</a></p>
       <ul>
         {%- set recent = bundledata.firehose.slice(0,11) -%}
         {%- for item in recent -%}
