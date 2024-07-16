@@ -29,6 +29,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isCurrentPage", filters.isCurrentPage);
   eleventyConfig.addFilter("plainDate", filters.plainDate);
   eleventyConfig.addFilter("postCountByAuthor", filters.postCountByAuthor);
+  eleventyConfig.addFilter("postCountLabel", filters.postCountLabel);
   eleventyConfig.addFilter("postsByAuthor", filters.postsByAuthor);
   eleventyConfig.addFilter("postsInCategory", filters.postsInCategory);
   eleventyConfig.addFilter("readingTime", filters.readingTime);

@@ -10,6 +10,7 @@ import { getBundleItems } from "./filters/getbundleitems.js";
 import { getDescription } from "./filters/getdescription.js";
 import { getRSSlink } from "./filters/getrsslink.js";
 import { plainDate } from "./filters/formatting.js";
+import { postCountLabel } from "./filters/postcountlabel.js";
 import { postCountByAuthor, postsByAuthor } from "./filters/postsbyauthor.js";
 import { postsInCategory } from "./filters/postsincategory.js";
 import { readingTime } from "./filters/readingtime.js";
@@ -27,6 +28,7 @@ export default {
   getRSSlink,
   plainDate,
   postCountByAuthor,
+  postCountLabel,
   postsByAuthor,
   postsInCategory,
   readingTime,
