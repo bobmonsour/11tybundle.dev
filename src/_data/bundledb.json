@@ -16764,5 +16764,11 @@
     "Title": "Eleventy v3.0.0-alpha.17",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.17",
     "Date": "2024-07-16"
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "Chris Henrick",
+    "Link": "https://clhenrick.io/"
   }
 ]
