@@ -16770,5 +16770,19 @@
     "Type": "site",
     "Title": "Chris Henrick",
     "Link": "https://clhenrick.io/"
+  },
+  {
+    "Issue": "53",
+    "Type": "blog post",
+    "Title": "It turns out a CMS can be pretty awesome",
+    "Link": "https://coryd.dev/posts/2024/it-turns-out-a-cms-can-be-pretty-awesome/",
+    "Date": "2024-07-18",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "CMS",
+      "Front Matter",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
