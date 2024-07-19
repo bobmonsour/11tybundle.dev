@@ -16784,5 +16784,19 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "53",
+    "Type": "blog post",
+    "Title": "Aboard the Eleventy 3.0 Train",
+    "Link": "https://helenchong.dev/blog/posts/2024-07-19-eleventy-3-0-upgrade/",
+    "Date": "2024-07-19",
+    "Author": "Helen Chong",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Plugins",
+      "Upgrading"
+    ]
   }
 ]
