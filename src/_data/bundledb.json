@@ -16738,5 +16738,17 @@
     "Type": "site",
     "Title": "VT Beer Trail",
     "Link": "https://vtbeertrail.com/"
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "JohnDoe",
+    "Link": "https://twcarty.netlify.app/"
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "Siestly",
+    "Link": "https://siestly.com/"
   }
 ]
