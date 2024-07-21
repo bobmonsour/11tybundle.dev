@@ -18,7 +18,7 @@ export const getRSSlink = async (siteOrigin) => {
   // console.log("RSS exception: " + siteOrigin);
   if (exceptionItem) {
     rssLinkCache[siteOrigin] = exceptionItem.rssFeed || "";
-    console.log("RSS exception: " + exceptionItem.rssFeed);
+    // console.log("RSS exception: " + exceptionItem.rssFeed);
     return rssLinkCache[siteOrigin];
   }
   // Check if the RSS link is in the cache
