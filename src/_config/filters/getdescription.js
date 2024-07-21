@@ -1,3 +1,9 @@
+// Get the array of exceptions, meaning the array of URLs that will
+// not have their descriptions fetched due to errors.
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const exceptionList = require("../../_data/exception-list.json");
+
 import EleventyFetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
@@ -33,6 +39,20 @@ export const getDescription = async (link) => {
   }
   if (link.includes("medium.com")) {
     descriptionCache[link] = "Medium post";
+    return descriptionCache[link];
+  }
+  // Check for known urls that have issues when fetching
+  // the description (as seen in the Netlify build logs)
+  const url = new URL(link);
+  const siteUrl = url.origin;
+  if (exceptionList.some((item) => item.url === siteUrl)) {
+    // console.log("Description exception: " + siteUrl);
+    descriptionCache[link] = "";
+    return descriptionCache[link];
+  }
+
+  if (exceptionList.includes(link)) {
+    descriptionCache[link] = "";
     return descriptionCache[link];
   }
   try {
