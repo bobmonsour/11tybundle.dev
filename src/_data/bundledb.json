@@ -16750,5 +16750,23 @@
     "Type": "site",
     "Title": "Siestly",
     "Link": "https://siestly.com/"
+  },
+  {
+    "Issue": "53",
+    "Type": "blog post",
+    "Title": "Porting to 11ty v3 and TypeScript",
+    "Link": "https://genehack.blog/2024/07/porting-to-11ty-v3-and-typescript/",
+    "Date": "2024-07-21",
+    "Author": "John Anderson",
+    "Categories": [
+      "How to...",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "recipes.genehack.org",
+    "Link": "https://recipes.genehack.org/"
   }
 ]
