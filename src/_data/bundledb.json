@@ -16768,5 +16768,30 @@
     "Type": "site",
     "Title": "recipes.genehack.org",
     "Link": "https://recipes.genehack.org/"
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "From Notion to Eleventy, but faster",
+    "Link": "https://iamschulz.com/from-notion-to-eleventy-but-faster/",
+    "Date": "2022-12-23",
+    "Author": "Daniel Schulz",
+    "Categories": [
+      "How to...",
+      "Pagination",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "San Francisco Bookstore Guide",
+    "Link": "https://bookstore.guide/"
+  },
+  {
+    "Issue": "53",
+    "Type": "site",
+    "Title": "Laurie Owen",
+    "Link": "https://improvlaurie.co.uk/"
   }
 ]
