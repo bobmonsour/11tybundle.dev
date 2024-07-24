@@ -16793,5 +16793,17 @@
     "Type": "site",
     "Title": "Laurie Owen",
     "Link": "https://improvlaurie.co.uk/"
+  },
+  {
+    "Issue": "53",
+    "Type": "blog post",
+    "Title": "Supercharge your HTML with WebC",
+    "Link": "https://www.youtube.com/watch?v=0I3yQxukg2k",
+    "Date": "2023-08-11",
+    "Author": "Build UX",
+    "Categories": [
+      "How to...",
+      "WebC"
+    ]
   }
 ]
