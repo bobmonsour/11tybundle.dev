@@ -16838,5 +16838,17 @@
     "Title": "eleventy-plugin-pug",
     "Link": "https://www.npmjs.com/package/@11ty/eleventy-plugin-pug",
     "Date": "2024-07-24"
+  },
+  {
+    "Issue": "54",
+    "Type": "site",
+    "Title": "Devil without a Cause",
+    "Link": "https://blog.dwac.dev/"
+  },
+  {
+    "Issue": "54",
+    "Type": "site",
+    "Title": "Magicball Network",
+    "Link": "https://magicball.net/"
   }
 ]
