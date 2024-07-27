@@ -19,7 +19,6 @@ layout: default.njk
   <p class="post-date"><a href="#newsletter-subscribe">Get this by email</a></p>
   {% include 'partials/blog-welcome.njk' %}
   {{ content | safe }}
-  {# {% include 'partials/webmentions.njk' %} #}
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
