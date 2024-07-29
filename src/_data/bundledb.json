@@ -16856,5 +16856,16 @@
     "Type": "site",
     "Title": "Shelomoh Khual",
     "Link": "https://shelomoh.work/"
+  },
+  {
+    "Issue": "54",
+    "Type": "blog post",
+    "Title": "PhD Website: LOUD for Cultural Heritage – now running with 11ty",
+    "Link": "https://julsraemy.ch/posts/2024/02/22/phd-website-loud-11ty/",
+    "Date": "2024-02-22",
+    "Author": "Julien A. Raemy",
+    "Categories": [
+      "Why Eleventy?"
+    ]
   }
 ]
