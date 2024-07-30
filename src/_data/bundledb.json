@@ -16881,5 +16881,18 @@
     "Title": "Eleventy Dev Server v2.0.2",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.2",
     "Date": "2024-07-30"
+  },
+  {
+    "Issue": "54",
+    "Type": "site",
+    "Title": "Sym·poly·mathesy",
+    "Link": "https://v5.chriskrycho.com/"
+  },
+  {
+    "Issue": "54",
+    "Type": "release",
+    "Title": "eleventy-img v5.0.0-beta.9",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0-beta.9",
+    "Date": "2024-07-30"
   }
 ]
