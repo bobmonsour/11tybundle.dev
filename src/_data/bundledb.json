@@ -16867,5 +16867,19 @@
     "Categories": [
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "54",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-alpha.18",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.18",
+    "Date": "2024-07-30"
+  },
+  {
+    "Issue": "54",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.2",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.2",
+    "Date": "2024-07-30"
   }
 ]
