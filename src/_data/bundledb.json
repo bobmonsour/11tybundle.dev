@@ -16894,5 +16894,12 @@
     "Title": "eleventy-img v5.0.0-beta.9",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0-beta.9",
     "Date": "2024-07-30"
+  },
+  {
+    "Issue": "54",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-beta.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-beta.1",
+    "Date": "2024-07-31"
   }
 ]
