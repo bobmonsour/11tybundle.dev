@@ -16937,5 +16937,11 @@
     "Title": "Eleventy Upgrade Help v3.0.1",
     "Link": "https://github.com/11ty/eleventy-upgrade-help/releases/tag/v3.0.1",
     "Date": "2024-08-01"
+  },
+  {
+    "Issue": "54",
+    "Type": "site",
+    "Title": "Transcription explorer",
+    "Link": "https://eatyourgreens.github.io/transcription-explorer/"
   }
 ]
