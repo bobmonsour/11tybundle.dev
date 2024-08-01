@@ -16912,5 +16912,23 @@
     "Categories": [
       "From the Source"
     ]
+  },
+  {
+    "Issue": "54",
+    "Type": "blog post",
+    "Title": "Building This Website",
+    "Link": "https://ariscript.org/blog/building-this-site/",
+    "Date": "2024-07-12",
+    "Author": "Ari Prakash",
+    "Categories": [
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "54",
+    "Type": "release",
+    "Title": "Eleventy Image v5.0.0-beta.10",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0-beta.10",
+    "Date": "2024-08-01"
   }
 ]
