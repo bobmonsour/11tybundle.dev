@@ -16943,5 +16943,23 @@
     "Type": "site",
     "Title": "Transcription explorer",
     "Link": "https://eatyourgreens.github.io/transcription-explorer/"
+  },
+  {
+    "Issue": "54",
+    "Type": "blog post",
+    "Title": "Deploying on Netlify with Apple’s Shortcuts",
+    "Link": "https://blog.jim-nielsen.com/2024/deploying-with-netlify-shortcuts/",
+    "Date": "2024-08-02",
+    "Author": "Jim Nielsen",
+    "Categories": [
+      "Deployment",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "54",
+    "Type": "site",
+    "Title": "Vaettr",
+    "Link": "https://vaettr.com/"
   }
 ]
