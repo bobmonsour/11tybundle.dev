@@ -16961,5 +16961,30 @@
     "Type": "site",
     "Title": "Vaettr",
     "Link": "https://vaettr.com/"
+  },
+  {
+    "Issue": "54",
+    "Type": "blog post",
+    "Title": "Managing drafts for Eleventy",
+    "Link": "https://nathan-smith.org/posts/blog/eleventy-drafts/",
+    "Date": "2024-08-01",
+    "Author": "Nathan Smith",
+    "Categories": [
+      "Drafts",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "54",
+    "Type": "blog post",
+    "Title": "Syntax highlighting in Eleventy",
+    "Link": "https://nathan-smith.org/posts/blog/syntax-highlighting-eleventy/",
+    "Date": "2024-07-31",
+    "Author": "Nathan Smith",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
