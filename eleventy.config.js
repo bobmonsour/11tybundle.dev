@@ -1,3 +1,5 @@
+// import UpgradeHelper from "@11ty/eleventy-upgrade-help";
+
 // environment variable handling
 import "dotenv/config";
 
@@ -53,6 +55,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addBundle("css", {
     toFileDirectory: "bundle",
   });
+
+  // Install the upgrade helper
+  // eleventyConfig.addPlugin(UpgradeHelper);
 
   eleventyConfig.setQuietMode(true);
 

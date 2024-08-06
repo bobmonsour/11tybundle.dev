@@ -5,7 +5,7 @@ eleventyComputed:
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-07-02
 tags:
-	- 11ty Bundle
+  - 11ty Bundle
 ---
 
 An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
