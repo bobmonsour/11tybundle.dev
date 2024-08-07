@@ -17012,5 +17012,16 @@
       "How to...",
       "Serverless"
     ]
+  },
+  {
+    "Issue": "55",
+    "Type": "blog post",
+    "Title": "WebC at scale",
+    "Link": "https://benwhite.com.au/blog/webc-at-scale/",
+    "Date": "2024-08-07",
+    "Author": "Ben White",
+    "Categories": [
+      "WebC"
+    ]
   }
 ]
