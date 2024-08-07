@@ -29,7 +29,7 @@ Lastly, here's the [list of breaking changes](https://github.com/11ty/eleventy/i
 **More releases.** As if that weren't enough in the flowing train of releases, here are just a few more things that have come out, including:
 
 - [Eleventy Upgrade Help v3.0.1](https://github.com/11ty/eleventy-upgrade-help/releases/tag/v3.0.1)
-- [Eleventy Image v5.0.0-beta.10](https://github.com/11ty/demo-eleventy-upgrade-help/)
+- [Eleventy Image v5.0.0-beta.10](https://github.com/11ty/eleventy-img/releases/tag/v5.0.0-beta.10)
 - [Eleventy Dev Server v2.0.2](https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.2)
 
 **A docs refresh discussion.** A GitHub discussion is underway among several active community members about refreshing the Eleventy documentation. The goal is to make it more accessible and easier to navigate. If you have thoughts or ideas, [join the conversation](https://github.com/11ty/eleventy/issues/3388).
