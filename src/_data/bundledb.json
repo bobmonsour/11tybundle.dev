@@ -17132,5 +17132,17 @@
     "Type": "site",
     "Title": "Religious Studies Blogs",
     "Link": "https://www.rs-rss.com/"
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Eleventy Date Filter with Ordinals",
+    "Link": "https://www.trovster.com/blog/2024/08/eleventy-date-filter-with-ordinals",
+    "Date": "2024-08-20",
+    "Author": "Trevor Morris",
+    "Categories": [
+      "Dates",
+      "Filters"
+    ]
   }
 ]
