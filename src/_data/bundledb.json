@@ -17150,5 +17150,19 @@
     "Type": "site",
     "Title": "Rob Owen",
     "Link": "https://robowen.io/"
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Organising Eleventy Filters, Shortcodes and more…",
+    "Link": "https://www.trovster.com/blog/2024/08/organising-eleventy-filters-shortcodes-and-more",
+    "Date": "2024-08-22",
+    "Author": "Trevor Morris",
+    "Categories": [
+      "Configuration",
+      "Filters",
+      "How to...",
+      "Shortcodes"
+    ]
   }
 ]

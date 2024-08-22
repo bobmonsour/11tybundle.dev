@@ -9,6 +9,7 @@ import shortcodes from "./src/_config/shortcodes.js";
 import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
+import XRayPlugin from "eleventy-plugin-xray";
 
 export default function (eleventyConfig) {
   // Passthrough copy for static assets
@@ -50,6 +51,12 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
+
+  eleventyConfig.addPlugin(XRayPlugin, {
+    dir: "_xray",
+    onlyEnvName: "ELEVENTY_ENV",
+    onlyEnv: "development",
+  });
 
   // Configure the 11ty plugin bundle
   eleventyConfig.addBundle("css", {
