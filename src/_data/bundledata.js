@@ -5,6 +5,12 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const bundleRecords = require("./bundledb.json");
 
+// for access to starter data from their GitHub repos
+import { Octokit } from "@octokit/rest";
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN, // personal access token
+});
+
 export default async function () {
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
@@ -37,13 +43,64 @@ export default async function () {
       return a.Issue > b.Issue ? -1 : 1;
     });
 
-  // generate the list of starter projects, an array descending date order
-  const starters = bundleRecords
-    .filter((item) => item["Type"] == "starter")
-    .sort((a, b) => {
-      return a.Date > b.Date ? -1 : 1;
-    });
+  // generate the list of starter projects, ordered by most date of most recent update
 
+  // Function to fetch metadata and update starters array
+  async function updateStartersWithMetadata(starters) {
+    for (let starter of starters) {
+      if (starter.Link) {
+        try {
+          // Extract owner and repo name from the full GitHub repo URL
+          const urlParts = starter.Link.split("/");
+          const owner = urlParts[urlParts.length - 2];
+          const repo = urlParts[urlParts.length - 1];
+
+          // Fetch repository metadata
+          const { data: repoData } = await octokit.repos.get({
+            owner,
+            repo,
+          });
+          // console.log("owner: " + owner + " repo: " + repo);
+
+          // Fetch the date of the last commit
+          const { data } = await octokit.repos.listCommits({
+            owner,
+            repo,
+            per_page: 1,
+          });
+          const lastCommitDate = data[0].commit.committer.date;
+
+          // const lastCommitDate = new Date(commits[0].commit.committer.date);
+
+          // Format the date
+          const date = new Date(lastCommitDate);
+          const options = { year: "numeric", month: "long", day: "numeric" };
+          const formattedDate = date.toLocaleDateString("en-US", options);
+
+          // Add metadata as top-level properties to the starter object
+          starter.Stars = repoData.stargazers_count;
+          starter.LastUpdated = formattedDate;
+          starter.Description = repoData.description;
+        } catch (error) {
+          console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
+        }
+      }
+    }
+  }
+  const genStarters = async (bundleRecords) => {
+    function extractStarters(bundleRecords) {
+      return bundleRecords.filter((item) => item["Type"] == "starter");
+    }
+    const starters = extractStarters(bundleRecords);
+    await updateStartersWithMetadata(starters);
+
+    // Sort starters by the date of the last commit in descending order
+    return starters.sort(
+      (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
+    );
+
+    // console.log("Updated and sorted starters:", starters);
+  };
   // generate a 2-dimensional array of author names and
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
@@ -89,6 +146,10 @@ export default async function () {
 
   // generate counts of posts, starters, authors, and categories
   const postCount = firehose.length;
+
+  // generate the set of starter projects and the count of them
+  const starters = await genStarters(bundleRecords);
+  const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
 
   const starterCount = starters.length;
 
@@ -142,6 +203,7 @@ export default async function () {
     releaseList,
     siteList,
     starters,
+    startersByStars,
     starterCount,
     authors,
     authorsByCount,

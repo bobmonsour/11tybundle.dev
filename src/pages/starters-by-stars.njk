@@ -1,12 +1,12 @@
 ---
 eleventyComputed:
-  title: "{{ bundledata.starterCount }} Starter Projects by Latest Update"
+  title: "{{ bundledata.starterCount }} Starter Projects by GitHub Stars"
   description: "A list of {{ bundledata.starterCount }} starter projects for Eleventy"
-permalink: /starters/
+permalink: /starters-by-stars/
 ---
 
 <div class="flow">
-  <h1>{{ title }} <span class="reduced-to-md">(<a href="/starters-by-stars/">by GitHub Stars</a>)</span></h1>
+  <h1>{{ title }} <span class="reduced-to-md">(<a href="/starters/">by Latest Update</a>)</span></h1>
 
   <p class="intro">Here's a list of starter projects you can use to jumpstart your use of Eleventy. I've selected these based on recency of updating, traction that they appear to have as subjectively determined by the number of Github stars on their respective repos, and the clarity of their READMEs.</p>
 
@@ -17,7 +17,7 @@ permalink: /starters/
   <p>And if you're new to Eleventy, you'll find links to <a href="/categories/getting-started/">{{ bundledata.gettingStartedCount }} blog posts in the Getting Started category</a>.</p>
   {# starters #}
   <div class="bundleposts">
-    {%- for item in bundledata.starters %}
+    {%- for item in bundledata.startersByStars %}
     <div class="bundleitem">
       <p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
       <p class="bundleitem-description">{{ item.Description }}</p>

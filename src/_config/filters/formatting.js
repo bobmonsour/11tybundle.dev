@@ -34,5 +34,6 @@ export const formatFirehoseDate = (date) => {
 
 // Format numbers to add commas where needed
 export const formatNumber = (number) => {
-  return number.toLocaleString();
+  return Intl.NumberFormat().format(number);
+  // return number.toLocaleString();
 };
