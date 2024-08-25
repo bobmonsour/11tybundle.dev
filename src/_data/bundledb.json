@@ -7565,37 +7565,43 @@
     "Issue": 19,
     "Type": "starter",
     "Title": "eleventeen",
-    "Link": "https://github.com/rdela/eleventeen"
+    "Link": "https://github.com/rdela/eleventeen",
+    "Demo": "https://eleventeen.blog/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "Elva",
-    "Link": "https://github.com/scottsweb/elva"
+    "Link": "https://github.com/scottsweb/elva",
+    "Demo": "https://elva.scott.ee/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "11ty-tailscript",
-    "Link": "https://github.com/4lador/11ty-tailscript"
+    "Link": "https://github.com/4lador/11ty-tailscript",
+    "Demo": "https://vocal-licorice-a3b377.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-base-webc",
-    "Link": "https://github.com/11ty/eleventy-base-webc"
+    "Link": "https://github.com/11ty/eleventy-base-webc",
+    "Demo": "https://eleventy-base-webc.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-base-blog",
-    "Link": "https://github.com/11ty/eleventy-base-blog"
+    "Link": "https://github.com/11ty/eleventy-base-blog",
+    "Demo": "https://eleventy-base-blog.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "Grease",
-    "Link": "https://github.com/adamstddrd/grease"
+    "Link": "https://github.com/adamstddrd/grease",
+    "Demo": "https://web-grease.netlify.app/"
   },
   {
     "Issue": "",
@@ -7607,43 +7613,50 @@
     "Issue": "",
     "Type": "starter",
     "Title": "vredeburg",
-    "Link": "https://github.com/daflh/vredeburg"
+    "Link": "https://github.com/daflh/vredeburg",
+    "Demo": "https://vredeburg.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-starter-ghost",
-    "Link": "https://github.com/TryGhost/eleventy-starter-ghost"
+    "Link": "https://github.com/TryGhost/eleventy-starter-ghost",
+    "Demo": "https://eleventy.ghost.org/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "reveal-eleventy-template",
-    "Link": "https://github.com/Bullrich/reveal-eleventy-template"
+    "Link": "https://github.com/Bullrich/reveal-eleventy-template",
+    "Demo": "https://bullrich.dev/reveal-eleventy-template/#/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-excellent",
-    "Link": "https://github.com/madrilene/eleventy-excellent"
+    "Link": "https://github.com/madrilene/eleventy-excellent",
+    "Demo": "https://eleventy-excellent.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "Multiplicity - RSS Aggregator Starter Based On Eleventy",
-    "Link": "https://github.com/lwojcik/eleventy-template-multiplicity"
+    "Link": "https://github.com/lwojcik/eleventy-template-multiplicity",
+    "Demo": "https://eleventy-m10y.lkmt.us/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "Bliss - Blog Theme For Eleventy",
-    "Link": "https://github.com/lwojcik/eleventy-template-bliss"
+    "Link": "https://github.com/lwojcik/eleventy-template-bliss",
+    "Demo": "https://eleventy-bliss.lkmt.us/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-simple",
-    "Link": "https://github.com/lkhrs/eleventy-simple"
+    "Link": "https://github.com/lkhrs/eleventy-simple",
+    "Demo": "https://eleventy-simple.pages.dev/"
   },
   {
     "Issue": "",
@@ -7667,25 +7680,22 @@
     "Issue": "",
     "Type": "starter",
     "Title": "Pack11ty",
-    "Link": "https://github.com/nhoizey/pack11ty"
-  },
-  {
-    "Issue": "",
-    "Type": "starter",
-    "Title": "Eleventy Notes",
-    "Link": "https://github.com/rothsandro/eleventy-notes"
+    "Link": "https://github.com/nhoizey/pack11ty",
+    "Demo": "https://pack11ty.dev/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "11ta-template",
-    "Link": "https://github.com/11ta/11ta-template"
+    "Link": "https://github.com/11ta/11ta-template",
+    "Demo": "https://11ta.netlify.app/"
   },
   {
     "Issue": "",
     "Type": "starter",
     "Title": "eleventy-photo-gallery",
-    "Link": "https://github.com/tannerdolby/eleventy-photo-gallery"
+    "Link": "https://github.com/tannerdolby/eleventy-photo-gallery",
+    "Demo": "https://eleventy-gallery.netlify.app/"
   },
   {
     "Issue": 20,
@@ -9181,7 +9191,8 @@
     "Issue": 26,
     "Type": "starter",
     "Title": "11ty Resume Template",
-    "Link": "https://github.com/learnwithgurpreet/11ty-resume-template"
+    "Link": "https://github.com/learnwithgurpreet/11ty-resume-template",
+    "Demo": "https://www.gurpreetsingh.me/"
   },
   {
     "Issue": 26,
@@ -11269,7 +11280,8 @@
     "Issue": 40,
     "Type": "starter",
     "Title": "eleventy-duo",
-    "Link": "https://github.com/yinkakun/eleventy-duo"
+    "Link": "https://github.com/yinkakun/eleventy-duo",
+    "Demo": "https://eleventyduo.netlify.app/"
   },
   {
     "Issue": 40,
@@ -11288,7 +11300,8 @@
     "Issue": 41,
     "Type": "starter",
     "Title": "resume-template",
-    "Link": "https://github.com/devon-wolf/resume-template"
+    "Link": "https://github.com/devon-wolf/resume-template",
+    "Demo": "https://devon-wolf.github.io/resume-template/"
   },
   {
     "Issue": 41,
@@ -11321,7 +11334,8 @@
     "Issue": 41,
     "Type": "starter",
     "Title": "Halide",
-    "Link": "https://github.com/danurbanowicz/halide"
+    "Link": "https://github.com/danurbanowicz/halide",
+    "Demo": "https://halide.netlify.app/"
   },
   {
     "Issue": 41,
@@ -11902,13 +11916,15 @@
     "Issue": 44,
     "Type": "starter",
     "Title": "Campus Spark",
-    "Link": "https://github.com/CloudCannon/campus-spark-bookshop-template"
+    "Link": "https://github.com/CloudCannon/campus-spark-bookshop-template",
+    "Demo": "https://endless-iris.cloudvent.net/"
   },
   {
     "Issue": 44,
     "Type": "starter",
     "Title": "11ty-multisite",
-    "Link": "https://github.com/davidwkeith/11ty-multisite"
+    "Link": "https://github.com/davidwkeith/11ty-multisite",
+    "Demo": "https://11ty-multisite-site1.netlify.app/"
   },
   {
     "Issue": 44,
@@ -13734,5 +13750,11 @@
     "Date": "2024-08-23",
     "Author": "Shiv J.M.",
     "Categories": ["Debugging", "Plugins"]
+  },
+  {
+    "Issue": "56",
+    "Type": "site",
+    "Title": "Joosh",
+    "Link": "https://joosh.nekoweb.org/"
   }
 ]

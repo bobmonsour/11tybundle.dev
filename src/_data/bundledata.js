@@ -7,6 +7,8 @@ const bundleRecords = require("./bundledb.json");
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
+import { Buffer } from "buffer";
+
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
@@ -60,7 +62,6 @@ export default async function () {
             owner,
             repo,
           });
-          // console.log("owner: " + owner + " repo: " + repo);
 
           // Fetch the date of the last commit
           const { data } = await octokit.repos.listCommits({
@@ -70,17 +71,44 @@ export default async function () {
           });
           const lastCommitDate = data[0].commit.committer.date;
 
-          // const lastCommitDate = new Date(commits[0].commit.committer.date);
-
           // Format the date
           const date = new Date(lastCommitDate);
           const options = { year: "numeric", month: "long", day: "numeric" };
           const formattedDate = date.toLocaleDateString("en-US", options);
 
+          // Get 11ty version from package.json
+          let version = null;
+          try {
+            const { data } = await octokit.repos.getContent({
+              owner,
+              repo,
+              path: "package.json",
+            });
+            // Decode the base64 encoded content
+            const content = Buffer.from(data.content, "base64").toString(
+              "utf-8"
+            );
+            // Define the regular expression
+            const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
+            // Extract the version number
+            const match = content.match(regex);
+            if (match) {
+              version = match[1];
+              // console.log("11ty version:", version);
+            }
+          } catch (error) {
+            console.error(`Error fetching 11ty version: ${error}`);
+          }
+
           // Add metadata as top-level properties to the starter object
           starter.Stars = repoData.stargazers_count;
           starter.LastUpdated = formattedDate;
           starter.Description = repoData.description;
+          starter.Version = version;
+          // console.log("stars: ", starter.Stars);
+          // console.log("last updated: ", starter.LastUpdated);
+          // console.log("description: ", starter.Description);
+          // console.log("version: ", starter.Version);
         } catch (error) {
           console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
         }
@@ -98,8 +126,6 @@ export default async function () {
     return starters.sort(
       (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
     );
-
-    // console.log("Updated and sorted starters:", starters);
   };
   // generate a 2-dimensional array of author names and
   // a count of each of their posts; records comes from
@@ -150,7 +176,6 @@ export default async function () {
   // generate the set of starter projects and the count of them
   const starters = await genStarters(bundleRecords);
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
-
   const starterCount = starters.length;
 
   // list of authors and count of their blog posts

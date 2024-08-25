@@ -479,6 +479,12 @@ h2.bundleitem-title {
 }
 .bundleitem-description {
   font-style: italic;
+  font-size: var(--font-size-md);
+  margin-block: 0;
+  padding-block: 0;
+}
+.bundleitem-starterinfo {
+  font-style: normal;
   font-size: var(--font-size-base);
   margin-block: 0;
   padding-block: 0;

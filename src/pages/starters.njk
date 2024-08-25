@@ -8,21 +8,19 @@ permalink: /starters/
 <div class="flow">
   <h1>{{ title }} <span class="reduced-to-md">(<a href="/starters-by-stars/">by GitHub Stars</a>)</span></h1>
 
-  <p class="intro">Here's a list of starter projects you can use to jumpstart your use of Eleventy. I've selected these based on recency of updating, traction that they appear to have as subjectively determined by the number of Github stars on their respective repos, and the clarity of their READMEs.</p>
+  {% include "partials/starters-intro.njk" %}
 
-  <p>You'll also find links to <strong>eleventy billion</strong> <a href="https://www.11ty.dev/docs/starter/" data-link-type="external">more starter projects on the 11ty docs site</a>.</p>
-
-  <p>And here's a link to a blog post by David Large of CloudCannon. Davis lists <a href="https://cloudcannon.com/blog/11-top-eleventy-blog-themes-starters-in-2023/" data-link-type="external">11 Top Eleventy Blog Themes (Starters) in 2023</a>. The post is from December 2022, but close enough.</p>
-
-  <p>And if you're new to Eleventy, you'll find links to <a href="/categories/getting-started/">{{ bundledata.gettingStartedCount }} blog posts in the Getting Started category</a>.</p>
-  {# starters #}
   <div class="bundleposts">
     {%- for item in bundledata.starters %}
     <div class="bundleitem">
       <p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
       <p class="bundleitem-description">{{ item.Description }}</p>
-      <p class="bundleitem-description">GitHub stars: {{ item.Stars }}</p>
-      <p class="bundleitem-description">Last updated: {{ item.LastUpdated }}</p>
+      <p class="bundleitem-starterinfo">Updated: {{ item.LastUpdated }}</p>
+      <p class="bundleitem-starterinfo">GitHub stars: {{ item.Stars }}</p>
+      <p class="bundleitem-starterinfo">11ty version: {{ item.Version }}</p>
+      {% if item.Demo %}
+      <p class="bundleitem-starterinfo"><a href="{{ item.Demo }}">Demo site</a></p>
+      {% endif %}
     </div>
     {%- endfor -%}
   </div>
