@@ -17212,5 +17212,18 @@
       "Drafts",
       "Pagination"
     ]
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Eleventy Filters in Collections",
+    "Link": "https://www.trovster.com/blog/2024/08/eleventy-filters-in-collections",
+    "Date": "2024-08-26",
+    "Author": "Trevor Morris",
+    "Categories": [
+      "Collections",
+      "Filters",
+      "How to..."
+    ]
   }
 ]
