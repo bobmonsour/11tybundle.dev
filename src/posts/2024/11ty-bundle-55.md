@@ -3,7 +3,7 @@ bundleIssue: 55
 eleventyComputed:
   title: "Issue {{ bundleIssue }} - An Xray vision plugin, A refactored RSS aggregator, Another starter gets an upgrade to v3, Simple Eleventy 3 Excerpts, Sia gets protection from AI bots at Cloudflare...And 7 posts and 9 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
-date: 2024-08-06
+date: 2024-08-20
 tags:
   - 11ty Bundle
 ---
