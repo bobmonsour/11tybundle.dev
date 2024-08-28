@@ -17265,5 +17265,18 @@
       "Global Data",
       "How to..."
     ]
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Oddbird’s Winging It Live: Web Components",
+    "Link": "https://www.zachleat.com/web/winging-it/",
+    "Date": "2024-08-27",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source",
+      "WebC",
+      "YouTube"
+    ]
   }
 ]
