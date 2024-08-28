@@ -30,7 +30,7 @@ export const getRSSlink = async (siteOrigin) => {
     try {
       let htmlcontent = await EleventyFetch(siteOrigin, {
         directory: ".cache",
-        duration: "*",
+        duration: "0s",
         type: "buffer",
       });
       let $ = cheerio.load(htmlcontent);
