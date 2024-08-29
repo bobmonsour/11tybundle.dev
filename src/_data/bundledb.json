@@ -17278,5 +17278,19 @@
       "WebC",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Live CMS Previews with Sanity and Eleventy",
+    "Link": "https://mxb.dev/blog/live-cms-previews-with-sanity-and-eleventy/",
+    "Date": "2024-08-28",
+    "Author": "Max Böck",
+    "Categories": [
+      "CMS",
+      "Drafts",
+      "How to...",
+      "Serverless"
+    ]
   }
 ]
