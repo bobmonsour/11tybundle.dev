@@ -17304,5 +17304,37 @@
     "Type": "site",
     "Title": "Low-cost Mini PCs",
     "Link": "https://lowcostminipcs.com/"
+  },
+  {
+    "Issue": "56",
+    "Type": "site",
+    "Title": "Alfa Fire & Security Solutions AB",
+    "Link": "https://alfafire.se/"
+  },
+  {
+    "Issue": "56",
+    "Type": "site",
+    "Title": "Willa Magland",
+    "Link": "https://willa.magland.org/"
+  },
+  {
+    "Issue": "56",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v5.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.0-alpha.2",
+    "Date": "2024-08-31"
+  },
+  {
+    "Issue": "56",
+    "Type": "blog post",
+    "Title": "Making blog post source files available with 11ty",
+    "Link": "https://chromamine.com/2024/08/making-blog-post-source-files-available-with-11ty/",
+    "Date": "2024-08-31",
+    "Author": "Harris Lapiroff",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
