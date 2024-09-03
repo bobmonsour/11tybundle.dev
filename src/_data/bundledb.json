@@ -17348,5 +17348,44 @@
     "Type": "site",
     "Title": "Agiletto",
     "Link": "https://agiletto.se/"
+  },
+  {
+    "Issue": "57",
+    "Type": "site",
+    "Title": "Evans Theatre",
+    "Link": "https://evanstheatre.ca/"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Eleventy Images Just Got Better",
+    "Link": "https://www.aleksandrhovhannisyan.com/blog/eleventy-image-transform/",
+    "Date": "2024-09-03",
+    "Author": "Aleksandr Hovhannisyan",
+    "Categories": [
+      "Configuration",
+      "Images",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Typescript Eleventy Config",
+    "Link": "https://bennypowers.dev/posts/typescript-11ty-config/",
+    "Date": "2024-09-03",
+    "Author": "Benny Powers",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v5.0.0-alpha.4",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.0-alpha.4",
+    "Date": "2024-09-03"
   }
 ]
