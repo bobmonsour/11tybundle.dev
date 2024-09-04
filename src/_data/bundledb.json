@@ -17387,5 +17387,17 @@
     "Title": "eleventy-plugin-vite v5.0.0-alpha.4",
     "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.0-alpha.4",
     "Date": "2024-09-03"
+  },
+  {
+    "Issue": "57",
+    "Type": "site",
+    "Title": "tabulate",
+    "Link": "https://www.tabulate.io/"
+  },
+  {
+    "Issue": "57",
+    "Type": "site",
+    "Title": "Text Encoding Initiative",
+    "Link": "https://tei-c.org/"
   }
 ]
