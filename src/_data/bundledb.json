@@ -17399,5 +17399,19 @@
     "Type": "site",
     "Title": "Text Encoding Initiative",
     "Link": "https://tei-c.org/"
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v3.0.0-alpha.19",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.19",
+    "Date": "2024-09-04"
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.3",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.3",
+    "Date": "2024-09-04"
   }
 ]
