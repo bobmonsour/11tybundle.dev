@@ -17430,5 +17430,18 @@
     "Type": "site",
     "Title": "Can't Zine",
     "Link": "https://cantzine.ca/"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Tips for Running 11ty on Cloudflare Pages",
+    "Link": "https://www.cassey.dev/11ty-on-cloudflare-pages/",
+    "Date": "2024-09-07",
+    "Author": "Cassey Lottman",
+    "Categories": [
+      "CMS",
+      "Deployment",
+      "Plugins"
+    ]
   }
 ]
