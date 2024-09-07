@@ -17413,5 +17413,16 @@
     "Title": "Eleventy Dev Server v2.0.3",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.3",
     "Date": "2024-09-04"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Eleventy - Is it time to upgrade to version 3?",
+    "Link": "https://www.roboleary.net/blog/eleventy-upgrade-v3/",
+    "Date": "2024-09-07",
+    "Author": "Rob O'Leary",
+    "Categories": [
+      "Upgrading"
+    ]
   }
 ]
