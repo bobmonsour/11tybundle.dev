@@ -17443,5 +17443,30 @@
       "Deployment",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Eleventy - Zero JS charts",
+    "Link": "https://www.roboleary.net/blog/eleventy-charts/",
+    "Date": "2024-09-09",
+    "Author": "Rob O'Leary",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Nunjucks/Macros"
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Adding Search to My Static Site",
+    "Link": "https://www.alexhyett.com/newsletter/adding-search-to-my-static-site/",
+    "Date": "2024-09-09",
+    "Author": "Alex Hyett",
+    "Categories": [
+      "How to...",
+      "Search"
+    ]
   }
 ]
