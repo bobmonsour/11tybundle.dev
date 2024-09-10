@@ -17479,5 +17479,17 @@
     "Categories": [
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Migrating to Eleventy",
+    "Link": "https://renkotsuban.com/posts/2023-11-15-Migrating-to-Eleventy.html",
+    "Date": "2023-11-15",
+    "Author": "Renkon",
+    "Categories": [
+      "Getting Started",
+      "Migrating to Eleventy"
+    ]
   }
 ]
