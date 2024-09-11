@@ -17490,5 +17490,19 @@
     "Categories": [
       "Upgrading"
     ]
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v3.0.0-alpha.20",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.20",
+    "Date": "2024-09-11"
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.4",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.4",
+    "Date": "2024-09-11"
   }
 ]
