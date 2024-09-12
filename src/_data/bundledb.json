@@ -17504,5 +17504,22 @@
     "Title": "Eleventy Dev Server v2.0.4",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.4",
     "Date": "2024-09-11"
+  },
+  {
+    "Issue": "57",
+    "Type": "site",
+    "Title": "Suraj Wate",
+    "Link": "https://surajwate.com/"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "11ty is joining Font Awesome",
+    "Link": "https://www.11ty.dev/blog/eleventy-font-awesome/",
+    "Date": "2024-09-12",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
   }
 ]
