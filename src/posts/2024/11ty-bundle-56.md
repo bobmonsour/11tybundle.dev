@@ -29,7 +29,7 @@ Each starter in the list now includes the following metadata:
 - Eleventy version as listed in package.json file
 - link to a demo site (if one exists)
 
-The main page lists the starters in order of the last commit date. This will help you identify the most active starters. You can also [sort the list by the number of GitHub stars](/starters-by-stars) using the link next to the main page title.
+The main page lists the starters in order of the last commit date. This will help you identify the most active starters. You can also [sort the list by the number of GitHub stars](/starters-by-stars/) using the link next to the main page title.
 
 _A note to starter authors_: I'd encourage you to provide a demo site for your starter. I had to go to each starter repo to locate the demo link, but was disappointed to see that a few don't have one. It's a great way to show off your work! If you add one, please [send me an email](mailto:bob.monsour@gmail.com) as there's no way for me to detect this automatically.
 
