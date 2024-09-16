@@ -17527,5 +17527,61 @@
     "Type": "site",
     "Title": "Wild Hair",
     "Link": "https://www.wildhair.fr/"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Newspaper style layout for my content",
+    "Link": "https://www.simoncox.com/shorts/2024-09-14-newspaper-style-layout-for-my-content/",
+    "Date": "2024-09-15",
+    "Author": "Simon Cox",
+    "Categories": [
+      "CSS/Sass",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "I rebuilt my website from scratch with WebC",
+    "Link": "https://fynn.be/blog/website-rebuilt-webc/",
+    "Date": "2024-09-14",
+    "Author": "Fynn Becker",
+    "Categories": [
+      "How to...",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "release",
+    "Title": "Eleventy Bundle Plugin v3.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v3.0.0",
+    "Date": "2024-09-11"
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "Enabling Emoji Shortcodes in Eleventy Markdown Files",
+    "Link": "https://goulet.dev/posts/emoji-shortcodes-in-eleventy/",
+    "Date": "2021-11-24",
+    "Author": "Wes Goulet",
+    "Categories": [
+      "How to...",
+      "Markdown",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "57",
+    "Type": "blog post",
+    "Title": "I Moved to Cloudflare",
+    "Link": "https://www.aleksandrhovhannisyan.com/blog/cloudflare-migration/",
+    "Date": "2024-09-15",
+    "Author": "Aleksandr Hovhannisyan",
+    "Categories": [
+      "Deployment",
+      "How to..."
+    ]
   }
 ]
