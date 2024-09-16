@@ -14075,5 +14075,24 @@
     "Date": "2024-09-15",
     "Author": "Aleksandr Hovhannisyan",
     "Categories": ["Deployment", "How to..."]
+  },
+  {
+    "Issue": "58",
+    "Type": "site",
+    "Title": "branden higby",
+    "Link": "https://www.higby.io/"
+  },
+  {
+    "Issue": "58",
+    "Type": "site",
+    "Title": "CRO.media",
+    "Link": "https://cro.media/"
+  },
+  {
+    "Issue": 58,
+    "Type": "starter",
+    "Title": "11ty-serene",
+    "Link": "https://github.com/CLCK0622/11ty-Serene",
+    "Demo": "https://11ty-serene.vercel.app/"
   }
 ]
