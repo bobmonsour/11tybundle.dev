@@ -17627,5 +17627,24 @@
     "Type": "site",
     "Title": "Katherine Le",
     "Link": "https://katherine-le.com/"
+  },
+  {
+    "Issue": "58",
+    "Type": "site",
+    "Title": "Gaurav Singh",
+    "Link": "https://gaurav-singh.info/"
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Exclude specific tags in Eleventy using a custom filter",
+    "Link": "https://cri.dev/posts/2024-09-21-how-to-exclude-tags-collection-filter-eleventy/",
+    "Date": "2024-09-21",
+    "Author": "Christian Fei",
+    "Categories": [
+      "Collections",
+      "Filters",
+      "How to..."
+    ]
   }
 ]
