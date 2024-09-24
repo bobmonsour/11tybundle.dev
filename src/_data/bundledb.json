@@ -17646,5 +17646,32 @@
       "Filters",
       "How to..."
     ]
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Syndicating an RSS feed to Mastodon using a Cloudflare worker",
+    "Link": "https://coryd.dev/posts/2024/syndicating-an-rss-feed-to-mastodon-using-a-cloudflare-worker/",
+    "Date": "2024-09-22",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Collections",
+      "How to...",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Eleventy Collections from an API",
+    "Link": "https://www.trovster.com/blog/2024/09/eleventy-collections-from-an-api",
+    "Date": "2024-09-24",
+    "Author": "Trevor Morris",
+    "Categories": [
+      "Collections",
+      "Filters",
+      "How to...",
+      "Pagination"
+    ]
   }
 ]
