@@ -17685,5 +17685,29 @@
     "Type": "site",
     "Title": "ByggÖrebro",
     "Link": "https://byggorebro.se/"
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Building a Blog Site with Eleventy and Storyblok",
+    "Link": "https://www.youtube.com/watch?v=G3Pz1AH6SCY",
+    "Date": "2024-09-26",
+    "Author": "Estela Franco",
+    "Categories": [
+      "CMS",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Eleventy Journey From 2.0 to 3.0",
+    "Link": "https://www.youtube.com/watch?v=qgFNl_oAyQY",
+    "Date": "2024-09-26",
+    "Author": "Helen Chong",
+    "Categories": [
+      "How to...",
+      "Upgrading"
+    ]
   }
 ]
