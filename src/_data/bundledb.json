@@ -17721,5 +17721,48 @@
     "Type": "site",
     "Title": "SteBre",
     "Link": "https://stebre.ch/en/"
+  },
+  {
+    "Issue": "58",
+    "Type": "site",
+    "Title": "iamdtms",
+    "Link": "https://iamdtms.hu/"
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Importing bookmarks to 11ty with the Pocket API",
+    "Link": "https://stebre.ch/en/projects/importing-bookmarks-to-11ty-with-the-pocket-api/",
+    "Date": "2024-03-06",
+    "Author": "Stefan Brechbühl",
+    "Categories": [
+      "How to...",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "Connect 11ty with Notion",
+    "Link": "https://stebre.ch/blog/11ty-mit-notion-verbinden/",
+    "Date": "2024-02-02",
+    "Author": "Stefan Brechbühl",
+    "Categories": [
+      "How to...",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "58",
+    "Type": "blog post",
+    "Title": "notion2eleventy",
+    "Link": "https://stebre.ch/en/projects/notion2eleventy/",
+    "Date": "2024-05-10",
+    "Author": "Stefan Brechbühl",
+    "Categories": [
+      "How to...",
+      "Plugins",
+      "Remote Data"
+    ]
   }
 ]
