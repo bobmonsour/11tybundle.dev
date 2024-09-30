@@ -17777,5 +17777,12 @@
     "Type": "site",
     "Title": "Oak Harbor Web Designs",
     "Link": "https://oakharborwebdesigns.com/"
+  },
+  {
+    "Issue": "58",
+    "Type": "release",
+    "Title": "Eleventy v3.0.0-beta.2: The Final Countdown",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-beta.2",
+    "Date": "2024-09-30"
   }
 ]
