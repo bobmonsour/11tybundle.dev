@@ -17798,5 +17798,12 @@
     "Title": "Eleventy Image v5.0.0",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0",
     "Date": "2024-10-01"
+  },
+  {
+    "Issue": "59",
+    "Type": "release",
+    "Title": "Eleventy Base Blog v9",
+    "Link": "https://github.com/11ty/eleventy-base-blog/releases/tag/v9.0.0",
+    "Date": "2024-10-01"
   }
 ]
