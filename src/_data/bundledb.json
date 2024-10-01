@@ -17791,5 +17791,12 @@
     "Title": "Eleventy v3.0.0: Possums ❤️ ESM",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0",
     "Date": "2024-10-01"
+  },
+  {
+    "Issue": "59",
+    "Type": "release",
+    "Title": "Eleventy Image v5.0.0",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v5.0.0",
+    "Date": "2024-10-01"
   }
 ]
