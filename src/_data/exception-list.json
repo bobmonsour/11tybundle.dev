@@ -1,27 +1,27 @@
 [
-  {
-    "url": "https://box464.com",
-    "rssFeed": "https://box464.com/feed.xml",
-    "reason": "error fetching description or RSS feed"
-  },
-  {
-    "url": "https://blog.kaan.fyi",
-    "rssFeed": "https://blog.kaan.fyi/feed.xml",
-    "reason": "error fetching description or RSS feed"
-  },
-  {
-    "url": "https://nicolas-hoizey.com",
-    "rssFeed": "https://nicolas-hoizey.com/feeds/",
-    "reason": "error fetching description or RSS feed"
-  },
-  {
-    "url": "https://saneef.com",
-    "rssFeed": "https://saneef.com/feed.xml",
-    "reason": "error fetching description or RSS feed"
-  },
-  {
-    "url": "https://www.adamdj.tel",
-    "rssFeed": "https://www.adamdjbrett.com/feed.xml",
-    "reason": "error fetching description or RSS feed"
-  }
+	{
+		"url": "https://box464.com",
+		"rssFeed": "https://box464.com/feed.xml",
+		"reason": "error fetching description or RSS feed"
+	},
+	{
+		"url": "https://blog.kaan.fyi",
+		"rssFeed": "https://blog.kaan.fyi/feed.xml",
+		"reason": "error fetching description or RSS feed"
+	},
+	{
+		"url": "https://nicolas-hoizey.com",
+		"rssFeed": "https://nicolas-hoizey.com/feeds/",
+		"reason": "error fetching description or RSS feed"
+	},
+	{
+		"url": "https://saneef.com",
+		"rssFeed": "https://saneef.com/feed.xml",
+		"reason": "error fetching description or RSS feed"
+	},
+	{
+		"url": "https://www.adamdj.tel",
+		"rssFeed": "https://www.adamdjbrett.com/feed.xml",
+		"reason": "error fetching description or RSS feed"
+	}
 ]

@@ -29,55 +29,55 @@ let descriptionCache = {};
 // Note that I have a .cache folder in my project root and added .cache to my
 // .gitignore file. See https://www.11ty.dev/docs/plugins/fetch/#installation
 export const getDescription = async (link) => {
-  // Check if the description is in the cache
-  if (descriptionCache[link]) {
-    return descriptionCache[link];
-  }
-  if (link.includes("youtube.com")) {
-    descriptionCache[link] = "YouTube video";
-    return descriptionCache[link];
-  }
-  if (link.includes("medium.com")) {
-    descriptionCache[link] = "Medium post";
-    return descriptionCache[link];
-  }
-  // Check for known urls that have issues when fetching
-  // the description (as seen in the Netlify build logs)
-  const url = new URL(link);
-  const siteUrl = url.origin;
-  if (exceptionList.some((item) => item.url === siteUrl)) {
-    // console.log("Description exception: " + siteUrl);
-    descriptionCache[link] = "";
-    return descriptionCache[link];
-  }
+	// Check if the description is in the cache
+	if (descriptionCache[link]) {
+		return descriptionCache[link];
+	}
+	if (link.includes("youtube.com")) {
+		descriptionCache[link] = "YouTube video";
+		return descriptionCache[link];
+	}
+	if (link.includes("medium.com")) {
+		descriptionCache[link] = "Medium post";
+		return descriptionCache[link];
+	}
+	// Check for known urls that have issues when fetching
+	// the description (as seen in the Netlify build logs)
+	const url = new URL(link);
+	const siteUrl = url.origin;
+	if (exceptionList.some((item) => item.url === siteUrl)) {
+		// console.log("Description exception: " + siteUrl);
+		descriptionCache[link] = "";
+		return descriptionCache[link];
+	}
 
-  if (exceptionList.includes(link)) {
-    descriptionCache[link] = "";
-    return descriptionCache[link];
-  }
-  try {
-    let htmlcontent = await EleventyFetch(link, {
-      directory: ".cache",
-      duration: "*",
-      type: "buffer",
-      fetchOptions: {
-        headers: {
-          "user-agent":
-            "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
-        },
-      },
-    });
-    const $ = cheerio.load(htmlcontent);
-    const description = $("meta[name=description]").attr("content");
-    if (description == undefined) {
-      descriptionCache[link] = "";
-    } else {
-      descriptionCache[link] = description.replace(/[<>]/g, "").trim();
-    }
-    return descriptionCache[link];
-  } catch (e) {
-    // console.log("Error fetching description for " + link + " " + e.message);
-    console.log("Error fetching description for " + link);
-    return "";
-  }
+	if (exceptionList.includes(link)) {
+		descriptionCache[link] = "";
+		return descriptionCache[link];
+	}
+	try {
+		let htmlcontent = await EleventyFetch(link, {
+			directory: ".cache",
+			duration: "*",
+			type: "buffer",
+			fetchOptions: {
+				headers: {
+					"user-agent":
+						"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
+				},
+			},
+		});
+		const $ = cheerio.load(htmlcontent);
+		const description = $("meta[name=description]").attr("content");
+		if (description == undefined) {
+			descriptionCache[link] = "";
+		} else {
+			descriptionCache[link] = description.replace(/[<>]/g, "").trim();
+		}
+		return descriptionCache[link];
+	} catch (e) {
+		// console.log("Error fetching description for " + link + " " + e.message);
+		console.log("Error fetching description for " + link);
+		return "";
+	}
 };

@@ -1,56 +1,56 @@
 ---js
 {
-  eleventyComputed: {
-    title: "{{ category[1] }} posts in '{{ category[0] }}'",
-    description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
-    permalink: "/categories/{{ category[0] | cachedSlugify }}/",
-  },
-  pagination:  {
-    data: "bundledata.categories",
-    size: 1,
-    alias: "category",
-    addAllPagesToCollections: "true",
-  }
+	eleventyComputed: {
+		title: "{{ category[1] }} posts in '{{ category[0] }}'",
+		description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
+		permalink: "/categories/{{ category[0] | cachedSlugify }}/",
+	},
+	pagination:	{
+		data: "bundledata.categories",
+		size: 1,
+		alias: "category",
+		addAllPagesToCollections: "true",
+	}
 }
 ---
 
 {#
-  If the category has an equivalent page on the 11ty docs site, then display a link to it.
-  The linkstodocs object is defined in the linkstodocs.json file in the _data directory.
-  Each key in the object is a category name, and the value is the URL of the page on the
-  11ty docs site. In the special case of the Deployment category, an additional link is
-  displayed, linking to the list of deployment providers on the 11ty docs site.
+	If the category has an equivalent page on the 11ty docs site, then display a link to it.
+	The linkstodocs object is defined in the linkstodocs.json file in the _data directory.
+	Each key in the object is a category name, and the value is the URL of the page on the
+	11ty docs site. In the special case of the Deployment category, an additional link is
+	displayed, linking to the list of deployment providers on the 11ty docs site.
 #}
 {% if linkstodocs[category[0]] %}
 <h2>Official 11ty docs</h2>
 <div class="officialdocs">
-  <p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}" data-link-type="external">{{ category[0] }}</a></p>
-  <p class="bundleitem-description">{{ linkstodocs[category[0]] | getDescription | truncate(100) }}</p>
-  {%- if category[0] == "Deployment" %}
-  <p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" data-link-type="external">list of providers on the 11ty docs site.</a></p>
-  {%- endif %}
+	<p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}" data-link-type="external">{{ category[0] }}</a></p>
+	<p class="bundleitem-description">{{ linkstodocs[category[0]] | getDescription | truncate(100) }}</p>
+	{%- if category[0] == "Deployment" %}
+	<p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers" data-link-type="external">list of providers on the 11ty docs site.</a></p>
+	{%- endif %}
 </div>
 {% endif %}
 
 <h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}</h1>
 
 {#
-  Note that in the case of the "From the Source" category, no caution items are inserted as
-  they are not relevant to this category.
+	Note that in the case of the "From the Source" category, no caution items are inserted as
+	they are not relevant to this category.
 #}
 <div class="bundleposts" data-pagefind-body>
-  {% set v1cautionshown = false %}
-  {% set v2cautionshown = false %}
-  {% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
-    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown and category[0] != "From the Source" %}
-      {% include "partials/v1caution.njk" %}
-      {% set v1cautionshown = true %}
-    {% endif %}
-    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown  and category[0] != "From the Source"%}
-      {% include "partials/v2caution.njk" %}
-      {% set v2cautionshown = true %}
-    {% endif %}
-    {% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
-    {% singlePost item, "category", category[0], postCount %}
-  {% endfor %}
+	{% set v1cautionshown = false %}
+	{% set v2cautionshown = false %}
+	{% for item in bundledata.bundleRecords | postsInCategory(category[0], 0) %}
+		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown and category[0] != "From the Source" %}
+			{% include "partials/v1caution.njk" %}
+			{% set v1cautionshown = true %}
+		{% endif %}
+		{% if item.Date < cautioninfo.v2releasedate and not v2cautionshown	and category[0] != "From the Source"%}
+			{% include "partials/v2caution.njk" %}
+			{% set v2cautionshown = true %}
+		{% endif %}
+		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
+		{% singlePost item, "category", category[0], postCount %}
+	{% endfor %}
 </div>

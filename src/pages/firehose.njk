@@ -8,36 +8,36 @@ permalink: /firehose/
 <h1>{{ title }}</h1>
 <h3>The Firehose has it's own <a href="/firehosefeed.xml">RSS feed</a>!</h3>
 <div class="bundleposts" data-pagefind-ignore="all">
-  {# We've processed no posts...yet #}
-  {%- set previous_year = "no posts yet" -%}
-  {#
-    Post dates are formatted as yyy-mm-yy, so we can extract the year.
-    If there's a change from post to post in the year part of the date,
-    and if it's not the first post, close the previous details tag and
-    open a new one. And set the previous year to the current post's year.
-  #}
-  {% set v1cautionshown = false %}
-  {% set v2cautionshown = false %}
-  {%- for item in bundledata.firehose -%}
-    {%- set current_year = item.Date | truncate(4, true, '') -%}
-    {%- if current_year != previous_year -%}
-      {%- if previous_year != "no posts yet" -%}
-        </details>
-      {%- endif -%}
-      <details open>
-      <summary>{{ current_year }}</summary>
-      {%- set previous_year = current_year -%}
-    {%- endif -%}
-    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
-      {% include "partials/v1caution.njk" %}
-      {% set v1cautionshown = true %}
-    {% endif %}
-    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
-      {% include "partials/v2caution.njk" %}
-      {% set v2cautionshown = true %}
-    {% endif %}
-    {% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
-    {% singlePost item, "firehose", item.Author, postCount %}
-  {%- endfor -%}
-  </details>
+	{# We've processed no posts...yet #}
+	{%- set previous_year = "no posts yet" -%}
+	{#
+		Post dates are formatted as yyy-mm-yy, so we can extract the year.
+		If there's a change from post to post in the year part of the date,
+		and if it's not the first post, close the previous details tag and
+		open a new one. And set the previous year to the current post's year.
+	#}
+	{% set v1cautionshown = false %}
+	{% set v2cautionshown = false %}
+	{%- for item in bundledata.firehose -%}
+		{%- set current_year = item.Date | truncate(4, true, '') -%}
+		{%- if current_year != previous_year -%}
+			{%- if previous_year != "no posts yet" -%}
+				</details>
+			{%- endif -%}
+			<details open>
+			<summary>{{ current_year }}</summary>
+			{%- set previous_year = current_year -%}
+		{%- endif -%}
+		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
+			{% include "partials/v1caution.njk" %}
+			{% set v1cautionshown = true %}
+		{% endif %}
+		{% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
+			{% include "partials/v2caution.njk" %}
+			{% set v2cautionshown = true %}
+		{% endif %}
+		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
+		{% singlePost item, "firehose", item.Author, postCount %}
+	{%- endfor -%}
+	</details>
 </div>

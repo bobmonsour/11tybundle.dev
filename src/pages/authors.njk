@@ -1,34 +1,34 @@
 ---js
 {
-  eleventyComputed: {
-    title: "{{ author[1] | postCountLabel }} by {{ author[0] | safe }}",
-    description: "Posts in the 11ty Bundle written by {{ author[0] }}",
-    permalink: "/authors/{{ author[0] | cachedSlugify }}/",
-  },
-  pagination:  {
-    data: "bundledata.authors",
-    size: 1,
-    alias: "author",
-    addAllPagesToCollections: "true"
-  }
+	eleventyComputed: {
+		title: "{{ author[1] | postCountLabel }} by {{ author[0] | safe }}",
+		description: "Posts in the 11ty Bundle written by {{ author[0] }}",
+		permalink: "/authors/{{ author[0] | cachedSlugify }}/",
+	},
+	pagination:	{
+		data: "bundledata.authors",
+		size: 1,
+		alias: "author",
+		addAllPagesToCollections: "true"
+	}
 }
 ---
 
 <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }}</h1>
 
 <div class="bundleposts" data-pagefind-body>
-  {% set v1cautionshown = false %}
-  {% set v2cautionshown = false %}
-  {% for item in bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
-    {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
-      {% include "partials/v1caution.njk" %}
-      {% set v1cautionshown = true %}
-    {% endif %}
-    {% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
-      {% include "partials/v2caution.njk" %}
-      {% set v2cautionshown = true %}
-    {% endif %}
-    {% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
-    {% singlePost item, "author", author[0], postCount %}
-  {% endfor %}
+	{% set v1cautionshown = false %}
+	{% set v2cautionshown = false %}
+	{% for item in bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
+			{% include "partials/v1caution.njk" %}
+			{% set v1cautionshown = true %}
+		{% endif %}
+		{% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
+			{% include "partials/v2caution.njk" %}
+			{% set v2cautionshown = true %}
+		{% endif %}
+		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
+		{% singlePost item, "author", author[0], postCount %}
+	{% endfor %}
 </div>

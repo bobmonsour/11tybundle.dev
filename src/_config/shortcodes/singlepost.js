@@ -10,16 +10,16 @@ import { formatItemDate } from "./../filters/formatting.js";
 //	- value: used to create a CSS ID for the post when it is displayed (either an author or a category; it can be either one for the firehose page as the ID is not used.
 //
 // The post object includes the following properties (all strings):
-//  Title: Title of the post
-//  Link: URL of the post
-//  Author: Author of the post
-//  Date: Date of the post
-//  Categories: array of categories for the post
+//	Title: Title of the post
+//	Link: URL of the post
+//	Author: Author of the post
+//	Date: Date of the post
+//	Categories: array of categories for the post
 //
 // The type is one of the following 3 strings:
-//  "category": for the category page
-//  "author": for the author page
-//  "firehose": for the firehose page
+//	"category": for the category page
+//	"author": for the author page
+//	"firehose": for the firehose page
 //
 //
 // Each of these has an implied pagefind-weight,
@@ -37,52 +37,52 @@ import { formatItemDate } from "./../filters/formatting.js";
 //
 // These CSS IDs are used to create a landing place for the links in the pagefind results.
 export const singlePost = async function (post, type, idKey, postCount) {
-  const title = post.Title.replace(/[<>]/g, "");
-  const titleSlug = cachedSlugify(title);
-  const description = await getDescription(post.Link);
-  const authorSlug = cachedSlugify(post.Author);
-  const url = new URL(post.Link);
-  const siteUrl = url.origin;
-  const postCountLabel = postCount == 1 ? "post" : "posts";
-  let siteUrlString = "";
-  let rssLinkString = "";
-  let pageWeightorIgnore = "";
-  switch (siteUrl) {
-    case "https://www.youtube.com":
-    case "https://medium.com":
-      break;
-    default:
-      siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
-      let rssLink = await getRSSlink(siteUrl);
-      rssLinkString =
-        rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
-      break;
-  }
-  const date = formatItemDate(post.Date);
-  const id =
-    '"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
-  switch (type) {
-    case "category": // for category pages
-      pageWeightorIgnore = "data-pagefind-weight = 10";
-      break;
-    case "author": // for author pages
-      pageWeightorIgnore = "data-pagefind-weight = 5";
-      break;
-    case "firehose": // for the firehose page
-    case "blog": // for the Bundle blog posts
-      pageWeightorIgnore = "data-pagefind-ignore";
-  }
-  let categories = "";
-  post.Categories.forEach((category) => {
-    let slugifiedCategory = cachedSlugify(category);
-    categories += `<a href="/categories/${slugifiedCategory}/">${category}</a>`;
-  });
-  return `
+	const title = post.Title.replace(/[<>]/g, "");
+	const titleSlug = cachedSlugify(title);
+	const description = await getDescription(post.Link);
+	const authorSlug = cachedSlugify(post.Author);
+	const url = new URL(post.Link);
+	const siteUrl = url.origin;
+	const postCountLabel = postCount == 1 ? "post" : "posts";
+	let siteUrlString = "";
+	let rssLinkString = "";
+	let pageWeightorIgnore = "";
+	switch (siteUrl) {
+		case "https://www.youtube.com":
+		case "https://medium.com":
+			break;
+		default:
+			siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
+			let rssLink = await getRSSlink(siteUrl);
+			rssLinkString =
+				rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
+			break;
+	}
+	const date = formatItemDate(post.Date);
+	const id =
+		'"' + cachedSlugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
+	switch (type) {
+		case "category": // for category pages
+			pageWeightorIgnore = "data-pagefind-weight = 10";
+			break;
+		case "author": // for author pages
+			pageWeightorIgnore = "data-pagefind-weight = 5";
+			break;
+		case "firehose": // for the firehose page
+		case "blog": // for the Bundle blog posts
+			pageWeightorIgnore = "data-pagefind-ignore";
+	}
+	let categories = "";
+	post.Categories.forEach((category) => {
+		let slugifiedCategory = cachedSlugify(category);
+		categories += `<a href="/categories/${slugifiedCategory}/">${category}</a>`;
+	});
+	return `
 			<div class="bundleitem">
-      	<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
-        <p class="bundleitem-description">${description}</p>
-        <p class="bundleitem-date">${date}</p>
-        <p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
+				<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
+				<p class="bundleitem-description">${description}</p>
+				<p class="bundleitem-date">${date}</p>
+				<p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
 				<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
-      </div>`;
+			</div>`;
 };

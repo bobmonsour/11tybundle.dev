@@ -1,16 +1,16 @@
 {#
-  Display list of tags for posts.
-  In the 11tybundle.dev site, posts are not tagged other than with the "posts" tag.
-  Items displayed in the bundle make use of categories stored in the Airtable database.
-  While currently unused, this will remain for possible future use.
+	Display list of tags for posts.
+	In the 11tybundle.dev site, posts are not tagged other than with the "posts" tag.
+	Items displayed in the bundle make use of categories stored in the Airtable database.
+	While currently unused, this will remain for possible future use.
 #}
 {%- macro tagList(tags) -%}
-  <ul class="post-taglist">
-    <li>Tags:&nbsp;</li>
-    {%- for tag in tags | filterTagList %}
-    {%- set tagUrl %}/tags/{{ tag | cachedSlugify }}/{% endset %}
-    <li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>&nbsp;&nbsp;</li>
-    {%- endfor %}
-    <li><a href="/tags/">All Tags</a></li>
-  </ul>
+	<ul class="post-taglist">
+		<li>Tags:&nbsp;</li>
+		{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | cachedSlugify }}/{% endset %}
+		<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>&nbsp;&nbsp;</li>
+		{%- endfor %}
+		<li><a href="/tags/">All Tags</a></li>
+	</ul>
 {%- endmacro -%}

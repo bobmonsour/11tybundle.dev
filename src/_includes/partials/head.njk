@@ -1,81 +1,81 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
-  <meta name="keywords" content="{{ keywords }}">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
+	<meta name="keywords" content="{{ keywords }}">
 
-  {# enable view-transitions, currently behind a flag in Chrome Canary build #}
-  <meta name="view-transition" content="same-origin" >
+	{# enable view-transitions, currently behind a flag in Chrome Canary build #}
+	<meta name="view-transition" content="same-origin" >
 
-  {# add snow fall component if snow == "true" in front matter #}
-  {% if snow == "true" %}
-    <script type="module" src="/assets/js/snow-fall.js"></script>
-    <script type="module" src="/assets/js/is-land.js"></script>
-  {% endif %}
+	{# add snow fall component if snow == "true" in front matter #}
+	{% if snow == "true" %}
+		<script type="module" src="/assets/js/snow-fall.js"></script>
+		<script type="module" src="/assets/js/is-land.js"></script>
+	{% endif %}
 
-  {# add confetti if confetti == "true" in front matter #}
-  {% if confetti == "true" %}
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-  {% endif %}
+	{# add confetti if confetti == "true" in front matter #}
+	{% if confetti == "true" %}
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+	{% endif %}
 
-  {#
-    conditionally load the syntax highlighting styles per
-    front matter 'pageHasCode' in blog posts. the post.njk
-    layout declares the appropriate prismjs styles
-  #}
-  {% if pageHasCode %}
-    <link rel="preload" href="{% getBundleFileUrl "css", "pageHasCode" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="{% getBundleFileUrl "css", "pageHasCode" %}" rel="stylesheet">
-    </noscript>
-  {% endif %}
+	{#
+		conditionally load the syntax highlighting styles per
+		front matter 'pageHasCode' in blog posts. the post.njk
+		layout declares the appropriate prismjs styles
+	#}
+	{% if pageHasCode %}
+		<link rel="preload" href="{% getBundleFileUrl "css", "pageHasCode" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+			<link href="{% getBundleFileUrl "css", "pageHasCode" %}" rel="stylesheet">
+		</noscript>
+	{% endif %}
 
-  {# load the pagefind style sheet on every page  #}
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+	{# load the pagefind style sheet on every page	#}
+	<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 
-  {# bundle the CSS content used on all pages and get the link to the bundle #}
-  {%- css %}
-    {% include "css/reset.css" %}
-    {% include "css/variables.css" %}
-    {% include "css/main.css" %}
-  {% endcss %}
-  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+	{# bundle the CSS content used on all pages and get the link to the bundle #}
+	{%- css %}
+		{% include "css/reset.css" %}
+		{% include "css/variables.css" %}
+		{% include "css/main.css" %}
+	{% endcss %}
+	<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 
-  <!-- Fathom analytics - don't include in development mode -->
-  {% if site.env != "development" %}
-    <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
-  {% endif %}
+	<!-- Fathom analytics - don't include in development mode -->
+	{% if site.env != "development" %}
+		<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+	{% endif %}
 
-  {# Improve RSS feed visibility #}
-  <link rel="alternate" href="https://11tybundle.dev/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
-  <link rel="alternate" href="https://11tybundle.dev/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
+	{# Improve RSS feed visibility #}
+	<link rel="alternate" href="https://11tybundle.dev/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="https://11tybundle.dev/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
 
-  {# add webmention link #}
-  <link rel="webmention" href="https://webmention.io/11tybundle.dev/webmention" />
+	{# add webmention link #}
+	<link rel="webmention" href="https://webmention.io/11tybundle.dev/webmention" />
 
-  {# favicon settings #}
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#135567">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+	{# favicon settings #}
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#135567">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
-  {# Open Graph tags #}
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
-  <meta property="og:image:alt" content="{{ image.alt }}">
+	{# Open Graph tags #}
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
+	<meta property="og:image:alt" content="{{ image.alt }}">
 
-  {# Apple tags #}
-  <meta name="apple-mobile-web-app-title" content="11ty Bundle" >
-  <meta name="application-name" content="11ty Bundle" >
+	{# Apple tags #}
+	<meta name="apple-mobile-web-app-title" content="11ty Bundle" >
+	<meta name="application-name" content="11ty Bundle" >
 
-  <meta name="generator" content="{{ eleventy.generator }}">
-  <link href="https://github.com/bobmonsour" rel="me">
+	<meta name="generator" content="{{ eleventy.generator }}">
+	<link href="https://github.com/bobmonsour" rel="me">
 </head>

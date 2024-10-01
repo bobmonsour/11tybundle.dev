@@ -1,14 +1,14 @@
 {#
-  Used to lists all posts in a given collection of blog posts tagged with "posts"
-  It is on the Archive page to list all posts.
-  In each of those, a variable is set to the subset of posts to list.
+	Used to lists all posts in a given collection of blog posts tagged with "posts"
+	It is on the Archive page to list all posts.
+	In each of those, a variable is set to the subset of posts to list.
 #}
 {% for post in postlist %}
-  <section class="post-card">
-    <h2 class="post-title">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </h2>
-    <p class="post-date">{{ post.date | formatPostDate }}</p>
-    <p class="post-readingtime">{{ post.content | readingTime }}</p>
-  </section>
+	<section class="post-card">
+		<h2 class="post-title">
+			<a href="{{ post.url }}">{{ post.data.title }}</a>
+		</h2>
+		<p class="post-date">{{ post.date | formatPostDate }}</p>
+		<p class="post-readingtime">{{ post.content | readingTime }}</p>
+	</section>
 {% endfor %}

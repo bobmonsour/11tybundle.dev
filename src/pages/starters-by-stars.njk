@@ -6,21 +6,21 @@ permalink: /starters-by-stars/
 ---
 
 <div class="flow">
-  <h1>{{ title }} <span class="reduced-to-md">(<a href="/starters/">by Latest Update</a>)</span></h1>
+	<h1>{{ title }} <span class="reduced-to-md">(<a href="/starters/">by Latest Update</a>)</span></h1>
 
-  {% include "partials/starters-intro.njk" %}
+	{% include "partials/starters-intro.njk" %}
 
-  <div class="bundleposts">
-    {%- for item in bundledata.startersByStars %}
-    <div class="bundleitem">
-      <p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
-      <p class="bundleitem-starterinfo">GitHub stars: {{ item.Stars }}</p>
-      <p class="bundleitem-starterinfo">Updated: {{ item.LastUpdated }}</p>
-      <p class="bundleitem-starterinfo">11ty version: {{ item.Version }}</p>
-      {% if item.Demo %}
-      <p class="bundleitem-starterinfo"><a href="{{ item.Demo }}" data-link-type="external">Demo site</a></p>
-      {% endif %}
-    </div>
-    {%- endfor -%}
-  </div>
+	<div class="bundleposts">
+		{%- for item in bundledata.startersByStars %}
+		<div class="bundleitem">
+			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-starterinfo">GitHub stars: {{ item.Stars }}</p>
+			<p class="bundleitem-starterinfo">Updated: {{ item.LastUpdated }}</p>
+			<p class="bundleitem-starterinfo">11ty version: {{ item.Version }}</p>
+			{% if item.Demo %}
+			<p class="bundleitem-starterinfo"><a href="{{ item.Demo }}" data-link-type="external">Demo site</a></p>
+			{% endif %}
+		</div>
+		{%- endfor -%}
+	</div>
 </div>

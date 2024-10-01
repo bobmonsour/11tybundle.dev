@@ -5,21 +5,21 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ site.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title }}</title>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
-    <description>{{ site.subtitle }}</description>
-    <language>{{ site.language }}</language>
-    {%- for item in bundledata.firehose %}
-    <item>
-      <title>{{ item.Title }}</title>
-      <link>{{ item.Link }}</link>
-      <description>{{ item.Link | getDescription }}</description>
-      <pubDate>{{ item.Date | formatFirehoseDate }}</pubDate>
-      <dc:creator>{{ item.Author }}</dc:creator>
-      <guid>{{ item.Link }}</guid>
-    </item>
-    {%- endfor %}
-  </channel>
+	<channel>
+		<title>{{ site.title }}</title>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
+		<description>{{ site.subtitle }}</description>
+		<language>{{ site.language }}</language>
+		{%- for item in bundledata.firehose %}
+		<item>
+			<title>{{ item.Title }}</title>
+			<link>{{ item.Link }}</link>
+			<description>{{ item.Link | getDescription }}</description>
+			<pubDate>{{ item.Date | formatFirehoseDate }}</pubDate>
+			<dc:creator>{{ item.Author }}</dc:creator>
+			<guid>{{ item.Link }}</guid>
+		</item>
+		{%- endfor %}
+	</channel>
 </rss>
