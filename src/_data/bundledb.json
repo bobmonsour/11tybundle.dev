@@ -7130,12 +7130,6 @@
 		"Link": "https://www.tomroseveare.com/"
 	},
 	{
-		"Issue": 5,
-		"Type": "site",
-		"Title": "Tyler Mercer",
-		"Link": "https://tylermercer.net/"
-	},
-	{
 		"Issue": 6,
 		"Type": "site",
 		"Title": "Grease",
@@ -8565,24 +8559,6 @@
 		"Title": "Eleventy v3.0.0-alpha.2",
 		"Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.2",
 		"Date": "2023-12-17"
-	},
-	{
-		"Issue": 24,
-		"Type": "site",
-		"Title": "Atom Editor",
-		"Link": "https://atom-editor.cc/"
-	},
-	{
-		"Issue": 24,
-		"Type": "site",
-		"Title": "refreshdc",
-		"Link": "https://refresh-dc.org/"
-	},
-	{
-		"Issue": 24,
-		"Type": "site",
-		"Title": "Space Holder",
-		"Link": "https://spaceholder.cc/"
 	},
 	{
 		"Issue": 24,
@@ -10241,12 +10217,6 @@
 		"Type": "site",
 		"Title": "Kristoff Lalicki",
 		"Link": "https://kristofflalicki.dev/"
-	},
-	{
-		"Issue": 32,
-		"Type": "site",
-		"Title": "orga.cat",
-		"Link": "https://orga.cat/"
 	},
 	{
 		"Issue": 32,
@@ -13805,12 +13775,6 @@
 	{
 		"Issue": "56",
 		"Type": "site",
-		"Title": "Alfa Fire & Security Solutions AB",
-		"Link": "https://alfafire.se/"
-	},
-	{
-		"Issue": "56",
-		"Type": "site",
 		"Title": "Willa Magland",
 		"Link": "https://willa.magland.org/"
 	},
@@ -14119,12 +14083,6 @@
 		"Type": "site",
 		"Title": "Grundrechte schützen - Bundestrojaner stoppen!",
 		"Link": "https://bundestrojaner.at/"
-	},
-	{
-		"Issue": "58",
-		"Type": "site",
-		"Title": "ByggÖrebro",
-		"Link": "https://byggorebro.se/"
 	},
 	{
 		"Issue": "58",

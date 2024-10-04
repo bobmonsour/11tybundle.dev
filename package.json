@@ -42,6 +42,7 @@
     "lodash": "^4.17.21",
     "netlify-plugin-cache": "^1.0.3",
     "node-fetch": "^2.6.7",
+		"@octokit/rest": "^21.0.2"
     "pagefind": "^1.0.4",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
@@ -49,8 +50,5 @@
     "rimraf": "^3.0.2",
     "sanitize-html": "^2.11.0",
     "slugify": "^1.6.6"
-  },
-  "dependencies": {
-    "@octokit/rest": "^21.0.2"
   }
 }

@@ -1,5 +1,10 @@
 [
 	{
+		"url": "https://www.alexhyett.com",
+		"rssFeed": "https://www.alexhyett.com/feed/feed.atom.xml",
+		"reason": "error fetching description and/oror RSS feed"
+	},
+	{
 		"url": "https://box464.com",
 		"rssFeed": "https://box464.com/feed.xml",
 		"reason": "error fetching description or RSS feed"
