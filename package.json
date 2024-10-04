@@ -42,7 +42,7 @@
     "lodash": "^4.17.21",
     "netlify-plugin-cache": "^1.0.3",
     "node-fetch": "^2.6.7",
-		"@octokit/rest": "^21.0.2"
+		"@octokit/rest": "^21.0.2",
     "pagefind": "^1.0.4",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
