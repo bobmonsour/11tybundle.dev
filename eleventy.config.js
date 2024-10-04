@@ -7,6 +7,7 @@ import "dotenv/config";
 import filters from "./src/_config/filters.js";
 import shortcodes from "./src/_config/shortcodes.js";
 import postGraph from "@rknightuk/eleventy-plugin-post-graph";
+import singlePost from "./src/_config/plugins/singlepost.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 import XRayPlugin from "eleventy-plugin-xray";
@@ -40,7 +41,7 @@ export default function (eleventyConfig) {
 
 	// Add shortcodes
 	eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.imageShortcode);
-	eleventyConfig.addNunjucksAsyncShortcode("singlePost", shortcodes.singlePost);
+	eleventyConfig.addPlugin(singlePost);
 
 	// Add Plugins
 	eleventyConfig.addPlugin(postGraph, {

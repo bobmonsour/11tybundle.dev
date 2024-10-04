@@ -17851,5 +17851,17 @@
     "Type": "site",
     "Title": "beeps",
     "Link": "https://beeps.website/"
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "Crash the Arcade",
+    "Link": "https://crashthearcade.com/"
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "memo.forof",
+    "Link": "https://memo.forof.dev/"
   }
 ]

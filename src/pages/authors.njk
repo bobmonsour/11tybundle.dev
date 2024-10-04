@@ -3,7 +3,7 @@
 	eleventyComputed: {
 		title: "{{ author[1] | postCountLabel }} by {{ author[0] | safe }}",
 		description: "Posts in the 11ty Bundle written by {{ author[0] }}",
-		permalink: "/authors/{{ author[0] | cachedSlugify }}/",
+		permalink: "/authors/{{ author[0] | slugify }}/",
 	},
 	pagination:	{
 		data: "bundledata.authors",
