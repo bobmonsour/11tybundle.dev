@@ -1,11 +1,6 @@
 import Image from "@11ty/eleventy-img";
 
-export const imageShortcode = async (
-	src,
-	alt,
-	sizes = "100vw",
-	loading = "lazy"
-) => {
+export const image = async (src, alt, sizes = "100vw", loading = "lazy") => {
 	let metadata = await Image(src, {
 		widths: [300, 600, 1200],
 		formats: ["webp", "jpeg"],

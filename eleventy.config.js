@@ -1,13 +1,11 @@
-// import UpgradeHelper from "@11ty/eleventy-upgrade-help";
-
 // environment variable handling
 import "dotenv/config";
 
-// Import filters, shortcodes, and plugins
-import filters from "./src/_config/filters.js";
-import shortcodes from "./src/_config/shortcodes.js";
+import filters from "./src/_config/filters/index.js";
+import shortcodes from "./src/_config/shortcodes/index.js";
+import singlePost from "./src/_config/shortcodes/singlepost.js";
+
 import postGraph from "@rknightuk/eleventy-plugin-post-graph";
-import singlePost from "./src/_config/plugins/singlepost.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 import XRayPlugin from "eleventy-plugin-xray";
@@ -21,29 +19,12 @@ export default function (eleventyConfig) {
 		"src/robots.txt",
 	].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
-	// Add filters
-	eleventyConfig.addFilter("cachedSlugify", filters.cachedSlugify);
-	eleventyConfig.addFilter("formatFirehoseDate", filters.formatFirehoseDate);
-	eleventyConfig.addFilter("formatItemDate", filters.formatItemDate);
-	eleventyConfig.addFilter("formatNumber", filters.formatNumber);
-	eleventyConfig.addFilter("formatPostDate", filters.formatPostDate);
-	eleventyConfig.addFilter("getBundleItems", filters.getBundleItems);
-	eleventyConfig.addAsyncFilter("getDescription", filters.getDescription);
-	eleventyConfig.addAsyncFilter("getRSSlink", filters.getRSSlink);
-	eleventyConfig.addFilter("isCurrentPage", filters.isCurrentPage);
-	eleventyConfig.addFilter("plainDate", filters.plainDate);
-	eleventyConfig.addFilter("postCountByAuthor", filters.postCountByAuthor);
-	eleventyConfig.addFilter("postCountLabel", filters.postCountLabel);
-	eleventyConfig.addFilter("postsByAuthor", filters.postsByAuthor);
-	eleventyConfig.addFilter("postsInCategory", filters.postsInCategory);
-	eleventyConfig.addFilter("readingTime", filters.readingTime);
-	eleventyConfig.addFilter("webmentionsByUrl", filters.webmentionsByUrl);
-
-	// Add shortcodes
-	eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.imageShortcode);
+	// Add local filters and shortcodes
+	eleventyConfig.addPlugin(filters);
+	eleventyConfig.addPlugin(shortcodes);
 	eleventyConfig.addPlugin(singlePost);
 
-	// Add Plugins
+	// Add & configure external plugins
 	eleventyConfig.addPlugin(postGraph, {
 		sort: "desc",
 		boxColor: "darkgray",
@@ -59,13 +40,9 @@ export default function (eleventyConfig) {
 		onlyEnv: "development",
 	});
 
-	// Configure the 11ty plugin bundle
 	eleventyConfig.addBundle("css", {
 		toFileDirectory: "bundle",
 	});
-
-	// Install the upgrade helper
-	// eleventyConfig.addPlugin(UpgradeHelper);
 
 	eleventyConfig.setQuietMode(true);
 

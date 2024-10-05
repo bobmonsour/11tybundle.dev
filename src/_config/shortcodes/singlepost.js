@@ -1,7 +1,6 @@
-// import { Slugify } from "./../filters/cachedslugify.js";
 import { getDescription } from "../filters/getdescription.js";
 import { getRSSlink } from "../filters/getrsslink.js";
-import { formatItemDate } from "../filters/formatting.js";
+import { formatItemDate } from "../filters/datesandnumbers.js";
 
 // Create a single post item for the category, author, and firehose pages
 // Inputs are:
