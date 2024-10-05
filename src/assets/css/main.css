@@ -1,3 +1,6 @@
+@import url("reset.css");
+@import url("variables.css");
+
 /* default styles */
 body {
 	/* use flex on body to force footer to bottom on short pages */

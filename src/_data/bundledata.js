@@ -21,16 +21,6 @@ export default async function () {
 			return a.Date > b.Date ? -1 : 1;
 		});
 
-	// for testing with mobile breakage
-	// const firehose = bundleRecords
-	//	 .filter(
-	//		 (item) => item["Type"] == "blog post" && item["Date"].startsWith("2020")
-	//	 )
-	//	 .sort((a, b) => {
-	//		 return a.Date > b.Date ? -1 : 1;
-	//	 });
-	// const testitems = firehose.slice(0, 26);
-
 	// generate a list of releases, an array of all releases in descending date order
 	const releaseList = bundleRecords
 		.filter((item) => item["Type"] == "release")
@@ -223,7 +213,6 @@ export default async function () {
 	return {
 		bundleRecords,
 		firehose,
-		// testitems,
 		postCount,
 		releaseList,
 		siteList,

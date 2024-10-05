@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
 	// Passthrough copy for static assets
 	[
 		{ "src/assets/favicon/*": "/" },
+		"src/assets/css/",
 		"src/assets/img/",
 		"src/assets/js/",
 		"src/robots.txt",
@@ -22,6 +23,9 @@ export default function (eleventyConfig) {
 	// Add local filters and shortcodes
 	eleventyConfig.addPlugin(filters);
 	eleventyConfig.addPlugin(shortcodes);
+	// While a shortcode, the singlePost shortcode uses getFilter
+	// to allow re-use of eleventy's built-in slugify filter, and
+	// as a result requires its own addition as a plugin
 	eleventyConfig.addPlugin(singlePost);
 
 	// Add & configure external plugins
