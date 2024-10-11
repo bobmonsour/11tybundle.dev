@@ -17872,5 +17872,17 @@
       "Performance",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "eblu",
+    "Link": "https://eblu.space/"
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "Pagaidu",
+    "Link": "https://pagaidu.github.io/"
   }
 ]
