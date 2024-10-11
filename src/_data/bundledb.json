@@ -17801,5 +17801,76 @@
     "Type": "site",
     "Title": "VPNCLEAR",
     "Link": "https://vpnclear.com/"
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "Galaxy Garden",
+    "Link": "https://blog.helenchong.omg.lol/en/"
+  },
+  {
+    "Issue": "59",
+    "Type": "blog post",
+    "Title": "11ty recursive _site error",
+    "Link": "https://johnskinnerportfolio.com/blog/11ty_recursive_site_error/index.html",
+    "Date": "2024-10-09",
+    "Author": "John Skiles Skinner",
+    "Categories": [
+      "Debugging"
+    ]
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "Sam Feldstein's Notebook",
+    "Link": "https://notebook.samfeldstein.xyz/"
+  },
+  {
+    "Issue": "59",
+    "Type": "site",
+    "Title": "Prairie Rose Arena",
+    "Link": "https://prairierosearena.com/"
+  },
+  {
+    "Issue": "59",
+    "Type": "blog post",
+    "Title": "Digital Notebook - Project Notes",
+    "Link": "https://notebook.samfeldstein.xyz/notes/digital-notebook-project-notes/",
+    "Date": "2024-10-10",
+    "Author": "Sam Feldstein",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "59",
+    "Type": "blog post",
+    "Title": "Private Notes in Foam and Eleventy",
+    "Link": "https://notebook.samfeldstein.xyz/notes/private-notes-in-foam-and-eleventy/",
+    "Date": "2024-10-10",
+    "Author": "Sam Feldstein",
+    "Categories": [
+      "Drafts",
+      "Front Matter",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "59",
+    "Type": "blog post",
+    "Title": "Prairie Rose Arena - Project Notes",
+    "Link": "https://notebook.samfeldstein.xyz/notes/prairie-rose-arena-notes/",
+    "Date": "2024-10-10",
+    "Author": "Sam Feldstein",
+    "Categories": [
+      "CMS",
+      "Deployment",
+      "How to...",
+      "Images",
+      "Performance",
+      "Why Eleventy?"
+    ]
   }
 ]
