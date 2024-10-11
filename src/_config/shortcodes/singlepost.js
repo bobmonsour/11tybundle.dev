@@ -85,7 +85,7 @@ export default function (eleventyConfig) {
 					<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
-					<p class="bundleitem-dateline"><a href="/authors/${authorSlug}/">by ${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
+					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
 					<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
 		}
