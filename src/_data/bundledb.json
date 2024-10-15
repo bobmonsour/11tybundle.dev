@@ -17902,5 +17902,17 @@
     "Type": "site",
     "Title": "peaceful.social",
     "Link": "https://www.peaceful.social/"
+  },
+  {
+    "Issue": "59",
+    "Type": "blog post",
+    "Title": "11ty upgrading node in netlify",
+    "Link": "https://www.simoncox.com/shorts/2024-10-15-11ty-upgrading-node-in-netlify/",
+    "Date": "2024-10-15",
+    "Author": "Simon Cox",
+    "Categories": [
+      "Debugging",
+      "Deployment"
+    ]
   }
 ]
