@@ -17914,5 +17914,36 @@
       "Debugging",
       "Deployment"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Resources For Jazz Guitar",
+    "Link": "https://resourcesforjazzguitar.com/"
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Evan's Cool Website",
+    "Link": "https://evrowe.com/"
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Static.Quest",
+    "Link": "https://static.quest/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "A Versatile Markdown Shortcode for Eleventy",
+    "Link": "https://css-irl.info/a-versatile-markdown-shortcode-for-eleventy/",
+    "Date": "2024-10-18",
+    "Author": "Michelle Barker",
+    "Categories": [
+      "How to...",
+      "Markdown",
+      "Shortcodes"
+    ]
   }
 ]
