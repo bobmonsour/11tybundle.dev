@@ -17945,5 +17945,16 @@
       "Markdown",
       "Shortcodes"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Eleventy (software) is now on Wikipedia",
+    "Link": "https://www.11ty.dev/blog/wikipedia/",
+    "Date": "2024-10-17",
+    "Author": "11ty",
+    "Categories": [
+      "From the Source"
+    ]
   }
 ]
