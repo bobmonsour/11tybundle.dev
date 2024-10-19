@@ -17956,5 +17956,54 @@
     "Categories": [
       "From the Source"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "The Best And Worst Parts Of Eleventy (Now In v3)—Web Unleashed 2024",
+    "Link": "https://www.zachleat.com/web/best-and-worst-of-eleventy/",
+    "Date": "2024-10-15",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "From the Source"
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.0-alpha.2",
+    "Date": "2024-10-17"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Using Coolify for deploying 11ty",
+    "Link": "https://lewisdale.dev/post/using-coolify-for-deploying-11ty/",
+    "Date": "2024-10-19",
+    "Author": "Lewis Dale",
+    "Categories": [
+      "Deployment",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Rob O'Leary Demos",
+    "Link": "https://www.roboleary.net/demos/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "11ty and Ghost",
+    "Link": "https://alextheward.com/posts/11ty-and-ghost/",
+    "Date": "2024-10-15",
+    "Author": "Alex Ward",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Why Eleventy?"
+    ]
   }
 ]
