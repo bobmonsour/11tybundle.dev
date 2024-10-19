@@ -18005,5 +18005,29 @@
       "CMS",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Building a Blog with Eleventy (blind, any%)",
+    "Link": "https://blog.sebin-nyshkim.net/posts/building-a-blog-with-eleventy-blind-any/",
+    "Date": "2024-10-19",
+    "Author": "Sebin Nyshkim",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "Collections",
+      "Configuration",
+      "Data Cascade",
+      "Filters",
+      "Getting Started",
+      "Global Data",
+      "Layouts",
+      "Markdown",
+      "Navigation",
+      "Pagination",
+      "Plugins",
+      "Shortcodes"
+    ]
   }
 ]
