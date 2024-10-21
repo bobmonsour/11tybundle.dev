@@ -18029,5 +18029,22 @@
       "Plugins",
       "Shortcodes"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Data Bene",
+    "Link": "https://www.data-bene.io/en/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Upgrading 11ty to v3",
+    "Link": "https://claytonerrington.com/blog/upgrading-eleventy/",
+    "Date": "2024-10-21",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Upgrading"
+    ]
   }
 ]
