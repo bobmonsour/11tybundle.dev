@@ -18046,5 +18046,18 @@
     "Categories": [
       "Upgrading"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Dynamic pages with 11ty and Cloudflare workers",
+    "Link": "https://coryd.dev/posts/2024/dynamic-pages-with-11ty-and-cloudflare-workers/",
+    "Date": "2024-10-22",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
