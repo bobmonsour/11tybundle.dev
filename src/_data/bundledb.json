@@ -1001,28 +1001,6 @@
   {
     "Issue": 5,
     "Type": "blog post",
-    "Title": "Static Site Generators: from Hugo to Eleventy and Parcel",
-    "Link": "https://www.vseventer.com/static-site-generators-from-hugo-to-eleventy-and-parcel/",
-    "Date": "2019-12-22",
-    "Author": "Mark van Seventer",
-    "Categories": [
-      "Migrating to Eleventy"
-    ]
-  },
-  {
-    "Issue": 5,
-    "Type": "blog post",
-    "Title": "Static Site Generators: Eleventy and webpack (Part 2)",
-    "Link": "https://www.vseventer.com/static-site-generators-eleventy-and-webpack-part-2/",
-    "Date": "2020-05-09",
-    "Author": "Mark van Seventer",
-    "Categories": [
-      "Migrating to Eleventy"
-    ]
-  },
-  {
-    "Issue": 5,
-    "Type": "blog post",
     "Title": "Moving from WordPress to Eleventy",
     "Link": "https://www.mattnortham.com/blog/2020/moving-from-wordpress-to-eleventy/",
     "Date": "2020-06-30",
@@ -5473,30 +5451,6 @@
     "Categories": [
       "CSS/Sass",
       "Configuration"
-    ]
-  },
-  {
-    "Issue": "",
-    "Type": "blog post",
-    "Title": "Eleventy plugin for generating social images (using SVG)",
-    "Link": "https://abhi.page/notes/11ty-plugin-generate-social-images/",
-    "Date": "2021-01-28",
-    "Author": "Kumar Abhishek",
-    "Categories": [
-      "Plugins",
-      "How to..."
-    ]
-  },
-  {
-    "Issue": "",
-    "Type": "blog post",
-    "Title": "Eleventy plugin for efficient CodePen embeds",
-    "Link": "https://abhi.page/notes/11ty-plugin-codepen/",
-    "Date": "2021-01-24",
-    "Author": "Kumar Abhishek",
-    "Categories": [
-      "How to...",
-      "Plugins"
     ]
   },
   {
@@ -15721,18 +15675,6 @@
   {
     "Issue": "49",
     "Type": "blog post",
-    "Title": "Webmentions and 11ty",
-    "Link": "https://stuffandthings.lol/2024-06-19_webmentions/",
-    "Date": "2024-06-19",
-    "Author": "Jason Moser",
-    "Categories": [
-      "How to...",
-      "Webmentions"
-    ]
-  },
-  {
-    "Issue": "49",
-    "Type": "blog post",
     "Title": "Category and genre pages return",
     "Link": "https://arestelle.net/2024/06/20/category-and-genre-pages-return/",
     "Date": "2024-06-20",
@@ -18066,5 +18008,25 @@
     "Title": "eleventy-fetch v5.0.0-beta.2",
     "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.2",
     "Date": "2024-10-22"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Responsive, Self-hosted Images for Your Eleventy Blog",
+    "Link": "https://blog.sebin-nyshkim.net/posts/responsive-self-hosted-images-for-your-eleventy-blog/",
+    "Date": "2024-10-22",
+    "Author": "Sebin Nyshkim",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "Images"
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0-beta.3",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.3",
+    "Date": "2024-10-23"
   }
 ]
