@@ -18028,5 +18028,68 @@
     "Title": "Eleventy Fetch v5.0.0-beta.3",
     "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.3",
     "Date": "2024-10-23"
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "The Bored Horse",
+    "Link": "https://bored.horse/"
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Nathan Upchurch",
+    "Link": "https://nathanupchurch.com/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "11ty meetup: Tracking and displaying music history",
+    "Link": "https://coryd.dev/posts/2024/11ty-meetup-tracking-and-displaying-music-history/",
+    "Date": "2024-10-23",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Automatically generating social share images using Cloudinary with Sia Karamalegos",
+    "Link": "https://www.youtube.com/watch?v=0pvqLW09D38",
+    "Date": "2024-10-23",
+    "Author": "Sia Karamalegos",
+    "Categories": [
+      "How to...",
+      "Images",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Tracking and displaying music history in 11ty with Cory Dransfeldt",
+    "Link": "https://www.youtube.com/watch?v=owhVOLYqNpw",
+    "Date": "2024-10-23",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Ergonomic Static Site Blogging",
+    "Link": "https://alextheward.com/posts/ergonomic-static-site-blogging/",
+    "Date": "2024-10-23",
+    "Author": "Alex Ward",
+    "Categories": [
+      "Blogging",
+      "CMS"
+    ]
   }
 ]
