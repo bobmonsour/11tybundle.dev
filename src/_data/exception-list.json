@@ -28,5 +28,10 @@
 		"url": "https://www.adamdj.tel",
 		"rssFeed": "https://www.adamdjbrett.com/feed.xml",
 		"reason": "error fetching description or RSS feed"
+	},
+	{
+		"url": "https://coryd.dev",
+		"rssFeed": "https://coryd.dev/feeds/posts",
+		"reason": "multiple feeds with first one not being posts"
 	}
 ]

@@ -18091,5 +18091,24 @@
       "Blogging",
       "CMS"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Trevor Saint",
+    "Link": "https://trevorsaint.uk/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Dynamic social share images using Cloudinary",
+    "Link": "https://sia.codes/posts/social-share-images-using-cloudinary/",
+    "Date": "2024-10-24",
+    "Author": "Sia Karamalegos",
+    "Categories": [
+      "Images",
+      "Shortcodes",
+      "Social Media"
+    ]
   }
 ]
