@@ -14,7 +14,9 @@ const rssLinkCache = {};
 // in the site's head element. Cache the result to avoid repeated fetches.
 // Skip this determination of the url is in the exception list.
 export const getRSSlink = async (siteOrigin) => {
-	const exceptionItem = exceptionList.find((item) => item.url === siteOrigin);
+	const exceptionItem = exceptionList.find(
+		(item) => item.url === siteOrigin && item.reason === "RSS"
+	);
 	// console.log("RSS exception: " + siteOrigin);
 	if (exceptionItem) {
 		rssLinkCache[siteOrigin] = exceptionItem.rssFeed || "";

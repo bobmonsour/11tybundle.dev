@@ -41,20 +41,25 @@ export const getDescription = async (link) => {
 		descriptionCache[link] = "Medium post";
 		return descriptionCache[link];
 	}
+
 	// // Check for known urls that have issues when fetching
 	// // the description (as seen in the Netlify build logs)
-	// const url = new URL(link);
-	// const siteUrl = url.origin;
-	// if (exceptionList.some((item) => item.url === siteUrl)) {
-	// 	// console.log("Description exception: " + siteUrl);
-	// 	descriptionCache[link] = "";
-	// 	return descriptionCache[link];
-	// }
+	const url = new URL(link);
+	const siteUrl = url.origin;
+	if (
+		exceptionList.some(
+			(item) => item.url === siteUrl && item.reason === "description"
+		)
+	) {
+		// console.log("Description exception: " + siteUrl);
+		descriptionCache[link] = "";
+		return descriptionCache[link];
+	}
 
-	// if (exceptionList.includes(link)) {
-	// 	descriptionCache[link] = "";
-	// 	return descriptionCache[link];
-	// }
+	if (exceptionList.includes(link)) {
+		descriptionCache[link] = "";
+		return descriptionCache[link];
+	}
 	try {
 		let htmlcontent = await EleventyFetch(link, {
 			directory: ".cache",

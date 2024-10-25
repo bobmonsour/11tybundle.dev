@@ -2,36 +2,36 @@
 	{
 		"url": "https://www.alexhyett.com",
 		"rssFeed": "https://www.alexhyett.com/feed/feed.atom.xml",
-		"reason": "error fetching description and/oror RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://box464.com",
 		"rssFeed": "https://box464.com/feed.xml",
-		"reason": "error fetching description or RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://blog.kaan.fyi",
 		"rssFeed": "https://blog.kaan.fyi/feed.xml",
-		"reason": "error fetching description or RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://nicolas-hoizey.com",
 		"rssFeed": "https://nicolas-hoizey.com/feeds/",
-		"reason": "error fetching description or RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://saneef.com",
 		"rssFeed": "https://saneef.com/feed.xml",
-		"reason": "error fetching description or RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://www.adamdj.tel",
 		"rssFeed": "https://www.adamdjbrett.com/feed.xml",
-		"reason": "error fetching description or RSS feed"
+		"reason": "description"
 	},
 	{
 		"url": "https://coryd.dev",
 		"rssFeed": "https://coryd.dev/feeds/posts",
-		"reason": "multiple feeds with first one not being posts"
+		"reason": "RSS"
 	}
 ]
