@@ -18116,5 +18116,12 @@
     "Type": "site",
     "Title": "Daniel Ortega Moral",
     "Link": "https://www.danielortegamoral.com/"
+  },
+  {
+    "Issue": "60",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0-beta.4",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.4",
+    "Date": "2024-10-25"
   }
 ]
