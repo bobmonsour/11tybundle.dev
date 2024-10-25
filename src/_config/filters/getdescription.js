@@ -48,7 +48,7 @@ export const getDescription = async (link) => {
 	const siteUrl = url.origin;
 	if (
 		exceptionList.some(
-			(item) => item.url === siteUrl && item.reason === "description"
+			(item) => item.url === siteUrl && item.descriptionFail === "true"
 		)
 	) {
 		// console.log("Description exception: " + siteUrl);
