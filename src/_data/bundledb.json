@@ -18123,5 +18123,21 @@
     "Title": "Eleventy Fetch v5.0.0-beta.4",
     "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.4",
     "Date": "2024-10-25"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Open Graph Metadata and Images in Eleventy Made Easy",
+    "Link": "https://blog.sebin-nyshkim.net/posts/open-graph-metadata-and-images-in-eleventy-made-easy/",
+    "Date": "2024-10-26",
+    "Author": "Sebin Nyshkim",
+    "Categories": [
+      "CSS/Sass",
+      "Front Matter",
+      "Global Data",
+      "How to...",
+      "Images",
+      "Plugins"
+    ]
   }
 ]
