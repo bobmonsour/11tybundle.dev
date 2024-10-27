@@ -18139,5 +18139,30 @@
       "Images",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Alan Quirk Design",
+    "Link": "https://alanquirk.com/"
+  },
+  {
+    "Issue": "60",
+    "Type": "site",
+    "Title": "Sam Smith",
+    "Link": "https://samsmith.uk/"
+  },
+  {
+    "Issue": "60",
+    "Type": "blog post",
+    "Title": "Building an album releases calendar subscription",
+    "Link": "https://coryd.dev/posts/2024/building-an-album-releases-calendar-subscription/",
+    "Date": "2024-10-27",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Collections",
+      "Dates",
+      "How to..."
+    ]
   }
 ]
