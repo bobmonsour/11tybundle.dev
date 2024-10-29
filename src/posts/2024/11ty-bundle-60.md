@@ -22,7 +22,7 @@ _We're heading out of the country for a few weeks. We depart on US Election Day.
 
 **Migrate from WP to 11ty.** New in the 11ty docs is a page on [Migrating from WordPress to Eleventy](https://www.11ty.dev/docs/migrate/wordpress/). If you're looking to make the switch, this can get you started.
 
-**A fetch refresh.** There's a new [eleventy-fetch plugin](https://github.com/11ty/eleventy-fetch/releases). That links to release notes for all the recent releases. beta.2 has most of the changes, but we're up to beta.4 as some bugs were found and fixed.
+**A fetch refresh.** There's a new release of the [eleventy-fetch plugin](https://github.com/11ty/eleventy-fetch/releases). That links to release notes for all the recent releases. beta.2 has most of the changes, but we're up to beta.4 as some bugs were found and fixed.
 
 **11ty arrives in Wikipedia.** Just when you thought Wikipedia had everything it could possibly have, [Eleventy has entered the chat](<https://en.wikipedia.org/wiki/Eleventy_(software)>).
 
