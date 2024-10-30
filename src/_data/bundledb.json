@@ -18176,5 +18176,35 @@
     "Type": "site",
     "Title": "Fronteers",
     "Link": "https://www.fronteers.nl/"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Migrating from WordPress.com to self-hosted Eleventy via Ghost",
+    "Link": "https://mat.tl/blog/2024/10/29/migrating-from-wordpress-com-to-self-hosted-eleventy-via-ghost/",
+    "Date": "2024-10-30",
+    "Author": "Dr. Matt Lee",
+    "Categories": [
+      "CSS/Sass",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Dr. Matt Lee (mattl)",
+    "Link": "https://mat.tl/blog/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Mag Pi",
+    "Link": "https://magpi.netlify.app/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Paloma Kop",
+    "Link": "https://palomakop.tv/"
   }
 ]
