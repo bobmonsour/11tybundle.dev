@@ -18206,5 +18206,24 @@
     "Type": "site",
     "Title": "Paloma Kop",
     "Link": "https://palomakop.tv/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Jeremias Menichelli",
+    "Link": "https://jeremias.codes/"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Share to the Fediverse with ShareOpenly",
+    "Link": "https://hyperborea.org/tech-tips/share-openly/",
+    "Date": "2024-10-30",
+    "Author": "Kelson Vibber",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Social Media"
+    ]
   }
 ]
