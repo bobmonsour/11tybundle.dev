@@ -18225,5 +18225,21 @@
       "How to...",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Eleventy (11ty) year, year-month, and year-monty-day indexes",
+    "Link": "https://blog.tomayac.com/2024/11/02/eleventy-11ty-year-year-month-and-year-month-day-indexes/",
+    "Date": "2024-11-02",
+    "Author": "Thomas Steiner",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Dates",
+      "Filters",
+      "How to...",
+      "Pagination"
+    ]
   }
 ]
