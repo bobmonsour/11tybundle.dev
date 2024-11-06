@@ -18291,5 +18291,23 @@
     "Type": "site",
     "Title": "Adam Chamberlin",
     "Link": "https://adamchamberlin.info/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Dave Henson",
+    "Link": "https://dwhenson.com/"
+  },
+  {
+    "Issue": "",
+    "Type": "site",
+    "Title": "Swell Diary",
+    "Link": "https://swelldiary.com/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "astronomy picture of the day",
+    "Link": "https://www.astronomy-picture.ir/"
   }
 ]
