@@ -18309,5 +18309,33 @@
     "Type": "site",
     "Title": "astronomy picture of the day",
     "Link": "https://www.astronomy-picture.ir/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Nooshu",
+    "Link": "https://nooshu.com/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Gustav Lindqvist",
+    "Link": "https://gustavlindqvist.se/"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Adding Cooklang Support to Eleventy Three Ways",
+    "Link": "https://rknight.me/blog/adding-cooklang-support-to-eleventy-two-ways/",
+    "Date": "2024-11-07",
+    "Author": "Robb Knight",
+    "Categories": [
+      "Collections",
+      "Data Cascade",
+      "Filters",
+      "Front Matter",
+      "How to...",
+      "Layouts"
+    ]
   }
 ]
