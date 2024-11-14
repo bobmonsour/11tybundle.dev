@@ -18337,5 +18337,85 @@
       "How to...",
       "Layouts"
     ]
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0-beta.5",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.5",
+    "Date": "2024-11-09"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v6.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v6.0.0-alpha.1",
+    "Date": "2024-11-07"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "A Life in Badges",
+    "Link": "https://alifeinbadges.little-paws.net/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Dipanjan Biswas",
+    "Link": "https://dipanjanbiswas.design/"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite-v5.0.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.1",
+    "Date": "2024-11-09"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite-v6.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v6.0.0-alpha.2",
+    "Date": "2024-11-09"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v5.0.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v5.0.2",
+    "Date": "2024-11-11"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "eleventy-plugin-vite v6.0.0-alpha.3",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v6.0.0-alpha.3",
+    "Date": "2024-11-11"
+  },
+  {
+    "Issue": "",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0-beta.6",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.6",
+    "Date": "2024-11-13"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0-beta.7",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0-beta.7",
+    "Date": "2024-11-13"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Kathryn Janeway",
+    "Link": "https://cover.000000076.xyz/"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "AIcons",
+    "Link": "https://alprado.com/icons/"
   }
 ]
