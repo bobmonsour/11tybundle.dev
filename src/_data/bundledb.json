@@ -18534,5 +18534,12 @@
     "Type": "site",
     "Title": "Valentin Pratz",
     "Link": "https://valentinpratz.de/"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.0",
+    "Link": "https://github.com/11ty/eleventy-import#11tyimport",
+    "Date": "2024-11-16"
   }
 ]
