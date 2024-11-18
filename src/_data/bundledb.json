@@ -18541,5 +18541,32 @@
     "Title": "Eleventy Import v1.0.0",
     "Link": "https://github.com/11ty/eleventy-import#11tyimport",
     "Date": "2024-11-16"
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Hate Capitalism",
+    "Link": "https://hatecapitalism.com/"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.0",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.0",
+    "Date": "2024-11-16"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.1-beta.1",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.1-beta.1",
+    "Date": "2024-11-16"
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.1",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.1",
+    "Date": "2024-11-17"
   }
 ]
