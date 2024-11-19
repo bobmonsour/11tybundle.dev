@@ -18568,5 +18568,17 @@
     "Title": "Eleventy Fetch v5.0.1",
     "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.1",
     "Date": "2024-11-17"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "How to build static website with 11ty",
+    "Link": "https://www.htmlcenter.com/blog/how-to-build-static-website-with-11ty/",
+    "Date": "2024-11-17",
+    "Author": "ProDeveloper",
+    "Categories": [
+      "Blogging",
+      "Getting Started"
+    ]
   }
 ]
