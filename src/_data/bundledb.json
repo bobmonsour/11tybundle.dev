@@ -18604,5 +18604,21 @@
     "Type": "site",
     "Title": "playdate podcast",
     "Link": "https://podcast.play.date/"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "otes on Upgrading to Eleventy 3.0",
+    "Link": "https://chromamine.com/2024/11/notes-on-upgrading-to-eleventy-3.0/",
+    "Date": "2024-11-21",
+    "Author": "Harris Lapiroff",
+    "Categories": [
+      "CSS/Sass",
+      "Dates",
+      "Filters",
+      "Pagination",
+      "Permalinks",
+      "Upgrading"
+    ]
   }
 ]
