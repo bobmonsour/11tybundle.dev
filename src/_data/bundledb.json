@@ -18580,5 +18580,29 @@
       "Blogging",
       "Getting Started"
     ]
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "Matthew W. Thomas",
+    "Link": "https://www.matthewthom.as/"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Archiving your Twitter account with Eleventy",
+    "Link": "https://gfscott.com/blog/eleventy-twitter-archive/",
+    "Date": "2024-11-20",
+    "Author": "Graham F. Scott",
+    "Categories": [
+      "How to...",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "61",
+    "Type": "site",
+    "Title": "playdate podcast",
+    "Link": "https://podcast.play.date/"
   }
 ]
