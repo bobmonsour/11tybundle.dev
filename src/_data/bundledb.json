@@ -15042,12 +15042,5 @@
 		"Type": "site",
 		"Title": "MovieCast",
 		"Link": "https://www.moviecast.app/"
-	},
-	{
-		"Issue": "61",
-		"Type": "starter",
-		"Title": "ZeroPoint",
-		"Link": "https://github.com/MWDelaney/ZeroPoint/",
-		"Demo": "https://getzeropoint.com/"
 	}
 ]
