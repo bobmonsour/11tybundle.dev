@@ -18634,5 +18634,27 @@
     "Title": "Eleventy Import v1.0.2",
     "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.2",
     "Date": "2024-11-21"
+  },
+  {
+    "Issue": "61",
+    "Type": "blog post",
+    "Title": "Build static website with 11ty. Part 2",
+    "Link": "https://www.htmlcenter.com/blog/build-static-website-with-11ty-part-2/",
+    "Date": "2024-11-21",
+    "Author": "ProDeveloper",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "Configuration",
+      "Getting Started",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "61",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.3",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.3",
+    "Date": "2024-11-22"
   }
 ]
