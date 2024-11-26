@@ -38,6 +38,8 @@ _4. Enjoy!_
 
 **Pack11ty at v3.0.0.** Nicolas Hoizey has updated his opinionated Eleventy template to v3.0.0. It's quite feature-rich. [Check out the docs](https://pack11ty.dev/documentation/).
 
+**One more thing...speeding up local build times.** I recently wrote a [short blog post](https://www.bobmonsour.com/posts/fast-as-hell/) about how I updated my personal site by removing the shortcode related to the eleventy-img plugin and making use of the new-in-v5 of the plugin Transform capability. I don't think that the impact on local build times has been highlighted well enough. In short, when you use the Transform and you're developing locally, images are not processed until requested by the browser. This deferred processing is handled in the Eleventy dev server. It reduced my local build time from 15 seconds to about 1 second. If you want a deeper dive, [Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/) has an [excellent post](https://www.aleksandrhovhannisyan.com/blog/eleventy-image-transform/) about it. Also, [check out the docs](https://www.11ty.dev/docs/plugins/image/#eleventy-transform). If you have an image-heavy site, you won't regret the time spent to integrate this approach. Your build times will thank you.
+
 I think that's more than a mouthful for this issue.
 
 Until next time...
