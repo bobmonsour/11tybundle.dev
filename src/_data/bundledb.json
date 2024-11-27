@@ -15045,5 +15045,14 @@
 		"Date": "2024-11-25",
 		"Author": "Jérôme Coupé",
 		"Categories": ["Getting Started"]
+	},
+	{
+		"Issue": "62",
+		"Type": "blog post",
+		"Title": "Let's Build a Blog Like it's 1990",
+		"Link": "https://www.youtube.com/watch?v=t5lfwd5KScM#t=14m47s",
+		"Date": "2024-11-07",
+		"Author": "Raymond Camden",
+		"Categories": ["Blogging", "Getting Started", "YouTube"]
 	}
 ]
