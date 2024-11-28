@@ -18689,5 +18689,17 @@
     "Title": "Eleventy Import v1.0.4",
     "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.4",
     "Date": "2024-11-27"
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "A tweak to how I use Pagefind",
+    "Link": "https://www.bobmonsour.com/microblog/a-tweak-to-how-i-use-pagefind/",
+    "Date": "2024-11-27",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "How to...",
+      "Search"
+    ]
   }
 ]
