@@ -18701,5 +18701,29 @@
       "How to...",
       "Search"
     ]
+  },
+  {
+    "Issue": "",
+    "Type": "site",
+    "Title": "AaronMorey.com",
+    "Link": "https://aaronmorey.com/"
+  },
+  {
+    "Issue": "62",
+    "Type": "site",
+    "Title": "V8",
+    "Link": "https://v8.dev/"
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "Static website hosting with Cloudflare pages",
+    "Link": "https://www.htmlcenter.com/blog/static-website-hosting-with-cloudflare-pages/",
+    "Date": "2024-11-29",
+    "Author": "Saulius Zukauskas",
+    "Categories": [
+      "Deployment",
+      "How to..."
+    ]
   }
 ]
