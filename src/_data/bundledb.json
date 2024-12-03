@@ -18725,5 +18725,50 @@
       "Deployment",
       "How to..."
     ]
+  },
+  {
+    "Issue": "62",
+    "Type": "site",
+    "Title": "How to Build a Website",
+    "Link": "https://aramzs.github.io/build-a-website/#/"
+  },
+  {
+    "Issue": "62",
+    "Type": "site",
+    "Title": "web chronicle",
+    "Link": "https://webchronicle.dev/"
+  },
+  {
+    "Issue": "62",
+    "Type": "site",
+    "Title": "minimo",
+    "Link": "https://minimo.io/"
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "Migrating a +800 pages affiliate Wordpress site to Eleventy",
+    "Link": "https://minimo.io/blog/migrating-a-800-pages-wordpress-site-to-eleventy/",
+    "Date": "2024-04-04",
+    "Author": "Nicolás Erramuspe",
+    "Categories": [
+      "Internationalization",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "Adding Image Galleries to My Website",
+    "Link": "https://nathanupchurch.com/blog/galleries/",
+    "Date": "2024-12-02",
+    "Author": "Nathan Upchurch",
+    "Categories": [
+      "Collections",
+      "Filters",
+      "Image Galleries",
+      "Layouts",
+      "Pagination"
+    ]
   }
 ]
