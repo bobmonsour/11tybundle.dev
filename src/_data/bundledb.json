@@ -18776,5 +18776,19 @@
     "Type": "site",
     "Title": "Fredrik Bergqvist",
     "Link": "https://www.bergqvist.it/"
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "Going all in with 'native' markdown",
+    "Link": "https://www.bobmonsour.com/posts/going-all-in-with-native-markdown/",
+    "Date": "2024-12-03",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Markdown"
+    ]
   }
 ]
