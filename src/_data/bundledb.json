@@ -19031,5 +19031,25 @@
     "Type": "site",
     "Title": "Equk's Blog",
     "Link": "https://equk.co.uk/"
+  },
+  {
+    "Issue": "62",
+    "Type": "site",
+    "Title": "Fastmail Blog",
+    "Link": "https://www.fastmail.com/blog/"
+  },
+  {
+    "Issue": "62",
+    "Type": "blog post",
+    "Title": "Dec 9: Building a blog",
+    "Link": "https://www.fastmail.com/blog/building-a-blog/",
+    "Date": "2024-12-08",
+    "Author": "Callum Skeet",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Configuration",
+      "Deployment"
+    ]
   }
 ]
