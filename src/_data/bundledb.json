@@ -19083,5 +19083,18 @@
     "Type": "site",
     "Title": "thisguise",
     "Link": "https://thisguise.wtf/"
+  },
+  {
+    "Issue": "63",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.7",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.7",
+    "Date": "2024-12-10"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Francis Beaudet",
+    "Link": "https://francisbeaudet.com/"
   }
 ]

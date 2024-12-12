@@ -1,8 +1,9 @@
 {# pagefind search box #}
 <script src="/pagefind/pagefind-ui.js" defer></script>
-<div id="search"></div>
+<label for="search" class="visually-hidden-search">Search</label>
+<div id="search" class="content" aria-live="polite" type="search"></div>
 <script>
 		window.addEventListener('DOMContentLoaded', (event) => {
-				new PagefindUI({ element: "#search", translations: { placeholder: "Search the entire site",zero_results: "Count not find [SEARCH_TERM]" },showSubResults: true, showImages: false, autofocus: true, showEmptyFilters: false, showSubResults: true, excerptLength: 100, pageSize: 10 });
+				new PagefindUI({ element: "#search", translations: { placeholder: "Search the entire site",zero_results: "Count not find [SEARCH_TERM]" },showSubResults: true, showImages: false, showEmptyFilters: false, showSubResults: true, excerptLength: 100, pageSize: 10 });
 		});
 </script>
