@@ -19130,5 +19130,18 @@
       "Nunjucks/Macros",
       "Shortcodes"
     ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Generating Custom OpenGraph Cards with Gatsby and the 11ty Screenshot Service",
+    "Link": "https://steele.blue/gatsby-opengraph-11ty-screenshots/",
+    "Date": "2023-03-13",
+    "Author": "Matt Steele",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
   }
 ]
