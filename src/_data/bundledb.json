@@ -19143,5 +19143,11 @@
       "Images",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Zylla News",
+    "Link": "https://zyllastart.vercel.app/"
   }
 ]
