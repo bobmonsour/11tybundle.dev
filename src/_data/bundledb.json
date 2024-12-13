@@ -19096,5 +19096,39 @@
     "Type": "site",
     "Title": "Francis Beaudet",
     "Link": "https://francisbeaudet.com/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "@tthew",
+    "Link": "https://ma.tthew.berlin/"
+  },
+  {
+    "Issue": "63",
+    "Type": "blog post",
+    "Title": "From Gatsby to Eleventy",
+    "Link": "https://steele.blue/gatsby-to-eleventy/",
+    "Date": "2024-11-25",
+    "Author": "Matt Steele",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Performance",
+      "WebC",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "63",
+    "Type": "blog post",
+    "Title": "Adding Random Content Using Eleventy",
+    "Link": "https://www.alwaystwisted.com/articles/random-content-using-eleventy",
+    "Date": "2024-12-13",
+    "Author": "Stu Robson",
+    "Categories": [
+      "Data Cascade",
+      "How to...",
+      "Nunjucks/Macros",
+      "Shortcodes"
+    ]
   }
 ]
