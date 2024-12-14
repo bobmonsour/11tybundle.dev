@@ -19149,5 +19149,72 @@
     "Type": "site",
     "Title": "Zylla News",
     "Link": "https://zyllastart.vercel.app/"
+  },
+  {
+    "Issue": "63",
+    "Type": "blog post",
+    "Title": "11ty Git Commit Messages",
+    "Link": "https://www.simoncox.com/shorts/2024-12-14-git-commit-messages/",
+    "Date": "2024-12-14",
+    "Author": "Simon Cox",
+    "Categories": [
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "63",
+    "Type": "release",
+    "Title": "eleventy-activity-feed",
+    "Link": "https://github.com/11ty/eleventy-activity-feed/releases/tag/v2.0.0",
+    "Date": "2024-12-13"
+  },
+  {
+    "Issue": "63",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.8",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.8",
+    "Date": "2024-12-13"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Virtual Comedy Cafe",
+    "Link": "https://www.virtualcomedycafe.com/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Input 4 RelCFP",
+    "Link": "https://input.relcfp.com/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Theology RSS Reeder",
+    "Link": "https://theological.me/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Doctrine of DIscovery",
+    "Link": "https://www.dofd.info/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Amerian Indian Law Alliance",
+    "Link": "https://aila.social/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "76 Oranges",
+    "Link": "https://000000076.xyz/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Stephanie Wyatt",
+    "Link": "https://www.stephaniewyatt.tel/"
   }
 ]
