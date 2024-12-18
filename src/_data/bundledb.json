@@ -19234,5 +19234,11 @@
       "Migrating to Eleventy",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "The Misplay",
+    "Link": "https://themisplay.com/"
   }
 ]

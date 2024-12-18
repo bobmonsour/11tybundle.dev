@@ -33,3 +33,13 @@ package = "netlify-plugin-cache"
   from = "https://11tybundle.dev/categories/11ty-conference/"
   to = "https://11tybundle.dev/categories/11ty-conference-2024/"
   status = 301
+
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    cache-control = "max-age=7200"
+
+[[headers]]
+  for = "/firehosefeed.xml"
+  [headers.values]
+    cache-control = "max-age=7200"
