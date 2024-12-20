@@ -19254,5 +19254,18 @@
     "Title": "Eleventy v3.0.1-alpha.1",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.1",
     "Date": "2024-12-20"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "heavy dot rocks",
+    "Link": "https://heavy.rocks/"
+  },
+  {
+    "Issue": "63",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.0",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.0",
+    "Date": "2024-12-20"
   }
 ]
