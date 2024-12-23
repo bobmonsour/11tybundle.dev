@@ -19267,5 +19267,23 @@
     "Title": "Eleventy Utils v2.0.0",
     "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.0",
     "Date": "2024-12-20"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Award Winning Books",
+    "Link": "https://www.award-winning-books.com/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Home Zoo",
+    "Link": "https://www.homezoo.org/"
+  },
+  {
+    "Issue": "63",
+    "Type": "site",
+    "Title": "Campaign URL Builder",
+    "Link": "https://campaign-url-builder.com/"
   }
 ]
