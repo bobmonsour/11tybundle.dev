@@ -19285,5 +19285,42 @@
     "Type": "site",
     "Title": "Campaign URL Builder",
     "Link": "https://campaign-url-builder.com/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "OC Webring",
+    "Link": "https://tofutush.github.io/oc-webring/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "The Iron Ragdoll",
+    "Link": "https://tofutush.github.io/The-Iron-Ragdoll/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "11ty WebC If Statements and Attributes",
+    "Link": "https://kpwags.com/posts/2024/12/24/11ty-webc-if-statements-and-attributes/",
+    "Date": "2024-12-24",
+    "Author": "Keith Wagner",
+    "Categories": [
+      "How to...",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "HTTP 301 redirects in Eleventy",
+    "Link": "https://danburzo.ro/notes/eleventy-301-redirects/",
+    "Date": "2024-12-24",
+    "Author": "Dan Burzo",
+    "Categories": [
+      "Collections",
+      "Deployment",
+      "How to..."
+    ]
   }
 ]
