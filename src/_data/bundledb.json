@@ -19322,5 +19322,29 @@
       "Deployment",
       "How to..."
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Will Simpson's Notes",
+    "Link": "https://willsimpson.netlify.app/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Priyanshu SInha",
+    "Link": "https://priyanshusinha.in/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Gregory Hammond",
+    "Link": "https://gregoryhammond.ca/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "How long since Robb watched Mean Girls?",
+    "Link": "https://meangirls.rknight.me/"
   }
 ]
