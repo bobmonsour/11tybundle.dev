@@ -19346,5 +19346,56 @@
     "Type": "site",
     "Title": "How long since Robb watched Mean Girls?",
     "Link": "https://meangirls.rknight.me/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Using 11ty to generate Open Graph images",
+    "Link": "https://www.pupismyname.com/articles/11ty-og-images/",
+    "Date": "2024-01-24",
+    "Author": "John Brooks",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Wrapping Eleventy Fetch in a Retry Function",
+    "Link": "https://www.pupismyname.com/articles/fetch-retry/",
+    "Date": "2023-07-06",
+    "Author": "John Brooks",
+    "Categories": [
+      "How to...",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "CSS workflow and cache busters in 11ty",
+    "Link": "https://www.pupismyname.com/articles/11ty-css-and-cache-busters/",
+    "Date": "2023-05-09",
+    "Author": "John Brooks",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Track data across builds in 11ty",
+    "Link": "https://www.pupismyname.com/articles/11ty-track-data-across-builds/",
+    "Date": "2022-12-06",
+    "Author": "John Brooks",
+    "Categories": [
+      "Global Data",
+      "How to..."
+    ]
   }
 ]
