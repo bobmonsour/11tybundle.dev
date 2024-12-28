@@ -19411,5 +19411,16 @@
       "Migrating to Eleventy",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "My Eleventy Sites",
+    "Link": "https://www.adamdjbrett.com/blog/2024-12-13-my-eleventy-sites/",
+    "Date": "2024-12-13",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "Why Eleventy?"
+    ]
   }
 ]
