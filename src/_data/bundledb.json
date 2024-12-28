@@ -19397,5 +19397,19 @@
       "Global Data",
       "How to..."
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Learning 11ty by adapting a Jekyll Template",
+    "Link": "https://www.adamdjbrett.com/blog/2024-12-27-learning-eleventy-by-adapting-jekyll/",
+    "Date": "2024-12-27",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "How to...",
+      "Markdown",
+      "Migrating to Eleventy",
+      "Plugins"
+    ]
   }
 ]
