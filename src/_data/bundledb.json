@@ -19422,5 +19422,11 @@
     "Categories": [
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Eddy",
+    "Link": "https://11ty-eddy.netlify.app/"
   }
 ]
