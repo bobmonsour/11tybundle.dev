@@ -19440,5 +19440,19 @@
     "Type": "site",
     "Title": "Terraza Stained Glass",
     "Link": "https://terrazastainedglass.com/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Eleventy 3 Migration",
+    "Link": "https://johnwargo.com/posts/2024/eleventy-3-migration/",
+    "Date": "2024-12-29",
+    "Author": "John M. Wargo",
+    "Categories": [
+      "Configuration",
+      "Debugging",
+      "Plugins",
+      "Upgrading"
+    ]
   }
 ]
