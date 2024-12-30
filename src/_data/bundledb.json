@@ -16802,20 +16802,6 @@
   {
     "Issue": "55",
     "Type": "blog post",
-    "Title": "Eleventy Lessons Learned",
-    "Link": "https://cascading.space/post/194/",
-    "Date": "2024-08-06",
-    "Author": "Cascade",
-    "Categories": [
-      "Blogging",
-      "Images",
-      "Remote Data",
-      "Social Media"
-    ]
-  },
-  {
-    "Issue": "55",
-    "Type": "blog post",
     "Title": "Migrating from Netlify to Cloudflare for AI bot protection",
     "Link": "https://sia.codes/posts/migrating-netlify-to-cloudflare/",
     "Date": "2024-08-06",
@@ -19427,6 +19413,20 @@
     "Categories": [
       "Configuration",
       "How to..."
+    ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "My Decap CMS setup with 11ty hosted on Cloudflare Pages",
+    "Link": "https://www.patrickgrey.co.uk/notes/2024-09-21-my-decap-cms-setup-with-11ty-hosted-on-cloudflare-pages/",
+    "Date": "2024-09-21",
+    "Author": "Patrick Grey",
+    "Categories": [
+      "CMS",
+      "Deployment",
+      "How to...",
+      "Images"
     ]
   }
 ]
