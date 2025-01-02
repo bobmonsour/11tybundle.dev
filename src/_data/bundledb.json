@@ -19428,5 +19428,44 @@
       "How to...",
       "Images"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Joseph Jude",
+    "Link": "https://www.jjude.com/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Just Becaws",
+    "Link": "https://justbecaws.neocities.org/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "KDL works great in eleventy",
+    "Link": "https://ollicle.com/2024/dec/31/11ty-kdl/",
+    "Date": "2024-12-31",
+    "Author": "Oliver Boermans",
+    "Categories": [
+      "Configuration",
+      "Front Matter",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "11ty Clean blog and cleaner repository",
+    "Link": "https://www.adamdjbrett.com/blog/2025-01-01-11ty-clean-blog-clean-repo/",
+    "Date": "2025-01-01",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "Blogging",
+      "Configuration"
+    ]
   }
 ]
