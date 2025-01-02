@@ -19467,5 +19467,19 @@
       "Blogging",
       "Configuration"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "How I built the Books page",
+    "Link": "https://bobmonsour.com/blog/building-the-book-page/",
+    "Date": "2025-01-02",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "Images",
+      "Remote Data"
+    ]
   }
 ]
