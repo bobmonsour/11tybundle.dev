@@ -19500,5 +19500,12 @@
     "Type": "site",
     "Title": "Tedium",
     "Link": "https://tedium.co/"
+  },
+  {
+    "Issue": "64",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.2-beta.2",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.2-beta.2",
+    "Date": "2025-01-03"
   }
 ]
