@@ -19507,5 +19507,24 @@
     "Title": "Eleventy Fetch v5.0.2-beta.2",
     "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.2-beta.2",
     "Date": "2025-01-03"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "(re)think",
+    "Link": "https://rethink.wtf/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "danny skelley",
+    "Link": "https://dannyskelley.com/"
+  },
+  {
+    "Issue": "64",
+    "Type": "release",
+    "Title": "Prerelease: Eleventy Image v6.0.0-beta.1",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.1",
+    "Date": "2025-01-04"
   }
 ]
