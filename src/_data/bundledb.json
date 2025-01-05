@@ -19526,5 +19526,25 @@
     "Title": "Prerelease: Eleventy Image v6.0.0-beta.1",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.1",
     "Date": "2025-01-04"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "akkordeon virtuosi",
+    "Link": "https://akkordeonvirtuosi.de/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Cranking Brotli up to 11 with Cloudflare Pro and 11ty",
+    "Link": "https://nooshu.com/blog/2025/01/05/cranking-brotli-up-to-11-with-cloudflare-pro-and-11ty/",
+    "Date": "2025-01-05",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "Performance"
+    ]
   }
 ]
