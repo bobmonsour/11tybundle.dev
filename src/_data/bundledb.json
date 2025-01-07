@@ -19601,5 +19601,19 @@
     "Categories": [
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Display Plausible Statistics in Your 11ty Blog",
+    "Link": "https://www.jjude.com/tech-notes/plausible-and-11ty/",
+    "Date": "2025-01-07",
+    "Author": "Joseph Jude",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
