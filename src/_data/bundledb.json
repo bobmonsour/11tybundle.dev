@@ -19578,5 +19578,28 @@
       "How to...",
       "Image Galleries"
     ]
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "Henry Codes",
+    "Link": "https://henry.codes/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "damien's zone",
+    "Link": "https://damien.zone/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Say Hello to 11ty",
+    "Link": "https://flohgro.com/blog/say-hello-to-11ty-%F0%9F%9A%80/",
+    "Date": "2025-01-07",
+    "Author": "Floh Gro",
+    "Categories": [
+      "Migrating to Eleventy"
+    ]
   }
 ]
