@@ -19558,5 +19558,25 @@
     "Type": "site",
     "Title": "Zoë.",
     "Link": "https://moiety.me/"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "An 11ty Library Research Guide Template",
+    "Link": "https://research.000000076.xyz/"
+  },
+  {
+    "Issue": "64",
+    "Type": "blog post",
+    "Title": "Accessible Eleventy Gallery",
+    "Link": "https://sainthood.xyz/projects/#11ty-gallery",
+    "Date": "2024-12-28",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "Accessibility",
+      "Global Data",
+      "How to...",
+      "Image Galleries"
+    ]
   }
 ]
