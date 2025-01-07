@@ -19622,5 +19622,19 @@
     "Title": "Prerelease: Eleventy Image v6.0.0-beta.3",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.3",
     "Date": "2025-01-07"
+  },
+  {
+    "Issue": "64",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.0.2",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.0.2",
+    "Date": "2025-01-07"
+  },
+  {
+    "Issue": "64",
+    "Type": "release",
+    "Title": "Prerelease: Eleventy Image v6.0.0-beta.4",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.4",
+    "Date": "2025-01-07"
   }
 ]
