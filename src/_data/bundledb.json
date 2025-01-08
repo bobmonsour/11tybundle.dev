@@ -19657,5 +19657,12 @@
     "Title": "Prerelease: Eleventy Image v6.0.0-beta.5",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.5",
     "Date": "2025-01-08"
+  },
+  {
+    "Issue": "64",
+    "Type": "release",
+    "Title": "Eleventy Image v6.0.0",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0",
+    "Date": "2025-01-08"
   }
 ]
