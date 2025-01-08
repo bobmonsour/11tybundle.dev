@@ -19636,5 +19636,11 @@
     "Title": "Prerelease: Eleventy Image v6.0.0-beta.4",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.0-beta.4",
     "Date": "2025-01-07"
+  },
+  {
+    "Issue": "64",
+    "Type": "site",
+    "Title": "eleventy-plugin-podcaster",
+    "Link": "https://eleventy-plugin-podcaster.com/"
   }
 ]
