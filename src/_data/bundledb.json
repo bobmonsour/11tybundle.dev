@@ -19640,5 +19640,17 @@
     "Categories": [
       "From the Source"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Tracking 404 broken links with Fathom Analytics",
+    "Link": "https://www.simoncox.com/shorts/2024-02-11-tracking-broken-links-with-fathom/",
+    "Date": "2024-02-11",
+    "Author": "Simon Cox",
+    "Categories": [
+      "Analytics",
+      "How to..."
+    ]
   }
 ]
