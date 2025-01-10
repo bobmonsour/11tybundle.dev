@@ -19667,9 +19667,22 @@
     "Date": "2025-01-09",
     "Author": "Eleventy",
     "Categories": [
+      "From the Source",
       "Images",
       "Plugins",
       "YouTube"
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Automagically generating a robots.txt file in Eleventy using data and Nunjucks",
+    "Link": "https://thomasrigby.com/posts/automagically-generating-a-robots-txt-file-in-eleventy-using-data-and-nunjucks/",
+    "Date": "2025-01-10",
+    "Author": "Thomas Rigby",
+    "Categories": [
+      "How to...",
+      "Nunjucks/Macros"
     ]
   }
 ]
