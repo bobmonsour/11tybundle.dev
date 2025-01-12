@@ -19731,5 +19731,19 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Using an 11ty Shortcode to craft a custom CSS pipeline",
+    "Link": "https://nooshu.com/blog/2025/01/12/using-an-11ty-shortcode-to-craft-a-custom-css-pipeline/",
+    "Date": "2025-01-12",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "How to...",
+      "Shortcodes"
+    ]
   }
 ]
