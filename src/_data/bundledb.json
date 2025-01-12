@@ -19684,5 +19684,28 @@
       "How to...",
       "Nunjucks/Macros"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Why I chose 11ty over NextJS for this site",
+    "Link": "https://www.hayes.software/blog/site-update-2024/",
+    "Date": "2024-03-31",
+    "Author": "Chris Hayes",
+    "Categories": [
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "Outcome",
+    "Link": "https://outcome.doctrineofdiscovery.org/"
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "11ty gets tufte",
+    "Link": "https://tufte.000000076.xyz/"
   }
 ]
