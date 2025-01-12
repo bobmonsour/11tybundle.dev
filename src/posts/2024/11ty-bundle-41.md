@@ -18,7 +18,7 @@ The email version of this blog is dangerously close to a whopping 30 subscribers
 
 Here's an early design sketch from April of last year:
 
-{% image "src/assets/img/early-design-sketch.avif", "early sketch of the site design", "(min-width: 1000px) 1000px, 100vw" %}
+{% image "src/assets/img/early-design-sketch.jpg", "early sketch of the site design", "(min-width: 1000px) 1000px, 100vw" %}
 
 **11ty conference is next week, May 9th!** Here's the [list of speakers](https://conf.11ty.dev/#speakers) so far. It's **FREE**, single-track, and virtual. If you've waited until the last minute, now's the time to [register](https://conf.11ty.dev/#register).
 
