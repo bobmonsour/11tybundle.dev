@@ -19707,5 +19707,29 @@
     "Type": "site",
     "Title": "11ty gets tufte",
     "Link": "https://tufte.000000076.xyz/"
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Creating a custom Slugify filter in Eleventy",
+    "Link": "https://samimaatta.fi/en/creating-a-custom-slugify-filter-in-eleventy/",
+    "Date": "2025-01-12",
+    "Author": "Sami Määttä",
+    "Categories": [
+      "Filters",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Bookshelf",
+    "Link": "https://vzq.wtf/blog/bookshelf/",
+    "Date": "2025-01-12",
+    "Author": "VQZ",
+    "Categories": [
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
