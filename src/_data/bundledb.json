@@ -19745,5 +19745,20 @@
       "How to...",
       "Shortcodes"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "WP.SCSS",
+    "Link": "https://dgw.ltd/2025/01/10/wp-scss/",
+    "Date": "2025-01-10",
+    "Author": "Rich Holman",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "Global Data",
+      "How to...",
+      "Shortcodes"
+    ]
   }
 ]
