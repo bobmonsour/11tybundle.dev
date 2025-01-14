@@ -19779,5 +19779,12 @@
     "Title": "Eleventy v3.0.1-alpha.2",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.2",
     "Date": "2025-01-14"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy v3.0.1-alpha.3",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.3",
+    "Date": "2025-01-14"
   }
 ]
