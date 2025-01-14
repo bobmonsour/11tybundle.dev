@@ -19766,5 +19766,18 @@
     "Type": "site",
     "Title": "11ty WISP",
     "Link": "https://wisp.000000076.xyz/"
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "j0k3r.n3t",
+    "Link": "https://www.j0k3r.net/"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy v3.0.1-alpha.2",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.2",
+    "Date": "2025-01-14"
   }
 ]
