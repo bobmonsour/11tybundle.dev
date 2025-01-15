@@ -19786,5 +19786,50 @@
     "Title": "Eleventy v3.0.1-alpha.3",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.3",
     "Date": "2025-01-14"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy Image v6.0.1",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.1",
+    "Date": "2025-01-15"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.5",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.5",
+    "Date": "2025-01-15"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.9",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.9",
+    "Date": "2025-01-15"
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Adding Bluesky Comments to 11ty Blog",
+    "Link": "https://www.jjude.com/tech-notes/bsky-comments-11ty/",
+    "Date": "2025-01-15",
+    "Author": "Joseph Jude",
+    "Categories": [
+      "Blogging",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Three titles (podcaster plugin)",
+    "Link": "https://eleventy-plugin-podcaster.com/2025/01/three-titles/",
+    "Date": "2025-01-15",
+    "Author": "Nathan Bottomley",
+    "Categories": [
+      "How to...",
+      "Plugins"
+    ]
   }
 ]
