@@ -40,5 +40,11 @@
 		"rssFeed": "https://coryd.dev/feeds/posts",
 		"descriptionFail": "false",
 		"rssFail": "true"
+	},
+	{
+		"url": "https://www.stephaniewyatt.tel/",
+		"rssFeed": "",
+		"descriptionFail": "true",
+		"rssFail": "true"
 	}
 ]
