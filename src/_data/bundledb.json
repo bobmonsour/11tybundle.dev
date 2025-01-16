@@ -19856,5 +19856,36 @@
     "Title": "Eleventy RSS v2.0.3",
     "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.3",
     "Date": "2025-01-16"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.6",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.6",
+    "Date": "2025-01-16"
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Build-time og:image generation with eleventy-img",
+    "Link": "https://danburzo.ro/notes/eleventy-og-images/",
+    "Date": "2025-01-16",
+    "Author": "Dan Burzo",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Rewriting in Eleventy (again)",
+    "Link": "https://www.seanmcp.com/articles/rewriting-in-eleventy-again/",
+    "Date": "2025-01-14",
+    "Author": "Sean McPherson",
+    "Categories": [
+      "Why Eleventy?"
+    ]
   }
 ]
