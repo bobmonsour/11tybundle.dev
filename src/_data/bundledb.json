@@ -19843,5 +19843,18 @@
       "Migrating to Eleventy",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "Teppo Haste",
+    "Link": "https://www.teppohaste.com/"
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy RSS v2.0.3",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.3",
+    "Date": "2025-01-16"
   }
 ]
