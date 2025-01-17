@@ -19922,5 +19922,12 @@
       "Configuration",
       "How to..."
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "release",
+    "Title": "Eleventy PostHTML URLs v1.0.1",
+    "Link": "https://github.com/11ty/eleventy-posthtml-urls/releases/tag/v1.0.1",
+    "Date": "2025-01-16"
   }
 ]
