@@ -19929,5 +19929,17 @@
     "Title": "Eleventy PostHTML URLs v1.0.1",
     "Link": "https://github.com/11ty/eleventy-posthtml-urls/releases/tag/v1.0.1",
     "Date": "2025-01-16"
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Inquirer.js",
+    "Link": "https://dgw.ltd/2025/01/17/inquirer-js/",
+    "Date": "2025-01-17",
+    "Author": "Rich Holman",
+    "Categories": [
+      "How to...",
+      "Migrating to Eleventy"
+    ]
   }
 ]
