@@ -19887,5 +19887,40 @@
     "Categories": [
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Adding a Copy Button to Code Blocks",
+    "Link": "https://ttntm.me/blog/adding-a-copy-button-to-code-blocks/",
+    "Date": "2025-01-16",
+    "Author": "Tom Doe",
+    "Categories": [
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "rkar.org",
+    "Link": "https://rkar.org/"
+  },
+  {
+    "Issue": "65",
+    "Type": "site",
+    "Title": "limulus.net",
+    "Link": "https://limulus.net/"
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Separating Code From Content in Eleventy",
+    "Link": "https://aaronmorey.com/posts/2025/separating-code-from-content-in-eleventy/",
+    "Date": "2025-01-15",
+    "Author": "Aaron Morey",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
