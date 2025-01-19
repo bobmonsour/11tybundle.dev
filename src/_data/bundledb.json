@@ -19941,5 +19941,22 @@
       "How to...",
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Rewriting My Astro Blog with Eleventy",
+    "Link": "https://melkat.blog/p/11ty-rewrite/",
+    "Date": "2025-01-18",
+    "Author": "Melanie Kat",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "Images",
+      "Migrating to Eleventy",
+      "Pagination",
+      "Performance",
+      "Why Eleventy?"
+    ]
   }
 ]
