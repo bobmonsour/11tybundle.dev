@@ -19970,5 +19970,19 @@
       "Images",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "This blog's comments are powered by Webmentions",
+    "Link": "https://steele.blue/webmentions/",
+    "Date": "2025-01-19",
+    "Author": "Matt Steele",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "WebC",
+      "Webmentions"
+    ]
   }
 ]
