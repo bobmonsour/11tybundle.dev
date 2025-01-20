@@ -19958,5 +19958,17 @@
       "Performance",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "Adding social preview images to my Eleventy blog",
+    "Link": "https://blog.chobble.com/blog/25-01-19-social-preview-images/",
+    "Date": "2025-01-19",
+    "Author": "Stefan Burke",
+    "Categories": [
+      "Images",
+      "Social Media"
+    ]
   }
 ]
