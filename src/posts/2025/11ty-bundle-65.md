@@ -24,7 +24,7 @@ Enjoy the feast!
 
 **A TypeScript proposal.** Zach opened a proposal to _[Add first-party core support for TypeScript configuration, data, and template files](https://github.com/11ty/eleventy/issues/3616)_.
 
-**Another bookshelf.** With bookshelves proliferting among the Eleventy-erati, here's [another one from VQZ](https://vzq.wtf/bookshelf/) and a [blog post on how they did it](https://vzq.wtf/blog/bookshelf/).
+**Another bookshelf.** With bookshelves proliferting among the Eleventy-erati, here's [another one from Jose](https://vzq.wtf/bookshelf/) and a [blog post on how they did it](https://vzq.wtf/blog/bookshelf/).
 
 **Jason plugs-in URLs.** [Jason Garber](https://sixtwothree.org/) brings us [a plugin for generating /resource-style URLs](https://codeberg.org/jgarber/eleventy-plugin-routes#eleventy-plugin-routes).
 
