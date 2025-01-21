@@ -19984,5 +19984,17 @@
       "WebC",
       "Webmentions"
     ]
+  },
+  {
+    "Issue": "65",
+    "Type": "blog post",
+    "Title": "11ty Blog Rewrite Hotfix",
+    "Link": "https://melkat.blog/p/11ty-rewrite-hotfix/",
+    "Date": "2025-01-20",
+    "Author": "Melanie Kat",
+    "Categories": [
+      "Dates",
+      "How to..."
+    ]
   }
 ]
