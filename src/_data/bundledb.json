@@ -20089,5 +20089,21 @@
     "Categories": [
       "Accessibility"
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Making static sites with Glitch and 11ty: Image gallery",
+    "Link": "https://stefanbohacek.com/blog/making-static-sites-on-glitch-image-gallery/",
+    "Date": "2025-01-24",
+    "Author": "Stefan Bohacek",
+    "Categories": [
+      "Deployment",
+      "Global Data",
+      "How to...",
+      "Image Galleries",
+      "Images",
+      "Social Media"
+    ]
   }
 ]
