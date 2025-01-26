@@ -7414,12 +7414,6 @@
 	{
 		"Issue": 18,
 		"Type": "site",
-		"Title": "GSAP",
-		"Link": "https://gsap.com/"
-	},
-	{
-		"Issue": 18,
-		"Type": "site",
 		"Title": "Joe Sahlsa",
 		"Link": "https://joesahlsa.dev/"
 	},

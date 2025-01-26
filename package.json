@@ -17,6 +17,9 @@
 		"rs": "npm run clean && npm run start && npm run postdev",
 		"rsns": "npm run clean && npm run startns"
 	},
+	"engines": {
+		"node": "22.2.0"
+	},
 	"keywords": [],
 	"author": {
 		"name": "Bob Monsour",
@@ -25,7 +28,7 @@
 	},
 	"license": "ISC",
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy": "^3.0.1-alpha.3",
 		"@11ty/eleventy-fetch": "^4.0.0",
 		"@11ty/eleventy-img": "^3.1.8",
 		"@11ty/eleventy-plugin-directory-output": "^1.0.1",
