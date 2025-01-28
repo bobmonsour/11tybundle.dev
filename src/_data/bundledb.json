@@ -20128,5 +20128,30 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Building a seasonal veg app with Eleventy. Part 5 - Scheduled functions with Netlify",
+    "Link": "https://yasmin.bearblog.dev/building-an-eleventy-app-part-5/",
+    "Date": "2025-01-27",
+    "Author": "Yasmin",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Scheduling"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Securing 11ty with SSL Locally",
+    "Link": "https://claytonerrington.com/blog/securing-11ty-with-ssl-locally/",
+    "Date": "2025-01-27",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
