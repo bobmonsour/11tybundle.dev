@@ -20153,5 +20153,32 @@
       "Configuration",
       "How to..."
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Displaying Webmentions",
+    "Link": "https://reillyspitzfaden.com/posts/2025/01/displaying-webmentions/",
+    "Date": "2025-01-28",
+    "Author": "Reilly Spitzfaden",
+    "Categories": [
+      "How to...",
+      "Plugins",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy WebC Plugin v0.12.0-beta.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.2",
+    "Date": "2025-01-27"
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy WebC Plugin v0.12.0-beta.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.1",
+    "Date": "2025-01-27"
   }
 ]
