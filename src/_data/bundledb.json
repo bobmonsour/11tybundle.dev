@@ -20207,5 +20207,12 @@
     "Title": "Eleventy WebC Plugin v0.12.0-beta.3",
     "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.3",
     "Date": "2025-01-28"
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy v3.0.1-alpha.4",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.4",
+    "Date": "2025-01-29"
   }
 ]
