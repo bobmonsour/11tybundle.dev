@@ -20214,5 +20214,17 @@
     "Title": "Eleventy v3.0.1-alpha.4",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.4",
     "Date": "2025-01-29"
+  },
+  {
+    "Issue": "66",
+    "Type": "site",
+    "Title": "Imagined Realities",
+    "Link": "https://christopherbauer.org/"
+  },
+  {
+    "Issue": "66",
+    "Type": "site",
+    "Title": "Forrest O. Interactive",
+    "Link": "https://www.forresto.com/"
   }
 ]
