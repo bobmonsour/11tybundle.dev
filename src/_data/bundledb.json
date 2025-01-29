@@ -20180,5 +20180,32 @@
     "Title": "Eleventy WebC Plugin v0.12.0-beta.1",
     "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.1",
     "Date": "2025-01-27"
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Now Using 11ty V3",
+    "Link": "https://wonderfulfrog.com/posts/now-using-11ty-v3/",
+    "Date": "2025-01-27",
+    "Author": "Devin Haska",
+    "Categories": [
+      "CMS",
+      "Plugins",
+      "Upgrading"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy Bundle v3.0.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v3.0.1",
+    "Date": "2025-01-28"
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy WebC Plugin v0.12.0-beta.3",
+    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.3",
+    "Date": "2025-01-28"
   }
 ]
