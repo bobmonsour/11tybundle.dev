@@ -20226,5 +20226,21 @@
     "Type": "site",
     "Title": "Forrest O. Interactive",
     "Link": "https://www.forresto.com/"
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Let's create a plaintext RSS feed with 11ty",
+    "Link": "https://nooshu.com/blog/2025/01/29/lets-create-a-plaintext-rss-feed-with-11ty/",
+    "Date": "2025-01-29",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Accessibility",
+      "Blogging",
+      "Configuration",
+      "Filters",
+      "How to...",
+      "RSS"
+    ]
   }
 ]
