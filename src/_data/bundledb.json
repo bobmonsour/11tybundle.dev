@@ -20242,5 +20242,24 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Creating a 'new blog entry' shortcut for creating blog posts in nano for eleventy",
+    "Link": "https://paulcapewell.com/blog/250129/",
+    "Date": "2025-01-29",
+    "Author": "Paul Capewell",
+    "Categories": [
+      "Front Matter",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome v1.0.0-beta.6",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.6",
+    "Date": "2025-01-30"
   }
 ]
