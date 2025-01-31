@@ -21,6 +21,9 @@ export default async function () {
 			return a.Date > b.Date ? -1 : 1;
 		});
 
+	// extract the first 20 items from firehose for use in the firehose rss feed
+	const firehose_latest = firehose.slice(0, 20);
+
 	// generate a list of releases, an array of all releases in descending date order
 	const releaseList = bundleRecords
 		.filter((item) => item["Type"] == "release")
@@ -213,6 +216,7 @@ export default async function () {
 	return {
 		bundleRecords,
 		firehose,
+		firehose_latest,
 		postCount,
 		releaseList,
 		siteList,

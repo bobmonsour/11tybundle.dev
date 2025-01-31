@@ -10,13 +10,14 @@ eleventyExcludeFromCollections: true
 	<subtitle>{{ site.description }}</subtitle>
 	<link href="{{ site.url }}{{ permalink }}" rel="self"/>
 	{% set postslist = collections.posts | reverse %}
-	<updated>{{ postslist | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  {% set latest_posts = postslist.slice(0,20) %}
+	<updated>{{ latest_posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}/</id>
 	<author>
 		<name>{{ site.author.name }}</name>
 		<email>{{ site.author.email }}</email>
 	</author>
-	{%- for post in postslist %}
+	{%- for post in latest_posts %}
 	{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
 	<entry>
 		<title>{{ post.data.title }}</title>
