@@ -20260,5 +20260,12 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.10",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.10",
+    "Date": "2025-01-31"
   }
 ]
