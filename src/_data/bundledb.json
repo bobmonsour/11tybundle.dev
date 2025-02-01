@@ -20267,5 +20267,19 @@
     "Title": "Eleventy Import v1.0.10",
     "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.10",
     "Date": "2025-01-31"
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.11",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.11",
+    "Date": "2025-01-31"
+  },
+  {
+    "Issue": "66",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.1",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.1",
+    "Date": "2025-01-31"
   }
 ]
