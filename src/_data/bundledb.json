@@ -20345,5 +20345,19 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Ok, this is my 'final' final word on RSS entry IDs",
+    "Link": "https://bobmonsour.com/blog/final-final-word-on-rss-entry-ids/",
+    "Date": "2025-02-02",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "RSS"
+    ]
   }
 ]
