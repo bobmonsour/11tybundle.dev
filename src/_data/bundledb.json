@@ -20281,5 +20281,36 @@
     "Title": "Eleventy Utils v2.0.1",
     "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.1",
     "Date": "2025-01-31"
+  },
+  {
+    "Issue": "66",
+    "Type": "site",
+    "Title": "Dansite",
+    "Link": "https://danjewett.net/"
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Set Up a Simple and Reliable Static Site Generator Using 11ty (Eleventy) + Tailwind CSS",
+    "Link": "https://abdullahyahya.com/2025/02/set-up-a-simple-and-reliable-static-site-generator-using-11ty-eleventy-tailwind-css/",
+    "Date": "2025-02-02",
+    "Author": "Abdullah Yahya",
+    "Categories": [
+      "CSS/Sass",
+      "Deployment",
+      "Getting Started"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Adding Prettier in Eleventy using Transforms",
+    "Link": "https://bnijenhuis.nl/notes/adding-prettier-in-eleventy-using-transforms/",
+    "Date": "2025-02-02",
+    "Author": "Bernard Nijenhuis",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
