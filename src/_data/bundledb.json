@@ -20312,5 +20312,38 @@
       "Configuration",
       "How to..."
     ]
+  },
+  {
+    "Issue": "66",
+    "Type": "site",
+    "Title": "Brendan's Tech Blog",
+    "Link": "https://theonlyblogever.com/"
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Eleventy, Open Graph images and fun?",
+    "Link": "https://blog.embee.co/posts/11ty-open-graph-funtimes/",
+    "Date": "2025-02-02",
+    "Author": "Matt B",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "I wanted to validate the presence of an rssid in my front matter",
+    "Link": "https://bobmonsour.com/til/i-wanted-to-validate-the-presence-of-an-rssid-in-my-front-matter/",
+    "Date": "2025-02-01",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "RSS"
+    ]
   }
 ]
