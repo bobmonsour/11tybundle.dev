@@ -20197,12 +20197,6 @@
   {
     "Issue": "66",
     "Type": "site",
-    "Title": "Imagined Realities",
-    "Link": "https://christopherbauer.org/"
-  },
-  {
-    "Issue": "66",
-    "Type": "site",
     "Title": "Forrest O. Interactive",
     "Link": "https://www.forresto.com/"
   },
@@ -20358,6 +20352,19 @@
       "Configuration",
       "How to...",
       "RSS"
+    ]
+  },
+  {
+    "Issue": "66",
+    "Type": "blog post",
+    "Title": "Loading Pixelfed Photos with Eleventy",
+    "Link": "https://rknight.me/blog/loading-pixelfed-photos-with-eleventy/",
+    "Date": "2025-02-03",
+    "Author": "Robb Knight",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Remote Data"
     ]
   }
 ]
