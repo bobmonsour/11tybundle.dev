@@ -2,7 +2,7 @@
 node_modules/
 _site/
 devdata/
-scratch/
+resources/
 .env
 .cache
 .vscode
