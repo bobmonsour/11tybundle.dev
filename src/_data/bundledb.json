@@ -20366,5 +20366,43 @@
       "Images",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Migrating from WordPress to 11ty",
+    "Link": "https://www.youtube.com/watch?v=H21-e-zy-b8",
+    "Date": "2025-02-03",
+    "Author": "DeepakNess",
+    "Categories": [
+      "How to...",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Configuring your Content-Security-Policy on your development environment in 11ty",
+    "Link": "https://nooshu.com/blog/2025/02/04/configuring-your-content-security-policy-on-your-development-environment-in-11ty/",
+    "Date": "2025-02-04",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Building a Quiz System With Eleventy",
+    "Link": "https://nathanupchurch.com/blog/making-quizzes-using-eleventy/",
+    "Date": "2025-02-04",
+    "Author": "Nathan Upchurch",
+    "Categories": [
+      "Front Matter",
+      "Global Data",
+      "How to...",
+      "Layouts"
+    ]
   }
 ]
