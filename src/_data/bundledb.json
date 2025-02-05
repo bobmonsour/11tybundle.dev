@@ -20404,5 +20404,18 @@
       "How to...",
       "Layouts"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "Leandro Pelegrini",
+    "Link": "https://lpelegrini.dev/"
+  },
+  {
+    "Issue": "67",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.12",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.12",
+    "Date": "2025-02-05"
   }
 ]
