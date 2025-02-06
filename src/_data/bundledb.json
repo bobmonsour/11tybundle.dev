@@ -20417,5 +20417,23 @@
     "Title": "Eleventy Import v1.0.12",
     "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.12",
     "Date": "2025-02-05"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Create New Posts Faster in 11ty",
+    "Link": "https://deepakness.com/blog/create-posts-faster-11ty/",
+    "Date": "2025-02-06",
+    "Author": "DeepakNess",
+    "Categories": [
+      "Blogging",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "The Bicycle Stop",
+    "Link": "https://thebicyclestop.com/en/"
   }
 ]
