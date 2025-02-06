@@ -20435,5 +20435,17 @@
     "Type": "site",
     "Title": "The Bicycle Stop",
     "Link": "https://thebicyclestop.com/en/"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Webmentions Without Plugins",
+    "Link": "https://reillyspitzfaden.com/posts/2025/02/webmentions-without-plugins/",
+    "Date": "2025-02-06",
+    "Author": "Reilly Spitzfaden",
+    "Categories": [
+      "How to...",
+      "Webmentions"
+    ]
   }
 ]
