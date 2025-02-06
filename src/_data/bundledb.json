@@ -20447,5 +20447,18 @@
       "How to...",
       "Webmentions"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "11ty Meetup - How I built my Books page",
+    "Link": "https://bobmonsour.com/notes/11ty-meetup-how-i-built-my-books-page/",
+    "Date": "2025-02-06",
+    "Author": "Bob Monsour",
+    "Categories": [
+      "Filters",
+      "Global Data",
+      "YouTube"
+    ]
   }
 ]
