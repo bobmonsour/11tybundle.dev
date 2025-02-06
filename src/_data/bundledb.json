@@ -20460,5 +20460,18 @@
       "Global Data",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Using 11ty to build a data and chart analytics website with Sia Karamalegos",
+    "Link": "https://www.youtube.com/watch?v=o13Yfgzne88&t=2s",
+    "Date": "2025-02-06",
+    "Author": "Sia Karamalegos",
+    "Categories": [
+      "Analytics",
+      "Performance",
+      "YouTube"
+    ]
   }
 ]
