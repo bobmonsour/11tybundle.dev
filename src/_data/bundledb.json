@@ -20473,5 +20473,18 @@
       "Performance",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Integrating Eleventy with Buttondown to create subscribers-only content",
+    "Link": "https://scottandrew.com/blog/2025/01/integrating-eleventy-with-buttondown-to-create-sub/",
+    "Date": "2025-01-28",
+    "Author": "Scott Andrew",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to..."
+    ]
   }
 ]

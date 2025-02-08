@@ -3,7 +3,7 @@ export default {
 	imageDir: "src/assets/img/",
 	image: {
 		source: "11tybundle-dev.png",
-		alt: "the number 11 as photographed by David Monje on Unsplash",
+		alt: "a design by Andy Carolan",
 	},
 	snow: "false",
 };
