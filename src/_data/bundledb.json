@@ -20486,5 +20486,19 @@
       "Deployment",
       "How to..."
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Building with an 11ty starter sites and headless WordPress",
+    "Link": "https://noscript.show/build/7",
+    "Date": "2025-02-07",
+    "Author": "David Waumsley",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Getting Started",
+      "Migrating to Eleventy"
+    ]
   }
 ]
