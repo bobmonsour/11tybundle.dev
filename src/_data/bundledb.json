@@ -20540,5 +20540,24 @@
     "Type": "site",
     "Title": "Imagined Realities",
     "Link": "https://christopherbauer.org/"
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "tabler",
+    "Link": "https://preview.tabler.io/"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Dynamic pages with PHP and 11ty",
+    "Link": "https://www.coryd.dev/posts/2025/dynamic-pages-with-php-and-11ty",
+    "Date": "2025-02-12",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Edge Functions",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
