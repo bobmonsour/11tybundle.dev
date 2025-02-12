@@ -20520,5 +20520,25 @@
     "Type": "site",
     "Title": "47 Watch",
     "Link": "https://47-watch.com/"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Migrating Posts from Jekyll to 11ty with Python",
+    "Link": "https://christopherbauer.org/blog/migrating_jekyll/",
+    "Date": "2025-02-12",
+    "Author": "Christopher Bauer",
+    "Categories": [
+      "Blogging",
+      "Images",
+      "Markdown",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "Imagined Realities",
+    "Link": "https://christopherbauer.org/"
   }
 ]
