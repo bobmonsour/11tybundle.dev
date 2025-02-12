@@ -20500,5 +20500,25 @@
       "Getting Started",
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "11ty and OG images",
+    "Link": "https://notes.jays.net/blog/11ty/",
+    "Date": "2025-02-11",
+    "Author": "Jay Hannah",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "47 Watch",
+    "Link": "https://47-watch.com/"
   }
 ]
