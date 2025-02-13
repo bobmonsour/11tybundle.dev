@@ -20559,5 +20559,32 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "site",
+    "Title": "Noah Liebman",
+    "Link": "https://noahliebman.net/"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Implementing Webmentions",
+    "Link": "https://ttntm.me/blog/implementing-webmentions/",
+    "Date": "2025-02-13",
+    "Author": "Tom Doe",
+    "Categories": [
+      "How to...",
+      "Remote Data",
+      "Social Media",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "release",
+    "Title": "is-land v5.0.0-beta.2",
+    "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0-beta.2",
+    "Date": "2025-02-13"
   }
 ]
