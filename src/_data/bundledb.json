@@ -20586,5 +20586,45 @@
     "Title": "is-land v5.0.0-beta.2",
     "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0-beta.2",
     "Date": "2025-02-13"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "How To Add Search To Eleventy",
+    "Link": "https://blog.martin-haehnel.de/blog/2025/02/12/search-in-eleventy/",
+    "Date": "2025-02-12",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "How to...",
+      "RSS",
+      "Search"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "How To Add Footnotes To Eleventy",
+    "Link": "https://blog.martin-haehnel.de/blog/2025/02/11/footnotes-in-eleventy/",
+    "Date": "2025-02-11",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Markdown"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Better YouTube Embeds ~77% Faster",
+    "Link": "https://deepakness.com/blog/better-youtube-embed/",
+    "Date": "2025-02-14",
+    "Author": "DeepakNess",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Plugins",
+      "YouTube"
+    ]
   }
 ]
