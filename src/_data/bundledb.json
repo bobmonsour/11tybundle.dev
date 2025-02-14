@@ -16765,12 +16765,6 @@
   },
   {
     "Issue": "54",
-    "Type": "starter",
-    "Title": "WebC bed 🪸",
-    "Link": "https://github.com/rdela/webcbed"
-  },
-  {
-    "Issue": "54",
     "Type": "blog post",
     "Title": "Upgraded to Eleventy 3.0 (Beta)",
     "Link": "https://www.raymondcamden.com/2024/08/05/upgraded-to-eleventy-30-beta",
