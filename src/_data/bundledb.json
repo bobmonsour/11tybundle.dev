@@ -20626,5 +20626,12 @@
       "Plugins",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "release",
+    "Title": "is-land v4.0.1",
+    "Link": "https://github.com/11ty/is-land/releases/tag/v4.0.1",
+    "Date": "2025-02-14"
   }
 ]
