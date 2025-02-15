@@ -16669,5 +16669,14 @@
 		"Date": "2025-02-14",
 		"Author": "Bob Monsour",
 		"Categories": ["11ty Conference 2024", "Blogging"]
+	},
+	{
+		"Issue": "67",
+		"Type": "blog post",
+		"Title": "My last word on RSS entry IDs",
+		"Link": "https://bobmonsour.com/blog/even-more-on-rss-ids/",
+		"Date": "2025-02-14",
+		"Author": "Bob Monsour",
+		"Categories": ["11ty Conference 2024", "Accessibility", "Analytics"]
 	}
 ]
