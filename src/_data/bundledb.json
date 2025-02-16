@@ -20646,5 +20646,31 @@
     "Type": "site",
     "Title": "Damian Walsh",
     "Link": "https://damianwalsh.co.uk/"
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "How To Remove A Folder From The Generated Permalinks In Eleventy",
+    "Link": "https://blog.martin-haehnel.de/2025/02/15/eleventy-change-permalinks/",
+    "Date": "2025-02-15",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Permalinks"
+    ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "Presenting an episode on your site",
+    "Link": "https://eleventy-plugin-podcaster.com/2025/02/displaying-information-about-an-episode/",
+    "Date": "2025-02-15",
+    "Author": "Nathan Bottomley",
+    "Categories": [
+      "Front Matter",
+      "How to...",
+      "Nunjucks/Macros"
+    ]
   }
 ]
