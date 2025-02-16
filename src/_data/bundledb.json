@@ -20672,5 +20672,19 @@
       "How to...",
       "Nunjucks/Macros"
     ]
+  },
+  {
+    "Issue": "67",
+    "Type": "blog post",
+    "Title": "The markdown filters your Eleventy project needs",
+    "Link": "https://jeremias.codes/2025/02/markdown-filters-eleventy/",
+    "Date": "2025-02-14",
+    "Author": "Jeremias Menichelli",
+    "Categories": [
+      "Configuration",
+      "Filters",
+      "How to...",
+      "Markdown"
+    ]
   }
 ]
