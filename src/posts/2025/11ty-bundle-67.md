@@ -14,7 +14,7 @@ _An email version of this blog is available. **[Subscribe here](#newsletter-subs
 
 **_A note from Bob:_**
 
-Family health matters are keeping my summary below rather short this week. There's a lot in this issue, so scan on down below for the goodies.
+Family health matters are keeping my summary below rather short this issue. There's a lot in this issue, so scan on down below for the goodies.
 
 ---
 
