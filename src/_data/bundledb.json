@@ -8095,7 +8095,7 @@
 		"Issue": 22,
 		"Type": "blog post",
 		"Title": "Eleventy Splitting Category Data Across Two Table Columns",
-		"Link": "https://johnwargo.com/posts/2023/eleventy-splitting-category-data-across-two-table-columns/",
+		"Link": "https://johnwargo.com/posts/2023/eleventy-two-table-columns/",
 		"Date": "2023-11-18T08:00:00.000Z",
 		"Author": "John M. Wargo",
 		"Categories": ["Collections", "How to..."]
@@ -14775,7 +14775,7 @@
 		"Issue": "61",
 		"Type": "blog post",
 		"Title": "Searching baty.net",
-		"Link": "https://baty.net/2024/10/searching-baty-net/",
+		"Link": "https://baty.net/posts/2024/10/searching-baty-net/",
 		"Date": "2024-10-12",
 		"Author": "Jack Baty",
 		"Categories": ["How to...", "Search"]
