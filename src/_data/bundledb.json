@@ -9250,12 +9250,6 @@
 		"Categories": ["Asset Pipelines", "Configuration"]
 	},
 	{
-		"Issue": 27,
-		"Type": "site",
-		"Title": "socialwe.blog",
-		"Link": "https://socialwe.blog/"
-	},
-	{
 		"Issue": "",
 		"Type": "blog post",
 		"Title": "Using Webmentions in Eleventy",
