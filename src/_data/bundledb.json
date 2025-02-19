@@ -20751,5 +20751,18 @@
     "Title": "Eleventy Font Awesome v1.0.0-beta.7",
     "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.7",
     "Date": "2025-02-18"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Adding a Button to Copy Code Snippets",
+    "Link": "https://helenchong.dev/blog/posts/2025-02-19-copy-code-button/",
+    "Date": "2025-02-19",
+    "Author": "Helen Chong",
+    "Categories": [
+      "Accessibility",
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
