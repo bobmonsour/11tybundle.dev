@@ -20782,5 +20782,40 @@
     "Type": "site",
     "Title": "India Grant",
     "Link": "https://indiagrant.com/"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome v1.0.0-beta.8",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.8",
+    "Date": "2025-02-19"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome v1.0.0-beta.9",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.9",
+    "Date": "2025-02-19"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome v1.0.0-beta.10",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.10",
+    "Date": "2025-02-19"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Build personal blog easy with 11ty.js",
+    "Link": "https://heterl0.live/blog/build-personal-blog-with-eleventy/",
+    "Date": "2025-01-14",
+    "Author": "Hieu Le Van",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "Getting Started",
+      "Why Eleventy?"
+    ]
   }
 ]
