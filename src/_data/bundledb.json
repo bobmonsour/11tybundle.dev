@@ -20817,5 +20817,30 @@
       "Getting Started",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Luke Warlow",
+    "Link": "https://lukewarlow.dev/?utm_source=Mastodon"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Oregon Symphony",
+    "Link": "https://www.orsymphony.org/"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Liam Steckler",
+    "Link": "https://liamsteckler.com/"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.13",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.13",
+    "Date": "2025-02-20"
   }
 ]
