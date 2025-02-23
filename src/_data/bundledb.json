@@ -20842,5 +20842,71 @@
     "Title": "Eleventy Import v1.0.13",
     "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.13",
     "Date": "2025-02-20"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "FOSS Gaming",
+    "Link": "https://fossgaming.codeberg.page/"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.14",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.14",
+    "Date": "2025-02-21"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Embracing Tufte’s Design Principles in My New 11ty Starter",
+    "Link": "https://www.adamdjbrett.com/blog/2025-02-23-get-tufte/",
+    "Date": "2025-02-23",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "Blogging",
+      "Getting Started"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "My (Neo)Brutalism 11ty Web Design Experiments",
+    "Link": "https://www.adamdjbrett.com/blog/2025-02-22-brutalism-eleventy-web-design/",
+    "Date": "2025-02-23",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "CSS/Sass",
+      "Getting Started"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "My Tiny Eleventy (11ty) Sites",
+    "Link": "https://www.adamdjbrett.com/blog/2025-02-21-my-tiny-11ty-sites/",
+    "Date": "2025-02-21",
+    "Author": "Adam DJ Brett",
+    "Categories": [
+      "CSS/Sass",
+      "Getting Started"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Welcome to my new new website!",
+    "Link": "https://zmknox.com/2025/02/welcome-to-my-new-new-website/",
+    "Date": "2025-02-22",
+    "Author": "zmknox",
+    "Categories": [
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "zmknox",
+    "Link": "https://zmknox.com/"
   }
 ]
