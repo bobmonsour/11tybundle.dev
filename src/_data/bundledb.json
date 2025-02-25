@@ -20962,5 +20962,37 @@
     "Type": "site",
     "Title": "Noktorum",
     "Link": "https://noktorum.com/"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "pixel dirt",
+    "Link": "https://nannnsss.omg.lol/"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Adding Prettier in Eleventy using Transforms",
+    "Link": "https://bnijenhuis.nl/notes/adding-prettier-in-eleventy-using-transforms/",
+    "Date": "2025-02-02",
+    "Author": "Bernard Nijenhuis",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "11ty Obsidian & Github Style Alert Blocks",
+    "Link": "https://equk.co.uk/2025/02/24/11ty-obsidian-and-github-style-alert-blocks/",
+    "Date": "2025-02-25",
+    "Author": "equilibriumuk",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Obsidian"
+    ]
   }
 ]
