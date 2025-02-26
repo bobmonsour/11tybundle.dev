@@ -21053,5 +21053,29 @@
       "How to...",
       "Performance"
     ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Creating a Books Page",
+    "Link": "https://www.spencerharston.com/posts/2025/creating-a-books-page/",
+    "Date": "2025-01-25",
+    "Author": "Spencer Harston",
+    "Categories": [
+      "Global Data",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Managing My Books Data",
+    "Link": "https://www.spencerharston.com/posts/2025/managing-my-books-data/",
+    "Date": "2025-01-31",
+    "Author": "Spencer Harston",
+    "Categories": [
+      "Global Data",
+      "How to..."
+    ]
   }
 ]
