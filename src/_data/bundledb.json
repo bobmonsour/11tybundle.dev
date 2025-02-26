@@ -21010,7 +21010,35 @@
       "Filters",
       "Global Data",
       "Images",
+      "Pagination",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Liz Höser",
+    "Link": "https://liz.hoeser.dev/"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.0",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.0",
+    "Date": "2025-02-25"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.1",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.1",
+    "Date": "2025-02-25"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.2",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.2",
+    "Date": "2025-02-25"
   }
 ]
