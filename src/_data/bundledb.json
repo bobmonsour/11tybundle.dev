@@ -21040,5 +21040,18 @@
     "Title": "Eleventy Image Color v1.0.2",
     "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.2",
     "Date": "2025-02-25"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "How I Built Shopify Theme Vitals using 11ty and CrUX",
+    "Link": "https://sia.codes/posts/how-i-built-theme-vitals/",
+    "Date": "2025-02-26",
+    "Author": "Sia Karamalegos",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "Performance"
+    ]
   }
 ]
