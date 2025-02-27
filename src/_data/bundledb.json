@@ -21083,5 +21083,31 @@
     "Type": "site",
     "Title": "State of California Design System",
     "Link": "https://designsystem.webstandards.ca.gov/"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Green Web Tracker",
+    "Link": "https://tracker.greenweb.org//"
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Formby Counseling",
+    "Link": "https://formbycounselling.co.uk/"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.3",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.3",
+    "Date": "2025-02-26"
+  },
+  {
+    "Issue": "68",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.4",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.4",
+    "Date": "2025-02-26"
   }
 ]
