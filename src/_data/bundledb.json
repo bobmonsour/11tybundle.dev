@@ -21022,27 +21022,6 @@
   },
   {
     "Issue": "68",
-    "Type": "release",
-    "Title": "Eleventy Image Color v1.0.0",
-    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.0",
-    "Date": "2025-02-25"
-  },
-  {
-    "Issue": "68",
-    "Type": "release",
-    "Title": "Eleventy Image Color v1.0.1",
-    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.1",
-    "Date": "2025-02-25"
-  },
-  {
-    "Issue": "68",
-    "Type": "release",
-    "Title": "Eleventy Image Color v1.0.2",
-    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.2",
-    "Date": "2025-02-25"
-  },
-  {
-    "Issue": "68",
     "Type": "blog post",
     "Title": "How I Built Shopify Theme Vitals using 11ty and CrUX",
     "Link": "https://sia.codes/posts/how-i-built-theme-vitals/",
@@ -21098,16 +21077,15 @@
   },
   {
     "Issue": "68",
-    "Type": "release",
-    "Title": "Eleventy Image Color v1.0.3",
-    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.3",
-    "Date": "2025-02-26"
+    "Type": "site",
+    "Title": "Lynn Fisher's Instagram Archive",
+    "Link": "https://instagram.lynnandtonic.com/"
   },
   {
     "Issue": "68",
     "Type": "release",
-    "Title": "Eleventy Image Color v1.0.4",
-    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.4",
-    "Date": "2025-02-26"
+    "Title": "@11ty/image-color",
+    "Link": "https://github.com/11ty/image-color",
+    "Date": "2025-02-27"
   }
 ]
