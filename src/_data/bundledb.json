@@ -21087,5 +21087,50 @@
     "Title": "@11ty/image-color",
     "Link": "https://github.com/11ty/image-color",
     "Date": "2025-02-27"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Extract Colors from an Image for CSS Themes",
+    "Link": "https://www.zachleat.com/web/extract-colors/",
+    "Date": "2025-02-27",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "WordPress to 11ty",
+    "Link": "https://deajae.co.uk/posts/WordPress-to-11ty/",
+    "Date": "2025-02-01",
+    "Author": "DeaJae",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "DecapCMS with 11ty",
+    "Link": "https://deajae.co.uk/posts/decapcms-with-11ty/",
+    "Date": "2025-02-18",
+    "Author": "DeaJae",
+    "Categories": [
+      "CMS",
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "TrozWare",
+    "Link": "https://troz.net/"
   }
 ]
