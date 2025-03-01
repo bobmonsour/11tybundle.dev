@@ -31,7 +31,7 @@ export default async function () {
 			return a.Date > b.Date ? -1 : 1;
 		});
 
-	// generate a list of sites, an array of all releases in descending date order
+	// generate a list of sites, an array of all releases in descending bundle issue order
 	const siteList = bundleRecords
 		.filter((item) => item["Type"] == "site")
 		.sort((a, b) => {
