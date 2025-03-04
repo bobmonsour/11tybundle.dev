@@ -21067,7 +21067,7 @@
     "Issue": "68",
     "Type": "site",
     "Title": "Green Web Tracker",
-    "Link": "https://tracker.greenweb.org//"
+    "Link": "https://tracker.greenweb.org/"
   },
   {
     "Issue": "68",
@@ -21132,5 +21132,23 @@
     "Type": "site",
     "Title": "TrozWare",
     "Link": "https://troz.net/"
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Getting Started with 11ty, Minimalist, and Calavera",
+    "Link": "https://www.youtube.com/watch?v=STOvNBFQjnc",
+    "Date": "2025-02-01",
+    "Author": "Schalk Neethling",
+    "Categories": [
+      "Getting Started",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "68",
+    "Type": "site",
+    "Title": "Damian Walsh",
+    "Link": "https://damianwalsh.co.uk/"
   }
 ]
