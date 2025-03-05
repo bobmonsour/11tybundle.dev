@@ -21156,5 +21156,25 @@
     "Type": "site",
     "Title": "cloudcannon",
     "Link": "https://cloudcannon.com/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Fox/Dog",
+    "Link": "https://foxdog.blog/"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Generating absolute URLs in my RSS feed(s)",
+    "Link": "https://www.coryd.dev/posts/2025/generating-absolute-urls-in-my-rss-feeds",
+    "Date": "2025-03-05",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "Filters",
+      "Global Data",
+      "How to...",
+      "RSS"
+    ]
   }
 ]
