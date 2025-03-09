@@ -21176,5 +21176,41 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Edward Sivyour",
+    "Link": "https://sivyour.dev/"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "List blog posts grouped by year with Eleventy",
+    "Link": "https://hamatti.org/posts/list-blog-posts-grouped-by-year-with-eleventy/",
+    "Date": "2025-03-08",
+    "Author": "Juha-Matti Santala",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "Dates",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Eleventy's Image Plugin Disk Caching Approach For HTML Transform Method",
+    "Link": "https://syntackle.com/blog/eleventy-image-html-transform-plugin-disk-cache/",
+    "Date": "2025-03-08",
+    "Author": "Murtuzaali Surti",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Performance",
+      "Plugins"
+    ]
   }
 ]
