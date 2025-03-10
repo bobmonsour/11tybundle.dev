@@ -21212,5 +21212,20 @@
       "Performance",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Implementing Webmentions",
+    "Link": "https://ttntm.me/blog/implementing-webmentions/",
+    "Date": "2025-03-10",
+    "Author": "Tom Doe",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "Remote Data",
+      "Social Media",
+      "Webmentions"
+    ]
   }
 ]
