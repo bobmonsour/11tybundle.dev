@@ -21227,5 +21227,21 @@
       "Social Media",
       "Webmentions"
     ]
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Host Your Stuff",
+    "Link": "https://32x33.institute/host-your-stuff-part-vi/",
+    "Date": "2025-03-06",
+    "Author": "Scarlett Cavendish",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Deployment",
+      "Front Matter",
+      "Getting Started",
+      "Navigation"
+    ]
   }
 ]
