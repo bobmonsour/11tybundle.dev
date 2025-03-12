@@ -21243,5 +21243,48 @@
       "Getting Started",
       "Navigation"
     ]
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "18F Guides",
+    "Link": "https://18f.org/guides/"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Adding Password Protection to 11ty Pages Using PageCrypt",
+    "Link": "https://sandtoken.com/writing/password-protecting-eleventy-pages/",
+    "Date": "2024-11-12",
+    "Author": "Cody Sand",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Ryan Killeen ",
+    "Link": "https://ryankilleen.com/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "GOV.UK Publishing Design Guide",
+    "Link": "https://design-guide.publishing.service.gov.uk/"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "11ty Math",
+    "Link": "https://bkardell.com/blog/11tyMath.html",
+    "Date": "2025-03-12",
+    "Author": "Brian Kardell",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown"
+    ]
   }
 ]
