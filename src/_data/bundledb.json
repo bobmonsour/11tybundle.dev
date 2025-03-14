@@ -21292,5 +21292,23 @@
     "Type": "site",
     "Title": "Eimear Sweeney Coaching",
     "Link": "https://eimearsweeney.com/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Terminal",
+    "Link": "https://terminal.ahumanfuture.co/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "NC Art Meets",
+    "Link": "https://ncartmeets.com/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "PerformanceObserver",
+    "Link": "https://performanceobserver.dev/"
   }
 ]
