@@ -21310,5 +21310,32 @@
     "Type": "site",
     "Title": "PerformanceObserver",
     "Link": "https://performanceobserver.dev/"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Linking local node packages for development in PNPM",
+    "Link": "https://ryankilleen.com/blog/2025/linking-node-packages/",
+    "Date": "2025-03-05",
+    "Author": "Ryan Killeen",
+    "Categories": [
+      "Configuration",
+      "Plugins",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "69",
+    "Type": "release",
+    "Title": "Eleventy v3.0.1-alpha.5",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.1-alpha.5",
+    "Date": "2025-03-14"
+  },
+  {
+    "Issue": "69",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v2.0.7",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.7",
+    "Date": "2025-03-14"
   }
 ]
