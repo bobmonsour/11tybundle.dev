@@ -21337,5 +21337,26 @@
     "Title": "Eleventy Dev Server v2.0.7",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v2.0.7",
     "Date": "2025-03-14"
+  },
+  {
+    "Issue": "69",
+    "Type": "blog post",
+    "Title": "Added a 'uses' Page Archive",
+    "Link": "https://ryan.himmelwright.net/post/added-uses-page-archive/",
+    "Date": "2025-03-16",
+    "Author": "Ryan Himmelwright",
+    "Categories": [
+      "Collections",
+      "Configuration",
+      "Dates",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "69",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.1.0-beta.1",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0-beta.1",
+    "Date": "2025-03-17"
   }
 ]
