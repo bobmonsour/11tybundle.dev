@@ -21375,5 +21375,29 @@
       "Plugins",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Bygg Örebro",
+    "Link": "https://byggorebro.se/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "RhasphhaseLLe Kerbrhast",
+    "Link": "https://raphaellekerbrat.com/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "Kartikey Chauhan",
+    "Link": "https://carteakey.dev/"
+  },
+  {
+    "Issue": "69",
+    "Type": "site",
+    "Title": "ISAURE MAUREL",
+    "Link": "https://isaure.maurel.gd/"
   }
 ]
