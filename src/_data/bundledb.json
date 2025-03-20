@@ -21399,5 +21399,19 @@
     "Type": "site",
     "Title": "ISAURE MAUREL",
     "Link": "https://isaure.maurel.gd/"
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Navigation v1.0.0",
+    "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.0",
+    "Date": "2025-03-19"
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Navigation v1.0.1",
+    "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.1",
+    "Date": "2025-03-19"
   }
 ]
