@@ -21413,5 +21413,18 @@
     "Title": "Eleventy Navigation v1.0.1",
     "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.1",
     "Date": "2025-03-19"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Working Draft",
+    "Link": "https://workingdraft.de/"
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.1.0-beta.2",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0-beta.2",
+    "Date": "2025-03-20"
   }
 ]
