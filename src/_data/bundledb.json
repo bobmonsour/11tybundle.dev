@@ -17351,12 +17351,5 @@
     "Date": "2025-03-20",
     "Author": "David Moll",
     "Categories": ["Analytics", "Configuration", "How to...", "YouTube"]
-  },
-  {
-    "Issue": "70",
-    "Type": "release",
-    "Title": "Eleventy Fetch v5.1.0-beta.2",
-    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0-beta.2",
-    "Date": "2025-03-20"
   }
 ]
