@@ -21459,5 +21459,50 @@
     "Type": "site",
     "Title": "Ariel Salminen",
     "Link": "https://arielsalminen.com/"
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Image Color v1.0.6",
+    "Link": "https://github.com/11ty/image-color/releases/tag/v1.0.6",
+    "Date": "2025-03-21"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Announcing WordPress Export to Markdown v3",
+    "Link": "https://codersblock.com/blog/announcing-wordpress-export-to-markdown-v3/",
+    "Date": "2025-03-21",
+    "Author": "Will Boyd",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Markdown",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "On this day",
+    "Link": "https://sachachua.com/blog/2025/03/on-this-day/",
+    "Date": "2025-03-23",
+    "Author": "Sacha Chua",
+    "Categories": [
+      "Dates",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "11ty Font Awesome SVG Plugin",
+    "Link": "https://equk.co.uk/2025/03/23/11ty-font-awesome-svg-plugin/",
+    "Date": "2025-03-23",
+    "Author": "equilibriumuk",
+    "Categories": [
+      "How to...",
+      "Plugins"
+    ]
   }
 ]
