@@ -21504,5 +21504,26 @@
       "How to...",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "TechCats",
+    "Link": "https://techcats.netlify.app/"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Creating A Navigation Menu For the Eleventy Base Blog",
+    "Link": "https://blog.martin-haehnel.de/2025/03/23/mobile-nav/",
+    "Date": "2025-03-23",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "How to...",
+      "Layouts",
+      "Navigation"
+    ]
   }
 ]
