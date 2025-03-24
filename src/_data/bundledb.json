@@ -21525,5 +21525,17 @@
       "Layouts",
       "Navigation"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "I launched this little blog on 11ty, and I am excited about it.",
+    "Link": "https://terminal.ahumanfuture.co/posts/2025-03-12/i-launched-this-little-blog-on-11ty-and-i-am-excited-about-it./",
+    "Date": "2025-03-12",
+    "Author": "Thomas Rumbold",
+    "Categories": [
+      "Blogging",
+      "Why Eleventy?"
+    ]
   }
 ]
