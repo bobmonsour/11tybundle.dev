@@ -21549,5 +21549,33 @@
     "Type": "site",
     "Title": "Sightless Scribbles",
     "Link": "https://sightlessscribbles.com/"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Creating a Journal With Eleventy",
+    "Link": "https://www.simplethread.com/creating-a-journal-with-eleventy/",
+    "Date": "2025-03-25",
+    "Author": "Austin Carr",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "Dates",
+      "Front Matter",
+      "Getting Started",
+      "How to...",
+      "Layouts",
+      "Markdown",
+      "Pagination",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "is-land v5.0.0-beta.5",
+    "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0-beta.5",
+    "Date": "2025-03-24"
   }
 ]
