@@ -21577,5 +21577,11 @@
     "Title": "is-land v5.0.0-beta.5",
     "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0-beta.5",
     "Date": "2025-03-24"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Josh Thomas",
+    "Link": "https://joshthomas.dev/"
   }
 ]
