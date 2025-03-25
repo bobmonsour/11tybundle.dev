@@ -21537,5 +21537,17 @@
       "Blogging",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "mijndertstuij.nl",
+    "Link": "https://mijndertstuij.nl/"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Sightless Scribbles",
+    "Link": "https://sightlessscribbles.com/"
   }
 ]
