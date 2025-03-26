@@ -21664,5 +21664,17 @@
       "Blogging",
       "Getting Started"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Engaged California",
+    "Link": "https://engaged.ca.gov/"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Words by Wes",
+    "Link": "https://www.wordsbywes.ink/"
   }
 ]
