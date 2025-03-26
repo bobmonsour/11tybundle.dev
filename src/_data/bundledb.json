@@ -21601,5 +21601,68 @@
     "Type": "site",
     "Title": "Budkalon",
     "Link": "https://web3forms.com/pricing"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Use Passthrough File Copy to Add Assets",
+    "Link": "https://w3things.com/blog/eleventy-passthrough-file-copy/",
+    "Date": "2025-03-26",
+    "Author": "Danial Zahid",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Eleventy Layout and Template Files: A Complete Guide",
+    "Link": "https://w3things.com/blog/eleventy-layouts-and-templates/",
+    "Date": "2024-03-26",
+    "Author": "Danial Zahid",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Layouts"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Add a Sitemap (sitemap.xml) for Your Eleventy Website",
+    "Link": "https://w3things.com/blog/add-sitemap-for-eleventy-website/",
+    "Date": "2023-12-13",
+    "Author": "Danial Zahid",
+    "Categories": [
+      "Configuration",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Moving W3Things from WordPress to 11ty",
+    "Link": "https://w3things.com/blog/moving-w3things-from-wordpress-to-11ty/",
+    "Date": "2023-12-10",
+    "Author": "Danial Zahid",
+    "Categories": [
+      "How to...",
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Eleventy Tutorial - Create an 11ty Static Site",
+    "Link": "https://w3things.com/blog/eleventy-tutorial/",
+    "Date": "2024-03-27",
+    "Author": "Danial Zahid",
+    "Categories": [
+      "Blogging",
+      "Getting Started"
+    ]
   }
 ]
