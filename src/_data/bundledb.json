@@ -21712,5 +21712,17 @@
       "RSS",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Fontawesome Blog",
+    "Link": "https://blog.fontawesome.com/"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Borsch.Dev",
+    "Link": "https://borsch.dev/"
   }
 ]
