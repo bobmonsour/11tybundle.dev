@@ -21676,5 +21676,41 @@
     "Type": "site",
     "Title": "Words by Wes",
     "Link": "https://www.wordsbywes.ink/"
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Example Website",
+    "Link": "https://example.chobble.com/"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Static site deployments made easy with Github Actions and Tailscale",
+    "Link": "https://www.youtube.com/watch?v=OQJAX-Ce1YY",
+    "Date": "2025-03-27",
+    "Author": "Tailscale",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Tweaking my 11ty blog to link to the Mastodon post defined in an Org Mode property",
+    "Link": "https://sachachua.com/blog/2025/03/tweaking-my-11ty-blog-to-link-to-the-mastodon-post-defined-in-an-org-mode-property/",
+    "Date": "2025-03-27",
+    "Author": "Sacha Chua",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Front Matter",
+      "Global Data",
+      "RSS",
+      "Social Media"
+    ]
   }
 ]
