@@ -21724,5 +21724,26 @@
     "Type": "site",
     "Title": "Borsch.Dev",
     "Link": "https://borsch.dev/"
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Navigation v1.0.2",
+    "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.2",
+    "Date": "2025-03-27"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Check the  speedometer on the brand new Blog Awesome (now with 11ty)",
+    "Link": "https://blog.fontawesome.com/blog-awesome-to-11ty/",
+    "Date": "2025-03-28",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy",
+      "Performance",
+      "Plugins"
+    ]
   }
 ]
