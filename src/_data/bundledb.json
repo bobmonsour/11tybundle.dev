@@ -21745,5 +21745,83 @@
       "Performance",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "70",
+    "Type": "site",
+    "Title": "Loose Thought",
+    "Link": "https://loosethought.com/"
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "Moving 18 years of comments out of Disqus and into my 11ty static site",
+    "Link": "https://sachachua.com/blog/2025/03/moving-18-years-of-comments-out-of-disqus-and-into-my-11ty-static-site/",
+    "Date": "2025-03-30",
+    "Author": "Sacha Chua",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "blog post",
+    "Title": "The power of _redirects",
+    "Link": "https://ldstephens.net/blog/the-power-of-redirects/",
+    "Date": "2025-03-30",
+    "Author": "LD Stephens",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Migrating to Eleventy",
+      "Netlify",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Highlight Code Block Lines In Eleventy with Shiki Twoslash",
+    "Link": "https://olets.dev/posts/highlight-code-block-lines-in-eleventy-with-shiki-twoslash/",
+    "Date": "2024-04-04",
+    "Author": "Henry Bley-Vroman",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Numbered Code Block Lines in Eleventy with Shiki Twoslash",
+    "Link": "https://olets.dev/posts/numbered-code-block-lines-in-eleventy-with-shiki-twoslash/",
+    "Date": "2024-04-04",
+    "Author": "Henry Bley-Vroman",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Draft Posts in Eleventy",
+    "Link": "https://olets.dev/posts/draft-posts-in-eleventy/",
+    "Date": "2024-03-06",
+    "Author": "Henry Bley-Vroman",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "Drafts",
+      "How to..."
+    ]
   }
 ]
