@@ -21823,5 +21823,25 @@
       "Drafts",
       "How to..."
     ]
+  },
+  {
+    "Issue": "",
+    "Type": "blog post",
+    "Title": "Add high-performance search to static sites with PageFind",
+    "Link": "https://olets.dev/posts/add-high-performance-search-to-static-sites-with-pagefind/",
+    "Date": "2023-12-11",
+    "Author": "Henry Bley-Vroman",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Search"
+    ]
+  },
+  {
+    "Issue": "70",
+    "Type": "release",
+    "Title": "Eleventy Navigation v1.0.3",
+    "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.3",
+    "Date": "2025-03-31"
   }
 ]
