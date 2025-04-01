@@ -21856,5 +21856,12 @@
       "Blogging",
       "Getting Started"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "release",
+    "Title": "Eleventy Navigation v1.0.4",
+    "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.4",
+    "Date": "2025-04-01"
   }
 ]
