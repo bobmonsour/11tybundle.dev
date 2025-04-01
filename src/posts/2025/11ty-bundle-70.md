@@ -24,7 +24,7 @@ That said, I have a source close to contributors in the Eleventy-sphere and he s
 
 **11ty meetup videos.** Videos from the March 20th Meetup are out. Here's [the playlist](https://www.youtube.com/playlist?list=PLJy3jyeGVYUoyTlnt_S3Bni9XOmXjTm1t) with both videos, featuring David Moll on using Umami with 11ty, and Zach Leatherman on moving the [Font Awesome blog](https://blog.fontawesome.com/) from Wordpress to Eleventy (here's [the blog post about it](https://blog.fontawesome.com/blog-awesome-to-11ty/)).
 
-**Getty does digital books.** This looks like a pretty amazing project by [Getty](https://www.getty.edu/). It's called [Quire](https://quire.getty.edu/) and it's an open source, 11ty-based project to _"Create scholarly, bisually rich digital books that last."_ And there's a [Vimeo video about it](https://vimeo.com/820983026/b3a116fb1e).
+**Getty does digital books.** This looks like a pretty amazing project by [Getty](https://www.getty.edu/). It's called [Quire](https://quire.getty.edu/) and it's an open source, 11ty-based project to _"Create scholarly, visually rich digital books that last."_ And there's a [Vimeo video about it](https://vimeo.com/820983026/b3a116fb1e).
 
 **Speedlify updated.** Zach has updated the [Speedlify leaderboard](https://www.11ty.dev/speedlify/) of 11ty sites. He's limited the sites listed and only has included those with a total Lighthouse score of 400 (aka 4 hundos). Sadly, none of my sites made the cut...I've got work to do.
 
