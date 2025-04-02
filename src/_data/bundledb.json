@@ -21863,5 +21863,19 @@
     "Title": "Eleventy Navigation v1.0.4",
     "Link": "https://github.com/11ty/eleventy-navigation/releases/tag/v1.0.4",
     "Date": "2025-04-01"
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "I picked a CMS",
+    "Link": "https://alansuspect.dev/blog/i-picked-a-cms/",
+    "Date": "2025-01-23",
+    "Author": "Alan Quirk",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Configuration",
+      "How to..."
+    ]
   }
 ]
