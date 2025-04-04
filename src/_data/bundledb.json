@@ -21921,5 +21921,32 @@
       "Navigation",
       "Shortcodes"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Updating my website",
+    "Link": "https://hexaedre.com/hexa01/",
+    "Date": "2025-03-28",
+    "Author": "Denis Ricard",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Creating a blogroll page from Mastodon bookmarks",
+    "Link": "https://www.simoncox.com/post/2025-04-04-creating-a-blogroll-page-from-mastodon-bookmarks/",
+    "Date": "2025-04-04",
+    "Author": "Simon Cox",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Remote Data",
+      "Social Media"
+    ]
   }
 ]
