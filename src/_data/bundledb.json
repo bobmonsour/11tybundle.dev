@@ -21962,5 +21962,11 @@
       "Configuration",
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "site",
+    "Title": "Hexaèdre",
+    "Link": "https://hexaedre.com/"
   }
 ]
