@@ -21877,5 +21877,49 @@
       "Configuration",
       "How to..."
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Migrating to Eleventy",
+    "Link": "https://marcjenkins.co.uk/migrating-to-eleventy/",
+    "Date": "2025-03-26",
+    "Author": "Marc Jenkins",
+    "Categories": [
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "site",
+    "Title": "Convrtr",
+    "Link": "https://www.convrtr.xyz/"
+  },
+  {
+    "Issue": "71",
+    "Type": "site",
+    "Title": "BeFreaky",
+    "Link": "https://www.befreaky.co/"
+  },
+  {
+    "Issue": "71",
+    "Type": "release",
+    "Title": "Eleventy Import v1.0.15",
+    "Link": "https://github.com/11ty/eleventy-import/releases/tag/v1.0.15",
+    "Date": "2025-04-02"
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Adding subheadings and sketches to my blog page navigation",
+    "Link": "https://sachachua.com/blog/2025/04/adding-subheadings-and-sketches-to-my-blog-page-navigation/",
+    "Date": "2025-04-03",
+    "Author": "Sacha Chua",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Navigation",
+      "Shortcodes"
+    ]
   }
 ]
