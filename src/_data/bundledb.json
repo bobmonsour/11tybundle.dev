@@ -21948,5 +21948,19 @@
       "Remote Data",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Swapping from Vue to Eleventy",
+    "Link": "https://bryn.codes/writing/vue-to-11ty/",
+    "Date": "2025-03-01",
+    "Author": "Bryn Newell",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "Configuration",
+      "Migrating to Eleventy"
+    ]
   }
 ]
