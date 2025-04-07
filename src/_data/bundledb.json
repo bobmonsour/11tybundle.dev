@@ -21968,5 +21968,23 @@
     "Type": "site",
     "Title": "Hexaèdre",
     "Link": "https://hexaedre.com/"
+  },
+  {
+    "Issue": "71",
+    "Type": "site",
+    "Title": "Klaas Pieter Annema",
+    "Link": "https://annema.me/"
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "I moved my website to CloudFlare Pages, here’s why",
+    "Link": "https://roboleary.net/blog/cloudflare-pages/",
+    "Date": "2025-04-07",
+    "Author": "Rob O'Leary",
+    "Categories": [
+      "Deployment",
+      "Netlify"
+    ]
   }
 ]
