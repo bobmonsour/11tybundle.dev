@@ -21986,5 +21986,34 @@
       "Deployment",
       "Netlify"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "How My Terminal Text WebC Component Works_",
+    "Link": "https://jjoohhnn.com/blog/terminal-text/",
+    "Date": "2025-04-07",
+    "Author": "John Michael Swartz",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "How to...",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Recreating Search with Eleventy v3 and Netlify",
+    "Link": "https://www.philiprenich.com/blog/recreating-search-with-eleventy-v3-and-netlify/",
+    "Date": "2025-04-08",
+    "Author": "Philip Renich",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Netlify",
+      "Search",
+      "Serverless"
+    ]
   }
 ]
