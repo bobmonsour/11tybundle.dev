@@ -22015,5 +22015,20 @@
       "Search",
       "Serverless"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Journal Eleventy, présentation et mini-tutoriel",
+    "Link": "https://linuxfr.org/users/outs/journaux/eleventy-presentation-et-mini-tutoriel",
+    "Date": "2025-04-09",
+    "Author": "Joris R",
+    "Categories": [
+      "CSS/Sass",
+      "Configuration",
+      "Deployment",
+      "Getting Started",
+      "Layouts"
+    ]
   }
 ]
