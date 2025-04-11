@@ -22030,5 +22030,57 @@
       "Getting Started",
       "Layouts"
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "release",
+    "Title": "Eleventy Image v6.0.2",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.2",
+    "Date": "2025-04-10"
+  },
+  {
+    "Issue": "71",
+    "Type": "site",
+    "Title": "ATOMWOLF",
+    "Link": "https://www.atomwolf.org/"
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "mapping with leaflet",
+    "Link": "https://tlohde.com/blog/2025/04/mapping-with-leaflet/",
+    "Date": "2025-01-04",
+    "Author": "tlohde",
+    "Categories": [
+      "How to...",
+      "Layouts",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "A brief update to how I write these posts",
+    "Link": "https://paulcapewell.com/blog/250411_1426/",
+    "Date": "2025-04-11",
+    "Author": "Paul Capewell",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Rendering FreeMarker and Python page templates with 11ty",
+    "Link": "https://tfedder.de/blog/freemarker-and-python-page-templates-in-11ty/",
+    "Date": "2025-04-11",
+    "Author": "Tobias Fedder",
+    "Categories": [
+      "Configuration",
+      "Data Cascade",
+      "How to..."
+    ]
   }
 ]
