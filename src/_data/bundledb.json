@@ -22082,5 +22082,95 @@
       "Data Cascade",
       "How to..."
     ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Publishing from Obsidian using 11ty",
+    "Link": "https://deepakness.com/blog/publishing-from-obsidian-using-11ty/",
+    "Date": "2024-02-16",
+    "Author": "DeepakNess",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "How to...",
+      "Obsidian"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Dynamically creating QR codes in Eleventy",
+    "Link": "https://www.alpower.com/blog/2025-04-13-dynamically-creating-QR-codes-for-eleventy-posts/",
+    "Date": "2025-04-13",
+    "Author": "Al Power",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Plugins",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Embedding a Mastodon Toot via Eleventy",
+    "Link": "https://nearerandfarther.com/embedding-a-mastodon-toot-via-eleventy/",
+    "Date": "2025-01-25",
+    "Author": "Trevor Burrows",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Shortcodes",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Embedding a Mastodon Toot via Eleventy - pt 2",
+    "Link": "https://nearerandfarther.com/embedding-a-mastodon-toot-via-eleventy-pt-2/",
+    "Date": "2025-01-25",
+    "Author": "Trevor Burrows",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Shortcodes",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "release",
+    "Title": "Eleventy v3.1.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.0-alpha.1",
+    "Date": "2025-04-14"
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "Generating content driven CSS with Eleventy",
+    "Link": "https://httpster.io/article/generating-content-driven-css-with-eleventy/",
+    "Date": "2025-04-11",
+    "Author": "Sami",
+    "Categories": [
+      "CSS/Sass",
+      "Data Cascade",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "71",
+    "Type": "blog post",
+    "Title": "11tyCMS",
+    "Link": "https://thinkymeat.neocities.org/posts/11tycms/",
+    "Date": "2025-04-14",
+    "Author": "Thinkymeat",
+    "Categories": [
+      "Blogging",
+      "CMS"
+    ]
   }
 ]
