@@ -22,7 +22,7 @@ Writing this following the first week of our month-long stay in Burbank. I conti
 
 **CMS developments in progress.** I noticed two distinct CMS efforts to support 11ty. One was noted in [this Reddit thread](https://www.reddit.com/r/eleventy/comments/1jtis3i/i_built_a_visual_markdown_editor_for_11ty/). Known at the moment as [JekyllPad](https://www.jekyllpad.com/), the Reddit thread claims that it now will support 11ty. The second is a coming Electron-based app that I discovered via this [Mastodon post](https://mstdn.social/@QueerMatters/114337351259091474). Here's the [related blog post](https://thinkymeat.neocities.org/posts/11tycms/). I love to see developments like this.
 
-**Drafts are simpler.** Someone, I can't recall who, cited [this section of the 11ty docs](<(https://www.11ty.dev/docs/config-preprocessors/#example-drafts)>) showing how incredibly simple it is to set up a draft system. I recall a far more complex method required in earlier times.
+**Drafts are simpler.** Someone, I can't recall who, cited [this section of the 11ty docs](https://www.11ty.dev/docs/config-preprocessors/#example-drafts) showing how incredibly simple it is to set up a draft system. I recall a far more complex method required in earlier times.
 
 **QR code curious?** [Al Power](https://www.alpower.com/) shows how to [dynamically create QR codes in Eleventy](https://www.alpower.com/blog/2025-04-13-dynamically-creating-QR-codes-for-eleventy-posts/).
 
