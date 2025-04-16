@@ -37,6 +37,7 @@
 		"@11ty/eleventy-upgrade-help": "^3.0.1",
 		"@octokit/rest": "^21.0.2",
 		"@rknightuk/eleventy-plugin-post-graph": "^1.0.6",
+		"axios": "^1.8.4",
 		"check-html-links": "^0.2.4",
 		"cheerio": "^1.0.0-rc.12",
 		"cross-env": "^7.0.3",
