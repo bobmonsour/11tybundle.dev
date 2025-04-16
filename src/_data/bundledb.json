@@ -18500,5 +18500,75 @@
     "Title": "Atomic",
     "Link": "https://atomic.financial/",
     "Date": "2025-04-15"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "freeCodeCamp News",
+    "Link": "https://www.freecodecamp.org/news",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Cloudflare Research",
+    "Link": "https://research.cloudflare.com/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Shopify's Ruby Style Guide",
+    "Link": "https://ruby-style-guide.shopify.dev/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Flutter documentation",
+    "Link": "https://docs.flutter.dev/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Extension Workshop",
+    "Link": "https://extensionworkshop.com/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Mozilla Add-ons Community Blog",
+    "Link": "https://blog.mozilla.org/addons/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "TypeChat",
+    "Link": "https://microsoft.github.io/TypeChat/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "CourtNotes",
+    "Link": "https://courtnotes.netlify.app/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Apache Annotator",
+    "Link": "https://annotator.incubator.apache.org/",
+    "Date": "2025-04-16"
+  },
+  {
+    "Issue": 72,
+    "Type": "site",
+    "Title": "Apache Royale",
+    "Link": "https://royale.apache.org/",
+    "Date": "2025-04-16"
   }
 ]
