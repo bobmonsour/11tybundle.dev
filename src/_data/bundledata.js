@@ -39,6 +39,7 @@ export default async function () {
       const dateB = new Date(b.Date || 0); // Default to epoch if Date is missing
       return dateB - dateA; // Sort in descending order
     });
+  const siteCount = siteList.length;
 
   // generate the list of starter projects, ordered by most date of most recent update
 
@@ -199,6 +200,7 @@ export default async function () {
   // log the counts of various items
   console.log("postCount: " + postCount);
   console.log("starterCount: " + starterCount);
+  console.log("siteCount: " + siteCount);
   console.log("authorCount: " + authorCount);
   console.log("categoryCount: " + categoryCount);
 
@@ -222,6 +224,7 @@ export default async function () {
     postCount,
     releaseList,
     siteList,
+    siteCount,
     starters,
     startersByStars,
     starterCount,
