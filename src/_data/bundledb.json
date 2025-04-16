@@ -22795,5 +22795,19 @@
     "Title": "Apache Royale",
     "Link": "https://royale.apache.org/",
     "Date": "2025-04-16"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Adding base64 placeholder background images to eleventy-img",
+    "Link": "https://blog.chobble.com/blog/25-04-16-adding-base64-image-backgrounds-to-eleventy-img/",
+    "Date": "2025-04-16",
+    "Author": "Stefan Burke",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Images",
+      "Shortcodes"
+    ]
   }
 ]
