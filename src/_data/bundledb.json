@@ -22737,5 +22737,26 @@
       "Debugging",
       "How to..."
     ]
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "ByteAether",
+    "Link": "https://byteaether.github.io/",
+    "Date": "2025-04-19"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Building a resume website with eleventy",
+    "Link": "https://keith.is/blog/building-a-resume-website-with-eleventy/",
+    "Date": "2025-02-15",
+    "Author": "Keith Kurson",
+    "Categories": [
+      "CSS/Sass",
+      "Global Data",
+      "How to...",
+      "WebC"
+    ]
   }
 ]

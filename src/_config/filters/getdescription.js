@@ -53,10 +53,6 @@ export const getDescription = async (link) => {
     return descriptionCache[link];
   }
 
-  // if (exceptionList.includes(link)) {
-  // 	descriptionCache[link] = "";
-  // 	return descriptionCache[link];
-  // }
   try {
     let htmlcontent = await EleventyFetch(link, {
       directory: ".cache",

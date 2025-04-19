@@ -42,14 +42,14 @@
     "rssFail": "true"
   },
   {
-    "url": "https://www.stephaniewyatt.tel/",
+    "url": "https://www.stephaniewyatt.tel",
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "true"
   },
   {
-    "url": "https://www.simplethread.com/",
-    "rssFeed": "https://www.simplethread.com/feed/",
+    "url": "https://www.simplethread.com",
+    "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "false"
   },
@@ -60,7 +60,7 @@
     "rssFail": "false"
   },
   {
-    "url": "https://alanquirk.com/",
+    "url": "https://alanquirk.com",
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "false"
