@@ -22765,5 +22765,48 @@
     "Title": "The Football Factory",
     "Link": "https://thefootballfactorynj.com/",
     "Date": "2025-04-19"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "How To Make Eleventy Understand Obsidian-style Wiki Links",
+    "Link": "https://blog.martin-haehnel.de/2025/04/21/eleventy-wikilinks/",
+    "Date": "2025-04-20",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Obsidian",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Letterboxd to Markdown",
+    "Link": "https://keith.is/blog/letterboxd-to-markdown/",
+    "Date": "2025-04-20",
+    "Author": "Keith Kurson",
+    "Categories": [
+      "How to...",
+      "Markdown",
+      "RSS",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "Geeko Metric",
+    "Link": "https://geekometric.com/",
+    "Date": "2025-04-21"
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "eblu",
+    "Link": "https://eblu.space/",
+    "Date": "2025-04-21"
   }
 ]
