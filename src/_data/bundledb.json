@@ -22596,7 +22596,7 @@
     "Title": "11tyCMS",
     "Link": "https://thinkymeat.neocities.org/posts/11tycms/",
     "Date": "2025-04-14",
-    "Author": "ThinkyMeat",
+    "Author": "Thinkymeat",
     "Categories": [
       "Blogging",
       "CMS"
@@ -22699,7 +22699,7 @@
     "Title": "11tyCMS: Electron Prototype",
     "Link": "https://thinkymeat.neocities.org/posts/11tycms-electron-prototype/",
     "Date": "2025-04-17",
-    "Author": "ThinkyMeat",
+    "Author": "Thinkymeat",
     "Categories": [
       "CMS"
     ]
@@ -22883,6 +22883,40 @@
     "Type": "site",
     "Title": "IODOCS",
     "Link": "https://www.iodocs.nl/",
+    "Date": "2025-04-23"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "11tyCMS: First design & file management",
+    "Link": "https://thinkymeat.neocities.org/posts/11tycms-redesign/",
+    "Date": "2025-04-23",
+    "Author": "Thinkymeat",
+    "Categories": [
+      "Blogging",
+      "CMS"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "How I write and publish blog posts in April 2025",
+    "Link": "https://hamatti.org/posts/how-i-write-and-publish-blog-posts-in-april-2025/",
+    "Date": "2025-04-23",
+    "Author": "Juha-Matti Santala",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "Images",
+      "Notion",
+      "Obsidian"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "Photos by Stephen Gower",
+    "Link": "https://photos.srgower.com/",
     "Date": "2025-04-23"
   }
 ]
