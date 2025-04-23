@@ -22918,5 +22918,12 @@
     "Title": "Photos by Stephen Gower",
     "Link": "https://photos.srgower.com/",
     "Date": "2025-04-23"
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "Eleventy Bundle v3.0.5",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v3.0.5",
+    "Date": "2025-04-22"
   }
 ]
