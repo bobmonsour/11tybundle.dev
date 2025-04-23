@@ -22808,5 +22808,81 @@
     "Title": "eblu",
     "Link": "https://eblu.space/",
     "Date": "2025-04-21"
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "carlo_trimarchi",
+    "Link": "https://carlotrimarchi.it/",
+    "Date": "2025-04-21"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Eleventy: A GitHub Workflow to Check if an Automated Dependency Update Would Break Your Site",
+    "Link": "https://meiert.com/en/blog/eleventy-github-workflow/",
+    "Date": "2025-04-22",
+    "Author": "Jens Oliver Meiert",
+    "Categories": [
+      "Deployment",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "Eleventy Bundle v3.0.4",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v3.0.4",
+    "Date": "2025-04-21"
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "eleventy-plugin-font-awesome v1.0.0-beta.11",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0-beta.11",
+    "Date": "2025-04-21"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Double-Pagination in Elev­enty",
+    "Link": "https://chriskirknielsen.com/blog/double-pagination-in-eleventy/",
+    "Date": "2025-04-23",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": [
+      "Collections",
+      "Configuration",
+      "How to...",
+      "Pagination"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "David Moll Gallery",
+    "Link": "https://gallery.davidmoll.net/",
+    "Date": "2025-04-23"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Magick images",
+    "Link": "https://ethanmarcotte.com/wrote/magick-images/",
+    "Date": "2025-04-22",
+    "Author": "Ethan Marcotte",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "IODOCS",
+    "Link": "https://www.iodocs.nl/",
+    "Date": "2025-04-23"
   }
 ]
