@@ -22962,5 +22962,42 @@
     "Title": "EmONC Digital Guide",
     "Link": "https://emonc.org/en/",
     "Date": "2025-04-24"
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "Gymnasium",
+    "Link": "https://thegymnasium.com/",
+    "Date": "2025-04-24"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Using Notion as CMS with your Eleventy site with vrugtehagel",
+    "Link": "https://www.youtube.com/watch?v=RTfk_o7zz-A",
+    "Date": "2025-04-24",
+    "Author": "vrugtehagel",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Notion",
+      "Plugins",
+      "YouTube"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Rapidly(?) Developing Front-End Components with 11ty with Michael Delaney",
+    "Link": "https://www.youtube.com/watch?v=hNLr_VwGn9M",
+    "Date": "2025-04-24",
+    "Author": "Michael Delaney",
+    "Categories": [
+      "CMS",
+      "Configuration",
+      "How to...",
+      "YouTube"
+    ]
   }
 ]
