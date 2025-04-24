@@ -22941,5 +22941,19 @@
       "Notion",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.1.0-beta.3",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0-beta.3",
+    "Date": "2025-04-23"
+  },
+  {
+    "Issue": "72",
+    "Type": "site",
+    "Title": "Bartoshevich",
+    "Link": "https://bartoshevich.by/",
+    "Date": "2025-04-24"
   }
 ]
