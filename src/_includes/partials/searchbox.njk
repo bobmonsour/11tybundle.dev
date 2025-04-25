@@ -5,6 +5,18 @@
 </div>
 <script>
 		window.addEventListener('DOMContentLoaded', (event) => {
-				new PagefindUI({ element: "#search", translations: { placeholder: "Search the entire site",zero_results: "Count not find [SEARCH_TERM]" },showSubResults: true, showImages: false, showEmptyFilters: false, showSubResults: true, excerptLength: 100, pageSize: 10 });
+				new PagefindUI({ element: "#search", translations: { placeholder: "Type / to search",zero_results: "Count not find [SEARCH_TERM]" },showSubResults: true, showImages: false, showEmptyFilters: false, showSubResults: true, excerptLength: 100, pageSize: 10 });
+
+    // Add event listener for the '/' key
+        document.addEventListener('keydown', (e) => {
+            // Check if the '/' key was pressed and no input or textarea is focused
+            if (e.key === '/' && !e.target.matches('input, textarea')) {
+                e.preventDefault(); // Prevent the default browser behavior
+                const searchInput = document.querySelector('.pagefind-ui__search-input');
+                if (searchInput) {
+                    searchInput.focus(); // Move focus to the search box
+                }
+            }
+        });
 		});
 </script>
