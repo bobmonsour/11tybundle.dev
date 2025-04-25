@@ -22999,5 +22999,19 @@
       "How to...",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "Eleventy Bundle v3.0.6",
+    "Link": "https://github.com/11ty/eleventy-plugin-bundle/releases/tag/v3.0.6",
+    "Date": "2025-04-24"
+  },
+  {
+    "Issue": "72",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.2",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.2",
+    "Date": "2025-04-24"
   }
 ]
