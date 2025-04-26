@@ -23013,5 +23013,21 @@
     "Title": "Eleventy Utils v2.0.2",
     "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.2",
     "Date": "2025-04-24"
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Taking VentoJS for a spin in Elev­enty",
+    "Link": "https://chriskirknielsen.com/blog/taking-vento-js-for-a-spin-in-eleventy/",
+    "Date": "2025-04-26",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": [
+      "Configuration",
+      "Filters",
+      "How to...",
+      "Markdown",
+      "Nunjucks/Macros",
+      "Plugins"
+    ]
   }
 ]
