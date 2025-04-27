@@ -23029,5 +23029,17 @@
       "Nunjucks/Macros",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Hello 11ty 3",
+    "Link": "https://www.inconsistent.software/blog/2025-04-hello-eleventy-3/",
+    "Date": "2025-04-26",
+    "Author": "Judah Perez",
+    "Categories": [
+      "Images",
+      "Upgrading"
+    ]
   }
 ]

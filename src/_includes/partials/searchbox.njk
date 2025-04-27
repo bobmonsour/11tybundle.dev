@@ -1,22 +1,34 @@
 {# pagefind search box #}
 <script src="/pagefind/pagefind-ui.js" defer></script>
 <div id="search" class="content" aria-live="polite" type="search">
-	<label for="search" class="visually-hidden-search">Search</label>
+  <label for="search" class="visually-hidden-search">Search</label>
 </div>
 <script>
-		window.addEventListener('DOMContentLoaded', (event) => {
-				new PagefindUI({ element: "#search", translations: { placeholder: "Type / to search",zero_results: "Count not find [SEARCH_TERM]" },showSubResults: true, showImages: false, showEmptyFilters: false, showSubResults: true, excerptLength: 100, pageSize: 10 });
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({
+      element: "#search",
+      translations: {
+        placeholder: "Type / to search",
+        zero_results: "Count not find [SEARCH_TERM]"
+      },
+      showSubResults: true,
+      showImages: false,
+      showEmptyFilters: false,
+      showSubResults: true,
+      excerptLength: 100,
+      pageSize: 10
+    });
 
     // Add event listener for the '/' key
-        document.addEventListener('keydown', (e) => {
-            // Check if the '/' key was pressed and no input or textarea is focused
-            if (e.key === '/' && !e.target.matches('input, textarea')) {
-                e.preventDefault(); // Prevent the default browser behavior
-                const searchInput = document.querySelector('input.pagefind-ui__search-input');
-                if (searchInput) {
-                    searchInput.focus(); // Move focus to the search box
-                }
-            }
-        });
-		});
+    document.addEventListener('keydown', (e) => {
+      // Check if the '/' key was pressed and no input or textarea is focused
+      if (e.key === '/' && !e.target.matches('input, textarea')) {
+        e.preventDefault(); // Prevent the default browser behavior
+        const searchInput = document.querySelector('input.pagefind-ui__search-input');
+        if (searchInput) {
+          searchInput.focus(); // Move focus to the search box
+        }
+      }
+    });
+  });
 </script>
