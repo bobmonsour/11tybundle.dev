@@ -23041,5 +23041,54 @@
       "Images",
       "Upgrading"
     ]
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "Migrating to 11ty",
+    "Link": "https://nooshu.com/blog/2024/12/22/migrating-to-11ty/",
+    "Date": "2024-12-22",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Markdown",
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "A Test of Eleventy Fetch",
+    "Link": "https://www.raymondcamden.com/2025/04/30/a-test-of-eleventy-fetch",
+    "Date": "2025-04-30",
+    "Author": "Raymond Camden",
+    "Categories": [
+      "Global Data",
+      "How to...",
+      "Netlify",
+      "Plugins",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.3",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.3",
+    "Date": "2025-04-29"
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.4",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.4",
+    "Date": "2025-04-29"
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Utils v2.0.5",
+    "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.5",
+    "Date": "2025-04-29"
   }
 ]
