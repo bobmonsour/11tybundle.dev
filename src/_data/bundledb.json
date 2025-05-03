@@ -23090,5 +23090,12 @@
     "Title": "Eleventy Utils v2.0.5",
     "Link": "https://github.com/11ty/eleventy-utils/releases/tag/v2.0.5",
     "Date": "2025-04-29"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "World Snacks",
+    "Link": "https://snacks.melanie-richards.com/",
+    "Date": "2025-05-03"
   }
 ]

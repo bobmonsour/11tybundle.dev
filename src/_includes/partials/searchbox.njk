@@ -27,6 +27,7 @@
         const searchInput = document.querySelector('input.pagefind-ui__search-input');
         if (searchInput) {
           searchInput.focus(); // Move focus to the search box
+          fathom.trackEvent('search keyboard shortcut');
         }
       }
     });
