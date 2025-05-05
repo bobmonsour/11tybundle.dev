@@ -23097,5 +23097,24 @@
     "Title": "World Snacks",
     "Link": "https://snacks.melanie-richards.com/",
     "Date": "2025-05-03"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "Jien Weng",
+    "Link": "https://jienweng.com/",
+    "Date": "2025-05-05"
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "Why I Switched from Astro to 11ty",
+    "Link": "https://jienweng.com/posts/why-i-switched-from-astro-to-11ty/",
+    "Date": "2025-05-05",
+    "Author": "Jien Weng",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
   }
 ]
