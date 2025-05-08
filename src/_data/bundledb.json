@@ -23173,5 +23173,32 @@
     "Categories": [
       "How to..."
     ]
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Fetch v5.1.0",
+    "Link": "https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0",
+    "Date": "2025-05-08"
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "Displaying Webmentions",
+    "Link": "https://reillyspitzfaden.com/posts/2025/01/displaying-webmentions/",
+    "Date": "2025-01-28",
+    "Author": "Reilly Spitzfaden",
+    "Categories": [
+      "How to...",
+      "Plugins",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Image v6.0.3",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.3",
+    "Date": "2025-05-08"
   }
 ]
