@@ -23148,5 +23148,30 @@
     "Title": "🍩DonutSec",
     "Link": "https://donutsec.fun/",
     "Date": "2025-05-06"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "Multiline Comment",
+    "Link": "https://multiline.co/mment/",
+    "Date": "2025-05-06"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "varn.dev",
+    "Link": "https://varn.dev/",
+    "Date": "2025-05-07"
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "Running 11ty and PHP concurrently",
+    "Link": "https://www.coryd.dev/posts/2025/running-11ty-and-php-concurrently/",
+    "Date": "2025-05-07",
+    "Author": "Cory Dransfeldt",
+    "Categories": [
+      "How to..."
+    ]
   }
 ]
