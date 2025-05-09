@@ -23200,5 +23200,26 @@
     "Title": "Eleventy Image v6.0.3",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.3",
     "Date": "2025-05-08"
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy RSS v2.0.4",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.4",
+    "Date": "2025-05-08"
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy Syntax Highlighter (Prism) v5.0.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.1",
+    "Date": "2025-05-08"
+  },
+  {
+    "Issue": "73",
+    "Type": "release",
+    "Title": "Eleventy RSS v2.0.4",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.4",
+    "Date": "2025-05-08"
   }
 ]
