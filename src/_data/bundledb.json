@@ -23221,5 +23221,19 @@
     "Title": "Eleventy RSS v2.0.4",
     "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.4",
     "Date": "2025-05-08"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "Jorijn Schrijvershof",
+    "Link": "https://jorijn.com/en/",
+    "Date": "2025-05-09"
+  },
+  {
+    "Issue": "73",
+    "Type": "site",
+    "Title": "Mural Arts Philadelphia",
+    "Link": "https://catalog.muralarts.org/",
+    "Date": "2025-05-10"
   }
 ]
