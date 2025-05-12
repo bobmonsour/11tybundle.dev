@@ -23235,5 +23235,33 @@
     "Title": "Mural Arts Philadelphia",
     "Link": "https://catalog.muralarts.org/",
     "Date": "2025-05-10"
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "How To Make Eleventy Understand Obsidian-style Callouts",
+    "Link": "https://blog.martin-haehnel.de/2025/05/11/obsidian-callouts-eleventy/",
+    "Date": "2025-05-11",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Obsidian",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "Moving the Blog to 11ty",
+    "Link": "https://rosenqvist.design/blog/moving-to-11ty/",
+    "Date": "2025-05-11",
+    "Author": "Rosenqvist",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
   }
 ]
