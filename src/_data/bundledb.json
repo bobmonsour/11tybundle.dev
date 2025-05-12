@@ -23263,5 +23263,19 @@
       "Migrating to Eleventy",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "73",
+    "Type": "blog post",
+    "Title": "How I built dynamic social media images in Eleventy using Cloudinary",
+    "Link": "https://chipcullen.com/how-i-built-dynamic-social-media-images-in-eleventy-using-cloudinary/",
+    "Date": "2025-05-12",
+    "Author": "Chip Cullen",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
   }
 ]
