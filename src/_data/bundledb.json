@@ -23277,5 +23277,12 @@
       "Images",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "release",
+    "Title": "Eleventy Image v6.0.4",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.4",
+    "Date": "2025-05-13"
   }
 ]
