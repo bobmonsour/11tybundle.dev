@@ -27,7 +27,9 @@ A quick heads-up: in the event of a summer slowdown in content, it might be more
 - [Eleventy Fetch v5.1.0](https://github.com/11ty/eleventy-fetch/releases/tag/v5.1.0)
 - [Eleventy RSS v2.0.4](https://github.com/11ty/eleventy-plugin-rss/releases/tag/v2.0.4)
 
-And a reminder that [Eleventy v3.1.0-beta.1](https://github.com/11ty/eleventy/releases/tag/v3.1.0-beta.1) is out. It's 22% smaller and 11% faster! Give it a spin.
+~~And a reminder that [Eleventy v3.1.0-beta.1](https://github.com/11ty/eleventy/releases/tag/v3.1.0-beta.1) is out. It's 22% smaller and 11% faster! Give it a spin.~~
+
+> UPDATE: This just in...[Eleventy v3.1.0](https://github.com/11ty/eleventy/releases/tag/v3.1.0) has been released! 🎉 It's 22% smaller and 11% faster! Give it a spin.
 
 **Nunjucks lives.** [Natalie Carey](https://nataliecarey.uk/) has put out [a proposal for Nunjucks maintenance](https://github.com/mozilla/nunjucks/issues/1484). And [nunjucks4 is currently in alpha](https://github.com/nunjucks/nunjucks4). Happy to see this project get some love.
 
