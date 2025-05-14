@@ -23284,5 +23284,26 @@
     "Title": "Eleventy Image v6.0.4",
     "Link": "https://github.com/11ty/eleventy-img/releases/tag/v6.0.4",
     "Date": "2025-05-13"
+  },
+  {
+    "Issue": "74",
+    "Type": "release",
+    "Title": "mustache-1.0.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-template-languages/releases/tag/mustache-1.0.1",
+    "Date": "2025-05-13"
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "Providing next event as API with Eleventy’s Global Data Files and Netlify Functions",
+    "Link": "https://hamatti.org/posts/providing-next-event-as-api-with-eleventys-global-data-files-and-netlify-functions/",
+    "Date": "2025-05-14",
+    "Author": "Juha-Matti Santala",
+    "Categories": [
+      "Configuration",
+      "Global Data",
+      "How to...",
+      "Netlify"
+    ]
   }
 ]
