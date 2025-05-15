@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /firehosefeed.xml
+permalink: /sitesfeed.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
@@ -9,16 +9,14 @@ eleventyExcludeFromCollections: true
 		<title>{{ site.title }}</title>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml" />
-		<description>The 11ty Bundle: recent posts from the 11ty community.</description>
+		<description>The 11ty Bundle: recent sites built with Eleventy.</description>
 		<language>{{ site.language }}</language>
-    {%- set recent = bundledata.firehose.slice(0,20) -%}
+		{%- set recent = bundledata.siteList.slice(0,20) -%}
 		{%- for item in recent %}
 		<item>
 			<title>{{ item.Title }}</title>
 			<link>{{ item.Link }}</link>
-			<description>{{ item.Link | getDescription }}</description>
 			<pubDate>{{ item.Date | formatFirehoseDate }}</pubDate>
-			<dc:creator>{{ item.Author }}</dc:creator>
 			<guid>{{ item.Link }}</guid>
 		</item>
 		{%- endfor %}

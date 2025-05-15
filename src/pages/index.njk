@@ -37,7 +37,7 @@ permalink: "/index.html"
 			</ul>
 		</div>
 		<div class="home-sites flow">
-			<p>Recent sites...</p>
+			<p>Recent sites... <a class="feedlink" href="/sitesfeed.xml">(RSS)</a></p>
 			<ul>
 				{%- set recent = bundledata.siteList.slice(0,11) -%}
 				{%- for item in recent -%}
