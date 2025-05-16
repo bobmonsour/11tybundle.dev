@@ -1,9 +1,7 @@
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
-const bundleRecords = require("./bundledb.json");
+import bundleRecords from './bundledb.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
