@@ -18,6 +18,9 @@ eleventyExcludeFromCollections: true
 			<link>{{ item.Link }}</link>
 			<pubDate>{{ item.Date | formatFirehoseDate }}</pubDate>
 			<guid>{{ item.Link }}</guid>
+      <description><![CDATA[
+    Built with Eleventy: <a href="{{ item.Link }}">{{ item.Title }}</a>
+  ]]></description>
 		</item>
 		{%- endfor %}
 	</channel>
