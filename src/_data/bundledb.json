@@ -23356,5 +23356,21 @@
       "Nunjucks/Macros",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "My 11ty Blogging Workflow",
+    "Link": "https://flohgro.com/blog/my-11ty-blogging-workflow/",
+    "Date": "2025-05-20",
+    "Author": "Floh Gro",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Deployment",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
   }
 ]
