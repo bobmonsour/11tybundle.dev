@@ -23372,5 +23372,18 @@
       "Images",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "Vento: My Favourite Template Language for Eleventy",
+    "Link": "https://helenchong.dev/blog/posts/2025-05-21-vento-in-eleventy/",
+    "Date": "2025-05-21",
+    "Author": "Helen Chong",
+    "Categories": [
+      "How to...",
+      "Internationalization",
+      "Nunjucks/Macros"
+    ]
   }
 ]
