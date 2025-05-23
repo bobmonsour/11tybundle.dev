@@ -23411,5 +23411,11 @@
       "CSS/Sass",
       "Nunjucks/Macros"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "starter",
+    "Title": "Eleventy LibDoc",
+    "Link": "https://eleventy-libdoc.netlify.app/"
   }
 ]
