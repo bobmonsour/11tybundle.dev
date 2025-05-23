@@ -23385,5 +23385,31 @@
       "Internationalization",
       "Nunjucks/Macros"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "yearsSince",
+    "Link": "https://marcamos.com/journal/years-since/",
+    "Date": "2025-05-21",
+    "Author": "Marc Amos",
+    "Categories": [
+      "Dates",
+      "How to...",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "Journa11ty",
+    "Link": "https://claytonerrington.com/blog/journa11ty/",
+    "Date": "2025-05-23",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Blogging",
+      "CSS/Sass",
+      "Nunjucks/Macros"
+    ]
   }
 ]
