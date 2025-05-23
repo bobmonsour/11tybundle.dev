@@ -19109,6 +19109,7 @@
     "Issue": "74",
     "Type": "starter",
     "Title": "Eleventy LibDoc",
-    "Link": "https://github.com/ita-design-system/eleventy-libdoc/"
+    "Link": "https://github.com/ita-design-system/eleventy-libdoc",
+    "Demo": "https://eleventy-libdoc.netlify.app/"
   }
 ]
