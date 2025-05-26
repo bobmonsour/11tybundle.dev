@@ -23425,5 +23425,32 @@
     "Title": "Eleventy v3.1.0",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.0",
     "Date": "2025-05-13"
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "A Quick Guide to Everything I Know about Webmentions",
+    "Link": "https://reillyspitzfaden.com/digital-garden/tutorials/webmention-tutorial/",
+    "Date": "2025-05-24",
+    "Author": "Reilly Spitzfaden",
+    "Categories": [
+      "How to...",
+      "Remote Data",
+      "Social Media",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "74",
+    "Type": "blog post",
+    "Title": "Building Search Index with Eleventy",
+    "Link": "https://arielsalminen.com/2025/building-search-index-with-eleventy/",
+    "Date": "2025-05-25",
+    "Author": "Ariel Salminen",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Search"
+    ]
   }
 ]
