@@ -21060,13 +21060,6 @@
   },
   {
     "Issue": "67",
-    "Type": "site",
-    "Title": "lstep.xyz",
-    "Link": "https://lstep.xyz/",
-    "Date": "2025-02-18"
-  },
-  {
-    "Issue": "67",
     "Type": "blog post",
     "Title": "I made an Eleventy & Nix static site template",
     "Link": "https://blog.chobble.com/blog/25-02-16-template-for-eleventy-site-with-nix/",
@@ -23452,5 +23445,33 @@
       "How to...",
       "Search"
     ]
+  },
+  {
+    "Issue": "74",
+    "Type": "site",
+    "Title": "Early Ford v8 Foundation Museum",
+    "Link": "https://fordv8foundation.org/",
+    "Date": "2025-05-27"
+  },
+  {
+    "Issue": "74",
+    "Type": "site",
+    "Title": "Rooted Regalia",
+    "Link": "https://rootedregalia.com/",
+    "Date": "2025-05-27"
+  },
+  {
+    "Issue": "74",
+    "Type": "site",
+    "Title": "Alfie Jacques Award",
+    "Link": "https://www.alfieaward.com/",
+    "Date": "2025-05-27"
+  },
+  {
+    "Issue": "74",
+    "Type": "site",
+    "Title": "Banalotopia",
+    "Link": "https://www.banalotopia.de/",
+    "Date": "2025-05-27"
   }
 ]
