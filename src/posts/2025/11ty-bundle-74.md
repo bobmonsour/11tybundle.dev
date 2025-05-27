@@ -1,7 +1,7 @@
 ---
 bundleIssue: 74
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup tomorrow, Eleventy v3.1.0, UK Gov docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?...And 3 releases, 12 posts, and 6 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup May 29, Eleventy v3.1.0, UK Gov docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?...And 3 releases, 12 posts, and 6 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-05-27
 tags:
@@ -18,7 +18,7 @@ There's lot packed into this one. Enjoy!
 
 ---
 
-**Meetup tomorrow.** [Episode 24 of the Eleventy Meetup](https://11tymeetup.dev/events/episode-24/) is tomorrow (May 29). Learn about the European Accessibility Act from [Fabian Wohlgemuth](https://feynmatt.com/) and DIY Full-Text Search with [Vlad Korobov](https://vladkorobov.com/).
+**Meetup tomorrow.** [Episode 24 of the Eleventy Meetup](https://11tymeetup.dev/events/episode-24/) is Thursday (May 29). Learn about the European Accessibility Act from [Fabian Wohlgemuth](https://feynmatt.com/) and DIY Full-Text Search with [Vlad Korobov](https://vladkorobov.com/).
 
 **Eleventy v3.1.0.** [v3.1.0](https://github.com/11ty/eleventy/releases/tag/v3.1.0) is out and while nice, Zach is vigorously working on v3.1.1, fixing a handful of regressions that have popped up since the release. That said, v3.1.0 is 22% smaller and 11% faster! I'm running my personal site with it as well as this very 11ty Bundle site.
 
