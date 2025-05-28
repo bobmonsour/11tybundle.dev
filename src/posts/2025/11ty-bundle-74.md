@@ -1,7 +1,7 @@
 ---
 bundleIssue: 74
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup May 29, Eleventy v3.1.0, UK Gov docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?...And 3 releases, 12 posts, and 6 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup May 29, Eleventy v3.1.0, X-GOVUK docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?...And 3 releases, 12 posts, and 6 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-05-27
 tags:
@@ -22,7 +22,7 @@ There's lot packed into this one. Enjoy!
 
 **Eleventy v3.1.0.** [v3.1.0](https://github.com/11ty/eleventy/releases/tag/v3.1.0) is out and while nice, Zach is vigorously working on v3.1.1, fixing a handful of regressions that have popped up since the release. That said, v3.1.0 is 22% smaller and 11% faster! I'm running my personal site with it as well as this very 11ty Bundle site.
 
-**UK Gov docs.** The UK government has released [GOV.UK.Eleventy plugin](https://x-govuk.github.io/govuk-eleventy-plugin/). As they tell it: _"Write documentation using Markdown and publish it using GOV.UK styles."_ I think they're on to something.
+**X-GOVUK docs~~UK Gov docs~~.** X-GOVUK ~~The UK government~~ has released [GOV.UK.Eleventy plugin](https://x-govuk.github.io/govuk-eleventy-plugin/). As they tell it: _"Write documentation using Markdown and publish it using GOV.UK styles."_ I think they're on to something. _UPDATE: It was pointed out to me that this is NOT an official UK government project, but rather a community project._
 
 **Eleventy LibDoc.** Speaking of docs, a beautifully designed _"starter project to craft slick and responsive documentation"_ has arrived. Check out the [Eleventy LibDoc website](https://eleventy-libdoc.netlify.app/) and the [GitHub repo](https://github.com/ita-design-system/eleventy-libdoc#eleventy-libdoc). I've added this to the [Starters page](/starters/).
 
