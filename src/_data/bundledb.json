@@ -23587,5 +23587,18 @@
       "Markdown",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "How To Implement Favs In Eleventy",
+    "Link": "https://blog.martin-haehnel.de/2025/05/29/favs-in-eleventy/",
+    "Date": "2025-05-29",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Remote Data"
+    ]
   }
 ]
