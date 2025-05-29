@@ -23487,5 +23487,43 @@
     "Title": "Kaj Kandler",
     "Link": "https://kajkandler.com/",
     "Date": "2025-05-27"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "Migrated to Static Site (Eleventy)",
+    "Link": "https://www.cantoni.org/2025/05/28/moved-to-eleventy/",
+    "Date": "2025-05-28",
+    "Author": "Brian Cantoni",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Zeta Lambda Chapter of Sigma Nu Fraternity",
+    "Link": "https://tulsasigmanu.com/",
+    "Date": "2025-05-28"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "Ditching WordPress for Eleventy",
+    "Link": "https://joshtronic.com/2025/05/25/ditching-wordpress-for-eleventy/",
+    "Date": "2025-05-28",
+    "Author": "Josh Sherman",
+    "Categories": [
+      "Blogging",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Scott Evans",
+    "Link": "https://scott.ee/"
   }
 ]
