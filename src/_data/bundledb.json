@@ -23600,5 +23600,26 @@
       "How to...",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Elwin van Eede",
+    "Link": "https://elwinvaneede.com/",
+    "Date": "2025-05-30"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "How I migrated from WordPress to Eleventy",
+    "Link": "https://elwinvaneede.com/blog/2025/how-i-migrated-from-wordpress-to-eleventy/",
+    "Date": "2025-05-30",
+    "Author": "Elwin van Eede",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "Migrating to Eleventy",
+      "Performance"
+    ]
   }
 ]
