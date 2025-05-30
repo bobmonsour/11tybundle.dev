@@ -23621,5 +23621,12 @@
       "Migrating to Eleventy",
       "Performance"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "release",
+    "Title": "Eleventy v3.1.1-beta.1: Bug fixes!",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.1-beta.1",
+    "Date": "2025-05-30"
   }
 ]
