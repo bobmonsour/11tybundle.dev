@@ -23642,5 +23642,25 @@
     "Title": "Eleventy v3.1.1-beta.3",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.1-beta.3",
     "Date": "2025-05-31"
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Favourite Films",
+    "Link": "https://logicalcobwebs.com/bill/films/",
+    "Date": "2025-06-01"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "Writing statistics for your Eleventy (11ty) blog",
+    "Link": "https://blog.rubenwardy.com/2025/06/01/eleventy-stats/",
+    "Date": "2025-06-01",
+    "Author": "Ruben Wardy",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Plugins"
+    ]
   }
 ]
