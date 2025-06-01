@@ -23662,5 +23662,16 @@
       "How to...",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "11tyCMS: Improved File Management and Posts List",
+    "Link": "https://thinkymeat.neocities.org/posts/11tycms-improved-file-management-and-posts-list/",
+    "Date": "2025-06-01",
+    "Author": "Thinkymeat",
+    "Categories": [
+      "CMS"
+    ]
   }
 ]
