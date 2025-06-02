@@ -23699,5 +23699,12 @@
       "Filters",
       "Nunjucks/Macros"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "HYPEHOU.SE",
+    "Link": "https://hypehou.se/",
+    "Date": "2025-06-02"
   }
 ]
