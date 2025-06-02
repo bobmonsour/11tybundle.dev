@@ -23673,5 +23673,31 @@
     "Categories": [
       "CMS"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "11ty RSS Feed Setup: Three Plugin Problems and How I Fixed Them",
+    "Link": "https://rosenqvist.design/blog/adding-rss-11ty/",
+    "Date": "2025-06-02",
+    "Author": "Simon Rosenqvist",
+    "Categories": [
+      "How to...",
+      "Plugins",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "Calculating yearsSince using a Nunjucks filter in Eleventy",
+    "Link": "https://thomasrigby.com/posts/calculating-yearssince-using-a-nunjucks-filter/",
+    "Date": "2025-06-02",
+    "Author": "Thomas Rigby",
+    "Categories": [
+      "Dates",
+      "Filters",
+      "Nunjucks/Macros"
+    ]
   }
 ]
