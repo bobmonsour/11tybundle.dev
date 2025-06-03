@@ -23747,5 +23747,12 @@
     "Title": "Questadon",
     "Link": "https://questadon.com/",
     "Date": "2025-06-03"
+  },
+  {
+    "Issue": "75",
+    "Type": "release",
+    "Title": "Eleventy v3.1.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.1",
+    "Date": "2025-06-03"
   }
 ]
