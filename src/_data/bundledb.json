@@ -23706,5 +23706,46 @@
     "Title": "HYPEHOU.SE",
     "Link": "https://hypehou.se/",
     "Date": "2025-06-02"
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "average nerd post",
+    "Link": "https://www.averagenerdpost.com/",
+    "Date": "2025-06-02"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "An Obsidian Template To Create A File At The Right Location",
+    "Link": "https://blog.martin-haehnel.de/2025/06/03/obsidian-templater-file-creation-template/",
+    "Date": "2025-06-03",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "Blogging",
+      "Dates",
+      "How to...",
+      "Obsidian"
+    ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "How to style your eleventy site with Tailwind css",
+    "Link": "https://aloxe.github.io/huwindty/documentation/styles/",
+    "Date": "2025-06-03",
+    "Author": "Alix Guillard",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Markdown"
+    ]
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Questadon",
+    "Link": "https://questadon.com/",
+    "Date": "2025-06-03"
   }
 ]
