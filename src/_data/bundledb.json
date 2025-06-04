@@ -23754,5 +23754,25 @@
     "Title": "Eleventy v3.1.1",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.1",
     "Date": "2025-06-03"
+  },
+  {
+    "Issue": "75",
+    "Type": "site",
+    "Title": "Souvenirs de Nulle-part",
+    "Link": "https://www.nulle-part.fr/",
+    "Date": "2025-06-04"
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "11tyCMS: Trapped in image and markdown hell",
+    "Link": "https://thinkymeat.neocities.org/posts/11tycms-trapped-in-image-hell/",
+    "Date": "2025-06-04",
+    "Author": "Thinkymeat",
+    "Categories": [
+      "CMS",
+      "Images",
+      "Markdown"
+    ]
   }
 ]
