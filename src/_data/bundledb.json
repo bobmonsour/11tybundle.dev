@@ -23774,5 +23774,18 @@
       "Images",
       "Markdown"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "From Nun­jucks to Vento in Eleventy: a migration guide (kinda)",
+    "Link": "https://chriskirknielsen.com/blog/from-nunjucks-to-vento-in-eleventy-migration-guide/",
+    "Date": "2025-06-05",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": [
+      "How to...",
+      "Layouts",
+      "Plugins"
+    ]
   }
 ]
