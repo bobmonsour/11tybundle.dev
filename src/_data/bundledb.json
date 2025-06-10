@@ -23839,5 +23839,17 @@
     "Categories": [
       "Images"
     ]
+  },
+  {
+    "Issue": "75",
+    "Type": "blog post",
+    "Title": "How to import() a Javascript string",
+    "Link": "https://www.zachleat.com/web/dynamic-import/",
+    "Date": "2025-06-09",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "Front Matter",
+      "How to..."
+    ]
   }
 ]
