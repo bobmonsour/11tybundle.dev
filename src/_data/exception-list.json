@@ -64,5 +64,17 @@
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "false"
+  },
+  {
+    "url": "https://aloxe.github.io",
+    "rssFeed": "",
+    "descriptionFail": "true",
+    "rssFail": "true"
+  },
+  {
+    "url": "https://blog.mozilla.org/addons/",
+    "rssFeed": "",
+    "descriptionFail": "true",
+    "rssFail": "true"
   }
 ]
