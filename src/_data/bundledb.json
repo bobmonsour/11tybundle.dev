@@ -23879,5 +23879,18 @@
     "Title": "Ryan Martin",
     "Link": "https://ryanmartin.me/",
     "Date": "2025-06-14"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Building a Printful‑powered e‑commerce site with 11ty and Stripe",
+    "Link": "https://www.juanfernandes.uk/blog/building-a-printful%E2%80%91powered-ecommerce-site/",
+    "Date": "2025-06-15",
+    "Author": "Juan Fernandes",
+    "Categories": [
+      "How to...",
+      "Pagination",
+      "Remote Data"
+    ]
   }
 ]
