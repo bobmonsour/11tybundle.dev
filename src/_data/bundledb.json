@@ -23892,5 +23892,26 @@
       "Pagination",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Axolotl Thoughts",
+    "Link": "https://blog.possiblyaxolotl.com/",
+    "Date": "2025-06-16"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "crinkels",
+    "Link": "https://crinkels.dev/",
+    "Date": "2025-06-16"
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy v3.1.2-beta.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2-beta.1",
+    "Date": "2025-06-16"
   }
 ]
