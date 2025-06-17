@@ -23913,5 +23913,25 @@
     "Title": "Eleventy v3.1.2-beta.1",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2-beta.1",
     "Date": "2025-06-16"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Gemma Evans",
+    "Link": "https://gemma.ee/",
+    "Date": "2025-06-17"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "The modern web sucks. My band's website doesn't.",
+    "Link": "https://www.youtube.com/watch?v=4_bYUVGgQQo",
+    "Date": "2025-06-17",
+    "Author": "Veronica Explains",
+    "Categories": [
+      "Blogging",
+      "Getting Started",
+      "Why Eleventy?"
+    ]
   }
 ]
