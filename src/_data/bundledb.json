@@ -23933,5 +23933,12 @@
       "Getting Started",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy v3.1.2-beta.2",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2-beta.2",
+    "Date": "2025-06-18"
   }
 ]
