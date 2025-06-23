@@ -23947,5 +23947,26 @@
     "Title": "Eleventy v3.1.2-beta.3",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2-beta.3",
     "Date": "2025-06-20"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Katie Janzen",
+    "Link": "https://347online.me/",
+    "Date": "2025-06-21"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Ceci Li",
+    "Link": "https://creepingbetweenthemargins.com/",
+    "Date": "2025-06-22"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Ethan Marcotte",
+    "Link": "https://ethanmarcotte.com/",
+    "Date": "2025-06-23"
   }
 ]
