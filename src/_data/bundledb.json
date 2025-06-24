@@ -23975,5 +23975,12 @@
     "Title": "Eleventy v3.1.2-beta.4",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2-beta.4",
     "Date": "2025-06-23"
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy v3.1.2 (we fixed 15 more things)",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v3.1.2",
+    "Date": "2025-06-24"
   }
 ]
