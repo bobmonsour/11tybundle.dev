@@ -24014,5 +24014,12 @@
       "Performance",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy Plugin Vite v7.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v7.0.0",
+    "Date": "2025-06-28"
   }
 ]
