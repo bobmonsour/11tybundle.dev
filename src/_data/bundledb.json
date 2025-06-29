@@ -24021,5 +24021,18 @@
     "Title": "Eleventy Plugin Vite v7.0.0",
     "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v7.0.0",
     "Date": "2025-06-28"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Uploading Images For Your Eleventy Blog to Cloudflare R2 from Obsidian",
+    "Link": "https://blog.martin-haehnel.de/2025/06/28/working-with-r2-from-obsidian/",
+    "Date": "2025-06-28",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Obsidian"
+    ]
   }
 ]
