@@ -24062,5 +24062,26 @@
     "Title": "UNBREAKING",
     "Link": "https://unbreaking.org/",
     "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Fuzzy Logic",
+    "Link": "https://fuzzylogic.me/",
+    "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy Image v7.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v.7.0.0-alpha.1",
+    "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Web Awesome",
+    "Link": "https://webawesome.com/",
+    "Date": "2025-07-01"
   }
 ]
