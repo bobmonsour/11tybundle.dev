@@ -24034,5 +24034,33 @@
       "Images",
       "Obsidian"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "joshua.seigler.net",
+    "Link": "https://joshua.seigler.net/",
+    "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy RSS v3.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v3.0.0-alpha.1",
+    "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "release",
+    "Title": "Eleventy RSS v3.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-rss/releases/tag/v3.0.0-alpha.2",
+    "Date": "2025-07-01"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "UNBREAKING",
+    "Link": "https://unbreaking.org/",
+    "Date": "2025-07-01"
   }
 ]
