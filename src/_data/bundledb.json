@@ -24119,5 +24119,34 @@
       "Dates",
       "Images"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "ALEXIS MUÑOZ",
+    "Link": "https://www.alexismunoz.com/",
+    "Date": "2025-07-04"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Creating proportional, equal-height image rows with CSS, 11ty, and Nunjucks",
+    "Link": "https://jeremyrobertjones.com/blog/proportional-equal-height-image-row-css-11ty-nunjucks/",
+    "Date": "2025-06-15",
+    "Author": "Jeremy Robert Jones",
+    "Categories": [
+      "CSS/Sass",
+      "How to...",
+      "Images",
+      "Nunjucks/Macros",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Marcello's Place",
+    "Link": "https://marcellosplace.com/",
+    "Date": "2025-07-04"
   }
 ]
