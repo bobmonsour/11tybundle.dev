@@ -24160,5 +24160,21 @@
       "Drafts",
       "How to..."
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Website updates",
+    "Link": "https://fuzzylogic.me/posts/website-updates/",
+    "Date": "2025-07-06",
+    "Author": "Laurence Hughes",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Deployment",
+      "Netlify",
+      "Plugins",
+      "RSS"
+    ]
   }
 ]
