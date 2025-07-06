@@ -24148,5 +24148,17 @@
     "Title": "Marcello's Place",
     "Link": "https://marcellosplace.com/",
     "Date": "2025-07-04"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Marking blog posts as drafts in 11ty",
+    "Link": "https://tfedder.de/blog/blog-post-drafts/",
+    "Date": "2025-07-06",
+    "Author": "Tobias Fedder",
+    "Categories": [
+      "Drafts",
+      "How to..."
+    ]
   }
 ]
