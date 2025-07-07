@@ -24190,5 +24190,19 @@
     "Title": "Test Automation",
     "Link": "https://testautomation.space/",
     "Date": "2025-07-07"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Creating a website from Obsidian",
+    "Link": "https://lwgrs.bearblog.dev/creating-a-website-from-obsidian/",
+    "Date": "2025-07-07",
+    "Author": "Stephen Gower",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "How to...",
+      "Obsidian"
+    ]
   }
 ]
