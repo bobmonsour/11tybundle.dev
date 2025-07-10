@@ -24204,5 +24204,18 @@
       "How to...",
       "Obsidian"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Proper Sitemap Update Dates for Eleventy",
+    "Link": "https://www.cantoni.org/2025/07/10/proper-sitemap-update-dates-for-eleventy/",
+    "Date": "2025-07-10",
+    "Author": "Brian Cantoni",
+    "Categories": [
+      "Configuration",
+      "Filters",
+      "How to..."
+    ]
   }
 ]
