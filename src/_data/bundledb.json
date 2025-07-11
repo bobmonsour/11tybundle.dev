@@ -24217,5 +24217,17 @@
       "Filters",
       "How to..."
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Random page feature for a static site with Eleventy",
+    "Link": "https://hamatti.org/posts/random-page-feature-for-a-static-site-with-eleventy/",
+    "Date": "2025-07-11",
+    "Author": "Juha-Matti Santala",
+    "Categories": [
+      "Blogging",
+      "How to..."
+    ]
   }
 ]
