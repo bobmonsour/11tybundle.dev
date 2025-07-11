@@ -24229,5 +24229,16 @@
       "Blogging",
       "How to..."
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "11tyCMS: Metadata Editor, 11ty Build Integration & Design Refinements",
+    "Link": "https://thinkymeat.neocities.org/posts/11tycms-metadata-editor-11ty-build-integration/",
+    "Date": "2025-07-11",
+    "Author": "Thinkymeat",
+    "Categories": [
+      "CMS"
+    ]
   }
 ]
