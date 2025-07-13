@@ -24240,5 +24240,31 @@
     "Categories": [
       "CMS"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "End on End",
+    "Link": "https://endonend.org/",
+    "Date": "2025-07-12"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Migrating WordPress To Eleventy",
+    "Link": "https://www.cantoni.org/2025/07/12/migrating-wordpress-to-eleventy/",
+    "Date": "2025-07-12",
+    "Author": "Brian Cantoni",
+    "Categories": [
+      "Blogging",
+      "Dates",
+      "Deployment",
+      "Filters",
+      "Images",
+      "Migrating to Eleventy",
+      "Performance",
+      "Permalinks",
+      "Search"
+    ]
   }
 ]
