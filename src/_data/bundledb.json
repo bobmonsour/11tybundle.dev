@@ -24321,5 +24321,12 @@
       "WebC",
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "The Translated Hugo Initiative",
+    "Link": "https://translatedhugo.org/",
+    "Date": "2025-07-16"
   }
 ]
