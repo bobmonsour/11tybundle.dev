@@ -24286,5 +24286,40 @@
     "Title": "vianatrilhos",
     "Link": "https://vianatrilhos.com/",
     "Date": "2025-07-15"
+  },
+  {
+    "Issue": "76",
+    "Type": "site",
+    "Title": "Particle Slam",
+    "Link": "https://particleslam.com/",
+    "Date": "2025-07-16"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "WebC Quirks",
+    "Link": "https://chromamine.com/2025/07/webc-quirks/",
+    "Date": "2025-07-15",
+    "Author": "Harris Lapiroff",
+    "Categories": [
+      "Debugging",
+      "Front Matter",
+      "How to...",
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "We migrated our site to Eleventy and increased performance by 24%",
+    "Link": "https://etch.co/blog/we-migrated-our-site-to-eleventy-and-increased-performance-by-24-percent/",
+    "Date": "2025-07-15",
+    "Author": "Dan Webb",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Performance",
+      "WebC",
+      "Why Eleventy?"
+    ]
   }
 ]
