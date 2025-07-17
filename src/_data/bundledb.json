@@ -24328,5 +24328,33 @@
     "Title": "The Translated Hugo Initiative",
     "Link": "https://translatedhugo.org/",
     "Date": "2025-07-16"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Building a digital bookshelf with Eleventy",
+    "Link": "https://damianwalsh.co.uk/posts/building-a-digital-bookshelf-with-eleventy/",
+    "Date": "2025-07-17",
+    "Author": "Damian Walsh",
+    "Categories": [
+      "Books Pages",
+      "Collections",
+      "Pagination",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Custom CLI tool to link Mastodon posts and blog posts",
+    "Link": "https://hamatti.org/posts/custom-cli-tool-to-link-mastodon-posts-and-blog-posts/",
+    "Date": "2025-07-17",
+    "Author": "Juha-Matti Santala",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Remote Data",
+      "Social Media"
+    ]
   }
 ]
