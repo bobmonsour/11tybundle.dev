@@ -24378,5 +24378,19 @@
       "How to...",
       "RSS"
     ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Last modified date of Eleventy posts",
+    "Link": "https://joshtronic.com/2025/07/20/last-modified-date-eleventy/",
+    "Date": "2025-07-20",
+    "Author": "Josh Sherman",
+    "Categories": [
+      "Blogging",
+      "Data Cascade",
+      "Dates",
+      "How to..."
+    ]
   }
 ]
