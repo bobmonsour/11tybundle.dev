@@ -24363,5 +24363,20 @@
     "Title": "ref_cycling",
     "Link": "https://faceftw.dev/",
     "Date": "2025-07-20"
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Data vs. Collections in Eleventy",
+    "Link": "https://madbaker.com/blog/data-vs-collections-in-eleventy/",
+    "Date": "2025-07-18",
+    "Author": "Mark Dyck",
+    "Categories": [
+      "Collections",
+      "Data Cascade",
+      "Global Data",
+      "How to...",
+      "RSS"
+    ]
   }
 ]
