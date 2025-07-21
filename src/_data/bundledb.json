@@ -24108,13 +24108,6 @@
   },
   {
     "Issue": "76",
-    "Type": "site",
-    "Title": "ALEXIS MUÑOZ",
-    "Link": "https://www.alexismunoz.com/",
-    "Date": "2025-07-04"
-  },
-  {
-    "Issue": "76",
     "Type": "blog post",
     "Title": "Creating proportional, equal-height image rows with CSS, 11ty, and Nunjucks",
     "Link": "https://jeremyrobertjones.com/blog/proportional-equal-height-image-row-css-11ty-nunjucks/",
@@ -24391,6 +24384,19 @@
       "Data Cascade",
       "Dates",
       "How to..."
+    ]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "How To Use eleventy-img (To Optmize Images In Eleventy) With Caching (To Keep Build Times Low) On Cloudflare Pages (Which Can't Cache Optimize Images Out Of The Box)",
+    "Link": "https://blog.martin-haehnel.de/2025/07/21/how-to-use-eleventy-img-to-optmize-images-in-eleventy-with-caching-to-keep-build-times-low-on-cloudflare-pages-which-cant-cache-optimize-images-out-of-the-box/",
+    "Date": "2025-07-21",
+    "Author": "Martin Hähnel",
+    "Categories": [
+      "How to...",
+      "Images",
+      "Performance"
     ]
   }
 ]
