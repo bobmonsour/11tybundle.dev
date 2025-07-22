@@ -24405,5 +24405,20 @@
     "Title": "Jordan Johnson",
     "Link": "https://jordanjohnson.pt/",
     "Date": "2025-07-21"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Making a multilingual website with Eleventy",
+    "Link": "https://francisbeaudet.com/en/blog/making-a-multilingual-website-with-eleventy/",
+    "Date": "2025-07-21",
+    "Author": "Francis Beaudet",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Internationalization",
+      "Navigation",
+      "Plugins"
+    ]
   }
 ]
