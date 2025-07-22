@@ -24420,5 +24420,17 @@
       "Navigation",
       "Plugins"
     ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Updated Search to Use PageFind",
+    "Link": "https://claytonerrington.com/blog/updated-search-to-use-page-find/",
+    "Date": "2025-07-22",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "How to...",
+      "Search"
+    ]
   }
 ]
