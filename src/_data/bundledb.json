@@ -24432,5 +24432,12 @@
       "How to...",
       "Search"
     ]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "OptiFolio",
+    "Link": "https://optifolio.vercel.app/",
+    "Date": "2025-07-23"
   }
 ]
