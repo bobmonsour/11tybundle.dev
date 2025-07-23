@@ -24446,5 +24446,19 @@
     "Title": "bugs rock",
     "Link": "https://bugsrock.online/",
     "Date": "2025-07-23"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Completing the I18nPlugin installation",
+    "Link": "https://francisbeaudet.com/en/blog/completing-the-i18nplugin-installation/",
+    "Date": "2025-07-23",
+    "Author": "Francis Beaudet",
+    "Categories": [
+      "How to...",
+      "Internationalization",
+      "Plugins",
+      "RSS"
+    ]
   }
 ]
