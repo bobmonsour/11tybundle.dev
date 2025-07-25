@@ -24460,5 +24460,107 @@
       "Plugins",
       "RSS"
     ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "I've added webmentions to this blog",
+    "Link": "https://fershad.com/notes/webmentions/",
+    "Date": "2025-07-23",
+    "Author": "Fershad Irani",
+    "Categories": [
+      "How to...",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Migrating An Eleventy Site to Bunny.Net",
+    "Link": "https://chrismcleod.dev/blog/migrating-an-eleventy-site-to-bunnynet/",
+    "Date": "2025-07-25",
+    "Author": "Chris McLeod",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "Images"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Hosting your Static Site on Cloudflare: Tips & Tricks",
+    "Link": "https://cassey.dev/static-sites-on-cloudflare/",
+    "Date": "2025-07-25",
+    "Author": "Cassey Lottman",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Scheduled deployments for Eleventy websites",
+    "Link": "https://damianwalsh.co.uk/posts/scheduled-deployments-for-eleventy-websites/",
+    "Date": "2025-07-25",
+    "Author": "Damian Walsh",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Netlify"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Updates to the Eleventy guide",
+    "Link": "https://renkotsuban.com/posts/2025-07-25-Updates-to-the-Eleventy-guide.html",
+    "Date": "2025-07-25",
+    "Author": "Renkon",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Getting Started",
+      "How to...",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Eleventy plugin recs, part 1",
+    "Link": "https://renkotsuban.com/posts/2025-07-26-Eleventy-plugin-recs-part-1.html",
+    "Date": "2025-07-25",
+    "Author": "Renkon",
+    "Categories": [
+      "Configuration",
+      "Front Matter",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Using HTMX boosted links in my 11ty website",
+    "Link": "https://rigotti.nl/en/blog/htmx-11ty/",
+    "Date": "2025-07-25",
+    "Author": "Rigotti",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Performance"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Beer Fridge",
+    "Link": "https://flamedfury.com/beerfridge/",
+    "Date": "2025-07-25"
   }
 ]
