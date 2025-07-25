@@ -24562,5 +24562,17 @@
     "Title": "Beer Fridge",
     "Link": "https://flamedfury.com/beerfridge/",
     "Date": "2025-07-25"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Never write your own Date Parsing Library",
+    "Link": "https://www.zachleat.com/web/adventures-in-date-parsing/",
+    "Date": "2025-07-23",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "Dates",
+      "From the Source"
+    ]
   }
 ]
