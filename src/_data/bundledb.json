@@ -24574,5 +24574,27 @@
       "Dates",
       "From the Source"
     ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "11ty",
+    "Link": "https://notes.jays.net/blog/11ty/",
+    "Date": "2025-02-11",
+    "Author": "Jay Hannah",
+    "Categories": [
+      "Blogging",
+      "Filters",
+      "How to...",
+      "Images",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v3.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.1",
+    "Date": "2025-07-29"
   }
 ]
