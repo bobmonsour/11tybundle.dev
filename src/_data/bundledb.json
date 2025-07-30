@@ -24596,5 +24596,12 @@
     "Title": "Eleventy Dev Server v3.0.0-alpha.1",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.1",
     "Date": "2025-07-29"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "WebNami",
+    "Link": "https://webnami.in/",
+    "Date": "2025-07-30"
   }
 ]
