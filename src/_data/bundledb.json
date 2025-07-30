@@ -24624,5 +24624,12 @@
     "Title": "Pre-release: Eleventy v4.0.0-alpha.2",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.2",
     "Date": "2025-07-30"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.3",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.3",
+    "Date": "2025-07-30"
   }
 ]
