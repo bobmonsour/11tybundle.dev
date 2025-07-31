@@ -24638,5 +24638,12 @@
     "Title": "Eleventy Dev Server v3.0.0-alpha.2",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.2",
     "Date": "2025-07-30"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Find Affordable Housing",
+    "Link": "https://www.theunitedeffort.org/housing/affordable-housing/",
+    "Date": "2025-07-31"
   }
 ]
