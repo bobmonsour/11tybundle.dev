@@ -72,7 +72,13 @@
     "rssFail": "true"
   },
   {
-    "url": "https://blog.mozilla.org/addons/",
+    "url": "https://blog.mozilla.org",
+    "rssFeed": "",
+    "descriptionFail": "true",
+    "rssFail": "true"
+  },
+  {
+    "url": "https://rigotti.nl/",
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "true"

@@ -23,16 +23,14 @@ export default async function () {
   const releaseList = bundleRecords
     .filter((item) => item["Type"] == "release")
     .sort((a, b) => {
-      return a.Date > b.Date ? -1 : 1;
+      return new Date(b.Date) - new Date(a.Date);
     });
 
   // generate a list of sites, an array of all sites in descending date order
   const siteList = bundleRecords
     .filter((item) => item["Type"] == "site")
     .sort((a, b) => {
-      const dateA = new Date(a.Date || 0); // Default to epoch if Date is missing
-      const dateB = new Date(b.Date || 0); // Default to epoch if Date is missing
-      return dateB - dateA; // Sort in descending order
+      return new Date(b.Date) - new Date(a.Date);
     });
   const siteCount = siteList.length;
 
