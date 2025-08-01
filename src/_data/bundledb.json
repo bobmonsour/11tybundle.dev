@@ -24652,5 +24652,18 @@
     "Title": "Eleventy Syntax Highlighter (Prism) v5.0.2",
     "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.2",
     "Date": "2025-08-01T12:18:36.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "One weird trick to reduce Eleventy Image Build Times by 60%",
+    "Link": "https://www.zachleat.com/web/faster-builds-with-eleventy-img/",
+    "Date": "2025-08-01T15:54:21.000",
+    "Author": "Zach Leatherman",
+    "Categories": [
+      "Configuration",
+      "Images",
+      "Performance"
+    ]
   }
 ]
