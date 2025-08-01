@@ -2,10 +2,10 @@
 eleventyComputed:
   title: "{{ bundledata.authorCount }} Authors"
   description: "A list of ({{ bundledata.authorCount }}) authors"
-permalink: /authors-by-count/
+permalink: /authors/
 ---
 
-<h1>{{ title }} <span class="reduced-to-md">(<a href="/authors/">by name</a>)</span></h1>
+<h1>{{ title }} by count <span class="reduced-to-md">(<a href="/authors-by-name/">by name</a>)</span></h1>
 <div class="allauthors-list">
 	<ul class="authorslist">
 		{% for author in bundledata.authorsByCount %}
