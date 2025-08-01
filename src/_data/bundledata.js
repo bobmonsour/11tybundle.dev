@@ -34,7 +34,7 @@ export default async function () {
     });
   const siteCount = siteList.length;
 
-  // generate the list of starter projects, ordered by most date of most recent update
+  // generate the list of starter projects, ordered by date of most recent update
 
   // Function to fetch metadata and update starters array
   async function updateStartersWithMetadata(starters) {
@@ -120,7 +120,7 @@ export default async function () {
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
   // the sortField is the field to sort by:
-  //	 name in column 0
+  //	 author name in column 0
   //	 count in column 1
   const authorList = (records, sortField) => {
     function authorSort(a, b) {
@@ -141,6 +141,10 @@ export default async function () {
   // generate a 2-dimensional array of categories and the
   // count of posts in each category; ; records comes from
   // the firehose array, which are all blog posts
+  // the sortField is the field to sort by:
+  //	 category name in column 0
+  //	 count in column 1
+
   const categoryList = (records, sortField) => {
     function categorySort(a, b) {
       if (sortField == "category") {
