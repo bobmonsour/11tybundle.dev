@@ -24645,5 +24645,12 @@
     "Title": "Pre-release: Eleventy v4.0.0-alpha.4",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.4",
     "Date": "2025-08-01T09:48:51.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Syntax Highlighter (Prism) v5.0.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.2",
+    "Date": "2025-08-01T12:18:36.000"
   }
 ]
