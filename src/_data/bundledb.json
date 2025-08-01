@@ -24638,5 +24638,12 @@
     "Title": "Eleventy Dev Server v3.0.0-alpha.3",
     "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.3",
     "Date": "2025-08-01T09:40:29.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.4",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.4",
+    "Date": "2025-08-01T09:48:51.000"
   }
 ]
