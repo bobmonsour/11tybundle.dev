@@ -24679,5 +24679,19 @@
     "Title": "underlap",
     "Link": "https://underlap.org/",
     "Date": "2025-08-02T10:17:50.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Replacing WriteFreely with eleventy",
+    "Link": "https://underlap.org/replacing-writefreely/",
+    "Date": "2025-08-02T10:19:00.000",
+    "Author": "Glyn Normington",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "Markdown",
+      "Migrating to Eleventy"
+    ]
   }
 ]
