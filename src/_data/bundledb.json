@@ -24693,5 +24693,32 @@
       "Markdown",
       "Migrating to Eleventy"
     ]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "UrbanFlow",
+    "Link": "https://urbanflow.art/",
+    "Date": "2025-08-03T10:11:44.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Les activités de Nicolas Hoizey",
+    "Link": "https://activites.nicolas-hoizey.com/",
+    "Date": "2025-08-03T10:12:10.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Migrating an 11ty site from Cloudflare Pages to Workers",
+    "Link": "https://benwhite.com.au/blog/pages-to-workers/",
+    "Date": "2025-08-03T10:18:51.000",
+    "Author": "Ben White",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "How to..."
+    ]
   }
 ]
