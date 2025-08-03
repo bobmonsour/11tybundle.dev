@@ -16,7 +16,7 @@ export default async function () {
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post")
     .sort((a, b) => {
-      return a.Date > b.Date ? -1 : 1;
+      return new Date(b.Date) - new Date(a.Date);
     });
 
   // generate a list of releases, an array of all releases in descending date order

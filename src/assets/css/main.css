@@ -277,10 +277,6 @@ img[width][height] {
   padding-inline: 0;
   text-align: center;
 }
-.allcategories-list {
-  grid-column: popout;
-  margin-top: 1em;
-}
 
 .categorieslist,
 .authorslist {
@@ -293,27 +289,33 @@ img[width][height] {
 .authorslist a {
   padding: 0.25em;
 }
-.onecategory {
+.onecategory,
+.oneauthor {
   background-color: var(--one-category-bg-color);
   border: 1px solid var(--dark-accent-color);
   border-radius: 10px;
   padding-inline: 0.5em;
 }
 
-.onecattitle {
+.onecattitle,
+.oneauthortitle {
+  font-size: var(--font-size-md);
   display: block;
   font-weight: bold;
   margin-block-start: 0.5em;
 }
-.recentcatitems {
+.recentcatitems,
+.recentauthoritems {
   margin-block: 0.25em 1em;
 }
-.recentcatitems li {
+.recentcatitems li,
+.recentauthoritems li {
   font-size: var(--font-size-base);
   line-height: 1.4;
   text-align: left;
 }
-.recentcatitems a {
+.recentcatitems a,
+.recentauthoritems a {
   padding-inline: 0;
 }
 .reduced-to-base {

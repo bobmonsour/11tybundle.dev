@@ -19,7 +19,17 @@
 <div class="bundleposts" data-pagefind-body>
 	{% set v1cautionshown = false %}
 	{% set v2cautionshown = false %}
+	{% set v3cautionshown = false %}
 	{% for item in bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+  	{%- set current_year = item.Date | truncate(4, true, '') -%}
+		{%- if current_year != previous_year -%}
+			{%- if previous_year != "no posts yet" -%}
+				</details>
+			{%- endif -%}
+			<details open>
+			<summary>{{ current_year }}</summary>
+			{%- set previous_year = current_year -%}
+		{%- endif -%}
 		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
 			{% include "partials/v1caution.njk" %}
 			{% set v1cautionshown = true %}
@@ -28,6 +38,10 @@
 			{% include "partials/v2caution.njk" %}
 			{% set v2cautionshown = true %}
 		{% endif %}
+    {% if item.Date < cautioninfo.v3releasedate and not v3cautionshown %}
+      {% include "partials/v3caution.njk" %}
+      {% set v3cautionshown = true %}
+    {% endif %}
 		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
 		{% singlePost item, "author", author[0], postCount %}
 	{% endfor %}

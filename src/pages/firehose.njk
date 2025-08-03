@@ -18,6 +18,7 @@ permalink: /firehose/
 	#}
 	{% set v1cautionshown = false %}
 	{% set v2cautionshown = false %}
+	{% set v3cautionshown = false %}
 	{%- for item in bundledata.firehose -%}
 		{%- set current_year = item.Date | truncate(4, true, '') -%}
 		{%- if current_year != previous_year -%}
@@ -35,6 +36,10 @@ permalink: /firehose/
 		{% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
 			{% include "partials/v2caution.njk" %}
 			{% set v2cautionshown = true %}
+		{% endif %}
+		{% if item.Date < cautioninfo.v3releasedate and not v3cautionshown %}
+			{% include "partials/v3caution.njk" %}
+			{% set v3cautionshown = true %}
 		{% endif %}
 		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
 		{% singlePost item, "firehose", item.Author, postCount %}
