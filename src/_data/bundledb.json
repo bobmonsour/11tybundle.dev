@@ -8559,13 +8559,6 @@
   {
     "Issue": "24",
     "Type": "site",
-    "Title": "beCSS",
-    "Link": "https://www.becss.dev/",
-    "Date": "2023-12-17"
-  },
-  {
-    "Issue": "24",
-    "Type": "site",
     "Title": "Robb Knight",
     "Link": "https://rknight.me/",
     "Date": "2023-12-17"
@@ -8715,13 +8708,6 @@
     "Title": "Eleventy v3.0.0-alpha.3",
     "Link": "https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.3",
     "Date": "2023-12-20"
-  },
-  {
-    "Issue": "25",
-    "Type": "site",
-    "Title": "TapChamps",
-    "Link": "https://tapchamps.com/",
-    "Date": "2023-12-29"
   },
   {
     "Issue": "",
@@ -13794,13 +13780,6 @@
   {
     "Issue": "56",
     "Type": "site",
-    "Title": "RiaFin™ Planning Network",
-    "Link": "https://riafin.com/",
-    "Date": "2024-09-03"
-  },
-  {
-    "Issue": "56",
-    "Type": "site",
     "Title": "The Eastford Communicator",
     "Link": "https://eastford.news/",
     "Date": "2024-09-03"
@@ -16000,13 +15979,6 @@
   {
     "Issue": "64",
     "Type": "site",
-    "Title": "Zoë.",
-    "Link": "https://moiety.me/",
-    "Date": "2025-01-07"
-  },
-  {
-    "Issue": "64",
-    "Type": "site",
     "Title": "An 11ty Library Research Guide Template",
     "Link": "https://research.000000076.xyz/",
     "Date": "2025-01-07"
@@ -16868,13 +16840,6 @@
     "Type": "site",
     "Title": "47 Watch",
     "Link": "https://47-watch.com/",
-    "Date": "2025-02-18"
-  },
-  {
-    "Issue": "67",
-    "Type": "site",
-    "Title": "Imagined Realities",
-    "Link": "https://christopherbauer.org/",
     "Date": "2025-02-18"
   },
   {

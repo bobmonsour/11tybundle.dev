@@ -84,12 +84,6 @@
     "rssFail": "true"
   },
   {
-    "url": "https://riafin.com/",
-    "rssFeed": "",
-    "descriptionFail": "true",
-    "rssFail": "true"
-  },
-  {
     "url": "https://tei-c.org/",
     "rssFeed": "",
     "descriptionFail": "true",
