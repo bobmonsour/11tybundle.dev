@@ -88,5 +88,11 @@
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "true"
+  },
+  {
+    "url": "https://www.sitepoint.com/",
+    "rssFeed": "",
+    "descriptionFail": "true",
+    "rssFail": "true"
   }
 ]
