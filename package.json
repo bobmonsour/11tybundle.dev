@@ -28,7 +28,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy": "^4.0.0-alpha.4",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
