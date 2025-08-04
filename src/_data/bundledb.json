@@ -191,15 +191,6 @@
   {
     "Issue": "2",
     "Type": "blog post",
-    "Title": "What’s New in Eleventy 2: A Great SSG Just Got Better",
-    "Link": "https://www.sitepoint.com/eleventy-2/",
-    "Date": "2023-03-21",
-    "Author": "Craig Buckler",
-    "Categories": ["Why Eleventy?"]
-  },
-  {
-    "Issue": "2",
-    "Type": "blog post",
     "Title": "Sass in Eleventy, with versioning",
     "Link": "https://danburzo.ro/eleventy-sass/",
     "Date": "2023-03-01",
@@ -3004,15 +2995,6 @@
     "Date": "2023-03-28",
     "Author": "Cory Dransfeldt",
     "Categories": ["Social Media"]
-  },
-  {
-    "Issue": "",
-    "Type": "blog post",
-    "Title": "How to Use WordPress as a Headless CMS for Eleventy",
-    "Link": "https://www.sitepoint.com/wordpress-headless-cms-eleventy/",
-    "Date": "2021-01-27",
-    "Author": "Craig Buckler",
-    "Categories": ["CMS"]
   },
   {
     "Issue": "",
