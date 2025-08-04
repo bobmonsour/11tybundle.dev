@@ -476,6 +476,14 @@ footer {
   margin-block: 1em;
 }
 
+footer > p {
+  background-color: var(--postitem-bg-color);
+  font-size: var(--font-size-base);
+  margin-block-start: 1em;
+  padding-block: 0.5em;
+  text-align: center;
+}
+
 .bundleitem {
   background-color: var(--releaseitem-bg-color);
   border: 1px dotted darkgray;
