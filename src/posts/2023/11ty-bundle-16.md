@@ -6,15 +6,18 @@ eleventyComputed:
 date: 2023-09-01
 tags:
   - 11ty Bundle
+youtubeId: yXcxvBJuULU
 ---
 
 > TL;DR Zach's [demo video](https://www.youtube.com/watch?v=yXcxvBJuULU) of CloudCannon's configuration and CMS while showing off [esif.dev](https://esif.dev/). 13 new posts and 10 new sites. I'm back from vacation...only to be leaving again. If you want to jump to the posts...[go ahead](#newposts), I won't be offended.
 
 Wow! It's been more than 2 weeks since I've posted one of these. It feels like an eternity. With August being August, I had a birthday last week (68 ain't so bad), and we traveled a bit. I've been keeping up with adding content if you've been watching the [Firehose](/firehose/) page.
 
-Zach put out a cool video that you can watch here or [on YouTube](https://www.youtube.com/watch?v=yXcxvBJuULU). It's nice to get a look at how CloudCannon works, both the build part and the CMS part.
+Zach put out a cool video that you can watch below or [on YouTube](https://www.youtube.com/watch?v=yXcxvBJuULU). It's nice to get a look at how CloudCannon works, both the build part and the CMS part.
 
-<iframe src="https://www.youtube.com/embed/yXcxvBJuULU?si=7Do5I9l4vwA0OL-f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% set videoTitle = "From Zero to CMS in 2 Minutes with CloudCannon and Eleventy" %}
+{% set videoId = youtubeId %}
+{% include 'partials/youtube.njk' %}
 
 What's really cool is that he demo's the capabilities by building a microsite that he calls [Educational, Sensational, Inspirational, Foundational](https://esif.dev/), aka [esif.dev](https://esif.dev/). Zach asked the community to suggest "what blog posts were most influential to how you build for the web?" There's something for everyone to learn from. Be sure to [check it out](https://esif.dev/).
 
