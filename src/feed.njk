@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 <?xml-stylesheet type="text/xsl" href="/assets/css/feed.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
 	<title>{{ site.title }}</title>
-	<subtitle>The 11ty Bundle: A blog dedicated to supporting the 11ty community.</subtitle>
+	<subtitle>The 11ty Bundle: A curated feed of 11ty resources.</subtitle>
 	<link href="{{ site.url }}{{ permalink }}" rel="self"/>
 	{% set postslist = collections.posts | reverse %}
   {% set latest_posts = postslist.slice(0,20) %}
