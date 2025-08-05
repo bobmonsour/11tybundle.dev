@@ -6,6 +6,7 @@ eleventyComputed:
 date: 2025-07-22
 tags:
   - 11ty Bundle
+youtubeId: 4_bYUVGgQQo
 ---
 
 _An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
@@ -24,9 +25,9 @@ Enjoy!
 
 **Veronica Explains.** In [this video](https://www.youtube.com/watch?v=4_bYUVGgQQo), Veronica explains why she likes static sites, and in particular, Eleventy. It's a great watch and she does a fantastic job explaining the benefits of static sites.
 
-<div class="iframe-wrapper">
-<iframe style="display:block; margin:0 auto 1em auto;" src="https://www.youtube.com/embed/4_bYUVGgQQo?si=cgyVv6of4X043Se4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "The modern web sucks. My band's website doesn't." %}
+{% set videoId = youtubeId %}
+{% include 'partials/youtube.njk' %}
 
 **Eleventy Meetup July 23rd.** [Kaj Kandler](https://kajkandler.com/) talks about adding structured data to his personal website, and [Michael Delaney](https://mwdelaney.me/) shows how to deploy 11ty automatically. [Event details here](https://11tymeetup.dev/events/ep-25-structured-data-and-deploying-11ty/). I'll be there too.
 

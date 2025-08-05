@@ -6,13 +6,16 @@ eleventyComputed:
 date: 2023-09-21
 tags:
   - 11ty Bundle
+youtubeId: xVmKdCi-Gpo
 ---
 
 Just back from a wonderful 2 weeks in Italy. Still not over the jet lag, but I'm coping. I'm headed to San Diego tomorrow to reunite with some other old-timers to commemorate the 40th anniversary of the founding of [Stac Electronics](https://en.wikipedia.org/wiki/Stac_Electronics). It's hard to believe it's been that long. I'm looking forward to seeing everyone.
 
 First up, Zach did a 1-hour-ish video on the topic of Jamstack and what it means and what it could mean. It's a great watch.
 
-<iframe src="https://www.youtube.com/embed/xVmKdCi-Gpo?si=evHqS2NQFeK7smZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% set videoTitle = "Jamstack ZHUZH Community Round-table Discussion" %}
+{% set videoId = youtubeId %}
+{% include 'partials/youtube.njk' %}
 
 And there are 10 new posts and 5 new sites to check out below.
 

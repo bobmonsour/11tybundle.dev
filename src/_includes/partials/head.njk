@@ -28,6 +28,17 @@
 		</noscript>
 	{% endif %}
 
+  {#
+    conditionally load the lite-youtube-embed styles per
+    front matter 'youtubeId' in blog posts.
+  #}
+  {% if youtubeId %}
+    <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'pageHasYoutube' %}" media="print" onload="this.media='all'">
+  	<noscript>
+	  	<link rel="stylesheet" href="{% getBundleFileUrl 'css', 'pageHasYoutube' %}">
+	  </noscript>
+  {% endif %}
+
 	{# load the pagefind and main stylesheets on every page	#}
 	<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 	<link rel="stylesheet" href="/assets/css/main.css">
