@@ -24602,5 +24602,19 @@
     "Title": "SCALES-OKN",
     "Link": "https://scales-okn.org/",
     "Date": "2025-08-09T11:21:17.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Blogging in markdown",
+    "Link": "https://underlap.org/blogging-in-markdown/",
+    "Date": "2025-08-09T14:32:41.000",
+    "Author": "Glyn Normington",
+    "Categories": [
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
   }
 ]
