@@ -24623,5 +24623,33 @@
     "Title": "TalentzQ",
     "Link": "https://www.talentzq.io/",
     "Date": "2025-08-09T20:47:48.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "A Subtle Footgun in Eleventy’s Default Permalink Algorithm",
+    "Link": "https://darthmall.net/2025/subtle-footgun-in-eleventys-default-permalink-algorithm/",
+    "Date": "2025-08-10T21:36:39.000",
+    "Author": "Evan Sheehan",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Debugging"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Cache-Busting Assets in Eleventy",
+    "Link": "https://www.aleksandrhovhannisyan.com/notes/cache-busting-assets-in-eleventy/",
+    "Date": "2025-08-10T21:38:54.000",
+    "Author": "Aleksandr Hovhannisya",
+    "Categories": [
+      "Asset Pipelines",
+      "CSS/Sass",
+      "Configuration",
+      "Global Data",
+      "How to..."
+    ]
   }
 ]
