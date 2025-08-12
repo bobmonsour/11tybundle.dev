@@ -94,5 +94,11 @@
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "true"
+  },
+  {
+    "url": "https://meinamsterdam.nl/",
+    "rssFeed": "",
+    "descriptionFail": "true",
+    "rssFail": "true"
   }
 ]
