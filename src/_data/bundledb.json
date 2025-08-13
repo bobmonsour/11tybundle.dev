@@ -24670,5 +24670,18 @@
       "Deployment",
       "How to..."
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Formatting maths in Eleventy with KaTeX",
+    "Link": "https://underlap.org/katex/",
+    "Date": "2025-08-13T14:27:35.000",
+    "Author": "Glyn Normington",
+    "Categories": [
+      "Debugging",
+      "How to...",
+      "Markdown"
+    ]
   }
 ]
