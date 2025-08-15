@@ -24683,5 +24683,31 @@
       "How to...",
       "Markdown"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Cloudflare domain hitches",
+    "Link": "https://skiles.blue/blog/cloudflare_domain_hitches/",
+    "Date": "2025-08-14",
+    "Author": "John Skiles Skinner",
+    "Categories": [
+      "Debugging",
+      "Deployment"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How I Built This Website (With 11ty & CraftCMS)",
+    "Link": "https://ma.tthew.berlin/words/how-i-built-this-website-with-11ty-craftcms/",
+    "Date": "2025-08-15T09:21:44.000",
+    "Author": "Matthew Richards",
+    "Categories": [
+      "CMS",
+      "Deployment",
+      "Getting Started",
+      "Global Data"
+    ]
   }
 ]
