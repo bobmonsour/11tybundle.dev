@@ -24709,5 +24709,43 @@
       "Getting Started",
       "Global Data"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "WebC",
+    "Link": "https://fuzzylogic.me/posts/webc/",
+    "Date": "2022-10-23",
+    "Author": "Laurence Hughes",
+    "Categories": [
+      "WebC"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Reusable code snippets and components in Eleventy",
+    "Link": "https://fuzzylogic.me/posts/reusable-code-snippets-and-components-in-eleventy/",
+    "Date": "2021-08-21",
+    "Author": "Laurence Hughes",
+    "Categories": [
+      "Nunjucks/Macros",
+      "Shortcodes"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Flexible tag-like functionality for custom keys in Eleventy",
+    "Link": "https://fuzzylogic.me/posts/flexible-tag-like-functionality-for-custom-keys-in-eleventy/",
+    "Date": "2019-08-26",
+    "Author": "Laurence Hughes",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "How to...",
+      "Pagination"
+    ]
   }
 ]
