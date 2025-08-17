@@ -24747,5 +24747,19 @@
       "How to...",
       "Pagination"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Updated My Draft System",
+    "Link": "https://claytonerrington.com/blog/updated-drafts/?utm_source=rss",
+    "Date": "2025-08-17T08:08:22.000",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Configuration",
+      "Drafts",
+      "Front Matter",
+      "How to..."
+    ]
   }
 ]
