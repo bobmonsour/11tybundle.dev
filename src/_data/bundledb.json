@@ -24774,5 +24774,19 @@
       "Deployment",
       "How to..."
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Solving my Image Dimension Problem with an Eleventy Transform",
+    "Link": "https://www.cantoni.org/2025/08/18/solving-my-image-dimension-problem-with-an-eleventy-transform/",
+    "Date": "2025-08-18T16:50:34.000",
+    "Author": "Brian Cantoni",
+    "Categories": [
+      "Debugging",
+      "How to...",
+      "Images",
+      "Plugins"
+    ]
   }
 ]
