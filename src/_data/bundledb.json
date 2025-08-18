@@ -24761,5 +24761,18 @@
       "Front Matter",
       "How to..."
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How to Add Playwright Automated Tests to an Eleventy Static Blog",
+    "Link": "https://www.cantoni.org/2025/08/17/how-to-add-playwright-automated-tests-to-an-eleventy-static-blog/",
+    "Date": "2025-08-17T21:02:24.000",
+    "Author": "Brian Cantoni",
+    "Categories": [
+      "Debugging",
+      "Deployment",
+      "How to..."
+    ]
   }
 ]
