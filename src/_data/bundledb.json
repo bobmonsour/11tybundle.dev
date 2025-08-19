@@ -22385,9 +22385,9 @@
     "Issue": "71",
     "Type": "blog post",
     "Title": "11tyCMS",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms/",
+    "Link": "https://11tycms.com/blog/posts/11tycms/",
     "Date": "2025-04-14",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "Blogging",
       "CMS"
@@ -22481,9 +22481,9 @@
     "Issue": "72",
     "Type": "blog post",
     "Title": "11tyCMS: Electron Prototype",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-electron-prototype/",
+    "Link": "https://11tycms.com/blog/posts/11tycms-electron-prototype/",
     "Date": "2025-04-17",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "CMS"
     ]
@@ -22673,9 +22673,9 @@
     "Issue": "72",
     "Type": "blog post",
     "Title": "11tyCMS: First design & file management",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-redesign/",
-    "Date": "2025-04-23",
-    "Author": "Thinkymeat",
+    "Link": "https://11tycms.com/blog/posts/11tycms-redesign/",
+    "Date": "2025-04-22",
+    "Author": "11tyCMS",
     "Categories": [
       "Blogging",
       "CMS"
@@ -23462,9 +23462,9 @@
     "Issue": "75",
     "Type": "blog post",
     "Title": "11tyCMS: Improved File Management and Posts List",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-improved-file-management-and-posts-list/",
+    "Link": "https://11tycms.com/blog/posts/11tycms-improved-file-management-and-posts-list/",
     "Date": "2025-06-01",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "CMS"
     ]
@@ -23561,9 +23561,9 @@
     "Issue": "75",
     "Type": "blog post",
     "Title": "11tyCMS: Trapped in image and markdown hell",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-trapped-in-image-hell/",
+    "Link": "https://11tycms.com/blog/posts/11tycms-trapped-in-image-hell/",
     "Date": "2025-06-04",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "CMS",
       "Images",
@@ -23896,9 +23896,9 @@
     "Issue": "76",
     "Type": "blog post",
     "Title": "11tyCMS: Image uploads and design enhancements",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-image-uploads-and-design-enhancements/",
+    "Link": "https://11tycms.com/blog/posts/11tycms-image-uploads-and-design-enhancements/",
     "Date": "2025-07-03",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "Blogging",
       "CMS",
@@ -24027,9 +24027,9 @@
     "Issue": "76",
     "Type": "blog post",
     "Title": "11tyCMS: Metadata Editor, 11ty Build Integration & Design Refinements",
-    "Link": "https://thinkymeat.neocities.org/posts/11tycms-metadata-editor-11ty-build-integration/",
+    "Link": "https://11tycms.com/blog/posts/11tycms-metadata-editor-11ty-build-integration/",
     "Date": "2025-07-11",
-    "Author": "Thinkymeat",
+    "Author": "11tyCMS",
     "Categories": [
       "CMS"
     ]
@@ -24798,6 +24798,17 @@
     "Author": "Zach Leatherman",
     "Categories": [
       "From the Source"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "11tyCMS: New home(s), build & publishing, with a side of collection indexing & bug fixes",
+    "Link": "https://11tycms.com/blog/posts/11tycms-build-and-publishing-with-a-side-of-metadata/",
+    "Date": "2025-08-19T12:16:23.000",
+    "Author": "11tyCMS",
+    "Categories": [
+      "CMS"
     ]
   }
 ]
