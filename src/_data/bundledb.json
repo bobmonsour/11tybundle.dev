@@ -24817,5 +24817,19 @@
     "Title": "csenf.de",
     "Link": "https://csenf.de/",
     "Date": "2025-08-19T15:42:35.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Automating my links list",
+    "Link": "https://www.juanfernandes.uk/blog/automating-my-links-list/",
+    "Date": "2025-08-20T16:53:17.000",
+    "Author": "Juan Fernandes",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "RSS",
+      "Remote Data"
+    ]
   }
 ]
