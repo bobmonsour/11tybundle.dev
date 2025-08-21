@@ -24850,5 +24850,16 @@
     "Title": "Srva",
     "Link": "https://www.srva.ai/",
     "Date": "2025-08-20T17:33:53.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Ghost vs. Substack, Eleventy vs. WordPress: My Experiences",
+    "Link": "https://ricmac.org/2025/08/21/ghost-substack-eleventy-wordpress/",
+    "Date": "2025-08-21T08:40:51.000",
+    "Author": "Richard MacManus",
+    "Categories": [
+      "Why Eleventy?"
+    ]
   }
 ]
