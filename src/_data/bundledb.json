@@ -24861,5 +24861,34 @@
     "Categories": [
       "Why Eleventy?"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Troubleshooting Eleventy Long Build Time",
+    "Link": "https://claytonerrington.com/blog/troubleshooting-eleventy-long-build-time/",
+    "Date": "2025-08-22T16:58:16.000",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Blogging",
+      "Debugging",
+      "How to...",
+      "Performance"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How I Fixed My Blogroll",
+    "Link": "https://claytonerrington.com/blog/how-i-fixed-my-blogroll/",
+    "Date": "2025-08-22T16:59:46.000",
+    "Author": "Clayton Errington",
+    "Categories": [
+      "Blogging",
+      "Debugging",
+      "How to...",
+      "RSS",
+      "Remote Data"
+    ]
   }
 ]
