@@ -24890,5 +24890,48 @@
       "RSS",
       "Remote Data"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Webmentions and 11ty",
+    "Link": "https://my.stuffandthings.lol/blog/2024-06-19/webmentions-and-11ty.html",
+    "Date": "2024-06-19",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Social Media",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "11ty Beta and Going Public",
+    "Link": "https://my.stuffandthings.lol/blog/2024-08-02/11ty-beta-and-going-public.html",
+    "Date": "2024-08-02",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Deployment",
+      "How to...",
+      "Upgrading"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "OG Images using 11ty Screenshot Service",
+    "Link": "https://my.stuffandthings.lol/blog/2025-08-23/og-images-using-11ty-screenshot-service.html",
+    "Date": "2025-08-23T21:43:58.000",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Images",
+      "Pagination",
+      "Social Media"
+    ]
   }
 ]
