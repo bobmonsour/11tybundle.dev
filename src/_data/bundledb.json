@@ -24933,5 +24933,20 @@
       "Pagination",
       "Social Media"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "O(M)G Images",
+    "Link": "https://my.stuffandthings.lol/blog/2025-01-15/o-m-g-images.html",
+    "Date": "2025-01-15",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Blogging",
+      "How to...",
+      "Images",
+      "Plugins",
+      "Social Media"
+    ]
   }
 ]
