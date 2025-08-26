@@ -24970,5 +24970,12 @@
       "Markdown",
       "Obsidian"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "WebC v0.12.0-beta.1",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.12.0-beta.1",
+    "Date": "2025-08-22T09:45:45.000"
   }
 ]
