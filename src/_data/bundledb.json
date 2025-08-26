@@ -24955,5 +24955,20 @@
     "Title": "Aninus",
     "Link": "https://aninus.com/",
     "Date": "2025-08-26T09:40:35.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Using Obsidian Callouts with 11ty",
+    "Link": "https://aninus.com/blog/using-obsidian-callouts-with-11ty/",
+    "Date": "2025-08-26T09:41:50.000",
+    "Author": "Aninus Partikler",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Obsidian"
+    ]
   }
 ]
