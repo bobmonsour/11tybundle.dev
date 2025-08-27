@@ -24984,5 +24984,12 @@
     "Title": "Bill Vinson",
     "Link": "https://www.billvinson.com/",
     "Date": "2025-08-26T21:48:20.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "Eleventy Image v7.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v7.0.0-alpha.2",
+    "Date": "2025-08-27T14:01:07.000"
   }
 ]
