@@ -25028,5 +25028,12 @@
     "Title": "Eleventy WebC Plugin v0.12.0-beta.7",
     "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.7",
     "Date": "2025-08-28"
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "is-land v5.0.0",
+    "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0",
+    "Date": "2025-08-29T09:49:33.000"
   }
 ]
