@@ -25035,5 +25035,26 @@
     "Title": "is-land v5.0.0",
     "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0",
     "Date": "2025-08-29T09:49:33.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Chris Hannah",
+    "Link": "https://chrishannah.me/",
+    "Date": "2025-08-30T17:46:56.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Conditional favicon in Elev­enty using passthrough copy",
+    "Link": "https://chriskirknielsen.com/blog/conditional-favicon-with-eleventy-passthrough-copy/",
+    "Date": "2025-09-01T09:06:31.000",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": [
+      "Asset Pipelines",
+      "Configuration",
+      "How to...",
+      "Images"
+    ]
   }
 ]
