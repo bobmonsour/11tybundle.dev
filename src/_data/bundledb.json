@@ -25056,5 +25056,20 @@
       "How to...",
       "Images"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Asset fingerprinting and the preload response header in 11ty",
+    "Link": "https://nooshu.com/blog/2025/09/02/asset-fingerprinting-and-the-preload-response-header-in-11ty/",
+    "Date": "2025-09-02T16:59:08.000",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Asset Pipelines",
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "Performance"
+    ]
   }
 ]
