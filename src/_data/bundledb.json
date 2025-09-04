@@ -25071,5 +25071,20 @@
       "How to...",
       "Performance"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "From Start to Finish: Moving My Blog to Eleventy + GitHub Pages",
+    "Link": "https://www.kylereddoch.me/blog/from-start-to-finish-moving-my-blog-to-eleventy-github-pages/",
+    "Date": "2025-09-04T12:47:20.000",
+    "Author": "Kyle Reddoch",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "Getting Started",
+      "How to...",
+      "Migrating to Eleventy"
+    ]
   }
 ]
