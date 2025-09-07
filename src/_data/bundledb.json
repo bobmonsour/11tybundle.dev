@@ -25108,5 +25108,42 @@
       "How to...",
       "Internationalization"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "From Dotclear to Eleventy",
+    "Link": "https://alix.guillard.fr/notes/dotclear-to-eleventy/",
+    "Date": "2025-09-05T08:43:42.000",
+    "Author": "Alix Guillard",
+    "Categories": [
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "JOL.",
+    "Link": "https://jesus.twk95.com/",
+    "Date": "2025-09-05T08:47:53.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "An Eleventy Showcase!",
+    "Link": "https://jesus.twk95.com/blog/an-eleventy-showcase/",
+    "Date": "2025-08-30",
+    "Author": "Jesus Otero Lagunes",
+    "Categories": [
+      "Markdown",
+      "Why Eleventy?"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Patrick Grey",
+    "Link": "https://www.patrickgrey.co.uk/",
+    "Date": "2025-09-05T14:21:20.000"
   }
 ]
