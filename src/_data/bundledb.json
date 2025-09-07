@@ -25145,5 +25145,20 @@
     "Title": "Patrick Grey",
     "Link": "https://www.patrickgrey.co.uk/",
     "Date": "2025-09-05T14:21:20.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Category and Tag Pages with Eleventy",
+    "Link": "https://joshtronic.com/2025/09/07/eleventy-category-tag-pages/",
+    "Date": "2025-09-07",
+    "Author": "Josh Sherman",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "How to...",
+      "Pagination"
+    ]
   }
 ]
