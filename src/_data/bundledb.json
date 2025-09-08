@@ -25160,5 +25160,17 @@
       "How to...",
       "Pagination"
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Moving away from Nuxt to Eleventy",
+    "Link": "https://withlogic.co/var/log/2025/09/08/moving-away-from-nuxt-to-eleventy",
+    "Date": "2025-09-08T13:51:23.000",
+    "Author": "pariskasid",
+    "Categories": [
+      "Migrating to Eleventy",
+      "Why Eleventy?"
+    ]
   }
 ]
