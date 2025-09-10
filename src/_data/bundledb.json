@@ -25198,5 +25198,23 @@
       "Global Data",
       "How to..."
     ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Migrating from Hugo to 11ty (Finally)",
+    "Link": "https://pedromelorocha.pt/blog/migrating-from-hugo-to-11ty-finally/",
+    "Date": "2025-09-08",
+    "Author": "Pedro Rocha",
+    "Categories": [
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Pedro Rocha",
+    "Link": "https://pedromelorocha.pt/",
+    "Date": "2025-09-10T15:55:41.000"
   }
 ]
