@@ -25216,5 +25216,26 @@
     "Title": "Pedro Rocha",
     "Link": "https://pedromelorocha.pt/",
     "Date": "2025-09-10T15:55:41.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "site",
+    "Title": "Taksh Shah",
+    "Link": "https://taksh.codes/",
+    "Date": "2025-09-12T08:42:24.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "site",
+    "Title": "Adam Wilbert",
+    "Link": "https://adamwilbert.com/",
+    "Date": "2025-09-18T10:32:23.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome Plugin v1.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0",
+    "Date": "2025-09-18"
   }
 ]
