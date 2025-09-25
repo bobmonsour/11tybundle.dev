@@ -1,7 +1,10 @@
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-import bundleRecords from './bundledb.json' with { type: 'json' };
+// import bundleRecords from './bundledb.json' with { type: 'json' };
+
+// Changing from a local file to a remote db stored in a separate repo
+import Fetch from "@11ty/eleventy-fetch";
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -11,7 +14,16 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
 
+const BUNDLEDB_URL =
+  "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+
 export default async function () {
+  // Fetch the json db from its remote repo
+  const bundleRecords = await Fetch(BUNDLEDB_URL, {
+    duration: "1d", // cache for 1 day
+    type: "json",
+  });
+
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post")

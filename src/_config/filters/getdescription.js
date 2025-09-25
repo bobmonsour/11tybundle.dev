@@ -4,7 +4,7 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const exceptionList = require("../../_data/exception-list.json");
 
-import EleventyFetch from "@11ty/eleventy-fetch";
+import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
 let descriptionCache = {};
@@ -54,7 +54,7 @@ export const getDescription = async (link) => {
   }
 
   try {
-    let htmlcontent = await EleventyFetch(link, {
+    let htmlcontent = await Fetch(link, {
       directory: ".cache",
       duration: "*",
       type: "buffer",
