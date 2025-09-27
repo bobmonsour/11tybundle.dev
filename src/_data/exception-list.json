@@ -100,5 +100,11 @@
     "rssFeed": "",
     "descriptionFail": "true",
     "rssFail": "true"
+  },
+  {
+    "url": "https://moritzglantz.de/",
+    "rssFeed": "https://moritzglantz.de/blog/feed.xml",
+    "descriptionFail": "true",
+    "rssFail": "true"
   }
 ]
