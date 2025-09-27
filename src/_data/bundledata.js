@@ -20,7 +20,7 @@ const BUNDLEDB_URL =
 export default async function () {
   // Fetch the json db from its remote repo
   const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: "1d", // cache for 1 day
+    duration: "0s", // always fetch new data
     type: "json",
   });
 
