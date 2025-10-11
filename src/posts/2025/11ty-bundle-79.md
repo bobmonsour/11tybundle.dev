@@ -14,7 +14,7 @@ _An email version of this blog is available. **[Subscribe here](#newsletter-subs
 
 **_A note from Bob:_**
 
-For a long time, I'd been in the habit of adding posts to the database as I found them. But due to travel and a couple of other life stressors, I just started adding links to the posts in an Obsidian doc. Well, they just kept piling up and not getting added to the bundle. A few of days ago, I finally sat down and added them all. For those of you who subscribe to the [RSS feed](/firehosefeed.xml) of the [/firehose/]Firehose, on the evening of October 8th, you likley saw a flood of posts (about 15 of them) land in your feed readers. My apologies for the deluge.
+For a long time, I'd been in the habit of adding posts to the database as I found them. But due to travel and a couple of other life stressors, I just started adding links to the posts in an Obsidian doc. Well, they just kept piling up and not getting added to the bundle. A few of days ago, I finally sat down and added them all. For those of you who subscribe to the [RSS feed](/firehosefeed.xml) of the [Firehose](/firehose/), on the evening of October 8th, you likely saw a flood of posts (about 15 of them) land in your feed readers. My apologies for the deluge.
 
 One of the reasons I've been busy is that we're searching for a new home in Southern California. Over our 32 years of marriage, we've lived in 10 different houses across 3 states (CA, NJ, and WA). So, yes, this next one will be our **11th** house. 11th time's a charm! And with that, it will hopefully be our last. We're looking forward to being closer to family and old friends.
 
