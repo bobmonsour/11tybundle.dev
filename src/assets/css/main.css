@@ -3,7 +3,7 @@
 
 /* default styles */
 body {
-  /* use flex on body to force footer to bottom on short pages */
+  /* use grid on body to force footer to bottom on short pages */
   background-color: #ffedde;
   /* background-color: var(--site-bg-color); */
   color: var(--brand-text-color);
@@ -150,13 +150,13 @@ img[width][height] {
 
 /*
 	main content constrained by body width
-	this is inspired/copyied-from Ryan Mulligan's blog
+	this is inspired/copied-from Ryan Mulligan's blog
 	see it at: https://ryanmulligan.dev/blog/layout-breakouts/
 */
 .content {
   --gap: clamp(0.25rem, 3vw, 1rem);
   --full: minmax(var(--gap), 1fr);
-  --content: min(65ch, 100% - var(--gap) * 2);
+  --content: min(65ch, 100vw - var(--gap) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
 
@@ -199,7 +199,7 @@ img[width][height] {
   margin: 0.5em auto;
   text-align: center;
 }
-.brand-link a.home {
+.brand-link a.brand {
   border: none;
   margin: 0.25rem auto;
   align-self: center;
