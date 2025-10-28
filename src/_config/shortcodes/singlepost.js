@@ -37,57 +37,57 @@ import { formatItemDate } from "../filters/datesandnumbers.js";
 // These CSS IDs are used to create a landing place for the links in the pagefind results.
 //
 export default function (eleventyConfig) {
-	eleventyConfig.addNunjucksAsyncShortcode(
-		"singlePost",
-		async function (post, type, idKey, postCount) {
-			const slugify = eleventyConfig.getFilter("slugify");
-			const title = post.Title.replace(/[<>]/g, "");
-			const titleSlug = slugify(title);
-			const description = await getDescription(post.Link);
-			const authorSlug = slugify(post.Author);
-			const url = new URL(post.Link);
-			const siteUrl = url.origin;
-			const postCountLabel = postCount == 1 ? "post" : "posts";
-			let siteUrlString = "";
-			let rssLinkString = "";
-			let pageWeightorIgnore = "";
-			switch (siteUrl) {
-				case "https://www.youtube.com":
-				case "https://medium.com":
-					break;
-				default:
-					siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
-					let rssLink = await getRSSlink(siteUrl);
-					rssLinkString =
-						rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
-					break;
-			}
-			const date = formatItemDate(post.Date);
-			const id = '"' + slugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
-			switch (type) {
-				case "category": // for category pages
-					pageWeightorIgnore = "data-pagefind-weight = 10";
-					break;
-				case "author": // for author pages
-					pageWeightorIgnore = "data-pagefind-weight = 5";
-					break;
-				case "firehose": // for the firehose page
-				case "blog": // for the Bundle blog posts
-					pageWeightorIgnore = "data-pagefind-ignore";
-			}
-			let categories = "";
-			post.Categories.forEach((category) => {
-				let slugifiedCategory = slugify(category);
-				categories += `<a href="/categories/${slugifiedCategory}/">${category}</a>`;
-			});
-			return `
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "singlePost",
+    async function (post, type, idKey, postCount) {
+      const slugify = eleventyConfig.getFilter("slugify");
+      const title = post.Title.replace(/[<>]/g, "");
+      const titleSlug = slugify(title);
+      const description = await getDescription(post.Link);
+      const authorSlug = slugify(post.Author);
+      const url = new URL(post.Link);
+      const siteUrl = url.origin;
+      const postCountLabel = postCount == 1 ? "post" : "posts";
+      let siteUrlString = "";
+      let rssLinkString = "";
+      let pageWeightorIgnore = "";
+      switch (siteUrl) {
+        case "https://www.youtube.com":
+        case "https://medium.com":
+          break;
+        default:
+          siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
+          let rssLink = await getRSSlink(siteUrl);
+          rssLinkString =
+            rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
+          break;
+      }
+      const date = formatItemDate(post.Date);
+      const id = '"' + slugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
+      switch (type) {
+        case "category": // for category pages
+          pageWeightorIgnore = "data-pagefind-weight = 10";
+          break;
+        case "author": // for author pages
+          pageWeightorIgnore = "data-pagefind-weight = 5";
+          break;
+        case "firehose": // for the firehose page
+        case "blog": // for the Bundle blog posts
+          pageWeightorIgnore = "data-pagefind-ignore";
+      }
+      let categories = "";
+      post.Categories.forEach((category) => {
+        let slugifiedCategory = slugify(category);
+        categories += `<a href="/categories/${slugifiedCategory}/">${category}</a>`;
+      });
+      return `
 				<div class="bundleitem">
-					<h2 class="bundleitem-title" ID=${id} ${pageWeightorIgnore}><a href="${post.Link}" data-link-type="external">${post.Title}</a></h2>
+					<a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
 					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
 					<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
-		}
-	);
+    }
+  );
 }

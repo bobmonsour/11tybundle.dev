@@ -499,8 +499,16 @@ footer > p {
   background-color: var(--siteitem-bg-color);
 }
 
-p.bundleitem-title,
-h2.bundleitem-title {
+a.bundleitem-title {
+  display: block;
+  width: 100%;
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  margin-block: 0;
+  padding-block: 0;
+  text-align: left;
+}
+p.bundleitem-title {
   font-size: var(--font-size-md);
   font-weight: bold;
   margin-block: 0;
