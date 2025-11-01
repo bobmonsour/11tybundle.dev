@@ -70,7 +70,23 @@ export const getDescription = async (link) => {
     if (description == undefined) {
       descriptionCache[link] = "";
     } else {
-      descriptionCache[link] = description.replace(/[<>]/g, "").trim();
+      descriptionCache[link] = description
+        .replace(/[<>]/g, "") // Remove angle brackets
+        .replace(/&(?!(?:[a-z\d]+|#\d+|#x[a-f\d]+);)/gi, "&amp;") // Escape unencoded ampersands
+        .replace(/"/g, "&quot;") // Escape quotes
+        .replace(/'/g, "&#39;") // Escape apostrophes
+        .replace(/\s+/g, " ") // Normalize whitespace
+        .replace(/[\u0000-\u001F\u007F-\u009F]/g, "") // Remove control characters
+        .replace(/[\u200B-\u200D\uFEFF]/g, "") // Remove zero-width characters
+        .replace(/[\u202A-\u202E]/g, "") // Remove directional text markers
+        .replace(/\u00AD/g, "") // Remove soft hyphens
+        .replace(/[\u00A0]/g, " ") // Convert non-breaking spaces to regular spaces
+        .replace(/[\u2000-\u200A]/g, " ") // Convert various unicode spaces to regular spaces
+        .replace(/[\u2028\u2029]/g, " ") // Remove line/paragraph separators
+        .replace(/[\u2060]/g, "") // Remove word joiners
+        .replace(/[\uFFF9-\uFFFB]/g, "") // Remove interlinear annotation characters
+        .trim()
+        .substring(0, 300); // Reasonable length limit for descriptions
     }
     return descriptionCache[link];
   } catch (e) {

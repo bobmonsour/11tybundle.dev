@@ -59,7 +59,7 @@ export default function (eleventyConfig) {
           siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
           let rssLink = await getRSSlink(siteUrl);
           rssLinkString =
-            rssLink === "" ? "" : ` & <a href="${rssLink}">RSS feed</a>`;
+            rssLink === "" ? "" : ` &amp; <a href="${rssLink}">RSS feed</a>`;
           break;
       }
       const date = formatItemDate(post.Date);

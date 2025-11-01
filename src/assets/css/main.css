@@ -14,7 +14,8 @@ body {
   line-height: 1.3;
   margin: 0 auto;
   min-height: 100vh;
-  width: min(var(--page-width-max), 100vw - 0.5em);
+  --gap: clamp(0.25rem, 3vw, 1rem);
+  max-width: min(65ch, 100% - var(--gap) * 2);
 }
 
 /* Set up view transitions */
@@ -146,46 +147,6 @@ img[width][height] {
 
 .flow > * + * {
   margin-block-start: var(--flow-space);
-}
-
-/*
-	main content constrained by body width
-	this is inspired/copied-from Ryan Mulligan's blog
-	see it at: https://ryanmulligan.dev/blog/layout-breakouts/
-*/
-.content {
-  --gap: clamp(0.25rem, 3vw, 1rem);
-  --full: minmax(var(--gap), 1fr);
-  --content: min(65ch, 100vw - var(--gap) * 2);
-  --popout: minmax(0, 2rem);
-  --feature: minmax(0, 5rem);
-
-  display: grid;
-  place-content: start;
-  grid-template-columns:
-    [full-start] var(--full)
-    [feature-start] var(--feature)
-    [popout-start] var(--popout)
-    [content-start] var(--content) [content-end]
-    var(--popout) [popout-end]
-    var(--feature) [feature-end]
-    var(--full) [full-end];
-}
-
-.content > * {
-  grid-column: content;
-}
-
-.popout {
-  grid-column: popout;
-}
-
-.feature {
-  grid-column: feature;
-}
-
-.full {
-  grid-column: full;
 }
 
 /* brand & navigation (inside <header>) */
@@ -516,6 +477,7 @@ p.bundleitem-title {
   text-align: left;
 }
 .bundleitem-description {
+  word-break: break-all;
   font-style: italic;
   font-size: var(--font-size-md);
   margin-block: 0;
@@ -698,9 +660,9 @@ input {
 }
 
 /* Home page specific styles */
-.home {
+/* .home {
   grid-column: popout;
-}
+} */
 .home > h1 {
   font-weight: bold;
 }
