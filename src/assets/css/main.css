@@ -288,7 +288,8 @@ img[width][height] {
   font-weight: normal;
 }
 .aux-links {
-  margin-inline: auto;
+  display: flex;
+  justify-content: center;
 }
 
 #search {
