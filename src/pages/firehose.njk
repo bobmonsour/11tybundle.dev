@@ -19,13 +19,14 @@ permalink: /firehose/
 	{% set v1cautionshown = false %}
 	{% set v2cautionshown = false %}
 	{% set v3cautionshown = false %}
+  {%- set newestPostYear = bundledata.firehose[0].Date | truncate(4, true, '') -%}
 	{%- for item in bundledata.firehose -%}
 		{%- set current_year = item.Date | truncate(4, true, '') -%}
 		{%- if current_year != previous_year -%}
 			{%- if previous_year != "no posts yet" -%}
 				</details>
 			{%- endif -%}
-			<details open>
+			<details {% if current_year == newestPostYear %}open{% endif %}>
 			<summary>{{ current_year }}</summary>
 			{%- set previous_year = current_year -%}
 		{%- endif -%}
