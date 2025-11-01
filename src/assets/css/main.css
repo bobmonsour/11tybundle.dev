@@ -478,7 +478,7 @@ p.bundleitem-title {
   text-align: left;
 }
 .bundleitem-description {
-  word-break: break-all;
+  overflow-wrap: anywhere;
   font-style: italic;
   font-size: var(--font-size-md);
   margin-block: 0;
