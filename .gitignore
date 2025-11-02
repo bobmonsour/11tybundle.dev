@@ -4,6 +4,7 @@ _site/
 devdata/
 resources/
 scratch/
+scripts/
 .env
 .cache
 .vscode
