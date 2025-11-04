@@ -436,6 +436,7 @@ footer {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   margin-block: 1em;
+  /* width: var(--page-width-max); */
 }
 
 footer > p {
