@@ -51,16 +51,16 @@ async function summarizeWithOpenAI(text, link) {
 
   const summarize = async (content, instruction) => {
     const startTime = performance.now();
-    const response = await openai.responses.create({
+    const response = await openai.chat.completions.create({
       model: "gpt-5-nano",
-      input: `${instruction}\n\n${content}`,
+      messages: [{ role: "user", content: `${instruction}\n\n${content}` }],
     });
     const endTime = performance.now();
     const duration = ((endTime - startTime) / 1000).toFixed(2);
 
     console.log(`OpenAI API call for ${link}: ${duration}s`);
 
-    return (response.output_text || "").trim();
+    return (response.choices[0]?.message?.content || "").trim();
   };
 
   if (parts.length === 1) {
@@ -83,7 +83,7 @@ async function summarizeWithOpenAI(text, link) {
 
   return await summarize(
     chunkSummaries.join("\n\n"),
-    "Combine these chunk summaries into one cohesive 3–6 sentence summary without repetition. Be faithful, concise, and neutral."
+    "Combine these chunk summaries into one cohesive 2-4 sentence summary without repetition. Be faithful, concise, and neutral."
   );
 }
 
