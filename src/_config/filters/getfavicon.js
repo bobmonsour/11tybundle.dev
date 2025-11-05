@@ -1,43 +1,30 @@
 import { createRequire } from "module";
 import eleventyFetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
-import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const require = createRequire(import.meta.url);
-const exceptionList = require("../../_data/exception-list.json");
 
 // --- Configuration ---
-const CACHE_DIR = "_site/assets/favicons/";
-const WEB_PATH = "/assets/favicons/";
-const defaultFavicon = "/assets/images/generic-favicon.svg";
+const defaultFavicon = "/assets/img/default-favicon.ico";
+const faviconDir = "/assets/img/favicons";
 // ---
 
 let faviconCache = {};
 
-// Helper to create a filename from a URL origin, e.g., "bobmonsour-com-favicon.ico"
-const createFileNameFromOrigin = (origin, extension) => {
-  const hostname = new URL(origin).hostname;
-  const baseName = hostname.replace(/\./g, "-");
-  return `${baseName}-favicon${extension}`;
-};
-
 export const getFavicon = async (link) => {
   const origin = new URL(link).origin;
+  const domain = new URL(origin).hostname;
 
   if (faviconCache[origin]) {
     return faviconCache[origin];
   }
 
-  if (exceptionList.includes(origin)) {
-    faviconCache[origin] = defaultFavicon;
-    return defaultFavicon;
-  }
-
   try {
-    // 1. Fetch the HTML of the site's origin page
+    // Fetch the HTML of the site's origin page
     const html = await eleventyFetch(origin, {
-      duration: "1w", // Cache the HTML for a week
+      duration: "1w",
       type: "text",
       fetchOptions: {
         headers: {
@@ -58,39 +45,45 @@ export const getFavicon = async (link) => {
       const href = $(selector).attr("href");
       if (href) {
         faviconUrl = new URL(href, origin).href;
-        break; // Use the first, highest-priority icon found
+        break;
       }
     }
 
     if (!faviconUrl) {
-      // Fallback to the default /favicon.ico path if no <link> tag is found
       faviconUrl = new URL("/favicon.ico", origin).href;
     }
 
-    // 2. Generate a local path for the cached image
-    const extension = path.extname(new URL(faviconUrl).pathname) || ".ico";
-    const fileName = createFileNameFromOrigin(origin, extension);
-    const localFilePath = path.join(CACHE_DIR, fileName);
-    const webFilePath = path.join(WEB_PATH, fileName);
-
-    // If the file is already cached on disk, return its path
-    if (fs.existsSync(localFilePath)) {
-      faviconCache[origin] = webFilePath;
-      return webFilePath;
-    }
-
-    // 3. Fetch the favicon image itself
-    const imageBuffer = await eleventyFetch(faviconUrl, {
-      duration: "1w", // Cache the image file for a week
+    // Fetch and cache the favicon image
+    const faviconBuffer = await eleventyFetch(faviconUrl, {
+      duration: "1w",
       type: "buffer",
+      directory: ".cache/favicons",
+      fetchOptions: {
+        headers: {
+          "user-agent": "Mozilla/5.0 (compatible; 11tybundle.dev/1.0)",
+        },
+      },
     });
 
-    // 4. Save the image to the local cache directory
-    fs.mkdirSync(CACHE_DIR, { recursive: true });
-    fs.writeFileSync(localFilePath, imageBuffer);
+    // Determine file extension from URL or default to .ico
+    const urlPath = new URL(faviconUrl).pathname;
+    const extension = path.extname(urlPath) || ".ico";
+    const filename = `${domain.replace(/\./g, "-")}-favicon${extension}`;
+    const localPath = `${faviconDir}/${filename}`;
 
-    faviconCache[origin] = webFilePath;
-    return webFilePath;
+    // Store the favicon in the assets directory
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
+    const outputPath = path.join(__dirname, "../../../_site", localPath);
+
+    await import("fs").then((fs) =>
+      fs.promises.mkdir(path.dirname(outputPath), { recursive: true })
+    );
+    await import("fs").then((fs) =>
+      fs.promises.writeFile(outputPath, faviconBuffer)
+    );
+
+    faviconCache[origin] = localPath;
+    return localPath;
   } catch (e) {
     console.error(`Error processing favicon for ${origin}: ${e.message}`);
     faviconCache[origin] = defaultFavicon;
