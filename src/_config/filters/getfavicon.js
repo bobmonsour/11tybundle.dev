@@ -1,161 +1,161 @@
-import { createRequire } from "module";
 import eleventyFetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
 
-const require = createRequire(import.meta.url);
-
 // --- Configuration ---
-const defaultFavicon = "/assets/img/default-favicon.ico";
+const defaultFavicon = "/assets/img/default-favicon.png";
 const faviconDir = "/assets/img/favicons";
-const persistentCacheFile = ".cache/favicon-cache.json";
 // ---
 
+// In-memory cache to avoid processing the same origin multiple times during a single build
 let faviconCache = {};
-let persistentCache = {};
+// Track if default favicon has been copied to avoid redundant file operations
+let defaultFaviconCopied = false;
 
-// Load persistent cache on module initialization
-const loadPersistentCache = async () => {
+/**
+ * Ensures the default favicon exists in the _site directory by copying it from src.
+ * Only performs the copy once per build to avoid redundant file operations.
+ */
+const ensureDefaultFavicon = async () => {
+  if (defaultFaviconCopied) {
+    return; // Already copied during this build
+  }
+
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const sourcePath = path.join(
+    __dirname,
+    "../../../src/assets/img/default-favicon.png"
+  );
+  const destPath = path.join(
+    __dirname,
+    "../../../_site/assets/img/favicons/default-favicon.png"
+  );
+
   try {
-    const cacheData = await fs.readFile(persistentCacheFile, "utf8");
-    persistentCache = JSON.parse(cacheData);
+    // Check if default favicon already exists in _site directory
+    await fs.access(destPath);
+    defaultFaviconCopied = true; // Mark as handled to avoid future checks
   } catch (e) {
-    // Cache file doesn't exist or is corrupted, start with empty cache
-    persistentCache = {};
+    // Default favicon doesn't exist in _site, copy it from source
+    try {
+      await fs.mkdir(path.dirname(destPath), { recursive: true });
+      await fs.copyFile(sourcePath, destPath);
+      defaultFaviconCopied = true;
+    } catch (copyError) {
+      console.error(`Error copying default favicon: ${copyError.message}`);
+    }
   }
 };
 
-// Save persistent cache
-const savePersistentCache = async () => {
-  try {
-    await fs.mkdir(path.dirname(persistentCacheFile), { recursive: true });
-    await fs.writeFile(
-      persistentCacheFile,
-      JSON.stringify(persistentCache, null, 2)
-    );
-  } catch (e) {
-    console.error(`Error saving favicon cache: ${e.message}`);
-  }
-};
-
-// Check if local favicon file exists
-const checkLocalFileExists = async (localPath) => {
-  try {
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    const outputPath = path.join(__dirname, "../../../_site", localPath);
-    await fs.access(outputPath);
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-
-// Initialize persistent cache
-await loadPersistentCache();
-
+/**
+ * Gets the best available favicon for a given URL and stores it locally.
+ * Returns the local path for use in img src attributes.
+ */
 export const getFavicon = async (link) => {
+  // Extract the origin (protocol + hostname + port) from the full URL
+  // This ensures we only fetch one favicon per domain, not per page
   const origin = new URL(link).origin;
   const domain = new URL(origin).hostname;
 
-  // Check in-memory cache first
+  // Check if we've already processed this origin during this build
+  // This prevents redundant work when multiple pages reference the same domain
   if (faviconCache[origin]) {
     return faviconCache[origin];
   }
 
-  // Check persistent cache and verify file exists
-  if (persistentCache[origin]) {
-    const cachedPath = persistentCache[origin];
-    if (await checkLocalFileExists(cachedPath)) {
-      faviconCache[origin] = cachedPath;
-      return cachedPath;
-    } else {
-      // File was deleted, remove from persistent cache
-      delete persistentCache[origin];
-    }
-  }
-
   try {
-    // Fetch the HTML of the site's origin page
+    // Step 1: Fetch the homepage HTML to find favicon link tags
+    // We use the origin (homepage) because that's where favicon links are typically defined
     const html = await eleventyFetch(origin, {
-      duration: "1w",
+      directory: ".cache", // Store in eleventy's cache directory
+      duration: "1w", // Cache HTML for 1 week to avoid repeated requests
       type: "text",
       fetchOptions: {
         headers: {
-          "user-agent": "Mozilla/5.0 (compatible; 11tybundle.dev/1.0)",
+          "user-agent":
+            "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
         },
       },
     });
 
+    // Step 2: Parse HTML to find the best favicon link
     const $ = cheerio.load(html);
+
+    // Priority order: apple-touch-icon (highest quality), then icon, then shortcut icon
+    // Modern sites often provide multiple sizes; we take the first match for simplicity
     const selectors = [
-      'link[rel="apple-touch-icon"]',
-      'link[rel="icon"]',
-      'link[rel="shortcut icon"]',
+      'link[rel="apple-touch-icon"]', // Usually high-resolution, preferred
+      'link[rel="icon"]', // Standard favicon link
+      'link[rel="shortcut icon"]', // Legacy favicon link
     ];
     let faviconUrl = "";
 
+    // Find the first available favicon link in priority order
     for (const selector of selectors) {
       const href = $(selector).attr("href");
       if (href) {
+        // Convert relative URLs to absolute URLs using the origin as base
         faviconUrl = new URL(href, origin).href;
-        break;
+        break; // Use the first (highest priority) match
       }
     }
 
+    // Step 3: Fallback if no favicon links found in HTML
     if (!faviconUrl) {
+      // Many sites have favicon.ico in the root even without a link tag
       faviconUrl = new URL("/favicon.ico", origin).href;
     }
 
-    // Fetch and cache the favicon image
+    // Step 4: Download the actual favicon image
+    // eleventyFetch automatically handles caching, so subsequent calls return cached data
     const faviconBuffer = await eleventyFetch(faviconUrl, {
-      duration: "1w",
-      type: "buffer",
-      directory: ".cache/favicons",
+      directory: ".cache", // Store in eleventy's cache directory
+      duration: "1w", // Cache favicon images for 1 week
+      type: "buffer", // Return as binary buffer for file writing
       fetchOptions: {
         headers: {
-          "user-agent": "Mozilla/5.0 (compatible; 11tybundle.dev/1.0)",
+          "user-agent":
+            "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
         },
       },
     });
 
-    // Determine file extension from URL or default to .ico
+    // Step 5: Generate local filename with proper extension
+    // Extract extension from the favicon URL, default to .ico if none found
     const urlPath = new URL(faviconUrl).pathname;
     const extension = path.extname(urlPath) || ".ico";
+
+    // Create filename: domain with dots replaced by dashes + "-favicon" + extension
+    // Example: "example.com" becomes "example-com-favicon.png"
     const filename = `${domain.replace(/\./g, "-")}-favicon${extension}`;
     const localPath = `${faviconDir}/${filename}`;
 
-    // Check if file already exists before processing
-    if (await checkLocalFileExists(localPath)) {
-      faviconCache[origin] = localPath;
-      persistentCache[origin] = localPath;
-      await savePersistentCache();
-      return localPath;
-    }
-
-    // Store the favicon in the assets directory
+    // Step 6: Write favicon to local assets directory for serving
+    // This makes the favicon available at /assets/img/favicons/[filename] in the built site
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const outputPath = path.join(__dirname, "../../../_site", localPath);
 
-    await import("fs").then((fs) =>
-      fs.promises.mkdir(path.dirname(outputPath), { recursive: true })
-    );
-    await import("fs").then((fs) =>
-      fs.promises.writeFile(outputPath, faviconBuffer)
-    );
+    // Ensure the favicons directory exists before writing
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
-    // Update both caches
+    // Write the binary favicon data to the local file
+    await fs.writeFile(outputPath, faviconBuffer);
+
+    // Step 7: Cache the result and return the local path
+    // Store in memory cache to avoid reprocessing during this build
     faviconCache[origin] = localPath;
-    persistentCache[origin] = localPath;
-    await savePersistentCache();
-
-    return localPath;
+    return localPath; // Return path for use in img src attributes
   } catch (e) {
+    // If anything fails (network error, parsing error, file write error),
+    // fall back to the default favicon and cache that result
     console.error(`Error processing favicon for ${origin}: ${e.message}`);
+
+    // Ensure default favicon is available in _site directory
+    await ensureDefaultFavicon();
+
     faviconCache[origin] = defaultFavicon;
-    persistentCache[origin] = defaultFavicon;
-    await savePersistentCache();
     return defaultFavicon;
   }
 };
