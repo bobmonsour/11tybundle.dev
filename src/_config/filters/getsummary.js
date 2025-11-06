@@ -1,7 +1,7 @@
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 import OpenAI from "openai";
-import { performance } from "node:perf_hooks"; // ensure performance is available
+import { performance } from "node:perf_hooks";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -90,23 +90,21 @@ async function summarizeWithOpenAI(text, link) {
 // Main exported filter
 export async function getSummary(link) {
   try {
+    // Create a unique cache key based on the URL
+    const { AssetCache } = await import("@11ty/eleventy-fetch");
+    const cacheKey = `summary-${Buffer.from(link).toString("base64")}`;
+    const summaryCache = new AssetCache(cacheKey, ".cache");
+
     // Try to fetch cached summary first
-    // const cacheKey = `summary-${link}`;
+    if (summaryCache.isCacheValid("*")) {
+      const cachedData = await summaryCache.getCachedValue();
+      if (cachedData && cachedData.openAiSummary) {
+        console.log(`Using cached summary for ${link}`);
+        return `\n${cachedData.openAiSummary}`;
+      }
+    }
 
-    // try {
-    //   const cachedSummary = await Fetch(cacheKey, {
-    //     directory: ".cache",
-    //     duration: "*", // Cache forever
-    //     type: "json",
-    //   });
-
-    //   if (cachedSummary && cachedSummary.summary) {
-    //     console.log(`Using cached summary for ${link}`);
-    //     return cachedSummary.summary;
-    //   }
-    // } catch (cacheError) {
-    //   console.log(`No cached summary found for ${link}, generating new one...`);
-    // }
+    console.log(`No cached summary found for ${link}, generating new one...`);
 
     // Fetch the HTML page
     const html = await Fetch(link, {
@@ -129,20 +127,17 @@ export async function getSummary(link) {
     // Get summaries from both OpenAI
     const openAiSummary = await summarizeWithOpenAI(input, link);
 
-    // Store the summary in cache using AssetCache
-    // const { AssetCache } = await import("@11ty/eleventy-fetch");
-    // const summaryCache = new AssetCache(cacheKey, ".cache");
+    // Store the summary in cache
+    await summaryCache.save(
+      {
+        url: link,
+        openAiSummary: openAiSummary,
+        generatedAt: new Date().toISOString(),
+      },
+      "json"
+    );
 
-    // await summaryCache.save(
-    //   {
-    //     url: link,
-    //     openAiSummary: openAiSummary,
-    //     generatedAt: new Date().toISOString(),
-    //   },
-    //   "json"
-    // );
-
-    // console.log(`Cached summaries for ${link}`);
+    console.log(`Cached summary for ${link}`);
 
     return `\n${openAiSummary}`;
   } catch (e) {
