@@ -1,12 +1,15 @@
 import eleventyFetch from "@11ty/eleventy-fetch";
+import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
+// Determine if a URL is a LinkedIn profile or company page
 const isLinkedIn = (u) =>
   u.hostname.endsWith("linkedin.com") &&
   (u.pathname.startsWith("/in/") ||
     u.pathname.startsWith("/company/") ||
     u.pathname.startsWith("/pub/"));
 
+// Determine if a URL is a Bluesky profile
 const isBluesky = (u) =>
   u.hostname === "bsky.app" && u.pathname.startsWith("/profile/");
 
@@ -32,6 +35,7 @@ const normalizeGitHubProfile = (u) => {
   return `https://github.com/${parts[0]}`;
 };
 
+// Convert a relative URL to an absolute URL based on a base URL
 function toAbsolute(href, base) {
   try {
     return new URL(href, base).href;
@@ -40,15 +44,32 @@ function toAbsolute(href, base) {
   }
 }
 
+// Return a unique array of values
 function unique(list) {
   return Array.from(new Set(list));
 }
 
+// Main function to get social links from a given webpage
 export async function getSocialLinks(link) {
   const origin = new URL(link).origin;
 
+  // Create cache for social links using AssetCache directly
+  const cacheKey = `social-links-${origin}`;
+  const cache = new AssetCache(cacheKey, ".cache");
+
+  // Check if we have cached social links for this origin
+  if (cache.isCacheValid("1d")) {
+    const cachedLinks = await cache.getCachedValue();
+    if (cachedLinks) {
+      console.log(`Using cached social links for ${origin}`);
+      return cachedLinks;
+    }
+  }
+
+  // Step 1: Fetch the homepage HTML of the origin domain
+  // We use the origin because social links are typically in the site header/footer
   const html = await eleventyFetch(origin, {
-    duration: "1d",
+    duration: "1d", // Cache HTML for 1 day
     type: "text",
     fetchOptions: {
       headers: {
@@ -58,8 +79,10 @@ export async function getSocialLinks(link) {
     },
   });
 
+  // Step 2: Parse HTML with Cheerio for jQuery-like DOM manipulation
   const $ = cheerio.load(html);
 
+  // Initialize arrays to collect found social links by platform
   const found = {
     mastodon: [],
     linkedin: [],
@@ -67,7 +90,8 @@ export async function getSocialLinks(link) {
     github: [],
   };
 
-  // 1) JSON-LD sameAs
+  // Step 3: Look for structured data (JSON-LD) with sameAs properties
+  // This is the most reliable method as it's semantic and intentional
   $('script[type="application/ld+json"]').each((_, el) => {
     try {
       const json = JSON.parse($(el).text());
@@ -80,6 +104,7 @@ export async function getSocialLinks(link) {
           const abs = toAbsolute(href, origin);
           if (!abs) continue;
           const u = new URL(abs);
+          // Categorize links by platform using detection functions
           if (isLinkedIn(u)) found.linkedin.push(abs);
           else if (isBluesky(u)) found.bluesky.push(abs);
           else if (isMastodon(u)) found.mastodon.push(abs);
@@ -90,11 +115,12 @@ export async function getSocialLinks(link) {
         }
       }
     } catch {
-      // ignore invalid JSON-LD
+      // ignore invalid JSON-LD - some sites have malformed structured data
     }
   });
 
-  // 2) Anchor tags (rel="me", known domains, heuristic paths)
+  // Step 4: Scan all anchor tags for social links
+  // This catches links that aren't in structured data
   $("a[href]").each((_, a) => {
     const href = $(a).attr("href");
     const abs = toAbsolute(href, origin);
@@ -103,7 +129,8 @@ export async function getSocialLinks(link) {
     const u = new URL(abs);
     const rel = ($(a).attr("rel") || "").toLowerCase();
 
-    // First, prefer explicit rel="me"
+    // Step 4a: Prioritize links with explicit rel="me" attribute
+    // This is a semantic indicator that the link represents the same entity
     if (rel.split(/\s+/).includes("me")) {
       if (isLinkedIn(u)) found.linkedin.push(abs);
       else if (isBluesky(u)) found.bluesky.push(abs);
@@ -112,10 +139,11 @@ export async function getSocialLinks(link) {
         const profile = normalizeGitHubProfile(u);
         if (profile) found.github.push(profile);
       }
-      return;
+      return; // Skip further processing for rel="me" links
     }
 
-    // Then domain/path heuristics
+    // Step 4b: Use domain and path pattern matching
+    // Detect social platform links based on URL structure
     if (isLinkedIn(u)) found.linkedin.push(abs);
     else if (isBluesky(u)) found.bluesky.push(abs);
     else if (isMastodon(u)) found.mastodon.push(abs);
@@ -124,7 +152,8 @@ export async function getSocialLinks(link) {
       if (profile) found.github.push(profile);
     }
 
-    // Class/name hints (loose)
+    // Step 4c: Use CSS classes and text content as additional hints
+    // This catches links that might be styled or labeled as social links
     const cls = ($(a).attr("class") || "").toLowerCase();
     const label = (
       $(a).attr("aria-label") ||
@@ -133,6 +162,7 @@ export async function getSocialLinks(link) {
       ""
     ).toLowerCase();
 
+    // Check for platform-specific keywords in classes and labels
     const hintMasto = cls.includes("mastodon") || label.includes("mastodon");
     const hintLinkedIn = cls.includes("linkedin") || label.includes("linkedin");
     const hintBsky =
@@ -141,6 +171,8 @@ export async function getSocialLinks(link) {
       label.includes("bluesky");
     const hintGitHub = cls.includes("github") || label.includes("github");
 
+    // Only add links if both URL pattern AND hint match
+    // This reduces false positives
     if (hintLinkedIn && isLinkedIn(u)) found.linkedin.push(abs);
     if (hintBsky && isBluesky(u)) found.bluesky.push(abs);
     if (hintMasto && isMastodon(u)) found.mastodon.push(abs);
@@ -150,20 +182,25 @@ export async function getSocialLinks(link) {
     }
   });
 
-  // 3) Optional: scan visible text for @user@instance and resolve via WebFinger
-  // Skipped here for brevity; suggested next step if you need higher recall.
-
-  // Dedupe
+  // Step 5: Remove duplicate URLs within each platform
+  // Some sites might link to the same profile multiple times
   found.mastodon = unique(found.mastodon);
   found.bluesky = unique(found.bluesky);
   found.github = unique(found.github);
   found.linkedin = unique(found.linkedin);
 
-  // Return only the first link found for each type, or empty string if none
-  return {
+  // Step 6: Return only the first (best) link for each platform
+  // If no link found for a platform, return empty string
+  const socialLinks = {
     mastodon: found.mastodon[0] || "",
     bluesky: found.bluesky[0] || "",
     github: found.github[0] || "",
     linkedin: found.linkedin[0] || "",
   };
+
+  // Cache the results
+  await cache.save(socialLinks, "json");
+  console.log(`Cached social links for ${origin}`);
+
+  return socialLinks;
 }
