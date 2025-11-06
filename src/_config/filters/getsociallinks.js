@@ -51,7 +51,10 @@ export async function getSocialLinks(link) {
     duration: "1d",
     type: "text",
     fetchOptions: {
-      headers: { "user-agent": "Mozilla/5.0 (compatible; 11tybundle.dev/1.0)" },
+      headers: {
+        "user-agent":
+          "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
+      },
     },
   });
 
@@ -152,9 +155,15 @@ export async function getSocialLinks(link) {
 
   // Dedupe
   found.mastodon = unique(found.mastodon);
-  found.linkedin = unique(found.linkedin);
   found.bluesky = unique(found.bluesky);
   found.github = unique(found.github);
+  found.linkedin = unique(found.linkedin);
 
-  return found;
+  // Return only the first link found for each type, or empty string if none
+  return {
+    mastodon: found.mastodon[0] || "",
+    bluesky: found.bluesky[0] || "",
+    github: found.github[0] || "",
+    linkedin: found.linkedin[0] || "",
+  };
 }
