@@ -462,9 +462,14 @@ footer > p {
   background-color: var(--siteitem-bg-color);
 }
 
+.bundleitem-header {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 0.5em;
+  align-items: center;
+}
 a.bundleitem-title {
-  display: block;
-  width: 100%;
+  display: inline-block;
   font-size: var(--font-size-md);
   font-weight: bold;
   margin-block: 0;
@@ -706,4 +711,8 @@ input {
   height: 0.75em;
   display: inline-block;
   margin-inline-end: 0.5em;
+}
+.favicon {
+  width: 1em;
+  height: 1em;
 }

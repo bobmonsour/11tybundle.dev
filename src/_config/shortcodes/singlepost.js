@@ -50,6 +50,7 @@ export default function (eleventyConfig) {
       const url = new URL(post.Link);
       const siteUrl = url.origin;
       const faviconSource = await getFavicon(siteUrl);
+      console.log("faviconSource = ", faviconSource);
       const postCountLabel = postCount == 1 ? "post" : "posts";
       let siteUrlString = "";
       let rssLinkString = "";
@@ -103,7 +104,10 @@ export default function (eleventyConfig) {
       });
       return `
 				<div class="bundleitem">
-					<img src="${faviconSource}" alt="favicon for the author's site" class="social-icon"><a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
+          <div class="bundleitem-header">
+            <img src="${faviconSource}" alt="favicon for the author's site" class="favicon">
+            <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
+          </div>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
 					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author}</a> (${postCount} ${postCountLabel})</p>
