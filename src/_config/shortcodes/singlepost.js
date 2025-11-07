@@ -1,6 +1,7 @@
 import { getDescription } from "../filters/getdescription.js";
 import { getRSSlink } from "../filters/getrsslink.js";
 import { formatItemDate } from "../filters/datesandnumbers.js";
+import { getSocialLinks } from "../filters/getsociallinks.js";
 
 // Create a single post item for the category, author, and firehose pages
 // Inputs are:
@@ -75,6 +76,19 @@ export default function (eleventyConfig) {
         case "blog": // for the Bundle blog posts
           pageWeightorIgnore = "data-pagefind-ignore";
       }
+      let socialLinks = getSocialLinks(post.Link);
+
+      // Generate social media img elements from the socialLinks object
+      let socialImages = "";
+      const socialPlatforms = ["mastodon", "bluesky", "github", "linkedin"];
+      socialPlatforms.forEach((platform) => {
+        if (socialLinks[platform]) {
+          socialImages += `<a href="${socialLinks[platform]}" data-link-type="external"><img src="/assets/images/${platform}.svg" alt="${platform}" width="48" height="48"></a>`;
+        }
+      });
+
+      console.log("Social images: " socialImages);
+
       let categories = "";
       post.Categories.forEach((category) => {
         let slugifiedCategory = slugify(category);
@@ -86,7 +100,8 @@ export default function (eleventyConfig) {
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
 					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author} (${postCount} ${postCountLabel})</a>${siteUrlString}${rssLinkString}</p>
-					<p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
+					${socialImages}
+          <p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
     }
   );

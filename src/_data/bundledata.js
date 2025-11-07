@@ -14,15 +14,18 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
 
-const BUNDLEDB_URL =
-  "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+import bundleRecords from './bundledbtest.json' with { type: 'json' };
+// console.log(bundleRecords);
+
+// const BUNDLEDB_URL =
+//   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
 
 export default async function () {
   // Fetch the json db from its remote repo
-  const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: "0s", // always fetch new data
-    type: "json",
-  });
+  // const bundleRecords = await Fetch(BUNDLEDB_URL, {
+  //   duration: "0s", // always fetch new data
+  //   type: "json",
+  // });
 
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords

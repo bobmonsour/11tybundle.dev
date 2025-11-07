@@ -1,0 +1,890 @@
+[
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Making a multilingual website with Eleventy",
+    "Link": "https://francisbeaudet.com/en/blog/making-a-multilingual-website-with-eleventy/",
+    "Date": "2025-07-21",
+    "Author": "Francis Beaudet",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Internationalization",
+      "Navigation",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Updated Search to Use PageFind",
+    "Link": "https://claytonerrington.com/blog/updated-search-to-use-page-find/",
+    "Date": "2025-07-22",
+    "Author": "Clayton Errington",
+    "Categories": ["How to...", "Search"]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "OptiFolio",
+    "Link": "https://optifolio.vercel.app/",
+    "Date": "2025-07-23"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "bugs rock",
+    "Link": "https://bugsrock.online/",
+    "Date": "2025-07-23"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Completing the I18nPlugin installation",
+    "Link": "https://francisbeaudet.com/en/blog/completing-the-i18nplugin-installation/",
+    "Date": "2025-07-23",
+    "Author": "Francis Beaudet",
+    "Categories": ["How to...", "Internationalization", "Plugins", "RSS"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "I've added webmentions to this blog",
+    "Link": "https://fershad.com/notes/webmentions/",
+    "Date": "2025-07-23",
+    "Author": "Fershad Irani",
+    "Categories": ["How to...", "Webmentions"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Migrating An Eleventy Site to Bunny.Net",
+    "Link": "https://chrismcleod.dev/blog/migrating-an-eleventy-site-to-bunnynet/",
+    "Date": "2025-07-25",
+    "Author": "Chris McLeod",
+    "Categories": ["Configuration", "Deployment", "How to...", "Images"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Hosting your Static Site on Cloudflare: Tips & Tricks",
+    "Link": "https://cassey.dev/static-sites-on-cloudflare/",
+    "Date": "2025-07-25",
+    "Author": "Cassey Lottman",
+    "Categories": ["Configuration", "Deployment", "How to..."]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Scheduled deployments for Eleventy websites",
+    "Link": "https://damianwalsh.co.uk/posts/scheduled-deployments-for-eleventy-websites/",
+    "Date": "2025-07-25",
+    "Author": "Damian Walsh",
+    "Categories": ["Deployment", "How to...", "Netlify"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Updates to the Eleventy guide",
+    "Link": "https://renkotsuban.com/posts/2025-07-25-Updates-to-the-Eleventy-guide.html",
+    "Date": "2025-07-25",
+    "Author": "Renkon",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Getting Started",
+      "How to...",
+      "RSS"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Eleventy plugin recs, part 1",
+    "Link": "https://renkotsuban.com/posts/2025-07-26-Eleventy-plugin-recs-part-1.html",
+    "Date": "2025-07-25",
+    "Author": "Renkon",
+    "Categories": [
+      "Configuration",
+      "Front Matter",
+      "How to...",
+      "Markdown",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Using HTMX boosted links in my 11ty website",
+    "Link": "https://rigotti.nl/en/blog/htmx-11ty/",
+    "Date": "2025-07-25",
+    "Author": "Rigotti",
+    "Categories": ["Configuration", "How to...", "Performance"]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Beer Fridge",
+    "Link": "https://flamedfury.com/beerfridge/",
+    "Date": "2025-07-25"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Never write your own Date Parsing Library",
+    "Link": "https://www.zachleat.com/web/adventures-in-date-parsing/",
+    "Date": "2025-07-23",
+    "Author": "Zach Leatherman",
+    "Categories": ["Dates", "From the Source"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "11ty",
+    "Link": "https://notes.jays.net/blog/11ty/",
+    "Date": "2025-02-11",
+    "Author": "Jay Hannah",
+    "Categories": ["Blogging", "Filters", "How to...", "Images", "Social Media"]
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v3.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.1",
+    "Date": "2025-07-29"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "WebNami",
+    "Link": "https://webnami.in/",
+    "Date": "2025-07-30"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.1",
+    "Date": "2025-07-30T00:00:00Z"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.2",
+    "Date": "2025-07-30T01:00:00Z"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.3",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.3",
+    "Date": "2025-07-30T02:00:00Z"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v3.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.2",
+    "Date": "2025-07-30"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Find Affordable Housing",
+    "Link": "https://www.theunitedeffort.org/housing/affordable-housing/",
+    "Date": "2025-07-31"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Dev Server v3.0.0-alpha.3",
+    "Link": "https://github.com/11ty/eleventy-dev-server/releases/tag/v3.0.0-alpha.3",
+    "Date": "2025-08-01T09:40:29.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Pre-release: Eleventy v4.0.0-alpha.4",
+    "Link": "https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.4",
+    "Date": "2025-08-01T09:48:51.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Syntax Highlighter (Prism) v5.0.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v5.0.2",
+    "Date": "2025-08-01T12:18:36.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "One weird trick to reduce Eleventy Image Build Times by 60%",
+    "Link": "https://www.zachleat.com/web/faster-builds-with-eleventy-img/",
+    "Date": "2025-08-01T15:54:21.000",
+    "Author": "Zach Leatherman",
+    "Categories": ["Configuration", "Images", "Performance"]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": " me in Amsterdam",
+    "Link": "https://meinamsterdam.nl/",
+    "Date": "2025-08-02"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "underlap",
+    "Link": "https://underlap.org/",
+    "Date": "2025-08-02T10:17:50.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Replacing WriteFreely with eleventy",
+    "Link": "https://underlap.org/replacing-writefreely/",
+    "Date": "2025-08-02T10:19:00.000",
+    "Author": "Glyn Normington",
+    "Categories": [
+      "Blogging",
+      "Deployment",
+      "Markdown",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "UrbanFlow",
+    "Link": "https://urbanflow.art/",
+    "Date": "2025-08-03T10:11:44.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Les activités de Nicolas Hoizey",
+    "Link": "https://activites.nicolas-hoizey.com/",
+    "Date": "2025-08-03T10:12:10.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Migrating an 11ty site from Cloudflare Pages to Workers",
+    "Link": "https://benwhite.com.au/blog/pages-to-workers/",
+    "Date": "2025-08-03T10:18:51.000",
+    "Author": "Ben White",
+    "Categories": ["Configuration", "Deployment", "How to..."]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Adding notes to an eleventy blog",
+    "Link": "https://underlap.org/adding-notes-to-an-eleventy-blog/",
+    "Date": "2025-08-04T07:25:24.000",
+    "Author": "Glyn Normington",
+    "Categories": ["Blogging", "Migrating to Eleventy"]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Craig Abbott",
+    "Link": "https://www.craigabbott.co.uk/",
+    "Date": "2025-08-08T08:10:47.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "inclusive design 24",
+    "Link": "https://inclusivedesign24.org/2025/",
+    "Date": "2025-08-08T08:11:24.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "FED Mentor",
+    "Link": "https://fedmentor.dev/",
+    "Date": "2025-08-08T08:11:54.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Ocean",
+    "Link": "https://ocean.app/",
+    "Date": "2025-08-09T07:16:06.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Plugin Vite v7.1.0-alpha.1",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v7.1.0-alpha.1",
+    "Date": "2025-08-09T07:18:02.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "Mikes Thoughts",
+    "Link": "https://mikesthoughts.blog/",
+    "Date": "2025-08-09T07:18:40.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "starter",
+    "Title": "Strawberry Starter",
+    "Link": "https://github.com/kate-bagenzo/strawberry-starter",
+    "Demo": "https://strawberrystarter.neocities.org/"
+  },
+  {
+    "Issue": "77",
+    "Type": "release",
+    "Title": "Eleventy Plugin Vite v7.1.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v7.1.0-alpha.2",
+    "Date": "2025-08-09T07:58:28.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "SCALES-OKN",
+    "Link": "https://scales-okn.org/",
+    "Date": "2025-08-09T11:21:17.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Blogging in markdown",
+    "Link": "https://underlap.org/blogging-in-markdown/",
+    "Date": "2025-08-09T14:32:41.000",
+    "Author": "Glyn Normington",
+    "Categories": ["Configuration", "How to...", "Markdown", "Plugins"]
+  },
+  {
+    "Issue": "77",
+    "Type": "site",
+    "Title": "TalentzQ",
+    "Link": "https://www.talentzq.io/",
+    "Date": "2025-08-09T20:47:48.000"
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "A Subtle Footgun in Eleventy’s Default Permalink Algorithm",
+    "Link": "https://darthmall.net/2025/subtle-footgun-in-eleventys-default-permalink-algorithm/",
+    "Date": "2025-08-10T21:36:39.000",
+    "Author": "Evan Sheehan",
+    "Categories": ["Blogging", "Configuration", "Debugging"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "Cache-Busting Assets in Eleventy",
+    "Link": "https://www.aleksandrhovhannisyan.com/notes/cache-busting-assets-in-eleventy/",
+    "Date": "2025-08-10T21:38:54.000",
+    "Author": "Aleksandr Hovhannisya",
+    "Categories": [
+      "Asset Pipelines",
+      "CSS/Sass",
+      "Configuration",
+      "Global Data",
+      "How to..."
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "starter",
+    "Title": "ZeroPoint",
+    "Link": "https://github.com/MWDelaney/zeropoint",
+    "Demo": "https://getzeropoint.com/"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How I Deploy This Site",
+    "Link": "https://tylersticka.com/journal/how-i-deploy-this-site/",
+    "Date": "2025-07-07",
+    "Author": "Tyler Sticka",
+    "Categories": ["Deployment", "How to..."]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Formatting maths in Eleventy with KaTeX",
+    "Link": "https://underlap.org/katex/",
+    "Date": "2025-08-13T14:27:35.000",
+    "Author": "Glyn Normington",
+    "Categories": ["Debugging", "How to...", "Markdown"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Cloudflare domain hitches",
+    "Link": "https://skiles.blue/blog/cloudflare_domain_hitches/",
+    "Date": "2025-08-14",
+    "Author": "John Skiles Skinner",
+    "Categories": ["Debugging", "Deployment"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How I Built This Website (With 11ty & CraftCMS)",
+    "Link": "https://ma.tthew.berlin/words/how-i-built-this-website-with-11ty-craftcms/",
+    "Date": "2025-08-15T09:21:44.000",
+    "Author": "Matthew Richards",
+    "Categories": ["CMS", "Deployment", "Getting Started", "Global Data"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "WebC",
+    "Link": "https://fuzzylogic.me/posts/webc/",
+    "Date": "2022-10-23",
+    "Author": "Laurence Hughes",
+    "Categories": ["WebC"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Reusable code snippets and components in Eleventy",
+    "Link": "https://fuzzylogic.me/posts/reusable-code-snippets-and-components-in-eleventy/",
+    "Date": "2021-08-21",
+    "Author": "Laurence Hughes",
+    "Categories": ["Nunjucks/Macros", "Shortcodes"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Flexible tag-like functionality for custom keys in Eleventy",
+    "Link": "https://fuzzylogic.me/posts/flexible-tag-like-functionality-for-custom-keys-in-eleventy/",
+    "Date": "2019-08-26",
+    "Author": "Laurence Hughes",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "How to...",
+      "Pagination"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Updated My Draft System",
+    "Link": "https://claytonerrington.com/blog/updated-drafts/?utm_source=rss",
+    "Date": "2025-08-17T08:08:22.000",
+    "Author": "Clayton Errington",
+    "Categories": ["Configuration", "Drafts", "Front Matter", "How to..."]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How to Add Playwright Automated Tests to an Eleventy Static Blog",
+    "Link": "https://www.cantoni.org/2025/08/17/how-to-add-playwright-automated-tests-to-an-eleventy-static-blog/",
+    "Date": "2025-08-17T21:02:24.000",
+    "Author": "Brian Cantoni",
+    "Categories": ["Debugging", "Deployment", "How to..."]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Solving my Image Dimension Problem with an Eleventy Transform",
+    "Link": "https://www.cantoni.org/2025/08/18/solving-my-image-dimension-problem-with-an-eleventy-transform/",
+    "Date": "2025-08-18T16:50:34.000",
+    "Author": "Brian Cantoni",
+    "Categories": ["Debugging", "How to...", "Images", "Plugins"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "A Note from my Late Grandmother about Eleventy",
+    "Link": "https://www.zachleat.com/web/history-of-eleventy-name/",
+    "Date": "2025-08-19T11:29:39.000",
+    "Author": "Zach Leatherman",
+    "Categories": ["From the Source"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "11tyCMS: New home(s), build & publishing, with a side of collection indexing & bug fixes",
+    "Link": "https://11tycms.com/blog/posts/11tycms-build-and-publishing-with-a-side-of-metadata/",
+    "Date": "2025-08-19T12:16:23.000",
+    "Author": "11tyCMS",
+    "Categories": ["CMS"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "csenf.de",
+    "Link": "https://csenf.de/",
+    "Date": "2025-08-19T15:42:35.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Automating my links list",
+    "Link": "https://www.juanfernandes.uk/blog/automating-my-links-list/",
+    "Date": "2025-08-20T16:53:17.000",
+    "Author": "Juan Fernandes",
+    "Categories": ["Deployment", "How to...", "RSS", "Remote Data"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "What’s Next? Search Me",
+    "Link": "https://bix.blog/posts/2025-08-19-whats-next-search-me/",
+    "Date": "2025-08-19",
+    "Author": "Bix Frankonis",
+    "Categories": ["How to...", "Search"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Srva",
+    "Link": "https://www.srva.ai/",
+    "Date": "2025-08-20T17:33:53.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Ghost vs. Substack, Eleventy vs. WordPress: My Experiences",
+    "Link": "https://ricmac.org/2025/08/21/ghost-substack-eleventy-wordpress/",
+    "Date": "2025-08-21T08:40:51.000",
+    "Author": "Richard MacManus",
+    "Categories": ["Why Eleventy?"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Troubleshooting Eleventy Long Build Time",
+    "Link": "https://claytonerrington.com/blog/troubleshooting-eleventy-long-build-time/",
+    "Date": "2025-08-22T16:58:16.000",
+    "Author": "Clayton Errington",
+    "Categories": ["Blogging", "Debugging", "How to...", "Performance"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "How I Fixed My Blogroll",
+    "Link": "https://claytonerrington.com/blog/how-i-fixed-my-blogroll/",
+    "Date": "2025-08-22T16:59:46.000",
+    "Author": "Clayton Errington",
+    "Categories": ["Blogging", "Debugging", "How to...", "RSS", "Remote Data"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Webmentions and 11ty",
+    "Link": "https://my.stuffandthings.lol/blog/2024-06-19/webmentions-and-11ty.html",
+    "Date": "2024-06-19",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Social Media",
+      "Webmentions"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "11ty Beta and Going Public",
+    "Link": "https://my.stuffandthings.lol/blog/2024-08-02/11ty-beta-and-going-public.html",
+    "Date": "2024-08-02",
+    "Author": "Jason Moser",
+    "Categories": ["Deployment", "How to...", "Upgrading"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "OG Images using 11ty Screenshot Service",
+    "Link": "https://my.stuffandthings.lol/blog/2025-08-23/og-images-using-11ty-screenshot-service.html",
+    "Date": "2025-08-23T21:43:58.000",
+    "Author": "Jason Moser",
+    "Categories": [
+      "Filters",
+      "How to...",
+      "Images",
+      "Pagination",
+      "Social Media"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "O(M)G Images",
+    "Link": "https://my.stuffandthings.lol/blog/2025-01-15/o-m-g-images.html",
+    "Date": "2025-01-15",
+    "Author": "Jason Moser",
+    "Categories": ["Blogging", "How to...", "Images", "Plugins", "Social Media"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Aninus",
+    "Link": "https://aninus.com/",
+    "Date": "2025-08-26T09:40:35.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Using Obsidian Callouts with 11ty",
+    "Link": "https://aninus.com/blog/using-obsidian-callouts-with-11ty/",
+    "Date": "2025-08-26T09:41:50.000",
+    "Author": "Aninus Partikler",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Markdown",
+      "Obsidian"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "WebC v0.12.0-beta.1",
+    "Link": "https://github.com/11ty/webc/releases/tag/v0.12.0-beta.1",
+    "Date": "2025-08-22T09:45:45.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Bill Vinson",
+    "Link": "https://www.billvinson.com/",
+    "Date": "2025-08-26T21:48:20.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "Eleventy Image v7.0.0-alpha.2",
+    "Link": "https://github.com/11ty/eleventy-img/releases/tag/v7.0.0-alpha.2",
+    "Date": "2025-08-27T14:01:07.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Kyles Tech Korner",
+    "Link": "https://www.kylereddoch.me/",
+    "Date": "2025-08-28T22:12:51.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Eleventy pagination with Vento",
+    "Link": "https://gfscott.com/blog/eleventy-pagination-vento/",
+    "Date": "2025-08-28T22:19:50.000",
+    "Author": "Graham F. Scott",
+    "Categories": ["How to...", "Pagination", "Vento"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Delyo Dobrev",
+    "Link": "https://www.delyo.be/",
+    "Date": "2025-08-29T09:17:08.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "Eleventy WebC Plugin v0.12.0-beta.7",
+    "Link": "https://github.com/11ty/eleventy-plugin-webc/releases/tag/v0.12.0-beta.7",
+    "Date": "2025-08-28"
+  },
+  {
+    "Issue": "78",
+    "Type": "release",
+    "Title": "is-land v5.0.0",
+    "Link": "https://github.com/11ty/is-land/releases/tag/v5.0.0",
+    "Date": "2025-08-29T09:49:33.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Chris Hannah",
+    "Link": "https://chrishannah.me/",
+    "Date": "2025-08-30T17:46:56.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Conditional favicon in Elev­enty using passthrough copy",
+    "Link": "https://chriskirknielsen.com/blog/conditional-favicon-with-eleventy-passthrough-copy/",
+    "Date": "2025-09-01T09:06:31.000",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": ["Asset Pipelines", "Configuration", "How to...", "Images"]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Asset fingerprinting and the preload response header in 11ty",
+    "Link": "https://nooshu.com/blog/2025/09/02/asset-fingerprinting-and-the-preload-response-header-in-11ty/",
+    "Date": "2025-09-02T16:59:08.000",
+    "Author": "Matt Hobbs",
+    "Categories": [
+      "Asset Pipelines",
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "Performance"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "From Start to Finish: Moving My Blog to Eleventy + GitHub Pages",
+    "Link": "https://www.kylereddoch.me/blog/from-start-to-finish-moving-my-blog-to-eleventy-github-pages/",
+    "Date": "2025-09-04T12:47:20.000",
+    "Author": "Kyle Reddoch",
+    "Categories": [
+      "Configuration",
+      "Deployment",
+      "Getting Started",
+      "How to...",
+      "Migrating to Eleventy"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "moods by andisha",
+    "Link": "https://astoichkov.com/",
+    "Date": "2025-09-04T14:07:01.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Building a Multilingual Blog with Eleventy",
+    "Link": "https://helenchong.dev/blog/posts/2025-09-05-eleventy-multilingual-blog/",
+    "Date": "2025-09-05T08:37:41.000",
+    "Author": "Helen Chong",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "Deployment",
+      "How to...",
+      "Internationalization"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "From Dotclear to Eleventy",
+    "Link": "https://alix.guillard.fr/notes/dotclear-to-eleventy/",
+    "Date": "2025-09-05T08:43:42.000",
+    "Author": "Alix Guillard",
+    "Categories": ["Migrating to Eleventy"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "JOL.",
+    "Link": "https://jesus.twk95.com/",
+    "Date": "2025-09-05T08:47:53.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "An Eleventy Showcase!",
+    "Link": "https://jesus.twk95.com/blog/an-eleventy-showcase/",
+    "Date": "2025-08-30",
+    "Author": "Jesus Otero Lagunes",
+    "Categories": ["Markdown", "Why Eleventy?"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Patrick Grey",
+    "Link": "https://www.patrickgrey.co.uk/",
+    "Date": "2025-09-05T14:21:20.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Category and Tag Pages with Eleventy",
+    "Link": "https://joshtronic.com/2025/09/07/eleventy-category-tag-pages/",
+    "Date": "2025-09-07",
+    "Author": "Josh Sherman",
+    "Categories": [
+      "Blogging",
+      "Collections",
+      "Configuration",
+      "How to...",
+      "Pagination"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Moving away from Nuxt to Eleventy",
+    "Link": "https://withlogic.co/var/log/2025/09/08/moving-away-from-nuxt-to-eleventy",
+    "Date": "2025-09-08T13:51:23.000",
+    "Author": "pariskasid",
+    "Categories": ["Migrating to Eleventy", "Why Eleventy?"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Cooking Timers",
+    "Link": "https://www.cookingtimers.org/",
+    "Date": "2025-09-09T10:01:04.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Matt Keveney",
+    "Link": "https://keveney.com/",
+    "Date": "2025-09-09T21:36:42.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Leveraging Eleventy’s custom data file format feature for simpler game scoring format",
+    "Link": "https://hamatti.org/posts/leveraging-eleventys-custom-data-file-format-feature-for-simpler-game-scoring-format/",
+    "Date": "2025-09-10T10:02:50.000",
+    "Author": "Juha-Matti Santala",
+    "Categories": ["Global Data", "How to..."]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "Migrating from Hugo to 11ty (Finally)",
+    "Link": "https://pedromelorocha.pt/blog/migrating-from-hugo-to-11ty-finally/",
+    "Date": "2025-09-08",
+    "Author": "Pedro Rocha",
+    "Categories": ["Migrating to Eleventy"]
+  },
+  {
+    "Issue": "78",
+    "Type": "site",
+    "Title": "Pedro Rocha",
+    "Link": "https://pedromelorocha.pt/",
+    "Date": "2025-09-10T15:55:41.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "site",
+    "Title": "Taksh Shah",
+    "Link": "https://taksh.codes/",
+    "Date": "2025-09-12T08:42:24.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "site",
+    "Title": "Adam Wilbert",
+    "Link": "https://adamwilbert.com/",
+    "Date": "2025-09-18T10:32:23.000"
+  },
+  {
+    "Issue": "79",
+    "Type": "release",
+    "Title": "Eleventy Font Awesome Plugin v1.0.0",
+    "Link": "https://github.com/11ty/eleventy-plugin-font-awesome/releases/tag/v1.0.0",
+    "Date": "2025-09-18"
+  },
+  {
+    "Issue": "79",
+    "Type": "site",
+    "Title": "FIfF eV",
+    "Link": "https://www.fiff.de/",
+    "Date": "2025-09-20T08:32:38.000"
+  }
+]

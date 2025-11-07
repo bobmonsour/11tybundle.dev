@@ -61,7 +61,7 @@ export async function getSocialLinks(link) {
   if (cache.isCacheValid("1d")) {
     const cachedLinks = await cache.getCachedValue();
     if (cachedLinks) {
-      console.log(`Using cached social links for ${origin}`);
+      // console.log(`Using cached social links for ${origin}`);
       return cachedLinks;
     }
   }
@@ -200,7 +200,7 @@ export async function getSocialLinks(link) {
 
   // Cache the results
   await cache.save(socialLinks, "json");
-  console.log(`Cached social links for ${origin}`);
+  // console.log(`Cached social links for ${origin}`);
 
   return socialLinks;
 }
