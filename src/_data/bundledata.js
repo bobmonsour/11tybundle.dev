@@ -168,11 +168,17 @@ export default async function () {
     let categoryMap = new Map();
     for (let item of records) {
       item.Categories.forEach((category) => {
-        const postCount = categoryMap.get(category) || 0;
-        categoryMap.set(category, postCount + 1);
+        const existing = categoryMap.get(category);
+        const postCount = existing ? existing.count : 0;
+        categoryMap.set(category, {
+          count: postCount + 1,
+          firstLetter: category.charAt(0),
+        });
       });
     }
-    return Array.from(categoryMap).sort(categorySort);
+    return Array.from(categoryMap)
+      .map(([name, data]) => [name, data.count, data.firstLetter])
+      .sort(categorySort);
   };
 
   // generate counts of posts, starters, authors, and categories
@@ -196,6 +202,21 @@ export default async function () {
   const categories = categoryList(firehose, "category");
   const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
+
+  // Log the count of categories for each unique first letter
+  // const firstLetterCounts = new Map();
+  // categories.forEach((category) => {
+  //   const firstLetter = category[2]; // Third column contains the first letter
+  //   const count = firstLetterCounts.get(firstLetter) || 0;
+  //   firstLetterCounts.set(firstLetter, count + 1);
+  // });
+
+  // console.log("Categories by first letter:");
+  // Array.from(firstLetterCounts)
+  //   .sort((a, b) => a[0].localeCompare(b[0])) // Sort alphabetically by letter
+  //   .forEach(([letter, count]) => {
+  //     console.log(`${letter}: ${count} categories`);
+  //   });
 
   // get the count of the number of posts in the Getting Started category
   let cat = "Getting Started";
