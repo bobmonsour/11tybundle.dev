@@ -700,3 +700,10 @@ input {
   font-size: var(--font-size-base);
   font-weight: normal;
 }
+
+.social-icon {
+  width: 0.75em;
+  height: 0.75em;
+  display: inline-block;
+  margin-inline-end: 0.5em;
+}
