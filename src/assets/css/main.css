@@ -232,8 +232,7 @@ img[width][height] {
 /* end brand */
 
 /* list of All Tags and All Categories */
-.allcategories-list *,
-.allauthors-list * {
+.allcategories-list * {
   list-style: none;
   padding-inline: 0;
   text-align: center;
@@ -261,24 +260,36 @@ img[width][height] {
 .onecattitle,
 .oneauthortitle {
   font-size: var(--font-size-md);
-  display: block;
+  display: inline-block;
   font-weight: bold;
   margin-block-start: 0.5em;
 }
+
 .recentcatitems,
 .recentauthoritems {
-  margin-block: 0.25em 1em;
-}
-.recentcatitems li,
-.recentauthoritems li {
+  display: grid;
+  grid-template-columns: 1.25em 1fr;
+  align-items: start;
   font-size: var(--font-size-base);
-  line-height: 1.4;
-  text-align: left;
+  a {
+    text-align: left;
+  }
+  img {
+    width: 1.25em;
+    height: 1.25em;
+    margin-block-start: 0.5em;
+  }
 }
-.recentcatitems a,
-.recentauthoritems a {
-  padding-inline: 0;
+
+.recentauthoritems {
+  font-size: var(--font-size-base);
+  list-style-type: disc;
+  a {
+    display: block;
+    text-align: left;
+  }
 }
+
 .reduced-to-base {
   font-size: var(--font-size-base);
   font-weight: normal;
