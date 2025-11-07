@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
 
 // --- Configuration ---
-const defaultFavicon = "/assets/img/default-favicon.png";
+const defaultFavicon = "/assets/img/default-favicon.svg";
 const faviconDir = "/assets/img/favicons";
 // ---
 
@@ -70,7 +70,7 @@ export const getFavicon = async (link) => {
     // We use the origin (homepage) because that's where favicon links are typically defined
     const html = await eleventyFetch(origin, {
       directory: ".cache", // Store in eleventy's cache directory
-      duration: "1w", // Cache HTML for 1 week to avoid repeated requests
+      duration: "1d", // Cache HTML for 1 week to avoid repeated requests
       type: "text",
       fetchOptions: {
         headers: {
@@ -112,7 +112,7 @@ export const getFavicon = async (link) => {
     // eleventyFetch automatically handles caching, so subsequent calls return cached data
     const faviconBuffer = await eleventyFetch(faviconUrl, {
       directory: ".cache", // Store in eleventy's cache directory
-      duration: "1w", // Cache favicon images for 1 week
+      duration: "1d", // Cache favicon images for 1 week
       type: "buffer", // Return as binary buffer for file writing
       fetchOptions: {
         headers: {
@@ -150,7 +150,7 @@ export const getFavicon = async (link) => {
   } catch (e) {
     // If anything fails (network error, parsing error, file write error),
     // fall back to the default favicon and cache that result
-    console.error(`Error processing favicon for ${origin}: ${e.message}`);
+    console.error(`Error: Using default favicon for ${origin}: ${e.message}`);
 
     // Ensure default favicon is available in _site directory
     await ensureDefaultFavicon();

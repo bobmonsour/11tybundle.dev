@@ -50,7 +50,6 @@ export default function (eleventyConfig) {
       const url = new URL(post.Link);
       const siteUrl = url.origin;
       const faviconSource = await getFavicon(siteUrl);
-      console.log("faviconSource = ", faviconSource);
       const postCountLabel = postCount == 1 ? "post" : "posts";
       let siteUrlString = "";
       let rssLinkString = "";
@@ -64,7 +63,7 @@ export default function (eleventyConfig) {
         default:
           siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
           let rssLink = await getRSSlink(siteUrl);
-          webIcon = `<a href="${siteUrl}"><img src="/assets/img/default-favicon.svg" alt="link to author's website" class="social-icon"></a>`;
+          webIcon = `<a href="${siteUrl}"><img src="/assets/img/globe.svg" alt="link to author's website" class="social-icon"></a>`;
           rssLinkString =
             rssLink === "" ? "" : ` &amp; <a href="${rssLink}">RSS feed</a>`;
           rssIcon = `<a href="${rssLink}"><img src="/assets/img/rss.svg" alt="link to author's rss feed" class="social-icon"></a>`;
