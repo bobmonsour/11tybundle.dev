@@ -194,11 +194,11 @@ export async function getSocialLinks(link) {
   }
 
   // Define pages to check for social links
-  // Many sites put social links on their about or links pages
+  // Many sites put social links on their about pages
   const pagesToCheck = [
     origin, // Homepage - most common location
     `${origin}/about/`, // About page - common for personal sites
-    `${origin}/links/`, // Links page - sometimes used for social links
+    // `${origin}/links/`, // Links page - sometimes used for social links
   ];
 
   // Initialize combined results from all pages
