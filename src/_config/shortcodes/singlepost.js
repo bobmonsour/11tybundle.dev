@@ -83,19 +83,6 @@ export default function (eleventyConfig) {
           pageWeightorIgnore = "data-pagefind-ignore";
       }
       const socialImages = await getSocialIcons(post.Link);
-      // let socialLinks = await getSocialLinks(post.Link);
-      // // console.log("socialLinks:", socialLinks);
-
-      // // Generate social media img elements from the socialLinks object
-      // let socialImages = "";
-      // const socialPlatforms = ["mastodon", "bluesky", "github", "linkedin"];
-      // socialPlatforms.forEach((platform) => {
-      //   if (socialLinks[platform]) {
-      //     socialImages += `<a href="${socialLinks[platform]}"><img src="/assets/img/${platform}.svg" alt="${platform}" class="social-icon"></a>`;
-      //   }
-      // });
-
-      // console.log("Social images:", socialImages);
 
       let categories = "";
       post.Categories.forEach((category) => {
