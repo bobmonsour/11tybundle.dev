@@ -1,7 +1,7 @@
 ---js
 {
 	eleventyComputed: {
-		title: "{{ category[1] }} posts in '{{ category[0] }}'",
+		title: "{{ category[0] }} ({{ category[1] }})",
 		description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
 		permalink: "/categories/{{ category[0] | slugify }}/",
 	},

@@ -1,10 +1,10 @@
 import { getDescription } from "../filters/getdescription.js";
-import { getRSSlink } from "../filters/getrsslink.js";
+// import { getRSSlink } from "../filters/getrsslink.js";
 import { formatItemDate } from "../filters/datesandnumbers.js";
-import { getSocialIcons } from "../filters/getsocialIcons.js";
-import { getFavicon } from "../filters/getfavicon.js";
+// import { getSocialLinks } from "../filters/getsociallinks.js";
+// import { getFavicon } from "../filters/getfavicon.js";
 
-// Create a single post item for the category, author, and firehose pages
+// Create a single post item for the author pages
 // Inputs are:
 //	- post: object representing a post (see below)
 //	- type: usage of the post (see below)
@@ -40,7 +40,7 @@ import { getFavicon } from "../filters/getfavicon.js";
 //
 export default function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode(
-    "singlePost",
+    "singlePostByAuthor",
     async function (post, type, idKey, postCount) {
       const slugify = eleventyConfig.getFilter("slugify");
       const title = post.Title.replace(/[<>]/g, "");
@@ -49,40 +49,39 @@ export default function (eleventyConfig) {
       const authorSlug = slugify(post.Author);
       const url = new URL(post.Link);
       const siteUrl = url.origin;
-      const faviconSource = await getFavicon(siteUrl);
-      const postCountLabel = postCount == 1 ? "post" : "posts";
-      let siteUrlString = "";
-      let rssLinkString = "";
-      let webIcon = "";
-      let rssIcon = "";
+      // const faviconSource = await getFavicon(siteUrl);
+      // const postCountLabel = postCount == 1 ? "post" : "posts";
+      // let siteUrlString = "";
+      // let rssLinkString = "";
+      // let webIcon = "";
+      // let rssIcon = "";
       let pageWeightorIgnore = "";
       switch (siteUrl) {
         case "https://www.youtube.com":
         case "https://medium.com":
           break;
         default:
-          siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
-          let rssLink = await getRSSlink(siteUrl);
-          webIcon = `<a href="${siteUrl}"><img src="/assets/img/globe.svg" alt="link to author's website" class="social-icon"></a>`;
-          rssLinkString =
-            rssLink === "" ? "" : ` &amp; <a href="${rssLink}">RSS feed</a>`;
-          rssIcon = `<a href="${rssLink}"><img src="/assets/img/rss.svg" alt="link to author's rss feed" class="social-icon"></a>`;
+          // siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
+          // let rssLink = await getRSSlink(siteUrl);
+          // webIcon = `<a href="${siteUrl}"><img src="/assets/img/globe.svg" alt="link to author's website" class="social-icon"></a>`;
+          // rssLinkString =
+          //   rssLink === "" ? "" : ` &amp; <a href="${rssLink}">RSS feed</a>`;
+          // rssIcon = `<a href="${rssLink}"><img src="/assets/img/rss.svg" alt="link to author's rss feed" class="social-icon"></a>`;
           break;
       }
       const date = formatItemDate(post.Date);
       const id = '"' + slugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
       switch (type) {
-        case "category": // for category pages
-          pageWeightorIgnore = "data-pagefind-weight = 10";
-          break;
+        // case "category": // for category pages
+        //   pageWeightorIgnore = "data-pagefind-weight = 10";
+        //   break;
         case "author": // for author pages
           pageWeightorIgnore = "data-pagefind-weight = 5";
           break;
-        case "firehose": // for the firehose page
-        case "blog": // for the Bundle blog posts
-          pageWeightorIgnore = "data-pagefind-ignore";
+        // case "firehose": // for the firehose page
+        // case "blog": // for the Bundle blog posts
+        //   pageWeightorIgnore = "data-pagefind-ignore";
       }
-      const socialImages = await getSocialIcons(post.Link);
       // let socialLinks = await getSocialLinks(post.Link);
       // // console.log("socialLinks:", socialLinks);
 
@@ -97,6 +96,10 @@ export default function (eleventyConfig) {
 
       // console.log("Social images:", socialImages);
 
+      let moreString = "";
+      if (postCount > 5) {
+        moreString = `<p class="bundleitem-dateline">More by <a href="/authors/${authorSlug}/">${post.Author}</a></p>`;
+      }
       let categories = "";
       post.Categories.forEach((category) => {
         let slugifiedCategory = slugify(category);
@@ -104,14 +107,10 @@ export default function (eleventyConfig) {
       });
       return `
 				<div class="bundleitem">
-          <div class="bundleitem-header">
-            <img src="${faviconSource}" alt="favicon for the author's site" class="favicon">
-            <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
-          </div>
+          <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
-					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author}</a> (${postCount} ${postCountLabel})</p>
-					${webIcon}${rssIcon}${socialImages}
+          ${moreString}
           <p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
     }
