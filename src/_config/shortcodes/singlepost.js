@@ -1,7 +1,7 @@
 import { getDescription } from "../filters/getdescription.js";
 import { getRSSlink } from "../filters/getrsslink.js";
 import { formatItemDate } from "../filters/datesandnumbers.js";
-import { getSocialIcons } from "../filters/getsocialIcons.js";
+import { getSocialIcons } from "../filters/getsocialicons.js";
 import { getFavicon } from "../filters/getfavicon.js";
 
 // Create a single post item for the category, author, and firehose pages

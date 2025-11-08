@@ -728,3 +728,11 @@ input {
   width: 1em;
   height: 1em;
 }
+
+.author-links {
+  text-align: center;
+  img {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}

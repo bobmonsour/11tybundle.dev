@@ -20,7 +20,7 @@
 
 <div class="author-links">
   {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
-  {{ latestPosts[0].Link | getSocialIcons }}
+  {{ latestPosts[0].Link | getSocialIcons | safe }}
 </div>
 
 <div class="bundleposts" data-pagefind-body>
