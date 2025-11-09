@@ -1,5 +1,76 @@
 [
   {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "How Stable is Eleventy? (YouTube)",
+    "Link": "https://www.youtube.com/watch?v=bPtQmsjXMuo",
+    "Date": "2023-04-06",
+    "Author": "11ty",
+    "Categories": ["YouTube"]
+  },
+  {
+    "Issue": "68",
+    "Type": "blog post",
+    "Title": "Building a personal digital music library with Eleventy and APIs",
+    "Link": "https://damianwalsh.co.uk/posts/creating-connections-with-music-and-technology/",
+    "Date": "2025-02-25",
+    "Author": "Damian Walsh",
+    "Categories": [
+      "Collections",
+      "Data Cascade",
+      "Filters",
+      "Global Data",
+      "Images",
+      "Pagination",
+      "Remote Data"
+    ]
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "A Note from my Late Grandmother about Eleventy",
+    "Link": "https://www.zachleat.com/web/history-of-eleventy-name/",
+    "Date": "2025-08-19T11:29:39.000",
+    "Author": "Zach Leatherman",
+    "Categories": ["From the Source"]
+  },
+  {
+    "Issue": "77",
+    "Type": "blog post",
+    "Title": "One weird trick to reduce Eleventy Image Build Times by 60%",
+    "Link": "https://www.zachleat.com/web/faster-builds-with-eleventy-img/",
+    "Date": "2025-08-01T15:54:21.000",
+    "Author": "Zach Leatherman",
+    "Categories": ["Configuration", "Images", "Performance"]
+  },
+  {
+    "Issue": "76",
+    "Type": "blog post",
+    "Title": "Building a digital bookshelf with Eleventy",
+    "Link": "https://damianwalsh.co.uk/posts/building-a-digital-bookshelf-with-eleventy/",
+    "Date": "2025-07-17",
+    "Author": "Damian Walsh",
+    "Categories": ["Books Pages", "Collections", "Pagination", "Remote Data"]
+  },
+  {
+    "Issue": "23",
+    "Type": "blog post",
+    "Title": "Generating the Firehose page on the 11tybundle site",
+    "Link": "https://www.bobmonsour.com/posts/generating-the-firehose-page-on-the-11tybundle-site/",
+    "Date": "2023-11-21T08:00:00.000Z",
+    "Author": "Bob Monsour",
+    "Categories": ["Collections", "How to...", "Remote Data"]
+  },
+  {
+    "Issue": "21",
+    "Type": "blog post",
+    "Title": "Scratch that...use the Google Sheets API",
+    "Link": "https://www.bobmonsour.com/posts/scratch-that-use-google-sheets-api/",
+    "Date": "2023-10-30T07:00:00.000Z",
+    "Author": "Bob Monsour",
+    "Categories": ["Data Cascade", "Global Data", "Netlify", "Remote Data"]
+  },
+  {
     "Issue": "77",
     "Type": "blog post",
     "Title": "Making a multilingual website with Eleventy",
@@ -305,6 +376,15 @@
     "Title": "FED Mentor",
     "Link": "https://fedmentor.dev/",
     "Date": "2025-08-08T08:11:54.000"
+  },
+  {
+    "Issue": "78",
+    "Type": "blog post",
+    "Title": "11tyCMS: New home(s), build & publishing, with a side of collection indexing & bug fixes",
+    "Link": "https://11tycms.com/blog/posts/11tycms-build-and-publishing-with-a-side-of-metadata/",
+    "Date": "2025-08-19T12:16:23.000",
+    "Author": "11tyCMS",
+    "Categories": ["CMS"]
   },
   {
     "Issue": "77",

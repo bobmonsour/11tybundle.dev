@@ -1,10 +1,10 @@
 {% for author in bundledata[whichAuthors] %}
   {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
+  {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 3) %}
   <div class="oneauthor">
-    <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a> <span class="reduced-to-base">({{ author[1] }})</span>
+    <img src="{{ latestPosts[0].Link | getFavicon | safe }}" alt="author's favicon" class="favicon"> <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a><span class="reduced-to-base">({{ author[1] }})</span>
     <div class="recentauthoritems">
-      {% for item in bundledata.bundleRecords | postsByAuthor(author[0], 3) %}
-      <img src="{{ item.Link | getFavicon }}" alt="author's favicon" class="favicon">
+      {% for item in latestPosts %}
       <a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a>
       {% endfor %}
     </div>

@@ -14,12 +14,12 @@
 }
 ---
 
-<h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }}</h1>
-
-
+{% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+<h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)"><img src="{{ latestPosts[0].Link | getFavicon | safe }}" alt="author's favicon" class="favicon"> {{ title }}</h1>
 
 <div class="author-links">
-  {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+  {{ latestPosts[0].Link | getWebIcon | safe }}
+  {{ latestPosts[0].Link | getRSSIcon | safe }}
   {{ latestPosts[0].Link | getSocialIcons | safe }}
 </div>
 
@@ -27,7 +27,7 @@
 	{% set v1cautionshown = false %}
 	{% set v2cautionshown = false %}
 	{% set v3cautionshown = false %}
-	{% for item in bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+	{% for item in latestPosts %}
   	{%- set current_year = item.Date | truncate(4, true, '') -%}
 		{%- if current_year != previous_year -%}
 			{%- if previous_year != "no posts yet" -%}

@@ -32,6 +32,7 @@ body {
 :where(h1) {
   font-size: var(--font-size-lg);
   font-weight: normal;
+  line-height: 1;
   padding-block: 0.5em 0.25em;
   text-align: center;
 }
@@ -265,8 +266,7 @@ img[width][height] {
   font-weight: bold;
 }
 
-.recentcatitems,
-.recentauthoritems {
+.recentcatitems {
   display: grid;
   grid-template-columns: 1.25em 1fr;
   align-items: start;
@@ -725,14 +725,17 @@ input {
   margin-inline-end: 0.5em;
 }
 .favicon {
-  width: 1em;
-  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
 }
 
 .author-links {
+  margin-block-start: 0.25em;
   text-align: center;
   img {
-    height: 1.5em;
-    width: 1.5em;
+    height: 1em;
+    width: 1em;
   }
 }

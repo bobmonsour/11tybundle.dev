@@ -1,8 +1,8 @@
-import { getDescription } from "../filters/getdescription.js";
-import { getRSSlink } from "../filters/getrsslink.js";
 import { formatItemDate } from "../filters/datesandnumbers.js";
-import { getSocialIcons } from "../filters/getsocialicons.js";
+import { getDescription } from "../filters/getdescription.js";
 import { getFavicon } from "../filters/getfavicon.js";
+import { getRSSIcon, getWebIcon } from "../filters/getwebandrssicons.js";
+import { getSocialIcons } from "../filters/getsocialicons.js";
 
 // Create a single post item for the category, author, and firehose pages
 // Inputs are:
@@ -50,9 +50,6 @@ export default function (eleventyConfig) {
       const url = new URL(post.Link);
       const siteUrl = url.origin;
       const faviconSource = await getFavicon(siteUrl);
-      const postCountLabel = postCount == 1 ? "post" : "posts";
-      let siteUrlString = "";
-      let rssLinkString = "";
       let webIcon = "";
       let rssIcon = "";
       let pageWeightorIgnore = "";
@@ -61,12 +58,8 @@ export default function (eleventyConfig) {
         case "https://medium.com":
           break;
         default:
-          siteUrlString = ` &middot; <a href="${siteUrl}">Website</a>`;
-          let rssLink = await getRSSlink(siteUrl);
-          webIcon = `<a href="${siteUrl}"><img src="/assets/img/globe.svg" alt="link to author's website" class="social-icon"></a>`;
-          rssLinkString =
-            rssLink === "" ? "" : ` &amp; <a href="${rssLink}">RSS feed</a>`;
-          rssIcon = `<a href="${rssLink}"><img src="/assets/img/rss.svg" alt="link to author's rss feed" class="social-icon"></a>`;
+          rssIcon = await getRSSIcon(post.Link);
+          webIcon = await getWebIcon(post.Link);
           break;
       }
       const date = formatItemDate(post.Date);
@@ -82,7 +75,7 @@ export default function (eleventyConfig) {
         case "blog": // for the Bundle blog posts
           pageWeightorIgnore = "data-pagefind-ignore";
       }
-      const socialImages = await getSocialIcons(post.Link);
+      const socialIcons = await getSocialIcons(post.Link);
 
       let categories = "";
       post.Categories.forEach((category) => {
@@ -97,8 +90,8 @@ export default function (eleventyConfig) {
           </div>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
-					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author}</a> (${postCount} ${postCountLabel})</p>
-					${webIcon}${rssIcon}${socialImages}
+					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author}</a> (${postCount})</p>
+					${webIcon}${rssIcon}${socialIcons}
           <p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
     }
