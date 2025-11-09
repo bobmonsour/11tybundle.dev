@@ -49,7 +49,7 @@ export default function (eleventyConfig) {
       const authorSlug = slugify(post.Author);
       const url = new URL(post.Link);
       const siteUrl = url.origin;
-      const faviconSource = await getFavicon(siteUrl);
+      const faviconImg = await getFavicon(siteUrl);
       let webIcon = "";
       let rssIcon = "";
       let pageWeightorIgnore = "";
@@ -85,7 +85,7 @@ export default function (eleventyConfig) {
       return `
 				<div class="bundleitem">
           <div class="bundleitem-header">
-            <img src="${faviconSource}" alt="favicon for the author's site" class="favicon">
+            ${faviconImg}
             <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
           </div>
 					<p class="bundleitem-description">${description}</p>

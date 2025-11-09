@@ -50,6 +50,12 @@ const ensureDefaultFavicon = async () => {
   }
 };
 
+const genFaviconImg = async (faviconPath) => {
+  const imgElement = `<img src="${faviconPath}" alt="favicon for the author's site" class="favicon"></img>`;
+  // console.log("img element = ", imgElement);
+  return imgElement;
+};
+
 /**
  * Gets the best available favicon for a given URL and stores it locally.
  * Returns the local path for use in img src attributes.
@@ -63,7 +69,7 @@ export const getFavicon = async (link) => {
   // Check if we've already processed this origin during this build
   // This prevents redundant work when multiple pages reference the same domain
   if (faviconCache[origin]) {
-    return faviconCache[origin];
+    return await genFaviconImg(faviconCache[origin]);
   }
 
   try {
@@ -71,7 +77,7 @@ export const getFavicon = async (link) => {
     // We use the origin (homepage) because that's where favicon links are typically defined
     const html = await eleventyFetch(origin, {
       directory: ".cache", // Store in eleventy's cache directory
-      duration: cacheDuration.faviconHtml, // Cache HTML for 1 week to avoid repeated requests
+      duration: cacheDuration.faviconHtml, // Cache HTML, see cacheconfig.js
       type: "text",
       fetchOptions: {
         headers: {
@@ -113,7 +119,7 @@ export const getFavicon = async (link) => {
     // eleventyFetch automatically handles caching, so subsequent calls return cached data
     const faviconBuffer = await eleventyFetch(faviconUrl, {
       directory: ".cache", // Store in eleventy's cache directory
-      duration: cacheDuration.faviconImage, // Cache favicon images for 1 week
+      duration: cacheDuration.faviconImage, // see cacheconfig.js for spec
       type: "buffer", // Return as binary buffer for file writing
       fetchOptions: {
         headers: {
@@ -144,20 +150,20 @@ export const getFavicon = async (link) => {
     // Write the binary favicon data to the local file
     await fs.writeFile(outputPath, faviconBuffer);
 
-    // Step 7: Cache the result and return the local path
+    // Step 7: Cache the result and return the img element using localPath as src
     // Store in memory cache to avoid reprocessing during this build
     faviconCache[origin] = localPath;
-    return localPath; // Return path for use in img src attributes
+    return await genFaviconImg(localPath);
   } catch (e) {
     // If anything fails (network error, parsing error, file write error),
     // fall back to the default favicon and cache that result
     // can output error message using ${e.message} if needed.
-    console.error(`Error: Using default favicon for ${origin}`);
+    console.error(`favicon not found: using default favicon for ${origin}`);
 
     // Ensure default favicon is available in _site directory
     await ensureDefaultFavicon();
 
     faviconCache[origin] = defaultFavicon;
-    return defaultFavicon;
+    return await genFaviconImg(defaultFavicon);
   }
 };

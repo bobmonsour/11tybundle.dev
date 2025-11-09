@@ -15,7 +15,7 @@
 ---
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
-<h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)"><img src="{{ latestPosts[0].Link | getFavicon | safe }}" alt="author's favicon" class="favicon"> {{ title }}</h1>
+<h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ latestPosts[0].Link | getFavicon | safe }} {{ title }}</h1>
 
 <div class="author-links">
   {{ latestPosts[0].Link | getWebIcon | safe }}
@@ -50,6 +50,6 @@
       {% set v3cautionshown = true %}
     {% endif %}
 		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
-		{% singlePostByAuthor item, "author", author[0], postCount %}
+		{% singlePostByAuthor item, author[0] %}
 	{% endfor %}
 </div>

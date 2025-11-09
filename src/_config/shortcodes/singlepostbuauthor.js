@@ -4,7 +4,6 @@ import { formatItemDate } from "../filters/datesandnumbers.js";
 // Create a single post item for the author pages
 // Inputs are:
 //	- post: object representing a post (see below)
-//	- type: usage of the post (see below) - fixed as "author" for calls to this
 //	- value: used to create a CSS ID for the post when it is displayed;
 //    it can be either one for the firehose page as the ID is not used.
 //
@@ -14,9 +13,6 @@ import { formatItemDate } from "../filters/datesandnumbers.js";
 //	Author: Author of the post
 //	Date: Date of the post
 //	Categories: array of categories for the post
-//
-// The type is "author" as all calls to this are for pages for each author.
-// The shortcode singlepost.js is used for category and firehose pages.
 //
 // The pagefind-weight for "author" pages is 5.
 // which is used to sort the search results:
@@ -37,12 +33,11 @@ import { formatItemDate } from "../filters/datesandnumbers.js";
 export default function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode(
     "singlePostByAuthor",
-    async function (post, type, idKey, postCount) {
+    async function (post, idKey) {
       const slugify = eleventyConfig.getFilter("slugify");
       const title = post.Title.replace(/[<>]/g, "");
       const titleSlug = slugify(title);
       const description = await getDescription(post.Link);
-      const authorSlug = slugify(post.Author);
       const date = formatItemDate(post.Date);
       const id = '"' + slugify(idKey) + "-" + titleSlug + "-" + post.Date + '"';
       const pageWeightorIgnore = "data-pagefind-weight = 5";
