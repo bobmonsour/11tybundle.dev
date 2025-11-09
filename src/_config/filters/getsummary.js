@@ -2,6 +2,7 @@ import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 import OpenAI from "openai";
 import { performance } from "node:perf_hooks";
+const cacheDuration = require("../../_data/cacheconfig.json");
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -109,7 +110,7 @@ export async function getSummary(link) {
     // Fetch the HTML page
     const html = await Fetch(link, {
       directory: ".cache",
-      duration: "1w", // Cache HTML for 1 week
+      duration: cacheDuration.aiSummaryHtml, // Cache HTML for 1 week
       type: "text",
       fetchOptions: {
         headers: {

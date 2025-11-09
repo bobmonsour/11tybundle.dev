@@ -3,6 +3,7 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const exceptionList = require("../../_data/exception-list.json");
+import { cacheDuration } from "../../_data/cacheconfig.js";
 
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
@@ -56,7 +57,7 @@ export const getDescription = async (link) => {
   try {
     let htmlcontent = await Fetch(link, {
       directory: ".cache",
-      duration: "*",
+      duration: cacheDuration.descHtml,
       type: "buffer",
       fetchOptions: {
         headers: {

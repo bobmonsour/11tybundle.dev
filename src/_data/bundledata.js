@@ -13,6 +13,8 @@ import { Buffer } from "buffer";
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
+import { cacheDuration } from "./cacheconfig.js";
+
 
 import bundleRecords from './bundledbtest.json' with { type: 'json' };
 // console.log(bundleRecords);
@@ -23,7 +25,7 @@ import bundleRecords from './bundledbtest.json' with { type: 'json' };
 export default async function () {
   // Fetch the json db from its remote repo
   // const bundleRecords = await Fetch(BUNDLEDB_URL, {
-  //   duration: "0s", // always fetch new data
+  //   duration: cacheDuration.bundleDB, // always fetch new data
   //   type: "json",
   // });
 

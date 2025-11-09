@@ -2,6 +2,8 @@ import eleventyFetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
+import { cacheDuration } from "../../_data/cacheconfig.js";
+
 // Determine if a URL is a LinkedIn profile or company page
 const isLinkedIn = (u) =>
   u.hostname.endsWith("linkedin.com") &&
@@ -214,7 +216,7 @@ export async function getSocialLinks(link) {
     try {
       // Fetch the HTML content with caching
       const html = await eleventyFetch(pageUrl, {
-        duration: "1d", // Cache HTML for 1 day
+        duration: cacheDuration.socialLinks, // Cache HTML for 1 day
         type: "text",
         fetchOptions: {
           headers: {
