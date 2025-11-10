@@ -1,6 +1,6 @@
 ---
 eleventyComputed:
-  title: "{{ bundledata.categoryCount }} Categories"
+  title: "Categories"
   description: "A list of {{ bundledata.categoryCount }} categories"
 permalink: /categories/
 ---
@@ -9,7 +9,7 @@ permalink: /categories/
   The titles of the category's most recent three posts are shown, with links to
   the author's site for that post.
 #}
-<h1>{{ title }} by name <span class="reduced-to-md">(<a href="/categories-by-count/">by count</a>)</span></h1>
+<h1>{{ title }} by name <span class="reduced-to-md">({{ bundledata.categoryCount }})</span> <span class="reduced-to-md">(<a href="/categories-by-count/">by count</a>)</span></h1>
 <div class="allcategories-list">
 	<div class="categorieslist">
     {% set whichCategories = "categories"%}

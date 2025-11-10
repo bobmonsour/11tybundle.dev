@@ -1,12 +1,12 @@
 ---
 eleventyComputed:
-  title: "{{ bundledata.starterCount }} Starter Projects by GitHub Stars"
+  title: "Starter Projects by GitHub Stars"
   description: "A list of {{ bundledata.starterCount }} starter projects for Eleventy"
 permalink: /starters-by-stars/
 ---
 
 <div class="flow">
-	<h1>{{ title }} <span class="reduced-to-md">(<a href="/starters/">by Latest Update</a>)</span></h1>
+	<h1>{{ title }} <span class="reduced-to-md">({{ bundledata.starterCount }})</span> <span class="reduced-to-md">(<a href="/starters/">by Latest Update</a>)</span></h1>
 
 	{% include "partials/starters-intro.njk" %}
 

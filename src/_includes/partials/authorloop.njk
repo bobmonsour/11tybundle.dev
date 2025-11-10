@@ -1,14 +1,17 @@
 {#
   This partial builds a list of authors, either by name or by count,
   depending on the value of "whichAuthors" passed into it.
-  It shows the author's name (linked to their author page) and
+  It shows each author's name (linked to their author page) and
   the titles of their three most recent posts.
 #}
 {% for author in bundledata[whichAuthors] %}
   {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
   {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 3) %}
   <div class="oneauthor">
-    {{ latestPosts[0].Link | getFavicon | safe }} <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a><span class="reduced-to-base">({{ author[1] }})</span>
+    <div class="authorheader">
+      {{ latestPosts[0].Link | getFavicon | safe }}
+      <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a><span class="reduced-to-base">({{ author[1] }})</span>
+    </div>
     <div class="recentauthoritems">
       {% for item in latestPosts %}
       <a href="{{ item.Link }}">{{ item.Title }}</a>

@@ -1,11 +1,11 @@
 ---
 eleventyComputed:
-  title: "{{ bundledata.postCount | formatNumber }} Blog Posts"
+  title: "Blog Posts"
   description: "A list of {{ bundledata.postCount }} blog posts by year"
 permalink: /firehose/
 ---
 
-<h1>{{ title }}</h1>
+<h1>{{ title }} <span class="reduced-to-md">({{ bundledata.postCount | formatNumber }})</span></h1>
 <h3>The Firehose has it's own <a href="/firehosefeed.xml">RSS feed</a>!</h3>
 <div class="bundleposts" data-pagefind-ignore="all">
 	{# We've processed no posts...yet #}

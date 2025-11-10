@@ -1,15 +1,15 @@
 ---
 eleventyComputed:
-  title: "{{ bundledata.authorCount }} Authors"
+  title: "Authors"
   description: "A list of ({{ bundledata.authorCount }}) authors"
 permalink: /authors-by-name/
 ---
 {#
   Build a list of all authors in the bundle, sorted alphabetically by name.
-  The titles of the author's most recent three posts are shown, with links to
+  The titles of each author's most recent three posts are shown, with links to
   the author's site for that post.
 #}
-<h1>{{ title }} by name <span class="reduced-to-md">(<a href="/authors/">by count</a>)</span></h1>
+<h1>{{ title }} by name <span class="reduced-to-md">({{ bundledata.authorCount }})</span> <span class="reduced-to-md">(<a href="/authors/">by count</a>)</span></h1>
 <div class="allauthors-list">
   <div class="authorslist">
     {% set whichAuthors = "authors"%}

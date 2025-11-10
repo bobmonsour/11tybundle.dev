@@ -260,6 +260,21 @@ img[width][height] {
   font-weight: bold;
 }
 
+.authorheader {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 0.1em;
+  align-items: center;
+}
+
+.grouppage-header {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
 .recentcatitems {
   display: grid;
   grid-template-columns: 1.25em 1fr;

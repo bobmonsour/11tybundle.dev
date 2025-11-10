@@ -1,7 +1,7 @@
 ---js
 {
 	eleventyComputed: {
-		title: "{{ author[0] | safe }} ({{ author[1] }})",
+		title: "{{ author[0] | safe }}",
 		description: "Posts in the 11ty Bundle written by {{ author[0] }}",
 		permalink: "/authors/{{ author[0] | slugify }}/",
 	},
@@ -29,7 +29,10 @@
 #}
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
-<h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ latestPosts[0].Link | getFavicon | safe }} {{ title }}</h1>
+<div class="grouppage-header">
+  {{ latestPosts[0].Link | getFavicon | safe }}
+  <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }} <span class="reduced-to-md">({{ author[1] }})</span></h1>
+</div>
 
 <div class="author-links">
   {{ latestPosts[0].Link | getWebIcon | safe }}

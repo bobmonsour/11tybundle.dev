@@ -1,7 +1,7 @@
 ---js
 {
 	eleventyComputed: {
-		title: "{{ category[0] }} ({{ category[1] }})",
+		title: "{{ category[0] }}",
 		description: "Posts in the 11ty Bundle with the category: {{ category[0] }}",
 		permalink: "/categories/{{ category[0] | slugify }}/",
 	},
@@ -37,7 +37,7 @@
 </div>
 {% endif %}
 
-<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}</h1>
+<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}<span class="reduced-to-md"> ({{ category[1] }})</span></h1>
 
 {#
 	Note that in the case of the "From the Source" category, no caution items are inserted as
