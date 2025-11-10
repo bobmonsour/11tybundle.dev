@@ -8,7 +8,7 @@
         {# TODO/FIX: Making the favicon a link to the author's page distorts the image, for some reason #}
         {# <a href="{{ authorUrl }}" class="favicon-link"><img src="{{ item.Link | getFavicon }}" alt="author's favicon" class="favicon"></a> #}
         {{ item.Link | getFavicon | safe }}
-        <a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a>
+        <a href="{{ item.Link }}">{{ item.Title }}</a>
       {% endfor %}
     </div>
   </div>

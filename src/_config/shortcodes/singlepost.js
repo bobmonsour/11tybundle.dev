@@ -86,7 +86,7 @@ export default function (eleventyConfig) {
 				<div class="bundleitem">
           <div class="bundleitem-header">
             ${faviconImg}
-            <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
+            <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore}>${post.Title}</a>
           </div>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>

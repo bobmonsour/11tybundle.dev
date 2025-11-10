@@ -5,7 +5,7 @@
 	{% if releaseItems.length != 0 %}
 	{%- for item in releaseItems %}
 		<div class="bundleitem">
-			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-title"><a href="{{ item.Link }}">{{ item.Title }}</a></p>
 			<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
 			<p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
 		</div>
@@ -25,7 +25,7 @@
 	<div class="bundlesites" data-pagefind-ignore="index">
 	{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
 		<div class="bundleitem">
-			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-title"><a href="{{ item.Link }}">{{ item.Title }}</a></p>
 			<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
 		</div>
 	{%- endfor -%}

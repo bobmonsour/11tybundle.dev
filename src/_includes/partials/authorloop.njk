@@ -5,7 +5,7 @@
     {{ latestPosts[0].Link | getFavicon | safe }} <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a><span class="reduced-to-base">({{ author[1] }})</span>
     <div class="recentauthoritems">
       {% for item in latestPosts %}
-      <a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a>
+      <a href="{{ item.Link }}">{{ item.Title }}</a>
       {% endfor %}
     </div>
   </div>

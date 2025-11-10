@@ -76,11 +76,15 @@ a:not([class^="pagefind-ui__result-link"]):is(:hover, :focus) {
   outline-offset: 4px;
 }
 
-/* indicator for all external links */
-a[data-link-type="external"]::after {
+/* indicate links to external sites */
+a[href^="https"]:not(:has(img))::after {
   background: no-repeat var(--icon-external-link);
+  background-size: 0.8em 0.8em; /* Adjust size as needed */
   content: "";
-  padding-right: 1em;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  padding-inline-start: 0.25em;
 }
 
 /* default <ol> & <li> */
@@ -134,16 +138,6 @@ img[width][height] {
   background-color: white;
   border: 1px solid black;
   color: black;
-}
-
-.buy-beer {
-  cursor: pointer;
-  margin: 1em auto 0.5em auto;
-  width: fit-content;
-}
-.buy-beer:is(:hover, :focus) {
-  border-radius: 15px;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
 .flow > * + * {

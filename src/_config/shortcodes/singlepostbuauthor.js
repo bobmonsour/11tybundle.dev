@@ -52,7 +52,7 @@ export default function (eleventyConfig) {
       });
       return `
 				<div class="bundleitem">
-          <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore} data-link-type="external">${post.Title}</a>
+          <a href="${post.Link}" class="bundleitem-title" ID=${id} ${pageWeightorIgnore}>${post.Title}</a>
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
           <p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>

@@ -13,13 +13,13 @@ permalink: /starters/
 	<div class="bundleposts">
 		{%- for item in bundledata.starters %}
 		<div class="bundleitem">
-			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-title"><a href="{{ item.Link }}">{{ item.Title }}</a></p>
 			<p class="bundleitem-description">{{ item.Description }}</p>
 			<p class="bundleitem-starterinfo">Updated: {{ item.LastUpdated }}</p>
 			<p class="bundleitem-starterinfo">GitHub stars: {{ item.Stars }}</p>
 			<p class="bundleitem-starterinfo">11ty version: {{ item.Version }}</p>
 			{% if item.Demo %}
-			<p class="bundleitem-starterinfo"><a href="{{ item.Demo }}" data-link-type="external">Demo site</a></p>
+			<p class="bundleitem-starterinfo"><a href="{{ item.Demo }}">Demo site</a></p>
 			{% endif %}
 		</div>
 		{%- endfor -%}
