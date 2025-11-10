@@ -734,7 +734,7 @@ input {
   margin-inline-end: 0.5em;
 }
 .favicon {
-  border-radius: 50%;
+  border-radius: 20%;
   display: inline-block;
   width: 1.2em;
   height: 1.2em;
