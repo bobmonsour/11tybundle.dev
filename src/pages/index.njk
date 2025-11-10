@@ -17,32 +17,44 @@ permalink: "/index.html"
 	</div>
 
 	<div class="home-grid">
-		<div class="home-releases flow">
-			<p>Recent releases... <a class="feedlink" href="/releasefeed.xml">(RSS)</a></p>
-			<ul>
-				{%- set recent = bundledata.releaseList.slice(0,11) -%}
-				{%- for item in recent -%}
-					<li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
-				{% endfor %}
-			</ul>
+		<div class="home-groups flow">
+      <div class="home-groups-header">
+			  <p>From the firehose</p>
+        <a class="feedlink" href="/firehosefeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
+      </div>
+      {%- set recent = bundledata.firehose.slice(0,10) -%}
+      {%- for item in recent -%}
+        <div class="home-items">
+          {{ item.Link | getFavicon | safe}}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
+        </div>
+      {% endfor %}
 		</div>
-		<div class="home-posts flow">
-			<p>From the firehose... <a class="feedlink" href="/firehosefeed.xml">(RSS)</a></p>
-			<ul>
-				{%- set recent = bundledata.firehose.slice(0,11) -%}
-				{%- for item in recent -%}
-					<li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
-				{% endfor %}
-			</ul>
+		<div class="home-groups flow">
+			<div class="home-groups-header">
+        <p>Recent sites</p>
+        <a class="feedlink" href="/sitesfeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
+      </div>
+      {%- set recent = bundledata.siteList.slice(0,10) -%}
+      {%- for item in recent -%}
+        <div class="home-items">
+          {{ item.Link | getFavicon | safe}}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
+        </div>
+      {% endfor %}
 		</div>
-		<div class="home-sites flow">
-			<p>Recent sites... <a class="feedlink" href="/sitesfeed.xml">(RSS)</a></p>
-			<ul>
-				{%- set recent = bundledata.siteList.slice(0,11) -%}
-				{%- for item in recent -%}
-					<li><a href="{{ item.Link }}">{{ item.Title }}</a></li>
-				{% endfor %}
-			</ul>
+		<div class="home-groups flow">
+		  <div class="home-groups-header">
+        <p>Recent releases</p>
+        <a class="feedlink" href="/releasefeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
+      </div>
+      {%- set recent = bundledata.releaseList.slice(0,10) -%}
+      {%- for item in recent -%}
+        <div class="home-items">
+          {{ item.Link | getFavicon | safe}}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
+        </div>
+      {% endfor %}
 		</div>
 	</div>
 

@@ -51,7 +51,7 @@ const ensureDefaultFavicon = async () => {
 };
 
 const genFaviconImg = async (faviconPath) => {
-  const imgElement = `<img src="${faviconPath}" alt="favicon for the author's site" class="favicon"></img>`;
+  const imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon"></img>`;
   // console.log("img element = ", imgElement);
   return imgElement;
 };

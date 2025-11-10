@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   --gap: clamp(0.25rem, 3vw, 1rem);
-  max-width: min(65ch, 100% - var(--gap) * 2);
+  max-width: min(var(--page-width-max), 100% - var(--gap) * 2);
 }
 
 /* Set up view transitions */
@@ -716,11 +716,37 @@ input {
   font-size: var(--font-size-base);
 }
 .home-grid p {
-  font-size: var(--font-size-md);
-  font-style: italic;
+  font-size: var(--font-size-base);
   font-weight: bold;
-  padding-inline: 0.5em;
-  padding-block: 0.5em 0;
+  padding-inline-start: var(--space-2xs);
+}
+.home-groups {
+  padding: 0.25em;
+}
+.home-items {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  padding-inline-start: var(--space-2xs);
+  margin-block-start: var(--space-2xs);
+}
+.home-items img {
+  width: 1.25em;
+  height: 1.25em;
+  margin-inline-end: 0.5em;
+}
+.home-groups-header img {
+  width: 0.75em;
+  height: 0.75em;
+  margin-inline-end: 0.5em;
+}
+.home-groups-header {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: space-between;
 }
 .feedlink {
   font-size: var(--font-size-base);
