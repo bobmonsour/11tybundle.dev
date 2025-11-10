@@ -13,6 +13,20 @@
 	}
 }
 ---
+{#
+  Build each of the individual author pages.
+
+  Use the most recent post from each author to pull in the following:
+  - Favicon for their website
+  - Link to their website
+  - Link to their RSS feed
+  - Social media icons, including Mastodon, Bluesky, GitHub, and LinkedIn
+    (NOTE: Twitter, even if present, is not included; and yes, this is a
+    personal statement.)
+
+  Then list all posts by that author, grouped by year, with cautionary notes
+  depending on the post date relative to stable releases of Eleventy.
+#}
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
 <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ latestPosts[0].Link | getFavicon | safe }} {{ title }}</h1>

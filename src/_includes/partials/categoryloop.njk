@@ -1,3 +1,9 @@
+{#
+  This partial builds a list of categories, either by name or by count,
+  depending on the value of "whichCategories" passed into it.
+  It shows the category's name (linked to its category page) and
+  the titles of its three most recent posts.
+#}
 {% for category in bundledata[whichCategories] %}
   {% set categoryUrl %}/categories/{{ category[0] | slugify }}/{% endset %}
   <div class="onecategory">

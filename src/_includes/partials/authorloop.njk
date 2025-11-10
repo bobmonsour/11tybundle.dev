@@ -1,3 +1,9 @@
+{#
+  This partial builds a list of authors, either by name or by count,
+  depending on the value of "whichAuthors" passed into it.
+  It shows the author's name (linked to their author page) and
+  the titles of their three most recent posts.
+#}
 {% for author in bundledata[whichAuthors] %}
   {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
   {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 3) %}

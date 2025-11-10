@@ -4,7 +4,11 @@ eleventyComputed:
   description: "A list of ({{ bundledata.categoryCount }}) categories"
 permalink: /categories-by-count/
 ---
-
+{#
+  Build a list of all categories in the bundle, sorted by number of posts.
+  The titles of the category's most recent three posts are shown, with links to
+  those posts on the author's site.
+#}
 <h1>{{ title }} by count <span class="reduced-to-md">(<a href="/categories/">by name</a>)</span></h1>
 <div class="allcategories-list">
 	<div class="categorieslist">

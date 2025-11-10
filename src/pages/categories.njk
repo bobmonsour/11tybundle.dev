@@ -13,14 +13,19 @@
 	}
 }
 ---
-
 {#
+  Build each of the individual category pages.
+
 	If the category has an equivalent page on the 11ty docs site, then display a link to it.
 	The linkstodocs object is defined in the linkstodocs.json file in the _data directory.
 	Each key in the object is a category name, and the value is the URL of the page on the
 	11ty docs site. In the special case of the Deployment category, an additional link is
 	displayed, linking to the list of deployment providers on the 11ty docs site.
+
+  Then list all posts by that author, grouped by year, with cautionary notes
+  depending on the post date relative to stable releases of Eleventy.
 #}
+
 {% if linkstodocs[category[0]] %}
 <h2>Official 11ty docs</h2>
 <div class="officialdocs">
