@@ -1,7 +1,7 @@
 ---
 bundleIssue: 80
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Redesign in progress, 11ty Meetup videos, 11ty GitHub Issues are a changing, Kyle embeds Mastodon posts, Stefan makes a free image gallery, A facepile for all, Hitchens theme for 11ty, Kaj Kander dives into schema markup...And 22 posts and 16 sites to see"
+  title: "Issue {{ bundleIssue }} - Redesign in progress, 11ty Meetup videos, 11ty GitHub Issues are a changing, Kyle embeds Mastodon posts, Stefan makes a free image gallery, A facepile for all, Hitchens theme for 11ty, Kaj Kander dives into schema markup...And 23 posts and 16 sites to see"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-11-11
 tags:
