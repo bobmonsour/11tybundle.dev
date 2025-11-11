@@ -28,7 +28,7 @@ Enjoy!
 
 > NOTE: While I tend to open with highlights of a handful of things that caught my eye, there is so much more in the [list of posts](#posts) down below. Please be sure to check them all out.
 
-**11ty Meetup videos.** Feast your eyes on [the playlist of Episode 27](https://www.youtube.com/playlist?list=PLJy3jyeGVYUqx2NkWM_LatM2g2FbLNxPM) of THE Eleventy Meettup, featuring [Helen Chong](https://helenchong.dev/), showing us how to build a multilingual blog with Eleventy; and [Nic Chan](https://www.nicchan.me/) on powering a world-class museum's digital infrastructure with Eleventy.
+**11ty Meetup videos.** Feast your eyes on [the playlist of Episode 27](https://www.youtube.com/playlist?list=PLJy3jyeGVYUqx2NkWM_LatM2g2FbLNxPM) of THE Eleventy Meetup, featuring [Helen Chong](https://helenchong.dev/), showing us how to build a multilingual blog with Eleventy; and [Nic Chan](https://www.nicchan.me/) on powering a world-class museum's digital infrastructure with Eleventy.
 
 **11ty GitHub Issues are a changing.** Zach has updated how he handles GitHub Issues for Eleventy and he [wrote about it here](https://www.11ty.dev/blog/github-issues/). It makes a lot of sense and should help Zach manage things better. And from what I can tell, he's been working hard to reduce the Issue backlog, with many of them being converted to Discussions.
 
