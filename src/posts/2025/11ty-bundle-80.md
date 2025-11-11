@@ -18,6 +18,8 @@ I'm excited to announce that I am collaborating with [Damian Walsh](https://dami
 
 I've created [a survey](https://docs.google.com/forms/d/e/1FAIpQLSfef-ekQaPHSRnIQY8iUn-fmR79P1BXep-j2jPM3RKCDEcDnw/viewform?usp=sharing&ouid=116404147894481708789) to capture some data, and more importantly, to give you an opportunity to share your thoughts about the site and how it could be more useful to you and the rest of the Eleventy community. It's short and sweet and your input would be greatly apprecaiated. [Take the survey here](https://docs.google.com/forms/d/e/1FAIpQLSfef-ekQaPHSRnIQY8iUn-fmR79P1BXep-j2jPM3RKCDEcDnw/viewform?usp=sharing&ouid=116404147894481708789). If you run into any issues with the survey link, please let me know by [email here](mailto:bob.monsour@gmail.com?subject=11ty%20Bundle%20survey%20comments).
 
+Go ahead and open it in a new tab so you can fill it out after reading the rest of this issue.
+
 If you want to skip the preliminaries and get right to [the releases](#releases) or [the posts](#posts), or [the sites](#sites), have at it.
 
 Enjoy!
@@ -25,8 +27,6 @@ Enjoy!
 ---
 
 > NOTE: While I tend to open with highlights of a handful of things that caught my eye, there is so much more in the [list of posts](#posts) down below. Please be sure to check them all out.
-
-**Redesign in progress.** A quick reminder (yes, already), please do fill out [the survey](https://docs.google.com/forms/d/e/1FAIpQLSfef-ekQaPHSRnIQY8iUn-fmR79P1BXep-j2jPM3RKCDEcDnw/viewform?usp=sharing&ouid=116404147894481708789). Go ahead and open it in a new tab so you can fill it out after reading the rest of this issue.
 
 **11ty Meetup videos.** Feast your eyes on [the playlist of Episode 27](https://www.youtube.com/playlist?list=PLJy3jyeGVYUqx2NkWM_LatM2g2FbLNxPM) of THE Eleventy Meettup, featuring [Helen Chong](https://helenchong.dev/), showing us how to build a multilingual blog with Eleventy; and [Nic Chan](https://www.nicchan.me/) on powering a world-class museum's digital infrastructure with Eleventy.
 
