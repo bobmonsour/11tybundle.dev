@@ -106,5 +106,13 @@
     "rssFeed": "https://moritzglantz.de/blog/feed.xml",
     "descriptionFail": "true",
     "rssFail": "true"
+  },
+  {
+    "url": "https://taksh.codes/",
+    "descriptionFail": "true"
+  },
+  {
+    "url": "https://www.tomroseveare.com/",
+    "descriptionFail": "true"
   }
 ]

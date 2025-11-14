@@ -24,6 +24,14 @@ export default async function () {
     type: "json",
   });
 
+  // filter out all "to be skipped" records, i.e., blog posts and sites
+  // that have a "Skip" property set to true
+  for (let i = bundleRecords.length - 1; i >= 0; i--) {
+    if (bundleRecords[i]["Skip"] === true) {
+      bundleRecords.splice(i, 1);
+    }
+  }
+
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post")
