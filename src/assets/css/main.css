@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   --gap: clamp(0.25rem, 3vw, 1rem);
-  max-width: min(65ch, 100% - var(--gap) * 2);
+  max-width: min(var(--page-width-max), 100% - var(--gap) * 2);
 }
 
 /* Set up view transitions */
@@ -309,6 +309,11 @@ img[width][height] {
 }
 
 /* post elements */
+
+.post {
+  max-width: min(65ch, 100% - var(--gap) * 2);
+  margin: 0 auto;
+}
 .post-title {
   font-size: var(--post-title-full-size);
   text-wrap: balance;
