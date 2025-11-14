@@ -535,7 +535,7 @@ p.bundleitem-title {
   font-size: var(--font-size-base);
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 1em;
 }
 
@@ -671,7 +671,7 @@ input {
   display: grid;
   margin-block-start: 0;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .home-grid > * {

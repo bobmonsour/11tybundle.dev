@@ -34,6 +34,9 @@ export const getRSSlink = async (siteOrigin) => {
         directory: ".cache",
         duration: "*",
         type: "buffer",
+        fetchOptions: {
+          signal: AbortSignal.timeout(2000),
+        },
       });
       let $ = cheerio.load(htmlcontent);
       let rssLink =

@@ -18,7 +18,7 @@
     "rsns": "npm run clean && npm run startns"
   },
   "engines": {
-    "node": "22.15.0"
+    "node": "22.2.0"
   },
   "keywords": [],
   "author": {
@@ -34,17 +34,14 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "@octokit/rest": "^21.0.2",
     "@rknightuk/eleventy-plugin-post-graph": "^1.0.8",
-    "axios": "^1.8.4",
     "check-html-links": "^0.2.4",
     "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
-    "netlify-plugin-cache": "^1.0.3",
     "pagefind": "^1.3.0",
     "rimraf": "^6.0.1",
     "slugify": "^1.6.6"

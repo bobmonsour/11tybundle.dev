@@ -28,19 +28,5 @@ export default {
     { url: "/starters/", text: "Starters" },
     { url: "/blog/", text: "Blog" },
     { url: "/about/", text: "About" },
-    {
-      url: "/feed.xml",
-      text: "RSS (Blog)",
-      rel: "alternate",
-      title: "The Blog of the 11ty Bundle",
-      type: "application/rss+xml",
-    },
-    {
-      url: "/firehosefeed.xml",
-      text: "RSS (Firehose)",
-      rel: "alternate",
-      title: "The Firehose of the 11ty Bundle",
-      type: "application/rss+xml",
-    },
   ],
 };
