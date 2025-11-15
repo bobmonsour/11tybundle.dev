@@ -5,7 +5,9 @@
 
 // Changing from a local file to a remote db stored in a separate repo
 import Fetch from "@11ty/eleventy-fetch";
+import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
+// Octokit is the official GitHub REST API client
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
 import { Buffer } from "buffer";
@@ -20,8 +22,11 @@ const BUNDLEDB_URL =
 export default async function () {
   // Fetch the json db from its remote repo
   const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: "0s", // always fetch new data
+    duration: cacheDuration.bundleDB, // always fetch new data
     type: "json",
+    fetchOptions: {
+      signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+    },
   });
 
   // filter out all "to be skipped" records, i.e., blog posts and sites

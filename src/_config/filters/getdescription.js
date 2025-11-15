@@ -3,6 +3,7 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const exceptionList = require("../../_data/exception-list.json");
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
@@ -53,13 +54,14 @@ export const getDescription = async (link) => {
     return descriptionCache[link];
   }
 
+  // Fetch the HTML content of the page
   try {
     let htmlcontent = await Fetch(link, {
       directory: ".cache",
-      duration: "*",
+      duration: cacheDuration.descHtml,
       type: "buffer",
       fetchOptions: {
-        signal: AbortSignal.timeout(2000),
+        signal: AbortSignal.timeout(fetchTimeout.descHtml),
         headers: {
           "user-agent":
             "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",

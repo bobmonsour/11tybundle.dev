@@ -3,6 +3,7 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const exceptionList = require("../../_data/exception-list.json");
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
@@ -32,10 +33,10 @@ export const getRSSlink = async (siteOrigin) => {
     try {
       let htmlcontent = await Fetch(siteOrigin, {
         directory: ".cache",
-        duration: "*",
+        duration: cacheDuration.rssLinkHtml,
         type: "buffer",
         fetchOptions: {
-          signal: AbortSignal.timeout(2000),
+          signal: AbortSignal.timeout(fetchTimeout.rssLinkHtml),
         },
       });
       let $ = cheerio.load(htmlcontent);
