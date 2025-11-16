@@ -6,7 +6,7 @@ import shortcodes from "./src/_config/shortcodes/index.js";
 import singlePost from "./src/_config/shortcodes/singlepost.js";
 import singlePostByAuthor from "./src/_config/shortcodes/singlepostbuauthor.js";
 
-import postGraph from "@rknightuk/eleventy-plugin-post-graph";
+// import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 
@@ -30,12 +30,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(singlePostByAuthor);
 
   // Add & configure external plugins
-  eleventyConfig.addPlugin(postGraph, {
-    sort: "desc",
-    boxColor: "darkgray",
-    highlightColor: "red",
-    textColor: "#fff",
-  });
+  // eleventyConfig.addPlugin(postGraph, {
+  //   sort: "desc",
+  //   boxColor: "darkgray",
+  //   highlightColor: "red",
+  //   textColor: "#fff",
+  // });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
 

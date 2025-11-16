@@ -22,7 +22,7 @@ export const cacheDuration = {
 
 // Timeout settings for fetch operations, in milliseconds
 export const fetchTimeout = {
-  descHtml: "3000", // 3 seconds
-  faviconHtml: "3000", // 3 seconds
-  rssLinkHtml: "3000", // 3 seconds
+  descHtml: 3000, // 3 seconds
+  faviconHtml: 3000, // 3 seconds
+  rssLinkHtml: 3000, // 3 seconds
 };
