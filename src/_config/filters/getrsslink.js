@@ -7,7 +7,7 @@ const exceptionList = require("../../_data/exception-list.json");
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
-import { cacheDuration } from "../../_data/cacheconfig.js";
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 const rssLinkCache = {};
 
@@ -36,6 +36,9 @@ export const getRSSLink = async (siteOrigin) => {
         directory: ".cache",
         duration: cacheDuration.rssLinkHtml,
         type: "buffer",
+        fetchOptions: {
+          signal: AbortSignal.timeout(fetchTimeout.rssLinkHtml),
+        },
       });
       let $ = cheerio.load(htmlcontent);
       let rssLink =

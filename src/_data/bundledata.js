@@ -13,7 +13,7 @@ import { Buffer } from "buffer";
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
-import { cacheDuration } from "./cacheconfig.js";
+import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
 
 import bundleRecords from './bundledbtest.json' with { type: 'json' };
@@ -27,6 +27,9 @@ export default async function () {
   // const bundleRecords = await Fetch(BUNDLEDB_URL, {
   //   duration: cacheDuration.bundleDB, // always fetch new data
   //   type: "json",
+  //   fetchOptions: {
+  //     signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+  //   },
   // });
 
   // generate the firehose, an array of all posts in descending date order
