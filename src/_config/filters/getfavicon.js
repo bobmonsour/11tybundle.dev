@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
 
 // --- Configuration ---
-import { cacheDuration } from "../../_data/cacheconfig.js";
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 const defaultFavicon = "/assets/img/default-favicon.svg";
 const faviconDir = "/assets/img/favicons";
 // ---
@@ -80,6 +80,7 @@ export const getFavicon = async (link) => {
       duration: cacheDuration.faviconHtml, // Cache HTML, see cacheconfig.js
       type: "text",
       fetchOptions: {
+        signal: AbortSignal.timeout(fetchTimeout.faviconHtml), // 3 second timeout
         headers: {
           "user-agent":
             "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
@@ -158,7 +159,9 @@ export const getFavicon = async (link) => {
     // If anything fails (network error, parsing error, file write error),
     // fall back to the default favicon and cache that result
     // can output error message using ${e.message} if needed.
-    console.error(`favicon not found: using default favicon for ${origin}`);
+    console.error(
+      `favicon not found: using default favicon for ${origin}, error: ${e.message}`
+    );
 
     // Ensure default favicon is available in _site directory
     await ensureDefaultFavicon();

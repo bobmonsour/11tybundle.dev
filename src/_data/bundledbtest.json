@@ -56,7 +56,7 @@
     "Issue": "23",
     "Type": "blog post",
     "Title": "Generating the Firehose page on the 11tybundle site",
-    "Link": "https://www.bobmonsour.com/posts/generating-the-firehose-page-on-the-11tybundle-site/",
+    "Link": "https://bobmonsour.com/posts/generating-the-firehose-page-on-the-11tybundle-site/",
     "Date": "2023-11-21T08:00:00.000Z",
     "Author": "Bob Monsour",
     "Categories": ["Collections", "How to...", "Remote Data"]
@@ -65,7 +65,7 @@
     "Issue": "21",
     "Type": "blog post",
     "Title": "Scratch that...use the Google Sheets API",
-    "Link": "https://www.bobmonsour.com/posts/scratch-that-use-google-sheets-api/",
+    "Link": "https://bobmonsour.com/posts/scratch-that-use-google-sheets-api/",
     "Date": "2023-10-30T07:00:00.000Z",
     "Author": "Bob Monsour",
     "Categories": ["Data Cascade", "Global Data", "Netlify", "Remote Data"]
