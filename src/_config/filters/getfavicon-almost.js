@@ -6,8 +6,7 @@ import { promises as fs } from "fs";
 
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
-const defaultFaviconPath = "/assets/img/favicons/default-favicon.png";
-const youtubeFaviconPath = "/assets/img/favicons/youtube-favicon.ico";
+const defaultFavicon = "/assets/img/default-favicon.png";
 const faviconDir = "/assets/img/favicons";
 // ---
 
@@ -20,7 +19,44 @@ const genFaviconImg = async (faviconPath) => {
   return imgElement;
 };
 
-const getFaviconUrl = async (origin) => {
+/**
+ * Gets the best available favicon for a given URL and stores it locally.
+ * Returns the local path for use in img src attributes.
+ */
+export const getFavicon = async (link) => {
+  // Extract the origin (protocol + hostname + port) from the full URL
+  // This ensures we only fetch one favicon per domain, not per page
+  const origin = new URL(link).origin;
+  const domain = new URL(origin).hostname;
+
+  // Check if we've already processed this origin during this build
+  // This prevents redundant work when multiple pages reference the same domain
+  if (faviconCache[origin]) {
+    return await genFaviconImg(faviconCache[origin]);
+  }
+
+  // Check if this origin has previously failed and is cached as a failure
+  const failureCacheKey = `failed-favicon-${domain}`;
+  try {
+    await eleventyFetch(failureCacheKey, {
+      directory: ".cache",
+      duration: cacheDuration.faviconImage, // Use same duration as successful favicon caches
+      type: "text",
+      fetchOptions: {
+        // This will throw if the cache entry doesn't exist
+      },
+    });
+
+    // If we reach here, this origin previously failed - use default immediately
+    console.log(
+      `Using cached failure result for ${origin} - skipping network requests`
+    );
+    faviconCache[origin] = defaultFavicon;
+    return await genFaviconImg(defaultFavicon);
+  } catch (cacheError) {
+    // Cache entry doesn't exist, proceed with normal favicon fetching
+  }
+
   try {
     // Step 1: Fetch the homepage HTML to find favicon link tags
     // We use the origin (homepage) because that's where favicon links are typically defined
@@ -47,31 +83,26 @@ const getFaviconUrl = async (origin) => {
       'link[rel="icon"]', // Standard favicon link
       'link[rel="shortcut icon"]', // Legacy favicon link
     ];
+    let faviconUrl = "";
 
     // Find the first available favicon link in priority order
     for (const selector of selectors) {
       const href = $(selector).attr("href");
       if (href) {
         // Convert relative URLs to absolute URLs using the origin as base
-        const url = new URL(href, origin).href;
-        return url;
+        faviconUrl = new URL(href, origin).href;
+        break; // Use the first (highest priority) match
       }
     }
-  } catch (error) {
-    console.error(
-      "getFaviconUrl: Error fetching/parsing favicon URL from ",
-      origin,
-      ": ",
-      error
-    );
-    return "";
-  }
-};
 
-const genFaviconFile = async (origin, faviconUrl, domain) => {
-  // Download the actual favicon image
-  // eleventyFetch automatically handles caching, so subsequent calls return cached data
-  try {
+    // Step 3: Fallback if no favicon links found in HTML
+    if (!faviconUrl) {
+      // Many sites have favicon.ico in the root even without a link tag
+      faviconUrl = new URL("/favicon.ico", origin).href;
+    }
+
+    // Step 4: Download the actual favicon image
+    // eleventyFetch automatically handles caching, so subsequent calls return cached data
     const faviconBuffer = await eleventyFetch(faviconUrl, {
       directory: ".cache", // Store in eleventy's cache directory
       duration: cacheDuration.faviconImage, // see cacheconfig.js for spec
@@ -106,67 +137,36 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
     // Write the binary favicon data to the local file
     await fs.writeFile(outputPath, faviconBuffer);
 
-    // Cache the result and return the local path
+    // Step 7: Cache the result and return the img element using localPath as src
     // Store in memory cache to avoid reprocessing during this build
     faviconCache[origin] = localPath;
-    return localPath;
+    return await genFaviconImg(localPath);
   } catch (e) {
     // If anything fails (network error, parsing error, file write error),
     // cache this failure and fall back to the default favicon
     console.error(
-      `getFaviconFile: favicon not found: using default favicon for ${origin}, error: ${e.message}`
+      `favicon not found: using default favicon for ${origin}, error: ${e.message}`
     );
-    faviconCache[origin] = defaultFaviconPath;
-    return defaultFaviconPath;
-  }
-};
 
-// if favicon filename already cached with origin as key
-//    return img element using cached filename
-// else
-//    fetch HTML of origin (homepage)
-//    parse HTML for favicon link tags
-//    if found
-//      download favicon image
-//      cache favicon image in cache directory
-//      generate favicon filename based on hostname
-//      write image to _site directory
-//      store filename in cache using origin as key
-//      return img element using filename
-//    else
-//      store filename of default favicon in cache using origin as key
-//      return img element with filename of default favicon
-// if any step fails
-//      store filename of default favicon in cache using origin as key
-//      return img element with filename of default favicon
-
-/**
- * Gets the best available favicon for a given URL and stores it locally.
- * Returns the local path for use in img src attributes.
- */
-export const getFavicon = async (link) => {
-  // Extract the origin (protocol + hostname + port) from the full URL
-  // This ensures we only fetch one favicon per domain, not per page
-  const origin = new URL(link).origin;
-  const domain = new URL(origin).hostname;
-
-  // Check if we've already processed this origin during this build
-  // This prevents redundant work when multiple pages reference the same domain
-  if (faviconCache[origin]) {
-    return await genFaviconImg(faviconCache[origin]);
-  }
-
-  const faviconUrl = await getFaviconUrl(origin);
-
-  if (faviconUrl) {
-    const faviconPath = await genFaviconFile(origin, faviconUrl, domain);
-    return await genFaviconImg(faviconPath);
-  } else {
-    if (origin.includes("youtube")) {
-      faviconCache[origin] = youtubeFaviconPath;
-    } else {
-      faviconCache[origin] = defaultFaviconPath;
+    // Cache the failure so we don't retry this origin in future builds
+    try {
+      await eleventyFetch(failureCacheKey, {
+        directory: ".cache",
+        duration: cacheDuration.faviconImage,
+        type: "text",
+        fetchOptions: {
+          method: "POST", // Dummy method to create cache entry
+          body: `Failed favicon fetch for ${origin} at ${new Date().toISOString()}`,
+        },
+      });
+    } catch (failureCacheError) {
+      // If we can't cache the failure, that's okay - we'll just retry next time
+      console.warn(
+        `Could not cache failure for ${origin}: ${failureCacheError.message}`
+      );
     }
-    return await genFaviconImg(faviconCache[origin]);
+
+    faviconCache[origin] = defaultFavicon;
+    return await genFaviconImg(defaultFavicon);
   }
 };

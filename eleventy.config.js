@@ -16,6 +16,7 @@ export default function (eleventyConfig) {
     { "src/assets/favicon/*": "/" },
     "src/assets/css/",
     "src/assets/img/",
+    "src/assets/img/favicons/",
     "src/assets/js/",
     "src/robots.txt",
   ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
