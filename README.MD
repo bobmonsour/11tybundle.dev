@@ -1,6 +1,6 @@
 # 11tybundle.dev
 
-## _A resource for all developers using Eleventy_
+## _A resource for all developers using the Eleventy static site generator_
 
 ![screengrab of the homepage for 11tybundle.dev](homescreenshot.png)
 
