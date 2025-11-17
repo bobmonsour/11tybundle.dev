@@ -29,15 +29,16 @@
 #}
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
+{% set firstNonYoutubePost = latestPosts | getNonYoutubePost %}
 <div class="grouppage-header">
-  {{ latestPosts[0].Link | getFavicon | safe }}
+  {{ firstNonYoutubePost.Link | getFavicon | safe }}
   <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }} <span class="reduced-to-md">({{ author[1] }})</span></h1>
 </div>
 
 <div class="author-links">
-  {{ latestPosts[0].Link | getWebIcon | safe }}
-  {{ latestPosts[0].Link | getRSSIcon | safe }}
-  {{ latestPosts[0].Link | getSocialIcons | safe }}
+  {{ firstNonYoutubePost.Link | getWebIcon | safe }}
+  {{ firstNonYoutubePost.Link | getRSSIcon | safe }}
+  {{ firstNonYoutubePost.Link | getSocialIcons | safe }}
 </div>
 
 <div class="bundleposts" data-pagefind-body>

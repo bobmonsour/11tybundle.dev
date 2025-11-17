@@ -993,5 +993,37 @@
     "Date": "2024-01-30T08:00:00.000Z",
     "Author": "11ty",
     "Categories": ["Why Eleventy?"]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Using Notion as CMS with Eleventy",
+    "Link": "https://vrugtehagel.nl/posts/using-notion-as-cms-with-eleventy/",
+    "Date": "2025-04-23",
+    "Author": "vrugtehagel",
+    "Categories": [
+      "Blogging",
+      "CMS",
+      "Configuration",
+      "How to...",
+      "Notion",
+      "Plugins"
+    ]
+  },
+  {
+    "Issue": "72",
+    "Type": "blog post",
+    "Title": "Using Notion as CMS with your Eleventy site with vrugtehagel",
+    "Link": "https://www.youtube.com/watch?v=RTfk_o7zz-A",
+    "Date": "2025-04-24",
+    "Author": "vrugtehagel",
+    "Categories": [
+      "Blogging",
+      "Configuration",
+      "How to...",
+      "Notion",
+      "Plugins",
+      "YouTube"
+    ]
   }
 ]

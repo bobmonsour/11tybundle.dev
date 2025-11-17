@@ -11,13 +11,13 @@
 //    duration: "0s" will always fetch new data (works with any unit, e.g. "0m", "0h").
 
 export const cacheDuration = {
-  aiSummaryHtml: "1m",
+  aiSummaryHtml: "1y",
   bundleDB: "0s",
-  descHtml: "0s",
-  faviconImage: "0s",
-  faviconHtml: "0s",
-  rssLinkHtml: "*",
-  socialLinks: "*",
+  descHtml: "1w",
+  faviconImage: "1w",
+  faviconHtml: "1w",
+  rssLinkHtml: "1w",
+  socialLinks: "1w",
 };
 
 // Timeout settings for fetch operations, in milliseconds

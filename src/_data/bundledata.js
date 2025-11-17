@@ -110,6 +110,9 @@ export default async function () {
           }
 
           // Add metadata as top-level properties to the starter object
+          //TODO: cache this data for at least a day to avoid rate limits
+          //      additionally, perhaps set up a github action to trigger
+          //      a site build each night
           starter.Stars = repoData.stargazers_count;
           starter.LastUpdated = formattedDate;
           starter.Description = repoData.description;
