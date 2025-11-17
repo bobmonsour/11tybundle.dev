@@ -5,6 +5,7 @@
 
 // Changing from a local file to a remote db stored in a separate repo
 import Fetch from "@11ty/eleventy-fetch";
+import { AssetCache } from "@11ty/eleventy-fetch";
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -58,6 +59,15 @@ export default async function () {
 
   // Function to fetch metadata and update starters array
   async function updateStartersWithMetadata(starters) {
+    const cacheKey = `starter-projects`;
+    const cache = new AssetCache(cacheKey, ".cache");
+    if (cache.isCacheValid(cacheDuration.starters)) {
+      const cachedStarters = await cache.getCachedValue();
+      if (cachedStarters) {
+        console.log(`Using cached starter project metadata`);
+        return cachedStarters;
+      }
+    }
     for (let starter of starters) {
       if (starter.Link) {
         try {
@@ -110,9 +120,6 @@ export default async function () {
           }
 
           // Add metadata as top-level properties to the starter object
-          //TODO: cache this data for at least a day to avoid rate limits
-          //      additionally, perhaps set up a github action to trigger
-          //      a site build each night
           starter.Stars = repoData.stargazers_count;
           starter.LastUpdated = formattedDate;
           starter.Description = repoData.description;
@@ -126,13 +133,18 @@ export default async function () {
         }
       }
     }
+      // Cache the results for future requests
+      await cache.save(starters, "json");
+      // console.log(`Cached starter projects`);
+      return starters;
   }
+
   const genStarters = async (bundleRecords) => {
     function extractStarters(bundleRecords) {
       return bundleRecords.filter((item) => item["Type"] == "starter");
     }
-    const starters = extractStarters(bundleRecords);
-    await updateStartersWithMetadata(starters);
+    let starters = extractStarters(bundleRecords);
+    starters = await updateStartersWithMetadata(starters);
 
     // Sort starters by the date of the last commit in descending order
     return starters.sort(

@@ -1,4 +1,4 @@
-import eleventyFetch from "@11ty/eleventy-fetch";
+import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
@@ -182,12 +182,12 @@ export async function getSocialLinks(link) {
   const origin = new URL(link).origin;
 
   // Create cache for social links using AssetCache
-  // Cache in node_modules to avoid Eleventy watching and restarting
+  // Cache in .cache directory with a key based on the origin
   const cacheKey = `social-links-${origin}`;
-  const cache = new AssetCache(cacheKey, "node_modules/.cache");
+  const cache = new AssetCache(cacheKey, ".cache");
 
   // Check if we have cached social links for this origin
-  if (cache.isCacheValid("1d")) {
+  if (cache.isCacheValid(cacheDuration.socialLinks)) {
     const cachedLinks = await cache.getCachedValue();
     if (cachedLinks) {
       // console.log(`Using cached social links for ${origin}`);
@@ -215,10 +215,11 @@ export async function getSocialLinks(link) {
   for (const pageUrl of pagesToCheck) {
     try {
       // Fetch the HTML content with caching
-      const html = await eleventyFetch(pageUrl, {
-        duration: cacheDuration.socialLinks, // Cache HTML for 1 day
+      const html = await Fetch(pageUrl, {
+        duration: cacheDuration.socialHtml, // Cache HTML for 1 day
         type: "text",
         fetchOptions: {
+          signal: AbortSignal.timeout(fetchTimeout.socialLinks),
           headers: {
             // Use a standard user agent to avoid being blocked
             "user-agent":
