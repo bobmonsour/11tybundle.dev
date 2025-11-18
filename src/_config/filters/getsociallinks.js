@@ -2,7 +2,7 @@ import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
 
-import { cacheDuration } from "../../_data/cacheconfig.js";
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 // Determine if a URL is a LinkedIn profile or company page
 const isLinkedIn = (u) =>
@@ -184,13 +184,14 @@ export async function getSocialLinks(link) {
   // Create cache for social links using AssetCache
   // Cache in .cache directory with a key based on the origin
   const cacheKey = `social-links-${origin}`;
-  const cache = new AssetCache(cacheKey, ".cache");
+  const cache = new AssetCache(cacheKey);
 
   // Check if we have cached social links for this origin
   if (cache.isCacheValid(cacheDuration.socialLinks)) {
     const cachedLinks = await cache.getCachedValue();
     if (cachedLinks) {
       // console.log(`Using cached social links for ${origin}`);
+      // console.log("Cached links:", cachedLinks);
       return cachedLinks;
     }
   }

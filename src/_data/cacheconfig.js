@@ -17,8 +17,8 @@ export const cacheDuration = {
   faviconImage: "1w",
   faviconHtml: "1w",
   rssLinkHtml: "1w",
-  socialHtml: "1w",
-  socialLinks: "1w",
+  socialHtml: "1d",
+  socialLinks: "1d",
   starters: "1d",
 };
 
