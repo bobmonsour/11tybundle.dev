@@ -330,6 +330,11 @@ img[width][height] {
 }
 
 /* post elements */
+.post {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
 .post-title {
   font-size: var(--post-title-full-size);
   text-wrap: balance;
