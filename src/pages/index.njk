@@ -22,7 +22,7 @@ permalink: "/index.html"
 			  <p>From the firehose</p>
         <a class="feedlink" href="/firehosefeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
       </div>
-      {%- set recent = bundledata.firehose.slice(0,10) -%}
+      {%- set recent = bundledata.firehose.slice(0,11) -%}
       {%- for item in recent -%}
         <div class="home-items">
           {{ item.Link | getFavicon | safe}}
@@ -35,7 +35,7 @@ permalink: "/index.html"
         <p>Recent sites</p>
         <a class="feedlink" href="/sitesfeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
       </div>
-      {%- set recent = bundledata.siteList.slice(0,10) -%}
+      {%- set recent = bundledata.siteList.slice(0,11) -%}
       {%- for item in recent -%}
         <div class="home-items">
           {{ item.Link | getFavicon | safe}}
@@ -48,7 +48,7 @@ permalink: "/index.html"
         <p>Recent releases</p>
         <a class="feedlink" href="/releasefeed.xml"><img src="/assets/img/rss.svg" alt="rss icon"></a>
       </div>
-      {%- set recent = bundledata.releaseList.slice(0,10) -%}
+      {%- set recent = bundledata.releaseList.slice(0,11) -%}
       {%- for item in recent -%}
         <div class="home-items">
           {{ item.Link | getFavicon | safe}}
