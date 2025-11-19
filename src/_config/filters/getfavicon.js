@@ -57,6 +57,38 @@ const getFaviconUrl = async (origin) => {
         return url;
       }
     }
+
+    // Step 3: If no favicon link found in HTML, try common favicon file locations
+    const faviconExtensions = ["ico", "png", "svg"];
+
+    for (const extension of faviconExtensions) {
+      const faviconUrl = `${origin}/favicon.${extension}`;
+
+      try {
+        // Try to fetch the favicon file to see if it exists
+        await eleventyFetch(faviconUrl, {
+          directory: ".cache",
+          duration: cacheDuration.faviconImage,
+          type: "buffer",
+          fetchOptions: {
+            signal: AbortSignal.timeout(fetchTimeout.faviconImage),
+            headers: {
+              "user-agent":
+                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
+            },
+          },
+        });
+
+        // If we reach this point, the favicon file exists
+        return faviconUrl;
+      } catch (fetchError) {
+        // Favicon with this extension doesn't exist, continue to next extension
+        continue;
+      }
+    }
+
+    // No favicon found in HTML or common file locations
+    return "";
   } catch (error) {
     console.error(
       "getFaviconUrl: Error fetching/parsing favicon URL from ",
