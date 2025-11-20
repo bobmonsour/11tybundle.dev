@@ -17,8 +17,8 @@ export const cacheDuration = {
   faviconImage: "1w",
   faviconHtml: "1w",
   rssLinkHtml: "1w",
-  socialHtml: "0s",
-  socialLinks: "0s",
+  socialHtml: "1w",
+  socialLinks: "1w",
   starters: "1d",
 };
 
@@ -28,4 +28,5 @@ export const fetchTimeout = {
   faviconHtml: 5000, // 3 seconds
   faviconImage: 3000, // 3 seconds
   rssLinkHtml: 3000, // 3 seconds
+  socialLinks: 3000, // 3 seconds
 };

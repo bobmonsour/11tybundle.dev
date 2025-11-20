@@ -12,8 +12,7 @@ const isLinkedIn = (u) =>
     u.pathname.startsWith("/pub/"));
 
 // Determine if a URL is a Bluesky profile
-const isBluesky = (u) =>
-  u.hostname === "bsky.app" && u.pathname.startsWith("/profile/");
+const isBluesky = (u) => u.hostname.includes("bsky");
 
 // Heuristic for Mastodon-like profile URLs on any instance
 const isMastodon = (u) =>
@@ -21,7 +20,7 @@ const isMastodon = (u) =>
   (u.pathname.startsWith("/@") || u.pathname.startsWith("/users/")) &&
   // exclude Bluesky, LinkedIn, and common non-fedi hosts
   !u.hostname.endsWith("linkedin.com") &&
-  u.hostname !== "bsky.app";
+  !u.hostname.includes("bsky");
 
 // GitHub detection and normalization to profile (repo -> owner)
 const isGitHub = (u) => u.hostname.endsWith("github.com");
@@ -201,6 +200,7 @@ export async function getSocialLinks(link) {
   const pagesToCheck = [
     origin, // Homepage - most common location
     `${origin}/about/`, // About page - common for personal sites
+    `${origin}/about`, // About page (no trailing slash) - common for personal sites
     // `${origin}/links/`, // Links page - sometimes used for social links
   ];
 
@@ -217,7 +217,7 @@ export async function getSocialLinks(link) {
     try {
       // Fetch the HTML content with caching
       const html = await Fetch(pageUrl, {
-        duration: cacheDuration.socialHtml, // Cache HTML for 1 day
+        duration: cacheDuration.socialHtml, // Cache HTML
         type: "text",
         fetchOptions: {
           signal: AbortSignal.timeout(fetchTimeout.socialLinks),
@@ -240,7 +240,7 @@ export async function getSocialLinks(link) {
     } catch (error) {
       // Silently continue if a page doesn't exist (404) or fails to fetch
       // This allows the function to work even if /about or /links don't exist
-      // console.log(`Could not fetch ${pageUrl}:`, error.message);
+      console.log(`Could not fetch ${pageUrl}:`, error.message);
     }
   }
 
@@ -263,7 +263,7 @@ export async function getSocialLinks(link) {
 
   // Cache the results for future requests
   await cache.save(socialLinks, "json");
-  // console.log(`Cached social links for ${origin}`);
+  // console.log(`Cached social links for ${origin}`, socialLinks);
 
   return socialLinks;
 }
