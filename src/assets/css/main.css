@@ -276,9 +276,10 @@ img[width][height] {
 }
 
 .recentcatitems {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1.25em 1fr;
-  align-items: start;
+  align-items: start; */
+  text-align: left;
   font-size: var(--font-size-base);
   a {
     padding-block-start: 0.25em;

@@ -11,10 +11,9 @@
     <div class="recentcatitems">
       {% for item in bundledata.bundleRecords | postsInCategory(category[0], 3) %}
         {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
-        {# TODO/FIX: Making the favicon a link to the author's page distorts the image, for some reason #}
-        {# <a href="{{ authorUrl }}" class="favicon-link"><img src="{{ item.Link | getFavicon }}" alt="author's favicon" class="favicon"></a> #}
         {{ item.Link | getFavicon | safe }}
         <a href="{{ item.Link }}">{{ item.Title }}</a>
+        <p>{{ item.Date | formatItemDate }}</p>
       {% endfor %}
     </div>
   </div>
