@@ -281,6 +281,9 @@ img[width][height] {
   align-items: start; */
   text-align: left;
   font-size: var(--font-size-base);
+  p {
+    text-align: left;
+  }
   a {
     padding-block-start: 0.25em;
     text-align: left;
