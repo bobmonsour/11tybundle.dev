@@ -26,15 +26,6 @@
     ]
   },
   {
-    "Issue": "78",
-    "Type": "blog post",
-    "Title": "A Note from my Late Grandmother about Eleventy",
-    "Link": "https://www.zachleat.com/web/history-of-eleventy-name/",
-    "Date": "2025-08-19T11:29:39.000",
-    "Author": "Zach Leatherman",
-    "Categories": ["From the Source"]
-  },
-  {
     "Issue": "77",
     "Type": "blog post",
     "Title": "One weird trick to reduce Eleventy Image Build Times by 60%",

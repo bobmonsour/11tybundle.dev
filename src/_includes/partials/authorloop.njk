@@ -16,6 +16,7 @@
     <div class="recentauthoritems">
       {% for item in latestPosts %}
       <a href="{{ item.Link }}">{{ item.Title }}</a>
+      <p>{{ item.Date | formatItemDate }}</p>
       {% endfor %}
     </div>
   </div>
