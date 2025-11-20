@@ -9,6 +9,7 @@ import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
 import { getNonYoutubePost } from "./getnonyoutubepost.js";
+import { getOrigin } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
 import { getSocialIcons } from "./getsocialicons.js";
 import { getWebIcon, getRSSIcon } from "./getwebandrssicons.js";
@@ -28,6 +29,7 @@ const filters = {
   getDescription,
   getFavicon,
   getNonYoutubePost,
+  getOrigin,
   getRSSIcon,
   getRSSLink,
   getSocialIcons,

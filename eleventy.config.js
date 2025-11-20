@@ -4,7 +4,7 @@ import "dotenv/config";
 import filters from "./src/_config/filters/index.js";
 import shortcodes from "./src/_config/shortcodes/index.js";
 import singlePost from "./src/_config/shortcodes/singlepost.js";
-import singlePostByAuthor from "./src/_config/shortcodes/singlepostbuauthor.js";
+import singlePostByAuthor from "./src/_config/shortcodes/singlepostbyauthor.js";
 
 // import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -24,7 +24,7 @@ export default function (eleventyConfig) {
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
   eleventyConfig.addPlugin(shortcodes);
-  // While a shortcode, the singlePost andsinglePostBuAythor uses getFilter
+  // While a shortcode, the singlePost andsinglePostByAythor uses getFilter
   // to allow re-use of eleventy's built-in slugify filter, and
   // as a result requires their own additions as shortcodes
   eleventyConfig.addPlugin(singlePost);

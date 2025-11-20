@@ -34,7 +34,7 @@
   {{ firstNonYoutubePost.Link | getFavicon | safe }}
   <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }} <span class="reduced-to-md">({{ author[1] }})</span></h1>
 </div>
-
+<h3>{{ firstNonYoutubePost.Link | getOrigin | getDescription | safe }}</h3>
 <div class="author-links">
   {{ firstNonYoutubePost.Link | getWebIcon | safe }}
   {{ firstNonYoutubePost.Link | getRSSIcon | safe }}
