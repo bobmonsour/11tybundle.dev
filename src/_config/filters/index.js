@@ -17,6 +17,7 @@ import { plainDate } from "./datesandnumbers.js";
 import { postCountLabel } from "./postcountlabel.js";
 import { postCountByAuthor, postsByAuthor } from "./postsbyauthor.js";
 import { postsInCategory } from "./postsincategory.js";
+import { postYearsInCategory } from "./postyearsincategory.js";
 import { readingTime } from "./readingtime.js";
 
 const filters = {
@@ -39,6 +40,7 @@ const filters = {
   postCountLabel,
   postsByAuthor,
   postsInCategory,
+  postYearsInCategory,
   readingTime,
 };
 

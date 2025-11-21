@@ -39,6 +39,11 @@
 
 <h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}<span class="reduced-to-md"> ({{ category[1] }})</span></h1>
 
+<div class="category-year-nav">
+  {% for year in bundledata.bundleRecords | postYearsInCategory(category[0]) %}
+    <a href="#{{ year }}" class="category-nav-link">{{ year }}</a>
+  {% endfor %}
+</div>
 {#
 	Note that in the case of the "From the Source" category, no caution items are inserted as
 	they are not relevant to this category.
@@ -54,7 +59,7 @@
 				</details>
 			{%- endif -%}
 			<details open>
-			<summary>{{ current_year }}</summary>
+			<summary id="{{ current_year }}">{{ current_year }}</summary>
 			{%- set previous_year = current_year -%}
 		{%- endif -%}
 		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
