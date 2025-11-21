@@ -56,7 +56,6 @@ export default async function () {
   const siteCount = siteList.length;
 
   // generate the list of starter projects, ordered by date of most recent update
-
   // Function to fetch metadata and update starters array
   async function updateStartersWithMetadata(starters) {
     const cacheKey = `starter-projects`;
@@ -227,19 +226,19 @@ export default async function () {
   const categoryCount = categories.length;
 
   // Log the count of categories for each unique first letter
-  // const firstLetterCounts = new Map();
-  // categories.forEach((category) => {
-  //   const firstLetter = category[2]; // Third column contains the first letter
-  //   const count = firstLetterCounts.get(firstLetter) || 0;
-  //   firstLetterCounts.set(firstLetter, count + 1);
-  // });
+  const firstLetterCounts = new Map();
+  categories.forEach((category) => {
+    const firstLetter = category[2]; // Add third column to contain the first letter
+    const count = firstLetterCounts.get(firstLetter) || 0;
+    firstLetterCounts.set(firstLetter, count + 1);
+  });
 
-  // console.log("Categories by first letter:");
-  // Array.from(firstLetterCounts)
-  //   .sort((a, b) => a[0].localeCompare(b[0])) // Sort alphabetically by letter
-  //   .forEach(([letter, count]) => {
-  //     console.log(`${letter}: ${count} categories`);
-  //   });
+  console.log("Categories by first letter:");
+  Array.from(firstLetterCounts)
+    .sort((a, b) => a[0].localeCompare(b[0])) // Sort alphabetically by letter
+    .forEach(([letter, count]) => {
+      console.log(`${letter}: ${count} categories`);
+    });
 
   // get the count of the number of posts in the Getting Started category
   let cat = "Getting Started";
