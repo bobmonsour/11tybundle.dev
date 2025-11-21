@@ -10,9 +10,34 @@ permalink: /categories/
   the author's site for that post.
 #}
 <h1>{{ title }} by name <span class="reduced-to-md">({{ bundledata.categoryCount }})</span> <span class="reduced-to-md">(<a href="/categories-by-count/">by count</a>)</span></h1>
+<div class="category-nav">
+  {% for letter in bundledata.categoryLetters %}
+    <a href="#{{ letter }}" class="category-nav-link">{{ letter }}</a>
+  {% endfor %}
+</div>
+{% set previousLetter = "A"%}
 <div class="allcategories-list">
 	<div class="categorieslist">
     {% set whichCategories = "categories"%}
-    {% include "partials/categoryloop.njk" %}
+    <h2 id="{{ previousLetter }}">{{ previousLetter }}</h2>
+    {% for category in bundledata[whichCategories] %}
+    {% if category[2] != previousLetter %}
+      <h2 id="{{ category[2] }}">{{ category[2] }}</h2>
+      {% set previousLetter = category[2] %}
+    {% endif %}
+    {% set categoryUrl %}/categories/{{ category[0] | slugify }}/{% endset %}
+    <div class="onecategory">
+      <a href="{{categoryUrl}}" class="onecattitle">{{ category[0] }}</a><span class="reduced-to-base">({{ category[1] }})</span>
+      <div class="recentcatitems">
+        {% for item in bundledata.bundleRecords | postsInCategory(category[0], 3) %}
+          {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
+          {{ item.Link | getFavicon | safe }}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
+          <p>{{ item.Date | formatItemDate }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    {# {% include "partials/categoryloop.njk" %} #}
 	</div>
 </div>
