@@ -158,18 +158,32 @@ export default async function () {
   //	 count in column 1
   const authorList = (records, sortField) => {
     function authorSort(a, b) {
-      if (sortField == "name") {
-        return a[0].localeCompare(b[0]);
+      if (sortField === "name") {
+        return a[2].localeCompare(b[2]); // Sort by first letter of last word
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
     }
+
+    const getFirstLetterOfLastWord = (str) => {
+      const words = str.trim().split(' ');
+      const lastWord = words[words.length - 1];
+      return lastWord.charAt(0).toUpperCase();
+    };
+
     const authorMap = new Map();
     for (let item of records) {
-      const postCount = authorMap.get(item.Author) || 0;
-      authorMap.set(item.Author, postCount + 1);
+      const existing = authorMap.get(item.Author);
+      const postCount = existing ? existing.count : 0;
+      authorMap.set(item.Author, {
+        count: postCount + 1,
+        firstLetter: getFirstLetterOfLastWord(item.Author),
+      });
     }
-    return Array.from(authorMap).sort(authorSort);
+
+    return Array.from(authorMap)
+      .map(([name, data]) => [name, data.count, data.firstLetter])
+      .sort(authorSort);
   };
 
   // generate a 2-dimensional array of categories and the
@@ -178,6 +192,7 @@ export default async function () {
   // the sortField is the field to sort by:
   //	 category name in column 0
   //	 count in column 1
+  // first letter of the category is added as column 2
 
   const categoryList = (records, sortField) => {
     function categorySort(a, b) {
@@ -217,6 +232,7 @@ export default async function () {
   const authors = authorList(firehose, "name");
   const authorsByCount = authorList(firehose, "count");
   const authorCount = authors.length;
+  const authorLetters = [...new Set(authors.map(author => author[2]))]
 
   // list of categories and count of blog posts with the category
   // and the total category count; firehose contains all blog posts
@@ -227,21 +243,6 @@ export default async function () {
   // Generate an alphabetically sorted array of unique first letters from categories
   const categoryLetters = [...new Set(categories.map(category => category[2]))]
   .sort((a, b) => a.localeCompare(b[0]));
-
-  // // Log the count of categories for each unique first letter
-  // const firstLetterCounts = new Map();
-  // categories.forEach((category) => {
-  //   const firstLetter = category[2]; // Add third column to contain the first letter
-  //   const count = firstLetterCounts.get(firstLetter) || 0;
-  //   firstLetterCounts.set(firstLetter, count + 1);
-  // });
-
-  // console.log("Categories by first letter:");
-  // Array.from(firstLetterCounts)
-  //   .sort((a, b) => a[0].localeCompare(b[0])) // Sort alphabetically by letter
-  //   .forEach(([letter, count]) => {
-  //     console.log(`${letter}: ${count} categories`);
-  //   });
 
   // get the count of the number of posts in the Getting Started category
   let cat = "Getting Started";
@@ -285,6 +286,7 @@ export default async function () {
     authors,
     authorsByCount,
     authorCount,
+    authorLetters,
     categories,
     categoriesByCount,
     categoryCount,

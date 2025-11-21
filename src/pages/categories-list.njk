@@ -10,11 +10,13 @@ permalink: /categories/
   the author's site for that post.
 #}
 <h1>{{ title }} by name <span class="reduced-to-md">({{ bundledata.categoryCount }})</span> <span class="reduced-to-md">(<a href="/categories-by-count/">by count</a>)</span></h1>
+
 <div class="category-nav">
   {% for letter in bundledata.categoryLetters %}
     <a href="#{{ letter }}" class="category-nav-link">{{ letter }}</a>
   {% endfor %}
 </div>
+
 {% set previousLetter = "A"%}
 <div class="allcategories-list">
 	<div class="categorieslist">
