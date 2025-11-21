@@ -13,6 +13,23 @@ permalink: /authors-by-name/
 <div class="allauthors-list">
   <div class="authorslist">
     {% set whichAuthors = "authors"%}
-    {% include "partials/authorloop.njk" %}
+  {% for author in bundledata[whichAuthors] %}
+    {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
+    {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 3) %}
+    {% set firstNonYoutubePost = latestPosts | getNonYoutubePost %}
+    <div class="oneauthor">
+      <div class="authorheader">
+        {{ firstNonYoutubePost.Link | getFavicon | safe }}
+        <a href="{{authorUrl}}" class="oneauthortitle">{{ author[0] }}</a><span class="reduced-to-base">({{ author[1] }})</span>
+      </div>
+      <div class="recentauthoritems">
+        {% for item in latestPosts %}
+        <a href="{{ item.Link }}">{{ item.Title }}</a>
+        <p>{{ item.Date | formatItemDate }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    {# {% include "partials/authorloop.njk" %} #}
   </div>
 </div>
