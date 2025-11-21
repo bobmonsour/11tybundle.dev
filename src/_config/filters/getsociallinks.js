@@ -239,7 +239,7 @@ export async function getSocialLinks(link) {
       combinedFound.github.push(...pageResults.github);
     } catch (error) {
       // Silently continue if a page doesn't exist (404) or fails to fetch
-      // This allows the function to work even if /about or /links don't exist
+      // This allows the function to work even if /about/ or /about don't exist
       console.log(`Could not fetch ${pageUrl}:`, error.message);
     }
   }
