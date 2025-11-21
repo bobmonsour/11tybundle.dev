@@ -30,7 +30,8 @@
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
 {% set firstNonYoutubePost = latestPosts | getNonYoutubePost %}
-{% set newestPostYear = firstNonYoutubePost.Date | truncate(4, true, '') %}<div class="grouppage-header">
+{% set newestPostYear = firstNonYoutubePost.Date | truncate(4, true, '') %}
+<div class="grouppage-header">
   {{ firstNonYoutubePost.Link | getFavicon | safe }}
   <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }} <span class="reduced-to-md">({{ author[1] }})</span></h1>
 </div>
@@ -40,6 +41,13 @@
   {{ firstNonYoutubePost.Link | getRSSIcon | safe }}
   {{ firstNonYoutubePost.Link | getSocialIcons | safe }}
 </div>
+
+<div class="author-year-nav">
+  {% for year in bundledata.bundleRecords | postYearsInAuthor(author[0]) %}
+    <a href="#id-{{ year }}" class="category-nav-link">{{ year }}</a>
+  {% endfor %}
+</div>
+
 
 <div class="bundleposts" data-pagefind-body>
 	{% set v1cautionshown = false %}
@@ -52,7 +60,7 @@
 				</details>
 			{%- endif -%}
 			<details  {% if current_year == newestPostYear %}open{% endif %}>
-			<summary>{{ current_year }}</summary>
+			<summary id="id-{{ current_year }}">{{ current_year }}</summary>
 			{%- set previous_year = current_year -%}
 		{%- endif -%}
 		{% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}

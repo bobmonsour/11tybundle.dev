@@ -1016,5 +1016,185 @@
       "Plugins",
       "YouTube"
     ]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Adding a Stripe cart to a static Eleventy website with LiveState: Part 1",
+    "Link": "https://launchscout.com/blog/add-stripe-cart-to-eleventy-with-livestate",
+    "Date": "2022-11-09",
+    "Author": "Chris Nelson",
+    "Categories": ["How to..."]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "How I Learned to Stop Worrying and Love the Jamstack",
+    "Link": "https://daniel-saunders.com/posts/essays/how-i-learned-to-stop-worrying-and-love-the-jamstack/",
+    "Date": "2022-09-26",
+    "Author": "Daniel Saunders",
+    "Categories": ["Why Eleventy?"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Using Airtable as a Jamstack CMS",
+    "Link": "https://daniel-saunders.com/posts/notes/using-airtable-as-a-jamstack-cms/",
+    "Date": "2022-12-03",
+    "Author": "Daniel Saunders",
+    "Categories": ["Remote Data"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "How Stable is Eleventy? (YouTube)",
+    "Link": "https://www.youtube.com/watch?v=bPtQmsjXMuo",
+    "Date": "2023-04-06",
+    "Author": "11ty",
+    "Categories": ["YouTube"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Rebuilding 11ty on a schedule",
+    "Link": "https://jamesdoc.com/blog/2023/11ty-daily-rebuilds/",
+    "Date": "2023-02-10",
+    "Author": "James Doc",
+    "Categories": ["Deployment", "Scheduling"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Moving from WordPress to 11ty",
+    "Link": "https://velvetcache.org/2023/04/05/moving-from-wordpress-to-11ty/",
+    "Date": "2023-04-05",
+    "Author": "John Hobbs",
+    "Categories": ["Migrating to Eleventy"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Eleventy: Building an Image Gallery with CSS Grid and PhotoSwipe",
+    "Link": "https://www.markllobrera.com/posts/eleventy-building-image-gallery-photoswipe/",
+    "Date": "2023-01-22",
+    "Author": "Mark Llobrera",
+    "Categories": ["Images", "Image Galleries"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Eleventy 2.0 & WebC",
+    "Link": "https://martinhicks.net/articles/eleventy-and-webc",
+    "Date": "2022-12-17",
+    "Author": "Martin Hicks",
+    "Categories": ["WebC"]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Builder.io's Partytown with 11ty",
+    "Link": "https://syntackle.com/blog/builder-io-s-partytown-with-11ty-lN6X2w/",
+    "Date": "2023-04-05",
+    "Author": "Murtuzaali Surti",
+    "Categories": ["How to..."]
+  },
+  {
+    "Issue": "3",
+    "Type": "blog post",
+    "Title": "Working with CloudCannon and Eleventy - My Experience",
+    "Link": "https://www.raymondcamden.com/2023/04/06/working-with-cloudcannon-and-eleventy-my-experience",
+    "Date": "2023-04-06",
+    "Author": "Raymond Camden",
+    "Categories": ["CMS"]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "Automating Eleventy Post Creation",
+    "Link": "https://johnwargo.com/posts/2023/automating-eleventy-post-creation/",
+    "Date": "2023-05-11",
+    "Author": "John M. Wargo",
+    "Categories": ["How to..."]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "Eleventy Displaying Posts from Another Site",
+    "Link": "https://johnwargo.com/posts/2023/eleventy-displaying-posts-from-another-site/",
+    "Date": "2023-05-29",
+    "Author": "John M. Wargo",
+    "Categories": ["How to...", "Remote Data"]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "Migrating This Site from Joomla To Eleventy",
+    "Link": "https://johnwargo.com/posts/2023/migrating-a-joomla-site-to-eleventy/",
+    "Date": "2023-05-30",
+    "Author": "John M. Wargo",
+    "Categories": ["Migrating to Eleventy"]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "A Complete Guide to Building a Blog with Eleventy",
+    "Link": "https://cfjedimaster.github.io/eleventy-blog-guide/guide.html",
+    "Date": "2023-03-04",
+    "Author": "Raymond Camden",
+    "Categories": ["Blogging", "How to...", "Getting Started"]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "Eleventy by Example, by Bryan Robinson",
+    "Link": "https://www.raymondcamden.com/2023/05/18/eleventy-by-example-by-bryan-robinson",
+    "Date": "2023-05-18",
+    "Author": "Raymond Camden",
+    "Categories": ["Getting Started"]
+  },
+  {
+    "Issue": "8",
+    "Type": "blog post",
+    "Title": "Host an ics calendar feed with Eleventy",
+    "Link": "https://blog.r0b.io/post/host-an-ics-calendar-feed-with-eleventy/",
+    "Date": "2023-05-21",
+    "Author": "Rob Anderson",
+    "Categories": ["How to...", "Dates"]
+  },
+  {
+    "Issue": "9",
+    "Type": "blog post",
+    "Title": "Eleventy Clock",
+    "Link": "https://multiline.co/mment/2020/09/eleventy-clock/",
+    "Date": "2020-09-06",
+    "Author": "Ashur Cabrera",
+    "Categories": ["Pagination"]
+  },
+  {
+    "Issue": "9",
+    "Type": "blog post",
+    "Title": "My plugin for markdown-it: codewrap",
+    "Link": "https://chriskirknielsen.com/blog/markdown-it-codewrap/",
+    "Date": "2023-05-28",
+    "Author": "Christopher Kirk-Nielsen",
+    "Categories": ["Markdown", "How to..."]
+  },
+  {
+    "Issue": "9",
+    "Type": "blog post",
+    "Title": "From ICS to JSON: surfacing anticipated albums",
+    "Link": "https://www.coryd.dev/posts/2023/from-ics-to-json-surfacing-anticipated-albums/",
+    "Date": "2023-06-08",
+    "Author": "Cory Dransfeldt",
+    "Categories": ["Remote Data", "How to..."]
+  },
+  {
+    "Issue": "9",
+    "Type": "blog post",
+    "Title": "Optimizing for performance with Eleventy",
+    "Link": "https://www.coryd.dev/posts/2023/optimizing-for-performance-with-eleventy/",
+    "Date": "2023-06-07",
+    "Author": "Cory Dransfeldt",
+    "Categories": ["Performance", "How to..."]
   }
 ]
