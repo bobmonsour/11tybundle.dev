@@ -30,7 +30,7 @@
 
 {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 0) %}
 {% set firstNonYoutubePost = latestPosts | getNonYoutubePost %}
-<div class="grouppage-header">
+{% set newestPostYear = firstNonYoutubePost.Date | truncate(4, true, '') %}<div class="grouppage-header">
   {{ firstNonYoutubePost.Link | getFavicon | safe }}
   <h1 title="{{ author[0] }}" data-pagefind-meta="title:{{ author[0] }} ({{ author[1] }} posts)">{{ title }} <span class="reduced-to-md">({{ author[1] }})</span></h1>
 </div>
@@ -51,7 +51,7 @@
 			{%- if previous_year != "no posts yet" -%}
 				</details>
 			{%- endif -%}
-			<details open>
+			<details  {% if current_year == newestPostYear %}open{% endif %}>
 			<summary>{{ current_year }}</summary>
 			{%- set previous_year = current_year -%}
 		{%- endif -%}
