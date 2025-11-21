@@ -51,13 +51,39 @@ const getFaviconUrl = async (origin) => {
     // Find the first available favicon link in priority order
     for (const selector of selectors) {
       const href = $(selector).attr("href");
+      // if (origin === "https://markllobrera.com") {
+      //   console.log(`Checking selector ${selector}, found href: ${href}`);
+      // }
       if (href) {
-        // Convert relative URLs to absolute URLs using the origin as base
-        const url = new URL(href, origin).href;
-        return url;
+        try {
+          // Convert relative URLs to absolute URLs using the origin as base
+          const faviconUrl = new URL(href, origin).href;
+
+          // Verify the favicon URL is accessible before returning it
+          await eleventyFetch(faviconUrl, {
+            directory: ".cache",
+            duration: cacheDuration.faviconImage,
+            type: "buffer", // We don't need the actual data, just want to verify it exists
+            fetchOptions: {
+              signal: AbortSignal.timeout(fetchTimeout.faviconImage),
+              headers: {
+                "user-agent":
+                  "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
+              },
+            },
+          });
+
+          // If we reach this point, the favicon URL is accessible
+          return faviconUrl;
+        } catch (fetchError) {
+          // This favicon URL is not accessible, continue to next selector
+          // if (origin === "https://markllobrera.com") {
+          //   console.log(`Favicon URL ${faviconUrl} failed: ${fetchError.message}`);
+          // }
+          continue;
+        }
       }
     }
-
     // Step 3: If no favicon link found in HTML, try common favicon file locations
     const faviconExtensions = ["ico", "png", "svg"];
 
