@@ -159,7 +159,10 @@ export default async function () {
   const authorList = (records, sortField) => {
     function authorSort(a, b) {
       if (sortField === "name") {
-        return a[2].localeCompare(b[2]); // Sort by first letter of last word
+        // Handle undefined values safely
+        const nameA = a[2] || "";
+        const nameB = b[2] || "";
+        return nameA.localeCompare(nameB); // Sort by first letter of last word
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
@@ -173,6 +176,9 @@ export default async function () {
 
     const authorMap = new Map();
     for (let item of records) {
+      // Skip items with missing authors
+      if (!item.Author) continue;
+
       const existing = authorMap.get(item.Author);
       const postCount = existing ? existing.count : 0;
       authorMap.set(item.Author, {
@@ -197,13 +203,19 @@ export default async function () {
   const categoryList = (records, sortField) => {
     function categorySort(a, b) {
       if (sortField == "category") {
-        return a[0].localeCompare(b[0]);
+        // Handle undefined values safely
+        const catA = a[0] || "";
+        const catB = b[0] || "";
+        return catA.localeCompare(catB);
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
     }
     let categoryMap = new Map();
     for (let item of records) {
+      // Skip items with missing categories
+      if (!item.Categories || !Array.isArray(item.Categories)) continue;
+
       item.Categories.forEach((category) => {
         const existing = categoryMap.get(category);
         const postCount = existing ? existing.count : 0;
