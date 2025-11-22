@@ -146,17 +146,38 @@ export default async function () {
   // the firehose array, which are all blog posts
   // the sortField is the field to sort by:
   //	 author name in column 0
-  //	 count in column 1
+  // //	 count in column 1
+  // const authorList = (records, sortField) => {
+  //   function authorSort(a, b) {
+  //     if (sortField === "name") {
+  //       return a[0].localeCompare(b[0]);
+  //     } else {
+  //       return a[1] < b[1] ? 1 : -1;
+  //     }
+  //   }
+  //   const authorMap = new Map();
+  //   for (let item of records) {
+  //     const postCount = authorMap.get(item.Author) || 0;
+  //     authorMap.set(item.Author, postCount + 1);
+  //   }
+  //   return Array.from(authorMap).sort(authorSort);
+  // };
   const authorList = (records, sortField) => {
     function authorSort(a, b) {
-      if (sortField == "name") {
-        return a[0].localeCompare(b[0]);
+      if (sortField === "name") {
+        // Handle undefined values safely
+        const nameA = a[0] || "";
+        const nameB = b[0] || "";
+        return nameA.localeCompare(nameB);
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
     }
     const authorMap = new Map();
     for (let item of records) {
+      // Skip items with missing authors
+      if (!item.Author) continue;
+
       const postCount = authorMap.get(item.Author) || 0;
       authorMap.set(item.Author, postCount + 1);
     }
@@ -169,18 +190,44 @@ export default async function () {
   // the sortField is the field to sort by:
   //	 category name in column 0
   //	 count in column 1
+  // const categoryList = (records, sortField) => {
+  //   function categorySort(a, b) {
+  //     if (sortField === "category") {
+  //       return a[0].localeCompare(b[0]);
+  //     } else {
+  //       return a[1] < b[1] ? 1 : -1;
+  //     }
+  //   }
+  //   let categoryMap = new Map();
+  //   for (let item of records) {
+  //     item.Categories.forEach((category) => {
+  //       const postCount = categoryMap.get(category) || 0;
+  //       categoryMap.set(category, postCount + 1);
+  //     });
+  //   }
+  //   return Array.from(categoryMap).sort(categorySort);
+  // };
 
   const categoryList = (records, sortField) => {
     function categorySort(a, b) {
-      if (sortField == "category") {
-        return a[0].localeCompare(b[0]);
+      if (sortField === "category") {
+        // Handle undefined values safely
+        const catA = a[0] || "";
+        const catB = b[0] || "";
+        return catA.localeCompare(catB);
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
     }
     let categoryMap = new Map();
     for (let item of records) {
+      // Skip items with missing categories
+      if (!item.Categories || !Array.isArray(item.Categories)) continue;
+
       item.Categories.forEach((category) => {
+        // Skip undefined or empty categories
+        if (!category) return;
+
         const postCount = categoryMap.get(category) || 0;
         categoryMap.set(category, postCount + 1);
       });
