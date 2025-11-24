@@ -176,7 +176,7 @@ function extractSocialLinksFromHtml(html, origin) {
 
 /**
  * Main function to get social links from a given webpage and common subpages
- * Checks the origin URL, /about/, and /about pages for social media links
+ * Checks the origin URL, /about/, and /en/ pages for social media links
  * @param {string} link - The URL to extract social links from
  * @returns {object} Object containing the best social link for each platform
  */
@@ -216,8 +216,7 @@ export async function getSocialLinks(link) {
   const pagesToCheck = [
     origin, // Homepage - most common location
     `${origin}/about/`, // About page - common for personal sites
-    `${origin}/about`, // About page (no trailing slash) - common for personal sites
-    // `${origin}/links/`, // Links page - sometimes used for social links
+    `${origin}/en/`, // For international sites with English pages
   ];
 
   // Initialize combined results from all pages
