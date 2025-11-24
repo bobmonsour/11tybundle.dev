@@ -28,5 +28,6 @@ export const fetchTimeout = {
   faviconHtml: 5000, // 3 seconds
   faviconImage: 3000, // 3 seconds
   rssLinkHtml: 3000, // 3 seconds
+  socialHtml: 3000, // 3 seconds
   socialLinks: 3000, // 3 seconds
 };

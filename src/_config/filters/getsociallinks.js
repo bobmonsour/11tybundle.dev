@@ -4,6 +4,9 @@ import * as cheerio from "cheerio";
 
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
+// Track origins that have failed to return social links in this session
+const failedOriginsThisSession = new Set();
+
 // Determine if a URL is a LinkedIn profile or company page
 const isLinkedIn = (u) =>
   u.hostname.endsWith("linkedin.com") &&
@@ -173,7 +176,7 @@ function extractSocialLinksFromHtml(html, origin) {
 
 /**
  * Main function to get social links from a given webpage and common subpages
- * Checks the origin URL, /about page, and /links page for social media links
+ * Checks the origin URL, /about/, and /about pages for social media links
  * @param {string} link - The URL to extract social links from
  * @returns {object} Object containing the best social link for each platform
  */
@@ -193,6 +196,19 @@ export async function getSocialLinks(link) {
       // console.log("Cached links:", cachedLinks);
       return cachedLinks;
     }
+  }
+
+  // Skip if we've already checked all pages for this origin and found nothing
+  if (failedOriginsThisSession.has(origin)) {
+    // console.log(
+    //   `Already checked all pages for ${origin} in this session with no results, skipping`
+    // );
+    return {
+      mastodon: "",
+      bluesky: "",
+      github: "",
+      linkedin: "",
+    };
   }
 
   // Define pages to check for social links
@@ -220,7 +236,7 @@ export async function getSocialLinks(link) {
         duration: cacheDuration.socialHtml, // Cache HTML
         type: "text",
         fetchOptions: {
-          signal: AbortSignal.timeout(fetchTimeout.socialLinks),
+          signal: AbortSignal.timeout(fetchTimeout.socialHtml),
           headers: {
             // Use a standard user agent to avoid being blocked
             "user-agent":
@@ -237,10 +253,21 @@ export async function getSocialLinks(link) {
       combinedFound.linkedin.push(...pageResults.linkedin);
       combinedFound.bluesky.push(...pageResults.bluesky);
       combinedFound.github.push(...pageResults.github);
+
+      // Exit loop if we found any social links
+      const foundAnyLinks =
+        pageResults.mastodon.length > 0 ||
+        pageResults.linkedin.length > 0 ||
+        pageResults.bluesky.length > 0 ||
+        pageResults.github.length > 0;
+
+      if (foundAnyLinks) {
+        break;
+      }
     } catch (error) {
       // Silently continue if a page doesn't exist (404) or fails to fetch
       // This allows the function to work even if /about/ or /about don't exist
-      console.log(`Could not fetch ${pageUrl}:`, error.message);
+      // console.log(`Could not fetch ${pageUrl}:`, error.message);
     }
   }
 
@@ -250,6 +277,18 @@ export async function getSocialLinks(link) {
   combinedFound.bluesky = unique(combinedFound.bluesky);
   combinedFound.github = unique(combinedFound.github);
   combinedFound.linkedin = unique(combinedFound.linkedin);
+
+  // Check if we found any social links across all pages
+  const foundAnyLinks =
+    combinedFound.mastodon.length > 0 ||
+    combinedFound.linkedin.length > 0 ||
+    combinedFound.bluesky.length > 0 ||
+    combinedFound.github.length > 0;
+
+  // If no links found after checking all pages, mark this origin as failed
+  if (!foundAnyLinks) {
+    failedOriginsThisSession.add(origin);
+  }
 
   // Return only the first (best) link for each platform
   // If no link found for a platform, return empty string
