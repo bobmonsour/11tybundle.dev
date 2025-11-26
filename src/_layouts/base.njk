@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eleventy Bundle Demo</title>
+  {% css %}
+  {% include "public/css/fonts.css" %}
+  {% include "public/css/variables.css" %}
+  {% include "public/css/reset.css" %}
+  {% include "public/css/global.css" %}
+  {% include "public/css/site-header.css" %}
+  {% include "public/css/site-footer.css" %}
+  {% endcss %}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+  <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+  {%- include "partials/site-header.njk" -%}
+  <main id="main" class="site-main">
+  {{ content | safe }}
+  </main>
+  {%- include "partials/site-footer.njk" -%}
+  {% include "partials/icons.njk" %}
+  {% js %}
+  {% include "public/js/theme.js" %}
+  {% include "public/js/toggle.js" %}
+  {% endjs %}
+  <script type="module" src="{% getBundleFileUrl "js" %}"></script>
+</body>
+</html>

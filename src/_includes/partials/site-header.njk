@@ -1,0 +1,63 @@
+<header class="site-header">
+  <div class="container">
+    <a href="#main" class="skip-to-main visually-hidden">Skip to main content</a>
+    <a href="/" class="site-header__brand">
+      <div class="logo">
+        <svg class="strapline" width="93" height="93" viewBox="0 0 93 93" aria-hidden="true">
+          <use xlink:href="#logo-strapline"></use>
+        </svg>
+        <img src="/img/logo.svg" alt="" class="roundel">
+      </div>
+      {% raw %}{{ 11tybundle.dev }}{% endraw %}
+    </a>
+    <a href="http://" class="site-header__cta button">Sticker now only $3! <svg width="20" height="20"
+        viewBox="0 0 24 24" aria-hidden="true">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg></a>
+
+    <nav id="main-nav" class="site-header__nav hidden">
+      <ul role="list">
+        <li><a href="/categories" class="categories">Categories</a></li>
+        <li><a href="/authors" class="authors">Authors</a></li>
+        <li><a href="/starters" class="starters">Starters</a></li>
+        <li><a href="/blog" class="blog">Blog</a></li>
+        <li><a href="/firehose" class="firehose">Firehose</a></li>
+      </ul>
+      <form id="search" action="" class="site-header__search hidden">
+        <input type="text" placeholder="Type / to search">
+      </form>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="toggle" aria-expanded="false" aria-controls="main-nav" data-target="main-nav"
+        aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <button class="toggle" aria-expanded="false" aria-controls="theme" data-target="theme"
+        aria-label="Theme settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-sun"></use>
+        </svg>
+        <span class="visually-hidden">Theme</span>
+      </button>
+    </div>
+
+    <form id="theme" class="site-header__theme hidden">
+      <fieldset>
+        <legend class="visually-hidden">Theme</legend>
+        <label><input type="radio" name="theme" value="auto"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-circle-half"></use>
+        </svg> Auto</label>
+        <label><input type="radio" name="theme" value="light"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-sun"></use>
+        </svg> Light</label>
+        <label><input type="radio" name="theme" value="dark"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-moon"></use>
+        </svg> Dark</label>
+      </fieldset>
+    </form>
+  </div>
+</header>

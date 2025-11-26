@@ -1,3 +1,7 @@
+import { minify } from "terser";
+import postcss from "postcss";
+import cssnanoPlugin from "cssnano";
+
 // environment variable handling
 import "dotenv/config";
 
@@ -30,13 +34,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(singlePost);
   eleventyConfig.addPlugin(singlePostByAuthor);
 
-  // Add & configure external plugins
-  // eleventyConfig.addPlugin(postGraph, {
-  //   sort: "desc",
-  //   boxColor: "darkgray",
-  //   highlightColor: "red",
-  //   textColor: "#fff",
-  // });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
 
