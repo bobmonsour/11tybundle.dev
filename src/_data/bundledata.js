@@ -53,7 +53,7 @@ export default async function () {
 
   // generate a list of sites, an array of all sites in descending date order
   const siteList = bundleRecords
-    .filter((item) => item["Type"] == "site")
+    .filter((item) => item["Type"] == "site" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
