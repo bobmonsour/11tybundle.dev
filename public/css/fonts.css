@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Nimbus Mono Bold;
+  src: url("../../fonts/NimbusMono-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Optima Regular;
+  src: url("../fonts/Optima-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Optima Regular Italic;
+  src: url("../../fonts/Optima-Italic.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Optima Regular Bold;
+  src: url("../../fonts/Optima-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Optima Bold Italic;
+  src: url("../../fonts/Optima-BoldItalic.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Optima ExtraBlack;
+  src: url("../../fonts/Optima-ExtraBlack.woff2") format("woff2");
+  font-style: normal;
+  font-display: block;
+}

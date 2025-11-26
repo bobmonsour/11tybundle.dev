@@ -1,0 +1,118 @@
+.site-footer {
+  padding-block: var(--grid-gutter);
+  grid-area: footer;
+  background: var(--greyscale-9);
+  color: var(--text-colour-3);
+  font-size: var(--step--1);
+  .container {
+    display: grid;
+    gap: var(--grid-gutter);
+    align-items: start;
+    grid-template-areas:
+      "newsletter"
+      "links"
+      "nav"
+      "brand"
+      "smallprint";
+
+    @media (width >=768px) {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "newsletter links"
+        "nav nav"
+        "brand brand"
+        "smallprint smallprint";
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+  }
+
+  dt,
+  legend {
+    font-family: var(--font-display-bold);
+    font-size: var(--step-1);
+    color: var(--primary-3);
+  }
+}
+
+.site-footer__newsletter {
+  position: relative;
+  margin-inline: calc(var(--grid-gutter) * -1);
+  grid-area: newsletter;
+  background: var(--greyscale-8);
+  border: 1px solid var(--greyscale-7);
+  &:after {
+    content: url("/img/balloon.svg");
+    position: absolute;
+    top: calc(var(--space-s) * -0.5);
+    right: var(--space-s);
+  }
+  @media (width <=768px) {
+    border-left: unset;
+    border-right: unset;
+  }
+
+  @media (width >=768px) {
+    margin-inline: 0;
+  }
+  fieldset {
+    padding: var(--space-s);
+    border: none;
+  }
+  legend {
+    padding-block-start: var(--space-s);
+    width: 100%;
+  }
+  p {
+    margin-block: 0;
+    text-wrap: balance;
+  }
+  .lockup {
+    margin-block: .5lh;
+    display: flex;
+    gap: var(--space-3xs);
+    background: oklch(100 0 0);
+    border: 3px solid var(--greyscale-5);
+    border-radius: 999px;
+    width: max-content;
+  }
+  input {
+    border: none;
+  }
+}
+
+.site-footer__links {
+  grid-area: links;
+  @media (width >=768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--grid-gutter);
+  }
+}
+
+.site-footer__nav {
+  grid-area: nav;
+  justify-self: center;
+}
+
+.site-footer__brand {
+  grid-area: brand;
+  text-align: center;
+  font-family: var(--font-brand);
+  > * {
+    margin-block: 0;
+  }
+  .url {
+    font-size: var(--step-0);
+  }
+}
+
+.site-footer__smallprint {
+  grid-area: smallprint;
+  justify-self: center;
+}

@@ -5,25 +5,57 @@ import cssnanoPlugin from "cssnano";
 // environment variable handling
 import "dotenv/config";
 
-import filters from "./src/_config/filters/index.js";
-import shortcodes from "./src/_config/shortcodes/index.js";
-import singlePost from "./src/_config/shortcodes/singlepost.js";
-import singlePostByAuthor from "./src/_config/shortcodes/singlepostbyauthor.js";
+import filters from "/_config/filters/index.js";
+import shortcodes from "/_config/shortcodes/index.js";
+import singlePost from "/_config/shortcodes/singlepost.js";
+import singlePostByAuthor from "/_config/shortcodes/singlepostbyauthor.js";
 
 // import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
-  // Passthrough copy for static assets
-  [
-    { "src/assets/favicon/*": "/" },
-    "src/assets/css/",
-    "src/assets/img/",
-    "src/assets/img/favicons/",
-    "src/assets/js/",
-    "src/robots.txt",
-  ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
+  eleventyConfig.addPassthroughCopy({ "./public/": "/" });
+  eleventyConfig.addBundle("js", {
+    transforms: [
+      async function (content) {
+        let { type, page } = this;
+        let result = await minify(content);
+        return result.code;
+      },
+    ],
+    toFileDirectory: "dist",
+  });
+
+  // Adds the {% svg %} paired shortcode
+  eleventyConfig.addBundle("svg", {
+    toFileDirectory: "dist",
+  });
+
+  //adds the {% css %} paired shortcode
+  eleventyConfig.addBundle("css", {
+    transforms: [
+      async function (content) {
+        let { type, page } = this;
+        let result = await postcss([cssnanoPlugin]).process(content, {
+          from: page.inputPath,
+          to: null,
+        });
+        return result.css;
+      },
+    ],
+    toFileDirectory: "dist",
+  });
+
+  // // Passthrough copy for static assets
+  // [
+  //   { "src/assets/favicon/*": "/" },
+  //   "src/assets/css/",
+  //   "src/assets/img/",
+  //   "src/assets/img/favicons/",
+  //   "src/assets/js/",
+  //   "src/robots.txt",
+  // ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
@@ -48,7 +80,7 @@ export default function (eleventyConfig) {
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dir: {
-      input: "src",
+      input: "content",
       output: "_site",
       includes: "_includes",
       layouts: "_layouts",
