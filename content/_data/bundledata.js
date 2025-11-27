@@ -1,11 +1,20 @@
+// ********************
 // All the records stored in bundledb.json are processed, returning
 // various subsets and filtered extracts of the data for use in the
 // site's templates
-// import bundleRecords from './bundledb.json' with { type: 'json' };
+// ********************
 
-// Changing from a local file to a remote db stored in a separate repo
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
+
+// **************
+// A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
+// FOR FASTER LOCAL BUILDING
+// IF THIS "import" is uncommented, COMMENT OUT THE REMOTE FETCHING CODE BELOW
+// **************
+import bundleRecords from './bundledbtest.json' with { type: 'json' };
+// **************
+
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -16,40 +25,32 @@ const octokit = new Octokit({
 });
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
-
-import bundleRecords from './bundledbtest.json' with { type: 'json' };
-// console.log(bundleRecords);
-
-// const BUNDLEDB_URL =
-//   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-
 export default async function () {
-  // Fetch the json db from its remote repo
+  // **************
+  // THE FULL DATASET CAN BE LOADED FROM THE *** REMOTE *** REPO
+  // IF THE "const BUNDLEDB_URL" is uncommented, COMMENT OUT THE LOCAL IMPORT ABOVE
+
+  // **************
+  // const BUNDLEDB_URL =
+  //   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+  // // Fetch the json db from its remote repo
   // const bundleRecords = await Fetch(BUNDLEDB_URL, {
-  //   duration: cacheDuration.bundleDB, // always fetch new data
+  //   duration: "0s",
   //   type: "json",
   //   fetchOptions: {
-  //     signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+  //     signal: AbortSignal.timeout(3000),
   //   },
   // });
+  // **************
+
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
+
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
-
-  // get the most recent 3 posts by unique authors
-  const recentAuthors = [];
-  const seenAuthors = new Set();
-  for (const post of firehose) {
-    if (!seenAuthors.has(post.Author)) {
-      recentAuthors.push(post);
-      seenAuthors.add(post.Author);
-      if (recentAuthors.length === 3) break;
-    }
-  };
 
   // generate a list of releases, an array of all releases in descending date order
   const releaseList = bundleRecords
@@ -203,6 +204,17 @@ export default async function () {
     return Array.from(authorMap)
       .map(([name, data]) => [name, data.count, data.firstLetter])
       .sort(authorSort);
+  };
+
+  // get the most recent 3 posts by unique authors
+  const recentAuthors = [];
+  const seenAuthors = new Set();
+  for (const post of firehose) {
+    if (!seenAuthors.has(post.Author)) {
+      recentAuthors.push(post);
+      seenAuthors.add(post.Author);
+      if (recentAuthors.length === 3) break;
+    }
   };
 
   // generate a 2-dimensional array of categories and the
