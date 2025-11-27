@@ -407,6 +407,13 @@
   },
   {
     "Issue": "77",
+    "Type": "starter",
+    "Title": "eleventy-excellent",
+    "Link": "https://github.com/madrilene/eleventy-excellent",
+    "Demo": "https://eleventy-excellent.netlify.app/"
+  },
+  {
+    "Issue": "77",
     "Type": "release",
     "Title": "Eleventy Plugin Vite v7.1.0-alpha.2",
     "Link": "https://github.com/11ty/eleventy-plugin-vite/releases/tag/v7.1.0-alpha.2",

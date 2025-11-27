@@ -143,7 +143,9 @@ export default async function () {
       return bundleRecords.filter((item) => item["Type"] == "starter");
     }
     let starters = extractStarters(bundleRecords);
+    // console.log(`Extracted starters: ${starters.length} records`);
     starters = await updateStartersWithMetadata(starters);
+    // console.log(`Extracted starters: ${starters.length} records`);
 
     // Sort starters by the date of the last commit in descending order
     return starters.sort(
