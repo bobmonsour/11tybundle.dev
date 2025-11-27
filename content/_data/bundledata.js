@@ -35,10 +35,21 @@ export default async function () {
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
-    .filter((item) => item["Type"] == "blog post")
+    .filter((item) => item["Type"] == "blog post" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
+
+  // get the most recent 3 posts by unique authors
+  const recentAuthors = [];
+  const seenAuthors = new Set();
+  for (const post of firehose) {
+    if (!seenAuthors.has(post.Author)) {
+      recentAuthors.push(post);
+      seenAuthors.add(post.Author);
+      if (recentAuthors.length === 3) break;
+    }
+  };
 
   // generate a list of releases, an array of all releases in descending date order
   const releaseList = bundleRecords
@@ -49,7 +60,7 @@ export default async function () {
 
   // generate a list of sites, an array of all sites in descending date order
   const siteList = bundleRecords
-    .filter((item) => item["Type"] == "site")
+    .filter((item) => item["Type"] == "site" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
@@ -301,6 +312,7 @@ export default async function () {
     authorsByCount,
     authorCount,
     authorLetters,
+    recentAuthors,
     categories,
     categoriesByCount,
     categoryCount,

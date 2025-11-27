@@ -110,32 +110,18 @@ permalink: "/"
   <div class="container">
     <h2 class="h3">Author spotlight</h2>
     <article class="recent-authors">
+      {%- for item in bundledata.recentAuthors %}
       <article class="recent-authors__item">
-        <img src="https://placehold.co/64x64" alt="">
+        {{ item.Link | getFavicon | safe}}
         <div class="details">
-          <a href="">Raymond Camden</a>
-          <p>Father, husband, developer relations and web standards expert, and cat demo builder.</p>
+          <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>
+          <p>{{ item.Link | getOrigin | getDescription | safe }}</p>
           {%- include "partials/author-links.njk" -%}
         </div>
       </article>
-      <article class="recent-authors__item">
-        <img src="https://placehold.co/64x64" alt="">
-        <div class="details">
-          <a href="">Robb Knight</a>
-          <p>Maker of web things, blogger, podcaster, and pizzaiolo. Cat dad and human dad.</p>
-          {%- include "partials/author-links.njk" -%}
-        </div>
-      </article>
-      <article class="recent-authors__item">
-        <img src="https://placehold.co/64x64" alt="">
-        <div class="details">
-          <a href="">Cory Dransfeldt</a>
-          <p>I'm a software developer in Camarillo, California. I write about software development, technology and music.</p>
-          {%- include "partials/author-links.njk" -%}
-        </div>
-      </article>
+      {%- endfor %}
     </article>
-    <p><a href="authors" class="button">View all authors <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+    <p><a href="/authors/" class="button">View all authors <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <use xlink:href="#icon-arrow-right"></use>
         </svg></a></p>
     </div>
