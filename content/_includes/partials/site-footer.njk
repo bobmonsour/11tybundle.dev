@@ -1,48 +1,55 @@
 <footer class="site-footer">
   <div class="container">
-    <form id="newsletter" method="post" class="site-footer__newsletter">
+    <form
+		id="newsletter"
+    action="https://buttondown.email/api/emails/embed-subscribe/11tybundle"
+		method="post"
+		target="popupwindow"
+		onsubmit="window.open('https://buttondown.email/11tybundle', 'popupwindow')"
+    class="site-footer__newsletter"
+	>
       <fieldset>
         <legend>Newsletter</legend>
         <p>Get 11ty know-how delivered straight to your inbox.</p>
         <div class="lockup">
-          <input type="email" placeholder="Your email">
+          <input type="email" name="email" placeholder="Your email" />
           <input type="submit" value="Subscribe!" />
         </div>
-        <p><a href="http://" class="📮">Powered by Buttondown</a></p>
+        <p><a href="http://https://buttondown.email/refer/11tybundle" class="📮">Powered by Buttondown</a></p>
       </fieldset>
     </form>
     <div class="site-footer__links">
       <dl>
         <dt>Official</dt>
-        <dd><a href="http://">11ty docs</a></dd>
-        <dd><a href="http://">eleventy, the repo on Github</a></dd>
-        <dd><a href="http://">YouTube channel</a></dd>
-        <dd><a href="http://">Eleventy</a></dd>
-        <dd><a href="http://">Blog</a></dd>
-        <dd><a href="http://">Eleventy Leaderboards</a></dd>
-        <dd><a href="http://">Add your site to the Leaderboard</a></dd>
+        <dd><a href="https://www.11ty.dev/docs/">11ty docs</a></dd>
+        <dd><a href="https://github.com/11ty/eleventy/">eleventy, the repo on Github</a></dd>
+        <dd><a href="https://www.youtube.com/@EleventyVideo">YouTube channel</a></dd>
+        <dd><a href="https://www.zachleat.com/">Zach's Blog</a></dd>
+        <dd><a href="https://www.11ty.dev/blog/">Eleventy Blog</a></dd>
+        <dd><a href="https://www.11ty.dev/speedlify/">Eleventy Leaderboards</a></dd>
+        <dd><a href="https://github.com/11ty/11ty-community/issues/new/choose">Add your site to the Leaderboard</a></dd>
       </dl>
       <dl>
         <dt>Community</dt>
-        <dd><a href="http://">The Eleventy Meetup</a> by <a href="http://">Sia Karamalegos</a></dd>
-        <dd><a href="http://">11ty Rocks!</a> by <a href="http://">Stephanie Eckles</a></dd>
-        <dd><a href="http://">11ty Recipes</a> <a href="http://">by Mike Aparicio</a></dd>
-        <dd><a href="http://">11ty Plugin Repository</a> by <a href="http://">Bryan Robinson</a></dd>
+        <dd><a href="https://11tymeetup.dev/">The Eleventy Meetup</a> by <a href="https://sia.codes/">Sia Karamalegos</a></dd>
+        <dd><a href="https://11ty.rocks/">11ty Rocks!</a> by <a href="https://thinkdobecreate.com/">Stephanie Eckles</a></dd>
+        <dd><a href="https://11ty-recipes.mikeaparicio.com/">11ty Recipes</a> by <a href="https://www.mikeaparicio.com/">Mike Aparicio</a></dd>
+        <dd><a href="https://plug11ty.com//">11ty Plugin Repository</a> by <a href="https://bryanlrobinson.com/">Bryan Robinson</a></dd>
       </dl>
       <dl>
         <dt>Help</dt>
-        <dd><a href="http://">The 11ty Discord Server - A great community!</a></dd>
-        <dd><a href="http://">Discussions on Github - More discussion.</a></dd>
+        <dd><a href="https://www.11ty.dev/blog/discord/">The 11ty Discord Server</a>The 11ty Discord Server - A great community!</a></dd>
+        <dd><a href="https://github.com/11ty/eleventy/discussions">Discussions on Github - More discussion.</a></dd>
       </dl>
     </div>
     <nav class="site-footer__nav">
       <ul role="list">
-        <li><a href="">Categories</a></li>
-        <li><a href="">Authors</a></li>
-        <li><a href="">Starters</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Firehose</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="/categories/">Categories</a></li>
+        <li><a href="/authors/">Authors</a></li>
+        <li><a href="/starters/">Starters</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/firehose/">Firehose</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>
     </nav>
     <div class="site-footer__brand">
@@ -50,7 +57,7 @@
       <p>A curated feed of 11ty resources</p>
     </div>
     <ul role="list" class="site-footer__smallprint">
-      <li><a href="">Built with {{ eleventy.generator }}</a></li>
+      <li><a href="https://www.11ty.dev/">Built with {{ eleventy.generator }}</a></li>
       <li><a href="#main">Scroll to top</a></li>
     </ul>
   </div>

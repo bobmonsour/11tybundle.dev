@@ -8,8 +8,8 @@ permalink: "/"
     <h1>Bundles of 11ty know-how</h1>
     <div class="intro">
       <p class="standfirst">Welcome to the 11ty Bundle—your curated source for discovering how the community is using
-        <a href="http://">11ty</a>, a simple, flexible, open-source static site generator.</p>
-      <p>Stay updated via our <a href="">blog feed</a>, the <a href="">firehose feed</a>, or <a href="#newsletter">subscribe to the
+        <a href="https://11ty.dev/">11ty</a>, a simple, flexible, open-source static site generator.</p>
+      <p>Stay updated via our <a href="/feed.xml">blog feed</a>, the <a href="/firehosefeed.xml">firehose feed</a>, or <a href="#newsletter">subscribe to the
           newsletter</a> for email updates.</p>
     </div>
     <article class="latest-blog">
@@ -24,7 +24,7 @@ permalink: "/"
           shortcode, Alex Russell performs hacks, Simon redirects on Cloudflare, Build your own Subspace...And 1 releases,
           27 posts, and 11 sites to see</a></p>
         <p class="meta"><time datetime="2025-10-11">Oct 11, 2025</time> ~ 7 minutes to read</p>
-        <a href="" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <a href="/blog/" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-arrow-right"></use>
           </svg></a>
       </div>
@@ -35,7 +35,7 @@ permalink: "/"
   <div class="container">
     <article class="feeds">
       <article class="feeds__section">
-        <h2 class="h3">From the firehose <a href=""/firehosefeed.xml""><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">From the firehose <a href="/firehosefeed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
         {%- set recent = bundledata.firehose.slice(0,11) -%}
