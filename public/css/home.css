@@ -151,7 +151,7 @@
   display: grid;
   column-gap: var(--space-2xs);
   row-gap: var(--space-3xs);
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(var(--space-s-m), auto) 1fr auto;
   grid-template-areas:
     "favicon link date";
   padding: var(--space-2xs);
@@ -169,7 +169,7 @@
     background: var(--surface-mid);
   }
 
-  img {
+  .favicon {
     grid-area: favicon;
     width: var(--space-s-m);
     aspect-ratio: 1;
@@ -218,8 +218,8 @@
     }
   }
 
-  img {
-    flex-grow: 0;
+  .favicon {
+    flex: 0 0 var(--space-m-l);
     width: var(--space-m-l);
     aspect-ratio: 1;
     border-radius: var(--radius-s);

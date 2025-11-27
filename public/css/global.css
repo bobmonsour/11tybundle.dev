@@ -48,7 +48,7 @@ h6 {
 
 h1 {
   font-family: var(--font-display-extrablack);
-  font-size: var(--step-5);
+  font-size: clamp(1.9438rem, 1.2969rem + 2.875vw, 3.8125rem);
 }
 
 h2,
@@ -418,7 +418,7 @@ summary {
 
   a {
     display: flex;
-    color: var(--primary-5);
     font-size: var(--step--1);
+    color: var(--text-colour-2);
   }
 }

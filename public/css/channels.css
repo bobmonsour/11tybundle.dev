@@ -20,7 +20,7 @@
       }
     }
 
-    &:has(img, .details) {
+    &:has(.favicon, .details) {
       grid-template-columns: auto 1fr;
       align-items: start;
       grid-template-areas:
@@ -41,7 +41,7 @@
     }
   }
 
-  img {
+  .favicon {
     grid-area: favicon;
     width: var(--space-l-xl);
     aspect-ratio: 1;
@@ -50,7 +50,7 @@
 
   .count {
     font-family: var(--font-display-bold);
-    font-size: var(--step-3);
+    font-size: clamp(1.35rem, 0.9736rem + 1.6731vw, 2.4375rem);
   }
 
   .details {
@@ -101,6 +101,11 @@
     color: var(--header-content);
   }
 
+  .favicon {
+    color: var(--header-content);
+  }
+
+
   .count {
     color: var(--header-accent);
   }
@@ -132,7 +137,7 @@
   --header-accent: var(--categories-colour-2);
   --header-pill-bg: var(--categories-colour-1);
   --header-pill-fg: var(--categories-colour-7);
-  --header-pill-active-bg: var(--categories-colour-2);
+  --header-pill-active-bg: var(--categories-colour-3);
 }
 
 .authors {
@@ -142,7 +147,7 @@
   --header-accent: var(--authors-colour-2);
   --header-pill-bg: var(--authors-colour-1);
   --header-pill-fg: var(--authors-colour-7);
-  --header-pill-active-bg: var(--authors-colour-2);
+  --header-pill-active-bg: var(--authors-colour-3);
 }
 
 .starters {
@@ -152,7 +157,7 @@
   --header-accent: var(--starters-colour-2);
   --header-pill-bg: var(--starters-colour-1);
   --header-pill-fg: var(--starters-colour-7);
-  --header-pill-active-bg: var(--starters-colour-2);
+  --header-pill-active-bg: var(--starters-colour-3);
 }
 
 .blog {
@@ -162,7 +167,7 @@
   --header-accent: var(--blog-colour-2);
   --header-pill-bg: var(--blog-colour-1);
   --header-pill-fg: var(--blog-colour-7);
-  --header-pill-active-bg: var(--blog-colour-2);
+  --header-pill-active-bg: var(--blog-colour-3);
 }
 
 .firehose {
@@ -172,7 +177,7 @@
   --header-accent: var(--firehose-colour-2);
   --header-pill-bg: var(--firehose-colour-1);
   --header-pill-fg: var(--firehose-colour-7);
-  --header-pill-active-bg: var(--firehose-colour-2);
+  --header-pill-active-bg: var(--firehose-colour-3);
 }
 
 .skip-links {
@@ -233,10 +238,10 @@
     font-size: var(--step-1);
     font-family: var(--font-display-extrablack);
 
-    img {
-      aspect-ratio: 1;
-      flex-grow: 0;
+    .favicon {
+      flex: 0 0 var(--space-m-l);
       width: var(--space-m-l);
+      aspect-ratio: 1;
       border-radius: var(--radius-m);
     }
     a {
@@ -268,20 +273,20 @@
   display: grid;
   align-content: start;
   gap: var(--space-xs);
-  &:has(img) {
-  grid-template-columns: auto 1fr;
+  &:has(.favicon) {
+  grid-template-columns: minmax(var(--space-m-l), auto) 1fr;
   grid-template-areas:
     "favicon link"
     "details details";
   }
-  &:not(:has(img)) {
+  &:not(:has(.favicon)) {
   grid-template-columns: 1fr;
   grid-template-areas:
     "link"
     "details";
   }
 
-  img {
+  .favicon {
     grid-area: favicon;
     aspect-ratio: 1;
     width: var(--space-m-l);
@@ -354,20 +359,20 @@
         "date";
     }
 
-    &:has(img) {
+    &:has(.favicon) {
       @media (width <=768px) {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: minmax(var(--space-s-m), auto) 1fr auto;
         grid-template-areas: "favicon link date";
       }
       @media (width >=768px) {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: minmax(var(--space-s-m), auto) 1fr;
         grid-template-areas:
           "favicon link"
           "favicon date";
       }
     }
   }
-  img {
+  .favicon {
     grid-area: favicon;
   }
   a {
