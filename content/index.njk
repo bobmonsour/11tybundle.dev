@@ -1,6 +1,7 @@
 ---
 title: "The 11ty Bundle"
-description: "A bundle of Eleventy releases, blog posts, sites, and resources. Over 1,100 posts from more than 350 authors across more than 45 categories."
+eleventyComputed:
+  description: "Your curated source for discovering how the community is using 11ty, a simple, flexible, open-source static site generator. With loads of resources: {{ bundledata.postCount }} blog posts from {{ bundledata.authorCount }} authors across {{ bundledata.categoryCount }} categories, {{ bundledata.starterCount }} starter projects, and much more."
 permalink: "/"
 ---
 <section>
@@ -116,7 +117,11 @@ permalink: "/"
         <div class="details">
           <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>
           <p>{{ item.Link | getOrigin | getDescription | safe }}</p>
-          {%- include "partials/author-links.njk" -%}
+          <ul role="list" class="author-links">
+            {{ item.Link | getWebIcon | safe }}
+            {{ item.Link | getRSSIcon | safe }}
+            {{ item.Link | getSocialIcons | safe }}
+          </ul>
         </div>
       </article>
       {%- endfor %}
