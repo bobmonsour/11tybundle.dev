@@ -5,10 +5,10 @@ import cssnanoPlugin from "cssnano";
 // environment variable handling
 import "dotenv/config";
 
-import filters from "/_config/filters/index.js";
-import shortcodes from "/_config/shortcodes/index.js";
-import singlePost from "/_config/shortcodes/singlepost.js";
-import singlePostByAuthor from "/_config/shortcodes/singlepostbyauthor.js";
+import filters from "./content/_config/filters/index.js";
+import shortcodes from "./content/_config/shortcodes/index.js";
+import singlePost from "./content/_config/shortcodes/singlepost.js";
+import singlePostByAuthor from "./content/_config/shortcodes/singlepostbyauthor.js";
 
 // import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
