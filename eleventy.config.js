@@ -10,7 +10,6 @@ import shortcodes from "./content/_config/shortcodes/index.js";
 import singlePost from "./content/_config/shortcodes/singlepost.js";
 import singlePostByAuthor from "./content/_config/shortcodes/singlepostbyauthor.js";
 
-// import postGraph from "@rknightuk/eleventy-plugin-post-graph";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 

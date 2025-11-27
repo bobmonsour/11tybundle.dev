@@ -1,3 +1,8 @@
+---
+title: "The 11ty Bundle"
+description: "A bundle of Eleventy releases, blog posts, sites, and resources. Over 1,100 posts from more than 350 authors across more than 45 categories."
+permalink: "/"
+---
 <section>
   <div class="hero container">
     <h1>Bundles of 11ty know-how</h1>
@@ -30,62 +35,18 @@
   <div class="container">
     <article class="feeds">
       <article class="feeds__section">
-        <h2 class="h3">From the firehose <a href=""><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">From the firehose <a href=""/firehosefeed.xml""><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
+        {%- set recent = bundledata.firehose.slice(0,11) -%}
         <ol role="list" class="feeds__list">
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">Reclaim Open - This One Goes to 11(ty)</a>
-            <time datetime="2025-11-05">Nov 05, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">11tyCMS: Major
-              refactoring, state management overhaul, routing, site history selection and site dashboard implementation</a>
-              <time datetime="2025-11-03">Nov 03, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">How We Use GitHub Issues and How That's Changing</a>
-            <time datetime="2025-11-03">Nov 03, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">Three Minor Releases, One Major Leap for Subspace Builder</a>
-            <time datetime="2025-10-29">Oct 29, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">Creating a modular approach to json schema in an eleventy website</a>
-            <time datetime="2025-10-28">Oct 28, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">11tyCMS: THE Eleventy
-              Meetup appearance, metadata improvements, more post and collection goodness</a>
-            <time datetime="2025-10-26">Oct 26, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">11ty OpenGraph & SEO</a>
-            <time datetime="2025-10-26">Oct 26, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">Wrapper Elements around Code Blocks in Markdown</a>
-            <time datetime="2025-10-20">Oct 20, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">THE Eleventy Meetup Episode 27</a>
-            <time datetime="2025-10-17">Oct 17, 2025</time>
-          </li>
-          <li class="feeds__item">
-            <img src="https://placehold.co/32x32" alt="">
-            <a href="http://">Eleventy Templates for Atom Feeds</a>
-            <time datetime="2025-10-16">Oct 16, 2025</time>
-          </li>
+           {%- for item in recent -%}
+             <li class="feeds__item">
+                {{ item.Link | getFavicon | safe}}
+                <a href="{{ item.Link }}">{{ item.Title }}</a>
+                <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time>
+              </li>
+            {%- endfor -%}
         </ol>
       </article>
       <article class="feeds__section">

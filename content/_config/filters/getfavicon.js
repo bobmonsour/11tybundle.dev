@@ -6,9 +6,9 @@ import { promises as fs } from "fs";
 
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
-const defaultFaviconPath = "/assets/img/favicons/default-favicon.png";
-const youtubeFaviconPath = "/assets/img/favicons/youtube-favicon.ico";
-const faviconDir = "/assets/img/favicons";
+const defaultFaviconPath = "/img/favicons/default-favicon.png";
+const youtubeFaviconPath = "/img/favicons/youtube-favicon.ico";
+const faviconDir = "/img/favicons";
 // ---
 
 // In-memory cache to avoid processing the same origin multiple times during a single build
@@ -153,8 +153,8 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
     const filename = `${domain.replace(/\./g, "-")}-favicon${extension}`;
     const localPath = `${faviconDir}/${filename}`;
 
-    // Step 6: Write favicon to local assets directory for serving
-    // This makes the favicon available at /assets/img/favicons/[filename] in the built site
+    // Step 6: Write favicon to local favicons directory for serving
+    // This makes the favicon available at /img/favicons/[filename] in the built site
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const outputPath = path.join(__dirname, "../../../_site", localPath);
 

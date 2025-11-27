@@ -32,7 +32,7 @@ export default async function () {
   //     signal: AbortSignal.timeout(fetchTimeout.bundleDB),
   //   },
   // });
-
+  console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
   // generate the firehose, an array of all posts in descending date order
   const firehose = bundleRecords
     .filter((item) => item["Type"] == "blog post")
