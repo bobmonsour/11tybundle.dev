@@ -3,6 +3,7 @@ title: "The 11ty Bundle"
 eleventyComputed:
   description: "Your curated source for discovering how the community is using 11ty, a simple, flexible, open-source static site generator. With loads of resources: {{ bundledata.postCount }} blog posts from {{ bundledata.authorCount }} authors across {{ bundledata.categoryCount }} categories, {{ bundledata.starterCount }} starter projects, and much more."
 permalink: "/"
+issue: 80
 ---
 <section>
   <div class="hero container">
@@ -17,7 +18,7 @@ permalink: "/"
       <h2 class="h3">Latest from the blog</h2>
       <dl class="calendar">
         <dt>Issue</dt>
-        <dd>79</dd>
+        <dd>{{ issue }}</dd>
       </dl>
       <div class="summary">
         <p><a href="">11ty Meetup videos, 11ty logo as Font Awesome icon, 11ty FA plugin hits 1.0, Add a CMS to ZeroPoint, Peter
