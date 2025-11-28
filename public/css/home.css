@@ -234,6 +234,10 @@
     margin-block: 0;
   }
 
+  small {
+    color: var(--text-colour-2);
+  }
+
   .details {
     display: flex;
     flex-direction: column;

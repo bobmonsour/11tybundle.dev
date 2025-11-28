@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
-	<meta name="keywords" content="{{ keywords }}">
-	<meta name="view-transition" content="same-origin" >
-
+  <title>Eleventy Bundle Demo</title>
   {% css %}
   {% include "public/css/fonts.css" %}
   {% include "public/css/variables.css" %}
@@ -15,6 +11,7 @@
   {% include "public/css/global.css" %}
   {% include "public/css/site-header.css" %}
   {% include "public/css/site-footer.css" %}
+  {% include "public/css/pagefind.css" %}
   {% endcss %}
   <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
   <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -25,33 +22,6 @@
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-
-  {# Improve RSS feed visibility #}
-	<link rel="alternate" href="https://11tybundle.dev/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="https://11tybundle.dev/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
-
-{# favicon settings #}
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="11tyBundle" />
-	<link rel="manifest" href="/site.webmanifest" />
-
-	{# Open Graph tags #}
-	<meta property="og:title" content="{{ title }}">
-	<meta property="og:description" content="{{ description }}">
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{ site.url }}/assets/img/{{ image.source }}">
-	<meta property="og:image:alt" content="{{ image.alt }}">
-
-	{# Apple tags #}
-	<meta name="apple-mobile-web-app-title" content="11ty Bundle" >
-	<meta name="application-name" content="11ty Bundle" >
-
-	<meta name="generator" content="{{ eleventy.generator }}">
-	<meta name="fediverse:creator" content="@bobmonsour@indieweb.social" />
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}

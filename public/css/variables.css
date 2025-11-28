@@ -8,6 +8,7 @@
   --font-display-bold-italic: Optima Bold Italic, var(--font-default);
   --font-display-extrablack: Optima ExtraBlack, var(--font-default);
   --font-brand: Nimbus Mono Bold, "Courier New", monospace;
+
   /* @link https://utopia.fyi/space/calculator/?c=360,18,1.2,1400,20,1.25,5,2,&s=0.75,1.5|2|3|4|6,s-l|s-m|m-l|l-xl&g=s,l,xl,12 */
   /* Font sizes */
   --step--2: clamp(0.7813rem, 0.7748rem + 0.0288vw, 0.8rem);
@@ -18,6 +19,7 @@
   --step-3: clamp(1.944rem, 1.7718rem + 0.7652vw, 2.4414rem);
   --step-4: clamp(2.3328rem, 2.0839rem + 1.1061vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4479rem + 1.5621vw, 3.8147rem);
+
   /* Spacing */
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
   --space-2xs: clamp(0.5625rem, 0.5409rem + 0.0962vw, 0.625rem);
@@ -28,6 +30,7 @@
   --space-xl: clamp(3.375rem, 3.2452rem + 0.5769vw, 3.75rem);
   --space-2xl: clamp(4.5rem, 4.3269rem + 0.7692vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4904rem + 1.1538vw, 7.5rem);
+
   /* One-up pairs */
   --space-xs-s: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
   --space-s-m: clamp(1.125rem, 0.8654rem + 1.1538vw, 1.875rem);
@@ -35,99 +38,132 @@
   --space-l-xl: clamp(2.25rem, 1.7308rem + 2.3077vw, 3.75rem);
   --space-xl-2xl: clamp(3.375rem, 2.8125rem + 2.5vw, 5rem);
   --space-2xl-3xl: clamp(4.5rem, 3.4615rem + 4.6154vw, 7.5rem);
+
   /* Custom pairs */
   --space-s-m: clamp(1.125rem, 0.8654rem + 1.1538vw, 1.875rem);
   --space-s-l: clamp(1.125rem, 0.649rem + 2.1154vw, 2.5rem);
   --space-m-l: clamp(1.6875rem, 1.4063rem + 1.25vw, 2.5rem);
   --space-l-xl: clamp(2.25rem, 1.7308rem + 2.3077vw, 3.75rem);
+
   /* Layout grid */
   --grid-max-width: 77.50rem;
   --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem));
+
   /* Border radii */
   --radius-xs: 2px;
   --radius-s: 4px;
   --radius-m: 8px;
+
   /* Targets: Controls the difference between steps across all hue ramps */
-  --tint-4-L: 96%; --tint-4-C: 0.02;
-  --tint-3-L: 91%; --tint-3-C: 0.03;
-  --tint-2-L: 84%; --tint-2-C: 0.05;
-  --tint-1-L: 71%; --tint-1-C: 0.09;
-  --shade-1-L: 43%; --shade-1-C: 0.15;
-  --shade-2-L: 30%; --shade-2-C: 0.18;
-  --shade-3-L: 23%; --shade-3-C: 0.19;
-  --shade-4-L: 18%; --shade-4-C: 0.20;
+  --step-1-L: 96%;
+  --step-1-C: 0.02;
+  --step-2-L: 91%;
+  --step-2-C: 0.03;
+  --step-3-L: 84%;
+  --step-3-C: 0.05;
+  --step-4-L: 71%;
+  --step-4-C: 0.09;
+  --step-5-L: 52%;
+  --step-5-C: 0.10;
+  --step-6-L: 43%;
+  --step-6-C: 0.15;
+  --step-7-L: 30%;
+  --step-7-C: 0.18;
+  --step-8-L: 23%;
+  --step-8-C: 0.19;
+  --step-9-L: 18%;
+  --step-9-C: 0.20;
+
   /* Hues: shift hue in 60° steps from base */
   --primary: oklch(52% 0.1 60);
-  --secondary: oklch(from var(--primary) L C calc(H + 60));
-  --tertiary: oklch(from var(--primary) L C calc(H + 120));
-  --quaternary: oklch(from var(--primary) L C calc(H + 180));
-  --quinary: oklch(from var(--primary) L C calc(H + 240));
-  --senary: oklch(from var(--primary) L C calc(H + 300));
+  --secondary: oklch(from var(--primary) L C calc(H + 51));
+  --tertiary: oklch(from var(--primary) L C calc(H + 103));
+  --quaternary: oklch(from var(--primary) L C calc(H + 154));
+  --quinary: oklch(from var(--primary) L C calc(H + 206));
+  --senary: oklch(from var(--primary) L C calc(H + 257));
+  --septenary: oklch(from var(--primary) L C calc(H + 309));
   --greyscale: oklch(52% 0 0);
+
   /* Variants: combine absolute L/C targets with each hue */
-  --primary-1: oklch(from var(--primary) var(--tint-4-L) var(--tint-4-C) H);
-  --primary-2: oklch(from var(--primary) var(--tint-3-L) var(--tint-3-C) H);
-  --primary-3: oklch(from var(--primary) var(--tint-2-L) var(--tint-2-C) H);
-  --primary-4: oklch(from var(--primary) var(--tint-1-L) var(--tint-1-C) H);
-  --primary-5: oklch(from var(--primary) L C H);
-  --primary-6: oklch(from var(--primary) var(--shade-1-L) var(--shade-1-C) H);
-  --primary-7: oklch(from var(--primary) var(--shade-2-L) var(--shade-2-C) H);
-  --primary-8: oklch(from var(--primary) var(--shade-3-L) var(--shade-3-C) H);
-  --primary-9: oklch(from var(--primary) var(--shade-4-L) var(--shade-4-C) H);
-  --secondary-1: oklch(from var(--secondary) var(--tint-4-L) var(--tint-4-C) H);
-  --secondary-2: oklch(from var(--secondary) var(--tint-3-L) var(--tint-3-C) H);
-  --secondary-3: oklch(from var(--secondary) var(--tint-2-L) var(--tint-2-C) H);
-  --secondary-4: oklch(from var(--secondary) var(--tint-1-L) var(--tint-1-C) H);
-  --secondary-5: oklch(from var(--secondary) L C H);
-  --secondary-6: oklch(from var(--secondary) var(--shade-1-L) var(--shade-1-C) H);
-  --secondary-7: oklch(from var(--secondary) var(--shade-2-L) var(--shade-2-C) H);
-  --secondary-8: oklch(from var(--secondary) var(--shade-3-L) var(--shade-3-C) H);
-  --secondary-9: oklch(from var(--secondary) var(--shade-4-L) var(--shade-4-C) H);
-  --tertiary-1: oklch(from var(--tertiary) var(--tint-4-L) var(--tint-4-C) H);
-  --tertiary-2: oklch(from var(--tertiary) var(--tint-3-L) var(--tint-3-C) H);
-  --tertiary-3: oklch(from var(--tertiary) var(--tint-2-L) var(--tint-2-C) H);
-  --tertiary-4: oklch(from var(--tertiary) var(--tint-1-L) var(--tint-1-C) H);
-  --tertiary-5: oklch(from var(--tertiary) L C H);
-  --tertiary-6: oklch(from var(--tertiary) var(--shade-1-L) var(--shade-1-C) H);
-  --tertiary-7: oklch(from var(--tertiary) var(--shade-2-L) var(--shade-2-C) H);
-  --tertiary-8: oklch(from var(--tertiary) var(--shade-3-L) var(--shade-3-C) H);
-  --tertiary-9: oklch(from var(--tertiary) var(--shade-4-L) var(--shade-4-C) H);
-  --quaternary-1: oklch(from var(--quaternary) var(--tint-4-L) var(--tint-4-C) H);
-  --quaternary-2: oklch(from var(--quaternary) var(--tint-3-L) var(--tint-3-C) H);
-  --quaternary-3: oklch(from var(--quaternary) var(--tint-2-L) var(--tint-2-C) H);
-  --quaternary-4: oklch(from var(--quaternary) var(--tint-1-L) var(--tint-1-C) H);
-  --quaternary-5: oklch(from var(--quaternary) L C H);
-  --quaternary-6: oklch(from var(--quaternary) var(--shade-1-L) var(--shade-1-C) H);
-  --quaternary-7: oklch(from var(--quaternary) var(--shade-2-L) var(--shade-2-C) H);
-  --quaternary-8: oklch(from var(--quaternary) var(--shade-3-L) var(--shade-3-C) H);
-  --quaternary-9: oklch(from var(--quaternary) var(--shade-4-L) var(--shade-4-C) H);
-  --quinary-1: oklch(from var(--quinary) var(--tint-4-L) var(--tint-4-C) H);
-  --quinary-2: oklch(from var(--quinary) var(--tint-3-L) var(--tint-3-C) H);
-  --quinary-3: oklch(from var(--quinary) var(--tint-2-L) var(--tint-2-C) H);
-  --quinary-4: oklch(from var(--quinary) var(--tint-1-L) var(--tint-1-C) H);
-  --quinary-5: oklch(from var(--quinary) L C H);
-  --quinary-6: oklch(from var(--quinary) var(--shade-1-L) var(--shade-1-C) H);
-  --quinary-7: oklch(from var(--quinary) var(--shade-2-L) var(--shade-2-C) H);
-  --quinary-8: oklch(from var(--quinary) var(--shade-3-L) var(--shade-3-C) H);
-  --quinary-9: oklch(from var(--quinary) var(--shade-4-L) var(--shade-4-C) H);
-  --senary-1: oklch(from var(--senary) var(--tint-4-L) var(--tint-4-C) H);
-  --senary-2: oklch(from var(--senary) var(--tint-3-L) var(--tint-3-C) H);
-  --senary-3: oklch(from var(--senary) var(--tint-2-L) var(--tint-2-C) H);
-  --senary-4: oklch(from var(--senary) var(--tint-1-L) var(--tint-1-C) H);
-  --senary-5: oklch(from var(--senary) L C H);
-  --senary-6: oklch(from var(--senary) var(--shade-1-L) var(--shade-1-C) H);
-  --senary-7: oklch(from var(--senary) var(--shade-2-L) var(--shade-2-C) H);
-  --senary-8: oklch(from var(--senary) var(--shade-3-L) var(--shade-3-C) H);
-  --senary-9: oklch(from var(--senary) var(--shade-4-L) var(--shade-4-C) H);
-  --greyscale-1: oklch(from var(--greyscale) var(--tint-4-L) C H);
-  --greyscale-2: oklch(from var(--greyscale) var(--tint-3-L) C H);
-  --greyscale-3: oklch(from var(--greyscale) var(--tint-2-L) C H);
-  --greyscale-4: oklch(from var(--greyscale) var(--tint-1-L) C H);
-  --greyscale-5: oklch(from var(--greyscale) L C H);
-  --greyscale-6: oklch(from var(--greyscale) var(--shade-1-L) C H);
-  --greyscale-7: oklch(from var(--greyscale) var(--shade-2-L) C H);
-  --greyscale-8: oklch(from var(--greyscale) var(--shade-3-L) C H);
-  --greyscale-9: oklch(from var(--greyscale) var(--shade-4-L) C H);
+	--primary-1: oklch(from var(--primary)   var(--step-1-L) var(--step-1-C) H);
+	--primary-2: oklch(from var(--primary)   var(--step-2-L) var(--step-2-C) H);
+	--primary-3: oklch(from var(--primary)   var(--step-3-L) var(--step-3-C) H);
+	--primary-4: oklch(from var(--primary)   var(--step-4-L) var(--step-4-C) H);
+	--primary-5: oklch(from var(--primary)   var(--step-5-L) var(--step-5-C) H);
+	--primary-6: oklch(from var(--primary)   var(--step-6-L) var(--step-6-C) H);
+	--primary-7: oklch(from var(--primary)   var(--step-7-L) var(--step-7-C) H);
+	--primary-8: oklch(from var(--primary)   var(--step-8-L) var(--step-8-C) H);
+	--primary-9: oklch(from var(--primary)   var(--step-9-L) var(--step-9-C) H);
+
+	--secondary-1: oklch(from var(--secondary) var(--step-1-L) var(--step-1-C) H);
+	--secondary-2: oklch(from var(--secondary) var(--step-2-L) var(--step-2-C) H);
+	--secondary-3: oklch(from var(--secondary) var(--step-3-L) var(--step-3-C) H);
+	--secondary-4: oklch(from var(--secondary) var(--step-4-L) var(--step-4-C) H);
+	--secondary-5: oklch(from var(--secondary) var(--step-5-L) var(--step-5-C) H);
+	--secondary-6: oklch(from var(--secondary) var(--step-6-L) var(--step-6-C) H);
+	--secondary-7: oklch(from var(--secondary) var(--step-7-L) var(--step-7-C) H);
+  --secondary-8: oklch(from var(--secondary) var(--step-8-L) var(--step-8-C) H);
+	--secondary-9: oklch(from var(--secondary) var(--step-9-L) var(--step-9-C) H);
+
+	--tertiary-1: oklch(from var(--tertiary) var(--step-1-L) var(--step-1-C) H);
+	--tertiary-2: oklch(from var(--tertiary) var(--step-2-L) var(--step-2-C) H);
+	--tertiary-3: oklch(from var(--tertiary) var(--step-3-L) var(--step-3-C) H);
+	--tertiary-4: oklch(from var(--tertiary) var(--step-4-L) var(--step-4-C) H);
+	--tertiary-5: oklch(from var(--tertiary) var(--step-5-L) var(--step-5-C) H);
+	--tertiary-6: oklch(from var(--tertiary) var(--step-6-L) var(--step-6-C) H);
+	--tertiary-7: oklch(from var(--tertiary) var(--step-7-L) var(--step-7-C) H);
+	--tertiary-8: oklch(from var(--tertiary) var(--step-8-L) var(--step-8-C) H);
+	--tertiary-9: oklch(from var(--tertiary) var(--step-9-L) var(--step-9-C) H);
+
+	--quaternary-1: oklch(from var(--quaternary) var(--step-1-L) var(--step-1-C) H);
+	--quaternary-2: oklch(from var(--quaternary) var(--step-2-L) var(--step-2-C) H);
+	--quaternary-3: oklch(from var(--quaternary) var(--step-3-L) var(--step-3-C) H);
+	--quaternary-4: oklch(from var(--quaternary) var(--step-4-L) var(--step-4-C) H);
+	--quaternary-5: oklch(from var(--quaternary) var(--step-5-L) var(--step-5-C) H);
+	--quaternary-6: oklch(from var(--quaternary) var(--step-6-L) var(--step-6-C) H);
+	--quaternary-7: oklch(from var(--quaternary) var(--step-7-L) var(--step-7-C) H);
+	--quaternary-8: oklch(from var(--quaternary) var(--step-8-L) var(--step-8-C) H);
+	--quaternary-9: oklch(from var(--quaternary) var(--step-9-L) var(--step-9-C) H);
+
+	--quinary-1: oklch(from var(--quinary) var(--step-1-L) var(--step-1-C) H);
+	--quinary-2: oklch(from var(--quinary) var(--step-2-L) var(--step-2-C) H);
+	--quinary-3: oklch(from var(--quinary) var(--step-3-L) var(--step-3-C) H);
+	--quinary-4: oklch(from var(--quinary) var(--step-4-L) var(--step-4-C) H);
+	--quinary-5: oklch(from var(--quinary) var(--step-5-L) var(--step-5-C) H);
+	--quinary-6: oklch(from var(--quinary) var(--step-6-L) var(--step-6-C) H);
+	--quinary-7: oklch(from var(--quinary) var(--step-7-L) var(--step-7-C) H);
+	--quinary-8: oklch(from var(--quinary) var(--step-8-L) var(--step-8-C) H);
+	--quinary-9: oklch(from var(--quinary) var(--step-9-L) var(--step-9-C) H);
+
+	--senary-1: oklch(from var(--senary) var(--step-1-L) var(--step-1-C) H);
+	--senary-2: oklch(from var(--senary) var(--step-2-L) var(--step-2-C) H);
+	--senary-3: oklch(from var(--senary) var(--step-3-L) var(--step-3-C) H);
+	--senary-4: oklch(from var(--senary) var(--step-4-L) var(--step-4-C) H);
+	--senary-5: oklch(from var(--senary) var(--step-5-L) var(--step-5-C) H);
+	--senary-6: oklch(from var(--senary) var(--step-6-L) var(--step-6-C) H);
+	--senary-7: oklch(from var(--senary) var(--step-7-L) var(--step-7-C) H);
+	--senary-8: oklch(from var(--senary) var(--step-8-L) var(--step-8-C) H);
+	--senary-9: oklch(from var(--senary) var(--step-9-L) var(--step-9-C) H);
+
+	--septenary-1: oklch(from var(--septenary) var(--step-1-L) var(--step-1-C) H);
+	--septenary-2: oklch(from var(--septenary) var(--step-2-L) var(--step-2-C) H);
+	--septenary-3: oklch(from var(--septenary) var(--step-3-L) var(--step-3-C) H);
+	--septenary-4: oklch(from var(--septenary) var(--step-4-L) var(--step-4-C) H);
+	--septenary-5: oklch(from var(--septenary) var(--step-5-L) var(--step-5-C) H);
+	--septenary-6: oklch(from var(--septenary) var(--step-6-L) var(--step-6-C) H);
+	--septenary-7: oklch(from var(--septenary) var(--step-7-L) var(--step-7-C) H);
+	--septenary-8: oklch(from var(--septenary) var(--step-8-L) var(--step-8-C) H);
+	--septenary-9: oklch(from var(--septenary) var(--step-9-L) var(--step-9-C) H);
+
+	--greyscale-1: oklch(from var(--greyscale) var(--step-1-L) C H);
+	--greyscale-2: oklch(from var(--greyscale) var(--step-2-L) C H);
+	--greyscale-3: oklch(from var(--greyscale) var(--step-3-L) C H);
+	--greyscale-4: oklch(from var(--greyscale) var(--step-4-L) C H);
+	--greyscale-5: oklch(from var(--greyscale) var(--step-5-L) C H);
+	--greyscale-6: oklch(from var(--greyscale) var(--step-6-L) C H);
+	--greyscale-7: oklch(from var(--greyscale) var(--step-7-L) C H);
+	--greyscale-8: oklch(from var(--greyscale) var(--step-8-L) C H);
+	--greyscale-9: oklch(from var(--greyscale) var(--step-9-L) C H);
 }
 
 @media screen {
@@ -154,27 +190,34 @@
     --authors-colour-5: var(--tertiary-7);
     --authors-colour-6: var(--tertiary-8);
     --authors-colour-7: var(--tertiary-9);
-    --starters-colour-1: var(--quaternary-1);
-    --starters-colour-2: var(--quaternary-2);
-    --starters-colour-3: var(--quaternary-3);
-    --starters-colour-4: var(--quaternary-5);
-    --starters-colour-5: var(--quaternary-7);
-    --starters-colour-6: var(--quaternary-8);
-    --starters-colour-7: var(--quaternary-9);
-    --blog-colour-1: var(--quinary-1);
-    --blog-colour-2: var(--quinary-2);
-    --blog-colour-3: var(--quinary-3);
-    --blog-colour-4: var(--quinary-5);
-    --blog-colour-5: var(--quinary-7);
-    --blog-colour-6: var(--quinary-8);
-    --blog-colour-7: var(--quinary-9);
-    --firehose-colour-1: var(--senary-1);
-    --firehose-colour-2: var(--senary-2);
-    --firehose-colour-3: var(--senary-3);
-    --firehose-colour-4: var(--senary-5);
-    --firehose-colour-5: var(--senary-7);
-    --firehose-colour-6: var(--senary-8);
-    --firehose-colour-7: var(--senary-9);
+    --showcase-colour-1: var(--quaternary-1);
+    --showcase-colour-2: var(--quaternary-2);
+    --showcase-colour-3: var(--quaternary-3);
+    --showcase-colour-4: var(--quaternary-5);
+    --showcase-colour-5: var(--quaternary-7);
+    --showcase-colour-6: var(--quaternary-8);
+    --showcase-colour-7: var(--quaternary-9);
+    --starters-colour-1: var(--quinary-1);
+    --starters-colour-2: var(--quinary-2);
+    --starters-colour-3: var(--quinary-3);
+    --starters-colour-4: var(--quinary-5);
+    --starters-colour-5: var(--quinary-7);
+    --starters-colour-6: var(--quinary-8);
+    --starters-colour-7: var(--quinary-9);
+    --blog-colour-1: var(--senary-1);
+    --blog-colour-2: var(--senary-2);
+    --blog-colour-3: var(--senary-3);
+    --blog-colour-4: var(--senary-5);
+    --blog-colour-5: var(--senary-7);
+    --blog-colour-6: var(--senary-8);
+    --blog-colour-7: var(--senary-9);
+    --firehose-colour-1: var(--septenary-1);
+    --firehose-colour-2: var(--septenary-2);
+    --firehose-colour-3: var(--septenary-3);
+    --firehose-colour-4: var(--septenary-5);
+    --firehose-colour-5: var(--septenary-7);
+    --firehose-colour-6: var(--septenary-8);
+    --firehose-colour-7: var(--septenary-9);
   }
   [data-theme=dark] {
     --surface-back: var(--greyscale-9);
@@ -199,27 +242,34 @@
     --authors-colour-5: var(--tertiary-3);
     --authors-colour-6: var(--tertiary-2);
     --authors-colour-7: var(--tertiary-1);
-    --starters-colour-1: var(--quaternary-9);
-    --starters-colour-2: var(--quaternary-8);
-    --starters-colour-3: var(--quaternary-7);
-    --starters-colour-4: var(--quaternary-5);
-    --starters-colour-5: var(--quaternary-3);
-    --starters-colour-6: var(--quaternary-2);
-    --starters-colour-7: var(--quaternary-1);
-    --blog-colour-1: var(--quinary-9);
-    --blog-colour-2: var(--quinary-8);
-    --blog-colour-3: var(--quinary-7);
-    --blog-colour-4: var(--quinary-5);
-    --blog-colour-5: var(--quinary-3);
-    --blog-colour-6: var(--quinary-2);
-    --blog-colour-7: var(--quinary-1);
-    --firehose-colour-1: var(--senary-9);
-    --firehose-colour-2: var(--senary-8);
-    --firehose-colour-3: var(--senary-7);
-    --firehose-colour-4: var(--senary-5);
-    --firehose-colour-5: var(--senary-3);
-    --firehose-colour-6: var(--senary-2);
-    --firehose-colour-7: var(--senary-1);
+    --showcase-colour-1: var(--quaternary-9);
+    --showcase-colour-2: var(--quaternary-8);
+    --showcase-colour-3: var(--quaternary-7);
+    --showcase-colour-4: var(--quaternary-5);
+    --showcase-colour-5: var(--quaternary-3);
+    --showcase-colour-6: var(--quaternary-2);
+    --showcase-colour-7: var(--quaternary-1);
+    --starters-colour-1: var(--quinary-9);
+    --starters-colour-2: var(--quinary-8);
+    --starters-colour-3: var(--quinary-7);
+    --starters-colour-4: var(--quinary-5);
+    --starters-colour-5: var(--quinary-3);
+    --starters-colour-6: var(--quinary-2);
+    --starters-colour-7: var(--quinary-1);
+    --blog-colour-1: var(--senary-9);
+    --blog-colour-2: var(--senary-8);
+    --blog-colour-3: var(--senary-7);
+    --blog-colour-4: var(--senary-5);
+    --blog-colour-5: var(--senary-3);
+    --blog-colour-6: var(--senary-2);
+    --blog-colour-7: var(--senary-1);
+    --firehose-colour-1: var(--septenary-9);
+    --firehose-colour-2: var(--septenary-8);
+    --firehose-colour-3: var(--septenary-7);
+    --firehose-colour-4: var(--septenary-5);
+    --firehose-colour-5: var(--septenary-3);
+    --firehose-colour-6: var(--septenary-2);
+    --firehose-colour-7: var(--septenary-1);
   }
 }
 body {

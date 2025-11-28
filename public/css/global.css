@@ -290,6 +290,7 @@ summary {
   }
 }
 
+mark,
 ::selection {
   background: var(--primary-5);
   color: var(--text-colour-4);

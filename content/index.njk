@@ -15,7 +15,9 @@ issue: 80
           newsletter</a> for email updates.</p>
     </div>
     <article class="latest-blog">
-      <h2 class="h3">Latest from the blog</h2>
+      <h2 class="h3">Latest from the blog&nbsp;&nbsp;&nbsp;<a href=""><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <use xlink:href="#icon-rss"></use>
+          </svg> <span class="visually-hidden">RSS</span></a></h2>
       <dl class="calendar">
         <dt>Issue</dt>
         <dd>{{ issue }}</dd>
@@ -116,8 +118,7 @@ issue: 80
       <article class="recent-authors__item">
         {{ item.Link | getFavicon | safe}}
         <div class="details">
-          <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a> <data
-            class="count" value="{{ item.postCount }}">{{ item.postCount }}</data>
+          <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>
           <p>{{ item.Link | getOrigin | getDescription | safe }}</p>
           <ul role="list" class="author-links">
             {{ item.Link | getWebIcon | safe }}

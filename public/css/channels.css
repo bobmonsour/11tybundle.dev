@@ -150,6 +150,16 @@
   --header-pill-active-bg: var(--authors-colour-3);
 }
 
+.showcase {
+  --header-bg: var(--showcase-colour-4);
+  --header-border: var(--showcase-colour-5);
+  --header-content: var(--showcase-colour-1);
+  --header-accent: var(--showcase-colour-2);
+  --header-pill-bg: var(--showcase-colour-1);
+  --header-pill-fg: var(--showcase-colour-7);
+  --header-pill-active-bg: var(--showcase-colour-3);
+}
+
 .starters {
   --header-bg: var(--starters-colour-4);
   --header-border: var(--starters-colour-5);

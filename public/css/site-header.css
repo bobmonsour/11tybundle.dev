@@ -187,6 +187,14 @@
       background: var(--authors-colour-5);
     }
 
+    &.showcase:before {
+      background: var(--showcase-colour-4);
+    }
+
+    &.showcase:hover:before {
+      background: var(--showcase-colour-5);
+    }
+
     &.starters:before {
       background: var(--starters-colour-4);
     }

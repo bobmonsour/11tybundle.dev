@@ -1,0 +1,34 @@
+
+.pagefind-ui__results-area {
+  font-size: var(--step--1);
+  padding-block: var(--grid-gutter);
+}
+
+.pagefind-ui__message,
+.pagefind-ui__result,
+.pagefind-ui__result-title,
+.pagefind-ui__result-excerpt {
+  margin-block: unset !important;
+}
+
+.pagefind-ui__message,
+.pagefind-ui__result-title {
+  font-family: var(--font-display-bold);
+}
+
+.pagefind-ui__result-title {
+  margin-block-end: var(--space-3xs) !important;
+}
+
+.pagefind-ui__results {
+  list-style: none;
+  padding-inline: unset !important;
+  margin-block: var(--grid-gutter) 0 !important;
+  border-top: 1px solid var(--surface-mid);
+  padding-block-end: var(--grid-gutter);
+}
+
+.pagefind-ui__result {
+  padding-block: var(--space-s);
+  border-bottom: 1px solid var(--surface-mid);
+}
