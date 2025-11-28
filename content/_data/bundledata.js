@@ -207,20 +207,24 @@ export default async function () {
   };
 
   // get the most recent 3 posts by unique authors
+  // add postCount property to each post
   const recentAuthors = [];
   const seenAuthors = new Set();
   for (const post of firehose) {
     if (!seenAuthors.has(post.Author)) {
+      // Count total posts by this author
+      const postCount = firehose.filter(
+        (item) => item.Author === post.Author
+      ).length;
+
+      // Add postCount property to the post object
+      post.postCount = postCount;
+
       recentAuthors.push(post);
       seenAuthors.add(post.Author);
       if (recentAuthors.length === 3) break;
     }
   };
-
-  // get the total post count for each of the 3 recent authors
-  const recentAuthorPostCounts = recentAuthors.map((authorPost) => {
-    return firehose.filter((post) => post.Author === authorPost.Author).length;
-  });
 
   // generate a 2-dimensional array of categories and the
   // count of posts in each category; ; records comes from
@@ -330,7 +334,6 @@ export default async function () {
     authorCount,
     authorLetters,
     recentAuthors,
-    recentAuthorPostCounts,
     categories,
     categoriesByCount,
     categoryCount,
