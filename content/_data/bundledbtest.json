@@ -922,6 +922,15 @@
     "Categories": ["Global Data", "How to..."]
   },
   {
+    "Issue": "55",
+    "Type": "blog post",
+    "Title": "Leveraging a test post like this one",
+    "Link": "https://hamatti.org/posts/leveraging-eleventys-custom-data-file-format-feature-for-simpler-game-scoring-format/",
+    "Date": "2024-09-10T10:02:50.000",
+    "Author": "Juha-Matti Santala",
+    "Categories": ["Global Data", "How to..."]
+  },
+  {
     "Issue": "78",
     "Type": "blog post",
     "Title": "Migrating from Hugo to 11ty (Finally)",
