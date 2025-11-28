@@ -217,6 +217,11 @@ export default async function () {
     }
   };
 
+  // get the total post count for each of the 3 recent authors
+  const recentAuthorPostCounts = recentAuthors.map((authorPost) => {
+    return firehose.filter((post) => post.Author === authorPost.Author).length;
+  });
+
   // generate a 2-dimensional array of categories and the
   // count of posts in each category; ; records comes from
   // the firehose array, which are all blog posts
@@ -325,6 +330,7 @@ export default async function () {
     authorCount,
     authorLetters,
     recentAuthors,
+    recentAuthorPostCounts,
     categories,
     categoriesByCount,
     categoryCount,

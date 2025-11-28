@@ -115,7 +115,7 @@ permalink: "/"
       <article class="recent-authors__item">
         {{ item.Link | getFavicon | safe}}
         <div class="details">
-          <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>
+          <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }} ({{ bundledata.recentAuthorPostCounts[loop.index0] }})</a>
           <p>{{ item.Link | getOrigin | getDescription | safe }}</p>
           <ul role="list" class="author-links">
             {{ item.Link | getWebIcon | safe }}
