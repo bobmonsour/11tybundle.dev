@@ -76,7 +76,10 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
           <li class="feeds__item">
-            {{ item.Link | getFavicon | safe}}
+            <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+            </svg>
+            {# {{ item.Link | getFavicon | safe}} #}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
             <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time>
           {% endfor %}

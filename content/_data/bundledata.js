@@ -68,7 +68,7 @@ export default async function () {
   const siteCount = siteList.length;
 
   // generate the list of starter projects, ordered by date of most recent update
-  // Function to fetch metadata and update starters array
+  // fetch metadata from the GitHub repo and update starter objects
   async function updateStartersWithMetadata(starters) {
     const cacheKey = `starter-projects`;
     const cache = new AssetCache(cacheKey, ".cache");

@@ -1,7 +1,7 @@
 ---
 eleventyComputed:
   title: "Authors"
-  description: "A list of ({{ bundledata.authorCount }}) authors"
+  description: "A list of {{ bundledata.authorCount }} authors"
 permalink: /authors-by-name/
 ---
 {#
@@ -43,6 +43,5 @@ permalink: /authors-by-name/
       </div>
     </div>
     {% endfor %}
-    {# {% include "partials/authorloop.njk" %} #}
   </div>
 </div>
