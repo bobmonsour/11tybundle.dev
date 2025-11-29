@@ -4,7 +4,7 @@ eleventyComputed:
   description: "A list of {{ bundledata.categoryCount }} categories"
 permalink: /categories/by-count/
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-ignore>
   <div class="container">
     <h1>{{ title }} <data class="count" value="{{ bundledata.categoryCount }}">{{ bundledata.categoryCount }}</data></h1>
     <nav>
@@ -17,7 +17,7 @@ permalink: /categories/by-count/
   </div>
 </header>
 <section>
-  <div class="container">
+  <div class="container" data-pagefind-body>
     <article class="directory__grid">
       {% for category in bundledata.categoriesByCount %}
       <article class="directory__card directory--category">

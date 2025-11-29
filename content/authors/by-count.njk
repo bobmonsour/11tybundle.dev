@@ -4,7 +4,7 @@ eleventyComputed:
   description: "A list of {{ bundledata.authorCount }} authors"
 permalink: /authors/by-count/
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-ignore>
   <div class="container">
     <h1>{{ title }} <data class="count" value="{{ bundledata.authorCount }}">{{ bundledata.authorCount }}</data></h1>
     <nav>
@@ -18,7 +18,7 @@ permalink: /authors/by-count/
 </header>
 <section>
   <div class="container">
-    <article class="directory__grid">
+    <article class="directory__grid" data-pagefind-body>
       {% for author in bundledata.authorsByCount %}
       <article class="directory__card directory--category">
       {% set latestPosts = bundledata.bundleRecords | postsByAuthor(author[0], 3) %}
