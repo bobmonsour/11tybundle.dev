@@ -9,6 +9,5 @@ scripts/
 .cache
 .cache/
 .vscode
-
-# Local Netlify folder
-.netlify
+content/
+.netlify/
