@@ -9,6 +9,13 @@
     "Categories": ["YouTube"]
   },
   {
+    "Issue": "",
+    "Type": "starter",
+    "Title": "eleventy-base-blog",
+    "Link": "https://github.com/11ty/eleventy-base-blog",
+    "Demo": "https://eleventy-base-blog.netlify.app/"
+  },
+  {
     "Issue": "68",
     "Type": "blog post",
     "Title": "Building a personal digital music library with Eleventy and APIs",
