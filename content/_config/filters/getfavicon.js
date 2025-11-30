@@ -218,7 +218,7 @@ export const getFavicon = async (link) => {
             <use xlink:href="#icon-github"></use>
             </svg>`;
   }
-  if (domain === "youtube.com") {
+  if (domain.includes("youtube.com")) {
     return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
             </svg>`;

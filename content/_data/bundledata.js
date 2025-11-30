@@ -226,79 +226,79 @@ export default async function () {
   // the sortField is the field to sort by:
   //	  author name in element 0
   //	  count in element 1
-const authorList = async (posts, sortField) => {
+  const authorList = async (posts, sortField) => {
 
-  // element 2 of each author array is the first letter
-  // of the last name/word in the author's name
-  function authorSort(a, b) {
-    if (sortField === "name") {
-      // Handle undefined values safely
-      const nameA = a.firstLetter || "";
-      const nameB = b.firstLetter || "";
-      return nameA.localeCompare(nameB); // Sort by first letter of last name/word
-    } else {
-      return a.count < b.count ? 1 : -1; // Sort by count descending
-    }
-  }
-
-  const getFirstLetterOfLastWord = (str) => {
-    const words = str.trim().split(' ');
-    const lastWord = words[words.length - 1];
-    return lastWord.charAt(0).toUpperCase();
-  };
-
-  const authorMap = new Map();
-  for (let item of posts) {
-    // Skip items with missing authors
-    if (!item.Author) continue;
-
-    const existing = authorMap.get(item.Author);
-    const origin = filters.getOrigin(item.Link);
-    // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
-    const isYouTube = origin === "https://youtube.com";
-
-    if (existing) {
-      // Author exists, increment count
-      existing.count += 1;
-
-      // If we don't have origin data yet (was YouTube before), capture it now
-      if (!existing.origin && !isYouTube) {
-        existing.origin = origin;
-        existing.favicon = await filters.getFavicon(item.Link);
-        existing.rssLink = await filters.getRSSLink(item.Link);
-        existing.socialLinks = await filters.getSocialLinks(item.Link);
+    // element 2 of each author array is the first letter
+    // of the last name/word in the author's name
+    function authorSort(a, b) {
+      if (sortField === "name") {
+        // Handle undefined values safely
+        const nameA = a.firstLetter || "";
+        const nameB = b.firstLetter || "";
+        return nameA.localeCompare(nameB); // Sort by first letter of last name/word
+      } else {
+        return a.count < b.count ? 1 : -1; // Sort by count descending
       }
-    } else {
-      // New author - create entry
-      authorMap.set(item.Author, {
-        name: item.Author,
-        slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
-        firstLetter: getFirstLetterOfLastWord(item.Author),
-        count: 1,
-        origin: origin,
-        favicon: isYouTube ? origin : await filters.getFavicon(item.Link),
-        rssLink: isYouTube ? null : await filters.getRSSLink(origin),
-        socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
-      });
     }
-  }
 
-  // Convert map to array of objects
-  const authorArray = await Promise.all(
-    Array.from(authorMap).map(async ([name, data]) => ({
-      name: data.name,
-      slugifiedName: data.slugifiedName,
-      firstLetter: data.firstLetter,
-      count: data.count,
-      origin: data.origin,
-      favicon: data.favicon,
-      rssLink: data.rssLink,
-      socialLinks: data.socialLinks,
-    }))
-  );
+    const getFirstLetterOfLastWord = (str) => {
+      const words = str.trim().split(' ');
+      const lastWord = words[words.length - 1];
+      return lastWord.charAt(0).toUpperCase();
+    };
 
-  return authorArray.sort(authorSort);
-};
+    const authorMap = new Map();
+    for (let item of posts) {
+      // Skip items with missing authors
+      if (!item.Author) continue;
+
+      const existing = authorMap.get(item.Author);
+      const origin = filters.getOrigin(item.Link);
+      // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
+      const isYouTube = (origin === "https://www.youtube.com" || origin === "https://youtube.com");
+
+      if (existing) {
+        // Author exists, increment count
+        existing.count += 1;
+
+        // If we don't have origin data yet (was YouTube before), capture it now
+        if (!existing.origin && !isYouTube) {
+          existing.origin = origin;
+          existing.favicon = await filters.getFavicon(item.Link);
+          existing.rssLink = await filters.getRSSLink(origin);
+          existing.socialLinks = await filters.getSocialLinks(item.Link);
+        }
+      } else {
+        // New author - create entry
+        authorMap.set(item.Author, {
+          name: item.Author,
+          slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
+          firstLetter: getFirstLetterOfLastWord(item.Author),
+          count: 1,
+          origin: isYouTube ? null : origin,
+          favicon: isYouTube ? null : await filters.getFavicon(item.Link),
+          rssLink: isYouTube ? null : await filters.getRSSLink(origin),
+          socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
+        });
+      }
+    }
+
+    // Convert map to array of objects
+    const authorArray = await Promise.all(
+      Array.from(authorMap).map(async ([name, data]) => ({
+        name: data.name,
+        slugifiedName: data.slugifiedName,
+        firstLetter: data.firstLetter,
+        count: data.count,
+        origin: data.origin,
+        favicon: data.favicon,
+        rssLink: data.rssLink,
+        socialLinks: data.socialLinks,
+      }))
+    );
+
+    return authorArray.sort(authorSort);
+  };
 
   // generate two arrays from the authors:
   //   - one sorted by name
