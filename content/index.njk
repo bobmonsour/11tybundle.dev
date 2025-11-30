@@ -46,9 +46,9 @@ issue: 80
         <ol role="list" class="feeds__list">
            {%- for item in recent -%}
              <li class="feeds__item">
-                {{ item.Link | getFavicon | safe}}
+                {{ item.favicon | safe }}
                 <a href="{{ item.Link }}">{{ item.Title }}</a>
-                <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time>
+                <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
               </li>
             {%- endfor -%}
         </ol>
@@ -61,9 +61,9 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
             <li class="feeds__item">
-              {{ item.Link | getFavicon | safe}}
+              {{ item.favicon | safe}}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
-              <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time>
+              <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
             </li>
           {%- endfor -%}
         </ol>
@@ -81,7 +81,7 @@ issue: 80
             </svg>
             {# {{ item.Link | getFavicon | safe}} #}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time>
+            <time datetime="{{ item.formattedDate }}">{{ item.Date | formatItemDate }}</time>
           {% endfor %}
           </li>
         </ol>

@@ -6,6 +6,7 @@
 
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
+import { filters } from "../_config/filters/index.js";
 
 // **************
 // A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
@@ -24,6 +25,7 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
+import { getSocialLinks } from "../_config/filters/getsociallinks.js";
 
 export default async function () {
   // **************
@@ -45,26 +47,73 @@ export default async function () {
 
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
-  // generate the firehose, an array of all posts in descending date order
-  const firehose = bundleRecords
+  // firehose is an array of all blog posts in descending date order
+  const rawFirehose = bundleRecords
     .filter((item) => item["Type"] == "blog post" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
 
+  // enrich each post in the firehose with description, favicon, and formatted date
+  const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
+  return Promise.all(
+    rawFirehoseData.map(async (post) => {
+      return {
+        ...post,
+        description: await appliedFilters.getDescription(post.Link),
+        favicon: await appliedFilters.getFavicon(post.Link),
+        formattedDate: await appliedFilters.formatItemDate(post.Date),
+      };
+    })
+  );
+  };
+
+  const firehose = await enrichFirehose(rawFirehose, filters);
+  const postCount = firehose.length;
+
+
   // generate a list of releases, an array of all releases in descending date order
-  const releaseList = bundleRecords
+  const rawReleaseList = bundleRecords
     .filter((item) => item["Type"] == "release")
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
+  const enrichReleaseList = async (rawReleaseListData, appliedFilters) => {
+    return Promise.all(
+      rawReleaseListData.map(async (release) => {
+        return {
+          ...release,
+          formattedDate: await appliedFilters.formatItemDate(release.Date),
+        };
+      })
+    );
+  };
+  const releaseList = await enrichReleaseList(rawReleaseList, filters);
+  const releaseCount = releaseList.length;
+
 
   // generate a list of sites, an array of all sites in descending date order
-  const siteList = bundleRecords
+  const rawSiteList = bundleRecords
     .filter((item) => item["Type"] == "site" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
+
+  const enrichSiteList = async (rawSiteListData, appliedFilters) => {
+    return Promise.all(
+      rawSiteListData.map(async (site) => {
+        return {
+          ...site,
+          description: await appliedFilters.getDescription(site.Link),
+          favicon: await appliedFilters.getFavicon(site.Link),
+          formattedDate: await appliedFilters.formatItemDate(site.Date),
+          socialLinks: await appliedFilters.getSocialLinks(site.Link),
+        };
+      })
+    );
+  };
+
+  const siteList = await enrichSiteList(rawSiteList, filters);
   const siteCount = siteList.length;
 
   // generate the list of starter projects, ordered by date of most recent update
@@ -168,15 +217,18 @@ export default async function () {
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
   // the sortField is the field to sort by:
-  //	 author name in column 0
-  //	 count in column 1
+  //	  author name in element 0
+  //	  count in element 1
   const authorList = (records, sortField) => {
+
+    // element 2 of each author array is the first letter
+    // of the last name/word in the author's name
     function authorSort(a, b) {
       if (sortField === "name") {
         // Handle undefined values safely
         const nameA = a[2] || "";
         const nameB = b[2] || "";
-        return nameA.localeCompare(nameB); // Sort by first letter of last word
+        return nameA.localeCompare(nameB); // Sort by first letter of last name/word
       } else {
         return a[1] < b[1] ? 1 : -1;
       }
@@ -201,10 +253,24 @@ export default async function () {
       });
     }
 
+    // resulting array with author name, count, and first letter
+    // of last name/word as the first 3 elements of each author item
     return Array.from(authorMap)
       .map(([name, data]) => [name, data.count, data.firstLetter])
       .sort(authorSort);
   };
+
+  // generate two arrays from the authors:
+  //   - one sorted by name
+  //   - one sorted by post count
+  // total author count; firehose contains all blog posts
+  // 2nd param of authorList is the field to sort by, name or count
+  // also generate an array of first letters of author last names
+  const authors = authorList(firehose, "name");
+  const authorsByCount = authorList(firehose, "count");
+  const authorCount = authors.length;
+  const authorLetters = [...new Set(authors.map(author => author[2]))]
+
 
   // get the most recent 3 posts by unique authors
   // add postCount property to each post
@@ -264,28 +330,6 @@ export default async function () {
       .sort(categorySort);
   };
 
-  // generate counts of posts, starters, authors, and categories
-  const postCount = firehose.length;
-  const releaseCount = releaseList.length;
-
-  // generate two arrays from the starter projects
-  //   - one sorted by date
-  //   - one sorted by GitHub star count
-  const starters = await genStarters(bundleRecords);
-  const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
-  const starterCount = starters.length;
-
-  // generate two arrays from the authors:
-  //   - one sorted by name
-  //   - one sorted by post count
-  // total author count; firehose contains all blog posts
-  // 2nd param of authorList is the field to sort by, name or count
-  // also generate an array of first letters of author last names
-  const authors = authorList(firehose, "name");
-  const authorsByCount = authorList(firehose, "count");
-  const authorCount = authors.length;
-  const authorLetters = [...new Set(authors.map(author => author[2]))]
-
   // generate two arrays from the categories:
   //   - one sorted by category name
   //   - one sorted by post count
@@ -307,6 +351,13 @@ export default async function () {
   } else {
     gettingStartedCount = "more than 40";
   };
+
+  // generate two arrays from the starter projects
+  //   - one sorted by date
+  //   - one sorted by GitHub star count
+  const starters = await genStarters(bundleRecords);
+  const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
+  const starterCount = starters.length;
 
   // log the counts of various items
   console.log("postCount: " + postCount);

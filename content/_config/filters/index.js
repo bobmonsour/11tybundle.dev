@@ -12,6 +12,7 @@ import { getNonYoutubePost } from "./getnonyoutubepost.js";
 import { getOrigin } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
 import { getSocialIcons } from "./getsocialicons.js";
+import { getSocialLinks } from "./getsociallinks.js";
 import { getWebIcon, getRSSIcon } from "./getwebandrssicons.js";
 import { plainDate } from "./datesandnumbers.js";
 import { postCountLabel } from "./postcountlabel.js";
@@ -21,7 +22,7 @@ import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
 import { readingTime } from "./readingtime.js";
 
-const filters = {
+export const filters = {
   isCurrentPage,
   formatItemDate,
   formatPostDate,
@@ -35,6 +36,7 @@ const filters = {
   getRSSIcon,
   getRSSLink,
   getSocialIcons,
+  getSocialLinks,
   getWebIcon,
   plainDate,
   postCountByAuthor,
