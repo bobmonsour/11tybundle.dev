@@ -106,5 +106,10 @@
     "rssFeed": "https://moritzglantz.de/blog/feed.xml",
     "descriptionFail": "true",
     "rssFail": "true"
+  },
+  {
+    "url": "https://www.delyo.be/",
+    "descriptionFail": "true",
+    "rssFail": "true"
   }
 ]

@@ -765,7 +765,8 @@
     "Type": "site",
     "Title": "Delyo Dobrev",
     "Link": "https://www.delyo.be/",
-    "Date": "2025-08-29T09:17:08.000"
+    "Date": "2025-08-29T09:17:08.000",
+    "Skip": true
   },
   {
     "Issue": "78",

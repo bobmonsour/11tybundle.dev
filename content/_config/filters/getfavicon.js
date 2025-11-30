@@ -17,7 +17,7 @@ let faviconCache = {};
 const genFaviconImg = async (faviconPath) => {
   let imgElement;
   if (faviconPath === defaultFaviconPath) {
-    console.log("Using default favicon path");
+    // console.log("Using default favicon path");
     imgElement = `<svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#icon-person-circle"></use></svg>`;
   } else if (faviconPath === youtubeFaviconPath) {
     imgElement = `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#icon-globe"></use></svg>"<span class="visually-hidden">Website</span>`;

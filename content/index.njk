@@ -120,9 +120,6 @@ issue: 80
     <article class="recent-authors">
       {%- for item in bundledata.recentAuthors %}
       <article class="recent-authors__item">
-        {# <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
-            </svg> #}
         {{ item.favicon | safe}}
         <div class="details">
           <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
@@ -132,13 +129,6 @@ issue: 80
             {{ item.origin | getRSSIcon | safe }}
             {{ item.origin | getSocialIcons | safe }}
           </ul>
-          {# <a href="/authors/{{ item.slugifiedAuthor }}/">{{ item.Author }}</a>
-          <p>{{ item.Link | getOrigin | getDescription | safe }}</p>
-          <ul role="list" class="author-links">
-            {{ item.Link | getWebIcon | safe }}
-            {{ item.Link | getRSSIcon | safe }}
-            {{ item.Link | getSocialIcons | safe }}
-          </ul> #}
         </div>
       </article>
       {%- endfor %}
