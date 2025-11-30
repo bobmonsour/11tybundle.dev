@@ -28,6 +28,15 @@ permalink: /categories/
   </nav>
 </section>
 
+{# ***************************************
+   Category structure:
+
+    .name           category name
+    .slugifiedName  slugified category name
+    .firstLetter    first letter of category name
+    .count          total post count
+
+*************************************** #}
 {% set currentLetter = ""%}
 {% set currentCategory = ""%}
 {% for category in bundledata.categories %}
