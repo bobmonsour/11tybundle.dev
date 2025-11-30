@@ -208,11 +208,19 @@ hr {
   margin-block: 1lh;
 }
 
+figure {
+  margin-inline: unset;
+}
+
+img {
+  height: auto;
+}
+
 blockquote {
   font-family: var(--font-display-regular-italic);
   font-size: var(--step-1);
   border-left: 4px solid var(--surface-fore);
-  margin-inline: 0;
+  margin-inline: unset;
   padding-inline-start: 0.5lh;
 }
 
@@ -408,7 +416,7 @@ mark,
 
 .author-links {
   list-style: none;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
   margin-block-start: var(--space-xs);
