@@ -276,6 +276,7 @@ export default async function () {
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
           origin: isYouTube ? null : origin,
+          description: isYouTube ? null : await filters.getDescription(origin),
           favicon: isYouTube ? null : await filters.getFavicon(item.Link),
           rssLink: isYouTube ? null : await filters.getRSSLink(origin),
           socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
@@ -291,6 +292,7 @@ export default async function () {
         firstLetter: data.firstLetter,
         count: data.count,
         origin: data.origin,
+        description: data.description,
         favicon: data.favicon,
         rssLink: data.rssLink,
         socialLinks: data.socialLinks,
@@ -318,23 +320,55 @@ export default async function () {
   // TODO: SELECT 3 AUTHORS AT RANDOM FROM THE 3 MOST RECENT POSTS
   //       EACH BUILD SHOULD RESULT IN A DIFFERENT SET OF 3 AUTHORS
   //       currently it just picks the first 3 unique authors
-  const recentAuthors = [];
-  const seenAuthors = new Set();
-  for (const post of firehose) {
-    if (!seenAuthors.has(post.Author)) {
-      // Count total posts by this author
-      const postCount = firehose.filter(
-        (item) => item.Author === post.Author
-      ).length;
+  // const recentAuthors = [];
+  // const seenAuthors = new Set();
+  // for (const post of firehose) {
+  //   if (!seenAuthors.has(post.Author)) {
+  //     // Count total posts by this author
+  //     const postCount = firehose.filter(
+  //       (item) => item.Author === post.Author
+  //     ).length;
 
-      // Add postCount property to the post object
-      post.postCount = postCount;
+  //     // Add postCount property to the post object
+  //     post.postCount = postCount;
 
-      recentAuthors.push(post);
-      seenAuthors.add(post.Author);
-      if (recentAuthors.length === 3) break;
+  //     recentAuthors.push(post);
+  //     seenAuthors.add(post.Author);
+  //     if (recentAuthors.length === 3) break;
+  //   }
+  // };
+
+// get the most recent 3 unique authors from the top 50 posts
+// randomly select 3 posts with unique authors from the most recent 50 posts
+// then extract those author records from the authors array
+  const getRecentAuthors = (firehoseData, authorsData) => {
+    // Get the most recent 50 posts
+    const recentPosts = firehoseData.slice(0, 50);
+
+    // Randomly shuffle the posts
+    const shuffledPosts = recentPosts.sort(() => Math.random() - 0.5);
+
+    // Get 3 posts with unique authors
+    const uniqueAuthorPosts = [];
+    const seenAuthors = new Set();
+
+    for (const post of shuffledPosts) {
+      if (!seenAuthors.has(post.Author)) {
+        uniqueAuthorPosts.push(post);
+        seenAuthors.add(post.Author);
+        if (uniqueAuthorPosts.length === 3) break;
+      }
     }
+
+    // Extract the 3 author records from the authors array
+    const recentAuthorsList = uniqueAuthorPosts.map(post => {
+      return authorsData.find(author => author.name === post.Author);
+    }).filter(author => author !== undefined);
+
+    return recentAuthorsList;
   };
+
+  const recentAuthors = getRecentAuthors(firehose, authors);
 
   //**************************************************************************/
   // generate a map of each category, with the following:
