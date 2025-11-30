@@ -148,7 +148,7 @@ export default async function () {
       await cache.save(starters, "json");
       // console.log(`Cached starter projects`);
       return starters;
-  }
+  };
 
   const genStarters = async (bundleRecords) => {
     function extractStarters(bundleRecords) {
@@ -266,31 +266,39 @@ export default async function () {
 
   // generate counts of posts, starters, authors, and categories
   const postCount = firehose.length;
+  const releaseCount = releaseList.length;
 
-  // generate the set of starter projects and the count of them
+  // generate two arrays from the starter projects
+  //   - one sorted by date
+  //   - one sorted by GitHub star count
   const starters = await genStarters(bundleRecords);
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
   const starterCount = starters.length;
 
-  // list of authors and count of their blog posts
-  // and the total author count; firehose contains all blog posts
-  // 2nd param of authorList is the field to sort by
+  // generate two arrays from the authors:
+  //   - one sorted by name
+  //   - one sorted by post count
+  // total author count; firehose contains all blog posts
+  // 2nd param of authorList is the field to sort by, name or count
+  // also generate an array of first letters of author last names
   const authors = authorList(firehose, "name");
   const authorsByCount = authorList(firehose, "count");
   const authorCount = authors.length;
   const authorLetters = [...new Set(authors.map(author => author[2]))]
 
-  // list of categories and count of blog posts with the category
-  // and the total category count; firehose contains all blog posts
-  // 2nd param of categoryList is the field to sort by
+  // generate two arrays from the categories:
+  //   - one sorted by category name
+  //   - one sorted by post count
+  // total category count; firehose contains all blog posts
+  // 2nd param of categoryList is the field to sort by, name or count
+  // also generate an array of unique first letters of categories
   const categories = categoryList(firehose, "category");
   const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
-  // Generate an alphabetically sorted array of unique first letters from categories
   const categoryLetters = [...new Set(categories.map(category => category[2]))]
   .sort((a, b) => a.localeCompare(b[0]));
 
-  // get the count of the number of posts in the Getting Started category
+  // generate the count of posts in the Getting Started category
   let cat = "Getting Started";
   let gettingStartedCount = 0;
   let row = categories.find((row) => row[0] === cat);
@@ -298,22 +306,26 @@ export default async function () {
     gettingStartedCount = row[1];
   } else {
     gettingStartedCount = "more than 40";
-  }
+  };
+
   // log the counts of various items
   console.log("postCount: " + postCount);
-  console.log("starterCount: " + starterCount);
   console.log("siteCount: " + siteCount);
+  console.log("releaseCount: " + releaseCount);
+  console.log("starterCount: " + starterCount);
   console.log("authorCount: " + authorCount);
   console.log("categoryCount: " + categoryCount);
 
   // verify that all blog posts have:
-  //	- an author, a date, and one or more categories
+  //	- title, author, date, link, and one or more categories
   for (let item of bundleRecords) {
     if (item["Type"] == "blog post") {
+      if (!item["Title"]) console.log(item["Link"] + " is missing a title");
       if (!item["Author"]) console.log(item["Title"] + " is missing an author");
       if (!item["Date"]) console.log(item["Title"] + " is missing a date");
+      if (!item["Link"]) console.log(item["Title"] + " is missing a link");
       if (!item["Categories"])
-        console.log(item["Title"] + " is missing categories");
+        console.log(item["Title"] + " is missing one or more categories");
     }
   }
 
@@ -324,6 +336,7 @@ export default async function () {
     firehose,
     postCount,
     releaseList,
+    releaseCount,
     siteList,
     siteCount,
     starters,
