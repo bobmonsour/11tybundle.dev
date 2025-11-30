@@ -226,76 +226,79 @@ export default async function () {
   // the sortField is the field to sort by:
   //	  author name in element 0
   //	  count in element 1
-  const authorList = async (posts, sortField) => {
+const authorList = async (posts, sortField) => {
 
-    // element 2 of each author array is the first letter
-    // of the last name/word in the author's name
-    function authorSort(a, b) {
-      if (sortField === "name") {
-        // Handle undefined values safely
-        const nameA = a[2] || "";
-        const nameB = b[2] || "";
-        return nameA.localeCompare(nameB); // Sort by first letter of last name/word
-      } else {
-        return a[1] < b[1] ? 1 : -1; // Sort by count descending
-      }
+  // element 2 of each author array is the first letter
+  // of the last name/word in the author's name
+  function authorSort(a, b) {
+    if (sortField === "name") {
+      // Handle undefined values safely
+      const nameA = a.firstLetter || "";
+      const nameB = b.firstLetter || "";
+      return nameA.localeCompare(nameB); // Sort by first letter of last name/word
+    } else {
+      return a.count < b.count ? 1 : -1; // Sort by count descending
     }
+  }
 
-    const getFirstLetterOfLastWord = (str) => {
-      const words = str.trim().split(' ');
-      const lastWord = words[words.length - 1];
-      return lastWord.charAt(0).toUpperCase();
-    };
+  const getFirstLetterOfLastWord = (str) => {
+    const words = str.trim().split(' ');
+    const lastWord = words[words.length - 1];
+    return lastWord.charAt(0).toUpperCase();
+  };
 
   const authorMap = new Map();
-    for (let item of posts) {
-      // Skip items with missing authors
-      if (!item.Author) continue;
+  for (let item of posts) {
+    // Skip items with missing authors
+    if (!item.Author) continue;
 
-      const existing = authorMap.get(item.Author);
-      const origin = filters.getOrigin(item.Link);
-      const isYouTube = origin === "https://youtube.com";
+    const existing = authorMap.get(item.Author);
+    const origin = filters.getOrigin(item.Link);
+    // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
+    const isYouTube = origin === "https://youtube.com";
 
-      if (existing) {
-        // Author exists, increment count
-        existing.count += 1;
+    if (existing) {
+      // Author exists, increment count
+      existing.count += 1;
 
-        // If we don't have origin data yet (was YouTube before), capture it now
-        if (!existing.origin && !isYouTube) {
-          existing.origin = origin;
-          existing.favicon = await filters.getFavicon(item.Link);
-          existing.rssLink = await filters.getRSSLink(item.Link);
-          existing.socialLinks = await filters.getSocialLinks(item.Link);
-        }
-      } else {
-        // New author - create entry
-        authorMap.set(item.Author, {
-          slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
-          firstLetter: getFirstLetterOfLastWord(item.Author),
-          count: 1,
-          origin: isYouTube ? null : origin,
-          favicon: isYouTube ? null : await filters.getFavicon(item.Link),
-          rssLink: isYouTube ? null : await filters.getRSSLink(origin),
-          socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
-        });
+      // If we don't have origin data yet (was YouTube before), capture it now
+      if (!existing.origin && !isYouTube) {
+        existing.origin = origin;
+        existing.favicon = await filters.getFavicon(item.Link);
+        existing.rssLink = await filters.getRSSLink(item.Link);
+        existing.socialLinks = await filters.getSocialLinks(item.Link);
       }
+    } else {
+      // New author - create entry
+      authorMap.set(item.Author, {
+        name: item.Author,
+        slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
+        firstLetter: getFirstLetterOfLastWord(item.Author),
+        count: 1,
+        origin: origin,
+        favicon: isYouTube ? origin : await filters.getFavicon(item.Link),
+        rssLink: isYouTube ? null : await filters.getRSSLink(origin),
+        socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
+      });
     }
-      // Convert map to array with all properties in specified order
-    const authorArray = await Promise.all(
-      Array.from(authorMap).map(async ([name, data]) => [
-        name,                    // [0] author name
-        data.slugifiedName,      // [1] slugified author name
-        data.firstLetter,        // [2] first letter of last name/word
-        data.count,              // [3] total post count
-        data.origin,             // [4] origin (captured from first non-YouTube post)
-        data.favicon,            // [5] favicon
-        data.rssLink,            // [6] RSS link
-        data.socialLinks,        // [7] social links
-      ])
-    );
+  }
 
-    return authorArray.sort(authorSort);
-  };
+  // Convert map to array of objects
+  const authorArray = await Promise.all(
+    Array.from(authorMap).map(async ([name, data]) => ({
+      name: data.name,
+      slugifiedName: data.slugifiedName,
+      firstLetter: data.firstLetter,
+      count: data.count,
+      origin: data.origin,
+      favicon: data.favicon,
+      rssLink: data.rssLink,
+      socialLinks: data.socialLinks,
+    }))
+  );
+
+  return authorArray.sort(authorSort);
+};
 
   // generate two arrays from the authors:
   //   - one sorted by name
@@ -307,8 +310,8 @@ export default async function () {
   // console.log("3rd author in array: ", authors[2]);
   const authorsByCount = await authorList(firehose, "count");
   const authorCount = authors.length;
-  const authorLetters = [...new Set(authors.map(author => author[2]))]
-
+  // const authorLetters = [...new Set(authors.map(author => author[2]))]
+  const authorLetters = [...new Set(authors.map(author => author.firstLetter))]
 
   // get the most recent 3 posts by unique authors
   // add postCount property to each post
@@ -334,45 +337,48 @@ export default async function () {
   };
 
   //**************************************************************************/
-  // generate a 2-dimensional array of categories and the
-  // count of posts in each category; ; posts comes from
-  // the firehose array, which are all blog posts
-  // the sortField is the field to sort by:
-  //	 category name in column 0
-  //	 count in column 1
-  // first letter of the category is added as column 2
-
+  // generate a map of each category, with the following:
+  //  - category name
+  //  - count of posts in each category
+  //  - first letter of the category
+  //
   const categoryList = (posts, sortField) => {
-    function categorySort(a, b) {
-      if (sortField == "category") {
-        // Handle undefined values safely
-        const catA = a[0] || "";
-        const catB = b[0] || "";
-        return catA.localeCompare(catB);
-      } else {
-        return a[1] < b[1] ? 1 : -1;
-      }
+  function categorySort(a, b) {
+    if (sortField == "category") {
+      // Handle undefined values safely
+      const catA = a.name || "";
+      const catB = b.name || "";
+      return catA.localeCompare(catB);
+    } else {
+      return a.count < b.count ? 1 : -1;
     }
-    let categoryMap = new Map();
-    for (let item of posts) {
-      // Skip items with missing categories
-      if (!item.Categories || !Array.isArray(item.Categories)) continue;
+  }
+  let categoryMap = new Map();
+  for (let item of posts) {
+    // Skip items with missing categories
+    if (!item.Categories || !Array.isArray(item.Categories)) continue;
 
-      item.Categories.forEach((category) => {
-        const existing = categoryMap.get(category);
-        const postCount = existing ? existing.count : 0;
-        categoryMap.set(category, {
-          count: postCount + 1,
-          firstLetter: category.charAt(0),
-        });
+    item.Categories.forEach((category) => {
+      const existing = categoryMap.get(category);
+      const postCount = existing ? existing.count : 0;
+      categoryMap.set(category, {
+        slugifiedCategory: slugifyPackage(category, { lower: true, strict: true }),
+        count: postCount + 1,
+        firstLetter: category.charAt(0),
       });
-    }
-    return Array.from(categoryMap)
-      .map(([name, data]) => [name, data.count, data.firstLetter])
-      .sort(categorySort);
+    });
+  }
+  return Array.from(categoryMap)
+    .map(([name, data]) => ({
+      name: name,
+      slugifiedCategory: data.slugifiedCategory,
+      count: data.count,
+      firstLetter: data.firstLetter,
+    }))
+    .sort(categorySort);
   };
 
-  // generate two arrays from the categories:
+  // generate two maps from the categories:
   //   - one sorted by category name
   //   - one sorted by post count
   // total category count; firehose contains all blog posts
@@ -381,18 +387,19 @@ export default async function () {
   const categories = categoryList(firehose, "category");
   const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
-  const categoryLetters = [...new Set(categories.map(category => category[2]))]
-  .sort((a, b) => a.localeCompare(b[0]));
+  const categoryLetters = [...new Set(categories.map(category => category.firstLetter))]
+    .sort((a, b) => a.localeCompare(b));
 
   // generate the count of posts in the Getting Started category
+// generate the count of posts in the Getting Started category
   let cat = "Getting Started";
   let gettingStartedCount = 0;
-  let row = categories.find((row) => row[0] === cat);
+  let row = categories.find((row) => row.name === cat);
   if (row) {
-    gettingStartedCount = row[1];
+    gettingStartedCount = row.count;
   } else {
     gettingStartedCount = "more than 40";
-  };
+  }
 
   //**************************************************************************/
   // generate two arrays from the starter projects

@@ -206,6 +206,7 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
 export const getFavicon = async (link) => {
   // Extract the origin (protocol + hostname + port) from the full URL
   // This ensures we only fetch one favicon per domain, not per page
+
   // console.log("Getting favicon for link:", link);
   const origin = new URL(link).origin;
   // console.log("Extracted origin:", origin);
@@ -213,6 +214,11 @@ export const getFavicon = async (link) => {
   // Special case for GitHub to use inline SVG icon
   const domain = new URL(origin).hostname;
   if (domain === "github.com") {
+    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+            </svg>`;
+  }
+  if (domain === "youtube.com") {
     return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
             </svg>`;

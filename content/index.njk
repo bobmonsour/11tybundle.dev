@@ -79,7 +79,6 @@ issue: 80
             <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
             </svg>
-            {# {{ item.Link | getFavicon | safe}} #}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
             <time datetime="{{ item.formattedDate }}">{{ item.Date | formatItemDate }}</time>
           {% endfor %}
@@ -95,7 +94,9 @@ issue: 80
     <article class="recent-starters">
       {%- for item in bundledata.starters %}
       <article class="recent-starters__item">
-        {{ item.Link | getFavicon | safe}}
+        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+            </svg>
         <div class="details">
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <ul role="list">
@@ -119,7 +120,10 @@ issue: 80
     <article class="recent-authors">
       {%- for item in bundledata.recentAuthors %}
       <article class="recent-authors__item">
-        {{ item.Link | getFavicon | safe}}
+        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+            </svg>
+            {# {{ item.Link | getFavicon | safe}} #}
         <div class="details">
           <a href="/authors/{{ item.Author | slugify }}/">{{ item.Author }}</a>
           <p>{{ item.Link | getOrigin | getDescription | safe }}</p>

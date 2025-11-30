@@ -21,9 +21,9 @@ permalink: /categories/by-count/
     <article class="directory__grid">
       {% for category in bundledata.categoriesByCount %}
       <article class="directory__card directory--category">
-        <h3><a href="{{ category[0] | slugify }}">{{ category[0] }}</a> <data class="count" value="{{ category[1] }}">{{ category[1] }}</data></h3>
+        <h3><a href="{{ category.slugifiedCategory }}/">{{ category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
         <ol role="list" class="directory--list">
-          {% for item in bundledata.firehose | postsInCategory(category[0], 3) %}
+          {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
             {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
             <li>{{ item.Link | getFavicon | safe }}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
