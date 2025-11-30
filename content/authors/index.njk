@@ -28,6 +28,20 @@ permalink: /authors/
   </nav>
 </section>
 
+
+{# ***************************************
+   Author array structure:
+
+    [0] author name
+    [1] slugified author name
+    [2] first letter of author last name/word
+    [3] total post count
+    [4] origin (captured from first non-YouTube post)
+    [5] favicon
+    [6] RSS link
+    [7] social links
+
+*************************************** #}
 {% set currentLetter = ""%}
 {% set currentAuthor = ""%}
 
@@ -45,13 +59,11 @@ permalink: /authors/
     {% set currentLetter = author[2] %}
     <article class="directory__card directory--category">
       {% set authorUrl %}/authors/{{ author[0] | slugify }}/{% endset %}
-      <h3><a href="{{ authorUrl}}">{{author[0] }}</a> <data class="count" value="{{ author[1] }}">{{ author[1] }}</data></h3>
+      <h3>{{ author[5] | safe }}<a href="/authors/{{ author[1] }}">{{author[0] }}</a> <data class="count" value="{{ author[3] }}">{{ author[3] }}</data></h3>
       <ol role="list" class="directory--list">
         {% for item in bundledata.firehose | postsByAuthor(author[0], 3) %}
-          {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
-          <li>{{ item.Link | getFavicon | safe }}
           <a href="{{ item.Link }}">{{ item.Title }}</a>
-          <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time></li>
+          <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time></li>
         {% endfor %}
       </ol>
     </article>

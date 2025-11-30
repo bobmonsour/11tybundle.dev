@@ -7,6 +7,7 @@
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
+import slugifyPackage  from "slugify";
 
 // **************
 // A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
@@ -47,6 +48,8 @@ export default async function () {
 
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
+
+  //**************************************************************************/
   // firehose is an array of all blog posts in descending date order
   const rawFirehose = bundleRecords
     .filter((item) => item["Type"] == "blog post" && !item["Skip"])
@@ -60,6 +63,7 @@ export default async function () {
     rawFirehoseData.map(async (post) => {
       return {
         ...post,
+        slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
         description: await appliedFilters.getDescription(post.Link),
         favicon: await appliedFilters.getFavicon(post.Link),
         formattedDate: await appliedFilters.formatItemDate(post.Date),
@@ -71,7 +75,7 @@ export default async function () {
   const firehose = await enrichFirehose(rawFirehose, filters);
   const postCount = firehose.length;
 
-
+  //**************************************************************************/
   // generate a list of releases, an array of all releases in descending date order
   const rawReleaseList = bundleRecords
     .filter((item) => item["Type"] == "release")
@@ -91,7 +95,7 @@ export default async function () {
   const releaseList = await enrichReleaseList(rawReleaseList, filters);
   const releaseCount = releaseList.length;
 
-
+  //**************************************************************************/
   // generate a list of sites, an array of all sites in descending date order
   const rawSiteList = bundleRecords
     .filter((item) => item["Type"] == "site" && !item["Skip"])
@@ -116,6 +120,7 @@ export default async function () {
   const siteList = await enrichSiteList(rawSiteList, filters);
   const siteCount = siteList.length;
 
+  //**************************************************************************/
   // generate the list of starter projects, ordered by date of most recent update
   // fetch metadata from the GitHub repo and update starter objects
   async function updateStartersWithMetadata(starters) {
@@ -213,13 +218,15 @@ export default async function () {
       (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
     );
   };
+
+  //**************************************************************************/
   // generate a 2-dimensional array of author names and
   // a count of each of their posts; records comes from
   // the firehose array, which are all blog posts
   // the sortField is the field to sort by:
   //	  author name in element 0
   //	  count in element 1
-  const authorList = (records, sortField) => {
+  const authorList = async (posts, sortField) => {
 
     // element 2 of each author array is the first letter
     // of the last name/word in the author's name
@@ -230,7 +237,7 @@ export default async function () {
         const nameB = b[2] || "";
         return nameA.localeCompare(nameB); // Sort by first letter of last name/word
       } else {
-        return a[1] < b[1] ? 1 : -1;
+        return a[1] < b[1] ? 1 : -1; // Sort by count descending
       }
     }
 
@@ -240,24 +247,54 @@ export default async function () {
       return lastWord.charAt(0).toUpperCase();
     };
 
-    const authorMap = new Map();
-    for (let item of records) {
+  const authorMap = new Map();
+    for (let item of posts) {
       // Skip items with missing authors
       if (!item.Author) continue;
 
       const existing = authorMap.get(item.Author);
-      const postCount = existing ? existing.count : 0;
-      authorMap.set(item.Author, {
-        count: postCount + 1,
-        firstLetter: getFirstLetterOfLastWord(item.Author),
-      });
-    }
+      const origin = filters.getOrigin(item.Link);
+      const isYouTube = origin === "https://youtube.com";
 
-    // resulting array with author name, count, and first letter
-    // of last name/word as the first 3 elements of each author item
-    return Array.from(authorMap)
-      .map(([name, data]) => [name, data.count, data.firstLetter])
-      .sort(authorSort);
+      if (existing) {
+        // Author exists, increment count
+        existing.count += 1;
+
+        // If we don't have origin data yet (was YouTube before), capture it now
+        if (!existing.origin && !isYouTube) {
+          existing.origin = origin;
+          existing.favicon = await filters.getFavicon(item.Link);
+          existing.rssLink = await filters.getRSSLink(item.Link);
+          existing.socialLinks = await filters.getSocialLinks(item.Link);
+        }
+      } else {
+        // New author - create entry
+        authorMap.set(item.Author, {
+          slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
+          firstLetter: getFirstLetterOfLastWord(item.Author),
+          count: 1,
+          origin: isYouTube ? null : origin,
+          favicon: isYouTube ? null : await filters.getFavicon(item.Link),
+          rssLink: isYouTube ? null : await filters.getRSSLink(origin),
+          socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
+        });
+      }
+    }
+      // Convert map to array with all properties in specified order
+    const authorArray = await Promise.all(
+      Array.from(authorMap).map(async ([name, data]) => [
+        name,                    // [0] author name
+        data.slugifiedName,      // [1] slugified author name
+        data.firstLetter,        // [2] first letter of last name/word
+        data.count,              // [3] total post count
+        data.origin,             // [4] origin (captured from first non-YouTube post)
+        data.favicon,            // [5] favicon
+        data.rssLink,            // [6] RSS link
+        data.socialLinks,        // [7] social links
+      ])
+    );
+
+    return authorArray.sort(authorSort);
   };
 
   // generate two arrays from the authors:
@@ -266,14 +303,18 @@ export default async function () {
   // total author count; firehose contains all blog posts
   // 2nd param of authorList is the field to sort by, name or count
   // also generate an array of first letters of author last names
-  const authors = authorList(firehose, "name");
-  const authorsByCount = authorList(firehose, "count");
+  const authors = await authorList(firehose, "name");
+  // console.log("3rd author in array: ", authors[2]);
+  const authorsByCount = await authorList(firehose, "count");
   const authorCount = authors.length;
   const authorLetters = [...new Set(authors.map(author => author[2]))]
 
 
   // get the most recent 3 posts by unique authors
   // add postCount property to each post
+  // TODO: SELECT 3 AUTHORS AT RANDOM FROM THE 3 MOST RECENT POSTS
+  //       EACH BUILD SHOULD RESULT IN A DIFFERENT SET OF 3 AUTHORS
+  //       currently it just picks the first 3 unique authors
   const recentAuthors = [];
   const seenAuthors = new Set();
   for (const post of firehose) {
@@ -292,15 +333,16 @@ export default async function () {
     }
   };
 
+  //**************************************************************************/
   // generate a 2-dimensional array of categories and the
-  // count of posts in each category; ; records comes from
+  // count of posts in each category; ; posts comes from
   // the firehose array, which are all blog posts
   // the sortField is the field to sort by:
   //	 category name in column 0
   //	 count in column 1
   // first letter of the category is added as column 2
 
-  const categoryList = (records, sortField) => {
+  const categoryList = (posts, sortField) => {
     function categorySort(a, b) {
       if (sortField == "category") {
         // Handle undefined values safely
@@ -312,7 +354,7 @@ export default async function () {
       }
     }
     let categoryMap = new Map();
-    for (let item of records) {
+    for (let item of posts) {
       // Skip items with missing categories
       if (!item.Categories || !Array.isArray(item.Categories)) continue;
 
@@ -352,6 +394,7 @@ export default async function () {
     gettingStartedCount = "more than 40";
   };
 
+  //**************************************************************************/
   // generate two arrays from the starter projects
   //   - one sorted by date
   //   - one sorted by GitHub star count
@@ -359,6 +402,7 @@ export default async function () {
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
   const starterCount = starters.length;
 
+  //**************************************************************************/
   // log the counts of various items
   console.log("postCount: " + postCount);
   console.log("siteCount: " + siteCount);
@@ -367,6 +411,7 @@ export default async function () {
   console.log("authorCount: " + authorCount);
   console.log("categoryCount: " + categoryCount);
 
+  //**************************************************************************/
   // verify that all blog posts have:
   //	- title, author, date, link, and one or more categories
   for (let item of bundleRecords) {
@@ -380,6 +425,7 @@ export default async function () {
     }
   }
 
+  //**************************************************************************/
   // return the full set of records and the counts for use
   // on various pages of the site
   return {
