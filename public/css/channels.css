@@ -363,11 +363,11 @@
 
     &:has(.favicon) {
       @media (width <=768px) {
-        grid-template-columns: minmax(var(--space-s-m), 10%) 1fr auto;
+        grid-template-columns: minmax(var(--space-s-m), 12%) 1fr auto;
         grid-template-areas: "favicon link date";
       }
       @media (width >=768px) {
-        grid-template-columns: minmax(var(--space-s-m), 10%) 1fr;
+        grid-template-columns: minmax(var(--space-s-m), 12%) 1fr;
         grid-template-areas:
           "favicon link"
           "favicon date";
