@@ -53,12 +53,15 @@ function unique(list) {
   return Array.from(new Set(list));
 }
 
-/**
- * Extract social links from HTML content using multiple detection strategies
- * @param {string} html - The HTML content to parse
- * @param {string} origin - The origin URL for resolving relative links
- * @returns {object} Object containing arrays of found social links by platform
- */
+//***************
+// Extract social links from HTML content using multiple
+// detection strategies
+//
+//  @param {string} html - HTML content to parse
+//  @param {string} origin - origin URL for resolving relative links
+//  @returns {object} Object with arrays of social links by platform
+//***************
+
 function extractSocialLinksFromHtml(html, origin) {
   // Parse HTML with Cheerio for jQuery-like DOM manipulation
   const $ = cheerio.load(html);
@@ -71,8 +74,12 @@ function extractSocialLinksFromHtml(html, origin) {
     github: [],
   };
 
-  // Strategy 1: Look for structured data (JSON-LD) with sameAs properties
+  //***************
+  // Strategy 1: Look for structured data (JSON-LD) with
+  // sameAs properties
   // This is the most reliable method as it's semantic and intentional
+  //***************
+
   $('script[type="application/ld+json"]').each((_, el) => {
     try {
       const json = JSON.parse($(el).text());
@@ -106,8 +113,11 @@ function extractSocialLinksFromHtml(html, origin) {
     }
   });
 
+  //***************
   // Strategy 2: Scan all anchor tags for social links
   // This catches links that aren't in structured data
+  //***************
+
   $("a[href]").each((_, a) => {
     const href = $(a).attr("href");
     const absoluteUrl = toAbsolute(href, origin);
@@ -116,8 +126,12 @@ function extractSocialLinksFromHtml(html, origin) {
     const url = new URL(absoluteUrl);
     const rel = ($(a).attr("rel") || "").toLowerCase();
 
+    //***************
     // Strategy 2a: Prioritize links with explicit rel="me" attribute
-    // This is a semantic indicator that the link represents the same entity
+    // This is a semantic indicator that the link represents the
+    // same entity
+    //***************
+
     if (rel.split(/\s+/).includes("me")) {
       if (isLinkedIn(url)) found.linkedin.push(absoluteUrl);
       else if (isBluesky(url)) found.bluesky.push(absoluteUrl);
@@ -129,8 +143,11 @@ function extractSocialLinksFromHtml(html, origin) {
       return; // Skip further processing for rel="me" links
     }
 
+    //***************
     // Strategy 2b: Use domain and path pattern matching
     // Detect social platform links based on URL structure
+    //***************
+
     if (isLinkedIn(url)) found.linkedin.push(absoluteUrl);
     else if (isBluesky(url)) found.bluesky.push(absoluteUrl);
     else if (isMastodon(url)) found.mastodon.push(absoluteUrl);
@@ -139,8 +156,13 @@ function extractSocialLinksFromHtml(html, origin) {
       if (profile) found.github.push(profile);
     }
 
-    // Strategy 2c: Use CSS classes and text content as additional hints
-    // This catches links that might be styled or labeled as social links
+    //***************
+    // Strategy 2c: Use CSS classes and text content as
+    // additional hints
+    // This catches links that might be styled or labeled
+    // as social links
+    //***************
+
     const cssClass = ($(a).attr("class") || "").toLowerCase();
     const label = (
       $(a).attr("aria-label") ||
@@ -174,12 +196,16 @@ function extractSocialLinksFromHtml(html, origin) {
   return found;
 }
 
-/**
- * Main function to get social links from a given webpage and common subpages
- * Checks the origin URL, /about/, and /en/ pages for social media links
- * @param {string} link - The URL to extract social links from
- * @returns {object} Object containing the best social link for each platform
- */
+//***************
+// Main function to get social links from a given webpage and
+// common subpages
+// Checks the origin URL, /about/, and /en/ pages for social
+// media links
+// @param {string} link - The URL to extract social links from
+// @returns {object} Object containing the best social link
+// for each platform
+//***************
+
 export async function getSocialLinks(link) {
   const origin = new URL(link).origin;
 
@@ -264,14 +290,19 @@ export async function getSocialLinks(link) {
         break;
       }
     } catch (error) {
-      // Silently continue if a page doesn't exist (404) or fails to fetch
-      // This allows the function to work even if /about/ or /about don't exist
+      //***************
+      // Silently continue if a page doesn't exist (404) or
+      // fails to fetch
+      // This allows the function to work even if /about/ or
+      // /about don't exist
       // console.log(`Could not fetch ${pageUrl}:`, error.message);
+      //***************
     }
   }
 
   // Remove duplicate URLs within each platform
-  // Some sites might link to the same profile multiple times across pages
+  // Some sites might link to the same profile multiple times
+  // across pages
   combinedFound.mastodon = unique(combinedFound.mastodon);
   combinedFound.bluesky = unique(combinedFound.bluesky);
   combinedFound.github = unique(combinedFound.github);
@@ -284,14 +315,16 @@ export async function getSocialLinks(link) {
     combinedFound.bluesky.length > 0 ||
     combinedFound.github.length > 0;
 
-  // If no links found after checking all pages, mark this origin as failed
+  // If no links found after checking all pages, mark this
+  // origin as failed
   if (!foundAnyLinks) {
     failedOriginsThisSession.add(origin);
   }
 
   // Return only the first (best) link for each platform
   // If no link found for a platform, return empty string
-  // First result is prioritized since homepage links are checked first
+  // First result is prioritized since homepage links are
+  // checked first
   const socialLinks = {
     mastodon: combinedFound.mastodon[0] || "",
     bluesky: combinedFound.bluesky[0] || "",

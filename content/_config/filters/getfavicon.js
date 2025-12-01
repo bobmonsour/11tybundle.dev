@@ -14,10 +14,10 @@ const faviconDir = "/img/favicons";
 // cache avoids processing the same origin multiple times during a single build
 let faviconCache = {};
 
-//*******************************************************************************
+//***************
 // Given the path to the favicon as saved in the output directory, generate and
 // return the html img element to use in the site.
-//*******************************************************************************
+//***************
 const genFaviconImg = async (faviconPath) => {
   let imgElement;
 
@@ -32,10 +32,11 @@ const genFaviconImg = async (faviconPath) => {
   return imgElement;
 };
 
-//*******************************************************************************
+//***************
 // Given an origin, attempt to locate the favicon file on the site.
-// Use several methods to find it. Return the path to the site's favicon image.
-//*******************************************************************************
+// Use several methods to find it.
+// Return the path to the site's favicon image.
+//***************
 const getFaviconUrl = async (origin) => {
   try {
     // Step 1: Fetch the homepage HTML to find favicon link tags
@@ -143,11 +144,11 @@ const getFaviconUrl = async (origin) => {
   }
 };
 
-//*******************************************************************************
+//***************
 // Given an origin, favicon URL and domain, download the favicon image and
 // save it to the output directory of the site. Use the domain as the basis
 // for the filename. Return the local path to the saved favicon image.
-//*******************************************************************************
+//***************
 const genFaviconFile = async (origin, faviconUrl, domain) => {
   // Download the actual favicon image
   // Fetch automatically handles caching; subsequent calls return cached data
@@ -197,11 +198,11 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
     return defaultFaviconPath;
   }
 };
-
-//*******************************************************************************
-// Gets the best available favicon for a given URL and stores it locally.
+//***************
+// Gets the best available favicon for a given URL and
+// stores it locally.
 // Returns the local path for use in img src attributes.
-//*******************************************************************************
+//***************
 export const getFavicon = async (link) => {
   // Extract the origin (protocol + hostname + port) from the full URL
   // This ensures we only fetch one favicon per domain, not per page

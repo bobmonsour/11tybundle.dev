@@ -11,10 +11,14 @@ import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 const rssLinkCache = {};
 
-// getRSSlink - given the origin of a site, attempt to extract a link
-// to the site's RSS feed by searching for the appropriate link elements
-// in the site's head element. Cache the result to avoid repeated fetches.
-// Skip this determination of the url is in the exception list.
+//***************
+// given the origin of a site, attempt to extract a link
+// to the site's RSS feed by searching for the appropriate
+// link elements in the site's head element. Cache the
+// result to avoid repeated fetches. Skip the extraction
+// attempt if the origin is in the exception list.
+//***************
+
 export const getRSSLink = async (siteOrigin) => {
   const exceptionItem = exceptionList.find(
     (item) => item.url === siteOrigin && item.rssFail === "true"
