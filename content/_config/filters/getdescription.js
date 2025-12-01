@@ -1,12 +1,11 @@
 // Get the array of exceptions, meaning the array of URLs that will
 // not have their descriptions fetched due to errors.
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
-const exceptionList = require("../../_data/exception-list.json");
-import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
+import exceptionList from "../../_data/exception-list.json" with { type: "json" };
 
 import Fetch from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
+
+import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 let descriptionCache = {};
 
@@ -93,7 +92,7 @@ export const getDescription = async (link) => {
     return descriptionCache[link];
   } catch (e) {
     // console.log("Error fetching description for " + link + " " + e.message);
-    console.log("Error fetching description for " + link);
+    console.log("Error fetching description for " + link + " " + e.message);
     return "";
   }
 };

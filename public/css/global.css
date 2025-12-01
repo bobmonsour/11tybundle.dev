@@ -431,3 +431,9 @@ mark,
     color: var(--text-colour-2);
   }
 }
+
+.favicon {
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-s);
+}

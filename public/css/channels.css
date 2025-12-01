@@ -3,7 +3,8 @@
     display: grid;
     column-gap: var(--grid-gutter);
     grid-template-columns: 1fr;
-    grid-template-areas: "title";
+    grid-template-areas:
+      "title";
 
     &:has(nav) {
       grid-template-columns: 1fr auto;
@@ -14,7 +15,8 @@
         "nav";
 
       @media (width >=768px) {
-        grid-template-areas: "title nav";
+        grid-template-areas:
+        "title nav";
       }
     }
 
@@ -41,8 +43,7 @@
 
   .favicon {
     grid-area: favicon;
-    width: var(--space-l-xl);
-    aspect-ratio: 1;
+    width: 64px;
     border-radius: var(--radius-m);
   }
 
@@ -102,6 +103,7 @@
   .favicon {
     color: var(--header-content);
   }
+
 
   .count {
     color: var(--header-accent);
@@ -245,12 +247,6 @@
     font-size: var(--step-1);
     font-family: var(--font-display-extrablack);
 
-    .favicon {
-      flex: 0 0 var(--space-m-l);
-      width: var(--space-m-l);
-      aspect-ratio: 1;
-      border-radius: var(--radius-m);
-    }
     a {
       flex-grow: 1;
       word-break: break-word;
@@ -276,26 +272,23 @@
   align-content: start;
   gap: var(--space-xs);
   &:has(.favicon) {
-    grid-template-columns: minmax(var(--space-m-l), auto) 1fr;
-    grid-template-areas:
-      "favicon link"
-      "details details";
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "favicon link"
+    "details details";
   }
   &:not(:has(.favicon)) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "link"
-      "details";
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "link"
+    "details";
   }
 
   .favicon {
     grid-area: favicon;
-    aspect-ratio: 1;
-    width: var(--space-m-l);
-    border-radius: var(--radius-m);
   }
 
-  a[href^="http"] {
+  a[href^=http] {
     grid-area: link;
     font-family: var(--font-display-bold);
   }
@@ -306,7 +299,7 @@
     flex-direction: column;
     gap: var(--space-2xs);
     font-size: var(--step--1);
-    > a[href^="http"] {
+    > a[href^='http'] {
       font-size: var(--step-0);
       font-family: var(--font-display-bold);
     }
@@ -344,15 +337,13 @@
   padding: var(--space-s);
   font-size: var(--step--1);
 
-  > li {
+  >li {
     column-gap: var(--space-xs);
     row-gap: var(--space-3xs);
     display: grid;
 
-    @media (width <=768px) {
-      grid-template-columns: 1fr auto;
-      grid-template-areas: "link date";
-    }
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "link date";
 
     @media (width >=768px) {
       grid-template-columns: 1fr;
@@ -362,12 +353,11 @@
     }
 
     &:has(.favicon) {
-      @media (width <=768px) {
-        grid-template-columns: minmax(var(--space-s-m), 12%) 1fr auto;
-        grid-template-areas: "favicon link date";
-      }
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "favicon link date";
+
       @media (width >=768px) {
-        grid-template-columns: minmax(var(--space-s-m), 12%) 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-areas:
           "favicon link"
           "favicon date";
@@ -376,77 +366,12 @@
   }
   .favicon {
     grid-area: favicon;
+
   }
   a {
     grid-area: link;
   }
   time {
     grid-area: date;
-  }
-}
-
-.showcase__grid {
-  display: grid;
-  gap: var(--grid-gutter);
-
-  @media (width >=768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (width >=1024px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.showcase__card {
-  display: flex;
-  flex-direction: column-reverse;
-  margin-block: unset;
-  border-radius: var(--radius-m);
-  background: var(--surface-mid);
-  border: 1px solid var(--surface-fore);
-  overflow: hidden;
-  position: relative;
-
-  figcaption {
-    display: flex;
-    gap: var(--space-2xs);
-    align-items: center;
-    background: oklch(100 0 0);
-    font-size: var(--step--1);
-    border-radius: 999px;
-    margin: var(--space-2xs);
-    padding: var(--space-3xs) var(--space-2xs);
-  }
-
-  a {
-    text-decoration: none;
-    overflow: hidden;
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      inset: 0;
-    }
-    &:hover,
-    &:focus {
-      + .details {
-        clip: auto;
-        height: auto;
-        width: auto;
-        overflow: visible;
-        white-space: normal;
-      }
-    }
-  }
-
-  .details {
-    text-align: center;
-  }
-
-  .favicon {
-    aspect-ratio: 1;
-    width: var(--space-s-m);
-    border-radius: var(--radius-s);
   }
 }

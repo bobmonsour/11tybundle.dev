@@ -17,7 +17,6 @@ import slugifyPackage  from "slugify";
 import bundleRecords from './bundledbtest.json' with { type: 'json' };
 // **************
 
-
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
 import { Buffer } from "buffer";
@@ -25,9 +24,9 @@ import { Buffer } from "buffer";
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
-import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
-import { getSocialLinks } from "../_config/filters/getsociallinks.js";
+import { cacheDuration } from "./cacheconfig.js";
 
+// main function to generate and return the bundle data
 export default async function () {
   // **************
   // THE FULL DATASET CAN BE LOADED FROM THE *** REMOTE *** REPO

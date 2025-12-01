@@ -131,8 +131,10 @@
     gap: var(--space-xs);
   }
 
+
   @media (width >=768px) {
-    padding-inline-end: var(--grid-gutter);
+   padding-right: calc(var(--grid-gutter) * 0.5);
+    margin-right: calc(var(--grid-gutter) * -0.5);
 
     &:not(:last-of-type) {
       border-right: 1px dashed var(--surface-mid);
@@ -151,14 +153,15 @@
   display: grid;
   column-gap: var(--space-2xs);
   row-gap: var(--space-3xs);
-  grid-template-columns: minmax(var(--space-s-m), auto) 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
     "favicon link date";
-  padding: var(--space-2xs);
+  padding: var(--space-2xs) var(--grid-gutter);
   margin-inline: calc(var(--grid-gutter) * -1);
   border-bottom: 1px solid var(--surface-mid);
   @media (width >=768px) {
     margin-inline: unset;
+    padding: var(--space-2xs);
     grid-template-columns: auto 1fr;
     grid-template-areas:
     "favicon link"
@@ -171,9 +174,6 @@
 
   .favicon {
     grid-area: favicon;
-    width: var(--space-s-m);
-    aspect-ratio: 1;
-    border-radius: var(--radius-xs);
   }
 
   a {
@@ -216,13 +216,6 @@
     &:not(:last-of-type) {
       border-bottom: none;
     }
-  }
-
-  .favicon {
-    flex: 0 0 var(--space-m-l);
-    width: var(--space-m-l);
-    aspect-ratio: 1;
-    border-radius: var(--radius-s);
   }
 
   a:first-of-type {
