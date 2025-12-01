@@ -443,20 +443,6 @@ export default async function () {
   console.log("categoryCount: " + categoryCount);
 
   // **************
-  // verify that all blog posts have:
-  //	- title, author, date, link, and one or more categories
-  for (let item of bundleRecords) {
-    if (item["Type"] == "blog post") {
-      if (!item["Title"]) console.log(item["Link"] + " is missing a title");
-      if (!item["Author"]) console.log(item["Title"] + " is missing an author");
-      if (!item["Date"]) console.log(item["Title"] + " is missing a date");
-      if (!item["Link"]) console.log(item["Title"] + " is missing a link");
-      if (!item["Categories"])
-        console.log(item["Title"] + " is missing one or more categories");
-    }
-  }
-
-  // **************
   // return the full set of records and the counts for use
   // on various pages of the site
   return {
