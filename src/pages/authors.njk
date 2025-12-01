@@ -25,9 +25,9 @@
 	{% for item in authorPosts %}
   	{%- set current_year = item.Date | truncate(4, true, '') -%}
 		{%- if current_year != previous_year -%}
-			{%- if previous_year != "no posts yet" -%}
+			{# {%- if previous_year != "no posts yet" -%} #}
 				</details>
-			{%- endif -%}
+			{# {%- endif -%} #}
 			<details {% if current_year == newestPostYear %}open{% endif %}>
 			<summary>{{ current_year }}</summary>
 			{%- set previous_year = current_year -%}
