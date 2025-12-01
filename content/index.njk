@@ -125,9 +125,7 @@ issue: 80
           <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>
           <ul role="list" class="author-links">
-            {{ item.origin | getWebIcon | safe }}
-            {{ item.origin | getRSSIcon | safe }}
-            {{ item.origin | getSocialIcons | safe }}
+            {{ item.origin | getAuthorIcons | safe }}
           </ul>
         </div>
       </article>

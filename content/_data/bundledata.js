@@ -84,6 +84,7 @@ export default async function () {
     rawFirehoseData.map(async (post) => {
       return {
         ...post,
+        slugifiedTitle: slugifyPackage(post.Title, { lower: true, strict: true }),
         slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
         description: await appliedFilters.getDescription(post.Link),
         favicon: await appliedFilters.getFavicon(post.Link),

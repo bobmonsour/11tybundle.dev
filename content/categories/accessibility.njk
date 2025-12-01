@@ -22,7 +22,7 @@
   <nav>
     <div class="container">
       <ul role="list" class="skip-links">
-        {% for year in bundledata.bundleRecords | postYearsInCategory(category.name) %}
+        {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
           <li><a href="#y-{{ year }}">{{ year }}</a></li>
         {% endfor %}
       </ul>
@@ -33,31 +33,34 @@
 {% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
 <section>
   <div class="container">
-    <details name="details" class="directory__layout" open>
-      <summary>
-        <h2 id="2025">2025</h2>
-      </summary>
+    {% for item in bundledata.firehose | postsInCategory(category.name, 0) %}
+  	{%- set current_year = item.Date | truncate(4, true, '') -%}
+		{%- if current_year != previous_year -%}
+			</details>
+
+			<details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
+			<summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
       <article class="directory__grid">
+			{%- set previous_year = current_year -%}
+		{%- endif -%}
         <article class="directory__card directory--detail">
           <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-person-circle"></use>
           </svg> -->
-          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
-          <a href="http://">Mastering Eleventy: Display All Blog Posts from a Category on a Single Page</a>
+          {{item.favicon | safe }}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
-            <p>Have the same topic on your 11ty website and want to view them all on one page? Here's how to do so with
-              just one extra file, and no plugins needed.</p>
-            <time datetime="2025-11-09">Nov 9, 2025</time>
-            <p>By <a href="">Gregory Hammond</a> (2 posts)</p>
-            {%- include "partials/author-links.njk" -%}
+            <p>{{ item.description }}</p>
+            <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+            {%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
+            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ postCount | postCountLabel }})</p>
+            {{ item.Link | getAuthorIcons | safe }}
             <div class="categories-list">
               <strong>Categories</strong>
               <ul role="list">
-                <li><a href="">Accessibility</a></li>
-                <li><a href="">Blogging</a></li>
-                <li><a href="">Configuration</a></li>
-                <li><a href="">Filters</a></li>
-                <li><a href="">Nunjucks/Macros</a></li>
+                {% for category in item.Categories %}
+                  <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
