@@ -15,7 +15,6 @@ import slugifyPackage  from "slugify";
 // IF THIS "import" is uncommented, COMMENT OUT THE REMOTE FETCHING CODE BELOW
 // **************
 import bundleRecords from './bundledbtest.json' with { type: 'json' };
-// **************
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -28,10 +27,11 @@ import { cacheDuration } from "./cacheconfig.js";
 
 // main function to generate and return the bundle data
 export default async function () {
+
   // **************
   // THE FULL DATASET CAN BE LOADED FROM THE *** REMOTE *** REPO
-  // IF THE "const BUNDLEDB_URL" is uncommented, COMMENT OUT THE LOCAL IMPORT ABOVE
-
+  // IF THE "const BUNDLEDB_URL" is uncommented, COMMENT OUT THE LOCAL
+  // IMPORT ABOVE
   // **************
   // const BUNDLEDB_URL =
   //   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
@@ -48,11 +48,33 @@ export default async function () {
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
 
-  //**************************************************************************/
+  // **************
   // firehose is an array of all blog posts in descending date order
-  const rawFirehose = bundleRecords
-    .filter((item) => item["Type"] == "blog post" && !item["Skip"])
-    .sort((a, b) => {
+  // **************
+  // verify the presence of required fields for each blog post
+  const requiredFields = ['Title', 'Author', 'Date', 'Link', 'Categories'];
+  for (let item of bundleRecords) {
+    if (item["Type"] === "blog post" && !item["Skip"]) {
+      const missingFields = [];
+
+      // Check each required field
+      requiredFields.forEach(field => {
+        if (!item[field]) {
+          missingFields.push(field);
+        }
+      });
+
+      // Log error if any fields are missing
+      if (missingFields.length > 0) {
+        const titleDisplay = item["Title"] || "[No Title]";
+        console.error(
+          `Error: Blog post "${titleDisplay}" is missing required fields: ${missingFields.join(', ')}`
+        );
+      }
+    }
+  };
+
+  const rawFirehose = bundleRecords.filter((item) => item["Type"] == "blog post" && !item["Skip"]).sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
 
@@ -74,8 +96,10 @@ export default async function () {
   const firehose = await enrichFirehose(rawFirehose, filters);
   const postCount = firehose.length;
 
-  //**************************************************************************/
-  // generate a list of releases, an array of all releases in descending date order
+  // **************
+  // generate a list of releases, an array of all releases
+  //  in descending date order
+  // **************
   const rawReleaseList = bundleRecords
     .filter((item) => item["Type"] == "release")
     .sort((a, b) => {
@@ -94,8 +118,10 @@ export default async function () {
   const releaseList = await enrichReleaseList(rawReleaseList, filters);
   const releaseCount = releaseList.length;
 
-  //**************************************************************************/
-  // generate a list of sites, an array of all sites in descending date order
+  // **************
+  // generate a list of sites, an array of all sites in
+  // descending date order
+  // **************
   const rawSiteList = bundleRecords
     .filter((item) => item["Type"] == "site" && !item["Skip"])
     .sort((a, b) => {
@@ -119,10 +145,12 @@ export default async function () {
   const siteList = await enrichSiteList(rawSiteList, filters);
   const siteCount = siteList.length;
 
-  //**************************************************************************/
-  // generate the list of starter projects, ordered by date of most recent update
-  // fetch metadata from the GitHub repo and update starter objects
-  async function updateStartersWithMetadata(starters) {
+  // **************
+  // generate two lists of starter projects, one ordered by date of
+  // most recent update and the second by number of GitHub stars
+  // **************
+  const rawStarters = bundleRecords.filter((item) => item["Type"] == "starter");
+  const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
     const cache = new AssetCache(cacheKey, ".cache");
     if (cache.isCacheValid(cacheDuration.starters)) {
@@ -203,32 +231,28 @@ export default async function () {
       return starters;
   };
 
-  const genStarters = async (bundleRecords) => {
-    function extractStarters(bundleRecords) {
-      return bundleRecords.filter((item) => item["Type"] == "starter");
-    }
-    let starters = extractStarters(bundleRecords);
-    // console.log(`Extracted starters: ${starters.length} records`);
-    starters = await updateStartersWithMetadata(starters);
-    // console.log(`Extracted starters: ${starters.length} records`);
-
-    // Sort starters by the date of the last commit in descending order
-    return starters.sort(
+  let starters = await enrichStarters(rawStarters);
+    starters = starters.sort(
       (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
     );
-  };
+  const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
+  const starterCount = starters.length;
 
-  //**************************************************************************/
-  // generate a 2-dimensional array of author names and
-  // a count of each of their posts; records comes from
-  // the firehose array, which are all blog posts
-  // the sortField is the field to sort by:
-  //	  author name in element 0
-  //	  count in element 1
+  // **************
+  // generate a sorted array of author objects, sorted either by name or by
+  // post count, with each author object having the following properties:
+  //  - author name
+  //  - slugified author name
+  //  - first letter of the author's last name/word
+  //  - count of posts by that author
+  //  - origin site of the author's posts
+  //  - origin site info, including:
+  //    - description
+  //    - favicon
+  //    - rss link
+  //    - social links
+  // **************
   const authorList = async (posts, sortField) => {
-
-    // element 2 of each author array is the first letter
-    // of the last name/word in the author's name
     function authorSort(a, b) {
       if (sortField === "name") {
         // Handle undefined values safely
@@ -301,56 +325,30 @@ export default async function () {
     return authorArray.sort(authorSort);
   };
 
+  // **************
   // generate two arrays from the authors:
   //   - one sorted by name
   //   - one sorted by post count
   // total author count; firehose contains all blog posts
   // 2nd param of authorList is the field to sort by, name or count
   // also generate an array of first letters of author last names
+  // **************
   const authors = await authorList(firehose, "name");
-  // console.log("3rd author in array: ", authors[2]);
   const authorsByCount = await authorList(firehose, "count");
   const authorCount = authors.length;
-  // const authorLetters = [...new Set(authors.map(author => author[2]))]
   const authorLetters = [...new Set(authors.map(author => author.firstLetter))]
 
-  // get the most recent 3 posts by unique authors
-  // add postCount property to each post
-  // TODO: SELECT 3 AUTHORS AT RANDOM FROM THE 3 MOST RECENT POSTS
-  //       EACH BUILD SHOULD RESULT IN A DIFFERENT SET OF 3 AUTHORS
-  //       currently it just picks the first 3 unique authors
-  // const recentAuthors = [];
-  // const seenAuthors = new Set();
-  // for (const post of firehose) {
-  //   if (!seenAuthors.has(post.Author)) {
-  //     // Count total posts by this author
-  //     const postCount = firehose.filter(
-  //       (item) => item.Author === post.Author
-  //     ).length;
-
-  //     // Add postCount property to the post object
-  //     post.postCount = postCount;
-
-  //     recentAuthors.push(post);
-  //     seenAuthors.add(post.Author);
-  //     if (recentAuthors.length === 3) break;
-  //   }
-  // };
-
-// get the most recent 3 unique authors from the top 50 posts
-// randomly select 3 posts with unique authors from the most recent 50 posts
-// then extract those author records from the authors array
+  // **************
+  // get the most recent 3 unique authors from the top 50 posts
+  // randomly select 3 posts with unique authors from the most recent 50 posts
+  // then extract those author records from the authors array
+  // **************
   const getRecentAuthors = (firehoseData, authorsData) => {
-    // Get the most recent 50 posts
     const recentPosts = firehoseData.slice(0, 50);
-
-    // Randomly shuffle the posts
     const shuffledPosts = recentPosts.sort(() => Math.random() - 0.5);
-
     // Get 3 posts with unique authors
     const uniqueAuthorPosts = [];
     const seenAuthors = new Set();
-
     for (const post of shuffledPosts) {
       if (!seenAuthors.has(post.Author)) {
         uniqueAuthorPosts.push(post);
@@ -358,7 +356,6 @@ export default async function () {
         if (uniqueAuthorPosts.length === 3) break;
       }
     }
-
     // Extract the 3 author records from the authors array
     const recentAuthorsList = uniqueAuthorPosts.map(post => {
       return authorsData.find(author => author.name === post.Author);
@@ -369,12 +366,13 @@ export default async function () {
 
   const recentAuthors = getRecentAuthors(firehose, authors);
 
-  //**************************************************************************/
-  // generate a map of each category, with the following:
-  //  - category name
+  // **************
+  // generate a sorted array of categories, sorted either by name or by
+  // post count, with each category having the following properties:
+  //  - slugified category name
   //  - count of posts in each category
   //  - first letter of the category
-  //
+  // **************
   const categoryList = (posts, sortField) => {
   function categorySort(a, b) {
     if (sortField == "category") {
@@ -411,12 +409,14 @@ export default async function () {
     .sort(categorySort);
   };
 
-  // generate two maps from the categories:
+  // **************
+  // generate two arrays from the categories:
   //   - one sorted by category name
   //   - one sorted by post count
   // total category count; firehose contains all blog posts
   // 2nd param of categoryList is the field to sort by, name or count
   // also generate an array of unique first letters of categories
+  // **************
   const categories = categoryList(firehose, "category");
   const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
@@ -424,7 +424,6 @@ export default async function () {
     .sort((a, b) => a.localeCompare(b));
 
   // generate the count of posts in the Getting Started category
-// generate the count of posts in the Getting Started category
   let cat = "Getting Started";
   let gettingStartedCount = 0;
   let row = categories.find((row) => row.name === cat);
@@ -434,15 +433,7 @@ export default async function () {
     gettingStartedCount = "more than 40";
   }
 
-  //**************************************************************************/
-  // generate two arrays from the starter projects
-  //   - one sorted by date
-  //   - one sorted by GitHub star count
-  const starters = await genStarters(bundleRecords);
-  const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
-  const starterCount = starters.length;
-
-  //**************************************************************************/
+  // **************
   // log the counts of various items
   console.log("postCount: " + postCount);
   console.log("siteCount: " + siteCount);
@@ -451,7 +442,7 @@ export default async function () {
   console.log("authorCount: " + authorCount);
   console.log("categoryCount: " + categoryCount);
 
-  //**************************************************************************/
+  // **************
   // verify that all blog posts have:
   //	- title, author, date, link, and one or more categories
   for (let item of bundleRecords) {
@@ -465,7 +456,7 @@ export default async function () {
     }
   }
 
-  //**************************************************************************/
+  // **************
   // return the full set of records and the counts for use
   // on various pages of the site
   return {
