@@ -239,8 +239,9 @@ export default async function () {
   const starterCount = starters.length;
 
   // **************
-  // generate a sorted array of author objects, sorted either by name or by
-  // post count, with each author object having the following properties:
+  // generate a sorted array of author objects, sorted either
+  // by name or by post count, with each author object having
+  // the following properties:
   //  - author name
   //  - slugified author name
   //  - first letter of the author's last name/word
