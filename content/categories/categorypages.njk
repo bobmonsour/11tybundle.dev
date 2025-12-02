@@ -13,70 +13,70 @@
 	}
 }
 ---
-{#
-  Build each of the individual category pages.
+<header class="main-header">
+  <div class="container">
+    <h1>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count }}</data></h1>
+  </div>
+</header>
+<section>
+  <nav>
+    <div class="container">
+      <ul role="list" class="skip-links">
+        {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
+          <li><a href="#y-{{ year }}">{{ year }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</section>
+{% set newestPost = bundledata.firehose | postsInCategory(category.name, 0) | first %}
+{% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
+{% set current_year = newestPostYear %}
+{% set previous_year = current_year %}
 
-	If the category has an equivalent page on the 11ty docs site, then display a link to it.
-	The linkstodocs object is defined in the linkstodocs.json file in the _data directory.
-	Each key in the object is a category name, and the value is the URL of the page on the
-	11ty docs site. In the special case of the Deployment category, an additional link is
-	displayed, linking to the list of deployment providers on the 11ty docs site.
+<section>
+  <div class="container">
+    <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
+      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <article class="directory__grid">
+    {% for item in bundledata.firehose | postsInCategory(category.name, 0) %}
+  	{% set current_year = item.Date | truncate(4, true, '') %}
+    {% if (current_year != previous_year) %}
+          </details>
+        </div>
+      </section>
+    {% set previous_year = current_year %}
+<section>
+  <div class="container">
+    <details name="details" class="directory__layout">
+      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <article class="directory__grid">
+    {% endif %}
 
-  Then list all posts by that author, grouped by year, with cautionary notes
-  depending on the post date relative to stable releases of Eleventy.
-#}
-
-{% if linkstodocs[category[0]] %}
-<h2>Official 11ty docs</h2>
-<div class="officialdocs">
-	<p class="bundleitem-title"><a href="{{ linkstodocs[category[0]] }}">{{ category[0] }}</a></p>
-	<p class="bundleitem-description">{{ linkstodocs[category[0]] | getDescription | truncate(100) }}</p>
-	{%- if category[0] == "Deployment" %}
-	<p class="bundleitem-description">See the <a href="https://www.11ty.dev/docs/deployment/#providers">list of providers on the 11ty docs site.</a></p>
-	{%- endif %}
-</div>
-{% endif %}
-
-<h1 title="{{ category[0] }}" data-pagefind-meta="title:{{ category[0] }} ({{ category[1] }} posts)">{{ title }}<span class="reduced-to-md"> ({{ category[1] }})</span></h1>
-
-<div class="category-year-nav">
-  {% for year in bundledata.bundleRecords | postYearsInCategory(category[0]) %}
-    <a href="#{{ year }}" class="category-nav-link">{{ year }}</a>
-  {% endfor %}
-</div>
-{#
-	Note that in the case of the "From the Source" category, no caution items are inserted as they are not relevant to this category.
-#}
-<div class="bundleposts" data-pagefind-body>
-	{# {% set v1cautionshown = false %}
-	{% set v2cautionshown = false %}
-  {% set v3cautionshown = false %} #}
-  {%- set newestPost = bundledata.bundleRecords | postsInCategory(category[0], 0) | first -%}
-  {% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
-
-	{% for item in bundledata.bundleRecords | postsInCategory(category.name, 0) %}
-  	{%- set current_year = item.Date | truncate(4, true, '') -%}
-		{%- if current_year != previous_year -%}
-			{%- if previous_year != "no posts yet" -%}
-				</details>
-			{%- endif -%}
-			<details {% if current_year == newestPostYear %}open{% endif %}>
-			<summary id="{{ current_year }}">{{ current_year }}</summary>
-			{%- set previous_year = current_year -%}
-		{%- endif -%}
-		{# {% if item.Date < cautioninfo.v1releasedate and not v1cautionshown %}
-			{% include "partials/v1caution.njk" %}
-			{% set v1cautionshown = true %}
-		{% endif %}
-		{% if item.Date < cautioninfo.v2releasedate and not v2cautionshown %}
-			{% include "partials/v2caution.njk" %}
-			{% set v2cautionshown = true %}
-		{% endif %}
-		{% if item.Date < cautioninfo.v3releasedate and not v3cautionshown %}
-			{% include "partials/v3caution.njk" %}
-			{% set v3cautionshown = true %}
-		{% endif %} #}
-		{% set postCount = bundledata.firehose | postCountByAuthor(item.Author) %}
-		{% singlePost item, "category", category.name, postCount %}
-	{% endfor %}
-</div>
+			  <article class="directory__card directory--detail">
+          {% set nonYoutubePost = bundledata.firehose | getNonYoutubePostByAuthor(item.Author) %}
+          {{ nonYoutubePost.favicon | safe }}
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
+          <div class="details">
+            <p>{{ item.description | safe }}</p>
+            <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+            {%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
+            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ postCount | postCountLabel }})</p>
+            <ul role="list" class="author-links">
+              {{ nonYoutubePost.Link | getAuthorIcons | safe }}
+            </ul>
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                {% for category in item.Categories %}
+                  <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+      </article>
+    {% endfor %}
+      </article>
+    </details>
+  </div>
+</section>

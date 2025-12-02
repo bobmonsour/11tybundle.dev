@@ -10,3 +10,20 @@ export const getNonYoutubePost = (posts) => {
   }
   return null; // or return undefined if no non-YouTube post is found
 };
+
+// Sometimes, we are listing posts on a category page where
+// the most recent post by an author is a YouTube link. In that case,
+// we want to find the most recent non-YouTube post by that author
+// to display instead. This function takes an array of posts and
+// an author name, and returns the most recent non-YouTube post
+// by that author.
+export const getNonYoutubePostByAuthor = (posts, author) => {
+  const sortedPosts = posts.sort((a, b) => {
+    return new Date(b.Date) - new Date(a.Date);
+  });
+  for (const post of sortedPosts)
+    if (!post.Link.includes("youtube.com") && post.Author === author) {
+      return post;
+    }
+  return null;
+};

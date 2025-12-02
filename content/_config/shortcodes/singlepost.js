@@ -1,7 +1,7 @@
 import { formatItemDate } from "../filters/datesandnumbers.js";
 import { getDescription } from "../filters/getdescription.js";
 import { getFavicon } from "../filters/getfavicon.js";
-import { getRSSIcon, getWebIcon } from "../filters/getwebandrssicons.js";
+import { getAuthorIcons } from "../filters/getauthoricons.js";
 import { getSocialIcons } from "../filters/getsocialicons.js";
 
 // Create a single post item for the category, author, and firehose pages
@@ -58,8 +58,7 @@ export default function (eleventyConfig) {
         case "https://medium.com":
           break;
         default:
-          rssIcon = await getRSSIcon(post.Link);
-          webIcon = await getWebIcon(post.Link);
+          rssIcon = await getAuthorIcons(post.Link);
           break;
       }
       const date = formatItemDate(post.Date);
@@ -91,7 +90,6 @@ export default function (eleventyConfig) {
 					<p class="bundleitem-description">${description}</p>
 					<p class="bundleitem-date">${date}</p>
 					<p class="bundleitem-dateline">by <a href="/authors/${authorSlug}/">${post.Author}</a> (${postCount})</p>
-					${webIcon}${rssIcon}${socialIcons}
           <p class="bundleitem-categories" data-pagefind-ignore>Categories: ${categories}</p>
 				</div>`;
     }

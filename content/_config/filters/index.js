@@ -8,12 +8,15 @@ import {
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
-import { getNonYoutubePost } from "./getnonyoutubepost.js";
-import { getOrigin } from "./getorigin.js";
+import {
+  getNonYoutubePost,
+  getNonYoutubePostByAuthor,
+} from "./getnonyoutubepost.js";
+import { getOrigin, getHostname } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
 import { getSocialIcons } from "./getsocialicons.js";
 import { getSocialLinks } from "./getsociallinks.js";
-import { getWebIcon, getRSSIcon } from "./getwebandrssicons.js";
+import { getAuthorIcons } from "./getauthoricons.js";
 import { plainDate } from "./datesandnumbers.js";
 import { postCountLabel } from "./postcountlabel.js";
 import { postCountByAuthor, postsByAuthor } from "./postsbyauthor.js";
@@ -32,12 +35,13 @@ export const filters = {
   getDescription,
   getFavicon,
   getNonYoutubePost,
+  getNonYoutubePostByAuthor,
   getOrigin,
-  getRSSIcon,
+  getHostname,
   getRSSLink,
   getSocialIcons,
   getSocialLinks,
-  getWebIcon,
+  getAuthorIcons,
   plainDate,
   postCountByAuthor,
   postCountLabel,

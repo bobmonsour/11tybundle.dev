@@ -346,7 +346,9 @@ export default async function () {
   // then extract those author records from the authors array
   // **************
   const getRecentAuthors = (firehoseData, authorsData) => {
-    const recentPosts = firehoseData.slice(0, 50);
+    const recentPosts = firehoseData
+    .filter(post => !post.Link.includes('youtube.com'))
+    .slice(0, 50);
     const shuffledPosts = recentPosts.sort(() => Math.random() - 0.5);
     // Get 3 posts with unique authors
     const uniqueAuthorPosts = [];
