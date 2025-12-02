@@ -3,7 +3,7 @@
 let sliceCount = 0;
 export const postsInCategory = (bundleitems, category, count) => {
   function postInCategory(item) {
-    if (count == 0) {
+    if (count == 0 || count == null) {
       sliceCount = 100000;
     } else {
       sliceCount = count;

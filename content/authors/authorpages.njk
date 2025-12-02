@@ -1,35 +1,42 @@
 ---js
 {
 	eleventyComputed: {
-		title: "{{ category.name }}",
-		description: "Posts in the 11ty Bundle with the category: {{ category.name }}",
-		permalink: "/categories/{{ category.slugifiedCategory }}/",
+		title: "{{ author.name }}",
+		description: "Posts in the 11ty Bundle by: {{ author.name }}",
+		permalink: "/authors/{{ author.slugifiedName }}/",
 	},
 	pagination:	{
-		data: "bundledata.categories",
+		data: "bundledata.authors",
 		size: 1,
-		alias: "category",
+		alias: "author",
 		addAllPagesToCollections: "true",
 	}
 }
 ---
 <header class="main-header">
   <div class="container">
-    <h1>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count }}</data></h1>
+    {{ author.favicon | safe }}<h1>{{ author.name }} <data class="count" value="{{ author.count }}">{{ author.count }}</data></h1>
+    <div class="details">
+      <p>{{ author.description }}</p>
+      {% set nonYoutubePost = bundledata.firehose | getNonYoutubePostByAuthor(author.name) %}
+      <ul role="list" class="author-links">
+      {{ nonYoutubePost.Link | getAuthorIcons |safe }}
+      </ul>
+    </div>
   </div>
 </header>
 <section>
   <nav>
     <div class="container">
       <ul role="list" class="skip-links">
-        {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
+        {% for year in bundledata.firehose | postYearsInAuthor(author.name) %}
           <li><a href="#y-{{ year }}">{{ year }}</a></li>
         {% endfor %}
       </ul>
     </div>
   </nav>
 </section>
-{% set newestPost = bundledata.firehose | postsInCategory(category.name, 0) | first %}
+{% set newestPost = bundledata.firehose | postsByAuthor(author.name, 0) | first %}
 {% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
 {% set current_year = newestPostYear %}
 {% set previous_year = current_year %}
@@ -39,7 +46,7 @@
     <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
       <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
       <article class="directory__grid">
-    {% for item in bundledata.firehose | postsInCategory(category.name, 0) %}
+    {% for item in bundledata.firehose | postsByAuthor(author.name, 0) %}
   	{% set current_year = item.Date | truncate(4, true, '') %}
     {% if (current_year != previous_year) %}
           </details>
@@ -54,16 +61,11 @@
     {% endif %}
 
 			  <article class="directory__card directory--detail">
-          {% set nonYoutubePost = bundledata.firehose | getNonYoutubePostByAuthor(item.Author) %}
-          {{ nonYoutubePost.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
+          <a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
             <p>{{ item.description | safe }}</p>
             <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
             {%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
-            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ postCount | postCountLabel }})</p>
-            <ul role="list" class="author-links">
-              {{ nonYoutubePost.Link | getAuthorIcons | safe }}
-            </ul>
             <div class="categories-list">
               <strong>Categories</strong>
               <ul role="list">

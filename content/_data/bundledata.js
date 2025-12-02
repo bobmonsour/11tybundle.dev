@@ -274,8 +274,6 @@ export default async function () {
 
     const authorMap = new Map();
     for (let item of posts) {
-      // Skip items with missing authors
-      if (!item.Author) continue;
 
       const existing = authorMap.get(item.Author);
       const origin = filters.getOrigin(item.Link);
@@ -311,8 +309,8 @@ export default async function () {
 
     // Convert map to array of objects
     const authorArray = await Promise.all(
-      Array.from(authorMap).map(async ([name, data]) => ({
-        name: data.name,
+      Array.from(authorMap).map(async ( [name, data]) => ({
+        name,
         slugifiedName: data.slugifiedName,
         firstLetter: data.firstLetter,
         count: data.count,

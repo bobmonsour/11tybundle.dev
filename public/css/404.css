@@ -1,0 +1,75 @@
+.page-not-found {
+  height: stretch;
+  background: linear-gradient(oklch(0.75 0.075 240) 62%, oklch(0.75 0.075 60) 62%);
+}
+
+.screen {
+  fill: var(--screen);
+}
+
+.error {
+  transform: translate(720px, 310px);
+  transform-box: fill-box;
+  transform-origin: top left;
+  font-family: var(--font-brand);
+  fill: currentColor;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.error__code,
+.error__message {
+  font-family: var(--font-brand);
+  font-size: var(--step-5);
+}
+
+.error__code {
+  font-size: var(--step-5);
+}
+
+.error__message {
+  font-size: var(--step-4);
+}
+
+.date {
+  transform: translate(1200px, 154px);
+  transform-box: fill-box;
+  transform-origin: top left;
+  font-family: var(--font-brand);
+  fill: currentColor;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.date__month {
+  font-size: var(--step-4);
+  fill: oklch(100 0 0);
+}
+
+.date__day {
+  font-size: var(--step-5);
+  fill: var(--greyscale-9);
+}
+
+@media screen {
+  [data-theme=light] {
+    --screen: var(--primary-2);
+  }
+
+  [data-theme=dark] {
+    --screen: var(--greyscale-9);
+  }
+}
+.reveal {
+  animation: reveal 4s linear infinite 2s;
+}
+
+@keyframes reveal {
+  0% {
+    y: 455px;
+  }
+
+  100% {
+    y: 305px;
+  }
+}
