@@ -55,7 +55,7 @@
   .calendar {
     position: absolute;
     right: var(--space-s);
-    top: calc(var(--space-s) * -1);
+    top: calc(var(--space-s) * -.5);
   }
 
   p {

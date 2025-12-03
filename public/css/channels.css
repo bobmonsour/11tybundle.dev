@@ -113,6 +113,9 @@
     gap: unset;
     a {
       color: var(--header-accent);
+      &:hover {
+        color: var(--header-content);
+      }
     }
   }
 
@@ -323,6 +326,7 @@
     a {
       display: flex;
       background: var(--surface-back);
+      border: 1px solid var(--surface-fore);
       padding: var(--space-3xs) var(--space-2xs);
       border-radius: 999px;
       text-decoration: none;

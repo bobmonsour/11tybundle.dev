@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -19,17 +25,8 @@ body {
     "footer";
 }
 
-em {
-  font-family: var(--font-display-regular-italic);
-}
-
 strong {
   font-family: var(--font-display-bold);
-}
-
-em strong,
-strong em {
-  font-family: var(--font-display-bold-italic);
 }
 
 small {
@@ -126,6 +123,9 @@ dd {
 
 a {
   color: currentColor;
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
   &:hover {
     text-decoration: none;
   }
@@ -217,7 +217,7 @@ img {
 }
 
 blockquote {
-  font-family: var(--font-display-regular-italic);
+  font-style: italic;
   font-size: var(--step-1);
   border-left: 4px solid var(--surface-fore);
   margin-inline: unset;
@@ -327,6 +327,18 @@ mark,
   margin-inline: auto;
 }
 
+.surface-back {
+  background: var(--surface-back);
+}
+
+.surface-mid {
+  background: var(--surface-mid);
+}
+
+.surface-fore {
+  background: var(--surface-fore);
+}
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -368,6 +380,7 @@ mark,
   corner-shape: squircle;
   transform: rotate(5deg);
   line-height: 1;
+  margin-block-start: unset;
   position: relative;
   &:before {
     content: "";
@@ -429,6 +442,9 @@ mark,
     display: flex;
     font-size: var(--step--1);
     color: var(--text-colour-2);
+    &:hover {
+      color: var(--text-colour-1);
+    }
   }
 }
 

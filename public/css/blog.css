@@ -1,20 +1,21 @@
-article {
+.post__layout {
   display: grid;
   gap: var(--grid-gutter);
   grid-template-columns: 1fr;
 
-  h1 {
-    font-family: var(--font-display-bold);
-    font-size: var(--step-2);
+  .pagination {
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (width >=768px) {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: start;
 
     .calendar {
-      grid-column: 12 / 13;
+      grid-column: 1 / 2;
       grid-row: 1;
+      justify-self: end;
     }
 
     .prose {
@@ -22,39 +23,51 @@ article {
     }
 
     .prose,
-    aside {
-      grid-column: 2 / 12;
+    aside,
+    nav {
+      grid-column: 2 / 8;
     }
   }
 }
 
-.blog__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.post__title {
+  font-family: var(--font-display-bold);
+  font-size: clamp(1.35rem, 0.9723rem + 1.6788vw, 2.4413rem);
+}
+
+.post__list {
+  display: flex;
+  flex-direction: column;
   gap: var(--grid-gutter);
 }
 
-.blog__item {
+.post__item {
   display: grid;
-  align-items: start;
-  column-gap: var(--grid-gutter);
-  row-gap: var(--space-2xs);
-  grid-template-areas:
-    "title calendar"
-    "meta calendar";
-  grid-template-columns: 1fr auto;
+  gap: var(--grid-gutter);
+  grid-template-columns: 1fr;
 
-  >h2 {
-    grid-area: title;
-    margin-block: unset;
-  }
-
-  .calendar {
-    grid-area: calendar;
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1lh;
   }
 
   .meta {
-    grid-area: meta;
-    margin-block: unset;
+    margin-block-start: unset;
+  }
+   @media (width >=768px) {
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+
+    .calendar {
+      grid-column: 1 / 2;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    .details {
+      grid-row: 1;
+      grid-column: 2 / 8;
+    }
   }
 }
