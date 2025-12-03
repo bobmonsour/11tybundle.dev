@@ -423,15 +423,18 @@ for (let post of firehose) {
     if (!item.Categories || !Array.isArray(item.Categories)) continue;
     if (item.Skip) continue;
 
-    item.Categories.forEach((category) => {
+    for (const category of item.Categories) {
       const existing = categoryMap.get(category);
-      const postCount = existing ? existing.count : 0;
-      categoryMap.set(category, {
-        slugifiedCategory: slugifyPackage(category, { lower: true, strict: true }),
-        count: postCount + 1,
-        firstLetter: category.charAt(0),
-      });
-    });
+      if (existing) {
+        existing.count += 1;
+      } else {
+        categoryMap.set(category, {
+          slugifiedCategory: slugifyPackage(category, { lower: true, strict: true }),
+          count: 1,
+          firstLetter: category.charAt(0),
+        });
+      }
+    };
   }
   return Array.from(categoryMap)
     .map(([name, data]) => ({
