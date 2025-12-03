@@ -61,7 +61,7 @@
             {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
             <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | postCountLabel }})</p>
             <ul role="list" class="author-links">
-              {{ authorRecord.nonYoutubePostLink | getAuthorIcons | safe }}
+              {{ authorRecord.origin | getAuthorIcons | safe }}
             </ul>
             <div class="categories-list">
               <strong>Categories</strong>

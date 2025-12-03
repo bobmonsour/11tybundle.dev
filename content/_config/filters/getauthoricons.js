@@ -1,19 +1,17 @@
 import { getRSSLink } from "../filters/getrsslink.js";
 import { getSocialLinks } from "../filters/getsociallinks.js";
 
-export const getWebIcon = async (link) => {
-  // console.log("Getting web icon for link:", link);
-  const url = new URL(link);
-  const siteUrl = url.origin;
-  return `<li><a href="${siteUrl}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+// get the web icon HTML for an aothor's web origin
+export const getWebIcon = async (origin) => {
+  // console.log("Getting web icon for origin:", origin);
+  return `<li><a href="${origin}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
   <use xlink:href="#icon-globe"></use>
   </svg><span class="visually-hidden">Website</span></a></li>`;
 };
 
-export const getRSSIcon = async (link) => {
-  const url = new URL(link);
-  const siteUrl = url.origin;
-  let rssLink = await getRSSLink(siteUrl);
+// get the rss icon HTML for an aothor's web origin
+export const getRSSIcon = async (origin) => {
+  let rssLink = await getRSSLink(origin);
   return rssLink === ""
     ? ""
     : `<li><a href="${rssLink}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
@@ -21,8 +19,9 @@ export const getRSSIcon = async (link) => {
       </svg><span class="visually-hidden">RSS</span></a></li>`;
 };
 
-export async function getSocialIcons(link) {
-  const socialLinks = await getSocialLinks(link);
+// get the social media icons HTML for an aothor's web origin
+export async function getSocialIcons(origin) {
+  const socialLinks = await getSocialLinks(origin);
   // console.log("Social links: ", socialLinks);
 
   // Generate social media img elements from the socialLinks object
@@ -48,10 +47,10 @@ export async function getSocialIcons(link) {
   return socialIcons;
 }
 
-export async function getAuthorIcons(link) {
-  const webIcon = await getWebIcon(link);
-  const rssIcon = await getRSSIcon(link);
-  const socialIcons = await getSocialIcons(link);
+export async function getAuthorIcons(origin) {
+  const webIcon = await getWebIcon(origin);
+  const rssIcon = await getRSSIcon(origin);
+  const socialIcons = await getSocialIcons(origin);
 
   let allIcons = "";
   if (webIcon !== "") {
