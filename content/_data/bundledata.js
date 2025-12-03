@@ -78,12 +78,17 @@ export default async function () {
   // helper function to check if a link is a Youtube link
   const isYoutubeLink = (link) => {
   const origin = filters.getOrigin(link);
-  return origin === "https://www.Youtube.com" || origin === "https://Youtube.com";
+  return origin === "https://www.youtube.com" || origin === "https://youtube.com";
   };
 
-  const rawFirehose = bundleRecords.filter((item) => item["Type"] === "blog post" && !item["Skip"]).sort((a, b) => {
-      return new Date(b.Date) - new Date(a.Date);
-    });
+  // Pre-compute YouTube status and create rawFirehose
+  const rawFirehose = bundleRecords
+    .filter((item) => item["Type"] === "blog post" && !item["Skip"])
+    .map(item => ({
+      ...item,
+      isYoutube: isYoutubeLink(item.Link), // Pre-compute YouTube status
+    }))
+    .sort((a, b) => new Date(b.Date) - new Date(a.Date));
 
   // enrich each post in the firehose with:
   //  - the slugified title
@@ -100,6 +105,7 @@ export default async function () {
           slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
           description: await appliedFilters.getDescription(post.Link),
           formattedDate: await appliedFilters.formatItemDate(post.Date),
+          // isYoutube is already on the post object from rawFirehose
         };
       })
     );
@@ -279,7 +285,7 @@ export default async function () {
       const existing = authorMap.get(item.Author);
       const origin = filters.getOrigin(item.Link);
       // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
-      const isYoutube = isYoutubeLink(item.Link);
+      const isYoutube = item.isYoutube; // Use pre-computed YouTube status
 
       if (existing) {
         // Author exists, increment count
@@ -354,7 +360,7 @@ export default async function () {
   const seenAuthors = new Set();
 
   for (const post of firehoseData) {
-    if (isYoutubeLink(post.Link)) continue;
+    if (post.isYoutube) continue;
 
     if (!seenAuthors.has(post.Author)) {
       uniqueAuthorPosts.push(post);
