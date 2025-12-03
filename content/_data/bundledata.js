@@ -393,12 +393,15 @@ export default async function () {
   // firehose. This takes care of the issue of Youtube links
   // not having favicons.
   // **************
-  for (let post of firehose) {
-    const authorRecord = authors.find(author => author.name === post.Author);
-    if (authorRecord && authorRecord.favicon) {
-      post.favicon = authorRecord.favicon;
-    };
-  };
+// Create Map once before the loop
+const authorsByName = new Map(authors.map(author => [author.name, author]));
+
+for (let post of firehose) {
+  const authorRecord = authorsByName.get(post.Author);  // O(1) lookup
+  if (authorRecord && authorRecord.favicon) {
+    post.favicon = authorRecord.favicon;
+  }
+}
 
   // **************
   // generate a sorted array of categories, sorted either by name or by
