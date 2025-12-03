@@ -4,5 +4,6 @@ export default {
   eleventyComputed: {
     month: () => DateTime.now().toFormat("LLL").toUpperCase(),
     day: () => DateTime.now().toFormat("dd"),
+    permalink: "/404.html",
   },
 };

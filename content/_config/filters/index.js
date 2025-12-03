@@ -23,6 +23,7 @@ import { getAuthorRecord, postsByAuthor } from "./postsbyauthor.js";
 import { postsInCategory } from "./postsincategory.js";
 import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
+import { postYearsInFirehose } from "./postyearsinfirehose.js";
 import { readingTime } from "./readingtime.js";
 
 export const filters = {
@@ -50,6 +51,7 @@ export const filters = {
   postsInCategory,
   postYearsInAuthor,
   postYearsInCategory,
+  postYearsInFirehose,
   readingTime,
 };
 
