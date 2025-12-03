@@ -49,7 +49,7 @@
 <section>
   <div class="container">
     <details name="details" class="directory__layout">
-      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <summary id="y-{{ current_year }}"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
       <article class="directory__grid">
     {% endif %}
 

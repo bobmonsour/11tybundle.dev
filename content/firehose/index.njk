@@ -49,7 +49,7 @@
 <section>
   <div class="container">
     <details name="details" class="directory__layout">
-      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <summary id="y-{{ current_year }}"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
       <article class="directory__grid">
     {% endif %}
 
@@ -81,7 +81,4 @@
     </details>
   </div>
 </section>
-<div id="popover-3-0-0" popover>Some content below was published before the release of Eleventy v3.0.0 (October 1,
-  2024). Information may have changed in newer versions. Current stable release: 3.12.</div>
-<div id="popover-2-0-0" popover>Some content below was published before the release of Eleventy v2.0.0 (Feb 8, 2023).
-  Information may have changed in newer versions. Current stable release: 3.12.</div>
+{% include "partials/releasepopovers.njk" %}
