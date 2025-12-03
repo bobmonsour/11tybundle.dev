@@ -48,7 +48,7 @@ issue: 80
             <li class="feeds__item">
               {{ item.favicon | safe }}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
-              <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+              <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
             </li>
           {%- endfor -%}
         </ol>
@@ -63,7 +63,7 @@ issue: 80
             <li class="feeds__item">
               {{ item.favicon | safe}}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
-              <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+              <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
             </li>
           {%- endfor -%}
         </ol>
