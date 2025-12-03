@@ -12,7 +12,8 @@ import slugifyPackage  from "slugify";
 // **************
 // A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
 // FOR FASTER LOCAL BUILDING
-// IF THIS "import" is uncommented, COMMENT OUT THE REMOTE FETCHING CODE BELOW
+// IF THIS "import" is uncommented, COMMENT OUT THE REMOTE
+// FETCHING CODE BELOW
 // **************
 import bundleRecords from './bundledbtest.json' with { type: 'json' };
 
@@ -74,7 +75,13 @@ export default async function () {
     }
   };
 
-  const rawFirehose = bundleRecords.filter((item) => item["Type"] == "blog post" && !item["Skip"]).sort((a, b) => {
+  // helper function to check if a link is a Youtube link
+  const isYoutubeLink = (link) => {
+  const origin = filters.getOrigin(link);
+  return origin === "https://www.Youtube.com" || origin === "https://Youtube.com";
+  };
+
+  const rawFirehose = bundleRecords.filter((item) => item["Type"] === "blog post" && !item["Skip"]).sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
 
@@ -106,7 +113,7 @@ export default async function () {
   //  in descending date order
   // **************
   const rawReleaseList = bundleRecords
-    .filter((item) => item["Type"] == "release")
+    .filter((item) => item["Type"] === "release")
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
@@ -128,7 +135,7 @@ export default async function () {
   // descending date order
   // **************
   const rawSiteList = bundleRecords
-    .filter((item) => item["Type"] == "site" && !item["Skip"])
+    .filter((item) => item["Type"] === "site" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
@@ -154,7 +161,7 @@ export default async function () {
   // generate two lists of starter projects, one ordered by date of
   // most recent update and the second by number of GitHub stars
   // **************
-  const rawStarters = bundleRecords.filter((item) => item["Type"] == "starter");
+  const rawStarters = bundleRecords.filter((item) => item["Type"] === "starter");
   const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
     const cache = new AssetCache(cacheKey, ".cache");
@@ -267,7 +274,7 @@ export default async function () {
         const nameB = b.firstLetter || "";
         return nameA.localeCompare(nameB); // Sort by first letter of last name/word
       } else {
-        return a.count < b.count ? 1 : -1; // Sort by count descending
+        return b.count - a.count; // Sort by count descending
       }
     }
 
@@ -279,18 +286,21 @@ export default async function () {
 
     const authorMap = new Map();
     for (let item of posts) {
+      // Skip items with missing author names
+      if (!item.Author) continue;
+      if (item.Skip) continue;
 
       const existing = authorMap.get(item.Author);
       const origin = filters.getOrigin(item.Link);
       // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
-      const isYouTube = (origin === "https://www.youtube.com" || origin === "https://youtube.com");
+      const isYoutube = isYoutubeLink(item.Link);
 
       if (existing) {
         // Author exists, increment count
         existing.count += 1;
 
-        // If we don't have origin data yet (was YouTube before), capture it now
-        if (!existing.origin && !isYouTube) {
+        // If we don't have origin data yet (was Youtube before), capture it now
+        if (!existing.origin && !isYoutube) {
           existing.origin = origin;
           existing.description = await filters.getDescription(origin);
           existing.favicon = await filters.getFavicon(item.Link);
@@ -305,12 +315,12 @@ export default async function () {
           slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
-          origin: isYouTube ? null : origin,
-          description: isYouTube ? null : await filters.getDescription(origin),
-          favicon: isYouTube ? null : await filters.getFavicon(item.Link),
-          rssLink: isYouTube ? null : await filters.getRSSLink(origin),
-          socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
-          nonYoutubePostLink: isYouTube ? null : item.Link,
+          origin: isYoutube ? null : origin,
+          description: isYoutube ? null : await filters.getDescription(origin),
+          favicon: isYoutube ? null : await filters.getFavicon(item.Link),
+          rssLink: isYoutube ? null : await filters.getRSSLink(origin),
+          socialLinks: isYoutube ? null : await filters.getSocialLinks(item.Link),
+          nonYoutubePostLink: isYoutube ? null : item.Link,
         });
       }
     }
@@ -354,7 +364,7 @@ export default async function () {
   // **************
   const getRecentAuthors = (firehoseData, authorsData) => {
     const recentPosts = firehoseData
-    .filter(post => !post.Link.includes('youtube.com'))
+    .filter(post => !isYoutubeLink(post.Link))
     .slice(0, 50);
     const shuffledPosts = recentPosts.sort(() => Math.random() - 0.5);
     // Get 3 posts with unique authors
@@ -380,7 +390,7 @@ export default async function () {
   // **************
   // Now that the firehose and author arrays are built, we
   // need to add the author's favicon to each post in the
-  // firehose. This takes care of the issue of YouTube links
+  // firehose. This takes care of the issue of Youtube links
   // not having favicons.
   // **************
   for (let post of firehose) {
@@ -399,19 +409,20 @@ export default async function () {
   // **************
   const categoryList = (posts, sortField) => {
   function categorySort(a, b) {
-    if (sortField == "category") {
+    if (sortField === "category") {
       // Handle undefined values safely
       const catA = a.name || "";
       const catB = b.name || "";
       return catA.localeCompare(catB);
     } else {
-      return a.count < b.count ? 1 : -1;
+      return b.count - a.count; // Sort by count descending
     }
   }
   let categoryMap = new Map();
   for (let item of posts) {
     // Skip items with missing categories
     if (!item.Categories || !Array.isArray(item.Categories)) continue;
+    if (item.Skip) continue;
 
     item.Categories.forEach((category) => {
       const existing = categoryMap.get(category);
@@ -447,16 +458,6 @@ export default async function () {
   const categoryLetters = [...new Set(categories.map(category => category.firstLetter))]
     .sort((a, b) => a.localeCompare(b));
 
-  // generate the count of posts in the Getting Started category
-  let cat = "Getting Started";
-  let gettingStartedCount = 0;
-  let row = categories.find((row) => row.name === cat);
-  if (row) {
-    gettingStartedCount = row.count;
-  } else {
-    gettingStartedCount = "more than 40";
-  }
-
   // **************
   // log the counts of various items
   console.log("postCount: " + postCount);
@@ -489,6 +490,5 @@ export default async function () {
     categoriesByCount,
     categoryCount,
     categoryLetters,
-    gettingStartedCount,
   };
 }
