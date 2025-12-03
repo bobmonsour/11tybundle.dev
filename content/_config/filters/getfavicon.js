@@ -27,7 +27,7 @@ const genFaviconImg = async (faviconPath) => {
 
     // use the resolved favicon path for the site/user
   } else {
-    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon"></img>`;
+    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" eleventy:ignore></img>`;
   }
   return imgElement;
 };
@@ -152,6 +152,8 @@ const getFaviconUrl = async (origin) => {
 const genFaviconFile = async (origin, faviconUrl, domain) => {
   // Download the actual favicon image
   // Fetch automatically handles caching; subsequent calls return cached data
+  // console.log("generate favicon for ", origin);
+
   try {
     const faviconBuffer = await Fetch(faviconUrl, {
       directory: ".cache", // Store in eleventy's cache directory
