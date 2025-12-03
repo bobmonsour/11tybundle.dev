@@ -106,6 +106,7 @@ export default async function () {
           description: await appliedFilters.getDescription(post.Link),
           formattedDate: await appliedFilters.formatItemDate(post.Date),
           // isYoutube is already on the post object from rawFirehose
+          // author's favicon gets added later, after authors array is built
         };
       })
     );
@@ -389,15 +390,15 @@ export default async function () {
   // firehose. This takes care of the issue of Youtube links
   // not having favicons.
   // **************
-// Create Map once before the loop
-const authorsByName = new Map(authors.map(author => [author.name, author]));
+  // Create Map once before the loop
+  const authorsByName = new Map(authors.map(author => [author.name, author]));
 
-for (let post of firehose) {
-  const authorRecord = authorsByName.get(post.Author);  // O(1) lookup
-  if (authorRecord && authorRecord.favicon) {
-    post.favicon = authorRecord.favicon;
+  for (let post of firehose) {
+    const authorRecord = authorsByName.get(post.Author);  // O(1) lookup
+    if (authorRecord && authorRecord.favicon) {
+      post.favicon = authorRecord.favicon;
+    }
   }
-}
 
   // **************
   // generate a sorted array of categories, sorted either by name or by

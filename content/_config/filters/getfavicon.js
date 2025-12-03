@@ -131,6 +131,7 @@ const getFaviconUrl = async (origin) => {
     }
 
     // No favicon found in HTML or common file locations
+    faviconCache[origin] = defaultFaviconPath;
     return "";
   } catch (error) {
     // STAY SILENT ON ERRORS HERE AND JUST RETURN ""
@@ -140,6 +141,7 @@ const getFaviconUrl = async (origin) => {
     //   ": ",
     //   error
     // );
+    faviconCache[origin] = defaultFaviconPath;
     return "";
   }
 };
@@ -183,6 +185,15 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const outputPath = path.join(__dirname, "../../../_site", localPath);
 
+    // Check if the favicon file already exists
+    try {
+      await fs.access(outputPath);
+      // File exists, return early without re-downloading
+      return localPath;
+    } catch {
+      // File doesn't exist, continue with download and write
+    }
+
     // Ensure the favicons directory exists before writing
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
@@ -208,10 +219,11 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
 export const getFavicon = async (link) => {
   // Extract the origin (protocol + hostname + port) from the full URL
   // This ensures we only fetch one favicon per domain, not per page
-  const origin = new URL(link).origin;
+  const url = new URL(link);
+  const origin = url.origin;
+  const domain = url.hostname;
 
   // Special cases for GitHub & YouTube based on domain of the link
-  const domain = new URL(origin).hostname;
   if (domain === "github.com") {
     return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
