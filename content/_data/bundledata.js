@@ -349,27 +349,31 @@ export default async function () {
   // then extract those author records from the authors array
   // **************
   const getRecentAuthors = (firehoseData, authorsData) => {
-    const recentPosts = firehoseData
-    .filter(post => !isYoutubeLink(post.Link))
-    .slice(0, 50);
-    const shuffledPosts = recentPosts.sort(() => Math.random() - 0.5);
-    // Get 3 posts with unique authors
-    const uniqueAuthorPosts = [];
-    const seenAuthors = new Set();
-    for (const post of shuffledPosts) {
-      if (!seenAuthors.has(post.Author)) {
-        uniqueAuthorPosts.push(post);
-        seenAuthors.add(post.Author);
-        if (uniqueAuthorPosts.length === 3) break;
-      }
+  // Single pass through firehose, stops at 50 unique authors
+  const uniqueAuthorPosts = [];
+  const seenAuthors = new Set();
+
+  for (const post of firehoseData) {
+    if (isYoutubeLink(post.Link)) continue;
+
+    if (!seenAuthors.has(post.Author)) {
+      uniqueAuthorPosts.push(post);
+      seenAuthors.add(post.Author);
+      if (uniqueAuthorPosts.length === 50) break;
     }
-    // Extract the 3 author records from the authors array
-    const recentAuthorsList = uniqueAuthorPosts.map(post => {
-      return authorsData.find(author => author.name === post.Author);
-    }).filter(author => author !== undefined);
-    // console.log("Recent authors: ", recentAuthorsList);
-    return recentAuthorsList;
-  };
+  }
+
+  // Shuffle and select 3
+  const shuffledPosts = uniqueAuthorPosts.sort(() => Math.random() - 0.5);
+  const selectedPosts = shuffledPosts.slice(0, 3);
+
+  // Use Map for O(1) lookups
+  const authorsByName = new Map(authorsData.map(author => [author.name, author]));
+
+  return selectedPosts
+    .map(post => authorsByName.get(post.Author))
+    .filter(author => author !== undefined);
+};
 
   const recentAuthors = getRecentAuthors(firehose, authors);
 
