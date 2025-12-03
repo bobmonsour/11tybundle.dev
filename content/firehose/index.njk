@@ -20,15 +20,20 @@
     </div>
   </nav>
 </section>
+
+{# Placed here, but referenced in button below #}
+<div id="info" popover>We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
+</div>
+
+
 <section>
   <div class="container">
-    <button popovertarget="info" class="button--transparent"><svg width="20" height="20" viewBox="0 0 24 24"
-        aria-hidden="true">
+    {# button reveals popover with text from above div with id="info" #}
+    <button popovertarget="info" class="button--transparent">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-info"></use>
-      </svg> About the firehose</button>
-    <div id="info" popover>We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered,
-      real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories,
-      shown in reverse date order—most recent first. Fill your boots!</a></div>
+      </svg> About the firehose
+    </button>
 
 {% set newestPost = bundledata.firehose | first %}
 {% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
@@ -42,9 +47,11 @@
       {% for item in bundledata.firehose %}
     	{% set current_year = item.Date | truncate(4, true, '') %}
       {% if (current_year != previous_year) %}
-            </details>
-          </div>
-        </section>
+      {# on year change, close the previous year's related tags #}
+      </article>
+    </details>
+  </div>
+</section>
       {% set previous_year = current_year %}
 <section>
   <div class="container">
@@ -54,13 +61,10 @@
     {% endif %}
 
         <article class="directory__card directory--detail">
-          <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-            <use xlink:href="#icon-person-circle"></use>
-          </svg> -->
           {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
             <p>{{ item.description | safe }}</p>
-            <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+            <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
             {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
             <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | postCountLabel }})</p>
             <ul role="list" class="author-links">

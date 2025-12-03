@@ -26,7 +26,7 @@ permalink: /authors/by-count/
         <ol role="list" class="directory--list">
           {% for item in bundledata.firehose | postsByAuthor(author.name, 3) %}
             <li><a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time></li>
+            <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time></li>
           {% endfor %}
         </ol>
       </article>
