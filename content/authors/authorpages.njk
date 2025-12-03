@@ -43,7 +43,7 @@
 <section>
   <div class="container">
     <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
-      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <summary id="y-{{ current_year }}"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
       <article class="directory__grid">
     {% for item in bundledata.firehose | postsByAuthor(author.name, 0) %}
   	{% set current_year = item.Date | truncate(4, true, '') %}
