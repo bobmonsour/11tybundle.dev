@@ -44,13 +44,13 @@ issue: 80
           </svg></a></h2>
         {%- set recent = bundledata.firehose.slice(0,11) -%}
         <ol role="list" class="feeds__list">
-           {%- for item in recent -%}
-             <li class="feeds__item">
-                {{ item.favicon | safe }}
-                <a href="{{ item.Link }}">{{ item.Title }}</a>
-                <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
-              </li>
-            {%- endfor -%}
+          {%- for item in recent -%}
+            <li class="feeds__item">
+              {{ item.favicon | safe }}
+              <a href="{{ item.Link }}">{{ item.Title }}</a>
+              <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
+            </li>
+          {%- endfor -%}
         </ol>
       </article>
       <article class="feeds__section">

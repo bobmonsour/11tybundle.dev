@@ -2,6 +2,7 @@ import { getRSSLink } from "../filters/getrsslink.js";
 import { getSocialLinks } from "../filters/getsociallinks.js";
 
 export const getWebIcon = async (link) => {
+  // console.log("Getting web icon for link:", link);
   const url = new URL(link);
   const siteUrl = url.origin;
   return `<li><a href="${siteUrl}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">

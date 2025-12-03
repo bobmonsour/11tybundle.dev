@@ -17,6 +17,7 @@ export const postsByAuthor = (bundleitems, author, count) => {
 
 // Given an author, get the number of blog posts written by that author
 // from the authors array.
-export const postCountByAuthor = (authors, author) => {
-  return authors.filter((item) => item.Author === author).count;
+export const getAuthorRecord = (authors, authorName) => {
+  const author = authors.find((a) => a.name === authorName);
+  return author ? author : null;
 };

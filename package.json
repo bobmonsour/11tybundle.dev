@@ -6,10 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
+    "startdry": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --dryrun",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site",
     "postdev": "npx -y pagefind --site _site --serve",
+    "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
+    "debugmore": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --serve",
     "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "links": "npx check-html-links _site",

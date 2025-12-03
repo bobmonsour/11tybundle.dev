@@ -78,20 +78,24 @@ export default async function () {
       return new Date(b.Date) - new Date(a.Date);
     });
 
-  // enrich each post in the firehose with description, favicon, and formatted date
+  // enrich each post in the firehose with:
+  //  - the slugified title
+  //  - the slugified author name
+  //  - post description
+  //  - formatted date
+  //  - author's favicon gets added later, after authors array is built
   const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
-  return Promise.all(
-    rawFirehoseData.map(async (post) => {
-      return {
-        ...post,
-        slugifiedTitle: slugifyPackage(post.Title, { lower: true, strict: true }),
-        slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
-        description: await appliedFilters.getDescription(post.Link),
-        favicon: await appliedFilters.getFavicon(post.Link),
-        formattedDate: await appliedFilters.formatItemDate(post.Date),
-      };
-    })
-  );
+    return Promise.all(
+      rawFirehoseData.map(async (post) => {
+        return {
+          ...post,
+          slugifiedTitle: slugifyPackage(post.Title, { lower: true, strict: true }),
+          slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
+          description: await appliedFilters.getDescription(post.Link),
+          formattedDate: await appliedFilters.formatItemDate(post.Date),
+        };
+      })
+    );
   };
 
   const firehose = await enrichFirehose(rawFirehose, filters);
@@ -287,9 +291,11 @@ export default async function () {
         // If we don't have origin data yet (was YouTube before), capture it now
         if (!existing.origin && !isYouTube) {
           existing.origin = origin;
+          existing.description = await filters.getDescription(origin);
           existing.favicon = await filters.getFavicon(item.Link);
           existing.rssLink = await filters.getRSSLink(origin);
           existing.socialLinks = await filters.getSocialLinks(item.Link);
+          existing.nonYoutubePostLink = item.Link;
         }
       } else {
         // New author - create entry
@@ -303,6 +309,7 @@ export default async function () {
           favicon: isYouTube ? null : await filters.getFavicon(item.Link),
           rssLink: isYouTube ? null : await filters.getRSSLink(origin),
           socialLinks: isYouTube ? null : await filters.getSocialLinks(item.Link),
+          nonYoutubePostLink: isYouTube ? null : item.Link,
         });
       }
     }
@@ -319,6 +326,7 @@ export default async function () {
         favicon: data.favicon,
         rssLink: data.rssLink,
         socialLinks: data.socialLinks,
+        nonYoutubePostLink: data.nonYoutubePostLink,
       }))
     );
 
@@ -362,11 +370,24 @@ export default async function () {
     const recentAuthorsList = uniqueAuthorPosts.map(post => {
       return authorsData.find(author => author.name === post.Author);
     }).filter(author => author !== undefined);
-
+    // console.log("Recent authors: ", recentAuthorsList);
     return recentAuthorsList;
   };
 
   const recentAuthors = getRecentAuthors(firehose, authors);
+
+  // **************
+  // Now that the firehose and author arrays are built, we
+  // need to add the author's favicon to each post in the
+  // firehose. This takes care of the issue of YouTube links
+  // not having favicons.
+  // **************
+  for (let post of firehose) {
+    const authorRecord = authors.find(author => author.name === post.Author);
+    if (authorRecord && authorRecord.favicon) {
+      post.favicon = authorRecord.favicon;
+    };
+  };
 
   // **************
   // generate a sorted array of categories, sorted either by name or by

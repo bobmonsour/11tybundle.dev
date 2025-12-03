@@ -8,18 +8,18 @@ import {
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
-import {
-  getNonYoutubePost,
-  getNonYoutubePostByAuthor,
-} from "./getnonyoutubepost.js";
 import { getOrigin, getHostname } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
-import { getSocialIcons } from "./getsocialicons.js";
 import { getSocialLinks } from "./getsociallinks.js";
-import { getAuthorIcons } from "./getauthoricons.js";
+import {
+  getAuthorIcons,
+  getWebIcon,
+  getRSSIcon,
+  getSocialIcons,
+} from "./getauthoricons.js";
 import { plainDate } from "./datesandnumbers.js";
 import { postCountLabel } from "./postcountlabel.js";
-import { postCountByAuthor, postsByAuthor } from "./postsbyauthor.js";
+import { getAuthorRecord, postsByAuthor } from "./postsbyauthor.js";
 import { postsInCategory } from "./postsincategory.js";
 import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
@@ -31,19 +31,20 @@ export const filters = {
   formatPostDate,
   formatFirehoseDate,
   formatNumber,
+  getAuthorIcons,
+  getWebIcon,
+  getRSSIcon,
+  getSocialIcons,
   getBundleItems,
   getDescription,
   getFavicon,
-  getNonYoutubePost,
-  getNonYoutubePostByAuthor,
   getOrigin,
   getHostname,
   getRSSLink,
-  getSocialIcons,
   getSocialLinks,
   getAuthorIcons,
   plainDate,
-  postCountByAuthor,
+  getAuthorRecord,
   postCountLabel,
   postsByAuthor,
   postsInCategory,

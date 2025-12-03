@@ -25,7 +25,7 @@ permalink: /categories/by-count/
         <ol role="list" class="directory--list">
           {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
             {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
-            <li>{{ item.Link | getFavicon | safe }}
+            <li>{{ item.favicon | safe }}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
             <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time></li>
           {% endfor %}

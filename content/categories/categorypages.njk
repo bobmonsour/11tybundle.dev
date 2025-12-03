@@ -54,15 +54,14 @@
     {% endif %}
 
 			  <article class="directory__card directory--detail">
-          {% set nonYoutubePost = bundledata.firehose | getNonYoutubePostByAuthor(item.Author) %}
-          {{ nonYoutubePost.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
+          {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
             <p>{{ item.description | safe }}</p>
             <time datetime="{{ item.formattedDate }}">{{ item.formattedDate }}</time>
-            {%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
-            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ postCount | postCountLabel }})</p>
+            {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
+            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | postCountLabel }})</p>
             <ul role="list" class="author-links">
-              {{ nonYoutubePost.Link | getAuthorIcons | safe }}
+              {{ authorRecord.nonYoutubePostLink | getAuthorIcons | safe }}
             </ul>
             <div class="categories-list">
               <strong>Categories</strong>
