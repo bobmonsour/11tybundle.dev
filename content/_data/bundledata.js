@@ -162,6 +162,7 @@ export default async function () {
   // most recent update and the second by number of GitHub stars
   // **************
   const rawStarters = bundleRecords.filter((item) => item["Type"] === "starter");
+
   const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
     const cache = new AssetCache(cacheKey, ".cache");
@@ -172,76 +173,61 @@ export default async function () {
         return cachedStarters;
       }
     }
-    for (let starter of starters) {
-      if (starter.Link) {
+
+    // Process all starters concurrently instead of sequentially
+    const enrichedStarters = await Promise.all(
+      starters.map(async (starter) => {
+        if (!starter.Link) return starter;
+
         try {
           // Extract owner and repo name from the full GitHub repo URL
           const urlParts = starter.Link.split("/");
           const owner = urlParts[urlParts.length - 2];
           const repo = urlParts[urlParts.length - 1];
 
-          // Fetch repository metadata
-          const { data: repoData } = await octokit.repos.get({
-            owner,
-            repo,
-          });
+          // Fetch all data concurrently for this starter
+          const [repoData, commitsData, packageJsonData] = await Promise.all([
+            octokit.repos.get({ owner, repo }),
+            octokit.repos.listCommits({ owner, repo, per_page: 1 }),
+            octokit.repos.getContent({ owner, repo, path: "package.json" })
+              .catch(() => null), // Handle missing package.json gracefully
+          ]);
 
-          // Fetch the date of the last commit
-          const { data } = await octokit.repos.listCommits({
-            owner,
-            repo,
-            per_page: 1,
-          });
-          const lastCommitDate = data[0].commit.committer.date;
-
-          // Format the date
+          const lastCommitDate = commitsData.data[0].commit.committer.date;
           const date = new Date(lastCommitDate);
           const options = { year: "numeric", month: "long", day: "numeric" };
           const formattedDate = date.toLocaleDateString("en-US", options);
 
-          // Get 11ty version from package.json
+          // Extract 11ty version
           let version = null;
-          try {
-            const { data } = await octokit.repos.getContent({
-              owner,
-              repo,
-              path: "package.json",
-            });
-            // Decode the base64 encoded content
-            const content = Buffer.from(data.content, "base64").toString(
-              "utf-8"
-            );
-            // Define the regular expression
+          if (packageJsonData) {
+            const content = Buffer.from(packageJsonData.data.content, "base64").toString("utf-8");
             const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
-            // Extract the version number
             const match = content.match(regex);
             if (match) {
               version = match[1];
-              // console.log("11ty version:", version);
             }
-          } catch (error) {
-            console.error(`Error fetching 11ty version: ${error}`);
           }
 
-          // Add metadata as top-level properties to the starter object
-          starter.Stars = repoData.stargazers_count;
-          starter.Date = date.toISOString().split('T')[0]; // Returns "YYYY-MM-DD"
-          starter.LastUpdated = formattedDate;
-          starter.Description = repoData.description;
-          starter.Version = version;
-          // console.log("stars: ", starter.Stars);
-          // console.log("last updated: ", starter.LastUpdated);
-          // console.log("description: ", starter.Description);
-          // console.log("version: ", starter.Version);
+          // Return enriched starter object
+          return {
+            ...starter,
+            Stars: repoData.data.stargazers_count,
+            Date: date.toISOString().split('T')[0],
+            LastUpdated: formattedDate,
+            Description: repoData.data.description,
+            Version: version,
+          };
         } catch (error) {
           console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
+          return starter; // Return original starter if enrichment fails
         }
-      }
-    }
-      // Cache the results for future requests
-      await cache.save(starters, "json");
-      // console.log(`Cached starter projects`);
-      return starters;
+      })
+    );
+
+    // Cache the results for future requests
+    await cache.save(enrichedStarters, "json");
+    return enrichedStarters;
   };
 
   let starters = await enrichStarters(rawStarters);
