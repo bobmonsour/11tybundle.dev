@@ -218,6 +218,7 @@ export default async function () {
 
           // Add metadata as top-level properties to the starter object
           starter.Stars = repoData.stargazers_count;
+          starter.Date = date.toISOString().split('T')[0]; // Returns "YYYY-MM-DD"
           starter.LastUpdated = formattedDate;
           starter.Description = repoData.description;
           starter.Version = version;

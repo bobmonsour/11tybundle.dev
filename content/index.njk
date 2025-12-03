@@ -80,7 +80,7 @@ issue: 80
             <use xlink:href="#icon-github"></use>
             </svg>
             <a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.formattedDate }}">{{ item.Date | formatItemDate }}</time>
+            <time datetime="{{ item.Date }}">{{ item.Date | formatItemDate }}</time>
           {% endfor %}
           </li>
         </ol>
@@ -100,7 +100,7 @@ issue: 80
         <div class="details">
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <ul role="list">
-            <li>Updated: <time datetime="{{ item.LastUpdated | formatItemDate }}">{{ item.LastUpdated | formatItemDate }}</time></li>
+            <li>Updated: <time datetime="{{ item.Date }}">{{ item.LastUpdated | formatItemDate }}</time></li>
             <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
             <li>11ty version: <data value="{{ item.Version }}">{{ item.Version }}</data></li>
           </ul>
