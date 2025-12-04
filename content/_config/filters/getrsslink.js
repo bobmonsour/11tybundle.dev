@@ -20,6 +20,18 @@ const rssLinkCache = {};
 //***************
 
 export const getRSSLink = async (siteOrigin) => {
+  // Validate that siteOrigin is a valid HTTP/HTTPS URL
+  if (!siteOrigin || typeof siteOrigin !== "string") {
+    console.log(`getRSSLink - Invalid siteOrigin: ${siteOrigin}`);
+    return "";
+  }
+
+  // Check if it's a valid HTTP/HTTPS URL
+  if (!siteOrigin.startsWith("http://") && !siteOrigin.startsWith("https://")) {
+    console.log(`Not a valid HTTP URL: ${siteOrigin}`);
+    return "";
+  }
+
   // const exceptionItem = exceptionList.find(
   //   (item) => item.url === siteOrigin && item.rssFail === "true"
   // );
@@ -32,45 +44,42 @@ export const getRSSLink = async (siteOrigin) => {
   // Check if the RSS link is in the cache
   if (rssLinkCache[siteOrigin]) {
     return rssLinkCache[siteOrigin];
-  } else {
-    // fetch the html of the site's origin and attempt to extract the RSS link
-    // from the site's head element
-    try {
-      let htmlcontent = await Fetch(siteOrigin, {
-        directory: ".cache",
-        duration: cacheDuration.rssLinkHtml,
-        type: "buffer",
-        fetchOptions: {
-          signal: AbortSignal.timeout(fetchTimeout.rssLinkHtml),
-        },
-      });
-      let $ = cheerio.load(htmlcontent);
-      let rssLink =
-        $('link[type="application/rss+xml"]').attr("href") ||
-        $('link[type="application/atom+xml"]').attr("href");
-      if (rssLink == undefined) {
-        rssLink = "";
-        rssLinkCache[siteOrigin] = "";
-      } else if (rssLink.startsWith("http")) {
+  }
+  // fetch the html of the site's origin and attempt to extract the RSS link
+  // from the site's head element
+  try {
+    let htmlcontent = await Fetch(siteOrigin, {
+      directory: ".cache",
+      duration: cacheDuration.rssLinkHtml,
+      type: "buffer",
+      fetchOptions: {
+        signal: AbortSignal.timeout(fetchTimeout.rssLinkHtml),
+      },
+    });
+    let $ = cheerio.load(htmlcontent);
+    let rssLink =
+      $('link[type="application/rss+xml"]').attr("href") ||
+      $('link[type="application/atom+xml"]').attr("href");
+    if (rssLink == undefined) {
+      rssLink = "";
+      rssLinkCache[siteOrigin] = "";
+    } else if (rssLink.startsWith("http")) {
+      rssLinkCache[siteOrigin] = rssLink;
+    } else {
+      if (rssLink.charAt(0) === "/") {
+        rssLink = siteOrigin + rssLink;
         rssLinkCache[siteOrigin] = rssLink;
       } else {
-        if (rssLink.charAt(0) === "/") {
-          rssLink = siteOrigin + rssLink;
-          rssLinkCache[siteOrigin] = rssLink;
-        } else {
-          rssLink = siteOrigin + "/" + rssLink;
-          rssLinkCache[siteOrigin] = rssLink;
-        }
-        // console.log("RSS link for " + siteOrigin + " is " + rssLink);
+        rssLink = siteOrigin + "/" + rssLink;
+        rssLinkCache[siteOrigin] = rssLink;
       }
-      return rssLink;
-    } catch (e) {
-      console.log(
-        "Error fetching RSS link for " + siteOrigin + " " + e.message
-      );
-      // console.log("Error fetching site origin for " + siteOrigin);
-      // cache the empty result to avoid repeated fetch attempts
-      return (rssLinkCache[siteOrigin] = "");
+      // console.log("RSS link for " + siteOrigin + " is " + rssLink);
     }
+    return rssLink;
+  } catch (e) {
+    console.log("Error fetching RSS link for " + siteOrigin + " " + e.message);
+    // console.log("Error fetching site origin for " + siteOrigin);
+    // cache the empty result to avoid repeated fetch attempts
+    return (rssLinkCache[siteOrigin] = "");
   }
 };

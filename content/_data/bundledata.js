@@ -9,6 +9,8 @@ import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
 import slugifyPackage from "slugify";
 
+import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
+
 // **************
 //   *** LOCAL TEST DATA, LOADED FROM A LOCAL FILE ***
 // **************
@@ -29,7 +31,6 @@ import { Buffer } from "buffer";
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
 });
-import { cacheDuration } from "./cacheconfig.js";
 
 // main function to generate and return the bundle data
 export default async function () {
@@ -45,10 +46,10 @@ export default async function () {
     "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
   // Fetch the json db from its remote repo
   const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: "0s",
+    duration: cacheDuration.bundleDB,
     type: "json",
     fetchOptions: {
-      signal: AbortSignal.timeout(3000),
+      signal: AbortSignal.timeout(fetchTimeout.bundleDB),
     },
   });
   // **************
@@ -107,49 +108,52 @@ export default async function () {
   //  - formatted date
   //  - author's favicon gets added later, after authors array is built
   const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
-    return Promise.all(
-      rawFirehoseData.map(async (post) => {
-        return {
-          ...post,
-          slugifiedTitle: slugifyPackage(post.Title, {
-            lower: true,
-            strict: true,
-          }),
-          slugifiedAuthor: slugifyPackage(post.Author, {
-            lower: true,
-            strict: true,
-          }),
-          description: await appliedFilters.getDescription(post.Link),
-          formattedDate: await appliedFilters.formatItemDate(post.Date),
-          // isYoutube is already on the post object from rawFirehose
-          // author's favicon gets added later, after authors array is built
-        };
-      })
-    );
+    const results = [];
+    for (const post of rawFirehoseData) {
+      results.push({
+        ...post,
+        slugifiedTitle: slugifyPackage(post.Title, {
+          lower: true,
+          strict: true,
+        }),
+        slugifiedAuthor: slugifyPackage(post.Author, {
+          lower: true,
+          strict: true,
+        }),
+        description: await appliedFilters.getDescription(post.Link),
+        formattedDate: await appliedFilters.formatItemDate(post.Date),
+        // isYoutube is already on the post object from rawFirehose
+        // author's favicon gets added later, after authors array is built
+      });
+    }
+    return results;
   };
 
   const firehose = await enrichFirehose(rawFirehose, filters);
   const postCount = firehose.length;
 
   // **************
-  // generate a list of releases, an array of all releases
-  //  in descending date order
+  // generate an array of the most recent 11 releases
+  // in descending date order; used on the home page
   // **************
   const rawReleaseList = bundleRecords
     .filter((item) => item["Type"] === "release")
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
-    });
+    })
+    .slice(0, 11); // limit to the most recent 11 releases;
+
   const enrichReleaseList = async (rawReleaseListData, appliedFilters) => {
-    return Promise.all(
-      rawReleaseListData.map(async (release) => {
-        return {
-          ...release,
-          formattedDate: await appliedFilters.formatItemDate(release.Date),
-        };
-      })
-    );
+    const results = [];
+    for (const release of rawReleaseListData) {
+      results.push({
+        ...release,
+        formattedDate: await appliedFilters.formatItemDate(release.Date),
+      });
+    }
+    return results;
   };
+
   const releaseList = await enrichReleaseList(rawReleaseList, filters);
   const releaseCount = releaseList.length;
 
@@ -164,17 +168,17 @@ export default async function () {
     });
 
   const enrichSiteList = async (rawSiteListData, appliedFilters) => {
-    return Promise.all(
-      rawSiteListData.map(async (site) => {
-        return {
-          ...site,
-          description: await appliedFilters.getDescription(site.Link),
-          favicon: await appliedFilters.getFavicon(site.Link),
-          formattedDate: await appliedFilters.formatItemDate(site.Date),
-          socialLinks: await appliedFilters.getSocialLinks(site.Link),
-        };
-      })
-    );
+    const results = [];
+    for (const site of rawSiteListData) {
+      results.push({
+        ...site,
+        description: await appliedFilters.getDescription(site.Link),
+        favicon: await appliedFilters.getFavicon(site.Link),
+        formattedDate: await appliedFilters.formatItemDate(site.Date),
+        socialLinks: await appliedFilters.getSocialLinks(site.Link),
+      });
+    }
+    return results;
   };
 
   const siteList = await enrichSiteList(rawSiteList, filters);
@@ -199,62 +203,57 @@ export default async function () {
       }
     }
 
-    // Process all starters concurrently instead of sequentially
-    const enrichedStarters = await Promise.all(
-      starters.map(async (starter) => {
-        if (!starter.Link) return starter;
+    const enrichedStarters = [];
+    for (const starter of starters) {
+      if (!starter.Link) {
+        enrichedStarters.push(starter);
+        continue;
+      }
 
-        try {
-          // Extract owner and repo name from the full GitHub repo URL
-          const urlParts = starter.Link.split("/");
-          const owner = urlParts[urlParts.length - 2];
-          const repo = urlParts[urlParts.length - 1];
+      try {
+        const urlParts = starter.Link.split("/");
+        const owner = urlParts[urlParts.length - 2];
+        const repo = urlParts[urlParts.length - 1];
 
-          // Fetch all data concurrently for this starter
-          const [repoData, commitsData, packageJsonData] = await Promise.all([
-            octokit.repos.get({ owner, repo }),
-            octokit.repos.listCommits({ owner, repo, per_page: 1 }),
-            octokit.repos
-              .getContent({ owner, repo, path: "package.json" })
-              .catch(() => null), // Handle missing package.json gracefully
-          ]);
+        // fetch repo metadata for this starter (per-starter concurrent calls)
+        const [repoData, commitsData, packageJsonData] = await Promise.all([
+          octokit.repos.get({ owner, repo }),
+          octokit.repos.listCommits({ owner, repo, per_page: 1 }),
+          octokit.repos
+            .getContent({ owner, repo, path: "package.json" })
+            .catch(() => null),
+        ]);
 
-          const lastCommitDate = commitsData.data[0].commit.committer.date;
-          const date = new Date(lastCommitDate);
-          const options = { year: "numeric", month: "long", day: "numeric" };
-          const formattedDate = date.toLocaleDateString("en-US", options);
+        const lastCommitDate = commitsData.data[0].commit.committer.date;
+        const date = new Date(lastCommitDate);
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        const formattedDate = date.toLocaleDateString("en-US", options);
 
-          // Extract 11ty version
-          let version = null;
-          if (packageJsonData) {
-            const content = Buffer.from(
-              packageJsonData.data.content,
-              "base64"
-            ).toString("utf-8");
-            const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
-            const match = content.match(regex);
-            if (match) {
-              version = match[1];
-            }
-          }
-
-          // Return enriched starter object
-          return {
-            ...starter,
-            Stars: repoData.data.stargazers_count,
-            Date: date.toISOString().split("T")[0],
-            LastUpdated: formattedDate,
-            Description: repoData.data.description,
-            Version: version,
-          };
-        } catch (error) {
-          console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
-          return starter; // Return original starter if enrichment fails
+        let version = null;
+        if (packageJsonData) {
+          const content = Buffer.from(
+            packageJsonData.data.content,
+            "base64"
+          ).toString("utf-8");
+          const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
+          const match = content.match(regex);
+          if (match) version = match[1];
         }
-      })
-    );
 
-    // Cache the results for future requests
+        enrichedStarters.push({
+          ...starter,
+          Stars: repoData.data.stargazers_count,
+          Date: date.toISOString().split("T")[0],
+          LastUpdated: formattedDate,
+          Description: repoData.data.description,
+          Version: version,
+        });
+      } catch (error) {
+        console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
+        enrichedStarters.push(starter);
+      }
+    }
+
     await cache.save(enrichedStarters, "json");
     return enrichedStarters;
   };
@@ -346,20 +345,18 @@ export default async function () {
     }
 
     // Convert map to array of objects
-    const authorArray = await Promise.all(
-      Array.from(authorMap).map(async ([name, data]) => ({
-        name,
-        slugifiedName: data.slugifiedName,
-        firstLetter: data.firstLetter,
-        count: data.count,
-        origin: data.origin,
-        description: data.description,
-        favicon: data.favicon,
-        rssLink: data.rssLink,
-        socialLinks: data.socialLinks,
-        nonYoutubePostLink: data.nonYoutubePostLink,
-      }))
-    );
+    const authorArray = Array.from(authorMap).map(([name, data]) => ({
+      name,
+      slugifiedName: data.slugifiedName,
+      firstLetter: data.firstLetter,
+      count: data.count,
+      origin: data.origin,
+      description: data.description,
+      favicon: data.favicon,
+      rssLink: data.rssLink,
+      socialLinks: data.socialLinks,
+      nonYoutubePostLink: data.nonYoutubePostLink,
+    }));
 
     return authorArray.sort(authorSort);
   };

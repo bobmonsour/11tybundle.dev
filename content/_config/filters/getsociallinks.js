@@ -207,6 +207,26 @@ function extractSocialLinksFromHtml(html, origin) {
 //***************
 
 export async function getSocialLinks(link) {
+  // Validate that link is a valid HTTP/HTTPS URL in 2 steps
+  if (!link || typeof link !== "string") {
+    console.log(`getSocialLinks - Invalid link: ${link}`);
+    return {
+      mastodon: "",
+      bluesky: "",
+      github: "",
+      linkedin: "",
+    };
+  }
+  if (!link.startsWith("http://") && !link.startsWith("https://")) {
+    console.log(`Not a valid HTTP URL: ${link}`);
+    return {
+      mastodon: "",
+      bluesky: "",
+      github: "",
+      linkedin: "",
+    };
+  }
+
   const origin = new URL(link).origin;
 
   // Create cache for social links using AssetCache

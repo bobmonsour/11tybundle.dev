@@ -92,7 +92,7 @@ issue: 80
   <div class="container">
     <h2 class="h3">Recent starters</h2>
     <article class="recent-starters">
-      {%- for item in bundledata.starters %}
+      {%- for item in bundledata.starters.slice(0,3) %}
       <article class="recent-starters__item">
         <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>

@@ -3,6 +3,7 @@ import * as cheerio from "cheerio";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
+import slugifyPackage from "slugify";
 
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
@@ -132,9 +133,9 @@ const getFaviconUrl = async (origin) => {
 
     // No favicon found in HTML or common file locations
     faviconCache[origin] = defaultFaviconPath;
-    return "";
+    return "use default favicon";
   } catch (error) {
-    // STAY SILENT ON ERRORS HERE AND JUST RETURN ""
+    // STAY SILENT ON ERRORS HERE AND RETURN THE DEFAULT FAVICON
     // console.error(
     //   "getFaviconUrl: Error fetching/parsing favicon URL from ",
     //   origin,
@@ -142,7 +143,7 @@ const getFaviconUrl = async (origin) => {
     //   error
     // );
     faviconCache[origin] = defaultFaviconPath;
-    return "";
+    return "use default favicon";
   }
 };
 
@@ -177,7 +178,10 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
 
     // Create filename: domain with dots replaced by dashes + "-favicon" + extension
     // Example: "example.com" becomes "example-com-favicon.png"
-    const filename = `${domain.replace(/\./g, "-")}-favicon${extension}`;
+    const filename = `${slugifyPackage(domain, {
+      lower: true,
+      strict: true,
+    })}-favicon${extension}`;
     const localPath = `${faviconDir}/${filename}`;
 
     // Step 6: Write favicon to local favicons directory for serving
@@ -185,22 +189,31 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const outputPath = path.join(__dirname, "../../../_site", localPath);
 
-    // Check if the favicon file already exists
-    try {
-      await fs.access(outputPath);
-      // File exists, return early without re-downloading
-      return localPath;
-    } catch {
-      // File doesn't exist, continue with download and write
-    }
-
     // Ensure the favicons directory exists before writing
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
     // Write the binary favicon data to the local file
     await fs.writeFile(outputPath, faviconBuffer);
 
-    return localPath;
+    // Verify file exists and is not empty
+    try {
+      await fs.access(outputPath); // throws if not present
+      const stats = await fs.stat(outputPath); // get size
+      if (stats.size === 0) {
+        // file is empty — remove and fall back
+        await fs.unlink(outputPath).catch(() => {});
+        return defaultFaviconPath;
+      }
+      // OK: file exists and has content
+      return localPath;
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        // file missing
+        return defaultFaviconPath;
+      }
+      // rethrow unexpected errors
+      throw err;
+    }
   } catch (e) {
     // If anything fails (network error, parsing error, file write error),
     // cache this failure and fall back to the default favicon
@@ -235,6 +248,30 @@ export const getFavicon = async (link) => {
             <use xlink:href="#icon-github"></use>
             </svg>`;
   }
+
+  //******************************
+  //
+  // SPECIAL HANDLING OF CERTAIN DOMAINS THAT HAVE FAILED
+  // DUE TO APPEARING TO HAVE A FAVICON, BUT THE FILE
+  // RETURNED IS NOT USABLE AS AN IMAGE.
+  //
+  // TODO: CREATE A JSON LIST OF EXCEPTIONS TO HANDLE THESE CASES
+  //
+  //******************************
+
+  if (
+    domain.includes("martin-haehnel") ||
+    domain.includes("nicholas.clooney") ||
+    domain.includes("michaelengen") ||
+    domain.includes("piperhaywood") ||
+    domain.includes("nathan-smith")
+  ) {
+    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+    <use xlink:href="#icon-person-circle"></use>
+    </svg>`;
+  }
+  //******************************
+
   // check if the favicon for this origin is already cached
   if (faviconCache[origin]) {
     return await genFaviconImg(faviconCache[origin]);
@@ -243,26 +280,25 @@ export const getFavicon = async (link) => {
   // console.log("Favicon not in cache for ", origin);
   const faviconUrl = await getFaviconUrl(origin);
 
-  // if we've found a favicon URL, do the following:
-  //   download the favicon image
-  //   store it in _site/img/favicons
-  //   cache the resulting path to the downloaded favicon file
-  //   return the html img element using the local favicon path
-  // else use default person icon
+  // if we haven't found a favicon URL
+  //  - set the path to the default favicon
+  // else
+  //   - download the favicon image
+  //   - generate the local path using the domain name
+  //   - store the favicon image in _site/img/favicons
+  // cache the resulting path to the favicon file
+  // return the html img element using the favicon path
   //
-  if (faviconUrl) {
-    // download the site's favicon image & store it in _site/img/favicons
-    const faviconPath = await genFaviconFile(origin, faviconUrl, domain);
-
-    // cache the resulting path to the downloaded favicon file
-    faviconCache[origin] = faviconPath;
-
-    // return the html img element using the local favicon path
-    return await genFaviconImg(faviconPath);
-
-    // if no favicon URL found, use default person icon
+  let faviconPath = "";
+  if (faviconUrl === "use default favicon") {
+    faviconPath = defaultFaviconPath;
   } else {
-    faviconCache[origin] = defaultFaviconPath;
-    return await genFaviconImg(faviconCache[origin]);
+    // download the site's favicon image & store it in _site/img/favicons
+    faviconPath = await genFaviconFile(origin, faviconUrl, domain);
   }
+  // cache the local path to the favicon image
+  faviconCache[origin] = faviconPath;
+
+  // return the html img element using the local favicon path
+  return await genFaviconImg(faviconPath);
 };

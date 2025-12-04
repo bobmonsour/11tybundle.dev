@@ -13,18 +13,19 @@
 export const cacheDuration = {
   aiSummaryHtml: "1y",
   bundleDB: "0s",
-  descHtml: "0s",
+  descHtml: "1w",
   faviconImage: "0s",
-  faviconHtml: "0s",
-  rssLinkHtml: "0s",
-  socialHtml: "0s",
-  socialLinks: "0s",
-  starters: "0s",
+  faviconHtml: "1w",
+  rssLinkHtml: "1w",
+  socialHtml: "1w",
+  socialLinks: "1w",
+  starters: "1y",
 };
 
 // Timeout settings for fetch operations, in milliseconds
 export const fetchTimeout = {
-  descHtml: 3000, // 3 seconds
+  bundleDB: 5000, // 5 seconds
+  descHtml: 5000, // 5 seconds
   faviconHtml: 5000, // 3 seconds
   faviconImage: 3000, // 3 seconds
   rssLinkHtml: 3000, // 3 seconds
