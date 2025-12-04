@@ -25,6 +25,7 @@ import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
 import { postYearsInFirehose } from "./postyearsinfirehose.js";
 import { readingTime } from "./readingtime.js";
+import { singleComma } from "./singlecomma.js";
 
 export const filters = {
   isCurrentPage,
@@ -53,6 +54,7 @@ export const filters = {
   postYearsInCategory,
   postYearsInFirehose,
   readingTime,
+  singleComma,
 };
 
 export default (eleventyConfig) => {

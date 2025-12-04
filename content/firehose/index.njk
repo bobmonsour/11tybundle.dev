@@ -1,6 +1,6 @@
 <header class="main-header">
   <div class="container">
-    <h1>Firehose <data class="count" value="{{ bundledata.postCount }}">{{ bundledata.postCount }}</data></h1>
+    <h1>Firehose <data class="count" value="{{ bundledata.postCount }}">{{ bundledata.postCount | singleComma }}</data></h1>
     <nav>
       <ul role="list">
         <li><a href="/firehose" class="current">Posts</a></li>
