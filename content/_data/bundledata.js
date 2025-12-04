@@ -67,24 +67,39 @@ export default async function () {
   // **************
   // verify the presence of required fields for each blog post
   const requiredFields = ["Title", "Author", "Date", "Link", "Categories"];
+  const stringFields = ["Title", "Author", "Date", "Link"];
+
   for (let item of bundleRecords) {
     if (item["Type"] === "blog post" && !item["Skip"]) {
       const missingFields = [];
+      const wrongTypeFields = [];
 
-      // Check each required field
+      // Check each required field for presence and correct type for the stringFields
       requiredFields.forEach((field) => {
         if (!item[field]) {
           missingFields.push(field);
+        } else if (
+          stringFields.includes(field) &&
+          typeof item[field] !== "string"
+        ) {
+          wrongTypeFields.push(field);
         }
       });
 
-      // Log error if any fields are missing
-      if (missingFields.length > 0) {
+      // Log error if any fields are missing or have wrong types
+      if (missingFields.length > 0 || wrongTypeFields.length > 0) {
         const titleDisplay = item["Title"] || "[No Title]";
+        const parts = [];
+        if (missingFields.length > 0) {
+          parts.push(`missing: ${missingFields.join(", ")}`);
+        }
+        if (wrongTypeFields.length > 0) {
+          parts.push(`not strings: ${wrongTypeFields.join(", ")}`);
+        }
         console.error(
-          `Error: Blog post "${titleDisplay}" is missing required fields: ${missingFields.join(
-            ", "
-          )}`
+          `Error: Blog post "${titleDisplay}" has validation issues (${parts.join(
+            "; "
+          )})`
         );
       }
     }
@@ -289,10 +304,13 @@ export default async function () {
   const authorList = async (posts, sortField) => {
     function authorSort(a, b) {
       if (sortField === "name") {
-        // Handle undefined values safely
-        const nameA = a.firstLetter || "";
-        const nameB = b.firstLetter || "";
-        return nameA.localeCompare(nameB); // Sort by first letter of last name/word
+        const getLastWord = (str) => {
+          const words = str.trim().split(" ");
+          return words[words.length - 1];
+        };
+        const lastA = getLastWord(a.name).toLowerCase() || "";
+        const lastB = getLastWord(b.name).toLowerCase() || "";
+        return lastA.localeCompare(lastB); // Sort by last name/word
       } else {
         return b.count - a.count; // Sort by count descending
       }
