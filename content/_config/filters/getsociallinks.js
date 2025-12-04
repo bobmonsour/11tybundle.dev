@@ -17,13 +17,20 @@ const isLinkedIn = (u) =>
 // Determine if a URL is a Bluesky profile
 const isBluesky = (u) => u.hostname.includes("bsky");
 
+// Determine if a URL is a YouTube profile
+const isYouTube = (u) =>
+  u.hostname.includes("youtube.com") || u.hostname.includes("youtu.be");
+
 // Heuristic for Mastodon-like profile URLs on any instance
 const isMastodon = (u) =>
   // common paths on Mastodon instances
   (u.pathname.startsWith("/@") || u.pathname.startsWith("/users/")) &&
   // exclude Bluesky, LinkedIn, and common non-fedi hosts
   !u.hostname.endsWith("linkedin.com") &&
-  !u.hostname.includes("bsky");
+  !u.hostname.includes("bsky") &&
+  !u.hostname.includes("youtube") &&
+  !u.hostname.includes("x") &&
+  !u.hostname.includes("twitter");
 
 // GitHub detection and normalization to profile (repo -> owner)
 const isGitHub = (u) => u.hostname.endsWith("github.com");
@@ -72,6 +79,7 @@ function extractSocialLinksFromHtml(html, origin) {
     linkedin: [],
     bluesky: [],
     github: [],
+    youtube: [],
   };
 
   //***************
@@ -101,6 +109,7 @@ function extractSocialLinksFromHtml(html, origin) {
           // Categorize links by platform using detection functions
           if (isLinkedIn(url)) found.linkedin.push(absoluteUrl);
           else if (isBluesky(url)) found.bluesky.push(absoluteUrl);
+          else if (isYouTube(url)) found.youtube.push(absoluteUrl);
           else if (isMastodon(url)) found.mastodon.push(absoluteUrl);
           else if (isGitHub(url)) {
             const profile = normalizeGitHubProfile(url);
@@ -136,6 +145,7 @@ function extractSocialLinksFromHtml(html, origin) {
       if (isLinkedIn(url)) found.linkedin.push(absoluteUrl);
       else if (isBluesky(url)) found.bluesky.push(absoluteUrl);
       else if (isMastodon(url)) found.mastodon.push(absoluteUrl);
+      else if (isYouTube(url)) found.youtube.push(absoluteUrl);
       else if (isGitHub(url)) {
         const profile = normalizeGitHubProfile(url);
         if (profile) found.github.push(profile);
@@ -151,6 +161,7 @@ function extractSocialLinksFromHtml(html, origin) {
     if (isLinkedIn(url)) found.linkedin.push(absoluteUrl);
     else if (isBluesky(url)) found.bluesky.push(absoluteUrl);
     else if (isMastodon(url)) found.mastodon.push(absoluteUrl);
+    else if (isYouTube(url)) found.youtube.push(absoluteUrl);
     else if (isGitHub(url)) {
       const profile = normalizeGitHubProfile(url);
       if (profile) found.github.push(profile);
@@ -174,6 +185,8 @@ function extractSocialLinksFromHtml(html, origin) {
     // Check for platform-specific keywords in classes and labels
     const hintMastodon =
       cssClass.includes("mastodon") || label.includes("mastodon");
+    const hintYouTube =
+      cssClass.includes("youtube") || label.includes("youtube");
     const hintLinkedIn =
       cssClass.includes("linkedin") || label.includes("linkedin");
     const hintBluesky =
@@ -187,6 +200,7 @@ function extractSocialLinksFromHtml(html, origin) {
     if (hintLinkedIn && isLinkedIn(url)) found.linkedin.push(absoluteUrl);
     if (hintBluesky && isBluesky(url)) found.bluesky.push(absoluteUrl);
     if (hintMastodon && isMastodon(url)) found.mastodon.push(absoluteUrl);
+    if (hintYouTube && isYouTube(url)) found.youtube.push(absoluteUrl);
     if (hintGitHub && isGitHub(url)) {
       const profile = normalizeGitHubProfile(url);
       if (profile) found.github.push(profile);
@@ -213,6 +227,7 @@ export async function getSocialLinks(link) {
     return {
       mastodon: "",
       bluesky: "",
+      youtube: "",
       github: "",
       linkedin: "",
     };
@@ -222,6 +237,7 @@ export async function getSocialLinks(link) {
     return {
       mastodon: "",
       bluesky: "",
+      youtube: "",
       github: "",
       linkedin: "",
     };
@@ -252,6 +268,7 @@ export async function getSocialLinks(link) {
     return {
       mastodon: "",
       bluesky: "",
+      youtube: "",
       github: "",
       linkedin: "",
     };
@@ -269,6 +286,7 @@ export async function getSocialLinks(link) {
   const combinedFound = {
     mastodon: [],
     linkedin: [],
+    youtube: [],
     bluesky: [],
     github: [],
   };
@@ -297,6 +315,7 @@ export async function getSocialLinks(link) {
       combinedFound.mastodon.push(...pageResults.mastodon);
       combinedFound.linkedin.push(...pageResults.linkedin);
       combinedFound.bluesky.push(...pageResults.bluesky);
+      combinedFound.youtube.push(...pageResults.youtube);
       combinedFound.github.push(...pageResults.github);
 
       // Exit loop if we found any social links
@@ -304,6 +323,7 @@ export async function getSocialLinks(link) {
         pageResults.mastodon.length > 0 ||
         pageResults.linkedin.length > 0 ||
         pageResults.bluesky.length > 0 ||
+        pageResults.youtube.length > 0 ||
         pageResults.github.length > 0;
 
       if (foundAnyLinks) {
@@ -325,6 +345,7 @@ export async function getSocialLinks(link) {
   // across pages
   combinedFound.mastodon = unique(combinedFound.mastodon);
   combinedFound.bluesky = unique(combinedFound.bluesky);
+  combinedFound.youtube = unique(combinedFound.youtube);
   combinedFound.github = unique(combinedFound.github);
   combinedFound.linkedin = unique(combinedFound.linkedin);
 
@@ -332,6 +353,7 @@ export async function getSocialLinks(link) {
   const foundAnyLinks =
     combinedFound.mastodon.length > 0 ||
     combinedFound.linkedin.length > 0 ||
+    combinedFound.youtube.length > 0 ||
     combinedFound.bluesky.length > 0 ||
     combinedFound.github.length > 0;
 
@@ -348,6 +370,7 @@ export async function getSocialLinks(link) {
   const socialLinks = {
     mastodon: combinedFound.mastodon[0] || "",
     bluesky: combinedFound.bluesky[0] || "",
+    youtube: combinedFound.youtube[0] || "",
     github: combinedFound.github[0] || "",
     linkedin: combinedFound.linkedin[0] || "",
   };

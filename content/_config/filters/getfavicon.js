@@ -8,7 +8,6 @@ import slugifyPackage from "slugify";
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 const defaultFaviconPath = "default - no favicon found";
-const youtubeFaviconPath = "/img/favicons/youtube-favicon.ico";
 const faviconDir = "/img/favicons";
 // ---
 
@@ -230,18 +229,20 @@ const genFaviconFile = async (origin, faviconUrl, domain) => {
 // Returns the local path for use in img src attributes.
 //***************
 export const getFavicon = async (link) => {
+  // Special case for when author has only 1 post and
+  // it's a YouTube link, resulting in input 'link' being null
+  if (!link || link.includes("youtube.com")) {
+    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <use xlink:href="#icon-person-circle"></use>
+            </svg>`;
+  }
+
   // Extract the origin (protocol + hostname + port) from the full URL
   // This ensures we only fetch one favicon per domain, not per page
   const url = new URL(link);
   const origin = url.origin;
   const domain = url.hostname;
 
-  // Special cases for GitHub & YouTube based on domain of the link
-  if (domain === "github.com") {
-    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
-            </svg>`;
-  }
   // TODO: Replace with YouTube icon when available
   if (domain.includes("youtube.com")) {
     return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">

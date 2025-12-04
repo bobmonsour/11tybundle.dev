@@ -9,6 +9,12 @@ import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
 import slugifyPackage from "slugify";
 
+//***** TEMP FOR WRITING AUTHORS ARRAY TO A FILE *****
+import path from "path";
+import { fileURLToPath } from "url";
+import { promises as fs } from "fs";
+//*****
+
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
 // **************
@@ -334,7 +340,7 @@ export default async function () {
           count: 1,
           origin: isYoutube ? null : origin,
           description: isYoutube ? null : await filters.getDescription(origin),
-          favicon: isYoutube ? null : await filters.getFavicon(item.Link),
+          favicon: await filters.getFavicon(item.Link),
           rssLink: isYoutube ? null : await filters.getRSSLink(origin),
           socialLinks: isYoutube
             ? null
@@ -370,6 +376,20 @@ export default async function () {
   // also generate an array of first letters of author last names
   // **************
   const authors = await authorList(firehose, "name");
+
+  // // TEMPORARY FOR DEBUGGING: Write authors array to JSON file next to this JS file
+  // try {
+  //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  //   const outPath = path.join(__dirname, "authors.json");
+  //   await fs.writeFile(outPath, JSON.stringify(authors, null, 2), "utf8");
+  //   console.log(`Wrote authors JSON to ${outPath}`);
+  // } catch (err) {
+  //   console.error(
+  //     "Failed to write authors.json:",
+  //     err && err.message ? err.message : err
+  //   );
+  // }
+
   const authorsByCount = await authorList(firehose, "count");
   const authorCount = authors.length;
   const authorLetters = [
