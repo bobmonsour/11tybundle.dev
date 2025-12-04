@@ -20,15 +20,15 @@ const rssLinkCache = {};
 //***************
 
 export const getRSSLink = async (siteOrigin) => {
-  const exceptionItem = exceptionList.find(
-    (item) => item.url === siteOrigin && item.rssFail === "true"
-  );
-  // console.log("RSS exception: " + siteOrigin);
-  if (exceptionItem) {
-    rssLinkCache[siteOrigin] = exceptionItem.rssFeed || "";
-    // console.log("RSS exception: " + exceptionItem.rssFeed);
-    return rssLinkCache[siteOrigin];
-  }
+  // const exceptionItem = exceptionList.find(
+  //   (item) => item.url === siteOrigin && item.rssFail === "true"
+  // );
+  // // console.log("RSS exception: " + siteOrigin);
+  // if (exceptionItem) {
+  //   rssLinkCache[siteOrigin] = exceptionItem.rssFeed || "";
+  //   // console.log("RSS exception: " + exceptionItem.rssFeed);
+  //   return rssLinkCache[siteOrigin];
+  // }
   // Check if the RSS link is in the cache
   if (rssLinkCache[siteOrigin]) {
     return rssLinkCache[siteOrigin];
@@ -69,7 +69,8 @@ export const getRSSLink = async (siteOrigin) => {
         "Error fetching RSS link for " + siteOrigin + " " + e.message
       );
       // console.log("Error fetching site origin for " + siteOrigin);
-      return "";
+      // cache the empty result to avoid repeated fetch attempts
+      return (rssLinkCache[siteOrigin] = "");
     }
   }
 };

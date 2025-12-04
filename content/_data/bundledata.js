@@ -7,15 +7,20 @@
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
-import slugifyPackage  from "slugify";
+import slugifyPackage from "slugify";
 
 // **************
+//   *** LOCAL TEST DATA, LOADED FROM A LOCAL FILE ***
+// **************
+//
 // A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
 // FOR FASTER LOCAL BUILDING
-// IF THIS "import" is uncommented, COMMENT OUT THE REMOTE
-// FETCHING CODE BELOW
+//
+// COMMENT OUT THE FOLLOWING LINE TO USE THE FULL DATA SET
+// AND UNCOMMENT THE REMOTE FETCHING SECTION BELOW
+//
 // **************
-import bundleRecords from './bundledbtest.json' with { type: 'json' };
+// import bundleRecords from './bundledbtest.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -28,38 +33,39 @@ import { cacheDuration } from "./cacheconfig.js";
 
 // main function to generate and return the bundle data
 export default async function () {
-
   // **************
-  // THE FULL DATASET CAN BE LOADED FROM THE *** REMOTE *** REPO
-  // IF THE "const BUNDLEDB_URL" is uncommented, COMMENT OUT THE LOCAL
-  // IMPORT ABOVE
+  //   *** FULL DATASET, FETCHED FROM REMOTE REPO***
   // **************
-  // const BUNDLEDB_URL =
-  //   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-  // // Fetch the json db from its remote repo
-  // const bundleRecords = await Fetch(BUNDLEDB_URL, {
-  //   duration: "0s",
-  //   type: "json",
-  //   fetchOptions: {
-  //     signal: AbortSignal.timeout(3000),
-  //   },
-  // });
+  //
+  // COMMENT OUT THE FOLLOWING LINES TO USE THE *LOCAL* DATA SET
+  // AND UNCOMMENT THE IMPORT UNDER THE LOCAL TEST DATA SECTION ABOVE
+  //
+  // **************
+  const BUNDLEDB_URL =
+    "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+  // Fetch the json db from its remote repo
+  const bundleRecords = await Fetch(BUNDLEDB_URL, {
+    duration: "0s",
+    type: "json",
+    fetchOptions: {
+      signal: AbortSignal.timeout(3000),
+    },
+  });
   // **************
 
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
-
 
   // **************
   // firehose is an array of all blog posts in descending date order
   // **************
   // verify the presence of required fields for each blog post
-  const requiredFields = ['Title', 'Author', 'Date', 'Link', 'Categories'];
+  const requiredFields = ["Title", "Author", "Date", "Link", "Categories"];
   for (let item of bundleRecords) {
     if (item["Type"] === "blog post" && !item["Skip"]) {
       const missingFields = [];
 
       // Check each required field
-      requiredFields.forEach(field => {
+      requiredFields.forEach((field) => {
         if (!item[field]) {
           missingFields.push(field);
         }
@@ -69,22 +75,26 @@ export default async function () {
       if (missingFields.length > 0) {
         const titleDisplay = item["Title"] || "[No Title]";
         console.error(
-          `Error: Blog post "${titleDisplay}" is missing required fields: ${missingFields.join(', ')}`
+          `Error: Blog post "${titleDisplay}" is missing required fields: ${missingFields.join(
+            ", "
+          )}`
         );
       }
     }
-  };
+  }
 
   // helper function to check if a link is a Youtube link
   const isYoutubeLink = (link) => {
-  const origin = filters.getOrigin(link);
-  return origin === "https://www.youtube.com" || origin === "https://youtube.com";
+    const origin = filters.getOrigin(link);
+    return (
+      origin === "https://www.youtube.com" || origin === "https://youtube.com"
+    );
   };
 
   // Pre-compute YouTube status and create rawFirehose
   const rawFirehose = bundleRecords
     .filter((item) => item["Type"] === "blog post" && !item["Skip"])
-    .map(item => ({
+    .map((item) => ({
       ...item,
       isYoutube: isYoutubeLink(item.Link), // Pre-compute YouTube status
     }))
@@ -101,8 +111,14 @@ export default async function () {
       rawFirehoseData.map(async (post) => {
         return {
           ...post,
-          slugifiedTitle: slugifyPackage(post.Title, { lower: true, strict: true }),
-          slugifiedAuthor: slugifyPackage(post.Author, { lower: true, strict: true }),
+          slugifiedTitle: slugifyPackage(post.Title, {
+            lower: true,
+            strict: true,
+          }),
+          slugifiedAuthor: slugifyPackage(post.Author, {
+            lower: true,
+            strict: true,
+          }),
           description: await appliedFilters.getDescription(post.Link),
           formattedDate: await appliedFilters.formatItemDate(post.Date),
           // isYoutube is already on the post object from rawFirehose
@@ -168,7 +184,9 @@ export default async function () {
   // generate two lists of starter projects, one ordered by date of
   // most recent update and the second by number of GitHub stars
   // **************
-  const rawStarters = bundleRecords.filter((item) => item["Type"] === "starter");
+  const rawStarters = bundleRecords.filter(
+    (item) => item["Type"] === "starter"
+  );
 
   const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
@@ -196,7 +214,8 @@ export default async function () {
           const [repoData, commitsData, packageJsonData] = await Promise.all([
             octokit.repos.get({ owner, repo }),
             octokit.repos.listCommits({ owner, repo, per_page: 1 }),
-            octokit.repos.getContent({ owner, repo, path: "package.json" })
+            octokit.repos
+              .getContent({ owner, repo, path: "package.json" })
               .catch(() => null), // Handle missing package.json gracefully
           ]);
 
@@ -208,7 +227,10 @@ export default async function () {
           // Extract 11ty version
           let version = null;
           if (packageJsonData) {
-            const content = Buffer.from(packageJsonData.data.content, "base64").toString("utf-8");
+            const content = Buffer.from(
+              packageJsonData.data.content,
+              "base64"
+            ).toString("utf-8");
             const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
             const match = content.match(regex);
             if (match) {
@@ -220,7 +242,7 @@ export default async function () {
           return {
             ...starter,
             Stars: repoData.data.stargazers_count,
-            Date: date.toISOString().split('T')[0],
+            Date: date.toISOString().split("T")[0],
             LastUpdated: formattedDate,
             Description: repoData.data.description,
             Version: version,
@@ -238,9 +260,9 @@ export default async function () {
   };
 
   let starters = await enrichStarters(rawStarters);
-    starters = starters.sort(
-      (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
-    );
+  starters = starters.sort(
+    (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
+  );
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
   const starterCount = starters.length;
 
@@ -272,7 +294,7 @@ export default async function () {
     }
 
     const getFirstLetterOfLastWord = (str) => {
-      const words = str.trim().split(' ');
+      const words = str.trim().split(" ");
       const lastWord = words[words.length - 1];
       return lastWord.charAt(0).toUpperCase();
     };
@@ -305,14 +327,19 @@ export default async function () {
         // New author - create entry
         authorMap.set(item.Author, {
           name: item.Author,
-          slugifiedName: slugifyPackage(item.Author, { lower: true, strict: true }),
+          slugifiedName: slugifyPackage(item.Author, {
+            lower: true,
+            strict: true,
+          }),
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
           origin: isYoutube ? null : origin,
           description: isYoutube ? null : await filters.getDescription(origin),
           favicon: isYoutube ? null : await filters.getFavicon(item.Link),
           rssLink: isYoutube ? null : await filters.getRSSLink(origin),
-          socialLinks: isYoutube ? null : await filters.getSocialLinks(item.Link),
+          socialLinks: isYoutube
+            ? null
+            : await filters.getSocialLinks(item.Link),
           nonYoutubePostLink: isYoutube ? null : item.Link,
         });
       }
@@ -320,7 +347,7 @@ export default async function () {
 
     // Convert map to array of objects
     const authorArray = await Promise.all(
-      Array.from(authorMap).map(async ( [name, data]) => ({
+      Array.from(authorMap).map(async ([name, data]) => ({
         name,
         slugifiedName: data.slugifiedName,
         firstLetter: data.firstLetter,
@@ -348,7 +375,9 @@ export default async function () {
   const authors = await authorList(firehose, "name");
   const authorsByCount = await authorList(firehose, "count");
   const authorCount = authors.length;
-  const authorLetters = [...new Set(authors.map(author => author.firstLetter))]
+  const authorLetters = [
+    ...new Set(authors.map((author) => author.firstLetter)),
+  ];
 
   // **************
   // get the most recent 3 unique authors from the top 50 posts
@@ -356,31 +385,33 @@ export default async function () {
   // then extract those author records from the authors array
   // **************
   const getRecentAuthors = (firehoseData, authorsData) => {
-  // Single pass through firehose, stops at 50 unique authors
-  const uniqueAuthorPosts = [];
-  const seenAuthors = new Set();
+    // Single pass through firehose, stops at 50 unique authors
+    const uniqueAuthorPosts = [];
+    const seenAuthors = new Set();
 
-  for (const post of firehoseData) {
-    if (post.isYoutube) continue;
+    for (const post of firehoseData) {
+      if (post.isYoutube) continue;
 
-    if (!seenAuthors.has(post.Author)) {
-      uniqueAuthorPosts.push(post);
-      seenAuthors.add(post.Author);
-      if (uniqueAuthorPosts.length === 50) break;
+      if (!seenAuthors.has(post.Author)) {
+        uniqueAuthorPosts.push(post);
+        seenAuthors.add(post.Author);
+        if (uniqueAuthorPosts.length === 50) break;
+      }
     }
-  }
 
-  // Shuffle and select 3
-  const shuffledPosts = uniqueAuthorPosts.sort(() => Math.random() - 0.5);
-  const selectedPosts = shuffledPosts.slice(0, 3);
+    // Shuffle and select 3
+    const shuffledPosts = uniqueAuthorPosts.sort(() => Math.random() - 0.5);
+    const selectedPosts = shuffledPosts.slice(0, 3);
 
-  // Use Map for O(1) lookups
-  const authorsByName = new Map(authorsData.map(author => [author.name, author]));
+    // Use Map for O(1) lookups
+    const authorsByName = new Map(
+      authorsData.map((author) => [author.name, author])
+    );
 
-  return selectedPosts
-    .map(post => authorsByName.get(post.Author))
-    .filter(author => author !== undefined);
-};
+    return selectedPosts
+      .map((post) => authorsByName.get(post.Author))
+      .filter((author) => author !== undefined);
+  };
 
   const recentAuthors = getRecentAuthors(firehose, authors);
 
@@ -391,10 +422,10 @@ export default async function () {
   // not having favicons.
   // **************
   // Create Map once before the loop
-  const authorsByName = new Map(authors.map(author => [author.name, author]));
+  const authorsByName = new Map(authors.map((author) => [author.name, author]));
 
   for (let post of firehose) {
-    const authorRecord = authorsByName.get(post.Author);  // O(1) lookup
+    const authorRecord = authorsByName.get(post.Author); // O(1) lookup
     if (authorRecord && authorRecord.favicon) {
       post.favicon = authorRecord.favicon;
     }
@@ -408,43 +439,46 @@ export default async function () {
   //  - first letter of the category
   // **************
   const categoryList = (posts, sortField) => {
-  function categorySort(a, b) {
-    if (sortField === "category") {
-      // Handle undefined values safely
-      const catA = a.name || "";
-      const catB = b.name || "";
-      return catA.localeCompare(catB);
-    } else {
-      return b.count - a.count; // Sort by count descending
-    }
-  }
-  let categoryMap = new Map();
-  for (let item of posts) {
-    // Skip items with missing categories
-    if (!item.Categories || !Array.isArray(item.Categories)) continue;
-    if (item.Skip) continue;
-
-    for (const category of item.Categories) {
-      const existing = categoryMap.get(category);
-      if (existing) {
-        existing.count += 1;
+    function categorySort(a, b) {
+      if (sortField === "category") {
+        // Handle undefined values safely
+        const catA = a.name || "";
+        const catB = b.name || "";
+        return catA.localeCompare(catB);
       } else {
-        categoryMap.set(category, {
-          slugifiedCategory: slugifyPackage(category, { lower: true, strict: true }),
-          count: 1,
-          firstLetter: category.charAt(0),
-        });
+        return b.count - a.count; // Sort by count descending
       }
-    };
-  }
-  return Array.from(categoryMap)
-    .map(([name, data]) => ({
-      name: name,
-      slugifiedCategory: data.slugifiedCategory,
-      count: data.count,
-      firstLetter: data.firstLetter,
-    }))
-    .sort(categorySort);
+    }
+    let categoryMap = new Map();
+    for (let item of posts) {
+      // Skip items with missing categories
+      if (!item.Categories || !Array.isArray(item.Categories)) continue;
+      if (item.Skip) continue;
+
+      for (const category of item.Categories) {
+        const existing = categoryMap.get(category);
+        if (existing) {
+          existing.count += 1;
+        } else {
+          categoryMap.set(category, {
+            slugifiedCategory: slugifyPackage(category, {
+              lower: true,
+              strict: true,
+            }),
+            count: 1,
+            firstLetter: category.charAt(0),
+          });
+        }
+      }
+    }
+    return Array.from(categoryMap)
+      .map(([name, data]) => ({
+        name: name,
+        slugifiedCategory: data.slugifiedCategory,
+        count: data.count,
+        firstLetter: data.firstLetter,
+      }))
+      .sort(categorySort);
   };
 
   // **************
@@ -458,8 +492,9 @@ export default async function () {
   const categories = categoryList(firehose, "category");
   const categoriesByCount = categoryList(firehose, "count");
   const categoryCount = categories.length;
-  const categoryLetters = [...new Set(categories.map(category => category.firstLetter))]
-    .sort((a, b) => a.localeCompare(b));
+  const categoryLetters = [
+    ...new Set(categories.map((category) => category.firstLetter)),
+  ].sort((a, b) => a.localeCompare(b));
 
   // **************
   // log the counts of various items
