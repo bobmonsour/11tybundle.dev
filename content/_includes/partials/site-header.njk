@@ -10,10 +10,11 @@
       </div>
       {% raw %}{{ 11tybundle.dev }}{% endraw %}
     </a>
-    {# <a href="http://" class="site-header__cta button">Sticker now only $3! <svg width="20" height="20"
-        viewBox="0 0 24 24" aria-hidden="true">
+    {%- if site.headerAnnouncement === "true" -%}
+      <a href="http://" class="site-header__cta button">Sticker now only $3! <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-arrow-right"></use>
-      </svg></a> #}
+      </svg></a>
+    {%- endif -%}
 
     <nav id="main-nav" class="site-header__nav hidden">
       <ul role="list">

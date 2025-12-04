@@ -28,7 +28,7 @@ import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 // AND UNCOMMENT THE REMOTE FETCHING SECTION BELOW
 //
 // **************
-// import bundleRecords from './bundledbtest.json' with { type: 'json' };
+import bundleRecords from './bundledbtest2.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -48,17 +48,42 @@ export default async function () {
   // AND UNCOMMENT THE IMPORT UNDER THE LOCAL TEST DATA SECTION ABOVE
   //
   // **************
-  const BUNDLEDB_URL =
-    "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-  // Fetch the json db from its remote repo
-  const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: cacheDuration.bundleDB,
-    type: "json",
-    fetchOptions: {
-      signal: AbortSignal.timeout(fetchTimeout.bundleDB),
-    },
-  });
+  // const BUNDLEDB_URL =
+  //   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+  // // Fetch the json db from its remote repo
+  // const bundleRecords = await Fetch(BUNDLEDB_URL, {
+  //   duration: cacheDuration.bundleDB,
+  //   type: "json",
+  //   fetchOptions: {
+  //     signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+  //   },
+  // });
   // **************
+
+  // Create a smaller test data file
+  // try {
+  //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  //   const outPath = path.join(__dirname, "bundletest2.json");
+
+  //   const highIssueRecords = bundleRecords.filter((item) => {
+  //     const issue = Number(item.Issue);
+  //     return Number.isFinite(issue) && issue >= 50;
+  //   });
+
+  //   await fs.writeFile(
+  //     outPath,
+  //     JSON.stringify(highIssueRecords, null, 2),
+  //     "utf8"
+  //   );
+  //   console.log(
+  //     `Wrote ${highIssueRecords.length} high-issue records to ${outPath}`
+  //   );
+  // } catch (err) {
+  //   console.error(
+  //     "Failed to write bundletest2.json:",
+  //     err && err.message ? err.message : err
+  //   );
+  // }
 
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
