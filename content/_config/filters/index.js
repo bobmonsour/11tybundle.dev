@@ -11,12 +11,7 @@ import { getFavicon } from "./getfavicon.js";
 import { getOrigin, getHostname } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
 import { getSocialLinks } from "./getsociallinks.js";
-import {
-  getAuthorIcons,
-  getWebIcon,
-  getRSSIcon,
-  getSocialIcons,
-} from "./getauthoricons.js";
+import { getAuthorIcons, getSocialIcons } from "./getauthoricons.js";
 import { plainDate } from "./datesandnumbers.js";
 import { postCountLabel } from "./postcountlabel.js";
 import { getAuthorRecord, postsByAuthor } from "./postsbyauthor.js";
@@ -34,8 +29,6 @@ export const filters = {
   formatFirehoseDate,
   formatNumber,
   getAuthorIcons,
-  getWebIcon,
-  getRSSIcon,
   getSocialIcons,
   getBundleItems,
   getDescription,

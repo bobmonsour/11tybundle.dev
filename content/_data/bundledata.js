@@ -7,7 +7,7 @@
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
-ld;
+import slugifyPackage from "slugify";
 
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 

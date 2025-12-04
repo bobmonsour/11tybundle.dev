@@ -11,6 +11,8 @@ import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 
 const rssLinkCache = {};
 
+let getRSSLinkCallCount = 0;
+
 //***************
 // given the origin of a site, attempt to extract a link
 // to the site's RSS feed by searching for the appropriate
@@ -19,10 +21,13 @@ const rssLinkCache = {};
 // attempt if the origin is in the exception list.
 //***************
 
-export const getRSSLink = async (siteOrigin) => {
+export async function getRSSLink(siteOrigin) {
   // Validate that siteOrigin is a valid HTTP/HTTPS URL
   if (!siteOrigin || typeof siteOrigin !== "string") {
-    console.log(`getRSSLink - Invalid siteOrigin: ${siteOrigin}`);
+    getRSSLinkCallCount++;
+    console.log(
+      `\nInvalid siteOrigin: ${siteOrigin} getRSSLinkCallCount: ${getRSSLinkCallCount}`
+    );
     return "";
   }
 
@@ -82,4 +87,4 @@ export const getRSSLink = async (siteOrigin) => {
     // cache the empty result to avoid repeated fetch attempts
     return (rssLinkCache[siteOrigin] = "");
   }
-};
+}

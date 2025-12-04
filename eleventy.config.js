@@ -58,6 +58,7 @@ export default function (eleventyConfig) {
 
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
+
   eleventyConfig.addPlugin(shortcodes);
   // While a shortcode, the singlePost andsinglePostByAythor uses getFilter
   // to allow re-use of eleventy's built-in slugify filter, and

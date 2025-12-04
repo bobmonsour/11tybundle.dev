@@ -1,8 +1,11 @@
+// import { getRSSLink } from "../filters/getrsslink.js";
 import { getRSSLink } from "../filters/getrsslink.js";
 import { getSocialLinks } from "../filters/getsociallinks.js";
 
+let authorIconCallCount = 0;
+
 // get the web icon HTML for an aothor's web origin
-export const getWebIcon = async (origin) => {
+const getWebIcon = (origin) => {
   // console.log("Getting web icon for origin:", origin);
   return `<li><a href="${origin}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
   <use xlink:href="#icon-globe"></use>
@@ -10,7 +13,7 @@ export const getWebIcon = async (origin) => {
 };
 
 // get the rss icon HTML for an aothor's web origin
-export const getRSSIcon = async (origin) => {
+const getRSSIcon = async (origin) => {
   let rssLink = await getRSSLink(origin);
   return rssLink === ""
     ? ""
@@ -48,6 +51,8 @@ export async function getSocialIcons(origin) {
 }
 
 export async function getAuthorIcons(origin) {
+  authorIconCallCount++;
+  // console.log(`getAuthorIcons called ${authorIconCallCount} times`);
   const webIcon = await getWebIcon(origin);
   const rssIcon = await getRSSIcon(origin);
   const socialIcons = await getSocialIcons(origin);
