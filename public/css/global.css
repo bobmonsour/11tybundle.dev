@@ -2,12 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
-
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -312,6 +306,7 @@ mark,
 .site-main {
   grid-area: main;
   section,
+  .section,
   header {
     border-bottom: 1px solid var(--surface-mid);
     padding-block: var(--grid-gutter);
@@ -353,6 +348,12 @@ mark,
 
 .hidden {
   display: none;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gutter);
 }
 
 .prose {
@@ -452,4 +453,9 @@ mark,
   width: 32px;
   aspect-ratio: 1;
   border-radius: var(--radius-s);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
 }

@@ -313,11 +313,9 @@
 
   .categories-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--space-2xs);
-    > strong {
-      padding: var(--space-3xs) 0;
-    }
+
     > ul {
       display: flex;
       flex-wrap: wrap;

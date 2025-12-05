@@ -5,7 +5,7 @@ eleventyComputed:
 permalink: "/"
 issue: 80
 ---
-<section>
+<div class="section">
   <div class="hero container">
     <h1>Bundles of 11ty know-how</h1>
     <div class="intro">
@@ -34,10 +34,9 @@ issue: 80
       </div>
     </article>
   </div>
-</section>
-<section>
-  <div class="container">
-    <article class="feeds">
+</div>
+<div class="section">
+  <div class="feeds container">
       <article class="feeds__section">
         <h2 class="h3">From the firehose <a href="/firehosefeed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
@@ -85,15 +84,14 @@ issue: 80
           </li>
         </ol>
       </article>
-    </article>
   </div>
-</section>
-<section class="surface-mid">
+</div>
+<div class="section surface-mid">
   <div class="container">
     <h2 class="h3">Recent starters</h2>
-    <article class="recent-starters">
+    <div class="recent-starters">
       {%- for item in bundledata.starters.slice(0,3) %}
-      <article class="recent-starters__item">
+      <div class="recent-starters__item">
         <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
             </svg>
@@ -106,20 +104,20 @@ issue: 80
           </ul>
           <a href="{{ item.Demo }}"><small>Demo site</small></a>
         </div>
-      </article>
+      </div>
       {%- endfor %}
-    </article>
+    </div>
     <p><a href="/starters/" class="button">View all starters <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <use xlink:href="#icon-arrow-right"></use>
         </svg></a></p>
-    </div>
-</section>
-<section>
+  </div>
+</div>
+<div class="section">
   <div class="container">
     <h2 class="h3">Author spotlight</h2>
-    <article class="recent-authors">
+    <div class="recent-authors">
       {%- for item in bundledata.recentAuthors %}
-      <article class="recent-authors__item">
+      <div class="recent-authors__item">
         {{ item.favicon | safe}}
         <div class="details">
           <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
@@ -128,14 +126,14 @@ issue: 80
             {{ item.origin | getAuthorIcons | safe }}
           </ul>
         </div>
-      </article>
+      </div>
       {%- endfor %}
-    </article>
+    </div>
     <p><a href="/authors/" class="button">View all authors <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <use xlink:href="#icon-arrow-right"></use>
         </svg></a></p>
     </div>
-</section>
+</div>
 {% css %}
 {% include "public/css/home.css" %}
 {% endcss %}

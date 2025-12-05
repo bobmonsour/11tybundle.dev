@@ -1,0 +1,98 @@
+.showcase__grid {
+  display: grid;
+  gap: var(--grid-gutter);
+
+  @media (width >=768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (width >=1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.showcase__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "figcaption"
+    "picture";
+  margin-block: unset;
+  border-radius: var(--radius-m);
+  background: var(--surface-mid);
+  border: 1px solid var(--surface-fore);
+  overflow: hidden;
+  position: relative;
+
+  picture {
+    grid-area: picture;
+  }
+
+  figcaption {
+    display: contents;
+    grid-area: figcaption;
+    display: flex;
+    gap: var(--space-2xs);
+
+    align-items: center;
+    background: oklch(100 0 0);
+    font-size: var(--step--1);
+    border-radius: 999px;
+    margin: var(--space-2xs);
+    padding: var(--space-3xs) var(--space-2xs);
+  }
+
+  a {
+    text-decoration: none;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+    }
+
+    &:hover,
+    &:focus {
+      +.details {
+        clip: auto;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        white-space: normal;
+        pointer-events: none;
+        opacity: 1;
+        transform: translateY(0) scale(1);;
+      }
+    }
+  }
+
+  .details {
+    grid-area: picture;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: stretch;
+    inset: var(--grid-gutter);
+    padding: var(--space-s);
+    background: var(--surface-mid);
+    border: 1px solid var(--surface-fore);
+    border-radius: var(--radius-m);
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+    transition: opacity 150ms ease-out, transform 150ms ease-out;
+    p {
+      margin-block-start: unset;
+    }
+  }
+
+  .favicon {
+    aspect-ratio: 1;
+    width: var(--space-s-m);
+    border-radius: var(--radius-s);
+  }
+}

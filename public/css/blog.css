@@ -3,9 +3,8 @@
   gap: var(--grid-gutter);
   grid-template-columns: 1fr;
 
-  .pagination {
-    display: flex;
-    justify-content: space-between;
+  .post__title {
+    font-size: var(--step-3);
   }
 
   @media (width >=768px) {
@@ -32,7 +31,6 @@
 
 .post__title {
   font-family: var(--font-display-bold);
-  font-size: clamp(1.35rem, 0.9723rem + 1.6788vw, 2.4413rem);
 }
 
 .post__list {
@@ -46,10 +44,14 @@
   gap: var(--grid-gutter);
   grid-template-columns: 1fr;
 
+  .post__title {
+    font-size: var(--step-1);
+  }
+
   .details {
     display: flex;
     flex-direction: column;
-    gap: 1lh;
+    gap: var(--space-2xs);
   }
 
   .meta {
