@@ -9,6 +9,7 @@
     "startdry": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --dryrun",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "buildns": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site",
     "postdev": "npx -y pagefind --site _site --serve",
     "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
