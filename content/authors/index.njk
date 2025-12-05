@@ -62,7 +62,7 @@ permalink: /authors/
       <h3>{{ author.favicon | safe }}<a href="/authors/{{ author.slugifiedName }}">{{author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
       <ol role="list" class="directory--list">
         {% for item in bundledata.firehose | postsByAuthor(author.name, 3) %}
-          <a href="{{ item.Link }}">{{ item.Title }}</a>
+          <li><a href="{{ item.Link }}">{{ item.Title }}</a>
           <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time></li>
         {% endfor %}
       </ol>
