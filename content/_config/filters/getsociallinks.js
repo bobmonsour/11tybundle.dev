@@ -19,7 +19,9 @@ const isBluesky = (u) => u.hostname.includes("bsky");
 
 // Determine if a URL is a YouTube profile
 const isYouTube = (u) =>
-  u.hostname.includes("youtube.com") || u.hostname.includes("youtu.be");
+  u.hostname.includes("youtube.com") ||
+  u.hostname.includes("youtu.be") ||
+  u.hostname.includes("www.youtube.com");
 
 // Heuristic for Mastodon-like profile URLs on any instance
 const isMastodon = (u) =>
