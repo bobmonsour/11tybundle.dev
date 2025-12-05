@@ -23,7 +23,7 @@ const genFaviconImg = async (faviconPath) => {
 
   // use person favicon svg for default favicon
   if (faviconPath === defaultFaviconPath) {
-    imgElement = `<svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg><span class="visually-hidden">Website</span>`;
+    imgElement = `<svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg>`;
 
     // use the resolved favicon path for the site/user
   } else {
@@ -267,9 +267,7 @@ export const getFavicon = async (link) => {
     domain.includes("piperhaywood") ||
     domain.includes("nathan-smith")
   ) {
-    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-    <use xlink:href="#icon-person-circle"></use>
-    </svg>`;
+    return `<svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg>`;
   }
   //******************************
 
