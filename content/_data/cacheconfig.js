@@ -14,7 +14,7 @@ export const cacheDuration = {
   aiSummaryHtml: "1y",
   bundleDB: "0s",
   descHtml: "1w",
-  faviconImage: "0s",
+  faviconImage: "1w",
   faviconHtml: "1w",
   rssLinkHtml: "1w",
   socialHtml: "1w",
