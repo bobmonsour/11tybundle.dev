@@ -1,8 +1,365 @@
 ---
-layout: "base.njk"
+layout: "section.njk"
 ---
-<section>
-  <article class="container">
-    {{ content | safe }}
-  </article>
-</section>
+{% css %}
+{% include "public/css/blog.css" %}
+{% endcss %}
+<header class="main-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <nav>
+      <ul role="list">
+        <li><a href="" class="current">Posts</a></li>
+        <li><a href="">RSS</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="section">
+  <div class="post__layout container">
+    <dl class="calendar">
+      <dt>Issue</dt>
+      <dd>{{ issue }}</dd>
+    </dl>
+    <div class="prose">
+      <h1 class="post__title">{{ title }}</h1>
+      <p class="meta"><time datetime="{{ date }}">{{ date | formatPostDate }}</time> ~ 7 minutes to read</p>
+      {{ content | safe }}
+    </div>
+    <aside>
+      <h2 class="h3">Recent releases</h2>
+      <div class="directory__grid">
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Eleventy Font Awesome Plugin v1.0.0</a>
+          <div class="details">
+            <p>Optimized per-page tree-shaken SVG spritesheets for Eleventy with Font Awesome icons.</p>
+            <time datetime="2025-09-18">Sep 18, 2025</time>
+          </div>
+        </div>
+      </div>
+      <h2 class="h3">Posts from around the web</h2>
+      <div class="directory__grid">
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Obsidian bases work great with Eleventy</a>
+          <div class="details">
+            <time datetime="2025-09-18">Sep 18, 2025</time>
+            <p>By <a href="">SamJC</a> (1 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">Front Matter</a></li>
+                <li><a href="">Obsidian</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Creating Cloudflare redirects</a>
+          <div class="details">
+            <p>Notes on optimal ways to pull together a redirects file suitable for a Cloudflare hosted website.</p>
+            <time datetime="2025-10-08">Oct 8, 2025</time>
+            <p>By <a href="">Simon Cox</a> (16 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Configuration</a></li>
+                <li><a href="">Debugging</a></li>
+                <li><a href="">Deployment</a></li>
+                <li><a href="">How-to</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Eleventy Launch</a>
+          <div class="details">
+            <p>As I discussed previously, I've been rewriting this blog in a new tool called 11ty (aka Eleventy - the
+              project's devs aren't consistent so I won't be either). This is the first blog post written in the new
+              blog
+              engine, and the migration is complete!</p>
+            <time datetime="2025-10-08">Oct 8, 2025</time>
+            <p>By <a href="">Ash Furrow</a> (2 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href="">Performance</a></li>
+                <li><a href="">Plugins</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">An 11ty Site, Codeberg Pages, and Cron</a>
+          <div class="details">
+            <p>Using a cron job with Codeberg Pages to build and deploy an 11ty site</p>
+            <time datetime="2025-10-08">Oct 8, 2025</time>
+            <p>By <a href="">Jason Moser</a> (5 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Deployment</a></li>
+                <li><a href="">Scheduling</a></li>
+                <li><a href="">Social Media</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Font Subsetting in Eleventy</a>
+          <div class="details">
+            <p>eleventy-plugin-font-subsetting works fine but its configuration is finicky.</p>
+            <time datetime="2025-10-08">Oct 8, 2025</time>
+            <p>By <a href="">Shiv J.M.</a> (13 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Asset Pipelines</a></li>
+                <li><a href="">CSS/Sass</a></li>
+                <li><a href="">Configuration</a></li>
+                <li><a href="">How-to</a></li>
+                <li><a href="">Plugins</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">hire.shivjm.in: The Missing Cover Letter</a>
+          <div class="details">
+            <p>I turned a blog entry into a profile of myself as a developer.</p>
+            <time datetime="2025-10-08">Oct 8, 2025</time>
+            <p>By <a href="">Shiv J.M.</a> (13 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Analytics</a></li>
+                <li><a href="">CSS/Sass</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href="">Markdown</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Upgrading Eleventy After 5 Years</a>
+          <div class="details">
+            <time datetime="2025-10-05">Oct 5, 2025</time>
+            <p>By <a href="">Sam Ruby</a> (1 post)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Configuration</a></li>
+                <li><a href="">Drafts</a></li>
+                <li><a href="">How-to</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">More Description</a>
+          <div class="details">
+            <p>Let's continue Another WhileDo post. Of course, my amazing work yesterday had one fatal flaw and that is
+              that the preview…</p>
+            <time datetime="2025-10-04">Oct 4, 2025</time>
+            <p>By <a href="">Martin Hähnel</a> (14 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">Configuration</a></li>
+                <li><a href="">Markdown</a></li>
+                <li><a href="">Plugins</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">11ty Hacks for Fun and Performance</a>
+          <div class="details">
+            <p>Alex Russell on browsers, standards, and the process of progress.</p>
+            <time datetime="2025-10-04">Oct 4, 2025</time>
+            <p>By <a href="">Alex Russell</a> (1 post)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">CSS/Sass</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href="">Pagination</a></li>
+                <li><a href="">Performance</a></li>
+                <li><a href="">Plugins</a></li>
+                <li><a href="">Shortcodes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">11ty Hacks for Fun and Performance</a>
+          <div class="details">
+            <p>Alex Russell on browsers, standards, and the process of progress.</p>
+            <time datetime="2025-10-04">Oct 4, 2025</time>
+            <p>By <a href="">Alex Russell</a> (1 post)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">CSS/Sass</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href="">Pagination</a></li>
+                <li><a href="">Performance</a></li>
+                <li><a href="">Plugins</a></li>
+                <li><a href="">Shortcodes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">WhileDo</a>
+          <div class="details">
+            <p>Instead of a How-To, I'll write a "WhileDo" today. This is my attempt to Write Like Ron Jeffries.</p>
+            <time datetime="2025-10-03">Oct 3, 2025</time>
+            <p>By <a href="">Martin Hähnel</a> (14 posts)</p>
+            {%- include "partials/author-links.njk" -%}
+            <div class="categories-list">
+              <strong>Categories</strong>
+              <ul role="list">
+                <li><a href="">Blogging</a></li>
+                <li><a href="">CSS/Sass</a></li>
+                <li><a href="">Configuration</a></li>
+                <li><a href="">Filters</a></li>
+                <li><a href="">How-to</a></li>
+                <li><a href="">Social Media</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="h3">Built with Eleventy</h2>
+      <div class="directory__grid">
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Shiv J.M.</a>
+          <div class="details">
+            <p>I've been working as a full-stack developer since 2007.</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">alansuspect.dev</a>
+          <div class="details">
+            <p>I'm a web developer trying to write about it.</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Evans Theatre</a>
+          <div class="details">
+            <p>Brandon's Indiest Indie Cinema</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Christian Miles</a>
+          <div class="details">
+            <p>Technology Sales Leader specializing in developer tooling and data visualization. Based in Victoria,...
+            </p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Lyons Psychological Services</a>
+          <div class="details">
+            <p>Psychological services for adult and adolescents.</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">favorite albums</a>
+          <div class="details">
+            <p>website</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Natalie Rose</a>
+          <div class="details">
+            <p>Blog and digital garden of a queer computer woman who occasionally does music.</p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">FIfF eV</a>
+          <div class="details">
+            <p>Das Forum InformatikerInnen für Frieden und gesellschaftliche Verantwortung ist ein Zusammenschluss...
+            </p>
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+        <div class="directory__card directory--detail">
+          <img src="/img/favicon.ico" class="favicon" alt="" eleventy:ignore>
+          <a href="http://">Adam Wilbert</a>
+          <div class="details">
+            {%- include "partials/author-links.njk" -%}
+          </div>
+        </div>
+      </div>
+    </aside>
+    {% for entry in collections.posts %}
+    {% if entry.url == page.url %}
+    <nav>
+      <ol role="list" class="pagination">
+        {% if not loop.first %}
+        <li>
+          <a href="{{ collections.posts[loop.index0 - 1].url }}" class="button"><svg width="20" height="20"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg> Previous</a>
+        </li>
+        {% endif %}
+
+        {% if not loop.last %}
+        <li>
+          <a href="{{ collections.posts[loop.index0 + 1].url }}" class="button">Next <svg width="20" height="20"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg></a>
+        </li>
+        {% endif %}
+      </ol>
+    </nav>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

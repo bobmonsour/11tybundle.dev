@@ -1,13 +1,11 @@
 ---
 layout: post.njk
-date: 2025-10-11
-issue: 79
-title: 11ty Meetup videos, 11ty logo as Font Awesome icon, 11ty FA plugin hits 1.0, Add a CMS to ZeroPoint, Peter deHaan and Nunjucks loops, Kyle brings us Brewventy, Zach on Podcast Awesome, Hire Shiv J.M.,Dwkns debugs with a shortcode, Alex Russell performs hacks, Simon redirects on Cloudflare, Build your own Subspace...And 1 releases, 27 posts, and 11 sites to see
+date: 2025-09-11
+issue: 78
+title: Why it's called Eleventy, 11ty Meetup 9/17, Speaking of CMS's, The ZeroPoint starter, Vento 2 has arrived, Performance debugging?, Components on the island...And 4 releases, 33 posts, and 13 sites to see
 ---
 
-For a long time, I'd been in the habit of adding posts to the database as I found them. But due to travel and a couple of other life stressors, I just started adding links to the posts in an Obsidian doc. Well, they just kept piling up and not getting added to the bundle. A few of days ago, I finally sat down and added them all. For those of you who subscribe to the RSS feed of the Firehose, on the evening of October 8th, you likely saw a flood of posts (about 15 of them) land in your feed readers. My apologies for the deluge.
-
-One of the reasons I've been busy is that we're searching for a new home in Southern California. Over our 32 years of marriage, we've lived in 10 different houses across 3 states (CA, NJ, and WA). So, yes, this next one will be our 11th house. 11th time's a charm! And with that, it will hopefully be our last. We're looking forward to being closer to family and old friends.
+I said these would be monthly, and here we are on Sep 11, as scheduled. But with the passage of more time between issues, awesome people have been busy cranking out a ton of new stuff, as you'll see in this issue.
 
 ## Highlights
 
