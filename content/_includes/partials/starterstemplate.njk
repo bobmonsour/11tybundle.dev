@@ -10,20 +10,20 @@
     </nav>
   </div>
 </header>
-<section>
+<div class="section">
   <div class="container">
     <button popovertarget="info" class="button--transparent"><svg width="20" height="20" viewBox="0 0 24 24"
         aria-hidden="true">
         <use xlink:href="#icon-info"></use>
       </svg> About starter projects</button>
     <div id="info" popover>Starter projects take an opinionated approach, adding extra tools to a basic Eleventy install. Featured starters are selected based on how recently they've been updated, their popularity (measured by GitHub stars), and the clarity of their READMEs. If you're new to Eleventy, check out the <a href="">Getting Started</a> category. You'll also find links to <em><strong>eleventy billion</strong></em> more <a href="https://www.11ty.dev/docs/starter/">starter projects on the 11ty docs site.</a></div>
-    <article class="directory__grid">
+    <div class="directory__grid">
       {% set starterItems = bundledata.starters %}
       {% if permalink == "/starters/by-stars/" %}
         {% set starterItems = bundledata.startersByStars %}
       {% endif %}
       {% for item in starterItems %}
-        <article class="directory__card directory--detail">
+        <div class="directory__card directory--detail">
           <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
                 <use xlink:href="#icon-github"></use>
               </svg>
@@ -39,8 +39,8 @@
               <a href="{{ item.Demo }}"><small>Demo site</small></a>
             {% endif %}
           </div>
-        </article>
+        </div>
       {% endfor %}
-    </article>
+    </div>
   </div>
-</section>
+</div>

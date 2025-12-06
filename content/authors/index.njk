@@ -16,18 +16,15 @@ permalink: /authors/
     </nav>
   </div>
 </header>
-<section>
-  <nav>
-    <div class="container">
-      <ul role="list" class="skip-links">
-        {% for letter in bundledata.authorLetters %}
-          <li><a href="#id-{{ letter }}">{{ letter }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
-</section>
-
+<nav class="section">
+  <div class="container">
+    <ul role="list" class="skip-links">
+      {% for letter in bundledata.authorLetters %}
+        <li><a href="#id-{{ letter }}">{{ letter }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
 
 {# ***************************************
    Author structure:

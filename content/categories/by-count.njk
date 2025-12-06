@@ -16,9 +16,9 @@ permalink: /categories/by-count/
     </nav>
   </div>
 </header>
-<section>
+<div class="section">
   <div class="container" data-pagefind-body>
-    <article class="directory__grid">
+    <div class="directory__grid">
       {% for category in bundledata.categoriesByCount %}
       <article class="directory__card directory--category">
         <h3><a href="/categories/{{ category.slugifiedCategory }}/">{{ category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
@@ -32,6 +32,6 @@ permalink: /categories/by-count/
         </ol>
       </article>
       {% endfor %}
-    </article>
+    </div>
   </div>
-</section>
+</div>

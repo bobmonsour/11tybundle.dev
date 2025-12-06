@@ -16,17 +16,15 @@ permalink: /categories/
     </nav>
   </div>
 </header>
-<section>
-  <nav>
-    <div class="container">
-      <ul role="list" class="skip-links">
-        {% for letter in bundledata.categoryLetters %}
-          <li><a href="#{{ letter }}">{{ letter }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
-</section>
+<nav class="section">
+  <div class="container">
+    <ul role="list" class="skip-links">
+      {% for letter in bundledata.categoryLetters %}
+        <li><a href="#{{ letter }}">{{ letter }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
 
 {# ***************************************
    Category structure:

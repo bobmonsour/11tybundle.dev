@@ -18,7 +18,7 @@ permalink: /authors/by-count/
 </header>
 <section>
   <div class="container">
-    <article class="directory__grid" data-pagefind-body>
+    <div class="directory__grid" data-pagefind-body>
       {% for author in bundledata.authorsByCount %}
       <article class="directory__card directory--category">
       {% set latestPosts = bundledata.authors | postsByAuthor(author.name, 3) %}
@@ -31,6 +31,6 @@ permalink: /authors/by-count/
         </ol>
       </article>
       {% endfor %}
-    </article>
+    </div>
   </div>
 </section>
