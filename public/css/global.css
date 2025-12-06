@@ -218,6 +218,12 @@ blockquote {
   padding-inline-start: 0.5lh;
 }
 
+pre[class*=language-] {
+  border-radius: var(--radius-s);
+  margin-block: 1lh 0;
+  padding: var(--space-s);
+}
+
 summary {
   --size: 24px;
   padding-inline-start: calc(var(--space-3xs) + var(--size));
@@ -305,6 +311,8 @@ mark,
 
 .site-main {
   grid-area: main;
+  word-break: break-word;
+
   section,
   .section,
   header {
@@ -380,6 +388,7 @@ mark,
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   corner-shape: squircle;
   transform: rotate(5deg);
+  word-break: normal;
   line-height: 1;
   margin-block-start: unset;
   position: relative;
@@ -458,4 +467,23 @@ mark,
 .pagination {
   display: flex;
   justify-content: space-between;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: var(--grid-gutter);
+  right: var(--grid-gutter);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition:
+    opacity 150ms ease-in-out 25ms,
+    transform 150ms ease-in-out 25ms;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }

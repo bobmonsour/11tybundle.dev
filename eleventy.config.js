@@ -73,9 +73,9 @@ export default function (eleventyConfig) {
     toFileDirectory: "bundle",
   });
 
-  // Adds posts collection to prototype blog section
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("content/blog/*.md");
+  // Adds posts collection to blog section
+  eleventyConfig.addCollection("post", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content/blog/**/*.md");
   });
 
   eleventyConfig.setQuietMode(true);

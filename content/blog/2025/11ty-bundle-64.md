@@ -41,22 +41,3 @@ Oh, and by the way, we've crossed the 1,300 mark on posts here. Yay!
 Oh wait, one more thing. I am going to start removing the alpha and beta releases once the final version of a plugin is released. Less clutter is, well, less clutter.
 
 Until next time...
-
----
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

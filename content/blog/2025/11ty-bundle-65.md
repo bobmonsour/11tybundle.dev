@@ -35,22 +35,3 @@ Enjoy the feast!
 **We're Meetup-ing.** The next Eleventy Meetup is [on the calendar for February 6th](https://11tymeetup.dev/events/ep-21-book-pages-and-privacy-first-analytics/). It features yours truly on _[How I built my Books page](https://bobmonsour.com/blog/building-the-book-page/)_. And [David Moll](https://davidmoll.net/) will cover _Umami + 11ty: A Privacy-First selfhosted approach to Web Analytics_.
 
 Until next time...
-
----
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

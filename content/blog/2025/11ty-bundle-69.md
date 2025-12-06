@@ -27,24 +27,3 @@ Good news! Knee replacement surgery went well. Tomorrow will be the 2-week mark.
 **Retaining optimized images across builds.** [Murtuzaali Surti](https://syntackle.com/) shows how to maintain optimized images across build in the `.cache` folder. This is a great build-time performance booster as unchanged images need not be re-optimized. [Check it out](https://syntackle.com/blog/eleventy-image-html-transform-plugin-disk-cache/).
 
 Until next time...
-
----
-
-<div id="issue69-releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

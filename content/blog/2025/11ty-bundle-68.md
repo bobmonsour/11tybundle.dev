@@ -29,22 +29,3 @@ I'm in a slightly elevated state of anxiety at the moment. I'm having my second 
 **Nice new sites.** Among the new sites in this issue, I wanted hightlight a few that caught my eye: [Oregon Symphony Association](https://www.orsymphony.org/), [Green Web Tracker](https://tracker.greenweb.org/), and [State of California Design System](https://designsystem.webstandards.ca.gov/), and [Damian Walsh's personal site](https://damianwalsh.co.uk/).
 
 Until next time...
-
----
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

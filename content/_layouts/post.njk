@@ -13,6 +13,7 @@ layout: "section.njk"
 {% endif %}
 {% endcss %}
 {% include "partials/blog-header.njk" %}
+<p>Page fileSlug is: {{ page.fileSlug }}</p>
 <div class="section">
   <div class="post__layout container">
     <dl class="calendar">
@@ -26,7 +27,6 @@ layout: "section.njk"
       {{ content | safe }}
     </div>
     <aside>
-
 
       <h2 class="h3">Recent releases</h2>
       <div class="directory__grid">
@@ -76,14 +76,13 @@ layout: "section.njk"
 
       <h2 class="h3">Built with Eleventy</h2>
       <div class="directory__grid">
-        {%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
+        {%- for item in bundledata.siteList | getBundleItems(bundleIssue, "site") %}
           <div class="directory__card directory--detail">
-            {{ item.favicon | safe}}
+            {{ item.favicon | safe}}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
-              <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
               <p>{{ item.description | safe }}</p>
               <ul role="list" class="author-links">
-                {{ item.origin | getAuthorIcons | safe }}
+                {{ item.Link | getAuthorIcons | safe }}
               </ul>
             </div>
           </div>

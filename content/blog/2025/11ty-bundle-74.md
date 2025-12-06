@@ -43,24 +43,3 @@ Hat tip to [Robb Knight](https://rknight.me/) for the idea of using [Stripe's pa
 ![The new 11ty Bundle OG image](/assets/img/11tybundle-dev.png)
 
 Until next time...
-
----
-
-<div id="issue69-releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

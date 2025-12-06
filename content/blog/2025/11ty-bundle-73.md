@@ -40,24 +40,3 @@ A quick heads-up: in the event of a summer slowdown in content, it might be more
 **Have snacks with your murals.** [Melanie Richards](https://melanie-richards.com/) brings us [World Snacks](https://snacks.melanie-richards.com/). And a group of Philadelphia artists delivers at [Murals Arts Philadelphia](https://catalog.muralarts.org/) with this year's theme being “Mural Arts: The Place Where Art Meets Hope.” Both are built with [Figma Sites](https://www.youtube.com/watch?v=ZsFIvULxkHI)...oh wait...I mean Eleventy.
 
 Until next time...
-
----
-
-<div id="issue69-releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

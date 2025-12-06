@@ -27,24 +27,3 @@ I've been spending so much time preparing a post for [my personal site](https://
 **Chris hits a double.** [Christopher Kirk-Nielsen](https://chriskirknielsen.com/), [doubles your pagination](https://chriskirknielsen.com/blog/double-pagination-in-eleventy/) fun and [test drives VentoJS](https://chriskirknielsen.com/blog/taking-vento-js-for-a-spin-in-eleventy/), yet another template language
 
 Until next time...
-
----
-
-<div id="issue69-releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -1,12 +1,13 @@
 export default {
   layout: "post.njk",
-  permalink: "blog/{{ page.fileSlug }}/",
+  bodyClass: "blog",
+  eleventyComputed: {
+    permalink: (data) => `blog/${data.page.fileSlug}/`,
+  },
   imageDir: "src/assets/img/",
-  tags: "posts",
+  tags: "post",
   image: {
     source: "11tybundle-dev.png",
     alt: "A cute graphic depicting the 11ty Bundle Dev logo",
   },
-  snow: "false",
-  confetti: "false",
 };

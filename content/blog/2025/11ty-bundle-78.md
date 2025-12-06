@@ -37,28 +37,3 @@ Enjoy!
 **Components on the island.** If you're looking for a way to _"add interactive client-side components to your web site,"_ look no further than [\<is-land\>](https://github.com/11ty/is-land/tree/v5.0.0#is-land). And [v5.0.0 has just been released](https://github.com/11ty/is-land/releases/tag/v5.0.0).
 
 Until next time...
-
----
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="posts"></div>
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}
