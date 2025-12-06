@@ -1,0 +1,33 @@
+{% if itemType == "release" %}
+{# releases #}
+	<div class="bundlereleases" data-pagefind-ignore="index">
+	{% set releaseItems = bundledata.bundleRecords | getBundleItems(bundleIssue, "release") %}
+	{% if releaseItems.length != 0 %}
+	{%- for item in releaseItems %}
+		<div class="bundleitem">
+			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+			<p class="bundleitem-dateline">{% if item.Date %}{{ item.Date | formatItemDate }}{% endif %}</p>
+		</div>
+	{%- endfor -%}
+	{%- else %}<p>No new releases since the last issue.</p>{%- endif -%}
+	</div>
+{%- elif itemType == "blog post" -%}
+{# posts #}
+	<div class="bundleposts" data-pagefind-ignore="index">
+	{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}
+				{%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
+				{%- singlePost item, "blog", item.Author, postCount -%}
+	{%- endfor %}
+	</div>
+{% elif itemType == "site" %}
+{# sites #}
+	<div class="bundlesites" data-pagefind-ignore="index">
+	{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
+		<div class="bundleitem">
+			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
+			<p class="bundleitem-description">{{ item.Link | getDescription | truncate(100) }}</p>
+		</div>
+	{%- endfor -%}
+	</div>
+{% endif %}
