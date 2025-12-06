@@ -194,6 +194,7 @@ export default async function () {
     for (const release of rawReleaseListData) {
       results.push({
         ...release,
+        description: await appliedFilters.getDescription(release.Link),
         formattedDate: await appliedFilters.formatItemDate(release.Date),
       });
     }
