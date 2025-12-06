@@ -87,34 +87,24 @@ layout: "section.njk"
           </div>
         {%- endfor -%}
       </div>
-
-
-
     </aside>
-    {% for entry in collections.posts %}
-    {% if entry.url == page.url %}
+
     <nav>
-      <ol role="list" class="pagination">
-        {% if not loop.first %}
-        <li>
-          <a href="{{ collections.posts[loop.index0 - 1].url }}" class="button"><svg width="20" height="20"
+      {%- set previousPost = collections.post | getPreviousCollectionItem %}
+      {%- set nextPost = collections.post | getNextCollectionItem %}
+      {%- if nextPost or previousPost %}
+        <ol role="list" class="pagination">
+          {%- if previousPost %}<li><a href="{{ previousPost.url }}" class="button"><svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true">
               <use xlink:href="#icon-arrow-left"></use>
-            </svg> Previous</a>
-        </li>
-        {% endif %}
-
-        {% if not loop.last %}
-        <li>
-          <a href="{{ collections.posts[loop.index0 + 1].url }}" class="button">Next <svg width="20" height="20"
+            </svg> Issue {{ bundleIssue - 1 }}</a></li>{% endif %}
+          {%- if nextPost %}<li><a href="{{ nextPost.url }}" class="button"> Issue {{ bundleIssue + 1 }}<svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true">
               <use xlink:href="#icon-arrow-right"></use>
-            </svg></a>
-        </li>
-        {% endif %}
-      </ol>
+            </svg></a></li>{% endif %}
+        </ol>
+      {%- endif %}
     </nav>
-    {% endif %}
-    {% endfor %}
+
   </div>
 </div>
