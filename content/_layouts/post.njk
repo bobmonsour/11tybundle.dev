@@ -3,28 +3,25 @@ layout: "section.njk"
 ---
 {% css %}
 {% include "public/css/blog.css" %}
+{# only include prism CSS on blog posts that have code #}
+{% if pageHasCode %}
+  {% include "public/css/prism-okaidia.css" %}
+{% endif %}
+{# only include lite-youtube-embed CSS on blog posts that YouTube embeds #}
+{% if youtubeId %}
+  {% include "public/css/lite-yt-embed.css" %}
+{% endif %}
 {% endcss %}
-<header class="main-header">
-  <div class="container">
-    <h1>Blog</h1>
-    <nav>
-      <ul role="list">
-        <li><a href="" class="current">Posts</a></li>
-        <li><a href="">RSS</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% include "partials/blog-header.njk" %}
 <div class="section">
   <div class="post__layout container">
     <dl class="calendar">
       <dt>Issue</dt>
-      <dd>{{ issue }}</dd>
+      <dd>{{ bundleIssue }}</dd>
     </dl>
     <div class="prose">
       <h1 class="post__title">{{ title }}</h1>
-      <p class="meta"><time datetime="{{ date }}">{{ date | formatPostDate }}</time> ~ 7 minutes to read</p>
+      <p class="meta"><time datetime="{{ Date }}">{{ Date | formatPostDate }}</time> ~ 7 minutes to read</p>
       {{ content | safe }}
     </div>
     <aside>

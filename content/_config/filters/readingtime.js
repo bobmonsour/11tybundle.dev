@@ -31,11 +31,9 @@ export const readingTime = (text) => {
 
   // calculate the reading time
   var readingTime = Math.round(count / speed);
-  if (readingTime === 0) {
-    return "Less than 1 minute to read";
-  } else if (readingTime === 1) {
+  if (readingTime <= 1) {
     return "1 minute to read";
   } else {
-    return readingTime + " minutes to read";
+    return readingTime + "minutes to read";
   }
 };

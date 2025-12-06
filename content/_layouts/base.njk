@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eleventy Bundle Demo</title>
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+	<meta name="keywords" content="{{ keywords }}">
+	<meta name="view-transition" content="same-origin" >
+
   {% css %}
   {% include "public/css/fonts.css" %}
   {% include "public/css/variables.css" %}
@@ -18,11 +22,42 @@
   <link rel="preload" href="/fonts/Optima-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
+
+  {# Fathom analytics - don't include in development mode #}
+	{% if site.env != "development" %}
+		<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+	{% endif %}
+
+  {# Improve RSS feed visibility #}
+	<link rel="alternate" href="https://11tybundle.dev/feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="https://11tybundle.dev/firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="https://11tybundle.dev/sitesfeed.xml" title="The Sites from The 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="https://11tybundle.dev/releasesfeed.xml" title="The Releases from The 11ty Bundle" type="application/rss+xml">
+
+	{# favicon settings #}
   <link rel="icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  {# Open Graph tags #}
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ site.url }}/img/{{ image.source }}">
+	<meta property="og:image:alt" content="{{ image.alt }}">
+
+  {# Apple tags #}
+	<meta name="apple-mobile-web-app-title" content="11ty Bundle" >
+	<meta name="application-name" content="11ty Bundle" >
+
+	<meta name="generator" content="{{ eleventy.generator }}">
+	<meta name="fediverse:creator" content="@bobmonsour@indieweb.social" />
+
+
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
+  {% include "partials/check-for-youtube.njk" %}
   <main id="main" class="site-main">
   {{ content | safe }}
   </main>

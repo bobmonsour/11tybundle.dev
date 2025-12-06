@@ -1,18 +1,7 @@
 {% css %}
 {% include "public/css/blog.css" %}
 {% endcss %}
-<header class="main-header">
-  <div class="container">
-    <h1>Blog</h1>
-    <nav>
-      <ul role="list">
-        <li><a href="" class="current">Posts</a></li>
-        <li><a href="/feed.xml">RSS</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% include "partials/blog-header.njk" %}
 <div class="section">
   <div class="container">
     <ol role="list" class="post__list">
@@ -20,12 +9,11 @@
       <li class="post__item">
         <dl class="calendar">
           <dt>Issue</dt>
-          <dd>{{ post.data.issue }}</dd>
+          <dd>{{ post.data.Issue }}</dd>
         </dl>
         <div class="details">
-          <h2 class="post__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          <p class="meta"><time datetime="{{ post.date }}">{{ post.date | formatPostDate }}</time> ~ 7 minutes to
-            read</p>
+          <h2 class="post__title"><a href="{{ post.Link }}">{{ post.data.title }}</a></h2>
+          <p class="meta"><time datetime="{{ post.Date }}">{{ post.Date | formatPostDate }}</time> ~ {{ content | readingTime }}</p>
         </div>
       </li>
       {% endfor %}
