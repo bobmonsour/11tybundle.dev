@@ -16,7 +16,7 @@ One new late addition feature: On the [Firehose page](/firehose/), you can colla
 
 Enjoy the new nuggets below. I hope you have a wonderful Thanksgiving, if you celebrate it. If not, I hope you have a wonderful day.
 
-<img src="/assets/img/turkey.png" alt="An artistic image of a turkey wearing a hat" style="width: 50%; margin: 0 auto;">
+<img src="/turkey.png" alt="An artistic image of a turkey wearing a hat" style="width: 50%; margin: 0 auto;">
 
 Until next time...
 

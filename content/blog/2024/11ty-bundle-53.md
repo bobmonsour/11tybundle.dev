@@ -16,7 +16,7 @@ _**Vacation note**: We're heading out of town for a week or so. I will continue 
 
 **Zach's Eleventy Weekly Report №8.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112832336309586780) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
-<img src="/assets/img/zachs-eleventy-progress-8.jpg" alt="Zach's weekly eleventy update number 5" style="width: 70%; margin: 1rem auto;">
+<img src="/zachs-eleventy-progress-8.jpg" alt="Zach's weekly eleventy update number 5" style="width: 70%; margin: 1rem auto;">
 
 - First and foremost, we've got alpha.17. [Check out the release notes](https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.17).
 - While the pug template language has been removed, [there's a plugin for it](https://github.com/11ty/eleventy-plugin-template-languages/pull/13) _(or would that be a pug-in?)_.

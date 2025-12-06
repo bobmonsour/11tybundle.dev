@@ -12,7 +12,7 @@ An email version of this blog is available. **[Subscribe here](#newsletter-subsc
 
 **Zach's Eleventy Weekly Report №5.** First, we're up to alpha.14 (and this site is running on it). Rather than put the rest of it into my own words, I'll share [Zach's Mastodon post](https://fosstodon.org/@eleventy/112711796611167140) where he's been outlining his weekly progress on all things Eleventy.
 
-<img src="/assets/img/zachs-eleventy-progress-5.jpg" alt="Zach's weekly eleventy update number 4" style="width: 70%; margin: 1rem auto;">
+<img src="/zachs-eleventy-progress-5.jpg" alt="Zach's weekly eleventy update number 4" style="width: 70%; margin: 1rem auto;">
 
 **A couple of v3 upgrade posts.** [Alex Zappa](https://alex.zappa.dev) and I each wrote posts about upgrading to version 3. [Here is Alex's](https://alex.zappa.dev/blog/upgrading-to-eleventy-v3/) and [here is mine](https://www.bobmonsour.com/posts/upgrade-and-debug/). You can also find these, along with others in the [Upgrading category](/categories/upgrading/).
 

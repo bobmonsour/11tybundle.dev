@@ -12,7 +12,7 @@ tags:
 
 Say hello to [our new little friend](https://www.11ty.dev/blog/mascot-david/), created by David Neal, a very talented artist and long-time Eleventy enthusiast. If you have ideas for its name, please share them on [Mastodon](https://fosstodon.org/@eleventy).
 
-<img src="/assets/img/11ty-mascot.png" alt="Eleventy mascot, a possum wearing large glasses" style="width: 50%; margin: 0 auto;">
+<img src="/11ty-mascot.png" alt="Eleventy mascot, a possum wearing large glasses" style="width: 50%; margin: 0 auto;">
 
 ## Another free hosting option
 

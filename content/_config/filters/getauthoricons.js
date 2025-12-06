@@ -56,8 +56,6 @@ export async function getSocialIcons(origin) {
       socialIcons += `<li><a href="${platformLink}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-${platform}"></use>
       </svg><span class="visually-hidden">${platform}</span></a></li>`;
-
-      // socialIcons += `<a href="${platformLink}"><img src="/assets/img/${platform}.svg" alt="${platform}" class="social-icon"></a>`;
     }
   });
 

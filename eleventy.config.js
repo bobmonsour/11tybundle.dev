@@ -46,16 +46,6 @@ export default function (eleventyConfig) {
     toFileDirectory: "dist",
   });
 
-  // // Passthrough copy for static assets
-  // [
-  //   { "src/assets/favicon/*": "/" },
-  //   "src/assets/css/",
-  //   "src/assets/img/",
-  //   "src/assets/img/favicons/",
-  //   "src/assets/js/",
-  //   "src/robots.txt",
-  // ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
-
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
 
