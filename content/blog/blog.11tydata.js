@@ -2,7 +2,7 @@ export default {
   layout: "post.njk",
   bodyClass: "blog",
   eleventyComputed: {
-    permalink: (data) => `blog/${data.page.fileSlug}/`,
+    permalink: (data) => `/blog/${data.page.fileSlug}/`,
   },
   imageDir: "src/assets/img/",
   tags: "post",

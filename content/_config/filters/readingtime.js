@@ -34,6 +34,6 @@ export const readingTime = (text) => {
   if (readingTime <= 1) {
     return "1 minute to read";
   } else {
-    return readingTime + "minutes to read";
+    return readingTime + " minutes to read";
   }
 };
