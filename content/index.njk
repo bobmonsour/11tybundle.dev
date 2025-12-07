@@ -15,19 +15,17 @@ issue: 80
           newsletter</a> for email updates.</p>
     </div>
     <article class="latest-blog">
-      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href=""><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg> <span class="visually-hidden">RSS</span></a></h2>
+      {%- set post = collections.post | reverse | first -%}
       <dl class="calendar">
         <dt>Issue</dt>
-        <dd>{{ issue }}</dd>
+        <dd>{{ post.data.bundleIssue }}</dd>
       </dl>
       <div class="summary">
-        <p><a href="">11ty Meetup videos, 11ty logo as Font Awesome icon, 11ty FA plugin hits 1.0, Add a CMS to ZeroPoint, Peter
-          deHaan and Nunjucks loops, Kyle brings us Brewventy, Zach on Podcast Awesome, Hire Shiv J.M.,Dwkns debugs with a
-          shortcode, Alex Russell performs hacks, Simon redirects on Cloudflare, Build your own Subspace...And 1 releases,
-          27 posts, and 11 sites to see</a></p>
-        <p class="meta"><time datetime="2025-10-11">Oct 11, 2025</time> ~ 7 minutes to read</p>
+        <p><a href="{{ post.url }}">{{ post.data.title }}</a></p>
+        <p class="meta"><time datetime="{{ post.date }}">{{ post.date | formatItemDate }}</time> ~ {{ post.content | readingTime }}</p>
         <a href="/blog/" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-arrow-right"></use>
           </svg></a>
