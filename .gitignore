@@ -8,4 +8,3 @@ scripts/
 .env
 .cache
 .vscode
-wrangle.toml
