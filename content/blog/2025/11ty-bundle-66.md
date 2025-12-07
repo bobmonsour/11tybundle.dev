@@ -1,15 +1,11 @@
 ---
 bundleIssue: 66
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup reminder, Installing a JavaScript Runtime, Plug in your Font Awesome, A fruity red starter, From Instagram to Pixelfed, RSS entries are ID'd, A variety of posts, A new look here...And 10 releases, 24 posts and 5 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup reminder, Installing a JavaScript Runtime, Plug in your Font Awesome, A fruity red starter, From Instagram to Pixelfed, RSS entries are ID'd, A variety of posts, A new look here..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-02-04
 tags:
   - 11ty Bundle
----
-
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
 **_A note from Bob:_**
@@ -36,7 +32,7 @@ Incidentally, I've reduced the number of RSS feed entries for this blog and the 
 
 Here's what it looks like:
 
-![The new 11ty Bundle OG image](/11tybundle-dev.png)
+![The new 11ty Bundle OG image](/img/11tybundle-dev.png)
 
 See if you can find all of the _"11s"_ in the image.
 

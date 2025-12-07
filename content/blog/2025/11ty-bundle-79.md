@@ -1,14 +1,12 @@
 ---
 bundleIssue: 79
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Meetup videos, 11ty logo as Font Awesome icon, 11ty FA plugin hits 1.0, Add a CMS to ZeroPoint, Peter deHaan and Nunjucks loops, Kyle brings us Brewventy, Zach on Podcast Awesome, Hire Shiv J.M., Dwkns debugs with a shortcode, Alex Russell performs hacks, Simon redirects on Cloudflare, Build your own Subspace...And 1 releases, 27 posts, and 11 sites to see"
+  title: "Issue {{ bundleIssue }} - 11ty Meetup videos, 11ty logo as Font Awesome icon, 11ty FA plugin hits 1.0, Add a CMS to ZeroPoint, Peter deHaan and Nunjucks loops, Kyle brings us Brewventy, Zach on Podcast Awesome, Hire Shiv J.M., Dwkns debugs with a shortcode, Alex Russell performs hacks, Simon redirects on Cloudflare, Build your own Subspace..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-10-11
 tags:
   - 11ty Bundle
 ---
-
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
 
 ---
 

@@ -23,17 +23,20 @@ layout: "section.njk"
     <div class="prose">
       <h1 class="post__title">{{ title }}</h1>
       <p class="meta"><time datetime="{{ date }}">{{ date | formatPostDate }}</time> ~ {{ content | readingTime }}</p>
+      <p>An email version of this blog is available. <a href="#newsletter"><Strong>Subscribe here.</Strong></a></p>
+      {% set counts = bundleIssue | getIssueCounts(bundledata.issueRecords) %}
+      <p><a href="#blog-releases">{{ counts.releaseCount }}</a>, <a href="#blog-blogposts">{{ counts.postCount }}</a>, and <a href="#blog-sites">{{ counts.siteCount }}</a></p>
       {{ content | safe }}
     </div>
     <aside>
 
-      <h2 class="h3">Recent releases</h2>
+      {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
+      <h2 id="blog-releases" class="h3">Recent releases ({{ releases.length }})</h2>
       <div class="directory__grid">
-        {% set releaseItems = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
-      	{% if releaseItems.length === 0 %}
-          <p>No new releases since the last issue.</p>
+      	{% if releases.length == 0 %}
+          <p>No releases since last issue.</p>
         {% else %}
-	      {%- for item in releaseItems %}
+	      {%- for item in releases %}
           <div class="directory__card directory--detail">
             <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
               <use xlink:href="#icon-github"></use>
@@ -48,9 +51,10 @@ layout: "section.njk"
         {% endif %}
       </div>
 
-      <h2 class="h3">Posts from around the web</h2>
+      {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
+      <h2 id="blog-blogposts" class="h3">Posts from around the web ({{ posts.length }})</h2>
       <div class="directory__grid">
-        {%- for item in bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
+        {%- for item in posts %}
           <div class="directory__card directory--detail">
             {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
@@ -73,9 +77,10 @@ layout: "section.njk"
         {%- endfor -%}
       </div>
 
-      <h2 class="h3">Built with Eleventy</h2>
+      {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
+      <h2 id="blog-sites" class="h3">Built with Eleventy ({{ sites.length }})</h2>
       <div class="directory__grid">
-        {%- for item in bundledata.siteList | getBundleItems(bundleIssue, "site") %}
+        {%- for item in sites %}
           <div class="directory__card directory--detail">
             {{ item.favicon | safe}}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">

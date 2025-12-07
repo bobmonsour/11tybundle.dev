@@ -8,6 +8,7 @@ import {
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
+import { getIssueCounts } from "./getissuecounts.js";
 import { getOrigin, getHostname } from "./getorigin.js";
 import { getRSSLink } from "./getrsslink.js";
 import { getSocialLinks } from "./getsociallinks.js";
@@ -33,6 +34,7 @@ export const filters = {
   getBundleItems,
   getDescription,
   getFavicon,
+  getIssueCounts,
   getOrigin,
   getHostname,
   getRSSLink,
