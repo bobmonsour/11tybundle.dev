@@ -11,7 +11,15 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### A note from Bob:
+
 The email version of this blog is rocking the house! The subscriber count has reached double digits (yes, more than 10)...exceeding expectations. [You can subscribe here](#newsletter-subscribe).
+
+---
+
+### Highlights
 
 **There's a new canary among us** Eleventy canary v3.0.0-alpha.6 was released last week. It incorporates the Virtual Templates that I mentioned last week. And there's [an update to how directory references work](https://github.com/11ty/eleventy/pull/3244) in the context of Virtual Templates. If you have not yet tested your site with the canary releases of 3.0, [here's how you can](https://www.11ty.dev/blog/canary-eleventy-v3/).
 
@@ -24,28 +32,3 @@ The email version of this blog is rocking the house! The subscriber count has re
 **Register for 11ty conference** Once again, there's still time to [register for the 11ty conference](https://conf.11ty.dev/), a free, single-day, single-track, and completely virtual conference scheduled for May 9th.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-While I know that v3.0.0-alpha.6 was released, it does not appear to have been [tagged on GitHub](https://github.com/11ty/eleventy/tags) as of this writing. That said, I know that Zach and the team have been cranking through issues over the past week as evidenced by the quantity of email landing in my GitHub Gmail folder.
-
-<!-- {% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %} -->
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

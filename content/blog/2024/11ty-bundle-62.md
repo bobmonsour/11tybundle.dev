@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_Some notes from Bob:_**
+### A note from Bob:
 
 I'm utterly noteless this week.
 
 ---
+
+### Highlights
 
 **Raymond's video series.** [Raymond Camden](https://www.raymondcamden.com/), the author with the [most posts on this site](/authors/raymond-camden/) (103 as of this writing) has a [two](https://www.youtube.com/watch?v=t5lfwd5KScM#t=14m47s) [part](https://www.youtube.com/watch?v=KY9B90-nmgk) video series titled _"Let's Build a blog Like it's 1990."_ If you're wanting to build a blog with with Eleventy, this is a great place to start.
 
@@ -33,20 +33,3 @@ I'm utterly noteless this week.
 Until next time...
 
 ---
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

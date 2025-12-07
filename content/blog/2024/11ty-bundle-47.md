@@ -8,7 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### Highlights
 
 **v3.0.0-alpha.11 is here!** The [latest release of Eleventy canary](https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.11) is out.
 
@@ -27,20 +29,3 @@ If you're wondering how I built this, I wrote about it [over on my site](https:/
 **One more thing...** In the [last issue](/blog/11ty-bundle-46/), I described some work that I had done to make the workflow for creating content for this site easier. [Gory details are described here](https://www.bobmonsour.com/posts/node-cli-of-my-dreams/).
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' -%}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

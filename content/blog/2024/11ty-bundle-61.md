@@ -8,21 +8,21 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
+---
+
+### A note from Bob:
+
+- We're back from our international travel. It's been almost a month since the [last issue](/blog/11ty-bundle-60/), so this issue is a big one.
+
+- I've decided to do a little housekeeping. I've removed one starter that was on a version of Eleventy less than 1.0. I've also removed a few sites that were no longer available.
+
+- For those of you who subscribe to the email version of this, apologies in advance for the "message clipping" that Gmail will likely do.
+
+- Enjoy!
 
 ---
 
-**_Some notes from Bob:_**
-
-1. _We're back from our international travel. It's been almost a month since the [last issue](/blog/11ty-bundle-60/), so this issue is a big one._
-
-2. _I've decided to do a little housekeeping. I've removed one starter that was on a version of Eleventy less than 1.0. I've also removed a few sites that were no longer available._
-
-3. _For those of you who subscribe to the email version of this, apologies in advance for the "message clipping" that Gmail will likely do._
-
-4. _Enjoy!_
-
----
+### Highlights
 
 **Fill out Survey Awesome.** From the Eleventy blog, Zach is [asking for help by filling out Survey Awesome](https://www.11ty.dev/blog/survey-awesome/): _"As 11ty joined Font Awesome a few short months ago, our project is again relying on survey results to inform future priorities and focus. Alongside the Font Awesome folks, we’re giving the 11ty Community a first look at [Survey Awesome](https://survey.awesome.me/) — a larger and more comprehensive survey about how folks are building for the web, start to end."_
 
@@ -43,22 +43,3 @@ _An email version of this blog is available. **[Subscribe here](#newsletter-subs
 I think that's more than a mouthful for this issue.
 
 Until next time...
-
----
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

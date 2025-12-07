@@ -57,7 +57,7 @@ And, of course, you can also find these on [their author page](https://11tybundl
 - The Eleventy docs now contain the project's [full release history](https://www.11ty.dev/docs/versions/), including pre-releases.
 - We've crossed the [1,500 post mark here](/firehose).
 
-## One more thing...
+#### One more thing...
 
 **Sticker price reduction.** The **[11ty Bundle stickers](https://bobmonsour.com/shop/)** are still available! Designed by [Andy Carolan](https://andycarolan.com), it's 4" x 2" with a matte-finish. They're ~~$5~~ **now only** $3 each. Tax & shipping are included in the price. Shipping them to anywhere in the world seems to be working. They've made it to the UK and Portugal so far, as well as both the east and west coasts of the US. [Get 'em while they're hot](https://bobmonsour.com/shop/)! If you order this week, I will be shipping them out next week.
 

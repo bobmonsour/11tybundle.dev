@@ -11,6 +11,10 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### Highlights
+
 Well, we've done it...we've crossed the 1,000 post milestone. We're now standing at {{ bundledata.postCount | formatNumber }} posts. I'm not sure what to do to celebrate...I'm open to suggestions.
 
 In addition to the [open call for talk proposals for the 11ty conference](https://docs.google.com/forms/d/e/1FAIpQLScdwhO1zfEBvl8mVAJQLWbK0EylD4yPCBpe3Lanz8SvFPI9Xg/viewform), there's now an open call to companies and individuals to sponsor the conference. Send an email to [sponsor@11ty.dev](mailto:sponsor@11ty.dev) to receive a sponsorship prospectus.
@@ -20,26 +24,3 @@ As I use search more and more on this site, I have been unearthing things that p
 And just the other day on the Discord server, someone found a bunch of YouTube videos related to WebC. I thought I had a few of them on here, but nooooo. They've been added to the [WebC category](/categories/webc/). You can also find them in the [YouTube category](/categories/youtube/).
 
 That's all for now...until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

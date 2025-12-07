@@ -8,9 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### A note from Bob:
 
 It's good to be back home, and to be coming off of the high from the 11ty Conference. Whew!
+
+---
+
+### Highlights
 
 **11ty Conference on YouTube.** Here's [a playlist of all the talks](https://www.youtube.com/watch?v=iLxJ6PtuF9M&list=PLwhCq3ZFGOGgetCSWisU2pkl9AFwQVxWJ). It was a great event, and I'm looking forward to the next one. And here's the 5-minute [personal sites montage](https://www.youtube.com/watch?v=b-aQ7_yD44s) that ran during the breaks. And then there's [Zach's post](https://www.zachleat.com/web/11tyconf-keynote-2024/), featuring his talk on The Future of 11ty (2024) along with the full slide deck.
 
@@ -27,20 +33,3 @@ It's good to be back home, and to be coming off of the high from the 11ty Confer
 Finally, last week, I created was a new category called _11ty Conference_. Upon further consideration, I've changed it to [11ty Conference 2024](/categories/11ty-conference-2024/). We're all looking forward to the 2025 event already, right?
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

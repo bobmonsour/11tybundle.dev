@@ -11,6 +11,10 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### Highlights
+
 > Once again, don't forget to [sign up for news about the upcoming (May 2024) 11ty conference](https://conf.11ty.dev/). See that button at the tippy-top of every page of this site? That takes you there too.
 
 A couple of releases this past week, with 11ty v3.0.0-alpha.5 dropping along with v4.02 of the eleventy-img plugin. Check them out in the links below. Here are some highlights of the latest eleventy-img release:
@@ -32,26 +36,3 @@ Meanwhile, I'm having fun doing some mental wrestling with an idea around writin
 On a personal note, I am traveling later this week to help our son move into a new apartment...so I might not have the same cadence of posts as in recent weeks. We'll see.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

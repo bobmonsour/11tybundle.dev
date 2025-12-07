@@ -11,6 +11,10 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### Highlights
+
 > [Registration is now open for the May 9, 2024 11ty conference](https://conf.11ty.dev/). See that button at the tippy-top of every page of this site? That takes you directly to the registration.
 
 Today there was yet another Eleventy Meetup. The organizers are so good that the videos of each of the talks are already posted on YouTube:
@@ -30,26 +34,3 @@ There were 2 side effects of my doing that.
 2. I used the search here to see how many posts used the word Shortcode in their title. There were 8 of them, so now there is a category dedicated to [Shortcodes](/categories/shortcodes/).
 
 That's all for now...until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

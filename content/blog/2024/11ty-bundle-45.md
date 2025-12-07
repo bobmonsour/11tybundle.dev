@@ -8,7 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### Highlights
 
 **Make 11ty Fully Independent and Sustainable.** Well, Zach is making the leap to **_[work independtly on 11ty full time](https://www.zachleat.com/web/independent-sustainable-11ty/)_**! He is asking for your and/or your company's support to make this happen. Click on that preceding link to read the details straight from Zach. If this blurb is all you need, head on over to the **[11ty Open Collective](https://opencollective.com/11ty)** to contribute. I raised my monthly contribution from $5 to $11. If you are able to help in any way, I'm encouraging you to do so. (NOTE: I do not benefit financially from this fundraising effort.)
 
@@ -23,20 +25,3 @@ On a related note, I'm thinking that we need a new category for the kind of post
 **Tinkering under the hood.** I'd been playing with the idea of abandoning Google Sheets as the database for this site. While it works, it's got several shortcomings. Don't get me wrong, Google Forms works as a basic data entry mechanism and I have some Google Apps Scripts to help. I currently have a global data file that uses the Google Sheets API to fetch the data and generate an array of json objects. That got me thinking...this array is not large (a little more than 300KB when written to a file). Is there any reason it should not be a json file start to finish? Not really. I reached out to a couple of trusted people in the community to bounce some ideas around about creating some tooling on my local system for this and got some excellent feedback. I had written a lot more about this journey here, but then thought I should write a post on [my own site](https://www.bobmonsour.com/). I will. The sausage is not quite fully implemented, tested, or cooked yet. Stay tuned.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

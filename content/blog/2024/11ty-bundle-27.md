@@ -8,6 +8,10 @@ tags:
   - 11ty Bundle
 ---
 
+---
+
+### Highlights
+
 > [UPDATE January 17, 2024]: I forgot to mention the upcoming [TheJam.dev](https://cfe.dev/events/the-jam-2024/) conference. It's a FREE, online conference on January 24th and 25th. [Check it out](https://cfe.dev/events/the-jam-2024/). Zach is one of the speakers along with several of more members of the Eleventy community.
 
 Well, we've crossed the 900 post threshold! I've got some ideas for what to do when we cross 1,000, so stay tuned.
@@ -19,26 +23,3 @@ For those interested, I added webmentions to my personal site and [wrote about i
 Enjoy the 17 posts and 3 sites to see this week.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -8,9 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
+
+### Highlights
 
 **Trevor Morris on fire.** Since the last issue, [Trevor Morris](/authors/trevor-morris/) has been on a tear with four interesting and useful posts. Go to that link or see them below. I found his post on _[Organising Eleventy Filters, Shortcodes and more…](https://www.trovster.com/blog/2024/08/organising-eleventy-filters-shortcodes-and-more)_ to be particularly useful and I think I will be adopting some of the techniques he describes.
 
@@ -36,20 +36,3 @@ _A note to starter authors_: I'd encourage you to provide a demo site for your s
 Speaking of starters...while they have not been merged into their respective mains just yet, my sources (meaning some GitHub notifications) indicate that there are new versions of [Adam Stoddard's Grease starter](https://github.com/adamstddrd/grease/tree/v3) and the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog/tree/v9) in the works. I'm looking forward to seeing them go live.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

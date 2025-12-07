@@ -12,7 +12,15 @@ _An email version of this blog is available. **[Subscribe here](#newsletter-subs
 
 ---
 
+---
+
+### A note from Bob:
+
 My ass has been dragging this week, but here we go...better late than never.
+
+---
+
+### Highlights
 
 **Zach's Eleventy Weekly Report №7.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112791044369442010) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
@@ -40,20 +48,3 @@ Note also that these are not part of the core of Eleventy, but have to be instal
 There are more great posts in this week's list below...and this is getting longer than usual, so please browse down below and see what's new.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

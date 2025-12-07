@@ -8,11 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
+---
+
+### A note from Bob:
+
+_**Vacation note**: We're heading out of town for a week or so. I will continue to add content to the site, but publication of the 11ty Bundle will likely be 2 weeks out, rather than the typical weekly cadence. If you want to keep up, there's an [RSS feed for the Firehose](https://11tybundle.dev/firehosefeed.xml) and one for the [Releases](https://11tybundle.dev/releasefeed.xml)._
 
 ---
 
-_**Vacation note**: We're heading out of town for a week or so. I will continue to add content to the site, but publication of the 11ty Bundle will likely be 2 weeks out, rather than the typical weekly cadence. If you want to keep up, there's an [RSS feed for the Firehose](https://11tybundle.dev/firehosefeed.xml) and one for the [Releases](https://11tybundle.dev/releasefeed.xml)._
+### Highlights
 
 **Zach's Eleventy Weekly Report №8.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112832336309586780) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
@@ -32,20 +36,3 @@ _**Vacation note**: We're heading out of town for a week or so. I will continue 
 **Speaking of webmentions.** [Chris Burnell](/authors/chris-burnell/) has a new post that, while titled "[July Project Updates](https://chrisburnell.com/article/july-2024-project-updates/)", covers an update he made to his own webmentions plugin, [now in beta](https://github.com/chrisburnell/eleventy-cache-webmentions/releases/tag/v2.1.0-beta.2).
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

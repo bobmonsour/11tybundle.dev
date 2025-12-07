@@ -11,7 +11,15 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### A note from Bob:
+
 While I'd been posting just about weekly so far this year, other priorities came up and there wasn't a lot of blog activity that I could detect around 11ty. That said, there's been plenty going on in 11ty-land. And here we go...
+
+---
+
+### Highlights
 
 **Plugins, Plugins, everywhere** I track a lot of GitHub activity related to Eleventy and that includes the docs. There have been a lot of updates and improvements to the docs recently. There are too many to cover here, but I did see an update to two pages of the docs related to plugins. One is the page listing all of the [official Eleventy plugins](https://www.11ty.dev/docs/plugins/official/) and the second is the page listing [Community plugins](https://www.11ty.dev/docs/plugins/community/). And if you've written a plugin and it's not listed, you can [add yours to the list](https://github.com/11ty/11ty-website/tree/main/src/_data/plugins#readme).
 
@@ -32,26 +40,3 @@ While I'd been posting just about weekly so far this year, other priorities came
 **And finally...** Don't forget that you can get these posts delivered directly [to your email inbox, or via RSS](#newsletter-subscribe). I also put out a notification on [my Mastodon account](https://indieweb.social/@bobmonsour) and on the [Eleventy Discord server](https://www.11ty.dev/blog/discord/). To those of you who have already subscribed, thank you!
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -9,15 +9,15 @@ tags:
 snow: "true"
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Wishing everyone a very Merry Christmas, Happy Hanukkah, or whatever faith brings you joy during this season!
 
 ---
+
+### Highlights
 
 **Build a centralized RSS feed.** Zach released a [eleventy-activity-feed](https://github.com/11ty/eleventy-activity-feed). Here's what it says on the tin: _"Activity Feed lets you build one centralized RSS feed that pulls in new entries from a bunch of different social networking sites. Support for (one or more) YouTube, RSS or Atom for existing blogs, and Bluesky or Mastodon (via RSS)."_ Go forth, and feed!
 
@@ -40,22 +40,3 @@ And in this issue, you'll find [a post about how Chazz built his](https://thisgu
 Having been so inspired, I decided to spin one up over the last few days. I haven't written about it yet, but [here it is](https://bobmonsour.com/books/). I'll write about my approach to it before too long. Suffice it to say that smallish data sets can be messier than you might expect.
 
 Until next time...
-
----
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

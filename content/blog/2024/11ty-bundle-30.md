@@ -11,6 +11,10 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### Highlights
+
 First off, don't forget to [sign up for news about the upcoming (May 2024) 11ty conference](https://conf.11ty.dev/). See that button at the tippy-top of every page of this site? That takes you there too.
 
 Next up, we've added to new categories to the Bundle. As I've been scouring the planet for 11ty blog posts, I noticed two things. One is that many bloggers want to know how to make drafts of their posts that don't get published until deemed ready by their author. Well, now there's [a category for that](/categories/drafts/). And we've all had our struggles with getting our RSS feeds just so. So, now there's [a category for that](/categories/rss/) too. As part of getting your RSS feed going, I'd encourage you to take advantage of the [W3C's feed validator](https://validator.w3.org/feed/).
@@ -46,26 +50,3 @@ One more thing...a cool thing I came across this week is:
 - [Using Rmarkdown with Eleventy](https://www.schmidtynotes.com/blog/r/2023-02-03-test-rmd/) - R is a language and environment for statistical computing and graphics. R Markdown provides a plaintext authoring framework for data science. If you're into creating visualizations, this might be of interest to you.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

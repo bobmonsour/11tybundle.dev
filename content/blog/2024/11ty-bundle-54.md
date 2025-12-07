@@ -8,9 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
+
+### Highlights
 
 **v3.0.0-beta.1 has arrived! 🎉** Welcome to beta-land! As [Zach writes](https://github.com/11ty/eleventy/releases/tag/v3.0.0-beta.1): _"After 18 alpha pre-releases and over a year of work, our very first beta release of Eleventy 3.0 is available."_ It's smaller, it's got fewer dependencies, and installs faster. Check out [the release notes to read all 20 flagship features](https://github.com/11ty/eleventy/releases/tag/v3.0.0-beta.1) .
 
@@ -47,20 +47,3 @@ Lastly, here's the [list of breaking changes](https://github.com/11ty/eleventy/i
 - Lastly, if you've got a blog and write about Eleventy, my RSS reader, [Inoreader](https://www.inoreader.com/), can sometimes find them as it looks beyond my list of subscriptions for certain search terms like "eleventy" and "11ty." But it doesn't always find them. If you don't have an RSS feed for your blog, I'd encourage you to [add one](https://11tybundle.dev/categories/rss/). And if you do, you can make it more easily discoverable by following [this advice from Jim Nielsen](https://blog.jim-nielsen.com/2021/automatically-discoverable-rss-feeds/). And if you can make it discoverable, I'll discover it when building this site and I'll link to it. For example, like I do on this [author page](/authors/bob-monsour/).
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

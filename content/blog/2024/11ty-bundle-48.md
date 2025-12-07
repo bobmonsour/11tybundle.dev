@@ -8,7 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### Highlights
 
 **We're up to v3.0.0-alpha.13!** Check out the [release notes](https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.13). alpha.12 came out to just before alpha.13. See its [release notes](https://github.com/11ty/eleventy/releases/tag/v3.0.0-alpha.12).
 
@@ -21,20 +23,3 @@ An email version of this blog is available. **[Subscribe here](#newsletter-subsc
 **A new 'Upgrading' category.** Several people have been writing things about upgrading to v3. I've created a new category called [Upgrading](/categories/upgrading/) to collect these posts. It does include some posts about upgrading to 2.0, and even 1.0. They're included for completeness.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' -%}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

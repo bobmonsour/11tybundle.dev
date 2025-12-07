@@ -9,6 +9,10 @@ tags:
 youtubeId: BPKIU9Ow_ZU
 ---
 
+---
+
+### Highlights
+
 > Don't miss [TheJam.dev](https://cfe.dev/events/the-jam-2024/) conference. It's a FREE, online conference on January 24th and 25th. [Check it out](https://cfe.dev/events/the-jam-2024/). Zach is one of the speakers along with several of more members of the Eleventy community.
 
 And this just in today. Zach is interviewed by Mike Neumegen, the CEO of CloudCannon. Here, they "Explore the Bounds of Jamstack."
@@ -22,26 +26,3 @@ Lastly, I don't know how long this site has been around, but it's new to me. It'
 Enjoy the 13 posts and 4 sites to see this week.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -8,6 +8,10 @@ tags:
   - 11ty Bundle
 ---
 
+---
+
+### Highlights
+
 2024 is off to a booming start with 18 new posts since the last issue. We're closing in on 900 posts in the Bundle.
 
 I've started using [Inoreader](https://www.inoreader.com/) as my feed reader and it has some features that make it a lot easier to scour my eleventy billion feeds to find new Eleventy-related content. It's not free, but I was able to take advantage of a year-end promo they had going to get the first year at a discount.
@@ -19,26 +23,3 @@ Last week, I added search (now on every page) <span class="strikethrough">search
 I don't come across a lot of new starters. But last week, I found a really nice one for building a resume page. Here's the [repo](https://github.com/learnwithgurpreet/11ty-resume-template). Better yet, [here's the demo](https://www.gurpreet-singh.in/) and [the post about it](https://www.learnwithgurpreet.com/posts/eleventy-resume-builder/). The author, Gurpreet Singh also joins the list with [his own site](https://www.learnwithgurpreet.com/), now built with Eleventy.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

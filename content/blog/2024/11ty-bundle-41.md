@@ -12,13 +12,21 @@ image:
 confetti: "true"
 ---
 
+---
+
+### A note from Bob:
+
 The email version of this blog is dangerously close to a whopping 30 subscribers. You, yes you, can be that 30th subscriber. [Subscribe here](#newsletter-subscribe).
+
+---
+
+### Highlights
 
 **This site's first birthday** One year ago today, I posted [Issue 5 of the 11ty Bundle](https://11tybundle.dev/blog/11ty-bundle-5/). I called it _**LAUNCH DAY**_ as that is when this site went live. The first 4 issues were published on [my personal site](https://www.bobmonsour.com/) (but have since been relocated here). At that time, the site featured _"more than 300 blog posts across more than 25 categories written by more than 100 authors."_ As of today, we're at 1,054 blog posts, across 42 categories, written by 330 authors...as well as 30 starter projects. Most recently, I've added a [newsletter version](#newsletter-subscribe) of the blog. I honestly don't know how long I'll keep this up, but I'm still having fun with it. I hope that you find it useful. I've written up a [year in review post](https://www.bobmonsour.com/posts/the-11ty-bundle-continues/) on my personal site.
 
 Here's an early design sketch from April of last year:
 
-{% image "src/early-design-sketch.jpg", "early sketch of the site design", "(min-width: 1000px) 1000px, 100vw" %}
+<img src="/img/early-design-sketch.jpg" alt="early sketch of the site design" />
 
 **11ty conference is next week, May 9th!** Here's the [list of speakers](https://conf.11ty.dev/#speakers) so far. It's **FREE**, single-track, and virtual. If you've waited until the last minute, now's the time to [register](https://conf.11ty.dev/#register).
 
@@ -38,20 +46,3 @@ Dan Urbanowicz](https://github.com/danurbanowicz). Respective demos are [here](h
 **Ok, two more things** This blog might have a dry spell for the rest of May and part of June as we're traveling a bit before my wife has her other hip replaced...and I have a hearing test to see if my profoundly deaf left ear qualifies for a cochlear implant. That said, while I might not publishing Issue 42, any new posts from the [authors](/authors/) that I find will show up on the [Firehose page](/firehose/) thanks to a nightly rebuild. Note also that the Firehose has [its own RSS feed](https://11tybundle.dev/firehosefeed.xml).
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

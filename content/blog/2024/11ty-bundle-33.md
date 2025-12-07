@@ -11,6 +11,10 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### Highlights
+
 There is an [open call for talk proposals for the 11ty conference](https://docs.google.com/forms/d/e/1FAIpQLScdwhO1zfEBvl8mVAJQLWbK0EylD4yPCBpe3Lanz8SvFPI9Xg/viewform). Here's a brief summary of what they're looking for:
 
 > We’re looking for a mix of 22-minute or 11-minute (lightning) talks on a variety of topics that will interest folks that care about the craft of building for the web: Best Practices That Work (CSS), Development Trends (e.g. Navigating the Great Divide), Jamstack, Front of the front end Development, Design Systems, Accessibility, Open Source, Web Performance (and probably some Eleventy too!).
@@ -28,26 +32,3 @@ Two more things about this site:
 2. There's another new category...[permalinks](/categories/permalinks/). I've got ideas for a few more...stay tuned.
 
 That's all for now...until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -11,7 +11,15 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
+---
+
+### A note from Bob:
+
 The email version of this blog is closing in on a whopping 30 subscribers. [Subscribe here](#newsletter-subscribe).
+
+---
+
+### Highlights
 
 **More cowbell! I mean more canary!** Eleventy 3.0.0-alpha.7 is out today. It includes _"the eleventyDataSchema property (function callback, async-friendly) in the data cascade"_ as Zach notes in this [GitHub issue comment](https://github.com/11ty/eleventy/issues/879#issuecomment-2062585031).
 
@@ -32,20 +40,3 @@ The email version of this blog is closing in on a whopping 30 subscribers. [Subs
 **11ty conference speakers...so far** Zach has started dripping out the [list of speakers](https://conf.11ty.dev/#speakers) for the upcoming 11ty conference ([register here](https://conf.11ty.dev/)).
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' -%}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

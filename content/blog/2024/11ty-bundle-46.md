@@ -8,7 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### Highlights
 
 **The 11ty-hundredth Post!!!** For our 11ty-hundredth post, [Lene Saile](https://www.lenesaile.com/en/) has updated the ever-so-excellent Eleventy Excellent starter and in [this post on the starter demo](https://eleventy-excellent.netlify.app/blog/eleventy-excellent-30/), she announces its update to the 3.0 canary release. Included in the new starter is a move to ESM, a new config structure, and a host of other updates. It's a great way to get started with Eleventy or even just to [check out the source code](https://github.com/madrilene/eleventy-excellent) to see what excellent looks like. Great work, Lene!
 
@@ -23,20 +25,3 @@ An email version of this blog is available. **[Subscribe here](#newsletter-subsc
 **Make 11ty Fully Independent and Sustainable.** Please consider the appeal I posted last week regarding support for Zach going full-time and independent on the development of Eleventy. As someone who watches the 11ty GitHub repo issues, Zach's been very busy working toward the 3.0 beta and there's some great stuff in the pipeline. To add your financial support, head over to **[11ty Open Collective](https://opencollective.com/11ty)**.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

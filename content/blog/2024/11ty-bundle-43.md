@@ -8,9 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### A note from Bob:
 
 I've managed to find an hour here and an hour there, while traveling, so maybe there won't be a gap in my posting. Anyway...we've got a good one this week. Let's get to it!
+
+---
+
+### Highlights
 
 **The 11ty Conference happened...a roundup.** On May 9th, the 11ty conference aired live, and it was a real good conference about making web sites real good. If you want to watch it from start to finish, the entire conference is [right here on YouTube](https://www.youtube.com/watch?v=iLxJ6PtuF9M&t=1205s).
 
@@ -42,20 +48,3 @@ The conference was exceptionally well done and everything was on time. And the t
 **A reading time plugin.** While some of us have written our own implementation of "reading time" to add that to our posts, this plugin by [Max Boll](https://www.makkusu.dev/about/) just surfaced and it's a nice, lightweight, configurable approach for those who don't want to write their own. You can find it on GitHub at [eleventy-plugin-readingtime](https://github.com/MyXoToD/eleventy-plugin-readingtime). He also wrote a [blog post](https://www.makkusu.dev/blog/2024/05/eleventy-reading-time-plugin/) about it.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

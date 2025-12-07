@@ -8,11 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
+---
+
+### A note from Bob:
+
+Live, from Santa Barbara, California. I waited until the last minute on this one. I hope it works for you.
 
 ---
 
-_Live, from Santa Barbara, California. I waited until the last minute on this one. I hope it works for you._
+### Highlights
 
 **Eleventy v3.0.0: Possums ❤️ ESM.** While this is not likely news to many of you, Eleventy v3.0.0 has been released. This is a major release with a lot of new features and changes. If you haven't already, check out the [release notes](https://github.com/11ty/eleventy/releases/tag/v3.0.0). And if you need help upgrading, there's the [eleventy-upgrade-help plugin](https://github.com/11ty/eleventy-upgrade-help). And there's an [Upgrading category](/categories/upgrading/) on this site to see how others have upgraded their sites.
 
@@ -31,20 +35,3 @@ _Live, from Santa Barbara, California. I waited until the last minute on this on
 **Who says you can't rap to 11ty?** I stumbled across this 2-minute long "[old school rap teaser](https://www.youtube.com/watch?v=7hiUvyxRIOY)" about Eleventy. Enjoy!
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

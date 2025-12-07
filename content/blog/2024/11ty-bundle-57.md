@@ -8,9 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
+
+### Highlights
 
 _This issue is a bit early as I'm flying to the Garden State (New Jersey for those unfamiliar) to see some old friends. I'll be spending time with guys that I went to grade school and high school with as well as some cousins that I haven't seen in a long time. I'm looking forward to the time away and the chance to catch up with everyone. I'm writing this one at the airport; apologies in advance for typos and errors._
 
@@ -25,20 +25,3 @@ _This issue is a bit early as I'm flying to the Garden State (New Jersey for tho
 **An update to pagefind.** While not tied to Eleventy directly, the folks at CloudCannon have released an update to a search tool that many of us use. [Check out the release notes.](https://github.com/CloudCannon/pagefind/releases/tag/v1.1.1)
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -8,11 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
+---
+
+### A note from Bob:
+
+Had a great time in New Jersey with friends and family...still recovering from excess food and drink. But...I'm back! And with v3 at our doorstep, I may have to go back to a weekly schedule...we'll see.\_
 
 ---
 
-_Had a great time in New Jersey with friends and family...still recovering from excess food and drink. But...I'm back! And with v3 at our doorstep, I may have to go back to a weekly schedule...we'll see._
+### Highlights
 
 **Eleventy v3-beta.2: The Final Countdown.** [Eleventy v3.0.0-beta.2](https://github.com/11ty/eleventy/releases/tag/v3.0.0-beta.2) has hit the streets. This could be the final beta before the stable release. Click that link to see the release notes.
 
@@ -49,20 +53,3 @@ This just in (Sep 30, 2024, 2:14pm Pacific Time): a massive pull request titled 
 **Fursuiting is a thing.** [BristolFurs](https://bristolfurs.co.uk/) is one of the recent sites built with Eleventy. I was not aware that Fursuiting was a thing. But it is. And this site is a thing. And it's built with Eleventy.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

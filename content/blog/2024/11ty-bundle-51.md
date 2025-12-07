@@ -8,11 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
+---
+
+### A note from Bob:
+
+I thought this was going to be a short one, with summer and all, but it grew hair as the week progressed. I hope you enjoy it.
 
 ---
 
-I thought this was going to be a short one, with summer and all, but it grew hair as the week progressed. I hope you enjoy it.
+### Highlights
 
 **Zach's Eleventy Weekly Report №6.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112751345586792134) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
@@ -35,20 +39,3 @@ I thought this was going to be a short one, with summer and all, but it grew hai
 **💩-ier.** I will leave you with this humorous and satirical project that I came across via [Stefan Judis' Web Weekly newsletter](https://www.stefanjudis.com/blog/web-weekly-137/). It's called [Shittier](https://www.npmjs.com/package/shittier). _"Shittier is a code formatting tool that aims to make your code look as terrible as possible."_
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

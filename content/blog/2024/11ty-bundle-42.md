@@ -11,7 +11,9 @@ image:
   alt: "Announcement of the 11ty International Symposium on Making Web Sites Real Good"
 ---
 
-An email version of this blog is available. [Subscribe here](#newsletter-subscribe).
+---
+
+### Highlights
 
 **I had some downtime.** While we're down in So Cal visiting our son, I had a little downtime, so I thought I'd put this issue out shortly before the [11ty conference](https://conf.11ty.dev/) to get everyone jazzed up.
 
@@ -24,20 +26,3 @@ An email version of this blog is available. [Subscribe here](#newsletter-subscri
 **Another icon plugin** It was brought to my attention that [uncenter](https://uncenter.dev/) had also produced an icon-access package called [eleventy-plugin-icons](https://github.com/uncenter/eleventy-plugin-icons#readme) that you can use with a wide variety of icon sets, beyond the [Lucide icons](https://lucide.dev/icons/) that I referred to in the [last issue](/blog/11ty-bundle-41/). [Check it out](https://github.com/uncenter/eleventy-plugin-icons#readme)! And like last issue's plugin, you can use shortcodes like this {% raw %}{% icon "star" %}{% endraw %}. Pretty cool! I'd like to add that uncenter is among the most prolific supporters on the Discord server, always ready to help out. And he's currently a high school student. I think he's going to have an amazing future.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{%- include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

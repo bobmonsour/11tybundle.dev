@@ -8,7 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**.
+---
+
+### Highlights
 
 **Zach's Eleventy Weekly Report №4.** Rather than put it into my own words, I thought I'd just share [Zach's Mastodon post](https://fosstodon.org/@eleventy/112672038105630825) where he's been outlining his weekly progress on all things Eleventy.
 
@@ -23,20 +25,3 @@ An email version of this blog is available. **[Subscribe here](#newsletter-subsc
 **A facelift here.** In case you didn't notice, I did a facelift on the [home page here](/). It's now filled with some useful info rather than the descriptive about-type text that was there before. I moved that text to the actual [about](/about/) page. Now the home page shows the title of the most recent blog post (that would be this one as of today) along with three lists, each with 11 (yes, 11) of the most recent releases, the most recent posts from the [Firehose](/firehose/), and the most recent sites built with Eleventy. I hope you find it helpful.
 
 Until next time...
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}
