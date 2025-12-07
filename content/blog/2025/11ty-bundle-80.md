@@ -43,28 +43,3 @@ Enjoy!
 **Kaj Kander dives into schema markup.** [Kaj Kander](https://kajkandler.com/) has provided a couple of resources to show how you can add schema markup (and [why you would want to](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/importance_of_schema_markup/)) to your sites. He's [done it for the Eleventy base blog](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/). He presented all of this on Episode 25 of the 11ty Meetup; check out [the video](https://www.youtube.com/watch?v=Z-83f8qa0_c). And after the meetup, [Simon Cox](https://www.simoncox.com/) dove right in and developed a "modular and automated" [workflow](https://www.simoncox.com/post/2025-10-28-creating-a-modular-approach-to-json-schema-in-an-eleventy-website/) that works for him.
 
 Until next time...
-
----
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="posts"></div>
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}
