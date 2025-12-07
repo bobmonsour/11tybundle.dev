@@ -8,11 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Last I wrote, I suggested that the Bundle's blogs would be posted monthly, rather than every 2 weeks. Well, as I sit here, it's the 11th of August. And what better day of the month than the 11th to publish these posts. So here we are!
 
@@ -21,6 +19,8 @@ And August 11th also shares the significance of being my mother's birthday, may 
 Enjoy!
 
 ---
+
+### Highlights
 
 **Meetup videos.** Videos of the last Eleventy Meetup are now available on Youtube. [Here's a playlist](https://www.youtube.com/playlist?list=PLJy3jyeGVYUpd4IUXPHCNf3r70o4zlnMj).
 

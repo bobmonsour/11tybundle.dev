@@ -9,11 +9,9 @@ tags:
 youtubeId: 4_bYUVGgQQo
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Oh boy, what a few weeks it's been. Life issues are settling down and I'm back with this **HUGE** issue of 11ty posts, releases, and sites to see. I've missed doing this.
 
@@ -22,6 +20,8 @@ These 11ty Bundle blog posts and newsletter will now be published monthly, rathe
 Enjoy!
 
 ---
+
+### Highlights
 
 **Veronica Explains.** In [this video](https://www.youtube.com/watch?v=4_bYUVGgQQo), Veronica explains why she likes static sites, and in particular, Eleventy. It's a great watch and she does a fantastic job explaining the benefits of static sites.
 

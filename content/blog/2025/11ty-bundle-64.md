@@ -1,24 +1,24 @@
 ---
 bundleIssue: 64
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - New eleventy-img plugin, Magnify your images, Free as in 11ty-beer, A new category, The US gov using 11ty, Make a podcast site & feed, Henry's new home, Feed styling...And 3 releases, 15 posts and 22 sites to see"
+  title: "Issue {{ bundleIssue }} - New eleventy-img plugin, Magnify your images, Free as in 11ty-beer, A new category, The US gov using 11ty, Make a podcast site & feed, Henry's new home, Feed styling..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-01-07
 tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Life got in the way of my usual Tuesday publish date. My wife and I have family & friends directly affected by the Eaton fire near Pasadena. It's pretty rough for everyone in Southern California right now. I hope you're all safe and sound.
 
 Let's get into this issue...
 
 ---
+
+### Highlights
 
 **New eleventy-img plugin.** v6.0.0 of the Eleventy Image plugin came out today. [Read all about it](https://github.com/11ty/eleventy-img/releases/tag/v6.0.0). There's some breakage involved.
 

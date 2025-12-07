@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 There's lot packed into this one. Enjoy!
 
 ---
+
+### Highlights
 
 **Meetup tomorrow.** [Episode 24 of the Eleventy Meetup](https://11tymeetup.dev/events/episode-24/) is Thursday (May 29). Learn about the European Accessibility Act from [Fabian Wohlgemuth](https://feynmatt.com/) and DIY Full-Text Search with [Vlad Korobov](https://vladkorobov.com/).
 

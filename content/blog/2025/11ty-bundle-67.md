@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Family health matters are keeping my summary below rather short this issue. There's a lot in this issue, so scan on down below for the goodies.
 
 ---
+
+### Highlights
 
 **We Meetup'd.** The Eleventy Meetup was a success. [Sia Karamalegos](https://sia.codes/) showed us how to use 11ty to [build a data and chart analytics website](https://www.youtube.com/watch?v=o13Yfgzne88). And I showed [how I built my Books page](https://bobmonsour.com/notes/11ty-meetup-how-i-built-my-books-page/). Those links go to the recording of Sia's talk and my blog post, respectively. You can see all of the meetup's recordings on the [Eleventy Meetup YouTube channel](https://www.youtube.com/@THEEleventyMeetup).
 

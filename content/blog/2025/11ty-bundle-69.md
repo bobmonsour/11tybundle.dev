@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Good news! Knee replacement surgery went well. Tomorrow will be the 2-week mark. I'm sleeping slightly better (and slightly is doing a lot of work there). The pain has reached a more manageable level and I've had a little time to keep the firehose operational. Thanks to all of you who reached out with well wishes. I really appreciate it.
 
 ---
+
+### Highlights
 
 **11ty meetup tomorrow.** Tomorrow's Eleventy Meetup features [David Moll](https://davidmoll.net/), discussing _"Umami + 11ty: A Privacy-First selfhosted approach to Web Analytics_" and [Zach Leatherman](https://www.zachleat.com/) discussing _"Blog Awesome, from WordPress to 11ty — walkthrough the imminently shipping Font Awesome blog."_ Check out the [virtual event details](https://11tymeetup.dev/events/ep-22-umami-analytics-and-blog-awesome/). I'll be there, possibly without bells.
 

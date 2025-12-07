@@ -8,11 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 I said these would be monthly, and here we are on Sep 11, as scheduled. But with the passage of more time between issues, awesome people have been busy cranking out a ton of new stuff, as you'll see in this issue.
 
@@ -21,6 +19,8 @@ If you want to skip the preliminaries and get right to [the releases](#releases)
 Enjoy!
 
 ---
+
+### Highlights
 
 **Why it's called Eleventy.** Curious about the name? [Here's the story](https://www.zachleat.com/web/history-of-eleventy-name/), complete with hardcopy archival documentation. Grab a tissue.
 

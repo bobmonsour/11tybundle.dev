@@ -10,7 +10,7 @@ tags:
 
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 For a long time, I'd been in the habit of adding posts to the database as I found them. But due to travel and a couple of other life stressors, I just started adding links to the posts in an Obsidian doc. Well, they just kept piling up and not getting added to the bundle. A few of days ago, I finally sat down and added them all. For those of you who subscribe to the [RSS feed](/firehosefeed.xml) of the [Firehose](/firehose/), on the evening of October 8th, you likely saw a flood of posts (about 15 of them) land in your feed readers. My apologies for the deluge.
 
@@ -21,6 +21,8 @@ If you want to skip the preliminaries and get right to [the releases](#releases)
 Enjoy!
 
 ---
+
+### Highlights
 
 **11ty Meetup Videos.** The video playlist of Episode 26 of the 11ty Meetup [is here](https://www.youtube.com/playlist?list=PLJy3jyeGVYUpctxAkrtoj-L3CvXRzwDE9).
 

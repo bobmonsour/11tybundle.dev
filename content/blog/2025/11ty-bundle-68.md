@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 I'm in a slightly elevated state of anxiety at the moment. I'm having my second knee replacement on March 6th and my wife just received a breast cancer diagnosis, which thankfully, was caught early. We're coping well and doing our best to keep our spirits up (notwithstanding the _total clusterfuck_ that is the US presidency). I'm not sure how much I'll be able to do in the next few weeks. I'll do my best to keep adding posts, releases and sites, but I may take a break from these blog posts. I'll keep you posted. The best way to keep up with the posts is by subscribing to the [Firehose RSS feed](/firehosefeed.xml). There's also an [RSS feed for releases](/releasefeed.xml).
 
 ---
+
+### Highlights
 
 **Color from images.** Zach created a new plugin, called [image-color](https://github.com/11ty/image-color?tab=readme-ov-file#11tyimage-color) that extracts color information from images. Here's [his blog post](https://www.zachleat.com/web/extract-colors/) about it. It looks pretty cool and it's got me thinking of an idea on how I might use it.
 

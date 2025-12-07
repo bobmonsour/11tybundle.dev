@@ -8,11 +8,9 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Some hot news! During the last Eleventy Meetup, Zach alluded to a major new project that he would be working on in the coming months. And as much as we tried to pry out the nature of it from him, he did not relent.
 
@@ -21,6 +19,8 @@ That said, I have a source close to contributors in the Eleventy-sphere and he s
 [P.S.](#af-2025)
 
 ---
+
+### Highlights
 
 **11ty meetup videos.** Videos from the March 20th Meetup are out. Here's [the playlist](https://www.youtube.com/playlist?list=PLJy3jyeGVYUoyTlnt_S3Bni9XOmXjTm1t) with both videos, featuring David Moll on using Umami with 11ty, and Zach Leatherman on moving the [Font Awesome blog](https://blog.fontawesome.com/) from Wordpress to Eleventy (here's [the blog post about it](https://blog.fontawesome.com/blog-awesome-to-11ty/)).
 

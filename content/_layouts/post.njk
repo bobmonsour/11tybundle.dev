@@ -1,5 +1,6 @@
 ---
 layout: "section.njk"
+templateEngineOverride: njk,md
 ---
 {% css %}
 {% include "public/css/blog.css" %}
@@ -24,14 +25,16 @@ layout: "section.njk"
       <h1 class="post__title">{{ title }}</h1>
       <p class="meta"><time datetime="{{ date }}">{{ date | formatPostDate }}</time> ~ {{ content | readingTime }}</p>
       <p>An email version of this blog is available. <a href="#newsletter"><Strong>Subscribe here.</Strong></a></p>
+      {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
+      {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
+      {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
+      <p>Quick links: <a href="#ql-releases">{{ releases.length }} releases</a>, <a href="#ql-blogposts">{{ posts.length }} posts</a>, and <a href="#ql-sites">{{ sites.length }} sites</a></p>
       {% set counts = bundleIssue | getIssueCounts(bundledata.issueRecords) %}
-      <p><a href="#blog-releases">{{ counts.releaseCount }}</a>, <a href="#blog-blogposts">{{ counts.postCount }}</a>, and <a href="#blog-sites">{{ counts.siteCount }}</a></p>
       {{ content | safe }}
     </div>
     <aside>
 
-      {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
-      <h2 id="blog-releases" class="h3">Recent releases ({{ releases.length }})</h2>
+      <h2 id="ql-releases" class="h3">Recent releases <data class="count" value="{{ releases.length }}">{{ releases.length }}</data></h2>
       <div class="directory__grid">
       	{% if releases.length == 0 %}
           <p>No releases since last issue.</p>
@@ -51,8 +54,7 @@ layout: "section.njk"
         {% endif %}
       </div>
 
-      {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
-      <h2 id="blog-blogposts" class="h3">Posts from around the web ({{ posts.length }})</h2>
+      <h2 id="ql-blogposts" class="h3">Posts from around the web <data class="count" value="{{ posts.length }}">{{ posts.length }}</data></h2>
       <div class="directory__grid">
         {%- for item in posts %}
           <div class="directory__card directory--detail">
@@ -77,8 +79,7 @@ layout: "section.njk"
         {%- endfor -%}
       </div>
 
-      {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
-      <h2 id="blog-sites" class="h3">Built with Eleventy ({{ sites.length }})</h2>
+      <h2 id="ql-sites" class="h3">Built with Eleventy <data class="count" value="{{ sites.length }}">{{ sites.length }}</data></h2>
       <div class="directory__grid">
         {%- for item in sites %}
           <div class="directory__card directory--detail">

@@ -39,10 +39,10 @@ export async function getSocialIcons(origin) {
   // Generate social media img elements from the socialLinks object
   let socialIcons = "";
   const socialPlatforms = [
+    "github",
     "mastodon",
     "bluesky",
     "youtube",
-    "github",
     "linkedin",
   ];
   socialPlatforms.forEach((platform) => {

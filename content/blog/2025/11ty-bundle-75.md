@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Fewer than usual expositions from me this week as I got a late start. Regardless, there are some goodies down below. I hope you find something useful!
 
 ---
+
+### Highlights
 
 **Meetup happened.** [Episode 24 of THE Eleventy Meetup](https://11tymeetup.dev/events/episode-24/) happened. Covering accessibility and full text search, videos are available from that link.
 

@@ -8,17 +8,17 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Lots of momentum in 11ty-ville, with 21 new blog posts in this issue. I'm so glad that I can get these onto the site quickly with the set of CLI tools that I built ([and wrote about here](https://bobmonsour.com/blog/node-cli-of-my-dreams/)).
 
 Enjoy the feast!
 
 ---
+
+### Highlights
 
 **Zach on images.** A [2-minute video](https://www.youtube.com/watch?v=e0OHgC677ec) on how to optimize your images with Eleventy.
 

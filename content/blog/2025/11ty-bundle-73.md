@@ -8,17 +8,17 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 After 6 weeks of life disruption, living in different places, it's nice to be back home (and with 2 large displays instead of my laptop). And today, I get a long overdue haircut. Knee rehab is going well and my wife has tolerated her radiation treatments well. Onward!
 
 A quick heads-up: in the event of a summer slowdown in content, it might be more than the typical 2 weeks between issues. Regardless, the [Firehose RSS feed](/firehosefeed.xml) will bring you all the posts as I find them.
 
 ---
+
+### Highlights
 
 **Bunch-o-releases.** Zach has released new versions of a bunch-o-plugins, including (links to release notes):
 

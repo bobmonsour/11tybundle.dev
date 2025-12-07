@@ -8,13 +8,17 @@ tags:
   - 11ty Bundle
 ---
 
-**_A note from Bob:_**
+---
+
+### A note from Bob:
 
 **REMINDER.** The next Eleventy Meetup is [on the calendar for February 6th](https://11tymeetup.dev/events/ep-21-book-pages-and-privacy-first-analytics/). It features yours truly on _[How I built my Books page](https://bobmonsour.com/blog/building-the-book-page/)_. And [Sia Karamalegos](https://sia.codes/) will cover _Using 11ty to build a data and chart analytics website_. The time is 9am Pacific. Hope to see some of you there!
 
 Incidentally, I've reduced the number of RSS feed entries for this blog and the Firehose blog to 20 of the most recent entries. Funny thing, someone who recently subscribed to the Firehose feed told me of the 1,337 entries that were in the feed. I remarked to him that we had reached peak ["Leet"](https://en.wikipedia.org/wiki/Leet).
 
 ---
+
+### Highlights
 
 **Installing a JavaScript Runtime.** New on the Eleventy docs, Zach shows how to install Node or Deno for use with your Eleventy projects. [Read more](https://www.11ty.dev/docs/javascript-runtime/).
 

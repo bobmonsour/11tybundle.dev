@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 Writing this following the first week of our month-long stay in Burbank. I continue rehab from knee replacement surgery and my wife has completed 5 of her 20 radiation treatments. So far, we're both doing well and staying positive. We lucked out with a nice Airbnb in a nice walkable neighborhood. Our dog, Soda, is loving it.
 
 ---
+
+### Highlights
 
 **11ty meetup Apr 23.** The date is set for the next [Eleventy Meetup](https://11tymeetup.dev/events/ep-23-notion-as-a-cms-and-component-prototyping/). Hear from vrugtehagel (their handle on the [Discord server](https://www.11ty.dev/blog/discord/)) on how he uses Notion as a CMS, and [Michael Delaney](https://mwdelaney.me/) will walk through component prototyping with 11ty.
 

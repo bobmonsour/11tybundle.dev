@@ -8,15 +8,15 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
 ---
 
-**_A note from Bob:_**
+### A note from Bob:
 
 I've been spending so much time preparing a post for [my personal site](https://bobmonsour.com/) about the coming (May 1st) 2nd anniversary of the launch of the 11ty Bundle site that I completely forgot that I had to get this issue out. Fortunately, I remembered in time and...here we are.
 
 ---
+
+### Highlights
 
 **We Met Up.** Check out the [Eleventy Meetup event details](https://11tymeetup.dev/events/ep-23-notion-as-a-cms-and-component-prototyping/) for the most recent meetup videos. [Michael Delaney](https://mwdelaney.me/) shared "Rapidly(?) Developing Front-End Components with 11ty" and [vrugtehagel](https://vrugtehagel.nl/) shared "Using Notion as CMS with your Eleventy site."
 
