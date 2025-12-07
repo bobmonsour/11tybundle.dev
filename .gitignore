@@ -8,6 +8,4 @@ scripts/
 .env
 .cache
 .vscode
-
-# Local Netlify folder
-.netlify
+wrangle.toml
