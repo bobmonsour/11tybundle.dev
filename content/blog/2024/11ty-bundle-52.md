@@ -8,10 +8,6 @@ tags:
   - 11ty Bundle
 ---
 
-_An email version of this blog is available. **[Subscribe here](#newsletter-subscribe)**._
-
----
-
 ---
 
 ### A note from Bob:
