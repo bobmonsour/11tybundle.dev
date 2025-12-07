@@ -1,7 +1,7 @@
 ---
 bundleIssue: 47
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - v3.0.0-alpha.11 is here!, Typescript & JSX in the docs, An updated dev server, More posts 'From the Source', A new bundle item layout here...And 3 releases, 5 posts, and 9 sites to see"
+  title: "Issue {{ bundleIssue }} - v3.0.0-alpha.11 is here!, Typescript & JSX in the docs, An updated dev server, More posts 'From the Source', A new bundle item layout here..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-06-11
 tags:
@@ -22,7 +22,7 @@ tags:
 
 **A new 'bundle' item layout here.** In case you didn't already notice, I've made some small design changes to the layouts of the bundle posts that make up the site. In short: (1) moved the post date to just below the description, (2) added the number of posts by the author, (3) added a link to the website that is the source of the post (most often, this is the author's website), and (4) added a link to the RSS feed found on that source. You'll see that some of the posts lack the RSS feed link. If yours is one of them, I'd urge you to follow [Jim Nielsen's great advice](https://blog.jim-nielsen.com/2021/automatically-discoverable-rss-feeds/) on how to make your RSS feed discoverable. By adding a link to the head of your site, I'll be able to find your feed. If your site has more than one feed, I link to the first one that I find. Here's what the new bundle layout looks like.
 
-{% image "src/sample-bundle-item.jpg", "sample bundle item", "(min-width: 1000px) 1000px, 100vw" %}
+<img src="/img/sample-bundle-item.jpg" alt="sample bundle item">
 
 If you're wondering how I built this, I wrote about it [over on my site](https://bobmonsour.com/posts/got-rss-feeds/).
 

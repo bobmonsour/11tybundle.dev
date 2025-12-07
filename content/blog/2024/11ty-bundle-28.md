@@ -1,7 +1,7 @@
 ---
 bundleIssue: 28
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - TheJam.dev 2024 starts tomorrow! Exploring the Bounds of Jamstack (video)..A site with Eleventy themes...And 13 posts, and 4 sites to see. "
+  title: "Issue {{ bundleIssue }} - TheJam.dev 2024 starts tomorrow! Exploring the Bounds of Jamstack (video)..A site with Eleventy themes..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-01-23
 tags:

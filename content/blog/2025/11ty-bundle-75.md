@@ -1,7 +1,7 @@
 ---
 bundleIssue: 75
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup happened, Eleventy v3.1.1, What is 88x31?, Eleventy plugin image magnifier, Still got stickers...And 4 releases, 19 posts, and 14 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup happened, Eleventy v3.1.1, What is 88x31?, Eleventy plugin image magnifier, Still got stickers..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-06-10
 tags:

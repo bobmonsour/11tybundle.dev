@@ -1,7 +1,7 @@
 ---
 bundleIssue: 59
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy v3.0.0: Possums ❤️ ESM, Images for v3, Starters go v3, Sara brings thematic Joy, Meetup-Meetup-Meetup, Building with fundamentals, Horsing around with 11ty, Who says you can't rap to 11ty?...And 4 releases, 7 posts and 15 sites to see"
+  title: "Issue {{ bundleIssue }} - Eleventy v3.0.0: Possums ❤️ ESM, Images for v3, Starters go v3, Sara brings thematic Joy, Meetup-Meetup-Meetup, Building with fundamentals, Horsing around with 11ty, Who says you can't rap to 11ty?..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-10-15
 tags:

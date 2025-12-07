@@ -1,7 +1,7 @@
 ---
 bundleIssue: 27
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Now serving over 900 posts...A new intro making the rounds...And 17 posts, and 3 sites to see. "
+  title: "Issue {{ bundleIssue }} - Now serving over 900 posts...A new intro making the rounds..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-01-16
 tags:

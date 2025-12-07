@@ -1,7 +1,7 @@
 ---
 bundleIssue: 34
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Crossing the 1,000 post milestone...11ty Conference call for proposals AND sponsors...A new category...More WebC videos...And 9 posts, and 6 sites to see."
+  title: "Issue {{ bundleIssue }} - Crossing the 1,000 post milestone...11ty Conference call for proposals AND sponsors...A new category...More WebC videos..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-28
 tags:

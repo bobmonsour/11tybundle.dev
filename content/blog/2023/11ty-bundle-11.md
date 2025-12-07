@@ -19,24 +19,3 @@ I will continue to list releases when they occur, though there are no new ones t
 Funny things...since adding a contact form to this site, I've received two inputs, both asking that I integrate a 3rd party service, one for using audio to read the blog posts aloud, and the second to replace Netlify forms with another service. I respectfully declined both. [UPDATE January 25, 2024:] I have since removed the contact form.
 
 Thanks for reading...and for taking [the survey](https://forms.gle/zFA4Jno1cfT8nt9J8).
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Just a couple sites this week. If you want to see more, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

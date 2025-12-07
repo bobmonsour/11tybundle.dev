@@ -1,7 +1,7 @@
 ---
 bundleIssue: 74
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup May 29, Eleventy v3.1.0, X-GOVUK docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?...And 3 releases, 12 posts, and 6 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup May 29, Eleventy v3.1.0, X-GOVUK docs, Eleventy LibDoc, Grease fire, BWE RSS, Believe in Mermaid(s), Eleventy in the browser, Got stickers?..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-05-27
 tags:

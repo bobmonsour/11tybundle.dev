@@ -17,24 +17,3 @@ And here's what I said last week about the sites section:
 > I've got just two new sites for this issue. And I'm thinking that the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/) site is a much better source of sites built with Eleventy. As a result, unless I come across one or more compelling new sites, the [Built with Eleventy](#sites) section will not be included.
 
 I spoke too soon, 3 new sites showed up on my radar. Among the most interesting is the TC39 site that is now built with Eleventy. TC39 is the committee that manages the development of ECMAScript, the standard upon which JavaScript is based. Too bad that it doesn't have a meta description tag to display, but it's still a cool site.
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Three new sites this week. If you want to see more, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

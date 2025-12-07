@@ -1,7 +1,7 @@
 ---
 bundleIssue: 70
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Meetup Videos, Getty does digital books, Speedlify updated, California is engaged with 11ty, 11ty info architecture improvements, Chobble does starters...And 7 releases, 16 posts, and 15 sites to see"
+  title: "Issue {{ bundleIssue }} - 11ty Meetup Videos, Getty does digital books, Speedlify updated, California is engaged with 11ty, 11ty info architecture improvements, Chobble does starters..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-04-01
 tags:

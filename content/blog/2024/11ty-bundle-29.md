@@ -1,7 +1,7 @@
 ---
 bundleIssue: 29
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Announcing the 11ty International Symposium on Making Web Sites Real Good...Eleventy Excellent starter 2.0...And 8 posts, and 8 sites to see. "
+  title: "Issue {{ bundleIssue }} - Announcing the 11ty International Symposium on Making Web Sites Real Good...Eleventy Excellent starter 2.0..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-01-30
 tags:

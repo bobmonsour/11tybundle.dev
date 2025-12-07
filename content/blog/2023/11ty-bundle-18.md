@@ -1,7 +1,7 @@
 ---
 bundleIssue: 18
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Relocation of some WebC recipes...another source of 11ty links...and 1 release, 14 posts, and 10 sites to see."
+  title: "Issue {{ bundleIssue }} - Relocation of some WebC recipes...another source of 11ty links..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-10-11
 tags:
@@ -15,26 +15,3 @@ On another resource note, I don't recall how I happened upon this, but Jens Groc
 On to the meat of the issue...there's 1 release, 14 new posts, and 10 new sites to check out below.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Ten new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

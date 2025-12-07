@@ -1,7 +1,7 @@
 ---
 bundleIssue: 52
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №7, Official Template Language Plugins, Simpler drafts in alpha.17, Migrations from Jekyll, Turning arbitrary files into a collection, 11ty and the Salesforce API, Generating a responsive CSS background image...And 4 releases, 10 posts, and 11 sites to see"
+  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №7, Official Template Language Plugins, Simpler drafts in alpha.17, Migrations from Jekyll, Turning arbitrary files into a collection, 11ty and the Salesforce API, Generating a responsive CSS background image..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-07-16
 tags:

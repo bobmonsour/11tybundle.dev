@@ -1,7 +1,7 @@
 ---
 bundleIssue: 33
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Conference call for proposals...The conference site is open source...Yet another open source CMS for SSGs...A couple of tweaks to this site...And 13 posts, and 3 sites to see."
+  title: "Issue {{ bundleIssue }} - 11ty Conference call for proposals...The conference site is open source...Yet another open source CMS for SSGs...A couple of tweaks to this site..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-28
 tags:

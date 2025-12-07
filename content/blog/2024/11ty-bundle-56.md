@@ -1,7 +1,7 @@
 ---
 bundleIssue: 56
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Trevor Morris on fire, Max does live CMS previews, Harris reveals his source, Zach talks web components with Oddbird, Metadata for the starters...And 1 release, 10 posts and 11 sites to see"
+  title: "Issue {{ bundleIssue }} - Trevor Morris on fire, Max does live CMS previews, Harris reveals his source, Zach talks web components with Oddbird, Metadata for the starters..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-09-03
 tags:

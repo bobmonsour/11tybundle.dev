@@ -1,7 +1,7 @@
 ---
 bundleIssue: 71
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Meetup Apr 23, CMS developments in progress, Drafts are simpler, QR code curious?, Eleventy v3.1.0-alpha.1...And 4 releases, 19 posts, and 6 sites to see"
+  title: "Issue {{ bundleIssue }} - 11ty Meetup Apr 23, CMS developments in progress, Drafts are simpler, QR code curious?, Eleventy v3.1.0-alpha.1..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-04-15
 tags:

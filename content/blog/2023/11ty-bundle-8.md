@@ -21,22 +21,3 @@ You may (or may not) notice that there's now a scroll-to-top button in the lower
 Lastly, the total post count has dropped a tad. The site of one of our authors has gone 404 and a few other blog posts seem to no longer exist. Now I need to figure out how to instrument the site to detect this automatically and prevent bad links from being published.
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Just a few of the many sites built with Eleventy. I just share a few that come across my limited-scope radar. If you want to see more, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

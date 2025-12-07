@@ -1,7 +1,7 @@
 ---
 bundleIssue: 23
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - The future of JAMstack...Some other cool stuff...And 2 releases, 1 starter, 14 posts, and 8 sites to see."
+  title: "Issue {{ bundleIssue }} - The future of JAMstack...Some other cool stuff..."
   description: "Welcome to Issue {{ bundleIssue }}ty of the 11ty Bundle."
 date: 2023-12-01
 tags:
@@ -30,26 +30,3 @@ Lastly, and I don't know how new this is, but CloudCannon has a thing called Boo
 {% include 'partials/youtube.njk' %}
 
 That's it for this issue. Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

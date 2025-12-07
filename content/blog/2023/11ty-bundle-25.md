@@ -1,7 +1,7 @@
 ---
 bundleIssue: 25
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Where to start? Robb Knight is on fire...Tim Brown arrives...And 1 release, 15 posts, and 10 sites to see."
+  title: "Issue {{ bundleIssue }} - Where to start? Robb Knight is on fire...Tim Brown arrives..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-12-29
 tags:
@@ -17,26 +17,3 @@ Speaking of Robb, he also has been collecting blog posts of people who had joine
 Finally, I mention Tim Brown for three reasons. First, [he built his site](https://tbrown.org/) with Eleventy. Second, he's a master of all things typography. And third, while I don't know him well, we first met way back in 2005 at the very first [An Event Apart](https://aneventapart.com/) in Philadelphia. At the time, I had built a site for a private school in New Jersey and didn't really know what I was doing (CSS was beyond hell at the time). The organizers (none other then [Jeffrey Zeldman](https://www.zeldman.com/), [Eric Meyer](https://meyerweb.com/), and [Jason Santa Maria](https://jasonsantamaria.com/)) asked for sites to review at the event. I sheepishly submitted the school site and got some really good feedback. Tim was another attendee at the time and we got a chance to chat. That's my story and I'm sticking to it.
 
 Let me try this again...I'll see you in 2024...for real!
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

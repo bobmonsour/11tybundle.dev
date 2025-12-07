@@ -28,7 +28,9 @@ templateEngineOverride: njk,md
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
-      <p>Quick links: <a href="#ql-releases">{{ releases.length }} releases</a>, <a href="#ql-blogposts">{{ posts.length }} posts</a>, and <a href="#ql-sites">{{ sites.length }} sites</a></p>
+      {% if releases.length > 0 or posts.length > 0 or sites.length > 0 %}
+      <p>Quick links: {% if releases.length > 0 %}<a href="#ql-releases"> {{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %}  <a href="#ql-blogposts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %}  <a href="#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>
+      {% endif %}
       {% set counts = bundleIssue | getIssueCounts(bundledata.issueRecords) %}
       {{ content | safe }}
     </div>
@@ -62,7 +64,7 @@ templateEngineOverride: njk,md
             <div class="details">
               <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
               {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
-              <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | postCountLabel }})</p>
+              <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
               <ul role="list" class="author-links">
                 {{ authorRecord.origin | getAuthorIcons | safe }}
               </ul>

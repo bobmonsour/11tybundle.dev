@@ -1,7 +1,7 @@
 ---
 bundleIssue: 38
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Plugins, Virtual templates, Register for the 11ty conf, eleventeen starter update, 11feed, the Static Site Fan Club show, a redesign, a cool site...And 3 posts and 8 sites to see."
+  title: "Issue {{ bundleIssue }} - Plugins, Virtual templates, Register for the 11ty conf, eleventeen starter update, 11feed, the Static Site Fan Club show, a redesign, a cool site..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-04-09
 tags:

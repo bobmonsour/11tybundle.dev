@@ -1,7 +1,7 @@
 ---
 bundleIssue: 22
 eleventyComputed:
-  title: "Issue {{ bundleIssue }}ty - Happy Thanksgiving!...Crossing the 800 post threshold...Collapsing the firehose...And 15 posts and 11 sites to see."
+  title: "Issue {{ bundleIssue }}ty - Happy Thanksgiving!...Crossing the 800 post threshold...Collapsing the firehose..."
   description: "Welcome to Issue {{ bundleIssue }}ty of the 11ty Bundle."
 date: 2023-11-21
 tags:
@@ -19,26 +19,3 @@ Enjoy the new nuggets below. I hope you have a wonderful Thanksgiving, if you ce
 <img src="/turkey.png" alt="An artistic image of a turkey wearing a hat" style="width: 50%; margin: 0 auto;">
 
 Until next time...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 77
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup videos, WebNami blog generator, Blue Rose starter, New Speedlify leaderboard, Zach does weird image tricks, Fruity new starter...And 10 releases, 19 posts, and 16 sites to see"
+  title: "Issue {{ bundleIssue }} - Meetup videos, WebNami blog generator, Blue Rose starter, New Speedlify leaderboard, Zach does weird image tricks, Fruity new starter..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-08-11
 tags:

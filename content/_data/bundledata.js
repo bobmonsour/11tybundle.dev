@@ -28,7 +28,7 @@ import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 // AND UNCOMMENT THE REMOTE FETCHING SECTION BELOW
 //
 // **************
-import bundleRecords from './bundledbtest2.json' with { type: 'json' };
+// import bundleRecords from './bundledbtest2.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -48,16 +48,16 @@ export default async function () {
   // AND UNCOMMENT THE IMPORT UNDER THE LOCAL TEST DATA SECTION ABOVE
   //
   // **************
-  // const BUNDLEDB_URL =
-  //   "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-  // // Fetch the json db from its remote repo
-  // const bundleRecords = await Fetch(BUNDLEDB_URL, {
-  //   duration: cacheDuration.bundleDB,
-  //   type: "json",
-  //   fetchOptions: {
-  //     signal: AbortSignal.timeout(fetchTimeout.bundleDB),
-  //   },
-  // });
+  const BUNDLEDB_URL =
+    "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+  // Fetch the json db from its remote repo
+  const bundleRecords = await Fetch(BUNDLEDB_URL, {
+    duration: cacheDuration.bundleDB,
+    type: "json",
+    fetchOptions: {
+      signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+    },
+  });
   // **************
 
   // Create a smaller test data file
@@ -130,48 +130,52 @@ export default async function () {
     }
   }
 
-const buildIssueRecords = (bundleRecords) => {
-  const countsByIssue = new Map();
+  const buildIssueRecords = (bundleRecords) => {
+    const countsByIssue = new Map();
 
-  for (const item of bundleRecords) {
-    // Ignore records explicitly marked to be skipped
-    if (item?.Skip) continue;
+    for (const item of bundleRecords) {
+      // Ignore records explicitly marked to be skipped
+      if (item?.Skip) continue;
 
-    const issueNum = Number(item?.Issue);
-    if (!Number.isFinite(issueNum) || issueNum < 1) continue;
+      const issueNum = Number(item?.Issue);
+      if (!Number.isFinite(issueNum) || issueNum < 1) continue;
 
-    if (!countsByIssue.has(issueNum)) {
-      countsByIssue.set(issueNum, { blogPosts: 0, releases: 0, sites: 0 });
+      if (!countsByIssue.has(issueNum)) {
+        countsByIssue.set(issueNum, { blogPosts: 0, releases: 0, sites: 0 });
+      }
+      const bucket = countsByIssue.get(issueNum);
+
+      switch (item.Type) {
+        case "blog post":
+          bucket.blogPosts += 1;
+          break;
+        case "release":
+          bucket.releases += 1;
+          break;
+        case "site":
+          bucket.sites += 1;
+          break;
+        default:
+          break;
+      }
     }
-    const bucket = countsByIssue.get(issueNum);
 
-    switch (item.Type) {
-      case "blog post":
-        bucket.blogPosts += 1;
-        break;
-      case "release":
-        bucket.releases += 1;
-        break;
-      case "site":
-        bucket.sites += 1;
-        break;
-      default:
-        break;
+    const maxIssue = Math.max(0, ...countsByIssue.keys());
+    const issueRecords = [];
+    for (let i = 1; i <= maxIssue; i++) {
+      const c = countsByIssue.get(i) || { blogPosts: 0, releases: 0, sites: 0 };
+      issueRecords.push({
+        issue: i,
+        blogPosts: c.blogPosts,
+        releases: c.releases,
+        sites: c.sites,
+      });
     }
+
+    return issueRecords;
   };
 
-  const maxIssue = Math.max(0, ...countsByIssue.keys());
-  const issueRecords = [];
-  for (let i = 1; i <= maxIssue; i++) {
-    const c = countsByIssue.get(i) || { blogPosts: 0, releases: 0, sites: 0 };
-    issueRecords.push({ issue: i, blogPosts: c.blogPosts, releases: c.releases, sites: c.sites });
-  }
-
-  return issueRecords;
-};
-
-
-    /**
+  /**
    * Write the issueRecords array to a JSON file next to this JS file.
    * @param {Array} issueRecords - array of issue record objects
    * @param {string} [filename="issueRecords.json"] - output filename

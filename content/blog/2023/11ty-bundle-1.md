@@ -18,18 +18,3 @@ Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you t
 > _UPDATED: 2023-04-18 - I have added descriptions to each of the blog post entries. These are extracted from the blog post page itself as provided by the post's author._
 
 > _UPDATED: 2023-04-07 - Releases and Blog posts are now sorted in reverse chronological order. I've updated this and subsequent posts to use Airtable as a data source to ease the process of preparing new issues. This will also make it easier to support user-supplied content down the road._
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

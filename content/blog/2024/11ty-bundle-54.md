@@ -1,7 +1,7 @@
 ---
 bundleIssue: 54
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - v3.0.0-beta.1 has arrived!  🎉, More releases, A docs refresh discussion, Apple shortcuts for Netlify deployment, A minimal WebC starter, Some reminders...And 5 releases, 9 posts, 1 starter, and 7 sites to see"
+  title: "Issue {{ bundleIssue }} - v3.0.0-beta.1 has arrived!  🎉, More releases, A docs refresh discussion, Apple shortcuts for Netlify deployment, A minimal WebC starter, Some reminders..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-08-06
 tags:

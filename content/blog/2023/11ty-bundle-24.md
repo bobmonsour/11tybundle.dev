@@ -1,7 +1,7 @@
 ---
 bundleIssue: 24
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Snowfall edition...Can you say 3.0 alpha? And 2 releases, 2 starters, 7 posts, and 10 sites to see."
+  title: "Issue {{ bundleIssue }} - Snowfall edition...Can you say 3.0 alpha?"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-12-17
 tags:
@@ -30,26 +30,3 @@ One other new item of note is one of the [starters](/starters/). Named Niépce, 
 I hope that you all enjoy your holiday season and have a wonderful New Year!
 
 I'll see you in 2024...
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Here are the new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

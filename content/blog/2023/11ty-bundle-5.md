@@ -19,20 +19,3 @@ I hope you find this to be a useful resource to help you get the most out of Ele
 _Don't miss an issue. There are two RSS feeds, one is the [Blog RSS](/feed.xml) for posts like the one you're reading now and those in the [Blog](/blog/) and a second one, [Firehose RSS](/firehosefeed.xml), which includes all of the [categorized](/categories/) posts written by numerous [authors](/authors/)._
 
 Feedback is welcome; drop me a line at bob dot monsour at gmail.com.
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-This list is a little light this week, but not really...since all of the above blog posts are about migrating to Eleventy, all of them _should_ be sites that are "Built with Eleventy."
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

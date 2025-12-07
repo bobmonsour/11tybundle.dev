@@ -1,7 +1,7 @@
 ---
 bundleIssue: 35
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Some gentle reminders...Speed up your build times...Got contact forms?...11ty Base Blog update...Email or Beer?...And 5 posts, and 7 sites to see."
+  title: "Issue {{ bundleIssue }} - Some gentle reminders...Speed up your build times...Got contact forms?...11ty Base Blog update...Email or Beer?..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-28
 tags:

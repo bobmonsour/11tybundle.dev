@@ -1,7 +1,7 @@
 ---
 bundleIssue: 76
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Veronica Explains, Eleventy Meetup July 23rd, An emerging CMS, Not using Wordpress, Switching to WebC, Performance gains, This title is too long...And 9 releases, 23 posts, and 25 sites to see"
+  title: "Issue {{ bundleIssue }} - Veronica Explains, Eleventy Meetup July 23rd, An emerging CMS, Not using Wordpress, Switching to WebC, Performance gains, This title is too long..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-07-22
 tags:

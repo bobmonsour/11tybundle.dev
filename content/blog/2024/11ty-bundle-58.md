@@ -1,7 +1,7 @@
 ---
 bundleIssue: 58
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy v3-beta.2: The Final Countdown, v3 docs ready to roll, The Eleventy Meetup happened, Template syntax plugins hit 1.0.0, Migrating from Wordpress to Eleventy, How real Shopify sites perform, Connecting Notion to Eleventy, Fursuiting is a thing...And 4 releases, 12 posts and 12 sites to see"
+  title: "Issue {{ bundleIssue }} - Eleventy v3-beta.2: The Final Countdown, v3 docs ready to roll, The Eleventy Meetup happened, Template syntax plugins hit 1.0.0, Migrating from Wordpress to Eleventy, How real Shopify sites perform, Connecting Notion to Eleventy, Fursuiting is a thing..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-10-01
 tags:

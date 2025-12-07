@@ -1,7 +1,7 @@
 ---
 bundleIssue: 37
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Get your 11ty conference merch bundle...Shaving build time...This blog is now available as a newsletter...And 5 posts, and 5 sites to see."
+  title: "Issue {{ bundleIssue }} - Get your 11ty conference merch bundle...Shaving build time...This blog is now available as a newsletter..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-03-26
 tags:

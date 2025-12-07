@@ -19,26 +19,3 @@ I've also added [Fathom Analytics](https://usefathom.com/ref/ANNPIR) to the site
 And last, but far from least, the next [Eleventy Meetup is scheduled for August 17th](https://11tymeetup.dev/events/ep-15-intelligent-indexing-and-now-pages/). The two talks will cover Intelligent Indexing using the [Pagefind search library](https://pagefind.app/), and How Raymond Camden built [his Now page](https://www.raymondcamden.com/now/).
 
 Until next time...which, with more summer travel in store, might be a little while.
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="newposts"></div>
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-<div id="sites"></div>
-
-## Built with Eleventy
-
-Four new sites to see. If you want to see more sites, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

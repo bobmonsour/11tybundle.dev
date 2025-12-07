@@ -1,7 +1,7 @@
 ---
 bundleIssue: 39
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Another canary, Netlify redirects in your front matter, a speedlify question, just an index.md...And 5 posts and 4 sites to see."
+  title: "Issue {{ bundleIssue }} - Another canary, Netlify redirects in your front matter, a speedlify question, just an index.md..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-04-16
 tags:

@@ -67,7 +67,7 @@
             <p>{{ item.description | safe }}</p>
             <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
             {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
-            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | postCountLabel }})</p>
+            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
             <ul role="list" class="author-links">
               {{ authorRecord.origin | getAuthorIcons | safe }}
             </ul>

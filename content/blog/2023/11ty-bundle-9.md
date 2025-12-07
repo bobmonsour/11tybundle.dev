@@ -61,22 +61,3 @@ Next up, I need to build the code to read the data from the database and match i
 Yes, this is fun. And I'm continuing to learn a lot.
 
 Finally, if you're wondering if I had any help with this from the GitHub Co-Pilot extension and ChatGPT, the answer is yes. I used both of them to help me write the code for the function. And I studied the code and the Firestore docs to make sure that I understood it. And...it works!
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Just a few of the many sites built with Eleventy. I just share a few that come across my limited-scope radar. If you want to see more, check out the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}

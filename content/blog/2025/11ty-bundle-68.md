@@ -1,7 +1,7 @@
 ---
 bundleIssue: 68
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Color from images, Cache optimized images, A post to match the Meetup, New categories, Nice new sites...And 8 releases, 17 posts and 22 sites to see"
+  title: "Issue {{ bundleIssue }} - Color from images, Cache optimized images, A post to match the Meetup, New categories, Nice new sites..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-03-04
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 57
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy joins forces with Font Awesome, Eleventy v3.0.0-alpha.20 has landed, Aleksandr shows us a better way to image, Rob O'Leary does charts with zero JS, An update to pagefind...And 5 releases, 9 posts and 6 sites to see"
+  title: "Issue {{ bundleIssue }} - Eleventy joins forces with Font Awesome, Eleventy v3.0.0-alpha.20 has landed, Aleksandr shows us a better way to image, Rob O'Leary does charts with zero JS, An update to pagefind..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-09-13
 tags:

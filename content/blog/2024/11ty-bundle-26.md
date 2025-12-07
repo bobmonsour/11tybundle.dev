@@ -1,7 +1,7 @@
 ---
 bundleIssue: 26
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 2024 BOOM! Alpha-4 arrives...search this blog...a beautiful resume starter...And 1 release, 18 posts, and 8 sites to see. "
+  title: "Issue {{ bundleIssue }} - 2024 BOOM! Alpha-4 arrives...search this blog...a beautiful resume starter..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-01-08
 tags:

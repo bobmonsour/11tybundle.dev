@@ -1,7 +1,7 @@
 ---
 bundleIssue: 31
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - v3.0.0-alpha.5 arrives...Release of v4.0 of the eleventy-img plugin...Don't miss next week's meetup...And 9 posts, and 4 sites to see. "
+  title: "Issue {{ bundleIssue }} - v3.0.0-alpha.5 arrives...Release of v4.0 of the eleventy-img plugin...Don't miss next week's meetup..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-13
 tags:

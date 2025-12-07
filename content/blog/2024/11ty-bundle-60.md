@@ -1,7 +1,7 @@
 ---
 bundleIssue: 60
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We Meetup'd, Migrate from WP to 11ty, A fetch refresh, 11ty arrives in Wikipedia, Clayton's GitHub action, Adding steroids to Eleventy's log filter...And 4 releases, 16 posts and 14 sites to see"
+  title: "Issue {{ bundleIssue }} - We Meetup'd, Migrate from WP to 11ty, A fetch refresh, 11ty arrives in Wikipedia, Clayton's GitHub action, Adding steroids to Eleventy's log filter..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-10-29
 tags:

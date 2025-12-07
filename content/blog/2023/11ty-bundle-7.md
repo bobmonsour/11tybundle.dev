@@ -33,22 +33,3 @@ Well, that's pretty much where things stand at the moment. The most recent addit
 But wait...based on one of the latest blog posts from Simon Cox (see below), I feel compelled to add a "Debugging" category. A quick panning exercise has unearthed a treasure trove of blog posts (some of which may already be in the database). Stay tuned...
 
 > This just in...There's now a [Debugging](/categories/debugging/) category.
-
-<div id="releases"></div>
-
-## Recent releases
-
-{% set itemType = "release" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Posts from around the web since the last Bundle issue
-
-{% set itemType = "blog post" %}
-{% include 'partials/bundleitems.njk' %}
-
-## Built with Eleventy
-
-Listed below are just a handful of the many sites built with Eleventy. All of this week's sites are from web developers and designers. Aleksandr has been particularly prolific and writes some of the best in-depth tutorials that I've come across. He covers a wide range of web development topics and he's always worth a read.
-
-{% set itemType = "site" %}
-{% include 'partials/bundleitems.njk' %}
