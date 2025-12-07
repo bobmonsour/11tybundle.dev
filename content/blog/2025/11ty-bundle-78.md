@@ -14,7 +14,7 @@ tags:
 
 I said these would be monthly, and here we are on Sep 11, as scheduled. But with the passage of more time between issues, awesome people have been busy cranking out a ton of new stuff, as you'll see in this issue.
 
-If you want to skip the preliminaries and get right to [the releases](#releases) or [the posts](#posts), or [the sites](#sites), have at it.
+If you want to skip the preliminaries and get right to [the releases](#ql-releases) or [the posts](#ql-posts), or [the sites](#ql-sites), have at it.
 
 Enjoy!
 

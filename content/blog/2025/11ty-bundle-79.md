@@ -16,7 +16,7 @@ For a long time, I'd been in the habit of adding posts to the database as I foun
 
 One of the reasons I've been busy is that we're searching for a new home in Southern California. Over our 32 years of marriage, we've lived in 10 different houses across 3 states (CA, NJ, and WA). So, yes, this next one will be our **11th** house. 11th time's a charm! And with that, it will hopefully be our last. We're looking forward to being closer to family and old friends.
 
-If you want to skip the preliminaries and get right to [the releases](#releases) or [the posts](#posts), or [the sites](#sites), have at it.
+If you want to skip the preliminaries and get right to [the releases](#ql-releases) or [the posts](#ql-releases), or [the sites](#ql-sites), have at it.
 
 Enjoy!
 

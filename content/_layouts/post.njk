@@ -29,7 +29,7 @@ templateEngineOverride: njk,md
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
       {% if releases.length > 0 or posts.length > 0 or sites.length > 0 %}
-      <p>Quick links: {% if releases.length > 0 %}<a href="#ql-releases"> {{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %}  <a href="#ql-blogposts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %}  <a href="#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>
+      <p>Quick links: {% if releases.length > 0 %}<a href="#ql-releases"> {{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %}  <a href="#ql-posts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %}  <a href="#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>
       {% endif %}
       {% set counts = bundleIssue | getIssueCounts(bundledata.issueRecords) %}
       {{ content | safe }}
@@ -56,7 +56,7 @@ templateEngineOverride: njk,md
         {% endif %}
       </div>
 
-      <h2 id="ql-blogposts" class="h3">Posts from around the web <data class="count" value="{{ posts.length }}">{{ posts.length }}</data></h2>
+      <h2 id="ql-posts" class="h3">Posts from around the web <data class="count" value="{{ posts.length }}">{{ posts.length }}</data></h2>
       <div class="directory__grid">
         {%- for item in posts %}
           <div class="directory__card directory--detail">
