@@ -1,0 +1,19 @@
+<div class="directory__card directory--detail">
+  {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
+  <div class="details">
+    <p>{{ item.description | safe }}</p>
+    <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
+    <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
+    <ul role="list" class="author-links">
+      {{ authorIcons | safe }}
+    </ul>
+    <div class="categories-list">
+      <strong>Categories</strong>
+      <ul role="list">
+        {% for category in item.Categories %}
+          <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -58,26 +58,11 @@
       <div class="directory__grid">
     {% endif %}
 
-        <div class="directory__card directory--detail">
-          {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
-          <div class="details">
-            <p>{{ item.description | safe }}</p>
-            <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
-            {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
-            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
-            <ul role="list" class="author-links">
-              {{ authorRecord.origin | getAuthorIcons | safe }}
-            </ul>
-            <div class="categories-list">
-              <strong>Categories</strong>
-              <ul role="list">
-                {% for category in item.Categories %}
-                  <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
+        {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
+        {% set authorIcons = authorRecord.origin | getAuthorIcons %}
+
+        {% include "partials/postitemdetail.njk" %}
+
       {% endfor %}
       </div>
     </details>
