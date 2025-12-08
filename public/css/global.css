@@ -267,23 +267,24 @@ summary {
 }
 
 [popover] {
+  --popover-offset: 38px;
   max-width: 65ch;
   font-size: var(--step--1);
   background: var(--surface-mid);
   color: var(--text-colour-1);
   border: 1px solid var(--surface-fore);
-  margin-inline: var(--grid-gutter);
+  margin: 0;
   padding: var(--space-s);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   opacity: 0;
-  transform: translateY(4px);
   transition:
     opacity 150ms ease-in-out 25ms,
     transform 150ms ease-in-out 25ms;
 
   @supports (bottom: anchor(bottom)) {
     inset: auto;
-    bottom: calc(anchor(bottom) + 1.5lh);
+    margin-inline: var(--grid-gutter);
+    bottom: calc(anchor(bottom) + var(--popover-offset));
     justify-self: anchor-center;
   }
 
@@ -367,7 +368,7 @@ mark,
 }
 
 .word-break {
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .standfirst {

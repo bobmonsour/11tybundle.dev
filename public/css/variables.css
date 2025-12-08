@@ -57,17 +57,17 @@
   /* Targets: Controls the difference between steps across all hue ramps */
   --step-1-L: 96%;
   --step-2-L: 91%;
-  --step-3-L: 84%;
+  --step-3-L: 85%;
   --step-4-L: 71%;
   --step-5-L: 52%;
-  --step-6-L: 43%;
-  --step-7-L: 30%;
-  --step-8-L: 23%;
+  --step-6-L: 42%;
+  --step-7-L: 34%;
+  --step-8-L: 26%;
   --step-9-L: 18%;
 
   --step-1-C: 0.02;
   --step-2-C: 0.03;
-  --step-3-C: 0.05;
+  --step-3-C: 0.04;
   --step-4-C: 0.09;
   --step-5-C: 0.13;
   --step-6-C: 0.16;
@@ -86,15 +86,15 @@
   --greyscale: oklch(52% 0 0);
 
   /* Variants: combine absolute L/C targets with each hue */
-	--primary-1: oklch(from var(--primary)   var(--step-1-L) var(--step-1-C) H);
-	--primary-2: oklch(from var(--primary)   var(--step-2-L) var(--step-2-C) H);
-	--primary-3: oklch(from var(--primary)   var(--step-3-L) var(--step-3-C) H);
-	--primary-4: oklch(from var(--primary)   var(--step-4-L) var(--step-4-C) H);
-	--primary-5: oklch(from var(--primary)   var(--step-5-L) var(--step-5-C) H);
-	--primary-6: oklch(from var(--primary)   var(--step-6-L) var(--step-6-C) H);
-	--primary-7: oklch(from var(--primary)   var(--step-7-L) var(--step-7-C) H);
-	--primary-8: oklch(from var(--primary)   var(--step-8-L) var(--step-8-C) H);
-	--primary-9: oklch(from var(--primary)   var(--step-9-L) var(--step-9-C) H);
+	--primary-1: oklch(from var(--primary) var(--step-1-L) var(--step-1-C) H);
+	--primary-2: oklch(from var(--primary) var(--step-2-L) var(--step-2-C) H);
+	--primary-3: oklch(from var(--primary) var(--step-3-L) var(--step-3-C) H);
+	--primary-4: oklch(from var(--primary) var(--step-4-L) var(--step-4-C) H);
+	--primary-5: oklch(from var(--primary) var(--step-5-L) var(--step-5-C) H);
+	--primary-6: oklch(from var(--primary) var(--step-6-L) var(--step-6-C) H);
+	--primary-7: oklch(from var(--primary) var(--step-7-L) var(--step-7-C) H);
+	--primary-8: oklch(from var(--primary) var(--step-8-L) var(--step-8-C) H);
+	--primary-9: oklch(from var(--primary) var(--step-9-L) var(--step-9-C) H);
 
 	--secondary-1: oklch(from var(--secondary) var(--step-1-L) var(--step-1-C) H);
 	--secondary-2: oklch(from var(--secondary) var(--step-2-L) var(--step-2-C) H);
