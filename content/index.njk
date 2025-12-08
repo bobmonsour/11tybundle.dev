@@ -18,14 +18,14 @@ issue: 80
       <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg> <span class="visually-hidden">RSS</span></a></h2>
-      {%- set post = collections.post | reverse | first -%}
+      {%- set post = collections.post | last -%}
       <dl class="calendar">
         <dt>Issue</dt>
         <dd>{{ post.data.bundleIssue }}</dd>
       </dl>
       <div class="summary">
         <p><a href="{{ post.url }}">{{ post.data.title }}</a></p>
-        <p class="meta"><time datetime="{{ post.date | formatYMD }}">{{ post.date | formatItemDate }}</time> ~ {{ post.content | readingTime }}</p>
+        <p class="meta"><time datetime="{{ post.date | formatYMD }}">{{ post.date | formatItemDate }}</time></p>
         <a href="/blog/" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-arrow-right"></use>
           </svg></a>

@@ -21,7 +21,7 @@ eleventyComputed:
         </dl>
         <div class="details">
           <h2 class="post__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          <p class="meta"><time datetime="{{ post.data.date | formatYMD }}">{{ post.data.date | formatPostDate }}</time> ~ {{ post.content | readingTime }}</p>
+          <p class="meta"><time datetime="{{ post.data.date | formatYMD }}">{{ post.data.date | formatPostDate }}</p>
         </div>
       </li>
       {% endfor %}
