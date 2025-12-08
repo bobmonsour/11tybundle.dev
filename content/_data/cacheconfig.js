@@ -13,12 +13,12 @@
 export const cacheDuration = {
   aiSummaryHtml: "1y",
   bundleDB: "0s",
-  descHtml: "1w",
-  faviconImage: "1w",
-  faviconHtml: "1w",
-  rssLinkHtml: "1w",
-  socialHtml: "1w",
-  socialLinks: "1w",
+  descHtml: "1y",
+  faviconImage: "1y",
+  faviconHtml: "1y",
+  rssLinkHtml: "1y",
+  socialHtml: "1y",
+  socialLinks: "1y",
   starters: "1y",
 };
 
