@@ -130,6 +130,9 @@ export default async function () {
     }
   }
 
+  // generate issueRecords array from the bundleRecords
+  // with each record containing the issue number and counts of
+  // blog posts, releases, and sites for that issue
   const buildIssueRecords = (bundleRecords) => {
     const countsByIssue = new Map();
 
@@ -181,24 +184,34 @@ export default async function () {
    * @param {string} [filename="issueRecords.json"] - output filename
    * @returns {string} output file path
    */
-  // const writeIssueRecordsToFile = async (issueRecords, filename = "issueRecords.json") => {
-  //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  //   const outPath = path.join(__dirname, filename);
+  const writeIssueRecordsToFile = async (
+    issueRecords,
+    filename = "issueRecords.json"
+  ) => {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
+    const outPath = path.join(__dirname, filename);
 
-  //   try {
-  //     // ensure directory exists (defensive)
-  //     await fs.mkdir(path.dirname(outPath), { recursive: true });
-  //     await fs.writeFile(outPath, JSON.stringify(issueRecords, null, 2), "utf8");
-  //     console.log(`Wrote ${issueRecords.length} issue records to ${outPath}`);
-  //     return outPath;
-  //   } catch (err) {
-  //     console.error("Failed to write issue records:", err && err.message ? err.message : err);
-  //     throw err;
-  //   }
-  // };
+    try {
+      // ensure directory exists (defensive)
+      await fs.mkdir(path.dirname(outPath), { recursive: true });
+      await fs.writeFile(
+        outPath,
+        JSON.stringify(issueRecords, null, 2),
+        "utf8"
+      );
+      console.log(`Wrote ${issueRecords.length} issue records to ${outPath}`);
+      return outPath;
+    } catch (err) {
+      console.error(
+        "Failed to write issue records:",
+        err && err.message ? err.message : err
+      );
+      throw err;
+    }
+  };
 
   const issueRecords = await buildIssueRecords(bundleRecords);
-  // await writeIssueRecordsToFile(issueRecords);
+  await writeIssueRecordsToFile(issueRecords);
 
   // helper function to check if a link is a Youtube link
   const isYoutubeLink = (link) => {

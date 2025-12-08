@@ -1,297 +1,297 @@
 [
   {
     "issue": 1,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 18,
+    "releases": 4,
+    "sites": 10
   },
   {
     "issue": 2,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 18,
+    "releases": 3,
+    "sites": 2
   },
   {
     "issue": 3,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 19,
+    "releases": 2,
+    "sites": 8
   },
   {
     "issue": 4,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 14,
+    "releases": 1,
+    "sites": 8
   },
   {
     "issue": 5,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 30,
+    "releases": 5,
+    "sites": 4
   },
   {
     "issue": 6,
-    "blogPosts": 0,
+    "blogPosts": 4,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 7,
-    "blogPosts": 0,
+    "blogPosts": 3,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 8,
-    "blogPosts": 0,
+    "blogPosts": 9,
     "releases": 0,
-    "sites": 0
+    "sites": 2
   },
   {
     "issue": 9,
-    "blogPosts": 0,
+    "blogPosts": 11,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 10,
-    "blogPosts": 0,
+    "blogPosts": 11,
     "releases": 0,
     "sites": 0
   },
   {
     "issue": 11,
-    "blogPosts": 0,
+    "blogPosts": 7,
     "releases": 0,
-    "sites": 0
+    "sites": 2
   },
   {
     "issue": 12,
-    "blogPosts": 0,
+    "blogPosts": 6,
     "releases": 0,
-    "sites": 0
+    "sites": 2
   },
   {
     "issue": 13,
-    "blogPosts": 0,
+    "blogPosts": 7,
     "releases": 0,
-    "sites": 0
+    "sites": 1
   },
   {
     "issue": 14,
-    "blogPosts": 0,
+    "blogPosts": 11,
     "releases": 0,
-    "sites": 0
+    "sites": 9
   },
   {
     "issue": 15,
-    "blogPosts": 0,
+    "blogPosts": 6,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 16,
-    "blogPosts": 0,
+    "blogPosts": 14,
     "releases": 0,
-    "sites": 0
+    "sites": 10
   },
   {
     "issue": 17,
-    "blogPosts": 0,
+    "blogPosts": 10,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 18,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 11,
+    "releases": 1,
+    "sites": 7
   },
   {
     "issue": 19,
-    "blogPosts": 0,
+    "blogPosts": 8,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 20,
-    "blogPosts": 0,
+    "blogPosts": 9,
     "releases": 0,
-    "sites": 0
+    "sites": 8
   },
   {
     "issue": 21,
-    "blogPosts": 0,
+    "blogPosts": 8,
     "releases": 0,
-    "sites": 0
+    "sites": 5
   },
   {
     "issue": 22,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 14,
+    "releases": 1,
+    "sites": 10
   },
   {
     "issue": 23,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 14,
+    "releases": 2,
+    "sites": 5
   },
   {
     "issue": 24,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 7,
+    "releases": 2,
+    "sites": 5
   },
   {
     "issue": 25,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 15,
+    "releases": 1,
+    "sites": 7
   },
   {
     "issue": 26,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 16,
+    "releases": 1,
+    "sites": 5
   },
   {
     "issue": 27,
-    "blogPosts": 0,
+    "blogPosts": 15,
     "releases": 0,
-    "sites": 0
+    "sites": 1
   },
   {
     "issue": 28,
-    "blogPosts": 0,
+    "blogPosts": 12,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 29,
-    "blogPosts": 0,
+    "blogPosts": 9,
     "releases": 0,
-    "sites": 0
+    "sites": 8
   },
   {
     "issue": 30,
-    "blogPosts": 0,
+    "blogPosts": 5,
     "releases": 0,
-    "sites": 0
+    "sites": 1
   },
   {
     "issue": 31,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 8,
+    "releases": 2,
+    "sites": 3
   },
   {
     "issue": 32,
-    "blogPosts": 0,
+    "blogPosts": 13,
     "releases": 0,
-    "sites": 0
+    "sites": 8
   },
   {
     "issue": 33,
-    "blogPosts": 0,
+    "blogPosts": 12,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 34,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 9,
+    "releases": 1,
+    "sites": 6
   },
   {
     "issue": 35,
-    "blogPosts": 0,
+    "blogPosts": 5,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 36,
-    "blogPosts": 0,
+    "blogPosts": 10,
     "releases": 0,
-    "sites": 0
+    "sites": 7
   },
   {
     "issue": 37,
-    "blogPosts": 0,
+    "blogPosts": 6,
     "releases": 0,
-    "sites": 0
+    "sites": 4
   },
   {
     "issue": 38,
-    "blogPosts": 0,
+    "blogPosts": 3,
     "releases": 0,
-    "sites": 0
+    "sites": 7
   },
   {
     "issue": 39,
-    "blogPosts": 0,
+    "blogPosts": 4,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 40,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 6,
+    "releases": 3,
+    "sites": 2
   },
   {
     "issue": 41,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 3,
+    "releases": 1,
+    "sites": 3
   },
   {
     "issue": 42,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 6,
+    "releases": 3,
+    "sites": 3
   },
   {
     "issue": 43,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 15,
+    "releases": 1,
+    "sites": 7
   },
   {
     "issue": 44,
-    "blogPosts": 0,
+    "blogPosts": 10,
     "releases": 0,
-    "sites": 0
+    "sites": 13
   },
   {
     "issue": 45,
-    "blogPosts": 0,
+    "blogPosts": 5,
     "releases": 0,
-    "sites": 0
+    "sites": 6
   },
   {
     "issue": 46,
-    "blogPosts": 0,
+    "blogPosts": 8,
     "releases": 0,
-    "sites": 0
+    "sites": 4
   },
   {
     "issue": 47,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 5,
+    "releases": 3,
+    "sites": 8
   },
   {
     "issue": 48,
-    "blogPosts": 0,
-    "releases": 0,
-    "sites": 0
+    "blogPosts": 11,
+    "releases": 4,
+    "sites": 11
   },
   {
     "issue": 49,
-    "blogPosts": 0,
+    "blogPosts": 6,
     "releases": 0,
-    "sites": 0
+    "sites": 3
   },
   {
     "issue": 50,
@@ -482,7 +482,7 @@
   {
     "issue": 81,
     "blogPosts": 13,
-    "releases": 5,
-    "sites": 9
+    "releases": 7,
+    "sites": 13
   }
 ]
