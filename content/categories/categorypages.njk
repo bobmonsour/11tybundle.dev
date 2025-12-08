@@ -28,7 +28,7 @@
 </header>
 <nav class="section">
   <div class="container">
-    <ul role="list" class="skip-links">
+    <ul role="list" id="skip-links-years" class="skip-links">
       {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
         <li><a href="#y-{{ year }}">{{ year }}</a></li>
       {% endfor %}
