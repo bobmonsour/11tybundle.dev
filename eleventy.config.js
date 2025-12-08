@@ -1,10 +1,10 @@
+// environment variable handling
+import "dotenv/config";
+
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { minify } from "terser";
 import postcss from "postcss";
 import cssnanoPlugin from "cssnano";
-
-// environment variable handling
-import "dotenv/config";
 
 import filters from "./content/_config/filters/index.js";
 
@@ -46,7 +46,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    outputDir: "./_site/img/screenshots/",
+    outputDir: "./_site/img/",
     formats: ["webp", "jpeg"],
     widths: [640, 1280, 1920],
     htmlOptions: {
