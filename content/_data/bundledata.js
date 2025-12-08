@@ -130,89 +130,6 @@ export default async function () {
     }
   }
 
-  // generate issueRecords array from the bundleRecords
-  // with each record containing the issue number and counts of
-  // blog posts, releases, and sites for that issue
-  const buildIssueRecords = (bundleRecords) => {
-    const countsByIssue = new Map();
-
-    for (const item of bundleRecords) {
-      // Ignore records explicitly marked to be skipped
-      if (item?.Skip) continue;
-
-      const issueNum = Number(item?.Issue);
-      if (!Number.isFinite(issueNum) || issueNum < 1) continue;
-
-      if (!countsByIssue.has(issueNum)) {
-        countsByIssue.set(issueNum, { blogPosts: 0, releases: 0, sites: 0 });
-      }
-      const bucket = countsByIssue.get(issueNum);
-
-      switch (item.Type) {
-        case "blog post":
-          bucket.blogPosts += 1;
-          break;
-        case "release":
-          bucket.releases += 1;
-          break;
-        case "site":
-          bucket.sites += 1;
-          break;
-        default:
-          break;
-      }
-    }
-
-    const maxIssue = Math.max(0, ...countsByIssue.keys());
-    const issueRecords = [];
-    for (let i = 1; i <= maxIssue; i++) {
-      const c = countsByIssue.get(i) || { blogPosts: 0, releases: 0, sites: 0 };
-      issueRecords.push({
-        issue: i,
-        blogPosts: c.blogPosts,
-        releases: c.releases,
-        sites: c.sites,
-      });
-    }
-
-    return issueRecords;
-  };
-
-  /**
-   * Write the issueRecords array to a JSON file next to this JS file.
-   * @param {Array} issueRecords - array of issue record objects
-   * @param {string} [filename="issueRecords.json"] - output filename
-   * @returns {string} output file path
-   */
-  const writeIssueRecordsToFile = async (
-    issueRecords,
-    filename = "issueRecords.json"
-  ) => {
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    const outPath = path.join(__dirname, filename);
-
-    try {
-      // ensure directory exists (defensive)
-      await fs.mkdir(path.dirname(outPath), { recursive: true });
-      await fs.writeFile(
-        outPath,
-        JSON.stringify(issueRecords, null, 2),
-        "utf8"
-      );
-      console.log(`Wrote ${issueRecords.length} issue records to ${outPath}`);
-      return outPath;
-    } catch (err) {
-      console.error(
-        "Failed to write issue records:",
-        err && err.message ? err.message : err
-      );
-      throw err;
-    }
-  };
-
-  const issueRecords = await buildIssueRecords(bundleRecords);
-  await writeIssueRecordsToFile(issueRecords);
-
   // helper function to check if a link is a Youtube link
   const isYoutubeLink = (link) => {
     const origin = filters.getOrigin(link);
@@ -659,7 +576,6 @@ export default async function () {
     releaseCount,
     siteList,
     siteCount,
-    issueRecords,
     starters,
     startersByStars,
     starterCount,
