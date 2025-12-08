@@ -5,6 +5,7 @@ import {
   formatPostDate,
   formatFirehoseDate,
   formatNumber,
+  formatYMD,
 } from "./datesandnumbers.js";
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
@@ -30,6 +31,7 @@ export const filters = {
   formatPostDate,
   formatFirehoseDate,
   formatNumber,
+  formatYMD,
   getAuthorIcons,
   getSocialIcons,
   getBundleItems,

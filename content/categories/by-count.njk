@@ -27,7 +27,7 @@ permalink: /categories/by-count/
             {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
             <li>{{ item.favicon | safe }}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.Date | formatItemDate }}">{{ item.Date | formatItemDate }}</time></li>
+            <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time></li>
           {% endfor %}
         </ol>
       </article>
