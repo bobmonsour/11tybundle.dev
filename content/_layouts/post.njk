@@ -23,15 +23,11 @@ templateEngineOverride: njk,md
 
     <div class="prose">
       <h1 class="post__title">{{ title }}</h1>
-      <p class="meta"><time datetime="{{ date | formatYMD }}">{{ date | formatPostDate }}</time> ~ {{ content | readingTime }}</p>
-      <p>An email version of this blog is available. <a href="#newsletter"><Strong>Subscribe here.</Strong></a></p>
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
-      {% if releases.length > 0 or posts.length > 0 or sites.length > 0 %}
-      <p>Quick links: {% if releases.length > 0 %}<a href="#ql-releases"> {{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %}  <a href="#ql-posts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %}  <a href="#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>
-      {% endif %}
-      {% set counts = bundleIssue | getIssueCounts(bundledata.issueRecords) %}
+      <p class="meta"><time datetime="{{ date | formatYMD }}">{{ date | formatPostDate }}</time>{% if releases.length > 0 %} &middot; <a href="#ql-releases">{{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %} &middot; <a href="#ql-posts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %} &middot; <a href="#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>
+      <p>An email version of this blog is available. <a href="#newsletter"><Strong>Subscribe here.</Strong></a></p>
       {{ content | safe }}
     </div>
     <aside>
