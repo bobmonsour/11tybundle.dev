@@ -1,3 +1,4 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { minify } from "terser";
 import postcss from "postcss";
 import cssnanoPlugin from "cssnano";
@@ -6,13 +7,11 @@ import cssnanoPlugin from "cssnano";
 import "dotenv/config";
 
 import filters from "./content/_config/filters/index.js";
-import shortcodes from "./content/_config/shortcodes/index.js";
-// import singlePost from "./content/_config/shortcodes/singlepost.js";
-import singlePostByAuthor from "./content/_config/shortcodes/singlepostbyauthor.js";
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginRSS from "@11ty/eleventy-plugin-rss";
 
+// ********************************************************
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./public/": "/" });
   eleventyConfig.addBundle("js", {
@@ -46,15 +45,21 @@ export default function (eleventyConfig) {
     toFileDirectory: "dist",
   });
 
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    outputDir: "./_site/img/screenshots/",
+    formats: ["webp", "jpeg"],
+    widths: [640, 1280, 1920],
+    htmlOptions: {
+      imgAttributes: {
+        decoding: "async",
+        loading: "lazy",
+        sizes: "100vw",
+      },
+    },
+  });
+
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
-
-  eleventyConfig.addPlugin(shortcodes);
-  // While a shortcode, the singlePost andsinglePostByAythor uses getFilter
-  // to allow re-use of eleventy's built-in slugify filter, and
-  // as a result requires their own additions as shortcodes
-  // eleventyConfig.addPlugin(singlePost);
-  eleventyConfig.addPlugin(singlePostByAuthor);
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);

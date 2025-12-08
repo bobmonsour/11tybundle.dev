@@ -1,12 +1,13 @@
-import { countLabel } from "./countlabel.js";
-import { isCurrentPage } from "./iscurrentpage.js";
 import {
+  countLabel,
   formatItemDate,
   formatPostDate,
   formatFirehoseDate,
   formatNumber,
   formatYMD,
+  singleComma,
 } from "./datesandnumbers.js";
+import { isCurrentPage } from "./iscurrentpage.js";
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
@@ -21,8 +22,6 @@ import { postsInCategory } from "./postsincategory.js";
 import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
 import { postYearsInFirehose } from "./postyearsinfirehose.js";
-import { readingTime } from "./readingtime.js";
-import { singleComma } from "./singlecomma.js";
 
 export const filters = {
   countLabel,
@@ -50,8 +49,6 @@ export const filters = {
   postYearsInAuthor,
   postYearsInCategory,
   postYearsInFirehose,
-  readingTime,
-  singleComma,
 };
 
 export default (eleventyConfig) => {

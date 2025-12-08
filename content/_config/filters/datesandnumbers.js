@@ -45,3 +45,19 @@ export const formatYMD = (input) => {
   // console.log("formatYMD input:", input, "output:", d.toISOString().slice(0, 10));
   return d.toISOString().slice(0, 10);
 };
+
+// Generate a count label with proper pluralization of the "type"
+export const countLabel = (count, type) => {
+  return count === 1 ? `1 ${type}` : `${count} ${type}s`;
+};
+
+// Take a number an, if more than 999, insert a single comma
+// before the last three digits; only handles commas for thousands
+// Example: 1234 becomes "1,234", 123 becomes "123"
+export const singleComma = (input) => {
+  const s = String(input).replace(/,/g, "");
+  if (s.length <= 3) return s;
+  const prefix = s.slice(0, -3);
+  const suffix = s.slice(-3);
+  return `${prefix},${suffix}`;
+};
