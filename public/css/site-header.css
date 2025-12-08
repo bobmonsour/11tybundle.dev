@@ -1,7 +1,7 @@
 .site-header {
   grid-area: header;
   padding-block-start: var(--grid-gutter);
-  border-bottom: 1px solid var(--surface-mid);
+  border-bottom: 1px solid var(--surface-fore);
   font-size: var(--step--1);
 
   .container {
@@ -145,13 +145,13 @@
     text-decoration: none;
     padding: var(--space-2xs) var(--space-xs);
     gap: var(--space-3xs);
-    border: 1px solid var(--surface-mid);
+    border: 1px solid var(--surface-fore);
     border-radius: 999px;
 
     @media (width >=1165px) {
       border-radius: unset;
       border: unset;
-      border-right: 1px solid var(--surface-mid);
+      border-right: 1px solid var(--surface-fore);
       padding: var(--space-xs);
     }
 
@@ -272,7 +272,7 @@
     right: 0;
     padding: var(--space-2xs);
     background: var(--surface-back);
-    border: 1px solid var(--surface-mid);
+    border: 1px solid var(--surface-fore);
     border-top: 0;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     opacity: 0;
@@ -314,7 +314,7 @@
     padding: var(--space-2xs) var(--space-xs);
     cursor: pointer;
     width: max-content;
-    border: 1px solid var(--surface-mid);
+    border: 1px solid var(--surface-fore);
     border-radius: 999px;
   }
 

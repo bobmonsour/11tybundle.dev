@@ -154,7 +154,7 @@ data,
 }
 
 input {
-  border: 1px solid var(--surface-mid);
+  border: 1px solid var(--surface-fore);
   border-radius: 999px;
   font-size: var(--step--1);
   padding: var(--space-2xs);
@@ -168,7 +168,7 @@ button,
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border: 1px solid var(--surface-mid);
+  border: 1px solid var(--surface-fore);
   width: max-content;
   background: var(--text-colour-1);
   font-family: var(--font-display-bold);
@@ -198,7 +198,7 @@ button,
 hr {
   border: none;
   height: 1px;
-  background-color: var(--surface-mid);
+  background-color: var(--surface-fore);
   margin-block: 1lh;
 }
 
@@ -230,7 +230,7 @@ summary {
   cursor: pointer;
   position: relative;
   list-style: none;
-
+  word-break: initial;
   &::marker {
     content: none;
   }
@@ -311,12 +311,10 @@ mark,
 
 .site-main {
   grid-area: main;
-  word-break: break-word;
-
   section,
   .section,
   header {
-    border-bottom: 1px solid var(--surface-mid);
+    border-bottom: 1px solid var(--surface-fore);
     padding-block: var(--grid-gutter);
     :is(h1, h2):first-child {
       margin-block-start: unset;
@@ -366,6 +364,10 @@ mark,
 
 .prose {
   max-width: 80ch;
+}
+
+.word-break {
+  word-break: break-word;
 }
 
 .standfirst {
@@ -430,7 +432,6 @@ mark,
   dd {
     margin-block: var(--space-2xs) 0;
     font-size: var(--step-2);
-
     border-bottom-left-radius: calc(var(--border-radius) - var(--border-width));
     border-bottom-right-radius: calc(var(--border-radius) - var(--border-width));
     corner-shape: squircle;

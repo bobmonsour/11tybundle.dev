@@ -74,3 +74,21 @@
     }
   }
 }
+
+aside {
+  h2 {
+    display: flex;
+    gap: var(--space-s);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .count {
+    background: var(--surface-mid);
+    border-radius: 999px;
+    color: var(--heading-colour-1);
+    font-family: var(--font-display-bold);
+    font-size: var(--step--1);
+    padding: var(--space-3xs) var(--space-2xs);
+  }
+}

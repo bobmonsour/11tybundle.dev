@@ -137,7 +137,7 @@
     margin-right: calc(var(--grid-gutter) * -0.5);
 
     &:not(:last-of-type) {
-      border-right: 1px dashed var(--surface-mid);
+      border-right: 1px dashed var(--surface-fore);
     }
   }
 }
@@ -158,7 +158,7 @@
     "favicon link date";
   padding: var(--space-2xs) var(--grid-gutter);
   margin-inline: calc(var(--grid-gutter) * -1);
-  border-bottom: 1px solid var(--surface-mid);
+  border-bottom: 1px solid var(--surface-fore);
   @media (width >=768px) {
     margin-inline: unset;
     padding: var(--space-2xs);

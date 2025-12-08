@@ -56,22 +56,23 @@
 
   /* Targets: Controls the difference between steps across all hue ramps */
   --step-1-L: 96%;
-  --step-1-C: 0.02;
   --step-2-L: 91%;
-  --step-2-C: 0.03;
   --step-3-L: 84%;
-  --step-3-C: 0.05;
   --step-4-L: 71%;
-  --step-4-C: 0.09;
   --step-5-L: 52%;
-  --step-5-C: 0.10;
   --step-6-L: 43%;
-  --step-6-C: 0.15;
   --step-7-L: 30%;
-  --step-7-C: 0.18;
   --step-8-L: 23%;
-  --step-8-C: 0.19;
   --step-9-L: 18%;
+
+  --step-1-C: 0.02;
+  --step-2-C: 0.03;
+  --step-3-C: 0.05;
+  --step-4-C: 0.09;
+  --step-5-C: 0.13;
+  --step-6-C: 0.16;
+  --step-7-C: 0.18;
+  --step-8-C: 0.19;
   --step-9-C: 0.20;
 
   /* Hues: shift hue in 60° steps from base */
