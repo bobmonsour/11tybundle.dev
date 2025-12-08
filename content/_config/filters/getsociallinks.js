@@ -17,11 +17,19 @@ const isLinkedIn = (u) =>
 // Determine if a URL is a Bluesky profile
 const isBluesky = (u) => u.hostname.includes("bsky");
 
-// Determine if a URL is a YouTube profile
-const isYouTube = (u) =>
-  u.hostname.includes("youtube.com") ||
-  u.hostname.includes("youtu.be") ||
-  u.hostname.includes("www.youtube.com");
+// Determine if a URL is a YouTube profile (only accept specific channel path forms)
+const isYouTube = (u) => {
+  if (!u || !u.hostname) return false;
+  const host = u.hostname.toLowerCase();
+  if (host !== "youtube.com" && host !== "www.youtube.com") return false;
+  const p = (u.pathname || "").toLowerCase();
+  return (
+    p.startsWith("/@") ||
+    p.startsWith("/channel/") ||
+    p.startsWith("/c/") ||
+    p.startsWith("/user/")
+  );
+};
 
 // Heuristic for Mastodon-like profile URLs on any instance
 const isMastodon = (u) =>
@@ -314,21 +322,29 @@ export async function getSocialLinks(link) {
       const pageResults = extractSocialLinksFromHtml(html, origin);
 
       // Merge results from this page into combined results
-      combinedFound.mastodon.push(...pageResults.mastodon);
-      combinedFound.linkedin.push(...pageResults.linkedin);
-      combinedFound.bluesky.push(...pageResults.bluesky);
-      combinedFound.youtube.push(...pageResults.youtube);
-      combinedFound.github.push(...pageResults.github);
+      // Prepend pageResults so later-checked pages (eg. /about/) can overwrite earlier ones (eg. origin)
+      combinedFound.mastodon = pageResults.mastodon.concat(
+        combinedFound.mastodon
+      );
+      combinedFound.linkedin = pageResults.linkedin.concat(
+        combinedFound.linkedin
+      );
+      combinedFound.bluesky = pageResults.bluesky.concat(combinedFound.bluesky);
+      combinedFound.youtube = pageResults.youtube.concat(combinedFound.youtube);
+      combinedFound.github = pageResults.github.concat(combinedFound.github);
 
-      // Exit loop if we found any social links
-      const foundAnyLinks =
-        pageResults.mastodon.length > 0 ||
-        pageResults.linkedin.length > 0 ||
-        pageResults.bluesky.length > 0 ||
-        pageResults.youtube.length > 0 ||
-        pageResults.github.length > 0;
+      // If we've just processed the /about/ page and found any links, stop early.
+      // This ensures /about/ can overwrite origin results, but avoids fetching additional pages afterward.
+      const justProcessedAbout =
+        pageUrl.endsWith("/about/") || pageUrl === `${origin}/about/`;
+      const foundAnyLinksNow =
+        combinedFound.mastodon.length > 0 ||
+        combinedFound.linkedin.length > 0 ||
+        combinedFound.bluesky.length > 0 ||
+        combinedFound.youtube.length > 0 ||
+        combinedFound.github.length > 0;
 
-      if (foundAnyLinks) {
+      if (justProcessedAbout && foundAnyLinksNow) {
         break;
       }
     } catch (error) {
