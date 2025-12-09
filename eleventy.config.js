@@ -13,7 +13,11 @@ import pluginRSS from "@11ty/eleventy-plugin-rss";
 
 // ********************************************************
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "./public/": "/" });
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
+    "./content/showcase/img": "img/showcase",
+  });
+
   eleventyConfig.addBundle("js", {
     transforms: [
       async function (content) {

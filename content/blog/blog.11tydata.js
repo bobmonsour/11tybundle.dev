@@ -4,7 +4,7 @@ export default {
   eleventyComputed: {
     permalink: (data) => `/blog/${data.page.fileSlug}/`,
   },
-  imageDir: "img/",
+  imageDir: "../public/",
   tags: "post",
   image: {
     source: "11tybundle-dev.png",

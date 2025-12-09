@@ -49,6 +49,7 @@ export const filters = {
   postYearsInAuthor,
   postYearsInCategory,
   postYearsInFirehose,
+  singleComma,
 };
 
 export default (eleventyConfig) => {
