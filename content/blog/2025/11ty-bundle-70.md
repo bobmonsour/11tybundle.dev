@@ -37,5 +37,5 @@ That said, I have a source close to contributors in the Eleventy-sphere and he s
 Until next time...
 
 <div id="af-2025">
-<h1>P.S. April Fools!</h1>
+<h3>P.S. April Fools!</h3>
 </div>

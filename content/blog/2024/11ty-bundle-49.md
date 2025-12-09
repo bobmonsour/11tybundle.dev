@@ -14,9 +14,9 @@ tags:
 
 **Zach's Eleventy Weekly Report №4.** Rather than put it into my own words, I thought I'd just share [Zach's Mastodon post](https://fosstodon.org/@eleventy/112672038105630825) where he's been outlining his weekly progress on all things Eleventy.
 
-<img src="{{ imageDir }}img/zachs-eleventy-progress-4.jpg" alt="Zach's weekly eleventy update number 4" style="width: 70%; margin: 0 auto;">
+<img src="{{ imageDir }}img/zachs-eleventy-progress-4.jpg" alt="Zach's weekly eleventy update number 4" style="width: 70%; margin: 1rem auto;">
 
-**Add a view count and a like button to 11ty** One of this week's posts shows how to do this with serverless functions. It's written by someone that goes by the handle, Megaemce. [Check it out](https://annoyscript.vercel.app/posts/Adding%20view%20count%20and%20like%20button%20to%2011ty/).
+**Add a view count and a like button to 11ty.** One of this week's posts shows how to do this with serverless functions. It's written by someone that goes by the handle, Megaemce. [Check it out](https://annoyscript.vercel.app/posts/Adding%20view%20count%20and%20like%20button%20to%2011ty/).
 
 **A post about javascript array performance.** Another of Megaemce's posts is about the performance of various ways of handling large javascript arrays. It's not directly related to Eleventy, but I thought it was worthy of sharing. It's titled ["The fastest way to work with arrays"](https://annoyscript.vercel.app/posts/The%20fastest%20way%20to%20work%20with%20arrays/).
 

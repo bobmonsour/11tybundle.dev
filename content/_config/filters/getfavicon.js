@@ -264,6 +264,9 @@ export const getFavicon = async (link) => {
     domain.includes("martin-haehnel") ||
     domain.includes("nicholas.clooney") ||
     domain.includes("michaelengen") ||
+    domain.includes("xoxofest") ||
+    domain.includes("creativitas") ||
+    domain.includes("mefody") ||
     domain.includes("piperhaywood") ||
     domain.includes("nathan-smith")
   ) {

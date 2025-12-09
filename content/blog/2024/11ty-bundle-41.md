@@ -22,7 +22,7 @@ The email version of this blog is dangerously close to a whopping 30 subscribers
 
 ### Highlights
 
-**This site's first birthday** One year ago today, I posted [Issue 5 of the 11ty Bundle](https://11tybundle.dev/blog/11ty-bundle-5/). I called it _**LAUNCH DAY**_ as that is when this site went live. The first 4 issues were published on [my personal site](https://www.bobmonsour.com/) (but have since been relocated here). At that time, the site featured _"more than 300 blog posts across more than 25 categories written by more than 100 authors."_ As of today, we're at 1,054 blog posts, across 42 categories, written by 330 authors...as well as 30 starter projects. Most recently, I've added a [newsletter version](#newsletter-subscribe) of the blog. I honestly don't know how long I'll keep this up, but I'm still having fun with it. I hope that you find it useful. I've written up a [year in review post](https://www.bobmonsour.com/posts/the-11ty-bundle-continues/) on my personal site.
+**This site's first birthday.** One year ago today, I posted [Issue 5 of the 11ty Bundle](https://11tybundle.dev/blog/11ty-bundle-5/). I called it _**LAUNCH DAY**_ as that is when this site went live. The first 4 issues were published on [my personal site](https://www.bobmonsour.com/) (but have since been relocated here). At that time, the site featured _"more than 300 blog posts across more than 25 categories written by more than 100 authors."_ As of today, we're at 1,054 blog posts, across 42 categories, written by 330 authors...as well as 30 starter projects. Most recently, I've added a [newsletter version](#newsletter-subscribe) of the blog. I honestly don't know how long I'll keep this up, but I'm still having fun with it. I hope that you find it useful. I've written up a [year in review post](https://www.bobmonsour.com/posts/the-11ty-bundle-continues/) on my personal site.
 
 Here's an early design sketch from April of last year:
 
@@ -30,12 +30,12 @@ Here's an early design sketch from April of last year:
 
 **11ty conference is next week, May 9th!** Here's the [list of speakers](https://conf.11ty.dev/#speakers) so far. It's **FREE**, single-track, and virtual. If you've waited until the last minute, now's the time to [register](https://conf.11ty.dev/#register).
 
-**Generate robots.txt** [Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/) has developed [eleventy-plugin-robotstxt](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt), an experimental plugin that is only compatible with Eleventy v3.0.0-alpha.6 or later. It's purpose is to _"Automatically generate a robots.txt file for your Eleventy site using front matter."_ He provides lots of examples. [Check it out](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt).
+**Generate robots.txt.** [Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/) has developed [eleventy-plugin-robotstxt](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt), an experimental plugin that is only compatible with Eleventy v3.0.0-alpha.6 or later. It's purpose is to _"Automatically generate a robots.txt file for your Eleventy site using front matter."_ He provides lots of examples. [Check it out](https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt).
 
-**Two new starters** There's a [resume template](https://github.com/devon-wolf/resume-template) by [Devon Wolf](https://github.com/devon-wolf) and an [image portfolio website template named halide](https://github.com/danurbanowicz/halide) that uses Tina CMS by [
+**Two new starters.** There's a [resume template](https://github.com/devon-wolf/resume-template) by [Devon Wolf](https://github.com/devon-wolf) and an [image portfolio website template named halide](https://github.com/danurbanowicz/halide) that uses Tina CMS by [
 Dan Urbanowicz](https://github.com/danurbanowicz). Respective demos are [here](https://devon-wolf.github.io/resume-template/) and [here](https://halide.netlify.app).
 
-**Some radar sightings** These are just a couple of 11ty-related things that caught my eye.
+**Some radar sightings.** These are just a couple of 11ty-related things that caught my eye.
 
 - [Lucide](https://lucide.dev/icons/) is a set of SVG icons. And the [eleventy-plugin-lucide-icons](https://github.com/GrimLink/eleventy-plugin-lucide-icons/blob/main/README.md) by [Sean van Zuidam](https://github.com/GrimLink) _"...enables the inclusion of lucide-icons as inline SVG elements."_ It lets you use shortcodes like this {% raw %}{% lucide "shopping-cart" %}{% endraw %}.
 
@@ -43,6 +43,6 @@ Dan Urbanowicz](https://github.com/danurbanowicz). Respective demos are [here](h
 
 **One more thing...** A lot of people have been building "now" pages, highlighting what they're up to at the moment. They've all be inspired by [The Now Page Movement](https://sive.rs/nowff) from [Derek Sivers](https://sive.rs/). Did you know that there's a category on this site called [Now Page](/categories/now-page/)? It has (as of this writing) 11 posts. If you've thought of making your own, [these might inspire you](/categories/now-page/).
 
-**Ok, two more things** This blog might have a dry spell for the rest of May and part of June as we're traveling a bit before my wife has her other hip replaced...and I have a hearing test to see if my profoundly deaf left ear qualifies for a cochlear implant. That said, while I might not publishing Issue 42, any new posts from the [authors](/authors/) that I find will show up on the [Firehose page](/firehose/) thanks to a nightly rebuild. Note also that the Firehose has [its own RSS feed](https://11tybundle.dev/firehosefeed.xml).
+**Ok, two more things.** This blog might have a dry spell for the rest of May and part of June as we're traveling a bit before my wife has her other hip replaced...and I have a hearing test to see if my profoundly deaf left ear qualifies for a cochlear implant. That said, while I might not publishing Issue 42, any new posts from the [authors](/authors/) that I find will show up on the [Firehose page](/firehose/) thanks to a nightly rebuild. Note also that the Firehose has [its own RSS feed](https://11tybundle.dev/firehosefeed.xml).
 
 Until next time...
