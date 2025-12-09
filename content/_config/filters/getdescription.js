@@ -74,7 +74,7 @@ export const getDescription = async (link) => {
       },
     });
     const $ = cheerio.load(htmlcontent);
-    const description = $("meta[name=description]").attr("content");
+    let description = $("meta[name=description]").attr("content");
     if (description == undefined) {
       descriptionCache[link] = "";
     } else {
