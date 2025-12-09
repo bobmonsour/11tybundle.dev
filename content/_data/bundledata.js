@@ -523,7 +523,6 @@ export default async function () {
           categoryMap.set(category, {
             slugifiedCategory: slugifyPackage(category, {
               lower: true,
-              strict: true,
             }),
             count: 1,
             firstLetter: category.charAt(0),
@@ -533,7 +532,7 @@ export default async function () {
     }
     return Array.from(categoryMap)
       .map(([name, data]) => ({
-        name: name,
+        name,
         slugifiedCategory: data.slugifiedCategory,
         count: data.count,
         firstLetter: data.firstLetter,
