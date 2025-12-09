@@ -20,7 +20,7 @@ I thought this was going to be a short one, with summer and all, but it grew hai
 
 **Zach's Eleventy Weekly Report №6.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112751345586792134) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
-<img src="{{ imageDir }}img/zachs-eleventy-progress-6.jpg" alt="Zach's weekly eleventy update number 6" style="width: 70%; margin: 1rem auto;">
+<img src="/img/zachs-eleventy-progress-6.jpg" alt="Zach's weekly eleventy update number 6" style="width: 70%; margin: 1rem auto;">
 
 **Memoization.** On tap with the upcoming alpha.15 is a memoization layer around the slug, [slugify](https://www.11ty.dev/docs/filters/slugify/), and [inputPathToUrl](https://www.11ty.dev/docs/filters/inputpath-to-url/) filters. You can read more about it in [Zach's GitHub issue comment](https://github.com/11ty/eleventy/issues/840#issuecomment-2204179631). I had to take a little time to learn about memoization. [Memoize](https://github.com/sindresorhus/memoize#readme) is "an optimization used to speed up consecutive function calls by caching the result of calls with identical input." It reminds me of some of the performance gains that I wrote about in my [Slashing by Caching post](https://www.bobmonsour.com/posts/slashing-by-caching/). Looks like some of that will be built into Eleventy now. Sweet!
 

@@ -61,6 +61,6 @@ And, of course, you can also find these on [their author page](https://11tybundl
 
 **Sticker price reduction.** The **[11ty Bundle stickers](https://bobmonsour.com/shop/)** are still available! Designed by [Andy Carolan](https://andycarolan.com), it's 4" x 2" with a matte-finish. They're ~~$5~~ **now only** $3 each. Tax & shipping are included in the price. Shipping them to anywhere in the world seems to be working. They've made it to the UK and Portugal so far, as well as both the east and west coasts of the US. [Get 'em while they're hot](https://bobmonsour.com/shop/)! If you order this week, I will be shipping them out next week.
 
-![The new 11ty Bundle OG image]({{ imageDir }}img/11tybundle-dev.png)
+![The new 11ty Bundle OG image](/img/11tybundle-dev.png)
 
 Until next time...

@@ -2,6 +2,8 @@
 import "dotenv/config";
 
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+
 import { minify } from "terser";
 import postcss from "postcss";
 import cssnanoPlugin from "cssnano";
@@ -15,6 +17,7 @@ import pluginRSS from "@11ty/eleventy-plugin-rss";
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
+    "./content/img/": "img",
     "./content/showcase/img": "img/showcase",
   });
 
@@ -49,8 +52,9 @@ export default function (eleventyConfig) {
     toFileDirectory: "dist",
   });
 
+  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    outputDir: "./_site/img/",
     formats: ["webp", "jpeg"],
     widths: [640, 1280, 1920],
     htmlOptions: {
