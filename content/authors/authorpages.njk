@@ -62,7 +62,9 @@
 			  <div class="directory__card directory--detail">
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
-            <p>{{ item.description | safe }}</p>
+            {% if item.description %}
+              <p class="description">{{ item.description | safe }}</p>
+            {% endif %}
             <time datetime="{{ item.Date }}">{{ item.formattedDate }}</time>
             <div class="categories-list">
               <strong>Categories</strong>
