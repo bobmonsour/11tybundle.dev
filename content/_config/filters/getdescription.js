@@ -78,7 +78,7 @@ export const getDescription = async (link) => {
     if (description == undefined) {
       descriptionCache[link] = "";
     } else {
-      descriptionCache[link] = description
+      let text = description
         .replace(/[<>]/g, "") // Remove angle brackets
         .replace(/&(?!(?:[a-z\d]+|#\d+|#x[a-f\d]+);)/gi, "&amp;") // Escape unencoded ampersands
         .replace(/"/g, "&quot;") // Escape quotes
@@ -95,7 +95,17 @@ export const getDescription = async (link) => {
         .replace(/[\uFFF9-\uFFFB]/g, "") // Remove interlinear annotation characters
         .trim()
         .substring(0, 300); // Reasonable length limit for descriptions
+
+        // looking for markdown links
+        // fast bail-out if no opening bracket present
+        if (!text.includes("[")) {
+          description = text;
+        } else {
+          // Regex: [link text](url) → <a href="url">link text</a>
+          description = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+        };
     }
+    descriptionCache[link] = description;
     return descriptionCache[link];
   } catch (e) {
     // console.log("Error fetching description for " + link + " " + e.message);

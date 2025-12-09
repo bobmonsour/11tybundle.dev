@@ -1,6 +1,7 @@
 .main-header {
   .container {
     display: grid;
+    overflow-wrap: anywhere;
     column-gap: var(--grid-gutter);
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -229,7 +230,7 @@
   background: var(--surface-mid);
   padding: var(--space-s);
   border: 1px solid var(--surface-fore);
-
+  overflow-wrap: anywhere;
   @media (width <= 768px) {
     border-left: unset;
     border-right: unset;
@@ -265,6 +266,7 @@
     font-size: var(--step--1);
     font-family: var(--font-display-bold);
     border-radius: 999px;
+    overflow-wrap: normal;
   }
 }
 
