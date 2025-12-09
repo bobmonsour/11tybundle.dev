@@ -40,6 +40,6 @@ For details on how to get one, check out my [shop](https://bobmonsour.com/shop/)
 
 Hat tip to [Robb Knight](https://rknight.me/) for the idea of using [Stripe's payment links](https://stripe.com/gb/payments/payment-links) to get this up and running quickly. [Robb's got stickers too!](https://rknight.me/blog/dont-at-me-stickers/)
 
-![The new 11ty Bundle OG image](/11tybundle-dev.png)
+![The new 11ty Bundle OG image]({{ imageDir }}img/11tybundle-dev.png)
 
 Until next time...

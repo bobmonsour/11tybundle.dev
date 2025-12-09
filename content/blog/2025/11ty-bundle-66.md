@@ -36,7 +36,7 @@ Incidentally, I've reduced the number of RSS feed entries for this blog and the 
 
 Here's what it looks like:
 
-![The new 11ty Bundle OG image](/img/11tybundle-dev.png)
+![The new 11ty Bundle OG image]({{ imageDir }}img/11tybundle-dev.png)
 
 See if you can find all of the _"11s"_ in the image.
 

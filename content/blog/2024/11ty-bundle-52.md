@@ -20,7 +20,7 @@ My ass has been dragging this week, but here we go...better late than never.
 
 **Zach's Eleventy Weekly Report №7.** Here's [Zach's Mastodon post](https://fosstodon.org/@eleventy/112791044369442010) where he's been outlining his weekly progress on all things Eleventy, some of which I recap below.
 
-<img src="{{ imageDir }}/zachs-eleventy-progress-7.jpg" alt="Zach's weekly eleventy update number 5" style="width: 70%; margin: 1rem auto;">
+<img src="{{ imageDir }}img/zachs-eleventy-progress-7.jpg" alt="Zach's weekly eleventy update number 5" style="width: 70%; margin: 1rem auto;">
 
 **Official Template Language Plugins.** Zach has released template language plugins for ejs, handlebars, mustache, and haml. Here are links to the docs for each. Note that these are 3.0 and higher only.
 

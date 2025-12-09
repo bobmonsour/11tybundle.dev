@@ -38,6 +38,6 @@ Enjoy!
 
 **Stickers are still available.** [Get yours!](https://bobmonsour.com/shop/). Only $3 each, tax & shipping included.
 
-![The new 11ty Bundle OG image](/img/11tybundle-dev.png)
+![The new 11ty Bundle OG image]({{ imageDir }}img/11tybundle-dev.png)
 
 Until next time...
