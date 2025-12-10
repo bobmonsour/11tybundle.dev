@@ -57,7 +57,6 @@
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
-  {% include "partials/check-for-youtube.njk" %}
   <main id="main" class="site-main">
   {{ content | safe }}
   </main>
@@ -67,6 +66,9 @@
   {% include "public/js/theme.js" %}
   {% include "public/js/toggle.js" %}
   {% include "public/js/scrollToTop.js" %}
+  {% if youtubeId %}
+    {% include "public/js/lite-yt-embed.js" %}
+  {% endif %}
   {% endjs %}
   <script type="module" src="{% getBundleFileUrl "js" %}"></script>
 </body>

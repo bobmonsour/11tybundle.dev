@@ -15,10 +15,10 @@
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
-    {{ author.favicon | safe }}<h1 data-pagefind-meta="{{ author.name }} ({{ author.count | countLabel('post') }})">{{ author.name }} <data class="count" value="{{ author.count }}">{{ author.count }}</data></h1>
+    {{ author.favicon | safe }}<h1>{{ author.name }} <data class="count" value="{{ author.count }}">{{ author.count | countLabel('post')}}</data></h1>
     <div class="details">
       <p>{{ author.description | safe }}</p>
-      <ul role="list" class="author-links">
+      <ul role="list" class="author-links" data-pagefind-ignore="all">
       {{ author.origin | getAuthorIcons | safe }}
       </ul>
     </div>

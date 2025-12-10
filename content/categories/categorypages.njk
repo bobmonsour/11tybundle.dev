@@ -15,7 +15,7 @@
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
-    <h1 data-pagefind-meta="{{ category.name }} ({{ category.count | countLabel('post') }})">{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count }}</data></h1>
+    <h1>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
     {% if linkstodocs[category.name] %}
     <nav data-pagefind-ignore="all">
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
