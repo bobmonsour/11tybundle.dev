@@ -4,7 +4,7 @@ eleventyComputed:
   description: "A list of {{ bundledata.authorCount }} authors"
 permalink: /authors/
 ---
-<header class="main-header" data-pagefind-ignore>
+<header class="main-header">
   <div class="container">
     <h1>{{ title }} <data class="count" value="{{ bundledata.authorCount }}">{{ bundledata.authorCount }}</data></h1>
     <nav>
@@ -48,7 +48,7 @@ permalink: /authors/
     </section>
   {% endif %}
   {% if author.firstLetter !== currentLetter %}
-    <section data-pagefind-body>
+    <section>
       <div class="directory__layout container">
       <h2 id="id-{{ author.firstLetter }}">{{ author.firstLetter }}</h2>
       <article class="directory__grid">

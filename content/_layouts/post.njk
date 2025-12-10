@@ -14,7 +14,7 @@ templateEngineOverride: njk,md
 {% endif %}
 {% endcss %}
 {% include "partials/blog-header.njk" %}
-<div class="section">
+<div class="section" data-page-find-body>
   <div class="post__layout container">
     <dl class="calendar">
       <dt>Issue</dt>
@@ -30,8 +30,8 @@ templateEngineOverride: njk,md
       <p>An email version of this blog is available. <a href="#newsletter"><Strong>Subscribe here.</Strong></a></p>
       {{ content | safe }}
     </div>
-    <aside>
 
+    <aside data-pagefind-ignore="all">
       <hr>
       <h2 id="ql-releases" class="h3">Recent releases <data class="count" value="{{ releases.length }}">{{ releases.length }}</data></h2>
       <div class="directory__grid">
@@ -45,7 +45,7 @@ templateEngineOverride: njk,md
             </svg>
             <a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
-              <p>{{ item.description }}</p>
+              <p>{{ item.description | safe }}</p>
               <time datetime="{{ item.formattedDate | formatYMD }}">{{ item.formattedDate }}</time>
             </div>
           </div>

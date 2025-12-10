@@ -1,6 +1,6 @@
 {% if itemType == "release" %}
 {# releases #}
-	<div class="bundlereleases" data-pagefind-ignore="index">
+	<div class="bundlereleases"="index">
 	{% set releaseItems = bundledata.bundleRecords | getBundleItems(bundleIssue, "release") %}
 	{% if releaseItems.length != 0 %}
 	{%- for item in releaseItems %}
@@ -14,7 +14,7 @@
 	</div>
 {%- elif itemType == "blog post" -%}
 {# posts #}
-	<div class="bundleposts" data-pagefind-ignore="index">
+	<div class="bundleposts"="index">
 	{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "blog post") %}
 				{%- set postCount = bundledata.firehose | postCountByAuthor(item.Author) -%}
 				{%- singlePost item, "blog", item.Author, postCount -%}
@@ -22,7 +22,7 @@
 	</div>
 {% elif itemType == "site" %}
 {# sites #}
-	<div class="bundlesites" data-pagefind-ignore="index">
+	<div class="bundlesites"="index">
 	{%- for item in bundledata.bundleRecords | getBundleItems(bundleIssue, "site") %}
 		<div class="bundleitem">
 			<p class="bundleitem-title"><a href="{{ item.Link }}" data-link-type="external">{{ item.Title }}</a></p>
