@@ -3,35 +3,52 @@
     display: grid;
     overflow-wrap: anywhere;
     column-gap: var(--grid-gutter);
+    align-items: start;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title";
 
-    &:has(nav) {
-      grid-template-columns: 1fr auto;
-      row-gap: var(--grid-gutter);
-      align-items: center;
+    &:has(nav):not(:has(.favicon)):not(:has(.details)) {
+      grid-template-columns: 1fr;
       grid-template-areas:
         "title"
         "nav";
 
-      @media (width >=768px) {
+      @media (width >= 768px) {
+        grid-template-columns: 1fr auto;
         grid-template-areas:
-        "title nav";
+          "title nav";
       }
     }
 
-    &:has(.favicon, .details) {
-      grid-template-columns: auto 1fr;
-      align-items: start;
+    &:has(.details):not(:has(nav)) {
+      grid-template-columns: 1fr;
       grid-template-areas:
-        "favicon title"
-        "details details";
+        "favicon"
+        "title"
+        "details";
 
-      @media (width >=768px) {
+      @media (width >= 768px) {
+        grid-template-columns: auto 1fr;
         grid-template-areas:
           "favicon title"
           "favicon details";
+      }
+    }
+
+    &:has(.details):has(nav) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "favicon"
+        "title"
+        "details"
+        "nav";
+
+      @media (width >= 768px) {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+          "favicon title nav"
+          "favicon details nav";
       }
     }
 
@@ -73,12 +90,15 @@
   nav {
     grid-area: nav;
     align-items: center;
+    align-self: center;
     width: max-content;
     gap: var(--space-2xs);
     border-radius: 999px;
     padding: var(--space-3xs) var(--space-2xs);
-    background: var(--header-nav-bg, transparent);
-    color: var(--header-nav-fg, inherit);
+    margin-block-start: var(--space-2xs);
+    @media (width >= 768px) {
+      margin-block-start: unset;
+    }
   }
 
   a {
@@ -88,7 +108,7 @@
   .current {
     text-decoration: none;
     border-radius: 999px;
-    background: var(--header-current-bg, transparent);
+    background: var(--header-current-bg);
   }
 
   /* themed bits */
@@ -103,7 +123,6 @@
   .favicon {
     color: var(--header-content);
   }
-
 
   .count {
     color: var(--header-accent);
@@ -120,6 +139,7 @@
   }
 
   nav {
+
     background: var(--header-pill-bg);
     .current {
       background: var(--header-pill-active-bg);

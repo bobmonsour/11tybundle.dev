@@ -58,7 +58,6 @@
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
   <main id="main" class="site-main">
-  <div id="search" class="site-header__search"></div>
   {{ content | safe }}
   </main>
   {%- include "partials/site-footer.njk" -%}
@@ -67,6 +66,9 @@
   {% include "public/js/theme.js" %}
   {% include "public/js/toggle.js" %}
   {% include "public/js/scrollToTop.js" %}
+  {% include "public/js/pagefind-ui.js" %}
+  {% include "public/js/search.js" %}
+
   {% if youtubeId %}
     {% include "public/js/lite-yt-embed.js" %}
   {% endif %}
