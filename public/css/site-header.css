@@ -240,7 +240,7 @@
     }
   }
 
-  [data-target=main-nav] {
+  [data-target="main-nav"] {
     @media (width >=1165px) {
       display: none;
     }
@@ -252,10 +252,12 @@
 }
 
 .site-header__search {
-  display: flex;
+  display: block;
 
   @media (width >=1165px) {
     padding-block-end: var(--space-2xs);
+    width: 50%;
+    margin: 0 auto;
   }
 
   input {
@@ -278,9 +280,7 @@
     opacity: 0;
     transform: translateY(-48px);
     pointer-events: none;
-    transition:
-      opacity 150ms ease-in-out 25ms,
-      transform 150ms ease-in-out 25ms;
+    transition: opacity 150ms ease-in-out 25ms, transform 150ms ease-in-out 25ms;
 
     &.hidden {
       display: flex;

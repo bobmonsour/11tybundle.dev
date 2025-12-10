@@ -1,4 +1,4 @@
-<div class="directory__card directory--detail" id="post-{{ item.Title | safe }}-{{ item.item.slufifiedAuthor }}-{{ item.Date | formatYMD }}" data-pagefind-meta="title=:{{ item.Title | safe }}, description:{{ item.description | safe }}, date:{{ item.Date | formatYMD }}, author={{ item.Author | safe }}" data-pagefind-index-attrs="id">
+<div class="directory__card directory--detail" id="post-{{ item.Title | safe }}-{{ item.item.slufifiedAuthor }}-{{ item.Date | formatYMD }}" data-pagefind-index-attrs="id">
   {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title | safe }}</a>
   <div class="details">
     {% if item.description %}

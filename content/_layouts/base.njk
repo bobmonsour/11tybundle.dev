@@ -58,6 +58,7 @@
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
   <main id="main" class="site-main">
+  <div id="search" class="site-header__search"></div>
   {{ content | safe }}
   </main>
   {%- include "partials/site-footer.njk" -%}
