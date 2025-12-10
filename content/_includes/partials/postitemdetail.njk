@@ -1,15 +1,15 @@
-<div class="directory__card directory--detail">
-  {{ item.favicon | safe }}<a href="{{ item.Link }}"">{{ item.Title | safe }}</a>
+<div class="directory__card directory--detail" data-pagefind-meta="title=:{{ item.Title | safe }}, description:{{ item.description | safe }}, date:{{ item.Date | formatYMD }}, author={{ item.Author | safe }}">
+  {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title | safe }}</a>
   <div class="details">
     {% if item.description %}
       <p class="description">{{ item.description | safe }}</p>
     {% endif %}
     <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
     <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
-    <ul role="list" class="author-links">
+    <ul role="list" class="author-links" data-pagefind-ignore="all">
       {{ authorIcons | safe }}
     </ul>
-    <div class="categories-list">
+    <div class="categories-list" data-pagefind-ignore="all">
       <strong>Categories</strong>
       <ul role="list">
         {% for category in item.Categories %}

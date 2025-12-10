@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header" data-pagefind-ignore="all">
   <div class="container">
     <h1>Firehose <data class="count" value="{{ bundledata.postCount }}">{{ bundledata.postCount | singleComma }}</data></h1>
     <nav>
@@ -9,7 +9,7 @@
     </nav>
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" id="skip-links-years" class="skip-links">
       {% for year in bundledata.firehose | postYearsInFirehose %}
@@ -20,14 +20,14 @@
 </nav>
 
 {# Placed here, but referenced in button below #}
-<div id="info" popover>We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
+<div id="info" popover data-pagefind-ignore="all">We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
 </div>
 
 
 <div class="section">
   <div class="container">
     {# button reveals popover with text from above div with id="info" #}
-    <button popovertarget="info" class="button--transparent">
+    <button popovertarget="info" class="button--transparent" data-pagefind-ignore="all">
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-info"></use>
       </svg> About the firehose
@@ -40,7 +40,7 @@
 
 
     <details name="details" class="directory__layout"  {% if current_year == newestPostYear %}open{% endif %}>
-      <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
+      <summary id="y-{{ current_year }}" data-pagefind-ignore="all"><h2>{{ current_year }}</h2></summary>
       <div class="directory__grid">
       {% for item in bundledata.firehose %}
     	{% set current_year = item.Date | truncate(4, true, '') %}
@@ -54,7 +54,7 @@
 <div class="section">
   <div class="container">
     <details name="details" class="directory__layout">
-      <summary id="y-{{ current_year }}"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
+      <summary id="y-{{ current_year }}" data-pagefind-ignore="all"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
       <div class="directory__grid">
     {% endif %}
 

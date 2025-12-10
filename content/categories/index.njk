@@ -4,7 +4,7 @@ eleventyComputed:
   description: "A list of {{ bundledata.categoryCount }} categories"
 permalink: /categories/
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-ignore="all">
   <div class="container">
     <h1>{{ title }} <data class="count" value="{{ bundledata.categoryCount }}">{{ bundledata.categoryCount }}</data></h1>
     <nav>
@@ -16,7 +16,7 @@ permalink: /categories/
     </nav>
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" class="skip-links">
       {% for letter in bundledata.categoryLetters %}
@@ -43,13 +43,13 @@ permalink: /categories/
     </section>
   {% endif %}
   {% if category.firstLetter !== currentLetter %}
-    <section>
+    <section data-pagefind-ignore="all">
       <div class="directory__layout container">
       <h2 id="{{ category.firstLetter }}" data-page-find-ignore>{{ category.firstLetter }}</h2>
       <article class="directory__grid">
   {% endif %}
     {% set currentLetter = category.firstLetter %}
-    <article class="directory__card directory--category">
+    <article class="directory__card directory--category" data-pagefind-ignore="all">
       {% set categoryUrl %}/categories/{{ category.name | slugify }}/{% endset %}
       <h3><a href="{{categoryUrl}}">{{category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
       <ol role="list" class="directory--list" data-page-find-ignore="all">

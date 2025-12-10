@@ -13,11 +13,11 @@
 	}
 }
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-body>
   <div class="container">
-    <h1>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count }}</data></h1>
+    <h1 data-pagefind-meta="{{ category.name }} ({{ category.count | countLabel('post') }})">{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count }}</data></h1>
     {% if linkstodocs[category.name] %}
-    <nav>
+    <nav data-pagefind-ignore="all">
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-eleventy"></use>
       </svg>
@@ -26,7 +26,7 @@
 {% endif %}
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" id="skip-links-years" class="skip-links">
       {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
@@ -40,7 +40,7 @@
 {% set current_year = newestPostYear %}
 {% set previous_year = current_year %}
 
-<div class="section">
+<div class="section" data-pagefind-ignore="all">
   <div class="container">
     <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
       <summary id="y-{{ current_year }}"><h2>{{ current_year }}</h2></summary>
@@ -63,9 +63,7 @@
 
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
         {% set authorIcons = authorRecord.origin | getAuthorIcons %}
-
         {% include "partials/postitemdetail.njk" %}
-
       {% endfor %}
       </div>
     </details>
