@@ -83,14 +83,10 @@
   gap: var(--space-2xs);
   font-family: var(--font-brand);
   color: var(--text-colour-2);
-
+  text-decoration: none;
   @media (width >=1024px) {
     width: max-content;
     margin-block-end: var(--space-xs);
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 
@@ -263,6 +259,7 @@
 
   @media (width >=1024px) {
     position: absolute;
+    z-index: 1;
     top: 100%;
     right: 0;
     padding: var(--space-2xs);

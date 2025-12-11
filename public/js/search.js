@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
       placeholder: "Type / to search",
       zero_results: "Count not find [SEARCH_TERM]",
     },
-    showImages: true,
+    resetStyles: true,
+    showImages: false,
     showEmptyFilters: false,
     showSubResults: true,
-    excerptLength: 200,
-    pageSize: 5,
+    excerptLength: 100,
+    pageSize: 10,
   });
 
   let focusTriggeredBySlash = false;
