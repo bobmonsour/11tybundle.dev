@@ -4,17 +4,9 @@ templateEngineOverride: njk,md
 ---
 {% css %}
 {% include "public/css/blog.css" %}
-{# only include prism CSS on blog posts that have code #}
-{% if pageHasCode %}
-  {% include "public/css/prism-okaidia.css" %}
-{% endif %}
-{# only include lite-youtube-embed CSS on blog posts that YouTube embeds #}
-{% if youtubeId %}
-  {% include "public/css/lite-yt-embed.css" %}
-{% endif %}
 {% endcss %}
 {% include "partials/blog-header.njk" %}
-<div class="section" data-page-find-body>
+<div class="section">
   <div class="post__layout container">
     <dl class="calendar">
       <dt>Issue</dt>
@@ -22,7 +14,7 @@ templateEngineOverride: njk,md
     </dl>
 
     <div class="prose">
-      <h1 class="post__title">{{ title }}</h1>
+      <h2 class="post__title">{{ title | safe }}</h2>
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}

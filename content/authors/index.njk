@@ -48,7 +48,7 @@ permalink: /authors/
     </section>
   {% endif %}
   {% if author.firstLetter !== currentLetter %}
-    <section>
+    <section data-pagefind-ignore="all">
       <div class="directory__layout container">
       <h2 id="id-{{ author.firstLetter }}">{{ author.firstLetter }}</h2>
       <article class="directory__grid">

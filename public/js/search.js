@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
       placeholder: "Type / to search",
       zero_results: "Count not find [SEARCH_TERM]",
     },
-    showSubResults: true,
-    showSubResults: true,
-    showImages: false,
+    showImages: true,
     showEmptyFilters: false,
     showSubResults: true,
-    excerptLength: 100,
+    excerptLength: 200,
     pageSize: 5,
   });
 

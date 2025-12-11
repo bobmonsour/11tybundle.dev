@@ -16,6 +16,14 @@
   {% include "public/css/site-header.css" %}
   {% include "public/css/site-footer.css" %}
   {% include "public/css/pagefind.css" %}
+  {# include prism CSS on blog posts that have code #}
+  {% if pageHasCode %}
+    {% include "public/css/prism-okaidia.css" %}
+  {% endif %}
+  {# include lite-youtube-embed CSS on blog posts that have a YouTube ID #}
+  {% if youtubeId %}
+    {% include "public/css/lite-yt-embed.css" %}
+  {% endif %}
   {% endcss %}
   <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
   <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -57,7 +65,7 @@
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
-  <main id="main" class="site-main">
+  <main id="main" class="site-main" data-pagefind-body>
   {{ content | safe }}
   </main>
   {%- include "partials/site-footer.njk" -%}
@@ -69,10 +77,17 @@
   {% include "public/js/pagefind-ui.js" %}
   {% include "public/js/search.js" %}
 
+  {# include prism js on blog posts that have code #}
+  {% if pageHasCode %}
+    {% include "public/js/prism.min.js" %}
+  {% endif %}
+
+  {# include lite youtube embed on blog posts that have a YouTube ID #}
   {% if youtubeId %}
     {% include "public/js/lite-yt-embed.js" %}
   {% endif %}
   {% endjs %}
+
   <script type="module" src="{% getBundleFileUrl "js" %}"></script>
 </body>
 </html>

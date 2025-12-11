@@ -1,11 +1,11 @@
-<div class="directory__card directory--detail" id="post-{{ item.Title | safe }}-{{ item.item.slufifiedAuthor }}-{{ item.Date | formatYMD }}" data-pagefind-index-attrs="id">
-  {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title | safe }}</a>
-  <div class="details">
+<div class="directory__card directory--detail">
+  {{ item.favicon | safe }}<a href="{{ item.Link }}" data-pagefind-ignore>{{ item.Title | safe }}</a>
+  <div class="details"  data-pagefind-ignore="all">
     {% if item.description %}
       <p class="description">{{ item.description | safe }}</p>
     {% endif %}
-    <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
-    <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
+    <time data-pagefind-ignore datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
+    <p data-pagefind-ignore>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
     <ul role="list" class="author-links" data-pagefind-ignore="all">
       {{ authorIcons | safe }}
     </ul>

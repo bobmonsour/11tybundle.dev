@@ -10,7 +10,7 @@ eleventyComputed:
 {% include "public/css/blog.css" %}
 {% endcss %}
 {% include "partials/blog-header.njk" %}
-<div class="section">
+<div class="section" data-pagefind-ignore="all">
   <div class="container">
     <ol role="list" class="post__list">
       {% for post in collections.post | reverse %}
