@@ -268,6 +268,7 @@ export const getFavicon = async (link) => {
     domain.includes("creativitas") ||
     domain.includes("mefody") ||
     domain.includes("piperhaywood") ||
+    domain.includes("jasonwhite") ||
     domain.includes("nathan-smith")
   ) {
     return `<svg viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg>`;
