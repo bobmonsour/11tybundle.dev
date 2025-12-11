@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 	<title>{{ site.title }}</title>
 	<subtitle>The 11ty Bundle: A curated feed of 11ty resources.</subtitle>
 	<link href="{{ site.url }}{{ permalink }}" rel="self"/>
-	{% set postslist = collections.posts | reverse %}
+	{% set postslist = collections.post | reverse %}
   {% set latest_posts = postslist.slice(0,20) %}
 	<updated>{{ latest_posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}/</id>
