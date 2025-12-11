@@ -3,6 +3,6 @@ export default {
   individualPost: 8,
   authorByName: 6,
   showcasePage: 5,
-  blogContent: 3,
-  aboutPage: 2,
+  blogContent: 2,
+  aboutPage: 1,
 };

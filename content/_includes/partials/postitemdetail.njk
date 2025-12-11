@@ -1,6 +1,6 @@
 <div class="directory__card directory--detail">
-  {{ item.favicon | safe }}<a href="{{ item.Link }}" id="{{ item.Date | formatYMD }}-{{ item.slugifiedTitle }}-{{ item.slugifiedAuthor }}" data-pagefind-weight={{ pfweights.individualPost }}>{{ item.Title | safe }}</a>
-  <div class="details"  data-pagefind-ignore="all">
+  {{ item.favicon | safe }}<h3 id="{{ item.Date | formatYMD }}-{{ item.slugifiedTitle }}-{{ item.slugifiedAuthor }}" data-pagefind-weight={{ pfweights.individualPost }}><a href="{{ item.Link }}"  data-pagefind-ignore>{{ item.Title | safe }}</a></h3>
+  <div class="details">
     {% if item.description %}
       <p class="description">{{ item.description | safe }}</p>
     {% endif %}

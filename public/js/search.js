@@ -5,13 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
       placeholder: "Type / to search",
       zero_results: "Count not find [SEARCH_TERM]",
     },
+    excerptLength: 100,
+    highlightParam: "highlight",
     resetStyles: true,
+    pageSize: 5,
     showImages: false,
     showEmptyFilters: false,
     showSubResults: true,
-    excerptLength: 100,
-    pageSize: 10,
   });
+
+  new PagefindHighlight({ highlightParam: "highlight" });
 
   let focusTriggeredBySlash = false;
   // Flag to track focus triggered by '/'
