@@ -8,6 +8,12 @@
 	<meta name="keywords" content="{{ keywords }}">
 	<meta name="view-transition" content="same-origin" >
 
+  <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
+
+  {# bundle the css files #}
   {% css %}
   {% include "public/css/fonts.css" %}
   {% include "public/css/variables.css" %}
@@ -25,22 +31,24 @@
     {% include "public/css/lite-yt-embed.css" %}
   {% endif %}
   {% endcss %}
-  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-  <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Optima-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
+  {# <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+  <link rel="preload" href="{% getBundleFileUrl "css" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{% getBundleFileUrl "css" %}"></noscript>
 
   {# Fathom analytics - don't include in development mode #}
 	{% if site.env != "development" %}
 		<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
 	{% endif %}
+  {# load the bundles js files #}
+  <script type="module" src="{% getBundleFileUrl "js" %}" defer></script>
+
 
   {# Improve RSS feed visibility #}
-	<link rel="alternate" href="{{ site.url }}feed.xml" title="The Blog of The 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}firehosefeed.xml" title="The Firehose of The 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}sitesfeed.xml" title="The Sites from The 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}releasefeed.xml" title="The Releases from The 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="{{ site.url }}feed.xml" title="RSS feed for the blog of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="{{ site.url }}firehosefeed.xml" title="RSS feed for the Firehose of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="{{ site.url }}sitesfeed.xml" title="RSS feed for the Sites of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="{{ site.url }}releasefeed.xml" title="RSS feed for the Releases of the 11ty Bundle" type="application/rss+xml">
 
 	{# favicon settings #}
   <link rel="icon" href="/img/favicon.ico">
@@ -87,7 +95,5 @@
     {% include "public/js/lite-yt-embed.js" %}
   {% endif %}
   {% endjs %}
-
-  <script type="module" src="{% getBundleFileUrl "js" %}"></script>
 </body>
 </html>

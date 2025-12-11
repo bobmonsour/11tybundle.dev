@@ -10,7 +10,7 @@ const getWebIcon = (origin) => {
     return "";
   }
   // console.log("Getting web icon for origin:", origin);
-  return `<li><a href="${origin}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+  return `<li><a href="${origin}" class="🎈" aria-label="Author's website"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
   <use xlink:href="#icon-globe"></use>
   </svg><span class="visually-hidden">Website</span></a></li>`;
 };
@@ -23,7 +23,7 @@ const getRSSIcon = async (origin) => {
   let rssLink = await getRSSLink(origin);
   return rssLink === ""
     ? ""
-    : `<li><a href="${rssLink}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+    : `<li><a href="${rssLink}" class="🎈" aria-label="Author's RSS feed"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-rss"></use>
       </svg><span class="visually-hidden">RSS</span></a></li>`;
 };
@@ -53,7 +53,7 @@ export async function getSocialIcons(origin) {
 
     if (platformLink && platformLink.trim() !== "") {
       // console.log(`Adding icon for ${platform}`);
-      socialIcons += `<li><a href="${platformLink}" class="🎈"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      socialIcons += `<li><a href="${platformLink}" class="🎈" aria-label="Author's ${platform} profile"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-${platform}"></use>
       </svg><span class="visually-hidden">${platform}</span></a></li>`;
     }

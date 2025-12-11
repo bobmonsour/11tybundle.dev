@@ -15,7 +15,7 @@ issue: 80
           newsletter</a> for email updates.</p>
     </div>
     <article class="latest-blog">
-      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml" aria-label="RSS feed for the blog of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg> <span class="visually-hidden">RSS</span></a></h2>
       {%- set post = collections.post | last -%}
@@ -37,7 +37,7 @@ issue: 80
 <div class="section" data-pagefind-ignore="all">
   <div class="feeds container">
       <article class="feeds__section">
-        <h2 class="h3">From the firehose <a href="/firehosefeed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">From the firehose <a href="/firehosefeed.xml" aria-label="RSS feed for the Firehose of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
         {%- set recent = bundledata.firehose.slice(0,11) -%}
@@ -52,7 +52,7 @@ issue: 80
         </ol>
       </article>
       <article class="feeds__section">
-        <h2 class="h3">Recent sites <a href="/sitesfeed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">Recent sites <a href="/sitesfeed.xml" aria-label="RSS feed for the Sites of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
         {%- set recent = bundledata.siteList.slice(0,11) -%}
@@ -67,7 +67,7 @@ issue: 80
         </ol>
       </article>
       <article class="feeds__section">
-        <h2 class="h3">Recent releases <a href="/releasefeed.xml"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">Recent releases <a href="/releasefeed.xml" aria-label="RSS feed for the Releases of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
         {%- set recent = bundledata.releaseList.slice(0,11) -%}
