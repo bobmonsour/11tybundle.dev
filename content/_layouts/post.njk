@@ -13,7 +13,7 @@ templateEngineOverride: njk,md
       <dd>{{ bundleIssue }}</dd>
     </dl>
 
-    <div class="prose">
+    <div class="prose" data-pagefind-weight={{ pfweights.blogContent }}>
       <h2 class="post__title">{{ title | safe }}</h2>
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}

@@ -15,7 +15,7 @@
 ---
 <header class="main-header">
   <div class="container">
-    <h1>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
+    <h1 data-pagefind-weight={{ pfweights.categoriesByName }}>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
     {% if linkstodocs[category.name] %}
     <nav>
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
