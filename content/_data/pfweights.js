@@ -1,8 +1,8 @@
 export default {
   categoryByName: 10,
-  individualPost: 8,
-  authorByName: 6,
-  showcasePage: 5,
-  blogContent: 2,
+  individualPost: 9,
+  authorByName: 8,
+  showcaseDetail: 3,
+  blogContent: 1,
   aboutPage: 1,
 };
