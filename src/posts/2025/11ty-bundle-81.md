@@ -20,7 +20,7 @@ Enjoy!
 
 ## Highlights
 
-**11ty Meetup recap.** On December 18th, [vrugtehagel](https://vrugtehagel.nl/) graced us with a presentation on [the Vento templating language](https://vento.js.org/). [In the video](https://www.youtube.com/watch?v=_854y7c0D-0&t=1s), he shares the what, the why and the how of Vento, and demonstrates how to use it within an Eleventy project. A great watch! While not recorded, I had a chance to preview the site redesign that Damian and I are working on.
+**11ty Meetup recap.** On ~~December~~ November 18th, [vrugtehagel](https://vrugtehagel.nl/) graced us with a presentation on [the Vento templating language](https://vento.js.org/). [In the video](https://www.youtube.com/watch?v=_854y7c0D-0&t=1s), he shares the what, the why and the how of Vento, and demonstrates how to use it within an Eleventy project. A great watch! While not recorded, I had a chance to preview the site redesign that Damian and I are working on.
 
 Many thanks to all of you who provided valuable feedback via the survey as well as during the meetup. Here's a sneak peek of what awaits you (yes, dark mode is coming!).
 
@@ -30,7 +30,7 @@ Many thanks to all of you who provided valuable feedback via the survey as well 
 
 **Another v4 alpha emerges.** [Release notes for Pre-release: Eleventy v4.0.0-alpha.5](https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.5) are up on GitHub.
 
-**Zach forks Nunjucks.** Two days ago on Mastodon, Zach noted: _"I don’t know if this is a good decision but it also feels long overdue"_ He was talking about creating a fork of the Nunjucks templating language. And now [v4.0.0-alpha.1](https://github.com/11ty/nunjucks/releases/tag/v4.0.0-alpha.1) has been released. This should be fun to watch.
+**Zach forks Nunjucks.** Two days ago on Mastodon, Zach noted: [_"I don’t know if this is a good decision but it also feels long overdue"_](https://fediverse.zachleat.com/@zachleat/115690869039097995) He was talking about creating a fork of the Nunjucks templating language. And now [v4.0.0-alpha.1](https://github.com/11ty/nunjucks/releases/tag/v4.0.0-alpha.1) has been released. This should be fun to watch.
 
 **Quesby arrives.** [Quesby](https://quesby.dev/), billing itself as a _"A modern boilerplate built on Eleventy and Nunjucks with privacy and performance in mind."_ Their post titled [Why Eleventy Still Matters in 2026 (and Why Quesby Builds on It)](https://quesby.dev/blog/why-eleventy-still-matters-in-2026-and-why-quesby-builds-on-it/) is a good read. Even if you don't wish to consider adopting their boilerplace, they make a compelling case for why Eleventy is still a great choice for static site generation. _Note:_ I have not yet added all of their relevant blog posts to the bundle, so feel free to [review their blog](https://quesby.dev/blog/) for more goodness.
 
