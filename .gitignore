@@ -9,3 +9,4 @@ scripts/
 .env
 .cache
 .vscode
+.github/

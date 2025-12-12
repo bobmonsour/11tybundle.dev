@@ -24,6 +24,7 @@ templateEngineOverride: njk,md
     </div>
 
     <aside data-pagefind-ignore="all">
+      {% if releases.length > 0 %}
       <hr>
       <h2 id="ql-releases" class="h3">Recent releases <data class="count" value="{{ releases.length }}">{{ releases.length }}</data></h2>
       <div class="directory__grid">
@@ -44,6 +45,7 @@ templateEngineOverride: njk,md
       	{%- endfor -%}
         {% endif %}
       </div>
+      {% endif %}
 
       <hr>
       <h2 id="ql-posts" class="h3">Posts from around the web <data class="count" value="{{ posts.length }}">{{ posts.length }}</data></h2>
