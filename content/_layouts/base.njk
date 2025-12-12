@@ -41,7 +41,24 @@
 		<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
 	{% endif %}
   {# load the bundles js files #}
-  <script src="{% getBundleFileUrl "js" %}" defer></script>
+    {% js %}
+  {% include "public/js/theme.js" %}
+  {% include "public/js/toggle.js" %}
+  {% include "public/js/scrollToTop.js" %}
+  {% include "public/js/pagefind-ui.js" %}
+  {% include "public/js/pagefind-highlight.js" %}
+  {% include "public/js/search.js" %}
+  {# include prism js on blog posts that have code #}
+  {% if pageHasCode %}
+    {% include "public/js/prism.min.js" %}
+  {% endif %}
+
+  {# include lite youtube embed on blog posts that have a YouTube ID #}
+  {% if youtubeId %}
+    {% include "public/js/lite-yt-embed.js" %}
+  {% endif %}
+  {% endjs %}
+  <script type="module" src="{% getBundleFileUrl "js" %}" defer></script>
 
 
   {# Improve RSS feed visibility #}
@@ -78,22 +95,5 @@
   </main>
   {%- include "partials/site-footer.njk" -%}
   {% include "partials/icons.njk" %}
-  {% js %}
-  {% include "public/js/theme.js" %}
-  {% include "public/js/toggle.js" %}
-  {% include "public/js/scrollToTop.js" %}
-  {% include "public/js/pagefind-ui.js" %}
-  {% include "public/js/pagefind-highlight.js" %}
-  {% include "public/js/search.js" %}
-  {# include prism js on blog posts that have code #}
-  {% if pageHasCode %}
-    {% include "public/js/prism.min.js" %}
-  {% endif %}
-
-  {# include lite youtube embed on blog posts that have a YouTube ID #}
-  {% if youtubeId %}
-    {% include "public/js/lite-yt-embed.js" %}
-  {% endif %}
-  {% endjs %}
 </body>
 </html>
