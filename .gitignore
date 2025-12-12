@@ -2,6 +2,7 @@
 node_modules/
 _site/
 devdata/
+docs/
 resources/
 scratch/
 scripts/
