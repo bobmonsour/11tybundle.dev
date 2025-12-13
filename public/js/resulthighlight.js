@@ -1,33 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Parse the current URL
   const url = new URL(window.location.href);
   const params = url.searchParams;
 
-  // 2. Check for your specific custom parameter
-  const highlightId = params.get("bundleitem_highlight");
+  // Check if bundleitem_highlight parameter exists (even without value)
+  const shouldHighlight = params.has("bundleitem_highlight");
 
-  if (highlightId) {
-    // --- A. Apply the Styling ---
-    // We use the ID passed in your parameter to find the element
+  if (shouldHighlight && url.hash) {
+    // Extract the ID from the hash (remove the # character)
+    const highlightId = url.hash.slice(1);
+
     const targetElement = document.getElementById(highlightId);
 
     if (targetElement) {
       targetElement.classList.add("bundleitem-highlight");
     }
 
-    // --- B. Clean the URL ---
-
-    // 3. Remove ONLY your parameter.
-    // The Pagefind parameter (e.g., ?pagefind_highlight=...) stays in the object.
+    // Remove the bundleitem_highlight parameter
     params.delete("bundleitem_highlight");
 
-    // 4. Reconstruct the clean URL.
-    // url.search will now contain only the remaining parameters.
+    // Reconstruct the clean URL (keeping highlight param and hash)
     url.search = params.toString();
 
-    // 5. Update the history.
-    // This replaces the URL in the browser bar with the version that still
-    // has the Pagefind param and hash, but lacks your custom trigger.
+    // Update browser URL
     window.history.replaceState({}, "", url.toString());
   }
 });

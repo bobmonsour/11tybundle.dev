@@ -13,49 +13,64 @@ document.addEventListener("DOMContentLoaded", () => {
     showEmptyFilters: false,
     showSubResults: true,
     processResult: function (result) {
+      console.log("processResult called with:", result);
       // Check if there are sub-results to process
       if (result.sub_results && Array.isArray(result.sub_results)) {
+        console.log("Processing sub_results:", result.sub_results.length);
         result.sub_results.forEach((subResult) => {
           // --- PART 1: Remove Title from Excerpt ---
           const title = subResult.title;
           let excerpt = subResult.excerpt;
+          console.log("subresultTitle:", title);
+          console.log("subresultExcerpt:", excerpt);
 
-          if (excerpt.startsWith(title)) {
-            // Remove the title from the start of the excerpt
-            let newExcerpt = excerpt.substring(title.length).trim();
+          // Remove all <mark> and </mark> tags from excerpt for comparison
+          const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
+
+          // Check if cleaned excerpt starts with title
+          if (cleanExcerpt.startsWith(title)) {
+            // Find the position in the original excerpt where the title ends
+            // We need to skip over the mark tags to find the actual end position
+            let charCount = 0;
+            let position = 0;
+
+            while (charCount < title.length && position < excerpt.length) {
+              if (excerpt.substring(position).startsWith("<mark>")) {
+                position += 6; // Skip "<mark>"
+              } else if (excerpt.substring(position).startsWith("</mark>")) {
+                position += 7; // Skip "</mark>"
+              } else {
+                charCount++;
+                position++;
+              }
+            }
+
+            // Remove the title portion and trim
+            let newExcerpt = excerpt.substring(position).trim();
+
+            // Remove any leading <mark> or </mark> tags
+            newExcerpt = newExcerpt.replace(/^(<\/?mark>)+/, "");
 
             if (newExcerpt.length > 0) {
-              // Optional: Capitalize the first letter of the new excerpt
-              newExcerpt =
-                newExcerpt.charAt(0).toUpperCase() + newExcerpt.slice(1);
+              // Capitalize first letter (skip over any leading <mark> tag)
+              const markMatch = newExcerpt.match(/^(<mark>)?(.)/);
+              if (markMatch) {
+                const prefix = markMatch[1] || "";
+                const firstChar = markMatch[2].toUpperCase();
+                newExcerpt =
+                  prefix + firstChar + newExcerpt.slice(prefix.length + 1);
+              }
               subResult.excerpt = newExcerpt;
             }
           }
 
           // --- PART 2: Add Custom Highlight Parameter ---
-          // Parse the URL safely using the current origin as a base
-          const urlObj = new URL(subResult.url, window.location.origin);
-          console.log("\nOriginal Sub-Result URL:", subResult.url);
-          console.log("Parsed URL Object:", urlObj);
-
-          // Get the anchor ID (without the '#')
-          const anchorId = urlObj.hash.slice(1);
-          console.log("Anchor ID:", anchorId);
-
-          if (anchorId) {
-            // Add your custom parameter 'bundleitem_highlight'
-            urlObj.searchParams.set("bundleitem_highlight", anchorId);
-            console.log(
-              "urlObj.searchParams after set:",
-              urlObj.searchParams.toString()
+          // Insert &bundleitem_highlight before hash
+          if (subResult.url.includes("#")) {
+            subResult.url = subResult.url.replace(
+              "#",
+              "&bundleitem_highlight#"
             );
-
-            // Update the sub-result URL with the new parameter included
-            subResult.url = urlObj.pathname + urlObj.search + urlObj.hash;
-            console.log("urlObj.pathname:", urlObj.pathname);
-            console.log("urlObj.search:", urlObj.search);
-            console.log("urlObj.hash:", urlObj.hash);
-            console.log("Updated Sub-Result URL:", subResult.url);
           }
         });
       }
