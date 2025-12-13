@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
           // Check if cleaned excerpt starts with title
           if (cleanExcerpt.startsWith(title)) {
             // Find the position in the original excerpt where the title ends
-            // We need to skip over the mark tags to find the actual end position
             let charCount = 0;
             let position = 0;
 
@@ -50,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Remove any leading <mark> or </mark> tags
             newExcerpt = newExcerpt.replace(/^(<\/?mark>)+/, "");
+
+            // Remove leading punctuation and whitespace
+            newExcerpt = newExcerpt.replace(/^[.,;:!?\s]+/, "");
 
             if (newExcerpt.length > 0) {
               // Capitalize first letter (skip over any leading <mark> tag)
