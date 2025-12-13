@@ -46,7 +46,7 @@ permalink: /categories/
     <section data-pagefind-ignore="all">
       <div class="directory__layout container">
       <h2 id="{{ category.firstLetter }}" data-page-find-ignore>{{ category.firstLetter }}</h2>
-      <article class="directory__grid">
+      <div class="directory__grid">
   {% endif %}
     {% set currentLetter = category.firstLetter %}
     <article class="directory__card directory--category" data-pagefind-ignore="all">
@@ -63,6 +63,6 @@ permalink: /categories/
     </article>
     {% if (category.name !== currentCategory)  and (currentCategory  !== "") %}
       {% set currentCategory = category.name %}
-      </article>
+      </div>
     {% endif %}
 {% endfor %}
