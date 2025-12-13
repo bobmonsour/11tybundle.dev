@@ -67,6 +67,10 @@ ol.pagefind-ui__results {
   overflow-wrap: anywhere;
 }
 
+.pagefind-ui__result-nested {
+  margin-inline: var(--space-m);
+}
+
 .pagefind-ui__message,
 .pagefind-ui__result-link {
   font-family: var(--font-display-bold);
