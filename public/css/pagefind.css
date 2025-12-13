@@ -67,6 +67,7 @@ ol.pagefind-ui__results {
   overflow-wrap: anywhere;
 }
 
+/* indent subresults of the search */
 .pagefind-ui__result-nested {
   margin-inline: var(--space-m);
 }
