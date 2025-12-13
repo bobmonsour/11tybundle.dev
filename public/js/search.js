@@ -13,16 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     showEmptyFilters: false,
     showSubResults: true,
     processResult: function (result) {
-      console.log("processResult called with:", result);
+      // console.log("processResult called with:", result);
       // Check if there are sub-results to process
       if (result.sub_results && Array.isArray(result.sub_results)) {
-        console.log("Processing sub_results:", result.sub_results.length);
+        // console.log("Processing sub_results:", result.sub_results.length);
         result.sub_results.forEach((subResult) => {
           // --- PART 1: Remove Title from Excerpt ---
           const title = subResult.title;
           let excerpt = subResult.excerpt;
-          console.log("subresultTitle:", title);
-          console.log("subresultExcerpt:", excerpt);
+          // console.log("subresultTitle:", title);
+          // console.log("subresultExcerpt:", excerpt);
 
           // Remove all <mark> and </mark> tags from excerpt for comparison
           const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
