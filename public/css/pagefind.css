@@ -1,5 +1,5 @@
 .pagefind-ui {
-  max-width: var(--grid-max-width);
+  max-width: calc(var(--grid-max-width) * 0.8);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
 }
@@ -51,7 +51,6 @@ button.pagefind-ui__search-clear {
 }
 
 .pagefind-ui__drawer {
-
   grid-column: 1 / -1;
   font-size: var(--step--1);
 }
@@ -74,7 +73,7 @@ ol.pagefind-ui__results {
 }
 
 .pagefind-ui__result-title {
-  margin-block-start: .5lh;
+  margin-block-start: 0.5lh;
 }
 
 .pagefind-ui__result-excerpt {
