@@ -57,6 +57,20 @@ const saveFailureCache = async () => {
   }
 };
 
+// Helper to get current date as YYYY-MM-DD
+const getCurrentDate = () => {
+  const now = new Date();
+  return now.toISOString().split("T")[0];
+};
+
+// Helper to check if a failure is older than 30 days
+const isFailureExpired = (failureDate) => {
+  const stored = new Date(failureDate);
+  const now = new Date();
+  const daysDiff = (now - stored) / (1000 * 60 * 60 * 24);
+  return daysDiff >= 30;
+};
+
 //***************
 // Given the path to the favicon as saved in the output directory, generate and
 // return the html img element to use in the site.
@@ -82,7 +96,12 @@ const genFaviconImg = async (faviconPath) => {
 const fetchAndSaveFavicon = async (origin, domain) => {
   // Check persistent failure cache first
   if (failureCache[origin]) {
-    return defaultFaviconPath;
+    const failureDate = failureCache[origin];
+    // If failure is less than 30 days old, skip fetch
+    if (!isFailureExpired(failureDate)) {
+      return defaultFaviconPath;
+    }
+    // If 30+ days old, we'll retry (continue to fetch below)
   }
 
   const faviconUrl = `https://www.google.com/s2/favicons?domain=${origin}&sz=${size}`;
@@ -128,7 +147,18 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     const stats = await fs.stat(outputPath);
     if (stats.size === 0) {
       await fs.unlink(outputPath).catch(() => {});
+
+      // Update failure cache with current date
+      failureCache[origin] = getCurrentDate();
+      await saveFailureCache();
+
       return defaultFaviconPath;
+    }
+
+    // Success! Remove from failure cache if it was there
+    if (failureCache[origin]) {
+      delete failureCache[origin];
+      await saveFailureCache();
     }
 
     return localPath;
@@ -138,8 +168,8 @@ const fetchAndSaveFavicon = async (origin, domain) => {
       `fetchAndSaveFavicon: using default favicon for ${origin}, error: ${error.message}`
     );
 
-    // Add to persistent failure cache
-    failureCache[origin] = true;
+    // Add to persistent failure cache with current date
+    failureCache[origin] = getCurrentDate();
     await saveFailureCache();
 
     faviconCache[origin] = defaultFaviconPath;
