@@ -14,5 +14,5 @@ export default {
     email: "bob.monsour@gmail.com",
     url: "https://bobmonsour.com/",
   },
-  headerAnnouncement: "true",
+  headerAnnouncement: false,
 };

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Remove the bundleitem_highlight parameter
-    params.delete("bundleitem_highlight");
+    // params.delete("bundleitem_highlight");
 
     // Reconstruct the clean URL (keeping highlight param and hash)
     url.search = params.toString();

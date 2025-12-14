@@ -102,7 +102,7 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     // Make a quick fetch to get content-type header for extension detection
     // This will be cached by the browser/node, so it's essentially free
     const response = await fetch(faviconUrl, {
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(fetchTimeout.faviconExtension),
     });
     const contentType = response.headers.get("content-type");
     const extension = "." + getExtensionFromContentType(contentType);

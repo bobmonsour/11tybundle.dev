@@ -26,8 +26,8 @@ export const cacheDuration = {
 export const fetchTimeout = {
   bundleDB: 5000, // 5 seconds
   descHtml: 5000, // 5 seconds
-  faviconHtml: 5000, // 3 seconds
   faviconImage: 3000, // 3 seconds
+  faviconExtension: 1000, // 1 second
   rssLinkHtml: 3000, // 3 seconds
   socialHtml: 3000, // 3 seconds
   socialLinks: 3000, // 3 seconds
