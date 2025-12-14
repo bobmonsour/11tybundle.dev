@@ -7,7 +7,6 @@ import {
   formatYMD,
   singleComma,
 } from "./datesandnumbers.js";
-import { isCurrentPage } from "./iscurrentpage.js";
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { getFavicon } from "./getfavicon.js";
@@ -25,7 +24,6 @@ import { postYearsInFirehose } from "./postyearsinfirehose.js";
 
 export const filters = {
   countLabel,
-  isCurrentPage,
   formatItemDate,
   formatPostDate,
   formatFirehoseDate,
