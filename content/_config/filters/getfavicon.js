@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
 import slugifyPackage from "slugify";
+import sharp from "sharp";
 
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
@@ -36,6 +37,7 @@ const failureCachePath = path.join(
   __dirname,
   "../../../.cache/favicons/favicon-failures.json"
 );
+const upscaleLogPath = path.join(__dirname, "../../../log/upscaled-files.md");
 let failureCache = {};
 
 // Load failure cache from disk
@@ -69,6 +71,17 @@ const isFailureExpired = (failureDate) => {
   const now = new Date();
   const daysDiff = (now - stored) / (1000 * 60 * 60 * 24);
   return daysDiff >= 30;
+};
+
+// Helper to log upscaled files
+const logUpscale = async (origin, originalWidth, originalHeight) => {
+  try {
+    await fs.mkdir(path.dirname(upscaleLogPath), { recursive: true });
+    const logEntry = `- ${origin}: ${originalWidth}x${originalHeight} → ${size}x${size}\n`;
+    await fs.appendFile(upscaleLogPath, logEntry);
+  } catch (error) {
+    console.error("Failed to log upscale:", error.message);
+  }
 };
 
 //***************
@@ -140,8 +153,39 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     // Ensure directory exists
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
-    // Write the binary favicon data
-    await fs.writeFile(outputPath, faviconBuffer);
+    // Process image with Sharp to ensure consistent dimensions
+    let finalBuffer = faviconBuffer;
+
+    // Skip processing for ICO and SVG formats
+    if (extension !== ".ico" && extension !== ".svg") {
+      try {
+        const image = sharp(faviconBuffer);
+        const metadata = await image.metadata();
+
+        // Only upscale if image is smaller than target size
+        if (metadata.width < size || metadata.height < size) {
+          // Log the upscaling operation
+          await logUpscale(origin, metadata.width, metadata.height);
+
+          // Upscale to target size using high-quality algorithm
+          finalBuffer = await image
+            .resize(size, size, {
+              kernel: sharp.kernel.lanczos3, // Best quality for upscaling
+              fit: "fill", // Ensure exact dimensions
+            })
+            .toBuffer();
+        }
+      } catch (sharpError) {
+        // If Sharp processing fails, use original buffer
+        console.error(
+          `Sharp processing failed for ${origin}:`,
+          sharpError.message
+        );
+      }
+    }
+
+    // Write the processed (or original) favicon data
+    await fs.writeFile(outputPath, finalBuffer);
 
     // Verify file exists and is not empty
     const stats = await fs.stat(outputPath);
