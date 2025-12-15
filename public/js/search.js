@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     showSubResults: true,
     processResult: function (result) {
       // console.log("processResult called with:", result);
+      // do not show an excerpt for the main result if it is a category page
+      if (
+        result.meta &&
+        result.meta.title &&
+        result.meta.title.startsWith("Category: ")
+      ) {
+        result.excerpt = "";
+      }
       // Check if there are sub-results to process
       if (result.sub_results && Array.isArray(result.sub_results)) {
         // console.log("Processing sub_results:", result.sub_results.length);
