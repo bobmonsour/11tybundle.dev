@@ -1,7 +1,7 @@
 ---
 bundleIssue: 80
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Redesign in progress, 11ty Meetup videos, 11ty GitHub Issues are a changing, Kyle embeds Mastodon posts, Stefan makes a free image gallery, A facepile for all, Hitchens theme for 11ty, Kaj Kander dives into schema markup..."
+  title: "Issue {{ bundleIssue }} - Redesign in progress, 11ty Meetup videos, 11ty GitHub Issues are a changing, Kyle embeds Mastodon posts, Stefan makes a free image gallery, A facepile for all, Hitchens theme for 11ty, Kaj Kandler dives into schema markup..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-11-11
 tags:
@@ -40,6 +40,6 @@ Enjoy!
 
 **Hitchens theme for 11ty.** [Jason Shellen](https://www.shellen.com/) has adapted Pat Dryburgh's [Hitchens theme](https://github.com/patdryburgh/hitchens/#readme), what Pat had dubbed _"An inarguably well-designed Jekkyll theme."_ Jason has recreated it for Eleventy. [Check it out](https://github.com/shellen/hitchens-eleventy?tab=readme-ov-file#hitchens-for-eleventy).
 
-**Kaj Kander dives into schema markup.** [Kaj Kander](https://kajkandler.com/) has provided a couple of resources to show how you can add schema markup (and [why you would want to](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/importance_of_schema_markup/)) to your sites. He's [done it for the Eleventy base blog](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/). He presented all of this on Episode 25 of the 11ty Meetup; check out [the video](https://www.youtube.com/watch?v=Z-83f8qa0_c). And after the meetup, [Simon Cox](https://www.simoncox.com/) dove right in and developed a "modular and automated" [workflow](https://www.simoncox.com/post/2025-10-28-creating-a-modular-approach-to-json-schema-in-an-eleventy-website/) that works for him.
+**Kaj Kandler dives into schema markup.** [Kaj Kandler](https://kajkandler.com/) has provided a couple of resources to show how you can add schema markup (and [why you would want to](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/importance_of_schema_markup/)) to your sites. He's [done it for the Eleventy base blog](https://kajkandler.github.io/eleventy-base-blog-with-schema/blog/). He presented all of this on Episode 25 of the 11ty Meetup; check out [the video](https://www.youtube.com/watch?v=Z-83f8qa0_c). And after the meetup, [Simon Cox](https://www.simoncox.com/) dove right in and developed a "modular and automated" [workflow](https://www.simoncox.com/post/2025-10-28-creating-a-modular-approach-to-json-schema-in-an-eleventy-website/) that works for him.
 
 Until next time...
