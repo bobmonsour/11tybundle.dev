@@ -84,7 +84,7 @@ const genFaviconImg = async (faviconPath) => {
 
     // use the resolved favicon path for the site/user
   } else {
-    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" eleventy:ignore></img>`;
+    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" width="${size}" height="${size}" eleventy:ignore></img>`;
   }
   return imgElement;
 };
