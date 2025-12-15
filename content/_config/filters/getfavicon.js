@@ -10,7 +10,8 @@ import sharp from "sharp";
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 const defaultFaviconPath = "default - no favicon found";
 const faviconDir = "/img/favicons";
-const size = 128;
+const fetchSize = 128; // Size to request from Google
+const targetSize = 64; // Target size for all favicons
 // ---
 
 // Helper function to get file extension from content type
@@ -37,7 +38,7 @@ const failureCachePath = path.join(
   __dirname,
   "../../../.cache/favicons/favicon-failures.json"
 );
-const upscaleLogPath = path.join(__dirname, "../../../log/upscaled-files.md");
+const resizeLogPath = path.join(__dirname, "../../../log/resized-files.md");
 let failureCache = {};
 
 // Load failure cache from disk
@@ -73,14 +74,14 @@ const isFailureExpired = (failureDate) => {
   return daysDiff >= 30;
 };
 
-// Helper to log upscaled files
-const logUpscale = async (origin, originalWidth, originalHeight) => {
+// Helper to log resized files
+const logResize = async (origin, originalWidth, originalHeight, operation) => {
   try {
-    await fs.mkdir(path.dirname(upscaleLogPath), { recursive: true });
-    const logEntry = `- ${origin}: ${originalWidth}x${originalHeight} → ${size}x${size}\n`;
-    await fs.appendFile(upscaleLogPath, logEntry);
+    await fs.mkdir(path.dirname(resizeLogPath), { recursive: true });
+    const logEntry = `- [${operation}] ${origin}: ${originalWidth}x${originalHeight} → ${targetSize}x${targetSize}\n`;
+    await fs.appendFile(resizeLogPath, logEntry);
   } catch (error) {
-    console.error("Failed to log upscale:", error.message);
+    console.error("Failed to log resize:", error.message);
   }
 };
 
@@ -97,7 +98,7 @@ const genFaviconImg = async (faviconPath) => {
 
     // use the resolved favicon path for the site/user
   } else {
-    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" width="${size}" height="${size}" eleventy:ignore></img>`;
+    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" width="${targetSize}" height="${targetSize}" eleventy:ignore></img>`;
   }
   return imgElement;
 };
@@ -117,7 +118,7 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     // If 30+ days old, we'll retry (continue to fetch below)
   }
 
-  const faviconUrl = `https://www.google.com/s2/favicons?domain=${origin}&sz=${size}`;
+  const faviconUrl = `https://www.google.com/s2/favicons?domain=${origin}&sz=${fetchSize}`;
 
   try {
     // Fetch favicon from Google's API with caching
@@ -162,15 +163,21 @@ const fetchAndSaveFavicon = async (origin, domain) => {
         const image = sharp(faviconBuffer);
         const metadata = await image.metadata();
 
-        // Only upscale if image is smaller than target size
-        if (metadata.width < size || metadata.height < size) {
-          // Log the upscaling operation
-          await logUpscale(origin, metadata.width, metadata.height);
+        // Resize to targetSize if dimensions don't match
+        if (metadata.width !== targetSize || metadata.height !== targetSize) {
+          // Determine if upscaling or downscaling
+          const operation =
+            metadata.width < targetSize || metadata.height < targetSize
+              ? "UPSCALE"
+              : "DOWNSCALE";
 
-          // Upscale to target size using high-quality algorithm
+          // Log the resize operation
+          await logResize(origin, metadata.width, metadata.height, operation);
+
+          // Resize to target size using high-quality algorithm
           finalBuffer = await image
-            .resize(size, size, {
-              kernel: sharp.kernel.lanczos3, // Best quality for upscaling
+            .resize(targetSize, targetSize, {
+              kernel: sharp.kernel.lanczos3, // Best quality for both up and down scaling
               fit: "fill", // Ensure exact dimensions
             })
             .toBuffer();

@@ -10,3 +10,4 @@ scripts/
 .cache
 .vscode
 .github/
+log/
