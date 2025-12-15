@@ -79,7 +79,6 @@ aside {
   h2 {
     display: flex;
     gap: var(--space-s);
-    justify-content: space-between;
     align-items: center;
   }
 

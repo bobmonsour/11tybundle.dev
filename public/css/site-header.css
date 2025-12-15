@@ -308,6 +308,12 @@
     width: max-content;
     border: 1px solid var(--surface-fore);
     border-radius: 999px;
+    transition-property: background-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    &:hover {
+      background: var(--surface-fore);
+    }
   }
 
   [type="radio"] {

@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -117,7 +118,7 @@ dd {
 
 a {
   color: currentColor;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
   &:hover {
@@ -161,7 +162,7 @@ input {
 }
 
 input[type="submit"],
-button,
+button:not(.lyt-playbtn),
 .button {
   display: inline-flex;
   gap: var(--space-3xs);
@@ -365,6 +366,7 @@ mark,
 
 .prose {
   max-width: 80ch;
+  min-width: 0;
 }
 
 .word-break {
@@ -488,4 +490,8 @@ mark,
     transform: translateY(0);
     pointer-events: auto;
   }
+}
+
+lite-youtube {
+  margin-block: 1lh;
 }
