@@ -6,15 +6,15 @@ templateEngineOverride: njk,md
 {% include "public/css/blog.css" %}
 {% endcss %}
 {% include "partials/blog-header.njk" %}
-<div class="section">
+<div class="section" data-pagefind-body>
   <div class="post__layout container">
-    <dl class="calendar">
+    <dl class="calendar" data-pagefind-ignore="all">
       <dt>Issue</dt>
       <dd>{{ bundleIssue }}</dd>
     </dl>
 
-    <div class="prose">
-      <h2 class="post__title" id="{{ title | slugify }}" data-date="{{ date }}" data-weight="{{ pfweights.blogContent }}" data-pagefind-sort="date[data-date], weight[data-weight]">{{ title | safe }}</h2>
+    <div class="prose" data-pagefind-body>
+      <h2 class="post__title" id="{{ title | slugify }}" data-weight="{{ pfweights.blogContent }}" data-pagefind-sort="weight[data-weight]">{{ title | safe }}</h2>
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}

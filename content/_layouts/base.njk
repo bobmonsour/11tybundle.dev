@@ -91,7 +91,7 @@
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
-  <main id="main" class="site-main" data-pagefind-body>
+  <main id="main" class="site-main">
   {{ content | safe }}
   </main>
   {%- include "partials/site-footer.njk" -%}

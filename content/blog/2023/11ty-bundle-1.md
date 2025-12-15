@@ -13,7 +13,7 @@ Why?, you ask.
 
 I felt that there was so much happening in the world of Eleventy as I watch the Discord Server, Mastodon, and my RSS reader, it seemed appropriate to step back and put together a curated version of what I'm seeing in the hopes that others might find this useful.
 
-Who knows, perhaps this belongs in an Eleventy newsletter of some sort. If you think so, feel free to drop me a line at bob dot monsour at gmail.
+Who knows, perhaps this belongs in an Eleventy newsletter of some sort.
 
 > _UPDATED: 2023-04-18 - I have added descriptions to each of the blog post entries. These are extracted from the blog post page itself as provided by the post's author._
 

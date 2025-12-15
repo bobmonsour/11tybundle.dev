@@ -4,7 +4,7 @@ eleventyComputed:
   description: "A list of {{ bundledata.authorCount }} authors"
 permalink: /authors/
 ---
-<header class="main-header">
+<header class="main-header" data-page-find-ignore="all">
   <div class="container">
     <h1>{{ title }} <data class="count" value="{{ bundledata.authorCount }}">{{ bundledata.authorCount }}</data></h1>
     <nav>
@@ -16,7 +16,7 @@ permalink: /authors/
     </nav>
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" class="skip-links">
       {% for letter in bundledata.authorLetters %}

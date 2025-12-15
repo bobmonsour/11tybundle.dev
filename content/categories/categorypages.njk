@@ -13,9 +13,9 @@
 	}
 }
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-body>
   <div class="container">
-    <h1 data-pagefind-weight={{ pfweights.categoriesByName }}>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
+    <h1 data-pagefind-weight={{ pfweights.categoryByName }}>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
     <p class="visually-hidden" data-pagefind-meta="title">Category: {{ category.name |upper }}  ({{ category.count | countLabel('post') }})</p>
     {% if linkstodocs[category.name] %}
     <nav>
@@ -27,7 +27,7 @@
 {% endif %}
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" id="skip-links-years" class="skip-links">
       {% for year in bundledata.firehose | postYearsInCategory(category.name) %}
@@ -41,7 +41,7 @@
 {% set current_year = newestPostYear %}
 {% set previous_year = current_year %}
 
-<div class="section">
+<div class="section" data-pagefind-body>
   <div class="container">
     <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
       <summary id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}</h2></summary>
@@ -55,7 +55,7 @@
   </div>
 </div>
       {% set previous_year = current_year %}
-<div class="section">
+<div class="section" data-pagefind-body>
   <div class="container">
     <details name="details" class="directory__layout">
       <summary id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
