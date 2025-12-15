@@ -11,3 +11,5 @@ scripts/
 .vscode
 content/
 .netlify/
+log/
+docs/
