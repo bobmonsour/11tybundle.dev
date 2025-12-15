@@ -4,7 +4,7 @@
     {% if item.description %}
       <p class="description">{{ item.description | safe }}</p>
     {% endif %}
-    <time data-pagefind-ignore datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
+    <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
     <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
     <ul role="list" class="author-links" data-pagefind-ignore="all">
       {{ authorIcons | safe }}
