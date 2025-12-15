@@ -9,7 +9,7 @@ import slugifyPackage from "slugify";
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
 const defaultFaviconPath = "default - no favicon found";
 const faviconDir = "/img/favicons";
-const size = 64;
+const size = 128;
 // ---
 
 // Helper function to get file extension from content type
