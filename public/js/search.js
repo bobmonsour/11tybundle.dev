@@ -22,6 +22,55 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         result.excerpt = "";
       }
+
+      // --- Remove Title from Main Result Excerpt ---
+      if (result.meta && result.meta.title && result.excerpt) {
+        const title = result.meta.title;
+        let excerpt = result.excerpt;
+
+        // Remove all <mark> and </mark> tags from excerpt for comparison
+        const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
+
+        // Check if cleaned excerpt starts with title
+        if (cleanExcerpt.startsWith(title)) {
+          // Find the position in the original excerpt where the title ends
+          let charCount = 0;
+          let position = 0;
+
+          while (charCount < title.length && position < excerpt.length) {
+            if (excerpt.substring(position).startsWith("<mark>")) {
+              position += 6; // Skip "<mark>"
+            } else if (excerpt.substring(position).startsWith("</mark>")) {
+              position += 7; // Skip "</mark>"
+            } else {
+              charCount++;
+              position++;
+            }
+          }
+
+          // Remove the title portion and trim
+          let newExcerpt = excerpt.substring(position).trim();
+
+          // Remove any leading <mark> or </mark> tags
+          newExcerpt = newExcerpt.replace(/^(<\/?mark>)+/, "");
+
+          // Remove leading punctuation and whitespace
+          newExcerpt = newExcerpt.replace(/^[.,;:!?\s]+/, "");
+
+          if (newExcerpt.length > 0) {
+            // Capitalize first letter (skip over any leading <mark> tag)
+            const markMatch = newExcerpt.match(/^(<mark>)?(.)/);
+            if (markMatch) {
+              const prefix = markMatch[1] || "";
+              const firstChar = markMatch[2].toUpperCase();
+              newExcerpt =
+                prefix + firstChar + newExcerpt.slice(prefix.length + 1);
+            }
+            result.excerpt = newExcerpt;
+          }
+        }
+      }
+
       // Check if there are sub-results to process
       if (result.sub_results && Array.isArray(result.sub_results)) {
         // console.log("Processing sub_results:", result.sub_results.length);
