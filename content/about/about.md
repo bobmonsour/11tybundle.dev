@@ -10,7 +10,7 @@ Put simply, it's a curated collection of links to [Eleventy](https://11ty.dev) r
 
 ![An open laptop sits on a table with a cup of coffee beside it, suggesting a comfortable reading and working environment.](opengraph-image.jpg)
 
-## Why does the 11ty Bundle exist? How did it come to be?
+## Why does the 11ty Bundle exist?
 
 ### Mar 2023
 
