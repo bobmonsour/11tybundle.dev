@@ -18,7 +18,7 @@ There are two RSS feeds, [one for the 11tybundle.dev Blog](/feed.xml) and [one f
 
 ---
 
-_**So why does this exist? How did it come to be?**_
+_**So why does this exist?**_
 
 It was in late March 2023 when I was sitting down to work on [my personal website](https://www.bobmonsour.com/) that I had this incredible rush of energy come over me. I had been doing a lot of googling and reading Eleventy documentation and blog posts. I had also been reading a lot of questions and answers on the [Eleventy Discord server](https://www.11ty.dev/blog/discord/). I was learning a lot and I was excited about it. I was also feeling a little overwhelmed by all of the information that I was taking in. I was trying to figure out how to organize it all and make it useful to me. I was also thinking about how I could share what I was learning with others.
 
