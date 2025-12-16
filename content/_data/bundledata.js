@@ -476,7 +476,7 @@ export default async function () {
   let recentAuthors = getRecentAuthors(firehose, authors);
   recentAuthors[0].favicon =
     '<svg viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg>';
-  console.log("Authors: " + JSON.stringify(recentAuthors, null, 2));
+  // console.log("Authors: " + JSON.stringify(recentAuthors, null, 2));
   // **************
   // Now that the firehose and author arrays are built, we
   // need to add the author's favicon to each post in the
@@ -492,6 +492,30 @@ export default async function () {
       post.favicon = authorRecord.favicon;
     }
   }
+
+  // generate pagedFirehose, an array of arrays, each inner array
+  // this is for paginating the firehose page by year
+  const pagedFirehose = Object.values(
+    firehose.reduce((acc, post) => {
+      const year = new Date(post.Date).getFullYear();
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(post);
+      return acc;
+    }, {})
+  ).sort((a, b) => {
+    // Sort by year descending (most recent first)
+    const yearA = new Date(a[0].Date).getFullYear();
+    const yearB = new Date(b[0].Date).getFullYear();
+    return yearB - yearA;
+  });
+
+  // generate firehoseYears, a descending array of years for navigation
+  const firehoseYears = pagedFirehose.map((yearPosts) =>
+    new Date(yearPosts[0].Date).getFullYear()
+  );
+  console.log(`firehoseYears: ${firehoseYears.length} years`);
 
   // **************
   // generate a sorted array of categories, sorted either by name or by
@@ -572,6 +596,8 @@ export default async function () {
   return {
     bundleRecords,
     firehose,
+    pagedFirehose,
+    firehoseYears,
     postCount,
     releaseList,
     releaseCount,

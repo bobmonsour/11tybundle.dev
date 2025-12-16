@@ -1,24 +1,36 @@
----
-title: The 11ty Bundle Firehose
-description: An unfiltered, real-time stream of all posts in the 11ty Bundle, shown in reverse date order—most recent first.
-permalink: /firehose/
+---js
+{
+	pagination: {
+		data: "bundledata.pagedFirehose",
+		size: 1,
+		alias: "yearlyPosts",
+		addAllPagesToCollections: true,
+	},
+	eleventyComputed: {
+		current_year: (data) => new Date(data.yearlyPosts[0].Date).getFullYear(),
+		title: (data) => new Date(data.yearlyPosts[0].Date).getFullYear().toString(),
+		description: (data) => `Posts in the 11ty Bundle by: ${new Date(data.yearlyPosts[0].Date).getFullYear()}`,
+		permalink: (data) => data.pagination.pageNumber === 0 ? '/firehose/' : `/firehose/${new Date(data.yearlyPosts[0].Date).getFullYear()}/`,
+	},
+}
 ---
 <header class="main-header" data-pagefind-ignore="all">
   <div class="container">
     <h1>Firehose <data class="count" value="{{ bundledata.postCount }}">{{ bundledata.postCount | singleComma }}</data></h1>
     <nav>
       <ul role="list">
-        <li><a href="/firehose" class="current">Posts</a></li>
+        <li><a href="/firehose/" class="current">Posts</a></li>
         <li><a href="/firehosefeed.xml">RSS</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
 <nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" id="skip-links-years" class="skip-links">
-      {% for year in bundledata.firehose | postYearsInFirehose %}
-        <li><a href="#y-{{ year }}">{{ year }}</a></li>
+      {% for year in bundledata.firehoseYears %}
+        <li><a href="{% if loop.first %}/firehose/{% else %}/firehose/{{ year }}/{% endif %}">{{ year }}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -38,39 +50,34 @@ permalink: /firehose/
       </svg> About the firehose
     </button>
 
-{% set newestPost = bundledata.firehose | first %}
-{% set newestPostYear = newestPost.Date | truncate(4, true, '') %}
-{% set current_year = newestPostYear %}
-{% set previous_year = current_year %}
-
-
-    <details name="details" class="directory__layout"  {% if current_year == newestPostYear %}open{% endif %}>
-      <summary id="y-{{ current_year }}" data-pagefind-ignore="all"><h2>{{ current_year }}</h2></summary>
-      <div class="directory__grid">
-      {% for item in bundledata.firehose %}
-    	{% set current_year = item.Date | truncate(4, true, '') %}
-      {% if (current_year != previous_year) %}
-      {# on year change, close the previous year's related tags #}
-      </div>
-    </details>
-  </div>
-</div>
-      {% set previous_year = current_year %}
 <div class="section" data-pagefind-ignore="all">
   <div class="container">
-    <details name="details" class="directory__layout">
+    <details name="details" class="directory__layout" open>
       <summary id="y-{{ current_year }}" data-pagefind-ignore="all"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
       <div class="directory__grid">
-    {% endif %}
-
+      {% for item in yearlyPosts %}
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
         {% set authorIcons = authorRecord.origin | getAuthorIcons %}
-
         {% include "partials/postitemdetail.njk" %}
-
       {% endfor %}
       </div>
     </details>
   </div>
 </div>
+
+<nav>
+  <ol role="list" class="pagination">
+    {%- if pagination.href.next %}<li><a href="{{ pagination.href.next }}" class="button"><svg width="20" height="20"
+        viewBox="0 0 24 24" aria-hidden="true">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg> {{ current_year - 1 }}</a></li>
+    {% endif %}
+    {%- if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}" class="button">{{ current_year + 1 }} <svg width="20" height="20"
+        viewBox="0 0 24 24" aria-hidden="true">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg></a></li>
+    {% endif %}
+  </ol>
+</nav>
+
 {% include "partials/releasepopovers.njk" %}
