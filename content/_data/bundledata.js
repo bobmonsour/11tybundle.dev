@@ -473,9 +473,10 @@ export default async function () {
       .filter((author) => author !== undefined);
   };
 
-  const recentAuthors = getRecentAuthors(firehose, authors);
-  console.log(`Recent authors: ${recentAuthors} records`);
-
+  let recentAuthors = getRecentAuthors(firehose, authors);
+  recentAuthors[0].favicon =
+    '<svg viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#icon-person-circle"></use></svg>';
+  console.log("Authors: " + JSON.stringify(recentAuthors, null, 2));
   // **************
   // Now that the firehose and author arrays are built, we
   // need to add the author's favicon to each post in the
