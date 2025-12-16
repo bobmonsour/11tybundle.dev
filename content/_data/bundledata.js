@@ -219,7 +219,7 @@ export default async function () {
       results.push({
         ...site,
         description: await appliedFilters.getDescription(site.Link),
-        favicon: await appliedFilters.getFavicon(site.Link),
+        favicon: await appliedFilters.getFavicon(site.Link, "site"),
         formattedDate: await appliedFilters.formatItemDate(site.Date),
         socialLinks: await appliedFilters.getSocialLinks(site.Link),
       });
@@ -366,7 +366,7 @@ export default async function () {
         if (!existing.origin && !isYoutube) {
           existing.origin = origin;
           existing.description = await filters.getDescription(origin);
-          existing.favicon = await filters.getFavicon(item.Link);
+          existing.favicon = await filters.getFavicon(item.Link, "post");
           existing.rssLink = await filters.getRSSLink(origin);
           existing.socialLinks = await filters.getSocialLinks(item.Link);
           existing.nonYoutubePostLink = item.Link;
@@ -383,7 +383,7 @@ export default async function () {
           count: 1,
           origin: isYoutube ? null : origin,
           description: isYoutube ? null : await filters.getDescription(origin),
-          favicon: await filters.getFavicon(item.Link),
+          favicon: await filters.getFavicon(item.Link, "post"),
           rssLink: isYoutube ? null : await filters.getRSSLink(origin),
           socialLinks: isYoutube
             ? null
