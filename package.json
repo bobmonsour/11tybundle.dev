@@ -13,7 +13,7 @@
     "buildns": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "deploy": "npm run clean && npm run demobuild && npm run postbuild && npx wrangler deploy --assets=./_site",
     "postbuild": "npx -y pagefind --site _site --force-language unknown",
-    "postdev": "npx -y pagefind --site _site --serve --force-language unknown",
+    "postdev": "npx -y pagefind --site _site --serve",
     "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
     "debugmore": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --serve",
     "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
