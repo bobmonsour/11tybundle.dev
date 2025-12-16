@@ -61,7 +61,7 @@ templateEngineOverride: njk,md
                 {{ authorRecord.origin | getAuthorIcons | safe }}
               </ul>
               <div class="categories-list">
-                <strong>Categories</strong>
+                <strong class="visually-hidden">Categories</strong>
                 <ul role="list">
                   {% for category in item.Categories %}
                     <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>

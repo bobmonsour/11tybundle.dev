@@ -474,6 +474,7 @@ export default async function () {
   };
 
   const recentAuthors = getRecentAuthors(firehose, authors);
+  console.log(`Recent authors: ${recentAuthors} records`);
 
   // **************
   // Now that the firehose and author arrays are built, we
