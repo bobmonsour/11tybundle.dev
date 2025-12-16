@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         result.excerpt = "";
       }
+      // use the meta description for the excerpt for the main result if it is an author page
+      if (
+        result.meta &&
+        result.meta.title &&
+        result.meta.description &&
+        result.meta.title.startsWith("Author: ")
+      ) {
+        result.excerpt = result.meta.description;
+        delete result.meta.description;
+      }
 
       // --- Remove Title from Main Result Excerpt ---
       if (result.meta && result.meta.title && result.excerpt) {
