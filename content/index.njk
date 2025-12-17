@@ -44,7 +44,7 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
             <li class="feeds__item">
-              {{ item.favicon | genFaviconHtml(10) | safe }}
+              {{ item.favicon | genFaviconHtml(1) | safe }}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
               <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             </li>
@@ -59,7 +59,7 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
             <li class="feeds__item">
-              {{ item.favicon | genFaviconHtml(10) | safe }}
+              {{ item.favicon | genFaviconHtml(1) | safe }}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
               <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             </li>
@@ -91,7 +91,7 @@ issue: 80
     <div class="recent-starters">
       {%- for item in bundledata.starters.slice(0,3) %}
       <div class="recent-starters__item">
-        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" eleventy:ignore>
+        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" loading="lazy" eleventy:ignore>
             <use xlink:href="#icon-github"></use>
             </svg>
         <div class="details">
@@ -106,7 +106,7 @@ issue: 80
       </div>
       {%- endfor %}
     </div>
-    <p><a href="/starters/" class="button">View all starters <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+    <p><a href="/starters/" class="button">View all starters <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"  loading="lazy" eleventy:ignore>
           <use xlink:href="#icon-arrow-right"></use>
         </svg></a></p>
   </div>
@@ -117,7 +117,7 @@ issue: 80
     <div class="recent-authors">
       {%- for item in bundledata.recentAuthors %}
       <div class="recent-authors__item">
-        {{ item.favicon | genFaviconHtml(10) | safe }}
+        {{ item.favicon | genFaviconHtml(12) | safe }}
         <div class="details">
           <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>
@@ -128,7 +128,7 @@ issue: 80
       </div>
       {%- endfor %}
     </div>
-    <p><a href="/authors/" class="button">View all authors <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+    <p><a href="/authors/" class="button">View all authors <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"  loading="lazy" eleventy:ignore>
           <use xlink:href="#icon-arrow-right"></use>
         </svg></a></p>
     </div>
