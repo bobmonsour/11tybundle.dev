@@ -181,6 +181,18 @@ const fetchAndSaveFavicon = async (origin, domain) => {
             })
             .toBuffer();
         }
+
+        // Optimize PNG files larger than 4KB
+        if (extension === ".png" && finalBuffer.length > 4096) {
+          finalBuffer = await sharp(finalBuffer)
+            .png({
+              compressionLevel: 9, // Maximum compression (0-9)
+              effort: 10, // Maximum effort (1-10)
+              quality: 80, // Lossy compression quality
+              palette: true, // Convert to palette if beneficial
+            })
+            .toBuffer();
+        }
       } catch (sharpError) {
         // If Sharp processing fails, use original buffer
         console.error(
