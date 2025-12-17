@@ -474,7 +474,6 @@ export default async function () {
   };
 
   let recentAuthors = getRecentAuthors(firehose, authors);
-  recentAuthors[0].favicon = "#icon-person-circle";
   // console.log("Authors: " + JSON.stringify(recentAuthors, null, 2));
   // **************
   // Now that the firehose and author arrays are built, we

@@ -68,14 +68,13 @@ h6,
   font-size: var(--step--1);
 }
 
-
 dd {
   margin-inline: 0;
 }
 
 ul,
 ol {
-  &[role='list'] {
+  &[role="list"] {
     margin-block: 0;
     padding-inline: 0;
   }
@@ -83,7 +82,7 @@ ol {
 
 ul,
 ol {
-  &:not([role='list']) {
+  &:not([role="list"]) {
     margin-block: 1lh 0;
     margin-inline: 0;
     padding-inline: 2ch;
@@ -131,7 +130,7 @@ a {
 a:not([class]) {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25ex;
-  &[href^='http'] {
+  &[href^="http"] {
     padding-right: 1.25em;
     &:after {
       position: absolute;
@@ -219,7 +218,7 @@ blockquote {
   padding-inline-start: 0.5lh;
 }
 
-pre[class*=language-] {
+pre[class*="language-"] {
   border-radius: var(--radius-s);
   margin-block: 1lh 0;
   padding: var(--space-s);
@@ -278,9 +277,7 @@ summary {
   padding: var(--space-s);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   opacity: 0;
-  transition:
-    opacity 150ms ease-in-out 25ms,
-    transform 150ms ease-in-out 25ms;
+  transition: opacity 150ms ease-in-out 25ms, transform 150ms ease-in-out 25ms;
 
   @supports (bottom: anchor(bottom)) {
     inset: auto;
@@ -436,7 +433,9 @@ mark,
     margin-block: var(--space-2xs) 0;
     font-size: var(--step-2);
     border-bottom-left-radius: calc(var(--border-radius) - var(--border-width));
-    border-bottom-right-radius: calc(var(--border-radius) - var(--border-width));
+    border-bottom-right-radius: calc(
+      var(--border-radius) - var(--border-width)
+    );
     corner-shape: squircle;
   }
 }
@@ -466,6 +465,7 @@ mark,
   width: 32px;
   aspect-ratio: 1;
   border-radius: var(--radius-s);
+  flex: 0 0 auto;
 }
 
 .pagination {
@@ -481,9 +481,7 @@ mark,
   opacity: 0;
   pointer-events: none;
   transform: translateY(4px);
-  transition:
-    opacity 150ms ease-in-out 25ms,
-    transform 150ms ease-in-out 25ms;
+  transition: opacity 150ms ease-in-out 25ms, transform 150ms ease-in-out 25ms;
 
   &.is-visible {
     opacity: 1;
