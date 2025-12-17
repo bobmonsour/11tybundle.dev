@@ -59,7 +59,7 @@
     {% include "public/js/lite-yt-embed.js" %}
   {% endif %}
   {% endjs %}
-  <script type="module" src="{% getBundleFileUrl "js" %}"></script>
+  <script src="{% getBundleFileUrl "js" defer %}"></script>
 
 
   {# Improve RSS feed visibility #}
