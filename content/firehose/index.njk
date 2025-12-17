@@ -36,11 +36,6 @@
   </div>
 </nav>
 
-{# Placed here, but referenced in button below #}
-<div id="info" popover data-pagefind-ignore="all">We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
-</div>
-
-
 <div class="section" data-pagefind-ignore="all">
   <div class="flow container">
     {# button reveals popover with text from above div with id="info" #}
@@ -49,11 +44,12 @@
         <use xlink:href="#icon-info"></use>
       </svg> About the firehose
     </button>
+    {# Placed here, but referenced in button below #}
+    <div id="info" popover data-pagefind-ignore="all">We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
+    </div>
 
-<div class="section" data-pagefind-ignore="all">
-  <div class="container">
-    <details name="details" class="directory__layout" open>
-      <summary id="y-{{ current_year }}" data-pagefind-ignore="all"><h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
+    <div class="directory__layout" data-pagefind-ignore="all">
+      <h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
       <div class="directory__grid">
       {% for item in yearlyPosts %}
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
@@ -62,23 +58,22 @@
         {% include "partials/postitemdetail.njk" %}
       {% endfor %}
       </div>
-    </details>
+    </div>
+
+    <nav>
+      <ol role="list" class="pagination">
+        {%- if pagination.href.next %}<li><a href="{{ pagination.href.next }}" class="button"><svg width="20" height="20"
+            viewBox="0 0 24 24" aria-hidden="true">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg> {{ current_year - 1 }}</a></li>
+        {% endif %}
+        {%- if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}" class="button">{{ current_year + 1 }} <svg width="20" height="20"
+            viewBox="0 0 24 24" aria-hidden="true">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg></a></li>
+        {% endif %}
+      </ol>
+    </nav>
   </div>
 </div>
-
-<nav>
-  <ol role="list" class="pagination">
-    {%- if pagination.href.next %}<li><a href="{{ pagination.href.next }}" class="button"><svg width="20" height="20"
-        viewBox="0 0 24 24" aria-hidden="true">
-        <use xlink:href="#icon-arrow-left"></use>
-      </svg> {{ current_year - 1 }}</a></li>
-    {% endif %}
-    {%- if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}" class="button">{{ current_year + 1 }} <svg width="20" height="20"
-        viewBox="0 0 24 24" aria-hidden="true">
-        <use xlink:href="#icon-arrow-right"></use>
-      </svg></a></li>
-    {% endif %}
-  </ol>
-</nav>
-
 {% include "partials/releasepopovers.njk" %}
