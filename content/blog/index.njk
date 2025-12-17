@@ -5,10 +5,8 @@ description: "These are the blog archives of The 11ty Bundle"
 keywords: blog, 11ty, 11ty Bundle
 eleventyComputed:
     permalink: /{{ page.fileSlug }}/
+channelsPage: true
 ---
-{% css %}
-{% include "public/css/blog.css" %}
-{% endcss %}
 {% include "partials/blog-header.njk" %}
 <div class="section" data-pagefind-ignore="all">
   <div class="container">

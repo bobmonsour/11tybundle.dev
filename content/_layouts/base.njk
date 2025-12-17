@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +8,45 @@
 	<meta name="keywords" content="{{ keywords }}">
 	<meta name="view-transition" content="same-origin" >
 
+  {# Critical: Set theme before any rendering to prevent FOUC #}
+  <script>
+    {% include "public/js/theme.js" %}
+  </script>
+
   <link rel="preload" href="/fonts/NimbusMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
 
-  {# bundle the css files #}
-  {% css %}
-  {% include "public/css/fonts.css" %}
-  {% include "public/css/variables.css" %}
-  {% include "public/css/reset.css" %}
-  {% include "public/css/global.css" %}
-  {% include "public/css/site-header.css" %}
-  {% include "public/css/site-footer.css" %}
-  {% include "public/css/pagefind.css" %}
-  {# include prism CSS on blog posts that have code #}
-  {% if pageHasCode %}
-    {% include "public/css/prism-okaidia.css" %}
-  {% endif %}
-  {# include lite-youtube-embed CSS on blog posts that have a YouTube ID #}
-  {% if youtubeId %}
-    {% include "public/css/lite-yt-embed.css" %}
-  {% endif %}
+  {# bundle the global css files #}
+  {% css "global" %}
+    {% include "public/css/fonts.css" %}
+    {% include "public/css/variables.css" %}
+    {% include "public/css/reset.css" %}
+    {% include "public/css/global.css" %}
+    {% include "public/css/site-header.css" %}
+    {% include "public/css/site-footer.css" %}
+    {% include "public/css/pagefind.css" %}
+    {% include "public/css/home.css" %}
   {% endcss %}
-  {# <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
-  <link rel="preload" href="{% getBundleFileUrl "css" %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{% getBundleFileUrl "css" %}"></noscript>
+  {# Load the global css file (blocking to prevent FOUC) #}
+  <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'global' %}">
+
+  {# bundle the channel-related css files #}
+  {% css "channel" %}
+    {% include "public/css/channels.css" %}
+    {% include "public/css/showcase.css" %}
+    {% include "public/css/blog.css" %}
+    {% include "public/css/prism-okaidia.css" %}
+    {% include "public/css/lite-yt-embed.css" %}
+    {% include "public/css/404.css" %}
+  {% endcss %}
+
+  {# conditionally preload the channel-related css file #}
+  {% if channelsPage %}
+    <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
+  {%endif %}
 
   {# Fathom analytics - don't include in development mode #}
 	{% if site.env != "development" %}
@@ -42,13 +54,15 @@
 	{% endif %}
   {# load the bundles js files #}
     {% js %}
-  {% include "public/js/theme.js" %}
   {% include "public/js/toggle.js" %}
   {% include "public/js/scrollToTop.js" %}
   {% include "public/js/pagefind-ui.js" %}
   {% include "public/js/pagefind-highlight.js" %}
   {% include "public/js/resulthighlight.js" %}
   {% include "public/js/search.js" %}
+  {% include "public/js/skiplinks.js" %}
+  {% include "public/js/popovers.js" %}
+
   {# include prism js on blog posts that have code #}
   {% if pageHasCode %}
     {% include "public/js/prism.min.js" %}

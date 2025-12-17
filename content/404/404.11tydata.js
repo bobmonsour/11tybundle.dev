@@ -5,4 +5,5 @@ export default {
     month: () => DateTime.now().toFormat("LLL").toUpperCase(),
     day: () => DateTime.now().toFormat("dd"),
   },
+  channelsPage: true,
 };
