@@ -43,6 +43,7 @@ permalink: /authors/
 {% set currentAuthor = ""%}
 
 {% for author in bundledata.authors %}
+  {% set cardCount = loop.index %}
   {% if (author.firstLetter !== currentLetter) and (currentLetter !== "") %}
     </div>
     </section>
@@ -55,8 +56,8 @@ permalink: /authors/
   {% endif %}
     {% set currentLetter = author.firstLetter %}
     <article class="directory__card directory--category">
-      {% set authorUrl %}/authors/{{ author.slugifiedName }}/{% endset %}
-      <h3>{{ author.favicon | safe }}<a href="/authors/{{ author.slugifiedName }}">{{author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
+      {# {{ author.favicon | log }} #}
+      <h3>{{ author.favicon | genFaviconHtml(cardCount) | safe }}<a href="/authors/{{ author.slugifiedName }}">{{author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
       <ol role="list" class="directory--list">
         {% for item in bundledata.firehose | postsByAuthor(author.name, 3) %}
           <li><a href="{{ item.Link }}">{{ item.Title }}</a>

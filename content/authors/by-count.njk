@@ -22,7 +22,8 @@ permalink: /authors-by-count/
       {% for author in bundledata.authorsByCount %}
       <article class="directory__card directory--category">
       {% set latestPosts = bundledata.authors | postsByAuthor(author.name, 3) %}
-        <h3>{{ author.favicon | safe }}<a href="/authors/{{ author.slugifiedName }}">{{ author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
+        {% set cardCount = loop.index %}
+        <h3>{{ author.favicon | genFaviconHtml(cardCount) | safe }}<a href="/authors/{{ author.slugifiedName }}">{{ author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
         <ol role="list" class="directory--list">
           {% for item in bundledata.firehose | postsByAuthor(author.name, 3) %}
             <li><a href="{{ item.Link }}">{{ item.Title }}</a>

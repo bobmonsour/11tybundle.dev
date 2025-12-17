@@ -58,6 +58,7 @@
       {% for item in yearlyPosts %}
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
         {% set authorIcons = authorRecord.origin | getAuthorIcons %}
+        {% set cardCount = loop.index %}
         {% include "partials/postitemdetail.njk" %}
       {% endfor %}
       </div>

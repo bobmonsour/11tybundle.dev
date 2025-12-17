@@ -33,7 +33,7 @@ templateEngineOverride: njk,md
         {% else %}
 	      {%- for item in releases %}
           <div class="directory__card directory--detail">
-            <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-github"></use>
             </svg>
             <a href="{{ item.Link }}">{{ item.Title }}</a>
@@ -52,7 +52,7 @@ templateEngineOverride: njk,md
       <div class="directory__grid">
         {%- for item in posts %}
           <div class="directory__card directory--detail">
-            {{ item.favicon | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
+            {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
               <time datetime="{{ item.Date | formatYMD}}">{{ item.formattedDate }}</time>
               {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
@@ -78,7 +78,7 @@ templateEngineOverride: njk,md
       <div class="directory__grid">
         {%- for item in sites %}
           <div class="directory__card directory--detail">
-            {{ item.favicon | safe}}<a href="{{ item.Link }}">{{ item.Title }}</a>
+            {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
               <p>{{ item.description | safe }}</p>
               <ul role="list" class="author-links">
@@ -96,11 +96,11 @@ templateEngineOverride: njk,md
       {%- if nextPost or previousPost %}
         <ol role="list" class="pagination">
           {%- if previousPost %}<li><a href="{{ previousPost.url }}" class="button"><svg width="20" height="20"
-              viewBox="0 0 24 24" aria-hidden="true">
+              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-left"></use>
             </svg> Issue {{ bundleIssue - 1 }}</a></li>{% endif %}
           {%- if nextPost %}<li><a href="{{ nextPost.url }}" class="button"> Issue {{ bundleIssue + 1 }}<svg width="20" height="20"
-              viewBox="0 0 24 24" aria-hidden="true">
+              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-right"></use>
             </svg></a></li>{% endif %}
         </ol>

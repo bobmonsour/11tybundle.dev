@@ -9,6 +9,7 @@ import {
 } from "./datesandnumbers.js";
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
+import { genFaviconHtml } from "./genfaviconhtml.js";
 import { getFavicon } from "./getfavicon.js";
 import { getIssueCounts } from "./getissuecounts.js";
 import { getOrigin, getHostname } from "./getorigin.js";
@@ -34,6 +35,7 @@ export const filters = {
   getBundleItems,
   getDescription,
   getFavicon,
+  genFaviconHtml,
   getIssueCounts,
   getOrigin,
   getHostname,

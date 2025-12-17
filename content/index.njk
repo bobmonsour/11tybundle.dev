@@ -15,7 +15,7 @@ issue: 80
           newsletter</a> for email updates.</p>
     </div>
     <article class="latest-blog">
-      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml" aria-label="RSS feed for the blog of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <h2 class="h3">Latest from the blog&nbsp;&nbsp;<a href="/feed.xml" aria-label="RSS feed for the blog of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-rss"></use>
           </svg> <span class="visually-hidden">RSS</span></a></h2>
       {%- set post = collections.post | last -%}
@@ -27,7 +27,7 @@ issue: 80
         <p><a href="{{ post.url }}">{{ post.data.title }}</a></p>
         {% set counts = post.data.bundleIssue | getIssueCounts %}
         <p class="meta"><time datetime="{{ post.date | formatYMD }}">{{ post.date | formatItemDate }}</time>{% if counts.releaseCount > 0 %} &middot; {{ counts.releaseCount | countLabel("release")}}{% endif %} &middot; {{ counts.postCount | countLabel("post")}} &middot; {{ counts.siteCount | countLabel("site")}}</p>
-        <a href="/blog/" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <a href="/blog/" class="button">View all issues <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-arrow-right"></use>
           </svg></a>
       </div>
@@ -44,7 +44,7 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
             <li class="feeds__item">
-              {{ item.favicon | safe }}
+              {{ item.favicon | genFaviconHtml(10) | safe }}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
               <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             </li>
@@ -52,14 +52,14 @@ issue: 80
         </ol>
       </article>
       <article class="feeds__section">
-        <h2 class="h3">Recent sites <a href="/sitesfeed.xml" aria-label="RSS feed for the Sites of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <h2 class="h3">Recent sites <a href="/sitesfeed.xml" aria-label="RSS feed for the Sites of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-rss"></use>
           </svg></a></h2>
         {%- set recent = bundledata.siteList.slice(0,11) -%}
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
             <li class="feeds__item">
-              {{ item.favicon | safe}}
+              {{ item.favicon | genFaviconHtml(10) | safe }}
               <a href="{{ item.Link }}">{{ item.Title }}</a>
               <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             </li>
@@ -74,7 +74,7 @@ issue: 80
         <ol role="list" class="feeds__list">
           {%- for item in recent -%}
           <li class="feeds__item">
-            <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-github"></use>
             </svg>
             <a href="{{ item.Link }}">{{ item.Title }}</a>
@@ -91,7 +91,7 @@ issue: 80
     <div class="recent-starters">
       {%- for item in bundledata.starters.slice(0,3) %}
       <div class="recent-starters__item">
-        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-github"></use>
             </svg>
         <div class="details">
@@ -117,7 +117,7 @@ issue: 80
     <div class="recent-authors">
       {%- for item in bundledata.recentAuthors %}
       <div class="recent-authors__item">
-        {{ item.favicon | safe}}
+        {{ item.favicon | genFaviconHtml(10) | safe }}
         <div class="details">
           <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>

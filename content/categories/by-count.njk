@@ -23,9 +23,11 @@ permalink: /categories-by-count/
       <article class="directory__card directory--category">
         <h3><a href="/categories/{{ category.slugifiedCategory }}/">{{ category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
         <ol role="list" class="directory--list">
+          {% set cardCount = loop.index %}
+          {# {{ category.name | log }} #}
           {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
-            {% set authorUrl %}/authors/{{ item.Author | slugify }}/{% endset %}
-            <li>{{ item.favicon | safe }}
+            <li>
+            {# {{ item.favicon | genFaviconHtml(cardCount) | safe }} #}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
             <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time></li>
           {% endfor %}

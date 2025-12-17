@@ -1,5 +1,4 @@
 import Fetch from "@11ty/eleventy-fetch";
-import * as cheerio from "cheerio";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
@@ -87,21 +86,20 @@ const logResize = async (origin, originalWidth, originalHeight, operation) => {
 
 //***************
 // Given the path to the favicon as saved in the output directory, generate and
-// return the html img element to use in the site.
+// return a favicon reference for use in a filter that generates the html.
 //***************
-const genFaviconImg = async (faviconPath, type) => {
-  let imgElement;
+const genFaviconReference = async (faviconPath, type) => {
+  let faviconReference;
 
-  // use person favicon svg for default favicon
+  // default site icon is a globe, default author icon is a person
   if (faviconPath === defaultFaviconPath) {
-    const whichIcon = type === "site" ? "icon-globe" : "icon-person-circle";
-    imgElement = `<svg viewBox="0 0 24 24" aria-hidden="true" class="favicon"><use xlink:href="#${whichIcon}"></use></svg>`;
+    faviconReference = type === "site" ? "#icon-globe" : "#icon-person-circle";
 
-    // use the resolved favicon path for the site/user
+    // use the resolved favicon path for the site/author
   } else {
-    imgElement = `<img src="${faviconPath}" alt="favicon for the site" class="favicon" width="${targetSize}" height="${targetSize}" eleventy:ignore></img>`;
+    faviconReference = faviconPath;
   }
-  return imgElement;
+  return faviconReference;
 };
 
 //***************
@@ -237,9 +235,7 @@ export const getFavicon = async (link, type) => {
   // Special case for when author has only 1 post and
   // it's a YouTube link, resulting in input 'link' being null
   if (link && link.includes("youtube.com")) {
-    return `<svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-            <use xlink:href="#icon-youtube"></use>
-            </svg>`;
+    return "#icon-youtube";
   }
 
   // Extract the origin from the full URL
@@ -250,7 +246,7 @@ export const getFavicon = async (link, type) => {
 
   // check if the favicon for this origin is already cached
   if (faviconCache[origin]) {
-    return await genFaviconImg(faviconCache[origin], type);
+    return await genFaviconReference(faviconCache[origin], type);
   }
 
   // Fetch favicon from Google and save it locally
@@ -260,5 +256,5 @@ export const getFavicon = async (link, type) => {
   faviconCache[origin] = faviconPath;
 
   // return the html img element using the local favicon path
-  return await genFaviconImg(faviconPath, type);
+  return await genFaviconReference(faviconPath, type);
 };

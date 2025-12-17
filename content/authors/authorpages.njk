@@ -15,7 +15,7 @@
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
-    {{ author.favicon | safe }}<h1 data-pagefind-weight={{ pfweights.authorByName }}>{{ author.name }} <data class="count" value="{{ author.count }}">{{ author.count | countLabel('post')}}</data></h1>
+    {{ author.favicon | genFaviconHtml(1) | safe }}<h1 data-pagefind-weight={{ pfweights.authorByName }}>{{ author.name }} <data class="count" value="{{ author.count }}">{{ author.count | countLabel('post')}}</data></h1>
     <p class="visually-hidden" data-pagefind-meta="title">Author: {{ author.name | upper }}  ({{ author.count | countLabel('post') }})</p>
     <div class="details">
       <p data-pagefind-ignore data-pagefind-meta="description">{{ author.description | safe }}</p>
