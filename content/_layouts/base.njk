@@ -48,10 +48,8 @@
     <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
   {%endif %}
 
-  {# Fathom analytics - don't include in development mode #}
-	{% if site.env != "development" %}
-		<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
-	{% endif %}
+	<script src="https://cdn.usefathom.com/script.js" data-site="GOQNUYQW" defer></script>
+
   {# load the bundles js files #}
     {% js %}
   {% include "public/js/toggle.js" %}
@@ -91,8 +89,8 @@
 	<meta property="og:description" content="{{ description }}">
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{ site.url }}/img/{{ image.source }}">
-	<meta property="og:image:alt" content="{{ image.alt }}">
+	<meta property="og:image" content="/img/opengraph-image.jpg">
+	<meta property="og:image:alt" content="a cute illustration of the 11ty Bundle websiet">
 
   {# Apple tags #}
 	<meta name="apple-mobile-web-app-title" content="11ty Bundle" >

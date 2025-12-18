@@ -6,7 +6,7 @@ export default {
   subtitle: "Bundles of 11ty know-how",
   description:
     "Welcome to the 11ty Bundle—your curated source for discovering how the community is using 11ty, a simple, flexible, open-source static site generator.",
-  url: "https://redesign.bob-monsour.workers.dev/",
+  url: "https://redesign.bob-monsour.workers.dev",
   language: "en",
   locale: "en",
   author: {
