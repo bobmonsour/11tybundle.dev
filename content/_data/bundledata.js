@@ -545,9 +545,12 @@ export default async function () {
           existing.count += 1;
         } else {
           categoryMap.set(category, {
-            slugifiedCategory: slugifyPackage(category, {
-              lower: true,
-            }),
+            slugifiedCategory: slugifyPackage(
+              category.replace(/[.,;:!?]+$/, ""),
+              {
+                lower: true,
+              }
+            ),
             count: 1,
             firstLetter: category.charAt(0),
           });
