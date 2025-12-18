@@ -38,7 +38,8 @@ Redesigned the website to make it even easier to discover how the community is u
 
 Here's what we've done:
 
-- A new Showcase section featuring screenshots of sites built with Eleventy, and an Author spotlight on the homepage highlighting voices from across the community.
+- ~~A new Showcase section featuring screenshots of sites built with Eleventy~~ Not quite ready!
+- An Author spotlight on the homepage highlighting voices from across the community.
 - Dates appear alongside external links to show how recent the content is—especially on pages we know from feedback are used for reference and learning.
 - More detailed author profiles include descriptions, favicons, and social links.
 - Refreshed look and feel reinforcing the almanac/reference nature of the site while staying true to the original familiar design. A new logo featuring [Andy Carolan's](https://www.andycarolan.com/) wonderful illustration. Improved layout—especially for small screens—added dark and light mode support, and introduced colour-coding across the main sections.
