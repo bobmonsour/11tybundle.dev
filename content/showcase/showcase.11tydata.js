@@ -1,5 +1,5 @@
 export default {
-  layout: "section.njk",
+  layout: "base.njk",
   bodyClass: "showcase",
   channelsPage: true,
 };

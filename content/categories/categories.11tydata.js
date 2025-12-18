@@ -1,4 +1,5 @@
 export default {
-  layout: "section.njk",
+  layout: "base.njk",
   bodyClass: "categories",
+  channelsPage: true,
 };

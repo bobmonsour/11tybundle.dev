@@ -23,14 +23,14 @@
     {% include "public/css/fonts.css" %}
     {% include "public/css/variables.css" %}
     {% include "public/css/reset.css" %}
+    {% include "public/css/home.css" %}
     {% include "public/css/global.css" %}
     {% include "public/css/site-header.css" %}
     {% include "public/css/site-footer.css" %}
     {% include "public/css/pagefind.css" %}
-    {% include "public/css/home.css" %}
   {% endcss %}
 
-  {# Load the global css file (blocking to prevent FOUC) #}
+  {# load the global css file for all pages #}
   <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'global' %}">
 
   {# bundle the channel-related css files #}
@@ -43,7 +43,7 @@
     {% include "public/css/404.css" %}
   {% endcss %}
 
-  {# conditionally preload the channel-related css file #}
+  {# conditionally load the channel-related css file #}
   {% if channelsPage %}
     <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
   {%endif %}
