@@ -139,21 +139,9 @@ export default async function () {
     }
   }
 
-  // helper function to check if a link is a Youtube link
-  const isYoutubeLink = (link) => {
-    const origin = filters.getOrigin(link);
-    return (
-      origin === "https://www.youtube.com" || origin === "https://youtube.com"
-    );
-  };
-
-  // Pre-compute YouTube status and create rawFirehose
+  // Create rawFirehose with all blog posts
   const rawFirehose = bundleRecords
     .filter((item) => item["Type"] === "blog post" && !item["Skip"])
-    .map((item) => ({
-      ...item,
-      isYoutube: isYoutubeLink(item.Link), // Pre-compute YouTube status
-    }))
     .sort((a, b) => new Date(b.Date) - new Date(a.Date));
 
   // enrich each post in the firehose with:
@@ -165,6 +153,7 @@ export default async function () {
   const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
     const results = [];
     for (const post of rawFirehoseData) {
+      const origin = post.AuthorSite || appliedFilters.getOrigin(post.Link);
       results.push({
         ...post,
         slugifiedTitle: slugifyPackage(post.Title, {
@@ -177,8 +166,7 @@ export default async function () {
         }),
         description: await appliedFilters.getDescription(post.Link),
         formattedDate: await appliedFilters.formatItemDate(post.Date),
-        // isYoutube is already on the post object from rawFirehose
-        // author's favicon gets added later, after authors array is built
+        favicon: await appliedFilters.getFavicon(origin, "post"),
       });
     }
     return results;
@@ -362,23 +350,11 @@ export default async function () {
       if (item.Skip) continue;
 
       const existing = authorMap.get(item.Author);
-      const origin = filters.getOrigin(item.Link);
-      // console.log(`Processing author: ${item.Author}, origin: ${origin}`);
-      const isYoutube = item.isYoutube; // Use pre-computed YouTube status
+      const origin = item.AuthorSite || filters.getOrigin(item.Link);
 
       if (existing) {
         // Author exists, increment count
         existing.count += 1;
-
-        // If we don't have origin data yet (was Youtube before), capture it now
-        if (!existing.origin && !isYoutube) {
-          existing.origin = origin;
-          existing.description = await filters.getDescription(origin);
-          existing.favicon = await filters.getFavicon(item.Link, "post");
-          existing.rssLink = await filters.getRSSLink(origin);
-          existing.socialLinks = await filters.getSocialLinks(item.Link);
-          existing.nonYoutubePostLink = item.Link;
-        }
       } else {
         // New author - create entry
         authorMap.set(item.Author, {
@@ -389,14 +365,11 @@ export default async function () {
           }),
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
-          origin: isYoutube ? null : origin,
-          description: isYoutube ? null : await filters.getDescription(origin),
-          favicon: await filters.getFavicon(item.Link, "post"),
-          rssLink: isYoutube ? null : await filters.getRSSLink(origin),
-          socialLinks: isYoutube
-            ? null
-            : await filters.getSocialLinks(item.Link),
-          nonYoutubePostLink: isYoutube ? null : item.Link,
+          origin: origin,
+          description: await filters.getDescription(origin),
+          favicon: await filters.getFavicon(origin, "post"),
+          rssLink: await filters.getRSSLink(origin),
+          socialLinks: await filters.getSocialLinks(origin),
         });
       }
     }
@@ -412,7 +385,6 @@ export default async function () {
       favicon: data.favicon,
       rssLink: data.rssLink,
       socialLinks: data.socialLinks,
-      nonYoutubePostLink: data.nonYoutubePostLink,
     }));
 
     return authorArray.sort(authorSort);
@@ -458,8 +430,6 @@ export default async function () {
     const seenAuthors = new Set();
 
     for (const post of firehoseData) {
-      if (post.isYoutube) continue;
-
       if (!seenAuthors.has(post.Author)) {
         uniqueAuthorPosts.push(post);
         seenAuthors.add(post.Author);
@@ -482,22 +452,6 @@ export default async function () {
   };
 
   let recentAuthors = getRecentAuthors(firehose, authors);
-  // console.log("Authors: " + JSON.stringify(recentAuthors, null, 2));
-  // **************
-  // Now that the firehose and author arrays are built, we
-  // need to add the author's favicon to each post in the
-  // firehose. This takes care of the issue of Youtube links
-  // not having favicons.
-  // **************
-  // Create Map once before the loop
-  const authorsByName = new Map(authors.map((author) => [author.name, author]));
-
-  for (let post of firehose) {
-    const authorRecord = authorsByName.get(post.Author); // O(1) lookup
-    if (authorRecord && authorRecord.favicon) {
-      post.favicon = authorRecord.favicon;
-    }
-  }
 
   // generate pagedFirehose, an array of arrays, each inner array
   // this is for paginating the firehose page by year
