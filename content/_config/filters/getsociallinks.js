@@ -39,6 +39,11 @@ const isMastodon = (u) =>
   !u.hostname.endsWith("linkedin.com") &&
   !u.hostname.includes("bsky") &&
   !u.hostname.includes("youtube") &&
+  !u.hostname.includes("discord") &&
+  !u.hostname.includes("roblox") &&
+  !u.hostname.includes("stackoverflow") &&
+  !u.hostname.includes("vimeo") &&
+  !u.hostname.includes("discourse") &&
   !u.hostname.includes("x") &&
   !u.hostname.includes("twitter");
 

@@ -48,7 +48,10 @@
     <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
   {%endif %}
 
-	<script src="https://cdn.usefathom.com/script.js" data-site="GOQNUYQW" defer></script>
+  {# Fathom Analytics - only load in production #}
+  {% if site.env === "production" %}
+	  <script src="https://cdn.usefathom.com/script.js" data-site="GOQNUYQW" defer></script>
+  {% endif %}
 
   {# load the bundles js files #}
     {% js %}
