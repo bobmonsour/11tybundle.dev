@@ -96,6 +96,7 @@ issue: 80
             </svg>
         <div class="details">
           <a href="{{ item.Link }}">{{ item.Title }}</a>
+          <p class="bundleitem-description">{{ item.Description | safe }}</p>
           <ul role="list">
             <li>Updated: <time datetime="{{ item.Date | formatYMD }}">{{ item.LastUpdated | formatItemDate }}</time></li>
             <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
