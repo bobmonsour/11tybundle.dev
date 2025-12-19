@@ -41,23 +41,32 @@ const octokit = new Octokit({
 // main function to generate and return the bundle data
 export default async function () {
   // **************
-  //   *** FULL DATASET, FETCHED FROM REMOTE REPO***
+  // Conditionally load data based on environment
+  // Set ELEVENTY_ENV=development for local data
+  // Set ELEVENTY_ENV=production for remote fetch
   // **************
-  //
-  // COMMENT OUT THE FOLLOWING LINES TO USE THE *LOCAL* DATA SET
-  // AND UNCOMMENT THE IMPORT UNDER THE LOCAL TEST DATA SECTION ABOVE
-  //
-  // **************
-  const BUNDLEDB_URL =
-    "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-  // Fetch the json db from its remote repo
-  const bundleRecords = await Fetch(BUNDLEDB_URL, {
-    duration: cacheDuration.bundleDB,
-    type: "json",
-    fetchOptions: {
-      signal: AbortSignal.timeout(fetchTimeout.bundleDB),
-    },
-  });
+  let bundleRecords;
+
+  if (process.env.ELEVENTY_ENV === "production") {
+    // Production: Fetch from remote GitHub repo
+    const BUNDLEDB_URL =
+      "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
+    bundleRecords = await Fetch(BUNDLEDB_URL, {
+      duration: cacheDuration.bundleDB,
+      type: "json",
+      fetchOptions: {
+        signal: AbortSignal.timeout(fetchTimeout.bundleDB),
+      },
+    });
+    console.log("Loaded remote bundleDB (production mode)");
+  } else {
+    // Development: Load from local file in sibling directory
+    const localData = await import("../../../11tybundledb/bundledb.json", {
+      with: { type: "json" },
+    });
+    bundleRecords = localData.default;
+    console.log("Loaded local bundleDB (development mode)");
+  }
   // **************
 
   // Create a smaller test data file
@@ -221,7 +230,6 @@ export default async function () {
         description: await appliedFilters.getDescription(site.Link),
         favicon: await appliedFilters.getFavicon(site.Link, "site"),
         formattedDate: await appliedFilters.formatItemDate(site.Date),
-        socialLinks: await appliedFilters.getSocialLinks(site.Link),
       });
     }
     return results;

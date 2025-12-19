@@ -79,9 +79,9 @@ channelsPage: true
             {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
               <p>{{ item.description | safe }}</p>
-              <ul role="list" class="author-links">
+              {# <ul role="list" class="author-links">
                 {{ item.Link | getAuthorIcons | safe }}
-              </ul>
+              </ul> #}
             </div>
           </div>
         {%- endfor -%}
