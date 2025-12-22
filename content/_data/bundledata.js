@@ -149,7 +149,7 @@ export default async function () {
   //  - the slugified author name
   //  - post description
   //  - formatted date
-  //  - author's favicon gets added later, after authors array is built
+  //  - favicon of the author's site
   const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
     const results = [];
     for (const post of rawFirehoseData) {
