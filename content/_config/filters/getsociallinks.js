@@ -1,8 +1,8 @@
-import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
+import fetchHtml from "./fetchhtml.js";
 
-import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
+import { cacheDuration } from "../../_data/cacheconfig.js";
 
 // Track origins that have failed to return social links in this session
 const failedOriginsThisSession = new Set();
@@ -309,19 +309,8 @@ export async function getSocialLinks(link) {
   // Fetch and process each page for social links
   for (const pageUrl of pagesToCheck) {
     try {
-      // Fetch the HTML content with caching
-      const html = await Fetch(pageUrl, {
-        duration: cacheDuration.socialHtml, // Cache HTML
-        type: "text",
-        fetchOptions: {
-          signal: AbortSignal.timeout(fetchTimeout.socialHtml),
-          headers: {
-            // Use a standard user agent to avoid being blocked
-            "user-agent":
-              "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
-          },
-        },
-      });
+      // Fetch the HTML content with persistent failure caching
+      const html = await fetchHtml(pageUrl, "socialHtml");
 
       // Extract social links from this page's HTML
       const pageResults = extractSocialLinksFromHtml(html, origin);

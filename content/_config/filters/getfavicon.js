@@ -35,7 +35,7 @@ let faviconCache = {};
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const failureCachePath = path.join(
   __dirname,
-  "../../../.cache/favicons/favicon-failures.json"
+  "../../../.cache/errorlogs/favicon-failures.json"
 );
 const resizeLogPath = path.join(__dirname, "../../../log/resized-files.md");
 let failureCache = {};

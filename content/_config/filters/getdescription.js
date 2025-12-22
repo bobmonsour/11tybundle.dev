@@ -1,82 +1,23 @@
-// Get the array of exceptions, meaning the array of URLs that will
-// not have their descriptions fetched due to errors.
-import exceptionList from "../../_data/exception-list.json" with { type: "json" };
-
-import Fetch from "@11ty/eleventy-fetch";
+import fetchHtml from "./fetchhtml.js";
 import * as cheerio from "cheerio";
-
-import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
-
-let descriptionCache = {};
 
 //***************
 // given a url, this filter extracts the meta
 // description from within the <head> element of a web page
 // using the cheerio library.
-//
-// The full html content of the page is fetched using the
-// eleventy-fetch plugin.
-// If you have a lot of links from which you want to extract
-// descriptions, the
-// initial build time will be slow. However, the plugin will
-// cache the content for a duration of your choosing
-// (in this case, it's set to *, which will never fetch new
-// data after the first success).
-//
-// The description is extracted from the <meta> element with
-// the name attribute of "description".
-//
-// If no description is found, the filter returns an empty string.
-// In the event of an error, the filter logs an error to the
-// console and returns the string "(no description available)"
-//
-// Note that I have a .cache folder in my project root and
-// added .cache to my .gitignore file.
-// See https://www.11ty.dev/docs/plugins/fetch/#installation
 //***************
 
 export const getDescription = async (link) => {
-  // Check if the description is in the cache
-  if (descriptionCache[link]) {
-    return descriptionCache[link];
-  }
   if (link.includes("youtube.com")) {
-    descriptionCache[link] = "YouTube video";
-    return descriptionCache[link];
-  }
-
-  // Check for known urls that have issues when fetching
-  // the description (as seen in the build logs).
-  // See _data/exception-list.json for the list of exceptions.
-  const url = new URL(link);
-  const siteUrl = url.origin;
-  if (
-    exceptionList.some(
-      (item) => item.url === siteUrl && item.descriptionFail === "true"
-    )
-  ) {
-    // console.log("Description exception: " + siteUrl);
-    descriptionCache[link] = "";
-    return descriptionCache[link];
+    return "YouTube video";
   }
 
   try {
-    let htmlcontent = await Fetch(link, {
-      directory: ".cache",
-      duration: cacheDuration.descHtml,
-      type: "buffer",
-      fetchOptions: {
-        signal: AbortSignal.timeout(fetchTimeout.descHtml),
-        headers: {
-          "user-agent":
-            "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
-        },
-      },
-    });
+    let htmlcontent = await fetchHtml(link, "descHtml");
     const $ = cheerio.load(htmlcontent);
     let description = $("meta[name=description]").attr("content");
     if (description == undefined) {
-      descriptionCache[link] = "";
+      return "";
     } else {
       let text = description
         .replace(/[<>]/g, "") // Remove angle brackets
@@ -96,17 +37,19 @@ export const getDescription = async (link) => {
         .trim()
         .substring(0, 300); // Reasonable length limit for descriptions
 
-        // looking for markdown links
-        // fast bail-out if no opening bracket present
-        if (!text.includes("[")) {
-          description = text;
-        } else {
-          // Regex: [link text](url) → <a href="url">link text</a>
-          description = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-        };
+      // looking for markdown links
+      // fast bail-out if no opening bracket present
+      if (!text.includes("[")) {
+        description = text;
+      } else {
+        // Regex: [link text](url) → <a href="url">link text</a>
+        description = text.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          '<a href="$2">$1</a>'
+        );
+      }
     }
-    descriptionCache[link] = description;
-    return descriptionCache[link];
+    return description;
   } catch (e) {
     // console.log("Error fetching description for " + link + " " + e.message);
     console.log("Error fetching description for " + link + " " + e.message);
