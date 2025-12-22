@@ -14,6 +14,7 @@ export const cacheDuration = {
   aiSummaryHtml: "1y",
   bundleDB: "0s",
   descHtml: "1y",
+  faviconHtml: "1y",
   faviconImage: "1y",
   rssLinkHtml: "1y",
   socialHtml: "1y",
@@ -25,6 +26,7 @@ export const cacheDuration = {
 export const fetchTimeout = {
   bundleDB: 5000, // 5 seconds
   descHtml: 5000, // 5 seconds
+  faviconHtml: 3000, // 3 seconds
   faviconImage: 3000, // 3 seconds
   faviconExtension: 1000, // 1 second
   rssLinkHtml: 3000, // 3 seconds

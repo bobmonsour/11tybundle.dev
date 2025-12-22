@@ -1,9 +1,12 @@
 import Fetch from "@11ty/eleventy-fetch";
+import { AssetCache } from "@11ty/eleventy-fetch";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
 import slugifyPackage from "slugify";
 import sharp from "sharp";
+import { fetchHtml } from "./fetchhtml.js";
+import * as cheerio from "cheerio";
 
 // --- Configuration ---
 import { cacheDuration, fetchTimeout } from "../../_data/cacheconfig.js";
@@ -101,6 +104,65 @@ const logResize = async (origin, originalWidth, originalHeight, operation) => {
 };
 
 //***************
+// Extract the best favicon URL from HTML content
+// Priority: SVG > PNG > Apple Touch Icon > Icon > Shortcut Icon > /favicon.ico
+//***************
+const extractFaviconFromHtml = ($, origin) => {
+  // Priority 1: SVG favicon (scalable, best quality)
+  let faviconHref = $('link[rel="icon"][type="image/svg+xml"]').attr("href");
+
+  // Priority 2: PNG favicon (prefer larger sizes)
+  if (!faviconHref) {
+    const pngIcons = $('link[rel="icon"][type="image/png"]');
+    if (pngIcons.length > 0) {
+      // Try to find 64x64 or larger
+      pngIcons.each((_, el) => {
+        const sizes = $(el).attr("sizes");
+        if (sizes && (sizes.includes("64x64") || sizes.includes("96x96"))) {
+          faviconHref = $(el).attr("href");
+          return false; // break
+        }
+      });
+      // If no preferred size, use first PNG
+      if (!faviconHref) {
+        faviconHref = pngIcons.first().attr("href");
+      }
+    }
+  }
+
+  // Priority 3: Apple touch icon (usually high-res)
+  if (!faviconHref) {
+    faviconHref = $('link[rel="apple-touch-icon"]').first().attr("href");
+  }
+
+  // Priority 4: Generic icon
+  if (!faviconHref) {
+    faviconHref = $('link[rel="icon"]').first().attr("href");
+  }
+
+  // Priority 5: Legacy shortcut icon
+  if (!faviconHref) {
+    faviconHref = $('link[rel="shortcut icon"]').first().attr("href");
+  }
+
+  // Convert relative URLs to absolute
+  if (faviconHref) {
+    if (faviconHref.startsWith("http")) {
+      return faviconHref;
+    } else if (faviconHref.startsWith("//")) {
+      return "https:" + faviconHref;
+    } else if (faviconHref.startsWith("/")) {
+      return origin + faviconHref;
+    } else {
+      return origin + "/" + faviconHref;
+    }
+  }
+
+  // Priority 6: Try default /favicon.ico location
+  return origin + "/favicon.ico";
+};
+
+//***************
 // Given the path to the favicon as saved in the output directory, generate and
 // return a favicon reference for use in a filter that generates the html.
 //***************
@@ -131,6 +193,56 @@ const fetchAndSaveFavicon = async (origin, domain) => {
       return defaultFaviconPath;
     }
     // If 30+ days old, we'll retry (continue to fetch below)
+  }
+
+  // Check if we have a cached, processed favicon
+  const cacheKey = `processed-favicon-${domain}`;
+  const cache = new AssetCache(cacheKey, ".cache");
+
+  if (cache.isCacheValid(cacheDuration.faviconImage)) {
+    const cachedData = await cache.getCachedValue();
+    if (cachedData && cachedData.cachedFilePath && cachedData.localPath) {
+      try {
+        // Verify cached file still exists and is valid
+        const cachedFileExists = await fs
+          .access(cachedData.cachedFilePath)
+          .then(() => true)
+          .catch(() => false);
+
+        if (cachedFileExists) {
+          // Copy cached file to _site directory
+          const __dirname = path.dirname(fileURLToPath(import.meta.url));
+          const outputPath = path.join(
+            __dirname,
+            "../../../_site",
+            cachedData.localPath
+          );
+          await fs.mkdir(path.dirname(outputPath), { recursive: true });
+          await fs.copyFile(cachedData.cachedFilePath, outputPath);
+
+          // Validate it's still a valid image (skip for SVG)
+          if (cachedData.extension !== ".svg") {
+            try {
+              await sharp(outputPath).metadata();
+              // Valid cached image, use it
+              return cachedData.localPath;
+            } catch (validationError) {
+              console.error(
+                `Cached favicon invalid for ${origin}, will re-fetch`
+              );
+              await fs.unlink(outputPath).catch(() => {});
+            }
+          } else {
+            // SVG, no validation needed
+            return cachedData.localPath;
+          }
+        }
+      } catch (cacheError) {
+        console.error(
+          `Error using cached favicon for ${origin}: ${cacheError.message}`
+        );
+      }
+    }
   }
 
   const faviconUrl = `https://www.google.com/s2/favicons?domain=${origin}&sz=${fetchSize}`;
@@ -233,20 +345,211 @@ const fetchAndSaveFavicon = async (origin, domain) => {
       return defaultFaviconPath;
     }
 
+    // Validate that the file is actually a valid image
+    // Skip validation for SVG (text-based format)
+    if (extension !== ".svg") {
+      try {
+        await sharp(outputPath).metadata();
+      } catch (validationError) {
+        console.error(
+          `Invalid image file for ${origin}: ${validationError.message}`
+        );
+        await fs.unlink(outputPath).catch(() => {});
+        failureCache[origin] = getCurrentDate();
+        await saveFailureCache();
+        return defaultFaviconPath;
+      }
+    }
+
     // Success! Remove from failure cache if it was there
     if (failureCache[origin]) {
       delete failureCache[origin];
       await saveFailureCache();
     }
 
-    return localPath;
-  } catch (error) {
-    // Any failure (network, timeout, write error) falls back to default
-    console.error(
-      `fetchAndSaveFavicon: using default favicon for ${origin}, error: ${error.message}`
+    // Cache the processed favicon for future builds
+    const cachedFilePath = path.join(
+      path.dirname(fileURLToPath(import.meta.url)),
+      "../../../.cache/favicons",
+      `${slugifyPackage(domain, {
+        lower: true,
+        strict: true,
+      })}-favicon${extension}`
+    );
+    await fs.mkdir(path.dirname(cachedFilePath), { recursive: true });
+    await fs.copyFile(outputPath, cachedFilePath);
+    await cache.save(
+      {
+        localPath: localPath,
+        cachedFilePath: cachedFilePath,
+        extension: extension,
+      },
+      "json"
     );
 
-    // Add to persistent failure cache with current date
+    return localPath;
+  } catch (error) {
+    // Google API failed, try extracting from HTML
+    console.error(
+      `Google favicon failed for ${origin}, trying HTML extraction: ${error.message}`
+    );
+
+    try {
+      // Fetch HTML and extract favicon link
+      const html = await fetchHtml(origin, "faviconHtml");
+      const $ = cheerio.load(html);
+      const faviconUrl = extractFaviconFromHtml($, origin);
+
+      if (faviconUrl) {
+        // Fetch the favicon from the extracted URL
+        const faviconBuffer = await Fetch(faviconUrl, {
+          directory: ".cache",
+          duration: cacheDuration.faviconImage,
+          type: "buffer",
+          fetchOptions: {
+            signal: AbortSignal.timeout(fetchTimeout.faviconImage),
+          },
+        });
+
+        // Determine extension from URL or content inspection
+        let extension = ".png";
+        if (faviconUrl.endsWith(".svg")) extension = ".svg";
+        else if (faviconUrl.endsWith(".ico")) extension = ".ico";
+        else if (faviconUrl.endsWith(".jpg") || faviconUrl.endsWith(".jpeg"))
+          extension = ".jpg";
+        else if (faviconUrl.endsWith(".gif")) extension = ".gif";
+        else if (faviconUrl.endsWith(".webp")) extension = ".webp";
+
+        // Generate filename
+        const filename = `${slugifyPackage(domain, {
+          lower: true,
+          strict: true,
+        })}-favicon${extension}`;
+        const localPath = `${faviconDir}/${filename}`;
+
+        // Write favicon to _site/img/favicons/ directory
+        const __dirname = path.dirname(fileURLToPath(import.meta.url));
+        const outputPath = path.join(__dirname, "../../../_site", localPath);
+
+        // Ensure directory exists
+        await fs.mkdir(path.dirname(outputPath), { recursive: true });
+
+        // Process image with Sharp
+        let finalBuffer = faviconBuffer;
+
+        if (extension !== ".ico" && extension !== ".svg") {
+          try {
+            const image = sharp(faviconBuffer);
+            const metadata = await image.metadata();
+
+            if (
+              metadata.width !== targetSize ||
+              metadata.height !== targetSize
+            ) {
+              const operation =
+                metadata.width < targetSize || metadata.height < targetSize
+                  ? "UPSCALE"
+                  : "DOWNSCALE";
+
+              await logResize(
+                origin,
+                metadata.width,
+                metadata.height,
+                operation
+              );
+
+              finalBuffer = await image
+                .resize(targetSize, targetSize, {
+                  kernel: sharp.kernel.lanczos3,
+                  fit: "fill",
+                })
+                .toBuffer();
+            }
+
+            if (extension === ".png" && finalBuffer.length > 4096) {
+              finalBuffer = await sharp(finalBuffer)
+                .png({
+                  compressionLevel: 9,
+                  effort: 10,
+                  quality: 80,
+                  palette: true,
+                })
+                .toBuffer();
+            }
+          } catch (sharpError) {
+            console.error(
+              `Sharp processing failed for ${origin}:`,
+              sharpError.message
+            );
+          }
+        }
+
+        await fs.writeFile(outputPath, finalBuffer);
+
+        // Verify file exists and is not empty
+        const stats = await fs.stat(outputPath);
+        if (stats.size === 0) {
+          await fs.unlink(outputPath).catch(() => {});
+
+          failureCache[origin] = getCurrentDate();
+          await saveFailureCache();
+
+          return defaultFaviconPath;
+        }
+
+        // Validate that the file is actually a valid image
+        // Skip validation for SVG (text-based format)
+        if (extension !== ".svg") {
+          try {
+            await sharp(outputPath).metadata();
+          } catch (validationError) {
+            console.error(
+              `Invalid image file from HTML extraction for ${origin}: ${validationError.message}`
+            );
+            await fs.unlink(outputPath).catch(() => {});
+            failureCache[origin] = getCurrentDate();
+            await saveFailureCache();
+            return defaultFaviconPath;
+          }
+        }
+
+        // Success! Remove from failure cache if it was there
+        if (failureCache[origin]) {
+          delete failureCache[origin];
+          await saveFailureCache();
+        }
+
+        console.log(`Successfully extracted favicon from HTML for ${origin}`);
+
+        // Cache the processed favicon for future builds
+        const cachedFilePath = path.join(
+          path.dirname(fileURLToPath(import.meta.url)),
+          "../../../.cache/favicons",
+          `${slugifyPackage(domain, {
+            lower: true,
+            strict: true,
+          })}-favicon${extension}`
+        );
+        await fs.mkdir(path.dirname(cachedFilePath), { recursive: true });
+        await fs.copyFile(outputPath, cachedFilePath);
+        await cache.save(
+          {
+            localPath: localPath,
+            cachedFilePath: cachedFilePath,
+            extension: extension,
+          },
+          "json"
+        );
+
+        return localPath;
+      }
+    } catch (htmlError) {
+      console.error(
+        `HTML favicon extraction also failed for ${origin}: ${htmlError.message}`
+      );
+    }
+
+    // Both methods failed, use default
     failureCache[origin] = getCurrentDate();
     await saveFailureCache();
 
