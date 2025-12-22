@@ -231,12 +231,12 @@ export default async function () {
   // most recent update and the second by number of GitHub stars
   // **************
   const rawStarters = bundleRecords.filter(
-    (item) => item["Type"] === "starter"
+    (item) => item["Type"] === "starter" && !item["Skip"]
   );
 
   const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
-    const cache = new AssetCache(cacheKey, ".cache");
+    const cache = new AssetCache(cacheKey, ".cache``");
     if (cache.isCacheValid(cacheDuration.starters)) {
       const cachedStarters = await cache.getCachedValue();
       if (cachedStarters) {
