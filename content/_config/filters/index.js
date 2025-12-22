@@ -7,6 +7,7 @@ import {
   formatYMD,
   singleComma,
 } from "./datesandnumbers.js";
+import { fetchHtml } from "./fetchhtml.js";
 import { getBundleItems } from "./getbundleitems.js";
 import { getDescription } from "./getdescription.js";
 import { genFaviconHtml } from "./genfaviconhtml.js";
@@ -30,6 +31,7 @@ export const filters = {
   formatFirehoseDate,
   formatNumber,
   formatYMD,
+  fetchHtml,
   getAuthorIcons,
   getSocialIcons,
   getBundleItems,

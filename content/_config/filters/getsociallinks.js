@@ -1,6 +1,6 @@
 import { AssetCache } from "@11ty/eleventy-fetch";
 import * as cheerio from "cheerio";
-import fetchHtml from "./fetchhtml.js";
+import { fetchHtml } from "./fetchhtml.js";
 
 import { cacheDuration } from "../../_data/cacheconfig.js";
 

@@ -236,7 +236,7 @@ export default async function () {
 
   const enrichStarters = async (starters) => {
     const cacheKey = `starter-projects`;
-    const cache = new AssetCache(cacheKey, ".cache``");
+    const cache = new AssetCache(cacheKey, ".cache");
     if (cache.isCacheValid(cacheDuration.starters)) {
       const cachedStarters = await cache.getCachedValue();
       if (cachedStarters) {

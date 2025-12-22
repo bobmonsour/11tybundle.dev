@@ -1,4 +1,4 @@
-import fetchHtml from "./fetchhtml.js";
+import { fetchHtml } from "./fetchhtml.js";
 import * as cheerio from "cheerio";
 
 //***************
