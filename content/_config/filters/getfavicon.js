@@ -73,6 +73,22 @@ const isFailureExpired = (failureDate) => {
   return daysDiff >= 30;
 };
 
+// Initialize resize log file with build date
+const initializeResizeLog = async () => {
+  try {
+    await fs.mkdir(path.dirname(resizeLogPath), { recursive: true });
+    const now = new Date();
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const formattedDate = now.toLocaleDateString("en-US", options);
+    await fs.writeFile(resizeLogPath, `${formattedDate}\n\n`);
+  } catch (error) {
+    console.error("Failed to initialize resize log:", error.message);
+  }
+};
+
+// Initialize the resize log on module load
+await initializeResizeLog();
+
 // Helper to log resized files
 const logResize = async (origin, originalWidth, originalHeight, operation) => {
   try {
