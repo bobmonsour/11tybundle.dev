@@ -30,7 +30,7 @@ permalink: /authors/
    Author structure:
 
     .name           author name
-    .slugifiedName  slugified author name
+    .slugifiedAuthor  slugified author name
     .firstLetter    first letter of author last name/word
     .count          total post count
     .origin         origin (captured from first non-YouTube post)
@@ -57,7 +57,7 @@ permalink: /authors/
     {% set currentLetter = author.firstLetter %}
     <article class="directory__card directory--category">
       {# {{ author.favicon | log }} #}
-      <h3>{{ author.favicon | genFaviconHtml(cardCount) | safe }}<a href="/authors/{{ author.slugifiedName }}">{{author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
+      <h3>{{ author.favicon | genFaviconHtml(cardCount) | safe }}<a href="/authors/{{ author.slugifiedAuthor }}">{{author.name }}</a> <data class="count" value="{{ author.count }}">{{ author.count }}</data></h3>
       <ol role="list" class="directory--list">
         {% for item in bundledata.firehose | postsByAuthor(author.name, 3) %}
           <li><a href="{{ item.Link }}">{{ item.Title }}</a>

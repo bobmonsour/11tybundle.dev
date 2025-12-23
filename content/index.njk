@@ -120,7 +120,7 @@ issue: 80
       <div class="recent-authors__item">
         {{ item.favicon | genFaviconHtml(12) | safe }}
         <div class="details">
-          <a href="/authors/{{ item.slugifiedName }}/">{{ item.name }}</a>
+          <a href="/authors/{{ item.slugifiedAuthor }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>
           <ul role="list" class="author-links">
             {{ item.origin | getAuthorIcons | safe }}

@@ -62,7 +62,7 @@ export default async function () {
   } else {
     // Development: Load from local file
     const localData = await import(
-      "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/bundledb.json",
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/bundledbtest.json",
       {
         with: { type: "json" },
       }
@@ -103,8 +103,25 @@ export default async function () {
   // firehose is an array of all blog posts in descending date order
   // **************
   // verify the presence of required fields for each blog post
-  const requiredFields = ["Title", "Author", "Date", "Link", "Categories"];
-  const stringFields = ["Title", "Author", "Date", "Link"];
+  const requiredFields = [
+    "Title",
+    "Author",
+    "Date",
+    "Link",
+    "Categories",
+    "slugifiedTitle",
+    "slugifiedAuthor",
+    "formattedDate",
+  ];
+  const stringFields = [
+    "Title",
+    "Author",
+    "Date",
+    "Link",
+    "slugifiedTitle",
+    "slugifiedAuthor",
+    "formattedDate",
+  ];
 
   for (let item of bundleRecords) {
     if (item["Type"] === "blog post" && !item["Skip"]) {
@@ -234,12 +251,7 @@ export default async function () {
 
         authorMap.set(item.Author, {
           name: item.Author,
-          slugifiedName:
-            item.slugifiedAuthor ||
-            slugify(item.Author, {
-              lower: true,
-              strict: true,
-            }),
+          slugifiedAuthor: item.slugifiedAuthor,
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
           origin: origin,
@@ -285,7 +297,7 @@ export default async function () {
     // Convert map to array of objects
     const authorArray = Array.from(authorMap).map(([name, data]) => ({
       name,
-      slugifiedName: data.slugifiedName,
+      slugifiedAuthor: data.slugifiedAuthor,
       firstLetter: data.firstLetter,
       count: data.count,
       origin: data.origin,
@@ -330,23 +342,7 @@ export default async function () {
 
       results.push({
         ...post,
-        slugifiedTitle:
-          post.slugifiedTitle ||
-          slugify(post.Title, {
-            lower: true,
-            strict: true,
-          }),
-        // Use author data if available, otherwise compute (fallback for edge cases)
-        slugifiedAuthor:
-          author?.slugifiedName ||
-          slugify(post.Author, {
-            lower: true,
-            strict: true,
-          }),
         description: await appliedFilters.getDescription(post.Link),
-        formattedDate:
-          post.formattedDate ||
-          (await appliedFilters.formatItemDate(post.Date)),
         // Use author favicon if available, otherwise fetch (fallback for edge cases)
         favicon:
           author?.favicon || (await appliedFilters.getFavicon(origin, "post")),
