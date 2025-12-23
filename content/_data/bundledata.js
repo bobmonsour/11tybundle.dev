@@ -544,7 +544,7 @@ export default async function () {
   // this is for paginating the firehose page by year
   const pagedFirehose = Object.values(
     firehose.reduce((acc, post) => {
-      const year = new Date(post.Date).getFullYear();
+      const year = new Date(post.Date).getUTCFullYear();
       if (!acc[year]) {
         acc[year] = [];
       }
@@ -553,14 +553,14 @@ export default async function () {
     }, {})
   ).sort((a, b) => {
     // Sort by year descending (most recent first)
-    const yearA = new Date(a[0].Date).getFullYear();
-    const yearB = new Date(b[0].Date).getFullYear();
+    const yearA = new Date(a[0].Date).getUTCFullYear();
+    const yearB = new Date(b[0].Date).getUTCFullYear();
     return yearB - yearA;
   });
 
   // generate firehoseYears, a descending array of years for navigation
   const firehoseYears = pagedFirehose.map((yearPosts) =>
-    new Date(yearPosts[0].Date).getFullYear()
+    new Date(yearPosts[0].Date).getUTCFullYear()
   );
   console.log(`firehoseYears: ${firehoseYears.length} years`);
 
