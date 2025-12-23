@@ -28,7 +28,7 @@ import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 // AND UNCOMMENT THE REMOTE FETCHING SECTION BELOW
 //
 // **************
-// import bundleRecords from './bundledbtest2.json' with { type: 'json' };
+// import bundleRecords from './bundledbtest.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -60,10 +60,13 @@ export default async function () {
     });
     console.log("Loaded remote bundleDB (production mode)");
   } else {
-    // Development: Load from local file in sibling directory
-    const localData = await import("../../../11tybundledb/bundledb.json", {
-      with: { type: "json" },
-    });
+    // Development: Load from local file
+    const localData = await import(
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/bundledb.json",
+      {
+        with: { type: "json" },
+      }
+    );
     bundleRecords = localData.default;
     console.log("Loaded local bundleDB (development mode)");
   }
