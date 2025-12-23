@@ -25,7 +25,7 @@
     </div>
   </div>
 </header>
-<nav class="section">
+<nav class="section" data-pagefind-ignore="all">
   <div class="container">
     <ul role="list" id="skip-links-years" class="skip-links">
       {% for year in bundledata.firehose | postYearsInAuthor(author.name) %}
@@ -39,28 +39,26 @@
 {% set current_year = newestPostYear %}
 {% set previous_year = current_year %}
 
-<div class="section">
+<div class="section" data-pagefind-body>
   <div class="container">
-    <details name="details" class="directory__layout" {% if current_year == newestPostYear %}open{% endif %}>
-      <summary id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
+    <div class="directory__layout" id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
       <div class="directory__grid">
-    {% for item in bundledata.firehose | postsByAuthor(author.name, 0) %}
-  	{% set current_year = item.Date | truncate(4, true, '') %}
-    {% if (current_year != previous_year) %}
+        {% for item in bundledata.firehose | postsByAuthor(author.name, 0) %}
+        {% set current_year = item.Date | truncate(4, true, '') %}
+        {% if (current_year != previous_year) %}
       {# on year change, close the previous year's related tags #}
       </div>
-    </details>
+    </div>
   </div>
 </div>
-    {% set previous_year = current_year %}
-<div class="section">
+      {% set previous_year = current_year %}
+<div class="section" data-pagefind-body>
   <div class="container">
-    <details name="details" class="directory__layout">
-      <summary id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2></summary>
+    <div class="directory__layout" id="y-{{ current_year }}"><h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
       <div class="directory__grid">
-    {% endif %}
+        {% endif %}
 
-			  <div class="directory__card directory--detail">
+        <div class="directory__card directory--detail">
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details">
             {% if item.description %}
@@ -76,10 +74,10 @@
               </ul>
             </div>
           </div>
+        </div>
+      {% endfor %}
       </div>
-    {% endfor %}
-      </div>
-    </details>
+    </div>
   </div>
 </div>
 {% include "partials/releasepopovers.njk" %}
