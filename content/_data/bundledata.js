@@ -231,10 +231,12 @@ export default async function () {
 
         authorMap.set(item.Author, {
           name: item.Author,
-          slugifiedName: slugifyPackage(item.Author, {
-            lower: true,
-            strict: true,
-          }),
+          slugifiedName:
+            item.slugifiedAuthor ||
+            slugifyPackage(item.Author, {
+              lower: true,
+              strict: true,
+            }),
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
           origin: origin,
@@ -325,10 +327,12 @@ export default async function () {
 
       results.push({
         ...post,
-        slugifiedTitle: slugifyPackage(post.Title, {
-          lower: true,
-          strict: true,
-        }),
+        slugifiedTitle:
+          post.slugifiedTitle ||
+          slugifyPackage(post.Title, {
+            lower: true,
+            strict: true,
+          }),
         // Use author data if available, otherwise compute (fallback for edge cases)
         slugifiedAuthor:
           author?.slugifiedName ||
@@ -337,7 +341,9 @@ export default async function () {
             strict: true,
           }),
         description: await appliedFilters.getDescription(post.Link),
-        formattedDate: await appliedFilters.formatItemDate(post.Date),
+        formattedDate:
+          post.formattedDate ||
+          (await appliedFilters.formatItemDate(post.Date)),
         // Use author favicon if available, otherwise fetch (fallback for edge cases)
         favicon:
           author?.favicon || (await appliedFilters.getFavicon(origin, "post")),

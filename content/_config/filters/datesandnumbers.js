@@ -9,6 +9,7 @@ export const formatPostDate = (date) => {
 
 // Format the date of the items that come from the database,
 // which arrive as strings, not dates; for use in the Bundle posts
+// dates are of the form of Dec 25, 2025
 export const formatItemDate = (date) => {
   const itemDate = Date.parse(date);
   return DateTime.fromMillis(itemDate, { zone: "utc" }).toLocaleString(
