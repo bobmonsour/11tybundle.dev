@@ -144,35 +144,209 @@ export default async function () {
     .filter((item) => item["Type"] === "blog post" && !item["Skip"])
     .sort((a, b) => new Date(b.Date) - new Date(a.Date));
 
+  // **************
+  // generate a sorted array of author objects, sorted either
+  // by name or by post count, with each author object having
+  // the following properties:
+  //  - author name
+  //  - slugified author name
+  //  - first letter of the author's last name/word
+  //  - count of posts by that author
+  //  - origin site of the author's posts
+  //  - origin site info, including:
+  //    - description
+  //    - favicon
+  //    - rss link
+  //    - social links
+  // **************
+  const authorList = async (posts, sortField) => {
+    function authorSort(a, b) {
+      if (sortField === "name") {
+        const getLastWord = (str) => {
+          const words = str.trim().split(" ");
+          return words[words.length - 1];
+        };
+        const lastA = getLastWord(a.name).toLowerCase() || "";
+        const lastB = getLastWord(b.name).toLowerCase() || "";
+        return lastA.localeCompare(lastB); // Sort by last name/word
+      } else {
+        return b.count - a.count; // Sort by count descending
+      }
+    }
+
+    const getFirstLetterOfLastWord = (str) => {
+      const words = str.trim().split(" ");
+      const lastWord = words[words.length - 1];
+      return lastWord.charAt(0).toUpperCase();
+    };
+
+    const authorMap = new Map();
+
+    // Timing trackers for enrichment operations
+    const timing = {
+      description: { total: 0, count: 0 },
+      favicon: { total: 0, count: 0 },
+      rssLink: { total: 0, count: 0 },
+      socialLinks: { total: 0, count: 0 },
+    };
+
+    for (let item of posts) {
+      // Skip items with missing author names
+      if (!item.Author) continue;
+      if (item.Skip) continue;
+
+      const existing = authorMap.get(item.Author);
+      const origin = item.AuthorSite || filters.getOrigin(item.Link);
+
+      if (existing) {
+        // Author exists, increment count
+        existing.count += 1;
+      } else {
+        // New author - create entry with timed enrichment calls
+        let startTime, endTime;
+
+        startTime = performance.now();
+        const description = await filters.getDescription(origin);
+        endTime = performance.now();
+        timing.description.total += endTime - startTime;
+        timing.description.count++;
+
+        startTime = performance.now();
+        const favicon = await filters.getFavicon(origin, "post");
+        endTime = performance.now();
+        timing.favicon.total += endTime - startTime;
+        timing.favicon.count++;
+
+        startTime = performance.now();
+        const rssLink = await filters.getRSSLink(origin);
+        endTime = performance.now();
+        timing.rssLink.total += endTime - startTime;
+        timing.rssLink.count++;
+
+        startTime = performance.now();
+        const socialLinks = await filters.getSocialLinks(origin);
+        endTime = performance.now();
+        timing.socialLinks.total += endTime - startTime;
+        timing.socialLinks.count++;
+
+        authorMap.set(item.Author, {
+          name: item.Author,
+          slugifiedName: slugifyPackage(item.Author, {
+            lower: true,
+            strict: true,
+          }),
+          firstLetter: getFirstLetterOfLastWord(item.Author),
+          count: 1,
+          origin: origin,
+          description,
+          favicon,
+          rssLink,
+          socialLinks,
+        });
+      }
+    }
+
+    // Report average timing for each enrichment operation
+    console.log("\\n--- Author Enrichment Timing (Averages) ---");
+    console.log(
+      `Description:  ${(
+        timing.description.total / timing.description.count
+      ).toFixed(2)}ms (${timing.description.count} calls)`
+    );
+    console.log(
+      `Favicon:      ${(timing.favicon.total / timing.favicon.count).toFixed(
+        2
+      )}ms (${timing.favicon.count} calls)`
+    );
+    console.log(
+      `RSS Link:     ${(timing.rssLink.total / timing.rssLink.count).toFixed(
+        2
+      )}ms (${timing.rssLink.count} calls)`
+    );
+    console.log(
+      `Social Links: ${(
+        timing.socialLinks.total / timing.socialLinks.count
+      ).toFixed(2)}ms (${timing.socialLinks.count} calls)`
+    );
+    console.log(
+      `Total:        ${(
+        timing.description.total +
+        timing.favicon.total +
+        timing.rssLink.total +
+        timing.socialLinks.total
+      ).toFixed(2)}ms\\n`
+    );
+
+    // Convert map to array of objects
+    const authorArray = Array.from(authorMap).map(([name, data]) => ({
+      name,
+      slugifiedName: data.slugifiedName,
+      firstLetter: data.firstLetter,
+      count: data.count,
+      origin: data.origin,
+      description: data.description,
+      favicon: data.favicon,
+      rssLink: data.rssLink,
+      socialLinks: data.socialLinks,
+    }));
+
+    return authorArray.sort(authorSort);
+  };
+
+  // **************
+  // Build author data FIRST so we can reuse slugified names and favicons
+  // when enriching posts (avoiding ~1,600 duplicate operations)
+  // **************
+  const authors = await authorList(rawFirehose, "name");
+  const authorsByCount = await authorList(rawFirehose, "count");
+  const authorCount = authors.length;
+  const authorLetters = [
+    ...new Set(authors.map((author) => author.firstLetter)),
+  ];
+
   // enrich each post in the firehose with:
   //  - the slugified title
-  //  - the slugified author name
+  //  - the slugified author name (from pre-built author data)
   //  - post description
   //  - formatted date
-  //  - favicon of the author's site
-  const enrichFirehose = async (rawFirehoseData, appliedFilters) => {
+  //  - favicon (from pre-built author data)
+  const enrichFirehose = async (
+    rawFirehoseData,
+    appliedFilters,
+    authorsData
+  ) => {
+    // Create Map for O(1) author lookups
+    const authorsByName = new Map(authorsData.map((a) => [a.name, a]));
+
     const results = [];
     for (const post of rawFirehoseData) {
       const origin = post.AuthorSite || appliedFilters.getOrigin(post.Link);
+      const author = authorsByName.get(post.Author);
+
       results.push({
         ...post,
         slugifiedTitle: slugifyPackage(post.Title, {
           lower: true,
           strict: true,
         }),
-        slugifiedAuthor: slugifyPackage(post.Author, {
-          lower: true,
-          strict: true,
-        }),
+        // Use author data if available, otherwise compute (fallback for edge cases)
+        slugifiedAuthor:
+          author?.slugifiedName ||
+          slugifyPackage(post.Author, {
+            lower: true,
+            strict: true,
+          }),
         description: await appliedFilters.getDescription(post.Link),
         formattedDate: await appliedFilters.formatItemDate(post.Date),
-        favicon: await appliedFilters.getFavicon(origin, "post"),
+        // Use author favicon if available, otherwise fetch (fallback for edge cases)
+        favicon:
+          author?.favicon || (await appliedFilters.getFavicon(origin, "post")),
       });
     }
     return results;
   };
 
-  const firehose = await enrichFirehose(rawFirehose, filters);
+  const firehose = await enrichFirehose(rawFirehose, filters, authors);
   const postCount = firehose.length;
 
   // **************
@@ -313,93 +487,6 @@ export default async function () {
   // the following properties:
   //  - author name
   //  - slugified author name
-  //  - first letter of the author's last name/word
-  //  - count of posts by that author
-  //  - origin site of the author's posts
-  //  - origin site info, including:
-  //    - description
-  //    - favicon
-  //    - rss link
-  //    - social links
-  // **************
-  const authorList = async (posts, sortField) => {
-    function authorSort(a, b) {
-      if (sortField === "name") {
-        const getLastWord = (str) => {
-          const words = str.trim().split(" ");
-          return words[words.length - 1];
-        };
-        const lastA = getLastWord(a.name).toLowerCase() || "";
-        const lastB = getLastWord(b.name).toLowerCase() || "";
-        return lastA.localeCompare(lastB); // Sort by last name/word
-      } else {
-        return b.count - a.count; // Sort by count descending
-      }
-    }
-
-    const getFirstLetterOfLastWord = (str) => {
-      const words = str.trim().split(" ");
-      const lastWord = words[words.length - 1];
-      return lastWord.charAt(0).toUpperCase();
-    };
-
-    const authorMap = new Map();
-    for (let item of posts) {
-      // Skip items with missing author names
-      if (!item.Author) continue;
-      if (item.Skip) continue;
-
-      const existing = authorMap.get(item.Author);
-      const origin = item.AuthorSite || filters.getOrigin(item.Link);
-
-      if (existing) {
-        // Author exists, increment count
-        existing.count += 1;
-      } else {
-        // New author - create entry
-        authorMap.set(item.Author, {
-          name: item.Author,
-          slugifiedName: slugifyPackage(item.Author, {
-            lower: true,
-            strict: true,
-          }),
-          firstLetter: getFirstLetterOfLastWord(item.Author),
-          count: 1,
-          origin: origin,
-          description: await filters.getDescription(origin),
-          favicon: await filters.getFavicon(origin, "post"),
-          rssLink: await filters.getRSSLink(origin),
-          socialLinks: await filters.getSocialLinks(origin),
-        });
-      }
-    }
-
-    // Convert map to array of objects
-    const authorArray = Array.from(authorMap).map(([name, data]) => ({
-      name,
-      slugifiedName: data.slugifiedName,
-      firstLetter: data.firstLetter,
-      count: data.count,
-      origin: data.origin,
-      description: data.description,
-      favicon: data.favicon,
-      rssLink: data.rssLink,
-      socialLinks: data.socialLinks,
-    }));
-
-    return authorArray.sort(authorSort);
-  };
-
-  // **************
-  // generate two arrays from the authors:
-  //   - one sorted by name
-  //   - one sorted by post count
-  // total author count; firehose contains all blog posts
-  // 2nd param of authorList is the field to sort by, name or count
-  // also generate an array of first letters of author last names
-  // **************
-  const authors = await authorList(firehose, "name");
-
   // // TEMPORARY FOR DEBUGGING: Write authors array to JSON file next to this JS file
   // try {
   //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -412,12 +499,6 @@ export default async function () {
   //     err && err.message ? err.message : err
   //   );
   // }
-
-  const authorsByCount = await authorList(firehose, "count");
-  const authorCount = authors.length;
-  const authorLetters = [
-    ...new Set(authors.map((author) => author.firstLetter)),
-  ];
 
   // **************
   // get the most recent 3 unique authors from the top 50 posts
