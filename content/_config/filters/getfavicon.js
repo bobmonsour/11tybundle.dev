@@ -3,7 +3,7 @@ import { AssetCache } from "@11ty/eleventy-fetch";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promises as fs } from "fs";
-import slugifyPackage from "slugify";
+import slugify from "@sindresorhus/slugify";
 import sharp from "sharp";
 import { fetchHtml } from "./fetchhtml.js";
 import * as cheerio from "cheerio";
@@ -268,7 +268,7 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     const extension = "." + getExtensionFromContentType(contentType);
 
     // Generate filename: slugified domain + "-favicon" + extension
-    const filename = `${slugifyPackage(domain, {
+    const filename = `${slugify(domain, {
       lower: true,
       strict: true,
     })}-favicon${extension}`;
@@ -371,7 +371,7 @@ const fetchAndSaveFavicon = async (origin, domain) => {
     const cachedFilePath = path.join(
       path.dirname(fileURLToPath(import.meta.url)),
       "../../../.cache/favicons",
-      `${slugifyPackage(domain, {
+      `${slugify(domain, {
         lower: true,
         strict: true,
       })}-favicon${extension}`
@@ -421,7 +421,7 @@ const fetchAndSaveFavicon = async (origin, domain) => {
         else if (faviconUrl.endsWith(".webp")) extension = ".webp";
 
         // Generate filename
-        const filename = `${slugifyPackage(domain, {
+        const filename = `${slugify(domain, {
           lower: true,
           strict: true,
         })}-favicon${extension}`;
@@ -525,8 +525,8 @@ const fetchAndSaveFavicon = async (origin, domain) => {
         const cachedFilePath = path.join(
           path.dirname(fileURLToPath(import.meta.url)),
           "../../../.cache/favicons",
-          `${slugifyPackage(domain, {
-            lower: true,
+          `${slugify(domain, {
+            lowercase: true,
             strict: true,
           })}-favicon${extension}`
         );

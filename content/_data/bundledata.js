@@ -7,7 +7,7 @@
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
-import slugifyPackage from "slugify";
+import slugify from "@sindresorhus/slugify";
 
 //***** TEMP FOR WRITING AUTHORS ARRAY TO A FILE *****
 import path from "path";
@@ -236,7 +236,7 @@ export default async function () {
           name: item.Author,
           slugifiedName:
             item.slugifiedAuthor ||
-            slugifyPackage(item.Author, {
+            slugify(item.Author, {
               lower: true,
               strict: true,
             }),
@@ -332,14 +332,14 @@ export default async function () {
         ...post,
         slugifiedTitle:
           post.slugifiedTitle ||
-          slugifyPackage(post.Title, {
+          slugify(post.Title, {
             lower: true,
             strict: true,
           }),
         // Use author data if available, otherwise compute (fallback for edge cases)
         slugifiedAuthor:
           author?.slugifiedName ||
-          slugifyPackage(post.Author, {
+          slugify(post.Author, {
             lower: true,
             strict: true,
           }),
@@ -597,12 +597,9 @@ export default async function () {
           existing.count += 1;
         } else {
           categoryMap.set(category, {
-            slugifiedCategory: slugifyPackage(
-              category.replace(/[.,;:!?]+$/, ""),
-              {
-                lower: true,
-              }
-            ),
+            slugifiedCategory: slugify(category.replace(/[.,;:!?]+$/, ""), {
+              lower: true,
+            }),
             count: 1,
             firstLetter: category.charAt(0),
           });
