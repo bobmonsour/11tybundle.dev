@@ -12,8 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
     showImages: false,
     showEmptyFilters: false,
     showSubResults: true,
+    sort: { date: "desc", weight: "desc" },
     processResult: function (result) {
       // console.log("processResult called with:", result);
+
+      // Special handling for blog posts
+      const isBlogPost = result.url && result.url.includes("/blog/");
+      if (isBlogPost) {
+        // Use full title as excerpt (untrimmed)
+        if (result.meta && result.meta.title) {
+          result.excerpt = result.meta.title;
+        }
+        // Remove all sub-results for blog posts
+        result.sub_results = [];
+        return result;
+      }
+
       // do not show an excerpt for the main result if it is a category page
       if (
         result.meta &&

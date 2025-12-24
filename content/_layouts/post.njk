@@ -12,7 +12,7 @@ channelsPage: true
     </dl>
 
     <div class="prose" data-pagefind-body>
-      <h2 class="post__title" id="{{ title | slugify }}" data-weight="{{ pfweights.blogContent }}" data-pagefind-sort="weight[data-weight]">{{ title | safe }}</h2>
+      <h2 class="post__title" id="{{ title | slugify }}" data-date="{{ item.Date | formatYMD }}" data-weight="{{ pfweights.blogContent }}" data-pagefind-sort="date[data-date], weight[data-weight]">{{ title | safe }}</h2>
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
       {% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
       {% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
