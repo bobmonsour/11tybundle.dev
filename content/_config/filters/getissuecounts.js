@@ -1,4 +1,4 @@
-import issueRecords from "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/issuerecords.json" with { type: 'json' };
+import issueRecords from "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/issuerecords.json" with { type: 'json' };
 
 /**
  * Return counts for a given issue number.
