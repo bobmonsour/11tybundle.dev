@@ -9,26 +9,7 @@ import { AssetCache } from "@11ty/eleventy-fetch";
 import { filters } from "../_config/filters/index.js";
 import slugify from "@sindresorhus/slugify";
 
-//***** TEMP FOR WRITING AUTHORS ARRAY TO A FILE *****
-import path from "path";
-import { fileURLToPath } from "url";
-import { promises as fs } from "fs";
-//*****
-
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
-
-// **************
-//   *** LOCAL TEST DATA, LOADED FROM A LOCAL FILE ***
-// **************
-//
-// A TEST SET OF DATA CAN BE LOADED FROM A LOCAL FILE
-// FOR FASTER LOCAL BUILDING
-//
-// COMMENT OUT THE FOLLOWING LINE TO USE THE FULL DATA SET
-// AND UNCOMMENT THE REMOTE FETCHING SECTION BELOW
-//
-// **************
-// import bundleRecords from './bundledbtest.json' with { type: 'json' };
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -72,32 +53,6 @@ export default async function () {
     bundleRecords = localData.default;
     console.log("Loaded local bundleDB (development mode)");
   }
-  // **************
-
-  // Create a smaller test data file
-  // try {
-  //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  //   const outPath = path.join(__dirname, "bundletest2.json");
-
-  //   const highIssueRecords = bundleRecords.filter((item) => {
-  //     const issue = Number(item.Issue);
-  //     return Number.isFinite(issue) && issue >= 50;
-  //   });
-
-  //   await fs.writeFile(
-  //     outPath,
-  //     JSON.stringify(highIssueRecords, null, 2),
-  //     "utf8"
-  //   );
-  //   console.log(
-  //     `Wrote ${highIssueRecords.length} high-issue records to ${outPath}`
-  //   );
-  // } catch (err) {
-  //   console.error(
-  //     "Failed to write bundletest2.json:",
-  //     err && err.message ? err.message : err
-  //   );
-  // }
 
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
@@ -266,7 +221,7 @@ export default async function () {
     }
 
     // Report average timing for each enrichment operation
-    console.log("\\n--- Author Enrichment Timing (Averages) ---");
+    console.log("\n--- Author Enrichment Timing (Averages) ---");
     console.log(
       `Description:  ${(
         timing.description.total / timing.description.count
@@ -362,7 +317,6 @@ export default async function () {
         // Use cached author favicon (no timing needed)
         favicon = author.favicon;
       } else {
-        // Fallback fetch for edge cases
         startTime = performance.now();
         favicon = await appliedFilters.getFavicon(origin, "post");
         endTime = performance.now();
@@ -454,6 +408,16 @@ export default async function () {
   const siteList = await enrichSiteList(rawSiteList, filters);
   const siteCount = siteList.length;
 
+  // Timing: SiteList creation
+  const siteListStartTime = performance.now();
+  // siteList already created above
+  const siteListEndTime = performance.now();
+  console.log(
+    `SiteList creation: ${(siteListEndTime - siteListStartTime).toFixed(
+      2
+    )}ms (${siteCount} sites)`
+  );
+
   // **************
   // generate two lists of starter projects, one ordered by date of
   // most recent update and the second by number of GitHub stars
@@ -534,25 +498,6 @@ export default async function () {
   );
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
   const starterCount = starters.length;
-
-  // **************
-  // generate a sorted array of author objects, sorted either
-  // by name or by post count, with each author object having
-  // the following properties:
-  //  - author name
-  //  - slugified author name
-  // // TEMPORARY FOR DEBUGGING: Write authors array to JSON file next to this JS file
-  // try {
-  //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  //   const outPath = path.join(__dirname, "authors.json");
-  //   await fs.writeFile(outPath, JSON.stringify(authors, null, 2), "utf8");
-  //   console.log(`Wrote authors JSON to ${outPath}`);
-  // } catch (err) {
-  //   console.error(
-  //     "Failed to write authors.json:",
-  //     err && err.message ? err.message : err
-  //   );
-  // }
 
   // **************
   // get the most recent 3 unique authors from the top 50 posts
