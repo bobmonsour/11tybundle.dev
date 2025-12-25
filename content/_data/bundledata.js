@@ -40,6 +40,8 @@ const octokit = new Octokit({
 
 // main function to generate and return the bundle data
 export default async function () {
+  const functionStartTime = performance.now();
+
   // **************
   // Conditionally load data based on environment
   // Set ELEVENTY_ENV=development for local data
@@ -62,7 +64,7 @@ export default async function () {
   } else {
     // Development: Load from local file
     const localData = await import(
-      "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/bundledbtest.json",
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundledb/bundledb.json",
       {
         with: { type: "json" },
       }
@@ -314,8 +316,9 @@ export default async function () {
   // Build author data FIRST so we can reuse slugified names and favicons
   // when enriching posts (avoiding ~1,600 duplicate operations)
   // **************
-  const authors = await authorList(rawFirehose, "name");
-  const authorsByCount = await authorList(rawFirehose, "count");
+  const authorsBaseData = await authorList(rawFirehose, "name");
+  const authors = authorsBaseData;
+  const authorsByCount = [...authorsBaseData].sort((a, b) => b.count - a.count);
   const authorCount = authors.length;
   const authorLetters = [
     ...new Set(authors.map((author) => author.firstLetter)),
@@ -335,19 +338,65 @@ export default async function () {
     // Create Map for O(1) author lookups
     const authorsByName = new Map(authorsData.map((a) => [a.name, a]));
 
+    // Timing trackers for enrichment operations
+    const timing = {
+      description: { total: 0, count: 0 },
+      favicon: { total: 0, count: 0 },
+    };
+
     const results = [];
     for (const post of rawFirehoseData) {
       const origin = post.AuthorSite || appliedFilters.getOrigin(post.Link);
       const author = authorsByName.get(post.Author);
 
+      let startTime, endTime;
+
+      startTime = performance.now();
+      const description = await appliedFilters.getDescription(post.Link);
+      endTime = performance.now();
+      timing.description.total += endTime - startTime;
+      timing.description.count++;
+
+      let favicon;
+      if (author?.favicon) {
+        // Use cached author favicon (no timing needed)
+        favicon = author.favicon;
+      } else {
+        // Fallback fetch for edge cases
+        startTime = performance.now();
+        favicon = await appliedFilters.getFavicon(origin, "post");
+        endTime = performance.now();
+        timing.favicon.total += endTime - startTime;
+        timing.favicon.count++;
+      }
+
       results.push({
         ...post,
-        description: await appliedFilters.getDescription(post.Link),
-        // Use author favicon if available, otherwise fetch (fallback for edge cases)
-        favicon:
-          author?.favicon || (await appliedFilters.getFavicon(origin, "post")),
+        description,
+        favicon,
       });
     }
+
+    // Report average timing for each enrichment operation
+    console.log("\n--- Firehose Enrichment Timing (Averages) ---");
+    console.log(
+      `Description:  ${(
+        timing.description.total / timing.description.count
+      ).toFixed(2)}ms (${timing.description.count} calls)`
+    );
+    if (timing.favicon.count > 0) {
+      console.log(
+        `Favicon:      ${(timing.favicon.total / timing.favicon.count).toFixed(
+          2
+        )}ms (${timing.favicon.count} calls - fallback only)`
+      );
+    }
+    console.log(
+      `Total:        ${(
+        timing.description.total + timing.favicon.total
+      ).toFixed(2)}ms\n`
+    );
+
     return results;
   };
 
@@ -635,6 +684,12 @@ export default async function () {
   console.log("starterCount: " + starterCount);
   console.log("authorCount: " + authorCount);
   console.log("categoryCount: " + categoryCount);
+
+  const functionEndTime = performance.now();
+  const totalTime = ((functionEndTime - functionStartTime) / 1000).toFixed(2);
+  console.log(`\n========================================`);
+  console.log(`TOTAL BUNDLEDATA EXECUTION TIME: ${totalTime} seconds`);
+  console.log(`========================================\n`);
 
   // **************
   // return the full set of records and the counts for use
