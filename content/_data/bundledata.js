@@ -304,22 +304,27 @@ export default async function () {
       const origin = post.AuthorSite || appliedFilters.getOrigin(post.Link);
       const author = authorsByName.get(post.Author);
 
-      let startTime, endTime;
-
-      startTime = performance.now();
-      const description = await appliedFilters.getDescription(post.Link);
-      endTime = performance.now();
-      timing.description.total += endTime - startTime;
-      timing.description.count++;
+      let description;
+      if (post.hasOwnProperty("description")) {
+        // Use existing description from bundleDB (regardless of value)
+        description = post.description;
+      } else {
+        // Fetch description only if property doesn't exist
+        const startTime = performance.now();
+        description = await appliedFilters.getDescription(post.Link);
+        const endTime = performance.now();
+        timing.description.total += endTime - startTime;
+        timing.description.count++;
+      }
 
       let favicon;
       if (author?.favicon) {
         // Use cached author favicon (no timing needed)
         favicon = author.favicon;
       } else {
-        startTime = performance.now();
+        const startTime = performance.now();
         favicon = await appliedFilters.getFavicon(origin, "post");
-        endTime = performance.now();
+        const endTime = performance.now();
         timing.favicon.total += endTime - startTime;
         timing.favicon.count++;
       }
@@ -333,11 +338,15 @@ export default async function () {
 
     // Report average timing for each enrichment operation
     console.log("\n--- Firehose Enrichment Timing (Averages) ---");
-    console.log(
-      `Description:  ${(
-        timing.description.total / timing.description.count
-      ).toFixed(2)}ms (${timing.description.count} calls)`
-    );
+    if (timing.description.count > 0) {
+      console.log(
+        `Description:  ${(
+          timing.description.total / timing.description.count
+        ).toFixed(2)}ms (${timing.description.count} calls - fetched only)`
+      );
+    } else {
+      console.log(`Description:  All descriptions from bundleDB (0 fetches)`);
+    }
     if (timing.favicon.count > 0) {
       console.log(
         `Favicon:      ${(timing.favicon.total / timing.favicon.count).toFixed(
@@ -370,9 +379,13 @@ export default async function () {
   const enrichReleaseList = async (rawReleaseListData, appliedFilters) => {
     const results = [];
     for (const release of rawReleaseListData) {
+      const description = release.hasOwnProperty("description")
+        ? release.description
+        : await appliedFilters.getDescription(release.Link);
+
       results.push({
         ...release,
-        description: await appliedFilters.getDescription(release.Link),
+        description,
         formattedDate: await appliedFilters.formatItemDate(release.Date),
       });
     }
@@ -395,9 +408,13 @@ export default async function () {
   const enrichSiteList = async (rawSiteListData, appliedFilters) => {
     const results = [];
     for (const site of rawSiteListData) {
+      const description = site.hasOwnProperty("description")
+        ? site.description
+        : await appliedFilters.getDescription(site.Link);
+
       results.push({
         ...site,
-        description: await appliedFilters.getDescription(site.Link),
+        description,
         favicon: await appliedFilters.getFavicon(site.Link, "site"),
         formattedDate: await appliedFilters.formatItemDate(site.Date),
       });
