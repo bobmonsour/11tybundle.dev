@@ -11,7 +11,7 @@
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "demobuild": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "buildns": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
-    "deploy": "npm run clean && npm run demobuild && npm run postbuild && npx wrangler deploy --assets=./_site",
+    "deploy": "npm run demobuild && npm run postbuild && npx wrangler deploy --assets=./_site",
     "postbuild": "npx -y pagefind --site _site --force-language unknown",
     "postdev": "npx -y pagefind --site _site --serve",
     "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
@@ -20,8 +20,8 @@
     "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "links": "npx check-html-links _site",
     "clean": "rimraf ./_site",
-    "rs": "npm run clean && npm run start && npm run postdev",
-    "rsns": "npm run clean && npm run startns"
+    "rs": "npm run start && npm run postdev",
+    "rsns": "npm run startns"
   },
   "engines": {
     "node": "22.15.0"
