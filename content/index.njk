@@ -34,6 +34,7 @@ issue: 80
     </article>
   </div>
 </div>
+
 <div class="section" data-pagefind-ignore="all">
   <div class="feeds container">
       <article class="feeds__section">
@@ -51,6 +52,7 @@ issue: 80
           {%- endfor -%}
         </ol>
       </article>
+
       <article class="feeds__section">
         <h2 class="h3">Recent sites <a href="/sitesfeed.xml" aria-label="RSS feed for the Sites of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
             <use xlink:href="#icon-rss"></use>
@@ -66,6 +68,7 @@ issue: 80
           {%- endfor -%}
         </ol>
       </article>
+
       <article class="feeds__section">
         <h2 class="h3">Recent releases <a href="/releasefeed.xml" aria-label="RSS feed for the Releases of the 11ty Bundle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <use xlink:href="#icon-rss"></use>
@@ -78,13 +81,14 @@ issue: 80
             <use xlink:href="#icon-github"></use>
             </svg>
             <a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time>
+            <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
           {% endfor %}
           </li>
         </ol>
       </article>
   </div>
 </div>
+
 <div class="section surface-mid" data-pagefind-ignore="all">
   <div class="container">
     <h2 class="h3">Recent starters</h2>
@@ -123,7 +127,7 @@ issue: 80
           <a href="/authors/{{ item.slugifiedAuthor }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>
           <ul role="list" class="author-links">
-            {{ item.origin | getAuthorIcons | safe }}
+            {{ item | getAuthorIcons | safe }}
           </ul>
         </div>
       </div>

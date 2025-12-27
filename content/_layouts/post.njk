@@ -56,7 +56,7 @@ channelsPage: true
               {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
               <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
               <ul role="list" class="author-links">
-                {{ authorRecord.origin | getAuthorIcons | safe }}
+                {{ authorRecord | getAuthorIcons | safe }}
               </ul>
               <div class="categories-list">
                 <strong class="visually-hidden">Categories</strong>

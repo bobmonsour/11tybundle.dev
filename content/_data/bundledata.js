@@ -6,9 +6,9 @@
 
 import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
-import { filters } from "../_config/filters/index.js";
 import slugify from "@sindresorhus/slugify";
 
+import { getDescription } from "../_config/filters/getdescription.js";
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
 // for access to starter data from their GitHub repos
@@ -45,7 +45,7 @@ export default async function () {
   } else {
     // Development: Load from local file
     const localData = await import(
-      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb.json",
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledbtest.json",
       {
         with: { type: "json" },
       }
@@ -69,6 +69,8 @@ export default async function () {
     "slugifiedTitle",
     "slugifiedAuthor",
     "formattedDate",
+    "socialLinks",
+    "favicon",
   ];
   const stringFields = [
     "Title",
@@ -78,6 +80,7 @@ export default async function () {
     "slugifiedTitle",
     "slugifiedAuthor",
     "formattedDate",
+    "favicon",
   ];
 
   for (let item of bundleRecords) {
@@ -116,10 +119,11 @@ export default async function () {
     }
   }
 
-  // Create rawFirehose with all blog posts
-  const rawFirehose = bundleRecords
+  // Create Firehose with all blog posts
+  const firehose = bundleRecords
     .filter((item) => item["Type"] === "blog post" && !item["Skip"])
     .sort((a, b) => new Date(b.Date) - new Date(a.Date));
+  const postCount = firehose.length;
 
   // **************
   // generate a sorted array of author objects, sorted either
@@ -159,97 +163,31 @@ export default async function () {
 
     const authorMap = new Map();
 
-    // Timing trackers for enrichment operations
-    const timing = {
-      description: { total: 0, count: 0 },
-      favicon: { total: 0, count: 0 },
-      rssLink: { total: 0, count: 0 },
-      socialLinks: { total: 0, count: 0 },
-    };
-
     for (let item of posts) {
       // Skip items with missing author names
       if (!item.Author) continue;
       if (item.Skip) continue;
 
       const existing = authorMap.get(item.Author);
-      const origin = item.AuthorSite || filters.getOrigin(item.Link);
 
       if (existing) {
         // Author exists, increment count
         existing.count += 1;
       } else {
-        // New author - create entry with timed enrichment calls
-        let startTime, endTime;
-
-        startTime = performance.now();
-        const description = await filters.getDescription(origin);
-        endTime = performance.now();
-        timing.description.total += endTime - startTime;
-        timing.description.count++;
-
-        startTime = performance.now();
-        const favicon = await filters.getFavicon(origin, "post");
-        endTime = performance.now();
-        timing.favicon.total += endTime - startTime;
-        timing.favicon.count++;
-
-        startTime = performance.now();
-        const rssLink = await filters.getRSSLink(origin);
-        endTime = performance.now();
-        timing.rssLink.total += endTime - startTime;
-        timing.rssLink.count++;
-
-        startTime = performance.now();
-        const socialLinks = await filters.getSocialLinks(origin);
-        endTime = performance.now();
-        timing.socialLinks.total += endTime - startTime;
-        timing.socialLinks.count++;
-
+        // New author, add to map
         authorMap.set(item.Author, {
           name: item.Author,
           slugifiedAuthor: item.slugifiedAuthor,
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
-          origin: origin,
-          description,
-          favicon,
-          rssLink,
-          socialLinks,
+          origin: item.AuthorSite,
+          description: await getDescription(item.AuthorSite),
+          favicon: item.favicon,
+          rssLink: item.rssLink,
+          socialLinks: item.socialLinks,
         });
       }
     }
-
-    // Report average timing for each enrichment operation
-    console.log("\n--- Author Enrichment Timing (Averages) ---");
-    console.log(
-      `Description:  ${(
-        timing.description.total / timing.description.count
-      ).toFixed(2)}ms (${timing.description.count} calls)`
-    );
-    console.log(
-      `Favicon:      ${(timing.favicon.total / timing.favicon.count).toFixed(
-        2
-      )}ms (${timing.favicon.count} calls)`
-    );
-    console.log(
-      `RSS Link:     ${(timing.rssLink.total / timing.rssLink.count).toFixed(
-        2
-      )}ms (${timing.rssLink.count} calls)`
-    );
-    console.log(
-      `Social Links: ${(
-        timing.socialLinks.total / timing.socialLinks.count
-      ).toFixed(2)}ms (${timing.socialLinks.count} calls)`
-    );
-    console.log(
-      `Total:        ${(
-        timing.description.total +
-        timing.favicon.total +
-        timing.rssLink.total +
-        timing.socialLinks.total
-      ).toFixed(2)}ms\\n`
-    );
 
     // Convert map to array of objects
     const authorArray = Array.from(authorMap).map(([name, data]) => ({
@@ -271,7 +209,7 @@ export default async function () {
   // Build author data FIRST so we can reuse slugified names and favicons
   // when enriching posts (avoiding ~1,600 duplicate operations)
   // **************
-  const authorsBaseData = await authorList(rawFirehose, "name");
+  const authorsBaseData = await authorList(firehose, "name");
   const authors = authorsBaseData;
   const authorsByCount = [...authorsBaseData].sort((a, b) => b.count - a.count);
   const authorCount = authors.length;
@@ -279,161 +217,27 @@ export default async function () {
     ...new Set(authors.map((author) => author.firstLetter)),
   ];
 
-  // enrich each post in the firehose with:
-  //  - the slugified title
-  //  - the slugified author name (from pre-built author data)
-  //  - post description
-  //  - formatted date
-  //  - favicon (from pre-built author data)
-  const enrichFirehose = async (
-    rawFirehoseData,
-    appliedFilters,
-    authorsData
-  ) => {
-    // Create Map for O(1) author lookups
-    const authorsByName = new Map(authorsData.map((a) => [a.name, a]));
-
-    // Timing trackers for enrichment operations
-    const timing = {
-      description: { total: 0, count: 0 },
-      favicon: { total: 0, count: 0 },
-    };
-
-    const results = [];
-    for (const post of rawFirehoseData) {
-      const origin = post.AuthorSite || appliedFilters.getOrigin(post.Link);
-      const author = authorsByName.get(post.Author);
-
-      let description;
-      if (post.hasOwnProperty("description")) {
-        // Use existing description from bundleDB (regardless of value)
-        description = post.description;
-      } else {
-        // Fetch description only if property doesn't exist
-        const startTime = performance.now();
-        description = await appliedFilters.getDescription(post.Link);
-        const endTime = performance.now();
-        timing.description.total += endTime - startTime;
-        timing.description.count++;
-      }
-
-      let favicon;
-      if (author?.favicon) {
-        // Use cached author favicon (no timing needed)
-        favicon = author.favicon;
-      } else {
-        const startTime = performance.now();
-        favicon = await appliedFilters.getFavicon(origin, "post");
-        const endTime = performance.now();
-        timing.favicon.total += endTime - startTime;
-        timing.favicon.count++;
-      }
-
-      results.push({
-        ...post,
-        description,
-        favicon,
-      });
-    }
-
-    // Report average timing for each enrichment operation
-    console.log("\n--- Firehose Enrichment Timing (Averages) ---");
-    if (timing.description.count > 0) {
-      console.log(
-        `Description:  ${(
-          timing.description.total / timing.description.count
-        ).toFixed(2)}ms (${timing.description.count} calls - fetched only)`
-      );
-    } else {
-      console.log(`Description:  All descriptions from bundleDB (0 fetches)`);
-    }
-    if (timing.favicon.count > 0) {
-      console.log(
-        `Favicon:      ${(timing.favicon.total / timing.favicon.count).toFixed(
-          2
-        )}ms (${timing.favicon.count} calls - fallback only)`
-      );
-    }
-    console.log(
-      `Total:        ${(
-        timing.description.total + timing.favicon.total
-      ).toFixed(2)}ms\n`
-    );
-
-    return results;
-  };
-
-  const firehose = await enrichFirehose(rawFirehose, filters, authors);
-  const postCount = firehose.length;
-
   // **************
   // generate an array of the most recent 11 releases
   // in descending date order; used on the home page
   // **************
-  const rawReleaseList = bundleRecords
+  const releaseList = bundleRecords
     .filter((item) => item["Type"] === "release")
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
-
-  const enrichReleaseList = async (rawReleaseListData, appliedFilters) => {
-    const results = [];
-    for (const release of rawReleaseListData) {
-      const description = release.hasOwnProperty("description")
-        ? release.description
-        : await appliedFilters.getDescription(release.Link);
-
-      results.push({
-        ...release,
-        description,
-        formattedDate: await appliedFilters.formatItemDate(release.Date),
-      });
-    }
-    return results;
-  };
-
-  const releaseList = await enrichReleaseList(rawReleaseList, filters);
   const releaseCount = releaseList.length;
 
   // **************
   // generate a list of sites, an array of all sites in
   // descending date order
   // **************
-  const rawSiteList = bundleRecords
+  const siteList = bundleRecords
     .filter((item) => item["Type"] === "site" && !item["Skip"])
     .sort((a, b) => {
       return new Date(b.Date) - new Date(a.Date);
     });
-
-  const enrichSiteList = async (rawSiteListData, appliedFilters) => {
-    const results = [];
-    for (const site of rawSiteListData) {
-      const description = site.hasOwnProperty("description")
-        ? site.description
-        : await appliedFilters.getDescription(site.Link);
-
-      results.push({
-        ...site,
-        description,
-        favicon: await appliedFilters.getFavicon(site.Link, "site"),
-        formattedDate: await appliedFilters.formatItemDate(site.Date),
-      });
-    }
-    return results;
-  };
-
-  const siteList = await enrichSiteList(rawSiteList, filters);
   const siteCount = siteList.length;
-
-  // Timing: SiteList creation
-  const siteListStartTime = performance.now();
-  // siteList already created above
-  const siteListEndTime = performance.now();
-  console.log(
-    `SiteList creation: ${(siteListEndTime - siteListStartTime).toFixed(
-      2
-    )}ms (${siteCount} sites)`
-  );
 
   // **************
   // generate two lists of starter projects, one ordered by date of
