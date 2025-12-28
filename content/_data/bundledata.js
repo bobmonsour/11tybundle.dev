@@ -8,7 +8,6 @@ import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import slugify from "@sindresorhus/slugify";
 
-import { getDescription } from "../_config/filters/getdescription.js";
 import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
 
 // for access to starter data from their GitHub repos
@@ -181,7 +180,7 @@ export default async function () {
           firstLetter: getFirstLetterOfLastWord(item.Author),
           count: 1,
           origin: item.AuthorSite,
-          description: await getDescription(item.AuthorSite),
+          description: item.AuthorSiteDescription,
           favicon: item.favicon,
           rssLink: item.rssLink,
           socialLinks: item.socialLinks,
