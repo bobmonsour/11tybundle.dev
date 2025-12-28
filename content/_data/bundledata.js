@@ -45,7 +45,7 @@ export default async function () {
   } else {
     // Development: Load from local file
     const localData = await import(
-      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledbtest.json",
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb.json",
       {
         with: { type: "json" },
       }
