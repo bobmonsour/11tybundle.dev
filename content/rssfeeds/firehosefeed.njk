@@ -14,7 +14,7 @@ permalink: /firehosefeed.xml
 		<item>
 			<title>{{ item.Title }}</title>
 			<link>{{ item.Link }}</link>
-			<description>{{ item.description }}</description>
+			<description>{{ item.description | safe }}</description>
 			<pubDate>{{ item.Date | formatFirehoseDate }}</pubDate>
 			<dc:creator>{{ item.Author }}</dc:creator>
 			<guid>{{ item.Link }}</guid>
