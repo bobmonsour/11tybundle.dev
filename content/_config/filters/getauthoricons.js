@@ -7,7 +7,7 @@ const getWebIcon = (author) => {
 };
 
 // get the rss icon HTML for an aothor's web origin
-const getRSSIcon = async (author) => {
+const getRSSIcon = (author) => {
   let rssLink = author.rssLink;
   return rssLink === ""
     ? ""
@@ -17,7 +17,7 @@ const getRSSIcon = async (author) => {
 };
 
 // get the social media icons HTML for an aothor's web origin
-export async function getSocialIcons(author) {
+export function getSocialIcons(author) {
   const socialLinks = author.socialLinks;
   // console.log("Social links: ", socialLinks);
 
@@ -48,12 +48,12 @@ export async function getSocialIcons(author) {
   return socialIcons;
 }
 
-export async function getAuthorIcons(author) {
+export function getAuthorIcons(author) {
   // authorIconCallCount++;
   // console.log(`getAuthorIcons called ${authorIconCallCount} times`);
-  const webIcon = await getWebIcon(author);
-  const rssIcon = await getRSSIcon(author);
-  const socialIcons = await getSocialIcons(author);
+  const webIcon = getWebIcon(author);
+  const rssIcon = getRSSIcon(author);
+  const socialIcons = getSocialIcons(author);
 
   let allIcons = "";
   if (webIcon !== "") {
