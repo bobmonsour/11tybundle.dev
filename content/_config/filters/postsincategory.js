@@ -8,6 +8,7 @@ export const postsInCategory = (bundleitems, category, count) => {
     } else {
       sliceCount = count;
     }
+    console.log("Slice count:", sliceCount);
     return item.Type == "blog post" && item.Categories.includes(category)
       ? true
       : false;
