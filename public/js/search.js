@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         result.meta &&
         result.meta.title &&
-        result.meta.description &&
         result.meta.title.startsWith("Author: ")
       ) {
         result.excerpt = result.meta.description;
