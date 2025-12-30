@@ -96,7 +96,10 @@ channelsPage: true
           {%- if previousPost %}<li><a href="{{ previousPost.url }}" class="button"><svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-left"></use>
-            </svg> Issue {{ bundleIssue - 1 }}</a></li>{% endif %}
+            </svg> Issue {{ bundleIssue - 1 }}</a></li>
+          {% else %}
+            <li>&nbsp;&nbsp;</li>
+          {% endif %}
           {%- if nextPost %}<li><a href="{{ nextPost.url }}" class="button"> Issue {{ bundleIssue + 1 }}<svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-right"></use>
