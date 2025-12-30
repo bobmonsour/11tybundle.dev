@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showImages: false,
     showEmptyFilters: false,
     showSubResults: true,
-    sort: { date: "desc", weight: "desc" },
     processResult: function (result) {
       // console.log("processResult called with:", result);
 
@@ -40,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         result.meta &&
         result.meta.title &&
+        result.meta.description &&
         result.meta.title.startsWith("Author: ")
       ) {
         result.excerpt = result.meta.description;
