@@ -56,67 +56,103 @@ export default async function () {
   console.log(`Fetched bundleRecords: ${bundleRecords.length} records`);
 
   // **************
-  // firehose is an array of all blog posts in descending date order
+  // Verify presence of required fields for each type
   // **************
-  // verify the presence of required fields for each blog post
-  const requiredFields = [
+
+  // Blog post required fields
+  const blogPostFields = [
+    "Issue",
+    "Type",
     "Title",
-    "Author",
-    "Date",
-    "Link",
-    "Categories",
     "slugifiedTitle",
-    "slugifiedAuthor",
+    "Link",
+    "Date",
     "formattedDate",
+    "description",
+    "Author",
+    "slugifiedAuthor",
+    "AuthorSite",
+    "AuthorSiteDescription",
     "socialLinks",
     "favicon",
+    "rssLink",
+    "Categories",
   ];
-  const stringFields = [
+
+  // Release required fields
+  const releaseFields = [
+    "Issue",
+    "Type",
     "Title",
-    "Author",
-    "Date",
+    "description",
     "Link",
-    "slugifiedTitle",
-    "slugifiedAuthor",
+    "Date",
+    "formattedDate",
+  ];
+
+  // Site required fields
+  const siteFields = [
+    "Issue",
+    "Type",
+    "Title",
+    "description",
+    "Link",
+    "Date",
     "formattedDate",
     "favicon",
   ];
 
+  // Validate blog posts
   for (let item of bundleRecords) {
     if (item["Type"] === "blog post" && !item["Skip"]) {
-      const missingFields = [];
-      const wrongTypeFields = [];
+      const missingFields = blogPostFields.filter((field) => !(field in item));
 
-      // Check each required field for presence and correct type for the stringFields
-      requiredFields.forEach((field) => {
-        if (!item[field]) {
-          missingFields.push(field);
-        } else if (
-          stringFields.includes(field) &&
-          typeof item[field] !== "string"
-        ) {
-          wrongTypeFields.push(field);
-        }
-      });
-
-      // Log error if any fields are missing or have wrong types
-      if (missingFields.length > 0 || wrongTypeFields.length > 0) {
+      if (missingFields.length > 0) {
         const titleDisplay = item["Title"] || "[No Title]";
-        const parts = [];
-        if (missingFields.length > 0) {
-          parts.push(`missing: ${missingFields.join(", ")}`);
-        }
-        if (wrongTypeFields.length > 0) {
-          parts.push(`not strings: ${wrongTypeFields.join(", ")}`);
-        }
         console.error(
-          `Error: Blog post "${titleDisplay}" has validation issues (${parts.join(
-            "; "
-          )})`
+          `Error: Blog post "${titleDisplay}" is missing properties: ${missingFields.join(
+            ", "
+          )}`
         );
       }
     }
   }
+
+  // Validate releases
+  for (let item of bundleRecords) {
+    if (item["Type"] === "release") {
+      const missingFields = releaseFields.filter((field) => !(field in item));
+
+      if (missingFields.length > 0) {
+        const titleDisplay = item["Title"] || "[No Title]";
+        console.error(
+          `Error: Release "${titleDisplay}" is missing properties: ${missingFields.join(
+            ", "
+          )}`
+        );
+      }
+    }
+  }
+
+  // Validate sites
+  for (let item of bundleRecords) {
+    if (item["Type"] === "site" && !item["Skip"]) {
+      const missingFields = siteFields.filter((field) => !(field in item));
+
+      if (missingFields.length > 0) {
+        const titleDisplay = item["Title"] || "[No Title]";
+        console.error(
+          `Error: Site "${titleDisplay}" is missing properties: ${missingFields.join(
+            ", "
+          )}`
+        );
+      }
+    }
+  }
+
+  // **************
+  // firehose is an array of all blog posts in descending date order
+  // **************
 
   // Create Firehose with all blog posts
   const firehose = bundleRecords
