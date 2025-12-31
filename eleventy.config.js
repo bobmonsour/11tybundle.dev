@@ -17,6 +17,7 @@ export default function (eleventyConfig) {
     "src/assets/img/",
     "src/assets/js/",
     "src/robots.txt",
+    "_redirects",
   ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
   // Add local filters and shortcodes
