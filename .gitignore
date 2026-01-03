@@ -10,3 +10,4 @@ scripts/
 .vscode
 .github/
 log/
+content/screenshots/*
