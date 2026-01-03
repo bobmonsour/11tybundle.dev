@@ -1,6 +1,9 @@
+---
+permalink: /showcase/
+---
 <header class="main-header">
   <div class="container">
-    <h1>Showcase <data class="count" value="600">600</data></h1>
+    <h1>Showcase <data class="count" {{ showcasedata.siteCount }}">{{ showcasedata.siteCount | singleComma }}</data></h1>
     <nav>
       <ul role="list">
         <li><a href="/showcase" class="current">Sites</a></li>
@@ -11,7 +14,13 @@
 </header>
 <div class="section" data-pagefind-ignore="all">
   <div class="showcase__grid">
-    <figure class="showcase__card showcase--category">
+    {% for site in showcasedata.sites %}
+      {% if loop.index <= 10 %}
+        <img src="{{ site.screenshotpath }}" alt="Screenshot of {{ site.title }}" loading="lazy" width="320" height="180">
+      {% endif %}
+    {% endfor %}
+
+    {# <figure class="showcase__card showcase--category">
       <img
         src="./img/damianwalsh-co-uk.png"
         height="1080"
@@ -29,101 +38,7 @@
           <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
         </div>
       </figcaption>
-    </figure>
-    <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure>
-    <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure>
-    <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure>
-    <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure>
-    <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure>
+    </figure> #}
+
   </div>
 </div>
