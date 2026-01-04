@@ -14,10 +14,13 @@
 	}
 }
 ---
-<header class="main-header">
+<header class="main-header" data-pagefind-body>
   <div class="container">
     {{ site.favicon | genFaviconHtml(1) | safe }}
-    <h1 data-pagefind-weight={{ pfweights.showcaseDetail }}>{{ site.title | safe }}<span class="visually-hidden"> - Showcase</span></h1>
+    <h1 data-pagefind-ignore>{{ site.title | safe }}</h1>
+    <p class="visually-hidden" data-pagefind-meta="title" data-pagefind-weight={{ pfweights.showcaseDetail }}>Showcase: {{ site.title | upper | safe }}</p>
+    <p class="visually-hidden" data-pagefind-meta="description">{{ site.description | safe }}</p>
+
 
       <div class="details" data-pagefind-ignore="all">
         {% if site.description %}
