@@ -1,0 +1,85 @@
+---js
+{
+	eleventyComputed: {
+		title: "{{ site.title }}",
+		description: "{{ site.description | safe }}",
+		permalink: "/showcase/{{ site.link | getHostname | slugify }}/",
+	},
+	pagination:	{
+		data: "showcasedata.sites",
+		size: 1,
+		alias: "site",
+		addAllPagesToCollections: "true",
+    before: (data) => data.slice(0, 50)
+	}
+}
+---
+<header class="main-header">
+  <div class="container">
+    {{ site.favicon | genFaviconHtml(1) | safe }}
+    <h1 data-pagefind-weight={{ pfweights.showcaseDetail }}>{{ site.title | safe }}<span class="visually-hidden"> - Showcase</span></h1>
+
+      <div class="details" data-pagefind-ignore="all">
+        {% if site.description %}
+          <p>{{ site.description | safe }}</p>
+        {% else %}
+          <p>(no description)</p>
+        {% endif %}
+      </div>
+
+    {% if site.leaderboardLink %}
+      <nav>
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <use xlink:href="#icon-eleventy"></use>
+        </svg>
+        <a href="{{ site.leaderboardLink }}">Leaderboard Link</a>
+      </nav>
+    {% endif %}
+
+  </div>
+</header>
+
+<div class="section">
+  <div class="container flow">
+    <a href="/showcase" class="button">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg> Back to the showcase
+    </a>
+
+    <figure class="showcase__card">
+      <img
+        src="{{ site.screenshotpath }}"
+        height="1080"
+        sizes="(min-width: 1920px) 1920px, 100vw"
+        alt="Screenshot of {{ site.title | safe }}"
+        eleventy:widths="640,1366,1920"
+        >
+      <figcaption>
+        <a href="{{ site.link }}">{{ site.link }}</a>
+      </figcaption>
+    </figure>
+
+    <nav>
+      {%- set previousPage = collections.showcasePage | getPreviousCollectionItem %}
+      {%- set nextPage = collections.showcasePage | getNextCollectionItem %}
+      {%- if nextPage or previousPage %}
+        <ol role="list" class="pagination">
+          {%- if previousPage %}<li><a href="{{ previousPage.url }}" class="button"><svg width="20" height="20"
+              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg> Previous</a></li>
+          {% else %}
+            <li>&nbsp;&nbsp;</li>
+          {% endif %}
+          {%- if nextPage %}<li><a href="{{ nextPage.url }}" class="button"> Next<svg width="20" height="20"
+              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg></a></li>{% endif %}
+        </ol>
+      {%- endif %}
+    </nav>
+
+
+  </div>
+</div>

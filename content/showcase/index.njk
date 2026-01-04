@@ -7,7 +7,7 @@ permalink: /showcase/
     <nav>
       <ul role="list">
         <li><a href="/showcase" class="current">Sites</a></li>
-        <li><a href="">RSS</a></li>
+        <li><a href="/sitesfeed.xml">RSS</a></li>
       </ul>
     </nav>
   </div>
@@ -15,30 +15,28 @@ permalink: /showcase/
 <div class="section" data-pagefind-ignore="all">
   <div class="showcase__grid">
     {% for site in showcasedata.sites %}
-      {% if loop.index <= 10 %}
-        <img src="{{ site.screenshotpath }}" alt="Screenshot of {{ site.title }}" loading="lazy" width="320" height="180">
+      {% if loop.index <= 50 %}
+        <figure class="showcase__card showcase--category">
+          <img
+            src="{{ site.screenshotpath }}"
+            height="1080"
+            sizes="(min-width: 1920px) 1920px, 100vw"
+            alt="Screenshot of {{ site.title | safe }}"
+            eleventy:widths="640,1366,1920"
+            >
+          <figcaption>
+            {{ site.favicon | genFaviconHtml(1) | safe }}
+            <a href="{{ site.link | getHostname | slugify }}">{{ site.link }}</a>
+              <div class="details visually-hidden">
+                {% if site.description %}
+                    <p>{{ site.description | safe }}</p>
+                {% else %}
+                    <p>(no description)</p>
+                {% endif %}
+              </div>
+          </figcaption>
+        </figure>
       {% endif %}
     {% endfor %}
-
-    {# <figure class="showcase__card showcase--category">
-      <img
-        src="./img/damianwalsh-co-uk.png"
-        height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
-        alt=""
-        eleventy:widths="640,1366,1920"
-        >
-      <figcaption>
-        <!-- <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true">
-                <use xlink:href="#icon-person-circle"></use>
-              </svg> -->
-        <img src="/img/showcase/damianwalsh-co-uk.ico" class="favicon" alt="" eleventy:ignore>
-        <a href="damianwalsh-co-uk">damianwalsh.co.uk</a>
-        <div class="details visually-hidden">
-          <p>Designer (Interaction/UX/UI) based in Manchester, UK</p>
-        </div>
-      </figcaption>
-    </figure> #}
-
   </div>
 </div>
