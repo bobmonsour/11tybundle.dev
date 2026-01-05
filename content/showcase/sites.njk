@@ -23,9 +23,9 @@
 
       <div class="details" data-pagefind-ignore="all">
         {% if site.description %}
-          <p>{{ site.description | safe }}</p>
+          <p>{{ site.description | truncate(140) | safe }}</p>
         {% else %}
-          <p>(no description)</p>
+          <p>&nbsp;</p>
         {% endif %}
       </div>
 

@@ -33,7 +33,7 @@ permalink: /showcase/
                 {% if site.description %}
                     <p>{{ site.description | truncate(180) | safe }}</p>
                 {% else %}
-                    <p>(no description)</p>
+                    <p>{{ site.title | safe }}</p>
                 {% endif %}
               </div>
           </figcaption>
