@@ -10,7 +10,6 @@
 		size: 1,
 		alias: "site",
 		addAllPagesToCollections: "true",
-    before: (data) => data.slice(0, 50)
 	}
 }
 ---
@@ -54,9 +53,9 @@
       <img
         src="{{ site.screenshotpath }}"
         height="1080"
-        sizes="(min-width: 1920px) 1920px, 100vw"
+        sizes="100vw"
         alt="Screenshot of {{ site.title | safe }}"
-        eleventy:widths="640,1366,1920"
+        eleventy:widths="640,1280,1920"
         >
       <figcaption>
         <a href="{{ site.link }}">{{ site.link }}</a>

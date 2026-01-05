@@ -1,4 +1,6 @@
 ---
+title: 11ty Showcase
+description: "A showcase of websites built with the Eleventy static site generator."
 permalink: /showcase/
 ---
 <header class="main-header">
@@ -15,14 +17,14 @@ permalink: /showcase/
 <div class="section" data-pagefind-ignore="all">
   <div class="showcase__grid">
     {% for site in showcasedata.sites %}
-      {% if loop.index <= 50 %}
         <figure class="showcase__card showcase--category">
           <img
             src="{{ site.screenshotpath }}"
             height="1080"
-            sizes="(min-width: 1920px) 1920px, 100vw"
+            sizes="480px, 720px, 960px, 1280px, 1920px"
             alt="Screenshot of {{ site.title | safe }}"
-            eleventy:widths="640,1366,1920"
+            eleventy:widths="640,960,1920"
+            {% if loop.index < 10 %}loading="eager"{% else %}loading="lazy"{% endif %}
             >
           <figcaption>
             {{ site.favicon | genFaviconHtml(1) | safe }}
@@ -36,7 +38,6 @@ permalink: /showcase/
               </div>
           </figcaption>
         </figure>
-      {% endif %}
     {% endfor %}
   </div>
 </div>
