@@ -21,7 +21,7 @@ permalink: /showcase/
           <img
             src="{{ site.screenshotpath }}"
             height="1080"
-            sizes="480px, 720px, 960px, 1280px, 1920px"
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt="Screenshot of {{ site.title | safe }}"
             eleventy:widths="640,960,1920"
             {% if loop.index < 6 %}loading="eager"{% else %}loading="lazy"{% endif %}
@@ -31,7 +31,7 @@ permalink: /showcase/
             <a href="{{ site.link | getHostname | slugify }}">{{ site.link }}</a>
               <div class="details visually-hidden">
                 {% if site.description %}
-                    <p>{{ site.description | safe }}</p>
+                    <p>{{ site.description | truncate(180) | safe }}</p>
                 {% else %}
                     <p>(no description)</p>
                 {% endif %}
