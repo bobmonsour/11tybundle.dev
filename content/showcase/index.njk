@@ -24,7 +24,7 @@ permalink: /showcase/
             sizes="480px, 720px, 960px, 1280px, 1920px"
             alt="Screenshot of {{ site.title | safe }}"
             eleventy:widths="640,960,1920"
-            {% if loop.index < 10 %}loading="eager"{% else %}loading="lazy"{% endif %}
+            {% if loop.index < 6 %}loading="eager"{% else %}loading="lazy"{% endif %}
             >
           <figcaption>
             {{ site.favicon | genFaviconHtml(1) | safe }}

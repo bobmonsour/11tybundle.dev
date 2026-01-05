@@ -6,7 +6,7 @@ export default async function () {
     }
   );
 
-  const sites = localData.default;
+  const sites = localData.default.filter((site) => site.skip !== true);
   const siteCount = sites.length;
   console.log(`Showcase site count: ${siteCount}`);
   return { sites, siteCount };
