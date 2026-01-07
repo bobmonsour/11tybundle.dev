@@ -28,7 +28,7 @@
 
 <nav class="section" data-pagefind-ignore="all">
   <div class="container">
-    <ul role="list" id="skip-links-years" class="skip-links">
+    <ul role="list" class="skip-links">
       {% for year in bundledata.firehoseYears %}
         <li><a href="{% if loop.first %}/firehose/{% else %}/firehose/{{ year }}/{% endif %}">{{ year }}</a></li>
       {% endfor %}
