@@ -11,7 +11,6 @@
 //    duration: "0s" will always fetch new data (works with any unit, e.g. "0m", "0h").
 
 export const cacheDuration = {
-  aiSummaryHtml: "1y",
   bundleDB: "0s",
   descHtml: "1y",
   faviconHtml: "1y",
