@@ -35,6 +35,9 @@
     border-radius: 999px;
     margin: var(--space-2xs);
     padding: var(--space-3xs) var(--space-2xs);
+    [data-theme=dark] & {
+      background: var(--text-colour-1);
+    }
   }
 }
 
@@ -61,6 +64,8 @@
       margin-block-start: unset;
     }
   }
+
+
 
   .favicon {
     aspect-ratio: 1;

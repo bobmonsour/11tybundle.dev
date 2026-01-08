@@ -73,7 +73,7 @@
     text-wrap: balance;
   }
   .lockup {
-    margin-block: .5lh;
+    margin-block: 0.5lh;
     display: flex;
     gap: var(--space-3xs);
     background: oklch(100 0 0);
@@ -119,4 +119,9 @@
 .site-footer__smallprint {
   grid-area: smallprint;
   justify-self: center;
+}
+
+#newsletter:target {
+  outline: 4px dotted var(--primary-6);
+  outline-offset: -4px;
 }

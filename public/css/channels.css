@@ -221,6 +221,9 @@
     gap: var(--grid-gutter);
     grid-template-columns: minmax(min-content, 1fr) 11fr;
     align-items: start;
+    > h2 {
+      display: flex;
+    }
     .directory__grid {
       margin-block-start: unset;
     }
@@ -252,16 +255,21 @@
     border-left: unset;
     border-right: unset;
   }
+  &:has(.bundleitem-highlight) {
+    outline: 4px dotted var(--primary-6);
+    outline-offset: -4px;
+  }
 }
 
 .directory--category {
+  > h2,
   > h3 {
     display: flex;
     gap: var(--space-s);
     justify-content: space-between;
     align-items: flex-start;
     margin-inline: calc(var(--space-s) * -1);
-    margin-block-start: calc(var(--space-s) * -1);
+    margin-block-start: calc(var(--space-s) * -1) !important;
     padding: var(--space-s);
     background: var(--surface-fore);
     font-size: var(--step-1);
@@ -294,8 +302,6 @@
   &:has(.bundleitem-highlight) {
     outline: 4px dotted var(--primary-6);
     outline-offset: -4px;
-    /* outline: 2px dotted var(--primary-5);
-    outline-offset: 2px; */
   }
   &:has(.favicon) {
     grid-template-columns: auto 1fr;
@@ -314,7 +320,7 @@
     grid-area: favicon;
   }
 
-  a[href^="http"],
+  > a[href^="http"],
   h3[id^="post-"] {
     grid-area: link;
     font-family: var(--font-display-bold);
