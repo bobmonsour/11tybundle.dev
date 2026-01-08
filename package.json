@@ -5,9 +5,9 @@
   "main": ".eleventy.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental",
+    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
     "startdry": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --dryrun",
-    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
+    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "workersbuild": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "deploy": "npm run workersbuild && npm run postbuild && npx wrangler deploy --assets=./_site",

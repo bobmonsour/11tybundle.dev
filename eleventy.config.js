@@ -57,7 +57,6 @@ export default function (eleventyConfig) {
     formats: ["webp", "jpeg"],
     svgShortCircuit: true,
     widths: [640, 1280, 1920],
-    transformOnRequest: true,
     htmlOptions: {
       imgAttributes: {
         decoding: "async",
