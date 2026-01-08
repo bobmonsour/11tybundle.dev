@@ -1,0 +1,4 @@
+{% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
+{% set posts = bundledata.firehose | getBundleItems(bundleIssue, "blog post") %}
+{% set sites = bundledata.siteList | getBundleItems(bundleIssue, "site") %}
+<p class="visually-hidden">{% if releases.length > 0 %}<a href="https://11tybundle.dev/blog/11ty-bundle-{{ bundleIssue }}/#ql-releases">{{ releases.length | countLabel("release")}}</a>{% endif %}{% if posts.length > 0 %} &middot; <a href="https://11tybundle.dev/blog/11ty-bundle-{{ bundleIssue }}/#ql-posts">{{ posts.length | countLabel("post") }}</a>{% endif %}{% if sites.length > 0 %} &middot; <a href="https://11tybundle.dev/blog/11ty-bundle-{{ bundleIssue }}/#ql-sites">{{ sites.length | countLabel("site") }}</a>{% endif %}</p>

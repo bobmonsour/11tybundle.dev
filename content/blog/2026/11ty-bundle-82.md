@@ -53,4 +53,6 @@ Enjoy!
 
 **Eleventy Live!** For those wondering where the band named _Eleventy_ played back in 2018, we have that info for you right here. [Check out the playlist](https://archive.org/details/Eleventy2018-09-02/Eleventy2018-09-02t02.flac). I really like that first song, Un-Blue. And then there's the band intros. Must've been before Zach joined ;-).
 
+{% include "partials/rss-item-links.njk" %}
+
 Until next time...
