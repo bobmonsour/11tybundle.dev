@@ -38,7 +38,7 @@ Redesigned the website to make it even easier to discover how the community is u
 
 Here's what we've done:
 
-- ~~A new Showcase section featuring screenshots of sites built with Eleventy~~ Not quite ready!
+- A new [showcase](/showcase/) section featuring screenshots of sites built with Eleventy
 - An Author spotlight on the homepage highlighting voices from across the community.
 - Dates appear alongside external links to show how recent the content is—especially on pages we know from feedback are used for reference and learning.
 - More detailed author profiles include descriptions, favicons, and social links.
@@ -47,3 +47,7 @@ Here's what we've done:
 I'm very happy with the result and hope you find it useful. I don't know if this thing will continue to have legs or how long I'll be able to sustain it. If you want to know more about me, your best bet is to check out the [about page](https://bobmonsour.com/about/) of my personal site.
 
 The website was (mostly!) designed in-browser using fluid type/space scales and tokens generated at [Utopia.fyi](https://utopia.fyi/). It's built with Eleventy, hosted on Cloudflare, and the source code is available on GitHub.
+
+### Jan 2026
+
+From beta to full launch...we're live! See the [11ty Bundle Issue 82](/blog/2026/11ty-bundle-82/) for details about the new design and features.
