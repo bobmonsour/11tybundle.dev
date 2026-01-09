@@ -48,10 +48,12 @@
     <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
   {%endif %}
 
-  {# Fathom Analytics - only load in production #}
+  {# Fathom Analytics - only load in production - 2nd line here was for beta #}
   {% if site.env === "production" %}
-	  <script src="https://cdn.usefathom.com/script.js" data-site="GOQNUYQW" defer></script>
+	  <script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
+	  {# <script src="https://cdn.usefathom.com/script.js" data-site="GOQNUYQW" defer></script> #}
   {% endif %}
+
 
   {# load the bundles js files #}
     {% js %}
@@ -77,10 +79,10 @@
 
 
   {# Improve RSS feed visibility #}
-	<link rel="alternate" href="{{ site.url }}feed.xml" title="RSS feed for the blog of the 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}firehosefeed.xml" title="RSS feed for the Firehose of the 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}sitesfeed.xml" title="RSS feed for the Sites of the 11ty Bundle" type="application/rss+xml">
-	<link rel="alternate" href="{{ site.url }}releasefeed.xml" title="RSS feed for the Releases of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="/feed.xml" title="RSS feed for the blog of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="/firehosefeed.xml" title="RSS feed for the Firehose of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="/sitesfeed.xml" title="RSS feed for the Sites of the 11ty Bundle" type="application/rss+xml">
+	<link rel="alternate" href="/releasefeed.xml" title="RSS feed for the Releases of the 11ty Bundle" type="application/rss+xml">
 
 	{# favicon settings #}
   <link rel="icon" href="/img/favicon.ico">
@@ -89,7 +91,7 @@
   {# Open Graph tags #}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:description" content="{{ description }}">
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:url" content="{{ page.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="/img/opengraph-image.jpg">
 	<meta property="og:image:alt" content="a cute illustration of the 11ty Bundle websiet">
