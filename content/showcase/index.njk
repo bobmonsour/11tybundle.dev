@@ -28,7 +28,7 @@ permalink: /showcase/
             >
           <figcaption>
             {{ site.favicon | genFaviconHtml(1) | safe }}
-            <a href="{{ site.link | getHostname | slugify }}">{{ site.link }}</a>
+            <a href="/showcase/{{ site.link | getHostname | slugify }}">{{ site.link }}</a>
               <div class="details visually-hidden">
                 {% if site.description %}
                     <p>{{ site.description | truncate(180) | safe }}</p>
