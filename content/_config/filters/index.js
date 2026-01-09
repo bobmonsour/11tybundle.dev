@@ -7,15 +7,10 @@ import {
   formatYMD,
   singleComma,
 } from "./datesandnumbers.js";
-import { fetchHtml } from "./fetchhtml.js";
 import { getBundleItems } from "./getbundleitems.js";
-import { getDescription } from "./getdescription.js";
 import { genFaviconHtml } from "./genfaviconhtml.js";
-import { getFavicon } from "./getfavicon.js";
 import { getIssueCounts } from "./getissuecounts.js";
 import { getOrigin, getHostname } from "./getorigin.js";
-import { getRSSLink } from "./getrsslink.js";
-import { getSocialLinks } from "./getsociallinks.js";
 import { getAuthorIcons, getSocialIcons } from "./getauthoricons.js";
 import { plainDate } from "./datesandnumbers.js";
 import { getAuthorRecord, postsByAuthor } from "./postsbyauthor.js";
@@ -31,18 +26,13 @@ export const filters = {
   formatFirehoseDate,
   formatNumber,
   formatYMD,
-  fetchHtml,
   getAuthorIcons,
   getSocialIcons,
   getBundleItems,
-  getDescription,
-  getFavicon,
   genFaviconHtml,
   getIssueCounts,
   getOrigin,
   getHostname,
-  getRSSLink,
-  getSocialLinks,
   getAuthorIcons,
   getAuthorRecord,
   plainDate,
