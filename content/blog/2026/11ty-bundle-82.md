@@ -37,7 +37,7 @@ Enjoy!
 
 **Got simple docs?** [ReallySimpleDocs](https://reallysimpledocs.com/) is here, offering _"A really simple documentation template built with 11ty and Tailwind."_
 
-**Alex Zappa brings the juice.** [Alex Zappa](https://alex.zappa.dev/) designed a new starter he calls Fresh Juice. There's a [GitHub repo](https://github.com/freshjuice-dev/freshjuice-11ty-starter#freshjuice-11ty-starter-aka-snappy-lemon) as well as a [live demo site](https://snappy-lemon.cloudvent.net/). He describes it as _"A modern 11ty starter theme with CloudCannon CMS integration, TailwindCSS, and Alpine.js."_
+**Alex Zappa brings the juice.** [Alex Zappa](https://alex.zappa.dev/) designed a new starter he calls _Electric Lime Starter_. There's a [GitHub repo](https://github.com/freshjuice-dev/electric-lime-11ty-starter#electric-lime-11ty-starter) as well as a [live demo site](https://electric-lime-starter.freshjuice.dev/). He describes it as _"A vibrant, fast, and accessible starter theme for building static websites with Eleventy, TailwindCSS v4, and Alpine.js."_
 
 **Vanessa Sickles' portfolio site.** [Vanessa Sickles](https://vanessasickles.dev/) describes [how she built her cool new portfolio site using Eleventy](https://vanessasickles.dev/projects/portfolio-site/).
 
