@@ -61,7 +61,7 @@
         {% endif %}
 
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
-        {% set authorIcons = authorRecord | getAuthorIcons %}
+        {# {% set authorIcons = authorRecord | getAuthorIcons %} #}
         {% set cardCount = loop.index %}
 
         <div class="directory__card directory--detail">
@@ -72,9 +72,9 @@
             {% endif %}
             <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
-            <ul role="list" class="author-links" data-pagefind-ignore="all">
+            {# <ul role="list" class="author-links" data-pagefind-ignore="all">
               {{ authorIcons | safe }}
-            </ul>
+            </ul> #}
             <div class="categories-list" data-pagefind-ignore="all">
               <strong class="visually-hidden">Categories</strong>
               <ul role="list">
