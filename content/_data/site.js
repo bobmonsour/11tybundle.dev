@@ -6,7 +6,7 @@ export default {
   subtitle: "Bundles of 11ty know-how",
   description:
     "Welcome to the 11ty Bundle—your curated source for discovering how the community is using 11ty, a simple, flexible, open-source static site generator.",
-  url: "http://localhost:8080/",
+  url: "http://localhost:8080",
   language: "en",
   locale: "en",
   author: {
