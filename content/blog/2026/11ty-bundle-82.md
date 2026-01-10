@@ -1,7 +1,7 @@
 ---
 bundleIssue: 82
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
+  title: "Issue {{ bundleIssue }} - Eleventy: 2025 in Review, Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2026-01-11
 tags:
@@ -35,6 +35,8 @@ Enjoy!
 ---
 
 ## Highlights
+
+**Eleventy: 2025 in Review.** Zach takes a look back at the past year with [Eleventy, 2025 in Review](https://www.11ty.dev/blog/review-2025/). Amazing as it sounds, _"...year-over-year npm downloads are up by 51%!"_ But my favorite line of the post is this one: _"Eight years into this roller coaster of an open source project and it still feels like we’re just getting started!"_ Yeeeeee-haaaaawwwww!
 
 **Got simple docs?** [ReallySimpleDocs](https://reallysimpledocs.com/) is here, offering _"A really simple documentation template built with 11ty and Tailwind."_
 
