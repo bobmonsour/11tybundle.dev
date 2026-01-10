@@ -50,4 +50,4 @@ The website was (mostly!) designed in-browser using fluid type/space scales and 
 
 ### Jan 2026
 
-From beta to full launch...we're live! See the [11ty Bundle Issue 82](/blog/2026/11ty-bundle-82/) for details about the new design and features.
+From beta to full launch...we're live! See the [11ty Bundle Issue 82](/blog/11ty-bundle-82/) for details about the new design and features.
