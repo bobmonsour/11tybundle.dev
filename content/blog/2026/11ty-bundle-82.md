@@ -1,7 +1,7 @@
 ---
 bundleIssue: 82
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy: 2025 in Review, Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
+  title: "Issue {{ bundleIssue }} - Eleventy: 2025 in Review, Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, An update to Learn Eleventy, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2026-01-11
 tags:
@@ -43,6 +43,8 @@ Enjoy!
 **Alex Zappa brings the juice.** [Alex Zappa](https://alex.zappa.dev/) designed a new starter he calls _Electric Lime Starter_. There's a [GitHub repo](https://github.com/freshjuice-dev/electric-lime-11ty-starter#electric-lime-11ty-starter) as well as a [live demo site](https://electric-lime-starter.freshjuice.dev/). He describes it as _"A vibrant, fast, and accessible starter theme for building static websites with Eleventy, TailwindCSS v4, and Alpine.js."_
 
 **Vanessa Sickles' portfolio site.** [Vanessa Sickles](https://vanessasickles.dev/) describes [how she built her cool new portfolio site using Eleventy](https://vanessasickles.dev/projects/portfolio-site/).
+
+**An update to Learn Eleventy.** [uncenter](https://uncenter.dev/), a valued presence on the [11ty Discord](https://www.11ty.dev/blog/discord/) has released an updated version of [Learn Eleventy](https://learn-eleventy.pages.dev/). Originally created by [Andy Bell](https://bell.bz/), the update includes _"Eleventy v3 and the modern Eleventy ecosystem; ESM syntax, the Eleventy Image plugin, Sass via Custom Template Languages (no more Gulp!), Luxon instead of moment.js, and many more smaller fixes."_
 
 **Bash your way to a blog.** [Newman S Lanier](https://github.com/Newman5) shows how to use bash scripts to create and maintain a blog. Check out his [in-depth starter repo](https://github.com/Newman5/11ty-blog-2026?tab=readme-ov-file#11ty-blog-2026) for details.
 
