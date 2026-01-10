@@ -31,6 +31,8 @@ Finally, if you see anything wrong or broken, please let me know [by email](mail
 
 Enjoy!
 
+P.S. The site is running flawlessly on [Pre-release: Eleventy v4.0.0-alpha.6](https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.6)!
+
 ---
 
 ## Highlights

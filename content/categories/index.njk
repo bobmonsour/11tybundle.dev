@@ -54,9 +54,7 @@ permalink: /categories/
       {% set categoryUrl %}/categories/{{ category.name | slugify }}/{% endset %}
       <h3><a href="{{categoryUrl}}">{{ category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
       <ol role="list" class="directory--list" data-page-find-ignore="all">
-        {# {{ category.name | log }} #}
         {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
-          {# {{ item.favicon | log }} #}
           <li>{{ item.favicon | genFaviconHtml(cardCount) | safe }}
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time></li>

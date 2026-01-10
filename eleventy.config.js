@@ -88,7 +88,7 @@ export default function (eleventyConfig) {
     }
   });
 
-  // eleventyConfig.setQuietMode(true);
+  eleventyConfig.setQuietMode(true);
 
   return {
     markdownTemplateEngine: "njk",

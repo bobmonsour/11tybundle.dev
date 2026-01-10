@@ -45,15 +45,6 @@ Comment out remote fetch in [bundledata.js](content/_data/bundledata.js#L50-62),
 
 ## Project-Specific Patterns
 
-**Async Filters in Nunjucks**:
-Filters that fetch external data (getFavicon, getDescription, getRSSLink, getSocialLinks) are registered as async. In Nunjucks templates, use them with `await`:
-
-```njk
-{{ post.Link | getFavicon | await }}
-```
-
-Filter definitions use callback pattern: `(input, callback) => { callback(null, result) }`
-
 **Directory Data Cascade**:
 
 - [content/content.11tydata.js](content/content.11tydata.js): Applies `base.njk` layout to all content
@@ -91,7 +82,6 @@ CSS/JS bundled via Eleventy's `{% css %}`, `{% js %}` paired shortcodes with Ter
 
 - **@11ty/eleventy-fetch**: HTTP caching layer (1-day for bundleDB, 30-day for favicons)
 - **Octokit**: GitHub API access for starter repo metadata (requires GITHUB_TOKEN env var)
-- **Cheerio**: HTML/XML parsing for favicon/social link extraction
 - **Pagefind**: Client-side search indexing (post-build step)
 - **Cloudflare Pages**: Deployment target (via wrangler)
 

@@ -1,6 +1,6 @@
 {
   "name": "11tybundle.dev",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A bundle of Eleventy releases, blog posts, sites, and resources. Over 1,000 posts from more than 300 authors.",
   "main": ".eleventy.js",
   "type": "module",
@@ -9,9 +9,8 @@
     "startdry": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --dryrun",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
-    "workersbuild": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
-    "deploy": "npm run workersbuild && npm run postbuild && npx wrangler deploy --assets=./_site",
-    "postbuild": "npx -y pagefind --site _site --force-language unknown",
+    "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
+    "postbuild": "npx -y pagefind --site _site",
     "postdev": "npx -y pagefind --site _site --serve",
     "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
     "debugmore": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --serve",
@@ -23,7 +22,7 @@
     "rsns": "npm run startns"
   },
   "engines": {
-    "node": "22.15.0"
+    "node": "^22.0.0"
   },
   "keywords": [],
   "author": {
@@ -33,17 +32,14 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^4.0.0-alpha.4",
+    "@11ty/eleventy": "4.0.0-alpha.6",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "@octokit/rest": "^21.0.2",
     "@sindresorhus/slugify": "^3.0.0",
-    "check-html-links": "^0.2.4",
-    "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
     "cssnano": "^7.1.2",
     "dotenv": "^16.0.3",
@@ -51,7 +47,6 @@
     "pagefind": "^1.4.0",
     "postcss": "^8.5.6",
     "rimraf": "^6.0.1",
-    "sharp": "^0.34.5",
     "terser": "^5.44.1",
     "wrangler": "^4.53.0"
   }
