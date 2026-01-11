@@ -49,7 +49,7 @@ P.S. The site is running flawlessly on [Pre-release: Eleventy v4.0.0-alpha.6](ht
 
 **Bash your way to a blog.** [Newman S Lanier](https://github.com/Newman5) shows how to use bash scripts to create and maintain a blog. Check out his [in-depth starter repo](https://github.com/Newman5/11ty-blog-2026?tab=readme-ov-file#11ty-blog-2026) for details.
 
-**Sveltia CMS.** [Sveltia CMS has a showcase of sites](https://sveltiacms.app/en/showcase) built with their CMS and Eleventy. You'll need to click on the _Framework_ link to select Eleventy to see them.
+**Sveltia CMS.** [Sveltia CMS has a showcase of Eleventy sites that use it](https://sveltiacms.app/en/showcase?framework=eleventy). ~~You'll need to click on the _Framework_ link to select Eleventy to see them.~~ Update: They've added a search parameter to the URL to show only Eleventy sites.
 
 **Start with beer.** While not brand new, the [11ty Beer starter](https://github.com/w3teal/11ty-beer?tab=readme-ov-file#11ty-beer) has been updated. It's billed as "_An 11ty blog template with Material Design, PWA and minified files that simply works._"
 
