@@ -1,14 +1,14 @@
 name = "redesign"
-
-[[routes]]
-pattern = "11tybundle.com"
-custom_domain = true
-
-[[routes]]
-pattern = "www.11tybundle.com"
-custom_domain = true
-
 compatibility_date = "2025-12-07"
+
+[[routes]]
+pattern = "11tybundle.dev"
+custom_domain = true
+
+[[routes]]
+pattern = "www.11tybundle.dev"
+custom_domain = true
+
 [assets]
 directory = "_site"
 not_found_handling = "404-page"
