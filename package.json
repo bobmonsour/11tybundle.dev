@@ -6,17 +6,14 @@
   "type": "module",
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
-    "startdry": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --dryrun",
     "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
     "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
     "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "postdev": "npx -y pagefind --site _site --force-language unknown --serve",
-    "debugdry": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --dryrun",
     "debugmore": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --serve",
     "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "links": "npx check-html-links _site",
     "clean": "rimraf ./_site",
     "rs": "npm run start && npm run postdev",
     "rsns": "npm run startns"
