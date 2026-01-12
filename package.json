@@ -5,21 +5,16 @@
   "main": ".eleventy.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental --ignore-initial",
-    "ignore": "npx @11ty/eleventy --serve --ignore-initial",
-    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy --incremental",
-    "search": "npx -y pagefind --site _site --force-language unknown ",
-    "sendtocf": "npx wrangler deploy --assets=./_site",
-    "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
-    "postbuild": "npx -y pagefind --site _site --force-language unknown ",
+    "start": "npx @11ty/eleventy --serve --incremental --ignore-initial",
     "postdev": "npx -y pagefind --site _site --force-language unknown --serve",
-    "debugmore": "cross-env ELEVENTY_ENV=development DEBUG=* npx @11ty/eleventy --serve",
-    "debug": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
-    "perf": "cross-env ELEVENTY_ENV=development DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "clean": "rimraf ./_site",
     "rs": "npm run start && npm run postdev",
-    "rsns": "npm run startns"
+    "build": "npx @11ty/eleventy --incremental",
+    "postbuild": "npx -y pagefind --site _site --force-language unknown ",
+    "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
+    "startns": "npx @11ty/eleventy --serve --incremental --ignore-initial",
+    "debug": "DEBUG=* npx @11ty/eleventy --serve",
+    "perf": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "clean": "rimraf ./_site"
   },
   "engines": {
     "node": "^22.0.0"
