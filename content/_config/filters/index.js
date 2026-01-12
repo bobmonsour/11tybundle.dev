@@ -1,3 +1,4 @@
+import { blogTitleToList } from "./blog-title-filter.js";
 import {
   countLabel,
   formatItemDate,
@@ -20,6 +21,7 @@ import { postYearsInCategory } from "./postyearsincategory.js";
 import { postYearsInFirehose } from "./postyearsinfirehose.js";
 
 export const filters = {
+  blogTitleToList,
   countLabel,
   formatItemDate,
   formatPostDate,
