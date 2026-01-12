@@ -22,36 +22,7 @@ const octokit = new Octokit({
 export default async function () {
   const functionStartTime = performance.now();
 
-  // **************
-  // Conditionally load data based on environment
-  // Set ELEVENTY_ENV=development for local data
-  // Set ELEVENTY_ENV=production for remote fetch
-  // **************
   let bundleRecords;
-
-  // if (process.env.ELEVENTY_ENV === "production") {
-  //   // Production: Fetch from remote GitHub repo
-  //   const BUNDLEDB_URL =
-  //     "https://raw.githubusercontent.com/bobmonsour/11tybundledb/main/bundledb.json";
-  //   bundleRecords = await Fetch(BUNDLEDB_URL, {
-  //     duration: cacheDuration.bundleDB,
-  //     type: "json",
-  //     fetchOptions: {
-  //       signal: AbortSignal.timeout(fetchTimeout.bundleDB),
-  //     },
-  //   });
-  //   console.log("Loaded remote bundleDB (production mode)");
-  // } else {
-  //   // Development: Load from local file
-  //   const localData = await import(
-  //     "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb.json",
-  //     {
-  //       with: { type: "json" },
-  //     }
-  //   );
-  //   bundleRecords = localData.default;
-  //   console.log("Loaded local bundleDB (development mode)");
-  // }
 
   // Load bundledb from local file
   const localData = await import(
