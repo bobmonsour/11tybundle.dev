@@ -1,7 +1,7 @@
 ---
 bundleIssue: 24
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Snowfall edition...Can you say 3.0 alpha?"
+  title: "Snowfall edition...Can you say 3.0 alpha?"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-12-17
 tags:

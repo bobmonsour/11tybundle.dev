@@ -1,7 +1,7 @@
 ---
 bundleIssue: 82
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Eleventy: 2025 in Review, Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, An update to Learn Eleventy, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
+  title: "Eleventy: 2025 in Review, Got simple docs? Alex Zappa brings the juice! Vanessa Sickles' portfolio site, An update to Learn Eleventy, Bash your way to a blog, Sveltia CMS, Start with beer, Exploring a baseline, v2 of Podcaster, Eleventy Live!"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2026-01-11
 tags:

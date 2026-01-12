@@ -1,7 +1,7 @@
 ---
 bundleIssue: 50
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №5, A couple of v3 upgrade posts, Zach on the Windows Terminal, Not Eleventy-related but fun..."
+  title: "Zach's Eleventy Weekly Report №5, A couple of v3 upgrade posts, Zach on the Windows Terminal, Not Eleventy-related but fun..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-07-02
 tags:

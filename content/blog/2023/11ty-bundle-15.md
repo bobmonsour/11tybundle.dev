@@ -1,7 +1,7 @@
 ---
 bundleIssue: 15
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Crossing the 700 post mark, adding giscus commenting, Fathom Analytics, and the Eleventy Meetup"
+  title: "Crossing the 700 post mark, adding giscus commenting, Fathom Analytics, and the Eleventy Meetup"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-08-11
 tags:

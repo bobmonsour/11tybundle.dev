@@ -1,7 +1,7 @@
 ---
 bundleIssue: 36
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - A less gentle reminder...Why Eleventy, you ask?...Using AI to generate your post descriptions..."
+  title: "A less gentle reminder...Why Eleventy, you ask?...Using AI to generate your post descriptions..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-03-19
 tags:

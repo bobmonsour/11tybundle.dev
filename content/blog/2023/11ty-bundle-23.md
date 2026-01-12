@@ -1,7 +1,7 @@
 ---
 bundleIssue: 23
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - The future of JAMstack...Some other cool stuff..."
+  title: "The future of JAMstack...Some other cool stuff..."
   description: "Welcome to Issue {{ bundleIssue }}ty of the 11ty Bundle."
 date: 2023-12-01
 tags:

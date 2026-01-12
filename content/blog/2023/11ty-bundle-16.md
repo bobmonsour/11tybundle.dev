@@ -1,7 +1,7 @@
 ---
 bundleIssue: 16
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Birthday happened, CloudCannon config & CMS, esif.dev, 13 new posts, 10 new sites, a new starter, and more vacation"
+  title: "Birthday happened, CloudCannon config & CMS, esif.dev, 13 new posts, 10 new sites, a new starter, and more vacation"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-09-01
 tags:

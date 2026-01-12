@@ -1,7 +1,7 @@
 ---
 bundleIssue: 46
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - The 11ty-hundredth Post!!!, A 'From the Source' category, A new 'Getting started' post, Max shows us how he updated to v3, Google Sheets ain't my DB no mo..."
+  title: "The 11ty-hundredth Post!!!, A 'From the Source' category, A new 'Getting started' post, Max shows us how he updated to v3, Google Sheets ain't my DB no mo..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-06-04
 tags:

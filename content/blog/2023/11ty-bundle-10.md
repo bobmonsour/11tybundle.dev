@@ -1,7 +1,7 @@
 ---
 bundleIssue: 10
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - The next phase of Eleventy, take the Eleventy community survey, and get in touch if you want"
+  title: "The next phase of Eleventy, take the Eleventy community survey, and get in touch if you want"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle...take the Eleventy survey to show your support for its continued development."
 date: 2023-06-20
 tags:

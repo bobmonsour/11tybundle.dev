@@ -1,7 +1,7 @@
 ---
 bundleIssue: 69
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty MEETUP TOMORROW, Node JS profiling docs, Key releases, Retaining optimized images across builds..."
+  title: "11ty MEETUP TOMORROW, Node JS profiling docs, Key releases, Retaining optimized images across builds..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-03-19
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 21
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - A new mascot for 11ty...Another free hosting option...A new front matter option..."
+  title: "A new mascot for 11ty...Another free hosting option...A new front matter option..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-11-08
 tags:

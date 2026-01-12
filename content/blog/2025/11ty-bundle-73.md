@@ -1,7 +1,7 @@
 ---
 bundleIssue: 73
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Bunch-o-releases, Nunjucks lives, The Bundle turned 2, A CMS for .NET, Have snacks with your murals..."
+  title: "Bunch-o-releases, Nunjucks lives, The Bundle turned 2, A CMS for .NET, Have snacks with your murals..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-05-13
 tags:

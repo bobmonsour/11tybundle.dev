@@ -1,7 +1,7 @@
 ---
 bundleIssue: 22
 eleventyComputed:
-  title: "Issue {{ bundleIssue }}ty - Happy Thanksgiving!...Crossing the 800 post threshold...Collapsing the firehose..."
+  title: "Happy Thanksgiving!...Crossing the 800 post threshold...Collapsing the firehose..."
   description: "Welcome to Issue {{ bundleIssue }}ty of the 11ty Bundle."
 date: 2023-11-21
 tags:

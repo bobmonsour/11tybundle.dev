@@ -1,7 +1,7 @@
 ---
 bundleIssue: 7
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Where does it all come from?"
+  title: "Where does it all come from?"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle...sausage making, described."
 date: 2023-05-16
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 32
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Conference registration is open...Yet another great Eleventy Meetup...a What's the Future of Jamstack panel..."
+  title: "11ty Conference registration is open...Yet another great Eleventy Meetup...a What's the Future of Jamstack panel..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-20
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 17
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We're back from Italy. Zach did a video panel on Jamstack..."
+  title: "We're back from Italy. Zach did a video panel on Jamstack..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-09-21
 tags:

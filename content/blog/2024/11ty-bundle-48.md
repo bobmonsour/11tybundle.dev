@@ -1,7 +1,7 @@
 ---
 bundleIssue: 48
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We're up to v3.0.0-alpha.13!, Getting started made easier, Deep dive posts by Jonathan Lau, MDX is now a supported template language, A new 'Upgrading' category..."
+  title: "We're up to v3.0.0-alpha.13!, Getting started made easier, Deep dive posts by Jonathan Lau, MDX is now a supported template language, A new 'Upgrading' category..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-06-18
 tags:

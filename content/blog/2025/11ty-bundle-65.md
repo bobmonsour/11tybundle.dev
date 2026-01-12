@@ -1,7 +1,7 @@
 ---
 bundleIssue: 65
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach on images, A TypeScript proposal, Another bookshelf, Jason plugs-in URLs, Ghost-ing with 11ty, Alex goes Auth-ing, We're Meetup-ing..."
+  title: "Zach on images, A TypeScript proposal, Another bookshelf, Jason plugs-in URLs, Ghost-ing with 11ty, Alex goes Auth-ing, We're Meetup-ing..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-01-21
 tags:

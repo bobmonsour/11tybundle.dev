@@ -1,7 +1,7 @@
 ---
 bundleIssue: 51
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №6, Memoization, JS front matter, WebC is having a moment, Raymond gets Squirrelly and does Basic, Keenan concise and hinged, 11 weeks x 11ty, 💩-ier..."
+  title: "Zach's Eleventy Weekly Report №6, Memoization, JS front matter, WebC is having a moment, Raymond gets Squirrelly and does Basic, Keenan concise and hinged, 11 weeks x 11ty, 💩-ier..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-07-09
 tags:

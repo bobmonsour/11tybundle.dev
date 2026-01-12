@@ -1,7 +1,7 @@
 ---
 bundleIssue: 12
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - A bunch of posts, a cool starter, and some new sites showed up"
+  title: "A bunch of posts, a cool starter, and some new sites showed up"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-07-06
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 5
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - LAUNCH DAY!"
+  title: "LAUNCH DAY!"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle. It's LAUNCH DAY! The site includes resources for all things Eleventy. Read on to learn more."
 date: 2023-05-01
 tags:

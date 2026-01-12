@@ -1,7 +1,7 @@
 ---
 bundleIssue: 13
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Self-inflicted debugging, a boatload of Raymond Camden, and a couple of sites"
+  title: "Self-inflicted debugging, a boatload of Raymond Camden, and a couple of sites"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-07-17
 tags:

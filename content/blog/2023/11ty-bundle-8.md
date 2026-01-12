@@ -1,7 +1,7 @@
 ---
 bundleIssue: 8
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - A new author, a scroll-to-top button, and some refactoring"
+  title: "A new author, a scroll-to-top button, and some refactoring"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle...a smattering of stuff."
 date: 2023-05-31
 tags:

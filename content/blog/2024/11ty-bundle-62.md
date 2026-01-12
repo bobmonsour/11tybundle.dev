@@ -1,7 +1,7 @@
 ---
 bundleIssue: 62
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Raymond's video series, Build an image gallery, Equilibrium in the UK, 11ty at the Louvre, Eleventy versions, Autofocus in the search..."
+  title: "Raymond's video series, Build an image gallery, Equilibrium in the UK, 11ty at the Louvre, Eleventy versions, Autofocus in the search..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-12-10
 tags:

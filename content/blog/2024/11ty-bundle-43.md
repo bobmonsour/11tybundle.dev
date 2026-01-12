@@ -1,7 +1,7 @@
 ---
 bundleIssue: 43
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - The 11ty conference happened...a roundup, New eleventy-img wow-ness, A POSSE repo, Two new categories, A reading time plugin..."
+  title: "The 11ty conference happened...a roundup, New eleventy-img wow-ness, A POSSE repo, Two new categories, A reading time plugin..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-05-14
 tags:

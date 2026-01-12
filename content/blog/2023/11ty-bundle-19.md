@@ -1,7 +1,7 @@
 ---
 bundleIssue: 19
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - From Airtable to Google Sheets...Clean up of broken links..."
+  title: "From Airtable to Google Sheets...Clean up of broken links..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-10-19
 tags:

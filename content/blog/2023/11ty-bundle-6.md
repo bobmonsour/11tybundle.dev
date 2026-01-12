@@ -1,7 +1,7 @@
 ---
 bundleIssue: 6
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Stats, a book, and a bit more"
+  title: "Stats, a book, and a bit more"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle. We've now got over 500 posts from more than 200 authors."
 date: 2023-05-09
 tags:

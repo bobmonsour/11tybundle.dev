@@ -1,7 +1,7 @@
 ---
 bundleIssue: 53
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Zach's Eleventy Weekly Report №8, v3 updates continue, Practical SVG book via 11ty, I removed webmentions, Speaking of webmentions..."
+  title: "Zach's Eleventy Weekly Report №8, v3 updates continue, Practical SVG book via 11ty, I removed webmentions, Speaking of webmentions..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-07-23
 tags:

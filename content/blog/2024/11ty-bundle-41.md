@@ -1,7 +1,7 @@
 ---
 bundleIssue: 41
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - This site's 1st birthday, the 11ty conference is next week, Generate robots.txt, Two more starters, Some radar sightings..."
+  title: "This site's 1st birthday, the 11ty conference is next week, Generate robots.txt, Two more starters, Some radar sightings..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-05-01
 tags:

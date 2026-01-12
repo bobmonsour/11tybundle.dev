@@ -1,7 +1,7 @@
 ---
 bundleIssue: 72
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We Met-Up, Eleventy v3.1.0-beta.1, Ethan brings the Magick, Chris hits a double..."
+  title: "We Met-Up, Eleventy v3.1.0-beta.1, Ethan brings the Magick, Chris hits a double..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-04-29
 tags:

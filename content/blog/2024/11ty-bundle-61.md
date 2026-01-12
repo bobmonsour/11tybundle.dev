@@ -1,7 +1,7 @@
 ---
 bundleIssue: 61
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Fill out Survey Awesome, Eleventy Import arrives, Jérôme Coupé updated his Eleventy Intro, Robb Knight cooks, New docs for Eleventy Fetch 5, Pagefind v1.2.0, Pack11ty at v3.0.0..."
+  title: "Fill out Survey Awesome, Eleventy Import arrives, Jérôme Coupé updated his Eleventy Intro, Robb Knight cooks, New docs for Eleventy Fetch 5, Pagefind v1.2.0, Pack11ty at v3.0.0..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-11-26
 tags:

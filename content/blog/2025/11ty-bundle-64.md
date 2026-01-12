@@ -1,7 +1,7 @@
 ---
 bundleIssue: 64
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - New eleventy-img plugin, Magnify your images, Free as in 11ty-beer, A new category, The US gov using 11ty, Make a podcast site & feed, Henry's new home, Feed styling..."
+  title: "New eleventy-img plugin, Magnify your images, Free as in 11ty-beer, A new category, The US gov using 11ty, Make a podcast site & feed, Henry's new home, Feed styling..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-01-07
 tags:

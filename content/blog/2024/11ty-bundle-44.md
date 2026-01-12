@@ -1,7 +1,7 @@
 ---
 bundleIssue: 44
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Conference on YouTube, Integrate Eleventy with Mermaid, Keeping Out Dark Visitors, A Ghostly logo, Honoring her grandmother, Two new starters..."
+  title: "11ty Conference on YouTube, Integrate Eleventy with Mermaid, Keeping Out Dark Visitors, A Ghostly logo, Honoring her grandmother, Two new starters..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-05-14
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 66
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Meetup reminder, Installing a JavaScript Runtime, Plug in your Font Awesome, A fruity red starter, From Instagram to Pixelfed, RSS entries are ID'd, A variety of posts, A new look here..."
+  title: "Meetup reminder, Installing a JavaScript Runtime, Plug in your Font Awesome, A fruity red starter, From Instagram to Pixelfed, RSS entries are ID'd, A variety of posts, A new look here..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-02-04
 tags:

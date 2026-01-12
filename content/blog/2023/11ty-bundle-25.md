@@ -1,7 +1,7 @@
 ---
 bundleIssue: 25
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Where to start? Robb Knight is on fire...Tim Brown arrives..."
+  title: "Where to start? Robb Knight is on fire...Tim Brown arrives..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-12-29
 tags:

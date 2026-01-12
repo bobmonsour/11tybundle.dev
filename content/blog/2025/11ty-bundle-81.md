@@ -1,7 +1,7 @@
 ---
 bundleIssue: 81
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - 11ty Meetup recap, Zach secures Eleventy, Another v4 alpha emerges, Zach forks Nunjucks, Quesby arrives..."
+  title: "11ty Meetup recap, Zach secures Eleventy, Another v4 alpha emerges, Zach forks Nunjucks, Quesby arrives..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-12-11
 tags:

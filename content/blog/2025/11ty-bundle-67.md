@@ -1,7 +1,7 @@
 ---
 bundleIssue: 67
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - We Meetup'd..."
+  title: "We Meetup'd..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-02-18
 tags:

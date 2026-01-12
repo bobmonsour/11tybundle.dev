@@ -1,7 +1,7 @@
 ---
 bundleIssue: 20
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - A safe landing on Google Sheets...7 million npm downloads...11tybundle site posts arrive in the docs..."
+  title: "A safe landing on Google Sheets...7 million npm downloads...11tybundle site posts arrive in the docs..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-10-29
 tags:

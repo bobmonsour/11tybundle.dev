@@ -1,7 +1,7 @@
 ---
 bundleIssue: 47
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - v3.0.0-alpha.11 is here!, Typescript & JSX in the docs, An updated dev server, More posts 'From the Source', A new bundle item layout here..."
+  title: "v3.0.0-alpha.11 is here!, Typescript & JSX in the docs, An updated dev server, More posts 'From the Source', A new bundle item layout here..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-06-11
 tags:

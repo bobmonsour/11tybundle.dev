@@ -1,7 +1,7 @@
 ---
 bundleIssue: 18
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Relocation of some WebC recipes...another source of 11ty links..."
+  title: "Relocation of some WebC recipes...another source of 11ty links..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-10-11
 tags:

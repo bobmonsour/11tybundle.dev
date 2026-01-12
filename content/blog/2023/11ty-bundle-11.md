@@ -1,7 +1,7 @@
 ---
 bundleIssue: 11
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Take the survey, a few new posts, a handful of oldies, and a couple of sites"
+  title: "Take the survey, a few new posts, a handful of oldies, and a couple of sites"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-06-30
 tags:

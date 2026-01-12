@@ -1,7 +1,7 @@
 ---
 bundleIssue: 14
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Last week's BIG announcement, most of Raymond Camden, closing in on 700 posts, and a bunch of sites"
+  title: "Last week's BIG announcement, most of Raymond Camden, closing in on 700 posts, and a bunch of sites"
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2023-07-31
 tags:

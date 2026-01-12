@@ -1,7 +1,7 @@
 ---
 bundleIssue: 78
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Why it's called Eleventy, 11ty Meetup 9/17, Speaking of CMS's, The ZeroPoint starter, Vento 2 has arrived, Performance debugging?, Components on the island..."
+  title: "Why it's called Eleventy, 11ty Meetup 9/17, Speaking of CMS's, The ZeroPoint starter, Vento 2 has arrived, Performance debugging?, Components on the island..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2025-09-11
 tags:

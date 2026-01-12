@@ -1,7 +1,7 @@
 ---
 bundleIssue: 30
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Two new categories...Eleventy Meetup...11ty site for a 7 year-old's art...Designing in public...Search on every page..."
+  title: "Two new categories...Eleventy Meetup...11ty site for a 7 year-old's art...Designing in public...Search on every page..."
   description: "Welcome to Issue {{ bundleIssue }} of the 11ty Bundle."
 date: 2024-02-06
 tags:

@@ -1,7 +1,7 @@
 ---
 bundleIssue: 42
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - I had some downtime, the 11ty conference is TOMORROW, Some releasings, An 11ty Firefox profiler, Another icon plugin..."
+  title: "I had some downtime, the 11ty conference is TOMORROW, Some releasings, An 11ty Firefox profiler, Another icon plugin..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-05-08
 tags:

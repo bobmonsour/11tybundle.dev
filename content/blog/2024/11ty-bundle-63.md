@@ -1,7 +1,7 @@
 ---
 bundleIssue: 63
 eleventyComputed:
-  title: "Issue {{ bundleIssue }} - Build a centralized RSS feed, An aspirational web, An EmojiStorm on my Lens, Update: autofocus in search, What's on your bookshelf..."
+  title: "Build a centralized RSS feed, An aspirational web, An EmojiStorm on my Lens, Update: autofocus in search, What's on your bookshelf..."
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2024-12-23
 tags:
