@@ -6,8 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy",
-    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
-    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "startns": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental --ignore-initial",
+    "ignore": "npx @11ty/eleventy --serve --ignore-initial",
+    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy --incremental",
+    "search": "npx -y pagefind --site _site --force-language unknown ",
+    "sendtocf": "npx wrangler deploy --assets=./_site",
     "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "postdev": "npx -y pagefind --site _site --force-language unknown --serve",
