@@ -59,6 +59,9 @@ channelsPage: true
           <div class="directory__card directory--detail">
             {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
+              {% if item.description %}
+                <p class="description">{{ item.description | safe }}</p>
+              {% endif %}
               <time datetime="{{ item.Date | formatYMD}}">{{ item.formattedDate }}</time>
               {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
               <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
