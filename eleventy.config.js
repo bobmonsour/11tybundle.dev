@@ -82,6 +82,8 @@ export default function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/blog/**/*.md");
   });
 
+  eleventyConfig.addWatchTarget("./public/css/");
+
   // Prevent drafts from being published using front matter
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
     if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {

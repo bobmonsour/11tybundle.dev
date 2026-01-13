@@ -83,7 +83,7 @@ ol {
 ul,
 ol {
   &:not([role="list"]) {
-    margin-block: 1lh 0;
+    margin-block: 0.5lh 0;
     margin-inline: 0;
     padding-inline: 2ch;
 
@@ -92,8 +92,12 @@ ol {
         color: var(--text-colour-2);
       }
 
+      &:first-of-type {
+        margin-block-start: 0.25lh;
+      }
+
       &:not(:first-of-type) {
-        margin-block: 0.25lh 0;
+        margin-block: 0.15lh 0;
       }
     }
   }
