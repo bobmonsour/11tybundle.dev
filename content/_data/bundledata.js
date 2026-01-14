@@ -4,11 +4,10 @@
 // site's templates
 // ********************
 
-import Fetch from "@11ty/eleventy-fetch";
 import { AssetCache } from "@11ty/eleventy-fetch";
 import slugify from "@sindresorhus/slugify";
 
-import { cacheDuration, fetchTimeout } from "./cacheconfig.js";
+import { cacheDuration } from "./cacheconfig.js";
 
 // for access to starter data from their GitHub repos
 import { Octokit } from "@octokit/rest";
@@ -316,7 +315,7 @@ export default async function () {
           Stars: repoData.data.stargazers_count,
           Date: date.toISOString().split("T")[0],
           LastUpdated: formattedDate,
-          Description: repoData.data.description,
+          description: starter.description || repoData.data.description,
           Version: version,
         });
       } catch (error) {
