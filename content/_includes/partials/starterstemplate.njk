@@ -29,7 +29,7 @@
               </svg>
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <div class="details" data-pagefind-ignore="all">
-            <p class="bundleitem-description">{{ item.Description | safe }}</p>
+            <p class="bundleitem-description">{{ item.description | safe }}</p>
             <ul role="list">
               <li>Updated: <time datetime="{{ item.LastUpdated | formatYMD }}">{{ item.LastUpdated }}</time></li>
               <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
