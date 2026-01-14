@@ -102,7 +102,7 @@ issue: 80
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <p class="bundleitem-description">{{ item.description | safe }}</p>
           <ul role="list">
-            <li>Author: <a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></li>
+            {# <li>Author: <a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></li> #}
             <li>Updated: <time datetime="{{ item.Date | formatYMD }}">{{ item.LastUpdated | formatItemDate }}</time></li>
             <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
             <li>11ty version: <data value="{{ item.Version }}">{{ item.Version }}</data></li>

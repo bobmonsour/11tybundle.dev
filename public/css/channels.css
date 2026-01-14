@@ -429,7 +429,8 @@
         grid-template-columns: auto 1fr;
         grid-template-areas:
           "favicon link"
-          "favicon date";
+          "favicon date"
+          "favicon author";
       }
     }
   }
@@ -441,6 +442,10 @@
   }
   time {
     grid-area: date;
+  }
+  p {
+    grid-area: author;
+    margin-block: 0;
   }
 }
 

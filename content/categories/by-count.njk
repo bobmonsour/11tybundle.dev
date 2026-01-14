@@ -25,9 +25,11 @@ permalink: /categories-by-count/
         <ol role="list" class="directory--list">
           {% set cardCount = loop.index %}
           {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
+          {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
             <li>{{ item.favicon | genFaviconHtml(cardCount) | safe }}
             <a href="{{ item.Link }}">{{ item.Title }}</a>
-            <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time></li>
+            <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time>
+            <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p></li>
           {% endfor %}
         </ol>
       </article>
