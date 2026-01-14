@@ -31,7 +31,7 @@
           <div class="details" data-pagefind-ignore="all">
             <p class="bundleitem-description">{{ item.description | safe }}</p>
             <ul role="list">
-              <li>Owner: <a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></li>
+              <li>Author: <a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></li>
               <li>Updated: <time datetime="{{ item.LastUpdated | formatYMD }}">{{ item.LastUpdated }}</time></li>
               <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
               <li>11ty version: <data value="{{ item.Version }}">{{ item.Version }}</data></li>
