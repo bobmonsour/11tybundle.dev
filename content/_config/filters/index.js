@@ -19,6 +19,7 @@ import { postsInCategory } from "./postsincategory.js";
 import { postYearsInAuthor } from "./postyearsinauthor.js";
 import { postYearsInCategory } from "./postyearsincategory.js";
 import { postYearsInFirehose } from "./postyearsinfirehose.js";
+import { getScreenshotpath } from "./getscreenshotpath.js";
 
 export const filters = {
   blogTitleToList,
@@ -37,6 +38,7 @@ export const filters = {
   getHostname,
   getAuthorIcons,
   getAuthorRecord,
+  getScreenshotpath,
   plainDate,
   postsByAuthor,
   postsInCategory,

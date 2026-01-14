@@ -55,9 +55,11 @@ permalink: /categories/
       <h3><a href="{{categoryUrl}}">{{ category.name }}</a> <data class="count" value="{{ category.count }}">{{ category.count }}</data></h3>
       <ol role="list" class="directory--list" data-page-find-ignore="all">
         {% for item in bundledata.firehose | postsInCategory(category.name, 3) %}
+          {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
           <li>{{ item.favicon | genFaviconHtml(cardCount) | safe }}
           <a href="{{ item.Link }}">{{ item.Title }}</a>
           <time datetime="{{ item.Date | formatYMD }}">{{ item.Date | formatItemDate }}</time></li>
+          <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
         {% endfor %}
       </ol>
     </article>

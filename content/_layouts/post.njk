@@ -83,15 +83,22 @@ channelsPage: true
 
       <hr>
       <h2 id="ql-sites" class="h3">Built with Eleventy <data class="count" value="{{ sites.length }}">{{ sites.length }}</data></h2>
-      <div class="directory__grid">
+      <div class="directory__grid starters">
         {%- for item in sites %}
           <div class="directory__card directory--detail">
             {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
             <div class="details">
               <p>{{ item.description | safe }}</p>
-              {# <ul role="list" class="author-links">
-                {{ item.Link | getAuthorIcons | safe }}
-              </ul> #}
+              {% set screenshotpath = item.Link | getScreenshotpath %}
+              {% if screenshotpath %}
+                <a href="{{ item.Link }}" class="demo-screenshot">
+                  <img
+                    src="{{ screenshotpath }}"
+                    sizes="(min-width: 1440px) 348px, (min-width: 1040px) 24.47vw, (min-width: 780px) calc(45.42vw - 49px), (min-width: 480px) calc(95.36vw - 260px), 91.88vw"
+                    alt="Screenshot of {{ item.Title }}"
+                    eleventy:widths="400,700,1000">
+                </a>
+              {% endif %}
             </div>
           </div>
         {%- endfor -%}
