@@ -47,9 +47,6 @@
               <dt>GitHub stars:</dt><dd><data value="{{ item.Stars }}">{{ item.Stars }}</data></dd>
               <dt>11ty version:</dt><dd><data value="{{ item.Version }}">{{ item.Version }}</data></dd>
             </dl>
-            {% if item.Demo %}
-              <a href="{{ item.Demo }}" aria-label="Demo site for {{ item.Title }}"><small>Demo site</small></a>
-            {% endif %}
           </div>
         </div>
       {% endfor %}

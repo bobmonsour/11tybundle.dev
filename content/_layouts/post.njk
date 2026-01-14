@@ -83,7 +83,7 @@ channelsPage: true
 
       <hr>
       <h2 id="ql-sites" class="h3">Built with Eleventy <data class="count" value="{{ sites.length }}">{{ sites.length }}</data></h2>
-      <div class="directory__grid starters">
+      <div class="directory__grid">
         {%- for item in sites %}
           <div class="directory__card directory--detail">
             {{ item.favicon | genFaviconHtml(10) | safe }}<a href="{{ item.Link }}">{{ item.Title }}</a>
@@ -97,11 +97,10 @@ channelsPage: true
                     sizes="(min-width: 1440px) 348px, (min-width: 1040px) 24.47vw, (min-width: 780px) calc(45.42vw - 49px), (min-width: 480px) calc(95.36vw - 260px), 91.88vw"
                     alt="Screenshot of {{ item.Title }}"
                     eleventy:widths="400,700,1000">
+                  <small>Site <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                  <use xlink:href="#icon-external-link"></use>
+                  </svg></small>
                 </a>
-                <small>Site <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-                <use xlink:href="#icon-external-link"></use>
-              </svg></small>
-
               {% endif %}
             </div>
           </div>
