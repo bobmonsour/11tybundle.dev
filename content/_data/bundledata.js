@@ -317,6 +317,8 @@ export default async function () {
           LastUpdated: formattedDate,
           description: starter.description || repoData.data.description,
           Version: version,
+          Owner: repoData.data.owner.login,
+          OwnerUrl: repoData.data.owner.html_url,
         });
       } catch (error) {
         console.error(`Failed to fetch metadata for ${starter.Link}:`, error);
