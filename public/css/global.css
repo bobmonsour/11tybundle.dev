@@ -68,13 +68,14 @@ h6,
   font-size: var(--step--1);
 }
 
+
 dd {
   margin-inline: 0;
 }
 
 ul,
 ol {
-  &[role="list"] {
+  &[role='list'] {
     margin-block: 0;
     padding-inline: 0;
   }
@@ -82,8 +83,8 @@ ol {
 
 ul,
 ol {
-  &:not([role="list"]) {
-    margin-block: 0.5lh 0;
+  &:not([role='list']) {
+    margin-block: 1lh 0;
     margin-inline: 0;
     padding-inline: 2ch;
 
@@ -92,12 +93,8 @@ ol {
         color: var(--text-colour-2);
       }
 
-      &:first-of-type {
-        margin-block-start: 0.25lh;
-      }
-
       &:not(:first-of-type) {
-        margin-block: 0.15lh 0;
+        margin-block: 0.25lh 0;
       }
     }
   }
@@ -113,10 +110,6 @@ blockquote,
 dd,
 li {
   margin-block: 1lh 0;
-}
-
-p {
-  margin-block: 0.5lh 0;
 }
 
 dd {
@@ -138,7 +131,7 @@ a {
 a:not([class]) {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25ex;
-  &[href^="http"] {
+  &[href^='http'] {
     padding-right: 1.25em;
     &:after {
       position: absolute;
@@ -229,7 +222,7 @@ blockquote {
   padding-inline-start: 0.5lh;
 }
 
-pre[class*="language-"] {
+pre[class*=language-] {
   border-radius: var(--radius-s);
   margin-block: 1lh 0;
   padding: var(--space-s);
@@ -288,7 +281,9 @@ summary {
   padding: var(--space-s);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   opacity: 0;
-  transition: opacity 150ms ease-in-out 25ms, transform 150ms ease-in-out 25ms;
+  transition:
+    opacity 150ms ease-in-out 25ms,
+    transform 150ms ease-in-out 25ms;
 
   @supports (bottom: anchor(bottom)) {
     inset: auto;
@@ -444,9 +439,7 @@ mark,
     margin-block: var(--space-2xs) 0;
     font-size: var(--step-2);
     border-bottom-left-radius: calc(var(--border-radius) - var(--border-width));
-    border-bottom-right-radius: calc(
-      var(--border-radius) - var(--border-width)
-    );
+    border-bottom-right-radius: calc(var(--border-radius) - var(--border-width));
     corner-shape: squircle;
   }
 }
@@ -492,7 +485,9 @@ mark,
   opacity: 0;
   pointer-events: none;
   transform: translateY(4px);
-  transition: opacity 150ms ease-in-out 25ms, transform 150ms ease-in-out 25ms;
+  transition:
+    opacity 150ms ease-in-out 25ms,
+    transform 150ms ease-in-out 25ms;
 
   &.is-visible {
     opacity: 1;
@@ -503,4 +498,28 @@ mark,
 
 lite-youtube {
   margin-block: 1lh;
+}
+
+.demo-screenshot {
+  position: relative;
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+
+  small {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3xs);
+    position: absolute;
+    inset: auto 0 0 auto;
+    font-size: var(--step--2);
+    color: var(--greyscale-1);
+    background: var(--greyscale-9);
+    padding: var(--space-3xs) var(--space-2xs);
+    border-top-left-radius: var(--radius-m);
+  }
+
+  svg {
+    color: var(--primary-5);
+  }
 }

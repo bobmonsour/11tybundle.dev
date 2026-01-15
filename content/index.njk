@@ -98,16 +98,19 @@ issue: 80
         <svg viewBox="0 0 24 24" class="favicon" aria-hidden="true" loading="lazy" eleventy:ignore>
             <use xlink:href="#icon-github"></use>
             </svg>
+        <a href="{{ item.Link }}">{{ item.Title }}</a>
         <div class="details">
-          <a href="{{ item.Link }}">{{ item.Title }}</a>
-          <p class="bundleitem-description">{{ item.description | safe }}</p>
-          <ul role="list">
-            {# <li>Author: <a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></li> #}
-            <li>Updated: <time datetime="{{ item.Date | formatYMD }}">{{ item.LastUpdated | formatItemDate }}</time></li>
-            <li>GitHub stars: <data value="{{ item.Stars }}">{{ item.Stars }}</data></li>
-            <li>11ty version: <data value="{{ item.Version }}">{{ item.Version }}</data></li>
-          </ul>
-          <a href="{{ item.Demo }}" aria-label="Demo site for {{ item.Title }}"><small>Demo site</small></a>
+          <p>{{ item.description | safe }}</p>
+          <a href="{{ item.Demo }}" class="demo-screenshot"><img src="{{ item.screenshotpath }}" alt="Screenshot of {{ item.Title }} starter" loading="lazy">
+            <small>Demo site <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                  <use xlink:href="#icon-external-link"></use></svg></small>
+          </a>
+          <dl>
+            <dt>Author:</dt><dd><a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></dd>
+            <dt>Updated:</dt><dd><time datetime="{{ item.Date | formatYMD }}">{{ item.LastUpdated | formatItemDate }}</time></dd>
+            <dt>GitHub stars:</dt><dd><data value="{{ item.Stars }}">{{ item.Stars }}</data></dd>
+            <dt>11ty version:</dt><dd><data value="{{ item.Version }}">{{ item.Version }}</data></dd>
+          </dl>
         </div>
       </div>
       {%- endfor %}
@@ -124,8 +127,8 @@ issue: 80
       {%- for item in bundledata.recentAuthors %}
       <div class="recent-authors__item">
         {{ item.favicon | genFaviconHtml(12) | safe }}
+        <a href="/authors/{{ item.slugifiedAuthor }}/">{{ item.name }}</a>
         <div class="details">
-          <a href="/authors/{{ item.slugifiedAuthor }}/">{{ item.name }}</a>
           <p>{{ item.description | safe }}</p>
           <ul role="list" class="author-links">
             {{ item | getAuthorIcons | safe }}
