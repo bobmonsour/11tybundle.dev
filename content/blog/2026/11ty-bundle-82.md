@@ -53,7 +53,7 @@ P.S. The site is running flawlessly on [Pre-release: Eleventy v4.0.0-alpha.6](ht
 
 **Start with beer.** While not brand new, the [11ty Beer starter](https://github.com/w3teal/11ty-beer?tab=readme-ov-file#11ty-beer) has been updated. It's billed as "_An 11ty blog template with Material Design, PWA and minified files that simply works._"
 
-**Exploring a baseline.** Billed as "_An experimental Swiss army knife for Eleventy."_, [Eleventy Plugin Baseline](https://github.com/apleasantview/eleventy-plugin-baseline#eleventy-baseline) _"is a lightweight toolkit that collects small but useful patterns for everyday Eleventy development."_
+**Exploring a baseline.** Billed as "_An experimental Swiss army knife for Eleventy."_, [Eleventy Plugin Baseline](https://eleventy-plugin-baseline.netlify.app/) _"is a lightweight toolkit that collects small but useful patterns for everyday Eleventy development."_
 
 **v2 of Podcaster.** [Nathan Bottomley](https://gunsandfrocks.com/) released v2.0.0 of his [Podcaster Eleventy starter](https://eleventy-plugin-podcaster.com/2026/01/whats-new-in-version-2/). With it, you can _"Host a podcast and create its website with Eleventy."_
 
