@@ -5,7 +5,8 @@
     column-gap: var(--grid-gutter);
     align-items: start;
     grid-template-columns: 1fr;
-    grid-template-areas: "title";
+    grid-template-areas:
+      "title";
 
     &:has(nav):not(:has(.favicon)):not(:has(.details)) {
       grid-template-columns: 1fr;
@@ -15,7 +16,8 @@
 
       @media (width >= 768px) {
         grid-template-columns: 1fr auto;
-        grid-template-areas: "title nav";
+        grid-template-areas:
+          "title nav";
       }
     }
 
@@ -137,6 +139,7 @@
   }
 
   nav {
+
     background: var(--header-pill-bg);
     .current {
       background: var(--header-pill-active-bg);
@@ -300,27 +303,27 @@
   align-content: start;
   gap: var(--space-xs);
   &:has(.bundleitem-highlight) {
-    outline: 4px dotted var(--primary-6);
-    outline-offset: -4px;
+    outline: 2px dotted var(--primary-5);
+    outline-offset: 2px;
   }
   &:has(.favicon) {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "favicon link"
-      "details details";
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "favicon link"
+    "details details";
   }
   &:not(:has(.favicon)) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "link"
-      "details";
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "link"
+    "details";
   }
 
   .favicon {
     grid-area: favicon;
   }
 
-  > a[href^="http"],
+  > a[href^=http],
   h3[id^="post-"] {
     grid-area: link;
     font-family: var(--font-display-bold);
@@ -337,7 +340,7 @@
     flex-direction: column;
     gap: var(--space-2xs);
     font-size: var(--step--1);
-    > a[href^="http"] {
+    > a[href^='http'] {
       font-size: var(--step-0);
       font-family: var(--font-display-bold);
     }
@@ -377,7 +380,7 @@
       border-radius: 999px;
       text-decoration: none;
       &:hover {
-        background: var(--surface-fore);
+         background: var(--surface-fore);
       }
     }
   }
@@ -412,11 +415,10 @@
   padding: var(--space-s);
   font-size: var(--step--1);
 
-  > li {
+  >li {
     column-gap: var(--space-xs);
     row-gap: var(--space-3xs);
     display: grid;
-
     grid-template-columns: 1fr auto;
     grid-template-areas: "link date";
 
@@ -427,23 +429,35 @@
         "date";
     }
 
+    > a {
+      font-family: var(--font-display-bold);
+    }
+
     &:has(.favicon) {
       grid-template-columns: auto 1fr auto;
-      grid-template-areas: "favicon link date";
-
+      grid-template-areas:
+          "favicon link date"
+          "favicon author author";
       @media (width >=768px) {
         grid-template-columns: auto 1fr;
         grid-template-areas:
           "favicon link"
-          "favicon date";
+          "favicon date"
+          "favicon author";
       }
     }
   }
   .favicon {
     grid-area: favicon;
+
   }
   a {
     grid-area: link;
+  }
+  p {
+    grid-area: author;
+    margin-block: unset;
+    color: var(--text-colour-2);
   }
   time {
     grid-area: date;

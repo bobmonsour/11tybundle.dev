@@ -11,6 +11,7 @@
     "build": "npx @11ty/eleventy --incremental",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
+    "upload": "npx wrangler deploy --assets=./_site",
     "startns": "npx @11ty/eleventy --serve --incremental",
     "debug": "DEBUG=* npx @11ty/eleventy --serve",
     "perf": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",

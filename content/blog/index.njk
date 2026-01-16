@@ -20,7 +20,7 @@ channelsPage: true
         <div class="details">
           <h2 class="post__title" data-pagefind-ignore><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
           {% set counts = post.data.bundleIssue | getIssueCounts %}
-          <p class="meta"><time datetime="{{ post.data.date | formatYMD }}">{{ post.data.date | formatPostDate }}{% if counts.releaseCount > 0 %} &middot; {{ counts.releaseCount | countLabel("release")}}{% endif %} &middot; {{ counts.postCount | countLabel("post")}} &middot; {{ counts.siteCount | countLabel("site")}}</p>
+          <p class="meta"><time datetime="{{ post.data.date | formatYMD }}">{{ post.data.date | formatPostDate }}{% if counts.releaseCount > 0 %} &middot; <a href="{{ post.url }}#ql-releases">{{ counts.releaseCount | countLabel("release")}}</a>{% endif %}{% if counts.postCount > 0 %} &middot; <a href="{{ post.url }}#ql-posts">{{ counts.postCount | countLabel("post")}}</a>{% endif %}{% if counts.siteCount > 0 %} &middot; <a href="{{ post.url }}#ql-sites">{{ counts.siteCount | countLabel("site")}}</a>{% endif %}</p>
         </div>
       </li>
       {% endfor %}

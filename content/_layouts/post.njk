@@ -64,10 +64,10 @@ channelsPage: true
               {% endif %}
               <time datetime="{{ item.Date | formatYMD}}">{{ item.formattedDate }}</time>
               {%- set authorRecord = bundledata.authors | getAuthorRecord(item.Author) -%}
-              <p>By <a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count | countLabel("post") }})</p>
-              <ul role="list" class="author-links">
+              <p><a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author }}</a> ({{ authorRecord.count }})</p>
+              {# <ul role="list" class="author-links">
                 {{ authorRecord | getAuthorIcons | safe }}
-              </ul>
+              </ul> #}
               <div class="categories-list">
                 <strong class="visually-hidden">Categories</strong>
                 <ul role="list">
