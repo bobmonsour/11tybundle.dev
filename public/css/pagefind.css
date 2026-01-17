@@ -98,9 +98,14 @@ ol.pagefind-ui__results {
 }
 
 .pagefind-ui__result-title {
-  margin-block-start: .5lh;
+  margin-block-start: 0.5lh;
 }
 
 .pagefind-ui__result-excerpt {
   margin-block-start: unset;
+}
+
+.bundleitem-highlight {
+  outline: 4px dotted var(--primary-6);
+  outline-offset: -4px;
 }
