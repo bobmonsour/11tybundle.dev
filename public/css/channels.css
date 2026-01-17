@@ -295,7 +295,10 @@
   display: grid;
   align-content: start;
   gap: var(--space-xs);
-
+  &:has(.bundleitem-highlight) {
+    outline: 4px dotted var(--primary-6);
+    outline-offset: -4px;
+  }
   &:has(.favicon) {
     grid-template-columns: auto 1fr;
     grid-template-areas:

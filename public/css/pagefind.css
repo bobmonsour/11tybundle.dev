@@ -104,8 +104,3 @@ ol.pagefind-ui__results {
 .pagefind-ui__result-excerpt {
   margin-block-start: unset;
 }
-
-.bundleitem-highlight {
-  outline: 4px dotted var(--primary-6);
-  outline-offset: -4px;
-}
