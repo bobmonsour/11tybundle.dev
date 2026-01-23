@@ -22,14 +22,25 @@ export default async function () {
   const functionStartTime = performance.now();
 
   let bundleRecords;
+  let localData;
 
-  // Load bundledb from local file
-  const localData = await import(
-    "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb.json",
-    {
-      with: { type: "json" },
-    }
-  );
+  // Use limited dataset for latest issue testing; faster builds
+  if (process.env.USE_LATEST_DATA === "true") {
+    localData = await import(
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb-latest-issue.json",
+      {
+        with: { type: "json" },
+      }
+    );
+  } else {
+    localData = await import(
+      "/Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundledb/bundledb.json",
+      {
+        with: { type: "json" },
+      }
+    );
+  }
+
   bundleRecords = localData.default;
   console.log("Loaded local bundleDB");
 
@@ -91,8 +102,8 @@ export default async function () {
         const titleDisplay = item["Title"] || "[No Title]";
         console.error(
           `Error: Blog post "${titleDisplay}" is missing properties: ${missingFields.join(
-            ", "
-          )}`
+            ", ",
+          )}`,
         );
       }
     }
@@ -107,8 +118,8 @@ export default async function () {
         const titleDisplay = item["Title"] || "[No Title]";
         console.error(
           `Error: Release "${titleDisplay}" is missing properties: ${missingFields.join(
-            ", "
-          )}`
+            ", ",
+          )}`,
         );
       }
     }
@@ -123,8 +134,8 @@ export default async function () {
         const titleDisplay = item["Title"] || "[No Title]";
         console.error(
           `Error: Site "${titleDisplay}" is missing properties: ${missingFields.join(
-            ", "
-          )}`
+            ", ",
+          )}`,
         );
       }
     }
@@ -259,7 +270,7 @@ export default async function () {
   // most recent update and the second by number of GitHub stars
   // **************
   const rawStarters = bundleRecords.filter(
-    (item) => item["Type"] === "starter" && !item["Skip"]
+    (item) => item["Type"] === "starter" && !item["Skip"],
   );
 
   const enrichStarters = async (starters) => {
@@ -303,7 +314,7 @@ export default async function () {
         if (packageJsonData) {
           const content = Buffer.from(
             packageJsonData.data.content,
-            "base64"
+            "base64",
           ).toString("utf-8");
           const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
           const match = content.match(regex);
@@ -332,7 +343,7 @@ export default async function () {
 
   let starters = await enrichStarters(rawStarters);
   starters = starters.sort(
-    (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated)
+    (a, b) => new Date(b.LastUpdated) - new Date(a.LastUpdated),
   );
   const startersByStars = starters.slice().sort((a, b) => b.Stars - a.Stars);
   const starterCount = starters.length;
@@ -361,7 +372,7 @@ export default async function () {
 
     // Use Map for O(1) lookups
     const authorsByName = new Map(
-      authorsData.map((author) => [author.name, author])
+      authorsData.map((author) => [author.name, author]),
     );
 
     return selectedPosts
@@ -381,7 +392,7 @@ export default async function () {
       }
       acc[year].push(post);
       return acc;
-    }, {})
+    }, {}),
   ).sort((a, b) => {
     // Sort by year descending (most recent first)
     const yearA = new Date(a[0].Date).getUTCFullYear();
@@ -391,7 +402,7 @@ export default async function () {
 
   // generate firehoseYears, a descending array of years for navigation
   const firehoseYears = pagedFirehose.map((yearPosts) =>
-    new Date(yearPosts[0].Date).getUTCFullYear()
+    new Date(yearPosts[0].Date).getUTCFullYear(),
   );
   console.log(`firehoseYears: ${firehoseYears.length} years`);
 
