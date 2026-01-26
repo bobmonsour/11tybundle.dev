@@ -4,10 +4,6 @@ import "dotenv/config";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 
-import { minify } from "terser";
-import postcss from "postcss";
-import cssnanoPlugin from "cssnano";
-
 import filters from "./content/_config/filters/index.js";
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
