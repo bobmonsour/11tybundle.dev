@@ -21,13 +21,6 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addBundle("js", {
-    transforms: [
-      async function (content) {
-        let { type, page } = this;
-        let result = await minify(content);
-        return result.code;
-      },
-    ],
     toFileDirectory: "dist",
   });
 
@@ -38,16 +31,6 @@ export default function (eleventyConfig) {
 
   //adds the {% css %} paired shortcode
   eleventyConfig.addBundle("css", {
-    transforms: [
-      async function (content) {
-        let { type, page } = this;
-        let result = await postcss([cssnanoPlugin]).process(content, {
-          from: page.inputPath,
-          to: null,
-        });
-        return result.css;
-      },
-    ],
     toFileDirectory: "dist",
   });
 
@@ -72,10 +55,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRSS);
-
-  eleventyConfig.addBundle("css", {
-    toFileDirectory: "bundle",
-  });
 
   // Adds posts collection to blog section
   eleventyConfig.addCollection("post", function (collectionApi) {
