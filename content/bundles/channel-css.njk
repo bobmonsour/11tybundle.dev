@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /dist/channel.css
+eleventyExcludeFromCollections: true
+---
+{# bundle the channel-related css files #}
+{% css "channel" %}
+  {% include "public/css/channels.css" %}
+  {% include "public/css/showcase.css" %}
+  {% include "public/css/blog.css" %}
+  {% include "public/css/prism-okaidia.css" %}
+  {% include "public/css/lite-yt-embed.css" %}
+  {% include "public/css/404.css" %}
+{% endcss %}
+
+{% getBundle "css", "channel" %}

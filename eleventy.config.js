@@ -12,7 +12,10 @@ import pluginRSS from "@11ty/eleventy-plugin-rss";
 // ********************************************************
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    "./public/": "/",
+    "./public/fonts/": "/fonts/",
+    "./public/css/feed.xsl": "/",
+    "./public/_redirects": "/",
+    "./public/robots.txt": "/",
     "./content/img/": "img",
     "./content/screenshots/": "screenshots",
   });

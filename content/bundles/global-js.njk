@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /dist/global.js
+eleventyExcludeFromCollections: true
+---
+{# bundle the global js files #}
+{% js "global" %}
+  {% include "public/js/toggle.js" %}
+  {% include "public/js/scrollToTop.js" %}
+  {% include "public/js/pagefind-ui.js" %}
+  {% include "public/js/pagefind-highlight.js" %}
+  {% include "public/js/resulthighlight.js" %}
+  {% include "public/js/search.js" %}
+  {% include "public/js/popovers.js" %}
+{% endjs %}
+{% getBundle "js", "global" %}

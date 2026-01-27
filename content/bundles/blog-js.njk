@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /dist/blog.js
+eleventyExcludeFromCollections: true
+---
+{# bundle the blog js files #}
+{% js "blog" %}
+  {% include "public/js/prism.min.js" %}
+  {% include "public/js/lite-yt-embed.js" %}
+{% endjs %}
+{% getBundle "js", "blog" %}

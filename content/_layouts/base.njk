@@ -18,60 +18,23 @@
   <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
 
-  {# bundle the global css files #}
-  {% css "global" %}
-    {% include "public/css/fonts.css" %}
-    {% include "public/css/variables.css" %}
-    {% include "public/css/reset.css" %}
-    {% include "public/css/home.css" %}
-    {% include "public/css/global.css" %}
-    {% include "public/css/site-header.css" %}
-    {% include "public/css/site-footer.css" %}
-    {% include "public/css/pagefind.css" %}
-  {% endcss %}
-
   {# load the global css file for all pages #}
-  <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'global' %}">
-
-  {# bundle the channel-related css files #}
-  {% css "channel" %}
-    {% include "public/css/channels.css" %}
-    {% include "public/css/showcase.css" %}
-    {% include "public/css/blog.css" %}
-    {% include "public/css/prism-okaidia.css" %}
-    {% include "public/css/lite-yt-embed.css" %}
-    {% include "public/css/404.css" %}
-  {% endcss %}
+  <link rel="stylesheet" href="/dist/global.css">
 
   {# conditionally load the channel-related css file #}
   {% if channelsPage %}
-    <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'channel' %}">
+    <link rel="stylesheet" href="/dist/channel.css">
   {%endif %}
 
 	<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
 
-  {# load the bundles js files #}
-  {% js %}
-    {% include "public/js/toggle.js" %}
-    {% include "public/js/scrollToTop.js" %}
-    {% include "public/js/pagefind-ui.js" %}
-    {% include "public/js/pagefind-highlight.js" %}
-    {% include "public/js/resulthighlight.js" %}
-    {% include "public/js/search.js" %}
-    {% include "public/js/popovers.js" %}
+  <script type="module" src="/dist/global.js"></script>
 
-  {# include prism js on blog posts that have code #}
-  {% if pageHasCode %}
-    {% include "public/js/prism.min.js" %}
+  {# include prism & lite-yt-embed on blog posts that have code or youtube embeds #}
+  {% if pageHasCode or youtubeId %}
+    <script type="module" src="/dist/blog.js"></script>
   {% endif %}
 
-  {# include lite youtube embed on blog posts that have a YouTube ID #}
-  {% if youtubeId %}
-    {% include "public/js/lite-yt-embed.js" %}
-  {% endif %}
-  {% endjs %}
-
-  <script type="module" src="{% getBundleFileUrl "js" %}"></script>
 
 
   {# Improve RSS feed visibility #}
