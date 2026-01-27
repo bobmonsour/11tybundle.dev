@@ -87,10 +87,10 @@
   {# Open Graph tags #}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:description" content="{{ description }}">
-	<meta property="og:url" content="{{ page.url }}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="/img/opengraph-image.jpg">
-	<meta property="og:image:alt" content="a cute illustration of the 11ty Bundle website">
+	<meta property="og:image" content={{ site.url }}{% if ogImage %}{{ ogImage }}{% else %}"/img/opengraph-image.jpg"{% endif %}>
+	<meta property="og:image:alt" content="{% if ogImageAlt %}{{ ogImageAlt }}{% else %}a cute illustration of the 11ty Bundle website{% endif %}">
 
   {# Apple tags #}
 	<meta name="apple-mobile-web-app-title" content="11ty Bundle" >

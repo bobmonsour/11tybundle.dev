@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
     "./content/img/": "img",
+    "./content/screenshots/": "screenshots",
   });
 
   eleventyConfig.addBundle("js", {

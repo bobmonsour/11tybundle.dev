@@ -4,6 +4,8 @@
 		title: "{{ site.title }}",
 		description: "{{ site.description | safe }}",
 		permalink: "/showcase/{{ site.link | getHostname | slugify }}/",
+    ogImage: "{{ site.screenshotpath }}",
+    ogImageAlt: "Screenshot of {{ site.link | safe }}",
 	},
 	pagination:	{
 		data: "showcasedata.sites",
