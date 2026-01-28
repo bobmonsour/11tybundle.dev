@@ -19,20 +19,20 @@
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
 
   {# load the global css file for all pages #}
-  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/global-{{ 'css' | getBundleTimestamp }}.css">
 
   {# conditionally load the channel-related css file #}
   {% if channelsPage %}
-    <link rel="stylesheet" href="/css/channel.css">
+    <link rel="stylesheet" href="/css/channel-{{ 'css' | getBundleTimestamp }}.css">
   {%endif %}
 
 	<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
 
-  <script type="module" src="/js/global.js"></script>
+  <script type="module" src="/js/global-{{ 'js' | getBundleTimestamp }}.js"></script>
 
   {# include prism & lite-yt-embed on blog posts that have code or youtube embeds #}
   {% if pageHasCode or youtubeId %}
-    <script type="module" src="/js/blog.js"></script>
+    <script type="module" src="/js/blog-{{ 'js' | getBundleTimestamp }}.js"></script>
   {% endif %}
 
 

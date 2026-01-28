@@ -9,6 +9,7 @@ import {
   singleComma,
 } from "./datesandnumbers.js";
 import { getBundleItems } from "./getbundleitems.js";
+import { getBundleTimestamp } from "./getbundletimestamp.js";
 import { genFaviconHtml } from "./genfaviconhtml.js";
 import { getIssueCounts } from "./getissuecounts.js";
 import { getOrigin, getHostname } from "./getorigin.js";
@@ -32,6 +33,7 @@ export const filters = {
   getAuthorIcons,
   getSocialIcons,
   getBundleItems,
+  getBundleTimestamp,
   genFaviconHtml,
   getIssueCounts,
   getOrigin,

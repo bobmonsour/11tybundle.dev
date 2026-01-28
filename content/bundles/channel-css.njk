@@ -1,7 +1,11 @@
----
-layout: null
-permalink: /css/channel.css
-eleventyExcludeFromCollections: true
+---js
+{
+	eleventyComputed: {
+		layout: null,
+    eleventyExcludeFromCollections: true,
+		permalink: "/css/channel-{{ 'css' | getBundleTimestamp }}.css",
+  }
+}
 ---
 {# bundle the channel-related css files #}
 {% css "channel" %}
