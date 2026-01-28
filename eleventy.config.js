@@ -20,17 +20,13 @@ export default function (eleventyConfig) {
     "./content/screenshots/": "screenshots",
   });
 
-  eleventyConfig.addBundle("js", {
-    toFileDirectory: "dist",
-  });
+  //adds the css and js bundles
+  eleventyConfig.addBundle("css");
+
+  eleventyConfig.addBundle("js");
 
   // Adds the {% svg %} paired shortcode
   eleventyConfig.addBundle("svg", {
-    toFileDirectory: "dist",
-  });
-
-  //adds the {% css %} paired shortcode
-  eleventyConfig.addBundle("css", {
     toFileDirectory: "dist",
   });
 
