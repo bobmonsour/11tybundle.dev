@@ -1,11 +1,8 @@
----js
-{
-	eleventyComputed: {
-		layout: null,
-    eleventyExcludeFromCollections: true,
-		permalink: "/js/blog-{{ 'js' | getBundleTimestamp }}.js",
-  }
-}
+---
+layout: null
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: "/js/blog-{{ 'js' | getBundleTimestamp }}.js"
 ---
 {# bundle the blog js files #}
 {% js "blog" %}

@@ -1,11 +1,8 @@
----js
-{
-	eleventyComputed: {
-		layout: null,
-    eleventyExcludeFromCollections: true,
-		permalink: "/css/channel-{{ 'css' | getBundleTimestamp }}.css",
-  }
-}
+---
+layout: null
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: "/css/channel-{{ 'css' | getBundleTimestamp }}.css"
 ---
 {# bundle the channel-related css files #}
 {% css "channel" %}

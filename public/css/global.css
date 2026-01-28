@@ -68,14 +68,13 @@ h6,
   font-size: var(--step--1);
 }
 
-
 dd {
   margin-inline: 0;
 }
 
 ul,
 ol {
-  &[role='list'] {
+  &[role="list"] {
     margin-block: 0;
     padding-inline: 0;
   }
@@ -83,7 +82,7 @@ ol {
 
 ul,
 ol {
-  &:not([role='list']) {
+  &:not([role="list"]) {
     margin-block: 1lh 0;
     margin-inline: 0;
     padding-inline: 2ch;
@@ -131,7 +130,7 @@ a {
 a:not([class]) {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25ex;
-  &[href^='http'] {
+  &[href^="http"] {
     padding-right: 1.25em;
     &:after {
       position: absolute;
@@ -222,7 +221,7 @@ blockquote {
   padding-inline-start: 0.5lh;
 }
 
-pre[class*=language-] {
+pre[class*="language-"] {
   border-radius: var(--radius-s);
   margin-block: 1lh 0;
   padding: var(--space-s);
@@ -279,7 +278,9 @@ summary {
   border: 1px solid var(--surface-fore);
   margin: 0;
   padding: var(--space-s);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
   opacity: 0;
   transition:
     opacity 150ms ease-in-out 25ms,
@@ -393,7 +394,9 @@ mark,
   color: var(--greyscale-9);
   border: var(--border-width) solid var(--greyscale-9);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
   corner-shape: squircle;
   transform: rotate(5deg);
   word-break: normal;
@@ -439,7 +442,9 @@ mark,
     margin-block: var(--space-2xs) 0;
     font-size: var(--step-2);
     border-bottom-left-radius: calc(var(--border-radius) - var(--border-width));
-    border-bottom-right-radius: calc(var(--border-radius) - var(--border-width));
+    border-bottom-right-radius: calc(
+      var(--border-radius) - var(--border-width)
+    );
     corner-shape: squircle;
   }
 }
@@ -481,7 +486,9 @@ mark,
   position: fixed;
   bottom: var(--grid-gutter);
   right: var(--grid-gutter);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
   opacity: 0;
   pointer-events: none;
   transform: translateY(4px);

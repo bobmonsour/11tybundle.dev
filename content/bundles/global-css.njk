@@ -1,11 +1,8 @@
----js
-{
-	eleventyComputed: {
-		layout: null,
-    eleventyExcludeFromCollections: true,
-		permalink: "/css/global-{{ 'css' | getBundleTimestamp }}.css",
-  }
-}
+---
+layout: null
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: "/css/global-{{ 'css' | getBundleTimestamp }}.css"
 ---
 {# bundle the global css files #}
 {% css "global" %}
