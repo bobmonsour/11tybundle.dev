@@ -45,7 +45,7 @@ Requires a `GITHUB_TOKEN` in `.env` for Octokit (fetching starter repo metadata 
 ```
 11tybundle.dev/
 ├── content/                    # Eleventy input directory
-│   ├── _config/filters/       # 16 custom Nunjucks filters
+│   ├── _config/filters/       # 17 custom Nunjucks filters
 │   ├── _data/                 # Data cascade (async JS modules)
 │   │   ├── bundledata.js      # Main data processor (builds all derived data)
 │   │   ├── showcasedata.js    # Filters showcase JSON from sibling repo
@@ -62,7 +62,7 @@ Requires a `GITHUB_TOKEN` in `.env` for Octokit (fetching starter repo metadata 
 │   ├── showcase/              # Site screenshot grid
 │   ├── bundles/               # CSS/JS bundle definitions (4 files)
 │   ├── starters/              # Starter project listings
-│   ├── rssfeeds/              # 5 Atom feed templates
+│   ├── rssfeeds/              # 5 Atom/RSS feed templates + 1 JSON Feed
 │   ├── api/                   # Category JSON API endpoints
 │   └── index.njk              # Homepage
 ├── public/                    # Static assets (pass-through copy)
@@ -126,7 +126,7 @@ Entries with `Skip: true` are excluded from the site build.
 
 ## Filters
 
-16 custom Nunjucks filters in `content/_config/filters/`:
+17 custom Nunjucks filters in `content/_config/filters/`:
 
 | Filter | Purpose |
 |--------|---------|
@@ -144,16 +144,18 @@ Entries with `Skip: true` are excluded from the site build.
 | `getOrigin`, `getHostname` | URL parsing |
 | `getAuthorIcons`, `getSocialIcons` | Social media icon SVGs |
 | `singleComma` | Number formatting (1,234) |
+| `toSocialHandle` | Convert social profile URL to handle format |
 
 ## RSS Feeds
 
-Five Atom feeds in `content/rssfeeds/`:
+Five Atom/RSS feeds and one JSON Feed in `content/rssfeeds/`:
 
 1. `/feed.xml` — Blog issues (latest 20)
 2. `/firehosefeed.xml` — All blog posts
 3. `/sitesfeed.xml` — Sites added to showcase
 4. `/releasefeed.xml` — Eleventy releases
-5. `/showcasefeed.xml` — Recent showcase additions
+5. `/showcasefeed.xml` — Recent showcase additions (RSS)
+6. `/showcasefeed.json` — Recent showcase additions (JSON Feed v1.1), includes `_mastodon_account` and `_bluesky_account` handles when a showcase site matches a known author
 
 ## Deployment
 

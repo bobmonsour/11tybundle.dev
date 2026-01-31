@@ -1,0 +1,35 @@
+---
+permalink: /showcasefeed.json
+---
+{%- set recent = bundledata.siteList.slice(0,20) -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Recent sites built with Eleventy.",
+  "home_page_url": "{{ site.url }}",
+  "feed_url": "{{ site.url }}/showcasefeed.json",
+  "description": "The 11ty Bundle: recent sites built with Eleventy.",
+  "language": "{{ site.language }}",
+  "items": [
+{%- for item in recent %}
+{%- set itemUrl %}{{ site.url }}/showcase/{{ item.Link | getHostname | slugify }}{% endset %}
+{%- set itemHtml %}Built with Eleventy: <a href="{{ item.Link }}">{{ item.Title | safe }}</a>{% endset %}
+    {
+      "id": {{ itemUrl | dump | safe }},
+      "url": {{ itemUrl | dump | safe }},
+      "title": {{ item.Title | dump | safe }},
+      "content_html": {{ itemHtml | dump | safe }},
+      "date_published": "{{ item.Date }}"
+{%- for author in bundledata.authors -%}
+{%- if author.origin == (item.Link | getOrigin) and author.socialLinks -%}
+{%- if author.socialLinks.mastodon and author.socialLinks.mastodon != "" %},
+      "_mastodon_account": {{ author.socialLinks.mastodon | toSocialHandle("mastodon") | dump | safe }}
+{%- endif -%}
+{%- if author.socialLinks.bluesky and author.socialLinks.bluesky != "" %},
+      "_bluesky_account": {{ author.socialLinks.bluesky | toSocialHandle("bluesky") | dump | safe }}
+{%- endif -%}
+{%- endif -%}
+{%- endfor %}
+    }{{ "," if not loop.last }}
+{%- endfor %}
+  ]
+}
