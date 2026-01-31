@@ -182,3 +182,147 @@ Cache stored in `.cache/` directory (gitignored).
 - **11tybundledb/** — The JSON database repository. This site reads from it; dbtools writes to it.
 - **dbtools/** — CLI scripts for managing the database (adding entries, screenshots, validation).
 - **Data flows one way:** dbtools → 11tybundledb → 11tybundle.dev
+
+## Insights Page (Planned)
+
+A new `/insights/` page will display data-driven visualizations about the 11tybundle.dev ecosystem — growth trends, category popularity, author contributions, and data quality. This section documents the architecture decisions and implementation plan so a future Claude Code session can build it.
+
+### Architecture Decisions
+
+- **Pre-computed data:** A refactored version of `generate-insights.js` (in the sibling `dbtools/` repo) computes all metrics from `bundledb.json` and `showcase-data.json`, then writes a single JSON file to `content/_data/insightsdata.json` in this repo.
+- **Eleventy rendering:** An `content/insights/index.njk` template reads `insightsdata` from the data cascade and renders the page using the site's existing `base.njk` layout, design tokens, and CSS patterns.
+- **Build-time SVG charts:** Charts are inline SVGs generated at build time via Eleventy filters or shortcodes. SVG fills and strokes reference CSS custom properties so they automatically adapt to light/dark mode. No client-side JavaScript for charts.
+- **Periodic generation:** The data script runs on demand (not on every Eleventy build). The JSON file is committed to the repo and updated whenever the database changes significantly.
+
+### What Exists Today (in dbtools)
+
+The `dbtools/generate-insights.js` script currently produces 4 chart visualizations:
+
+1. **Cumulative entry growth** — line chart showing blog posts, sites, and releases over time
+2. **Category growth** — line chart of the top categories growing over time
+3. **Top 15 categories** — horizontal bar chart ranking categories by post count
+4. **Author contribution ranges** — vertical bar chart showing distribution of author post counts (1 post, 2–5 posts, 6–10 posts, etc.)
+
+It also produces:
+
+- **Stat cards** — total entries, authors, categories, showcase sites, etc.
+- **Prolific author lists** — authors grouped by contribution tier
+- **Missing data sections** — entries with missing descriptions, RSS links, favicons, etc. (these will be included on the public page with collapsible `<details>` elements so developers can see how to improve their sites)
+
+Currently outputs standalone HTML + CSS to `dbtools/insights/`. The refactoring will change this to structured JSON output.
+
+### Implementation Phases
+
+1. **Refactor data generation** — Modify `generate-insights.js` in dbtools to output structured JSON to `content/_data/insightsdata.json` instead of standalone HTML. The JSON should contain raw data points, not pre-rendered markup.
+
+2. **Create the template** — Add `content/insights/index.njk` using `base.njk` layout. Structure: stat cards section, growth charts section, category charts section, author charts section, missing data section (collapsible).
+
+3. **Create chart filters** — Add Eleventy filters (in `content/_config/filters/`) for SVG chart generation:
+   - `lineChart` — renders a multi-series line chart SVG from data points
+   - `barChart` — renders horizontal or vertical bar chart SVG
+   - All SVGs use CSS custom properties for colors, not hardcoded values
+
+4. **Create insights CSS** — Add `insights.css` using the site's design tokens (see integration points below). Include it via the CSS bundler in a `content/bundles/` file or inline in the template.
+
+5. **Add accessibility** — SVG `role="img"` with `aria-label` and inner `<title>`/`<desc>` elements, visually hidden data tables as screen reader alternatives, dash/pattern differentiation for color-blind users, proper heading hierarchy.
+
+6. **Add navigation** — Link to `/insights/` from the site footer (and optionally the header nav).
+
+### Design Token Integration
+
+The insights page must use the site's existing design system, not hardcoded values.
+
+**Colors (OKLch system):** The site defines 7 hues (primary through septenary) each with 9 lightness/chroma steps. Map chart data series to existing section hues:
+
+| Data Series | Hue | Rationale |
+|-------------|-----|-----------|
+| Blog posts (line chart) | `--senary-*` | Blog section uses senary hue |
+| Showcase sites | `--quaternary-*` | Showcase section uses quaternary hue |
+| Releases | `--secondary-*` | Releases section uses secondary hue |
+| Categories (bars) | `--categories-colour-*` | Existing semantic tokens |
+| Authors | `--authors-colour-*` | Existing semantic tokens |
+
+Use step-5 variants (e.g., `--senary-5`) for standard weight and step-7/step-8 for emphasis. In SVGs:
+
+```css
+/* Example: SVG elements reference custom properties */
+.chart-line-blog { stroke: var(--senary-5); }
+.chart-line-showcase { stroke: var(--quaternary-5); }
+.chart-line-releases { stroke: var(--secondary-5); }
+```
+
+**Typography:** Use the site's fluid type scale (`--step-0` through `--step-5`) with `--font-display-bold` (Optima) for chart titles and `--font-default` (Candara/Noto Sans) for labels and body text.
+
+**Spacing:** Use Utopia fluid tokens (`--space-s`, `--space-m`, `--space-l`, etc.) and paired tokens (`--space-s-m`, `--space-m-l`) for responsive rhythm.
+
+**Layout:** Use `.container` wrapper class and CSS Grid, matching the site's body grid structure (header/main/footer). `--grid-max-width: 85.25rem` and `--grid-gutter` for consistent alignment.
+
+**Theming:** The site uses `data-theme="light"` / `data-theme="dark"` on `<html>` (not `prefers-color-scheme` media queries). All color references in SVGs and CSS must use the CSS custom properties so they respond to the theme toggle. The current standalone insights page uses `@media (prefers-color-scheme: dark)` which must be converted to the `[data-theme="dark"]` selector pattern.
+
+### Accessibility Requirements
+
+- Every SVG chart: `role="img"`, `aria-label` with a meaningful summary, `<title>` and `<desc>` child elements
+- Hidden data tables (using the site's `.visually-hidden` class) after each chart, containing the same data in tabular form for screen readers
+- Don't rely on color alone — add dash patterns (`stroke-dasharray`) or direct labels to differentiate data series
+- Ensure all text in SVGs meets WCAG AA contrast ratios against both light and dark theme backgrounds
+- Use the site's existing focus styles (`outline: 2px dotted var(--primary-5)`) for any interactive elements (collapsible sections)
+- Proper heading hierarchy within the page (h1 for page title, h2 for sections, h3 for individual charts)
+
+### Data File Structure (insightsdata.json)
+
+The JSON file should contain pre-computed data points organized by visualization:
+
+```json
+{
+  "generatedDate": "2026-01-15T00:00:00Z",
+  "stats": {
+    "totalEntries": 3200,
+    "totalAuthors": 450,
+    "totalCategories": 55,
+    "totalShowcase": 1400,
+    "totalReleases": 80,
+    "totalStarters": 40
+  },
+  "cumulativeGrowth": {
+    "labels": ["2022-11", "2022-12", ...],
+    "series": {
+      "blogPosts": [10, 45, ...],
+      "sites": [5, 12, ...],
+      "releases": [2, 5, ...]
+    }
+  },
+  "categoryRanking": [
+    { "name": "Performance", "count": 120 },
+    ...
+  ],
+  "categoryGrowth": {
+    "labels": ["2022-11", ...],
+    "series": {
+      "Performance": [5, 12, ...],
+      ...
+    }
+  },
+  "authorDistribution": [
+    { "range": "1", "count": 280 },
+    { "range": "2-5", "count": 95 },
+    ...
+  ],
+  "prolificAuthors": {
+    "tier1": [{ "name": "...", "count": 50 }],
+    "tier2": [...],
+    "tier3": [...]
+  },
+  "missingData": {
+    "missingDescriptions": [{ "title": "...", "link": "..." }],
+    "missingRssLinks": [...],
+    "missingFavicons": [...]
+  }
+}
+```
+
+### Responsive Considerations
+
+- Charts should be fluid width (100% of container) with a reasonable `viewBox` aspect ratio
+- On mobile (`< 768px`): stack everything vertically, consider simplifying axis labels or rotating them
+- Bar chart labels may need truncation or wrapping on narrow viewports
+- Stat cards should reflow from a grid to a single column on mobile
