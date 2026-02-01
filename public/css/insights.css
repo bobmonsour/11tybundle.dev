@@ -9,6 +9,7 @@
   --header-border: var(--insights-colour-5);
   --header-content: var(--insights-colour-1);
   --header-accent: var(--insights-colour-2);
+  overflow-x: hidden;
 }
 
 /* Tighter vertical rhythm for headings/subheadings/charts */
@@ -21,7 +22,7 @@
   padding-block-start: var(--space-s);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-s);
+  gap: var(--space-m);
 }
 
 .insights-stat-card {
@@ -48,6 +49,7 @@
 /* Chart containers */
 .insights-chart {
   margin-block: var(--space-xs);
+  min-width: 0;
 }
 
 .insights-chart svg {
