@@ -1,11 +1,11 @@
 {
-  "generatedDate": "2026-02-01T01:26:09.131Z",
+  "generatedDate": "2026-02-01T20:56:34.814Z",
   "stats": {
-    "totalEntries": 3267,
-    "blogPosts": 1638,
+    "totalEntries": 3268,
+    "blogPosts": 1639,
     "sites": 1434,
     "releases": 195,
-    "totalAuthors": 482,
+    "totalAuthors": 483,
     "totalShowcase": 1447,
     "prolificAuthorCount": 61
   },
@@ -190,12 +190,12 @@
         1458,
         1473,
         1504,
-        1531,
-        1554,
-        1578,
-        1596,
-        1610,
-        1638
+        1532,
+        1555,
+        1579,
+        1597,
+        1611,
+        1639
       ],
       "sites": [
         0,
@@ -414,7 +414,7 @@
   "categoryRanking": [
     {
       "name": "Configuration",
-      "count": 252
+      "count": 253
     },
     {
       "name": "Blogging",
@@ -446,7 +446,7 @@
     },
     {
       "name": "CSS/Sass",
-      "count": 110
+      "count": 111
     },
     {
       "name": "Collections",
@@ -654,12 +654,12 @@
         202,
         202,
         209,
-        216,
-        226,
-        236,
-        240,
-        243,
-        252
+        217,
+        227,
+        237,
+        241,
+        244,
+        253
       ],
       "Blogging": [
         0,
@@ -1398,12 +1398,12 @@
         95,
         96,
         96,
-        97,
-        99,
-        103,
-        105,
-        107,
-        110
+        98,
+        100,
+        104,
+        106,
+        108,
+        111
       ],
       "Collections": [
         0,
@@ -1968,7 +1968,7 @@
   "authorDistribution": [
     {
       "range": "1-2",
-      "count": 332
+      "count": 333
     },
     {
       "range": "3-5",
@@ -2295,11 +2295,11 @@
     }
   ],
   "missingData": {
-    "totalAuthors": 482,
-    "totalBlogPosts": 1638,
+    "totalAuthors": 483,
+    "totalBlogPosts": 1639,
     "rssLink": {
-      "count": 125,
-      "percentage": 25.9,
+      "count": 126,
+      "percentage": 26.1,
       "authors": [
         {
           "name": "Adrien",
@@ -2592,6 +2592,10 @@
         {
           "name": "Khalid Abuhakmeh",
           "site": "https://khalidabuhakmeh.com/"
+        },
+        {
+          "name": "Lasantha Kularatne",
+          "site": "https://www.lasantha.org"
         },
         {
           "name": "Leonardo Silveira",
