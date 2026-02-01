@@ -1,0 +1,3609 @@
+{
+  "generatedDate": "2026-02-01T01:26:09.131Z",
+  "stats": {
+    "totalEntries": 3267,
+    "blogPosts": 1638,
+    "sites": 1434,
+    "releases": 195,
+    "totalAuthors": 482,
+    "totalShowcase": 1447,
+    "prolificAuthorCount": 61
+  },
+  "cumulativeGrowth": {
+    "months": [
+      "2018-07",
+      "2018-08",
+      "2018-09",
+      "2018-10",
+      "2018-11",
+      "2018-12",
+      "2019-01",
+      "2019-02",
+      "2019-03",
+      "2019-04",
+      "2019-05",
+      "2019-06",
+      "2019-07",
+      "2019-08",
+      "2019-09",
+      "2019-10",
+      "2019-11",
+      "2019-12",
+      "2020-01",
+      "2020-02",
+      "2020-03",
+      "2020-04",
+      "2020-05",
+      "2020-06",
+      "2020-07",
+      "2020-08",
+      "2020-09",
+      "2020-10",
+      "2020-11",
+      "2020-12",
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-02",
+      "2022-03",
+      "2022-04",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10",
+      "2022-11",
+      "2022-12",
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06",
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01"
+    ],
+    "series": {
+      "blogPosts": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        8,
+        8,
+        8,
+        9,
+        12,
+        14,
+        15,
+        19,
+        21,
+        25,
+        27,
+        28,
+        32,
+        43,
+        53,
+        68,
+        81,
+        91,
+        102,
+        114,
+        128,
+        141,
+        155,
+        175,
+        200,
+        217,
+        233,
+        255,
+        276,
+        287,
+        310,
+        326,
+        334,
+        344,
+        356,
+        361,
+        376,
+        389,
+        415,
+        427,
+        442,
+        455,
+        463,
+        479,
+        494,
+        508,
+        530,
+        545,
+        583,
+        618,
+        664,
+        693,
+        715,
+        749,
+        787,
+        809,
+        830,
+        861,
+        899,
+        938,
+        989,
+        1032,
+        1066,
+        1087,
+        1127,
+        1162,
+        1190,
+        1210,
+        1228,
+        1254,
+        1274,
+        1293,
+        1340,
+        1382,
+        1408,
+        1436,
+        1458,
+        1473,
+        1504,
+        1531,
+        1554,
+        1578,
+        1596,
+        1610,
+        1638
+      ],
+      "sites": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        28,
+        44,
+        51,
+        63,
+        66,
+        80,
+        100,
+        115,
+        132,
+        148,
+        172,
+        182,
+        193,
+        225,
+        251,
+        281,
+        293,
+        301,
+        335,
+        353,
+        381,
+        405,
+        418,
+        449,
+        487,
+        506,
+        523,
+        539,
+        555,
+        566,
+        581,
+        594,
+        612,
+        1434
+      ],
+      "releases": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        19,
+        22,
+        23,
+        25,
+        26,
+        31,
+        34,
+        43,
+        51,
+        54,
+        63,
+        71,
+        85,
+        90,
+        110,
+        122,
+        132,
+        146,
+        157,
+        166,
+        172,
+        181,
+        182,
+        182,
+        182,
+        193,
+        195
+      ]
+    }
+  },
+  "siteJump": {
+    "month": "2026-01",
+    "amount": 790
+  },
+  "milestones": [
+    {
+      "month": "2022-01",
+      "label": "v1.0.0",
+      "type": "minor"
+    },
+    {
+      "month": "2023-02",
+      "label": "v2.0.0",
+      "type": "minor"
+    },
+    {
+      "month": "2023-05",
+      "label": "11tybundle.dev launch",
+      "type": "major"
+    },
+    {
+      "month": "2024-10",
+      "label": "v3.0.0",
+      "type": "minor"
+    }
+  ],
+  "categoryRanking": [
+    {
+      "name": "Configuration",
+      "count": 252
+    },
+    {
+      "name": "Blogging",
+      "count": 223
+    },
+    {
+      "name": "Plugins",
+      "count": 148
+    },
+    {
+      "name": "Images",
+      "count": 140
+    },
+    {
+      "name": "Remote Data",
+      "count": 130
+    },
+    {
+      "name": "Migrating to Eleventy",
+      "count": 125
+    },
+    {
+      "name": "Deployment",
+      "count": 124
+    },
+    {
+      "name": "Why Eleventy?",
+      "count": 116
+    },
+    {
+      "name": "CSS/Sass",
+      "count": 110
+    },
+    {
+      "name": "Collections",
+      "count": 107
+    },
+    {
+      "name": "Getting Started",
+      "count": 104
+    },
+    {
+      "name": "Filters",
+      "count": 97
+    },
+    {
+      "name": "Global Data",
+      "count": 84
+    },
+    {
+      "name": "Markdown",
+      "count": 82
+    },
+    {
+      "name": "CMS",
+      "count": 82
+    }
+  ],
+  "categoryGrowth": {
+    "months": [
+      "2018-07",
+      "2018-08",
+      "2018-09",
+      "2018-10",
+      "2018-11",
+      "2018-12",
+      "2019-01",
+      "2019-02",
+      "2019-03",
+      "2019-04",
+      "2019-05",
+      "2019-06",
+      "2019-07",
+      "2019-08",
+      "2019-09",
+      "2019-10",
+      "2019-11",
+      "2019-12",
+      "2020-01",
+      "2020-02",
+      "2020-03",
+      "2020-04",
+      "2020-05",
+      "2020-06",
+      "2020-07",
+      "2020-08",
+      "2020-09",
+      "2020-10",
+      "2020-11",
+      "2020-12",
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-02",
+      "2022-03",
+      "2022-04",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10",
+      "2022-11",
+      "2022-12",
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06",
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01"
+    ],
+    "series": {
+      "Configuration": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        6,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        11,
+        12,
+        15,
+        17,
+        18,
+        18,
+        19,
+        19,
+        20,
+        20,
+        21,
+        21,
+        24,
+        25,
+        25,
+        26,
+        26,
+        29,
+        29,
+        29,
+        31,
+        31,
+        32,
+        32,
+        33,
+        35,
+        35,
+        40,
+        43,
+        47,
+        48,
+        51,
+        56,
+        59,
+        60,
+        63,
+        68,
+        72,
+        84,
+        98,
+        104,
+        111,
+        115,
+        120,
+        126,
+        131,
+        135,
+        137,
+        140,
+        142,
+        147,
+        157,
+        169,
+        184,
+        198,
+        202,
+        202,
+        209,
+        216,
+        226,
+        236,
+        240,
+        243,
+        252
+      ],
+      "Blogging": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        7,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        22,
+        24,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        32,
+        33,
+        40,
+        40,
+        40,
+        43,
+        44,
+        45,
+        47,
+        53,
+        61,
+        67,
+        74,
+        79,
+        89,
+        89,
+        93,
+        96,
+        99,
+        101,
+        101,
+        106,
+        110,
+        113,
+        124,
+        136,
+        149,
+        161,
+        170,
+        175,
+        187,
+        195,
+        200,
+        211,
+        214,
+        217,
+        223
+      ],
+      "Plugins": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        7,
+        7,
+        9,
+        10,
+        10,
+        10,
+        12,
+        12,
+        12,
+        13,
+        15,
+        15,
+        15,
+        17,
+        17,
+        17,
+        18,
+        21,
+        23,
+        24,
+        27,
+        27,
+        27,
+        27,
+        30,
+        30,
+        30,
+        31,
+        33,
+        35,
+        35,
+        35,
+        36,
+        37,
+        39,
+        39,
+        42,
+        47,
+        57,
+        66,
+        73,
+        76,
+        79,
+        82,
+        89,
+        93,
+        96,
+        98,
+        101,
+        102,
+        105,
+        111,
+        113,
+        118,
+        124,
+        127,
+        130,
+        134,
+        136,
+        137,
+        143,
+        143,
+        144,
+        148
+      ],
+      "Images": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        5,
+        5,
+        9,
+        15,
+        15,
+        16,
+        19,
+        20,
+        20,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        29,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        35,
+        37,
+        38,
+        38,
+        40,
+        42,
+        43,
+        43,
+        43,
+        47,
+        48,
+        49,
+        49,
+        53,
+        57,
+        60,
+        63,
+        67,
+        71,
+        72,
+        76,
+        83,
+        84,
+        84,
+        86,
+        91,
+        94,
+        96,
+        102,
+        108,
+        109,
+        113,
+        117,
+        121,
+        125,
+        128,
+        132,
+        137,
+        138,
+        139,
+        140
+      ],
+      "Remote Data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        6,
+        7,
+        9,
+        9,
+        9,
+        11,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        22,
+        24,
+        25,
+        26,
+        27,
+        27,
+        27,
+        28,
+        29,
+        29,
+        30,
+        33,
+        33,
+        34,
+        36,
+        37,
+        39,
+        44,
+        48,
+        51,
+        54,
+        56,
+        65,
+        70,
+        74,
+        82,
+        86,
+        87,
+        91,
+        98,
+        104,
+        105,
+        105,
+        106,
+        107,
+        108,
+        111,
+        115,
+        115,
+        118,
+        120,
+        121,
+        123,
+        125,
+        126,
+        127,
+        127,
+        128,
+        130
+      ],
+      "Migrating to Eleventy": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12,
+        16,
+        16,
+        17,
+        20,
+        20,
+        22,
+        24,
+        26,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        31,
+        32,
+        32,
+        32,
+        33,
+        34,
+        34,
+        34,
+        36,
+        36,
+        37,
+        41,
+        43,
+        47,
+        51,
+        52,
+        55,
+        57,
+        59,
+        60,
+        62,
+        66,
+        70,
+        73,
+        73,
+        75,
+        78,
+        81,
+        81,
+        84,
+        84,
+        85,
+        85,
+        87,
+        89,
+        94,
+        98,
+        107,
+        107,
+        111,
+        111,
+        113,
+        116,
+        121,
+        121,
+        122,
+        122,
+        125
+      ],
+      "Deployment": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        8,
+        10,
+        11,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        15,
+        15,
+        17,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        22,
+        25,
+        27,
+        29,
+        32,
+        33,
+        34,
+        35,
+        37,
+        41,
+        44,
+        46,
+        52,
+        55,
+        58,
+        61,
+        63,
+        65,
+        66,
+        69,
+        72,
+        76,
+        77,
+        80,
+        85,
+        86,
+        88,
+        93,
+        95,
+        96,
+        102,
+        108,
+        111,
+        114,
+        119,
+        120,
+        124
+      ],
+      "Why Eleventy?": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        10,
+        10,
+        12,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        18,
+        19,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        26,
+        27,
+        28,
+        28,
+        30,
+        31,
+        32,
+        32,
+        33,
+        34,
+        41,
+        43,
+        45,
+        50,
+        53,
+        58,
+        66,
+        69,
+        71,
+        74,
+        78,
+        80,
+        84,
+        84,
+        84,
+        86,
+        89,
+        91,
+        95,
+        97,
+        101,
+        101,
+        103,
+        105,
+        106,
+        109,
+        110,
+        110,
+        114,
+        116,
+        116
+      ],
+      "CSS/Sass": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        6,
+        7,
+        7,
+        10,
+        12,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        24,
+        24,
+        27,
+        27,
+        29,
+        31,
+        35,
+        36,
+        37,
+        43,
+        45,
+        47,
+        48,
+        50,
+        50,
+        53,
+        55,
+        55,
+        57,
+        57,
+        57,
+        61,
+        65,
+        65,
+        67,
+        70,
+        74,
+        75,
+        80,
+        85,
+        89,
+        92,
+        95,
+        96,
+        96,
+        97,
+        99,
+        103,
+        105,
+        107,
+        110
+      ],
+      "Collections": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        10,
+        12,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        27,
+        27,
+        29,
+        29,
+        30,
+        30,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        32,
+        35,
+        35,
+        35,
+        35,
+        35,
+        37,
+        37,
+        41,
+        42,
+        46,
+        47,
+        51,
+        55,
+        62,
+        66,
+        69,
+        75,
+        76,
+        78,
+        81,
+        84,
+        88,
+        90,
+        91,
+        92,
+        95,
+        96,
+        96,
+        96,
+        98,
+        98,
+        101,
+        102,
+        103,
+        103,
+        107
+      ],
+      "Getting Started": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        4,
+        7,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        11,
+        12,
+        13,
+        13,
+        15,
+        16,
+        16,
+        17,
+        18,
+        18,
+        19,
+        20,
+        21,
+        21,
+        21,
+        25,
+        26,
+        30,
+        30,
+        30,
+        31,
+        32,
+        32,
+        34,
+        36,
+        38,
+        40,
+        44,
+        46,
+        48,
+        49,
+        52,
+        54,
+        55,
+        56,
+        56,
+        57,
+        59,
+        61,
+        66,
+        67,
+        70,
+        72,
+        75,
+        77,
+        78,
+        78,
+        78,
+        80,
+        84,
+        85,
+        86,
+        93,
+        96,
+        97,
+        97,
+        98,
+        99,
+        100,
+        102,
+        104,
+        104,
+        104,
+        104
+      ],
+      "Filters": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        6,
+        7,
+        8,
+        8,
+        9,
+        11,
+        11,
+        13,
+        14,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        18,
+        18,
+        18,
+        19,
+        20,
+        20,
+        20,
+        20,
+        22,
+        23,
+        24,
+        24,
+        24,
+        26,
+        28,
+        29,
+        32,
+        34,
+        38,
+        40,
+        45,
+        49,
+        52,
+        53,
+        55,
+        57,
+        60,
+        66,
+        68,
+        70,
+        73,
+        74,
+        77,
+        81,
+        82,
+        83,
+        84,
+        85,
+        88,
+        89,
+        91,
+        93,
+        96,
+        96,
+        97
+      ],
+      "Global Data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        7,
+        10,
+        10,
+        12,
+        12,
+        13,
+        15,
+        17,
+        18,
+        18,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        27,
+        28,
+        35,
+        40,
+        42,
+        42,
+        43,
+        47,
+        51,
+        53,
+        53,
+        57,
+        60,
+        61,
+        65,
+        70,
+        72,
+        73,
+        74,
+        74,
+        75,
+        77,
+        80,
+        80,
+        81,
+        83,
+        84
+      ],
+      "Markdown": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        21,
+        22,
+        23,
+        26,
+        28,
+        29,
+        32,
+        34,
+        37,
+        40,
+        42,
+        44,
+        45,
+        47,
+        47,
+        51,
+        52,
+        56,
+        60,
+        62,
+        66,
+        67,
+        69,
+        74,
+        75,
+        78,
+        79,
+        79,
+        82
+      ],
+      "CMS": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        10,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        15,
+        17,
+        17,
+        17,
+        17,
+        17,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        21,
+        22,
+        22,
+        26,
+        30,
+        32,
+        33,
+        36,
+        37,
+        37,
+        39,
+        40,
+        41,
+        42,
+        45,
+        48,
+        50,
+        51,
+        54,
+        57,
+        57,
+        62,
+        65,
+        69,
+        73,
+        75,
+        75,
+        76,
+        78,
+        81,
+        82
+      ]
+    }
+  },
+  "authorDistribution": [
+    {
+      "range": "1-2",
+      "count": 332
+    },
+    {
+      "range": "3-5",
+      "count": 89
+    },
+    {
+      "range": "6-10",
+      "count": 38
+    },
+    {
+      "range": "11-20",
+      "count": 15
+    },
+    {
+      "range": "21+",
+      "count": 8
+    }
+  ],
+  "prolificAuthors": [
+    {
+      "name": "Raymond Camden",
+      "site": "https://www.raymondcamden.com",
+      "count": 105
+    },
+    {
+      "name": "Zach Leatherman",
+      "site": "https://zachleat.com",
+      "count": 82
+    },
+    {
+      "name": "John M. Wargo",
+      "site": "https://johnwargo.com",
+      "count": 47
+    },
+    {
+      "name": "Cory Dransfeldt",
+      "site": "https://www.coryd.dev",
+      "count": 46
+    },
+    {
+      "name": "Bryce Wray",
+      "site": "https://www.brycewray.com",
+      "count": 26
+    },
+    {
+      "name": "Bob Monsour",
+      "site": "https://bobmonsour.com",
+      "count": 23
+    },
+    {
+      "name": "Juha-Matti Santala",
+      "site": "https://hamatti.org",
+      "count": 22
+    },
+    {
+      "name": "Stephanie Eckles",
+      "site": "https://11ty.rocks",
+      "count": 21
+    },
+    {
+      "name": "Robb Knight",
+      "site": "https://rknight.me",
+      "count": 20
+    },
+    {
+      "name": "Clayton Errington",
+      "site": "https://claytonerrington.com",
+      "count": 19
+    },
+    {
+      "name": "equilibriumuk",
+      "site": "https://equk.co.uk",
+      "count": 19
+    },
+    {
+      "name": "Simon Cox",
+      "site": "https://www.simoncox.com",
+      "count": 17
+    },
+    {
+      "name": "Bryan Robinson",
+      "site": "https://bryanlrobinson.com",
+      "count": 15
+    },
+    {
+      "name": "Aleksandr Hovhannisyan",
+      "site": "https://www.aleksandrhovhannisyan.com",
+      "count": 14
+    },
+    {
+      "name": "Christopher Kirk-Nielsen",
+      "site": "https://chriskirknielsen.com",
+      "count": 14
+    },
+    {
+      "name": "Martin Hähnel",
+      "site": "https://blog.martin-haehnel.de",
+      "count": 14
+    },
+    {
+      "name": "Michael Harley",
+      "site": "https://michaelharley.net",
+      "count": 14
+    },
+    {
+      "name": "Jessie Heald",
+      "site": "https://jessieheald.com/",
+      "count": 13
+    },
+    {
+      "name": "Mike Street",
+      "site": "https://www.mikestreety.co.uk",
+      "count": 13
+    },
+    {
+      "name": "Rob O'Leary",
+      "site": "https://www.roboleary.net",
+      "count": 13
+    },
+    {
+      "name": "Shiv J.M.",
+      "site": "https://shivjm.blog",
+      "count": 13
+    },
+    {
+      "name": "Sia Karamalegos",
+      "site": "https://sia.codes",
+      "count": 13
+    },
+    {
+      "name": "Simon Dann",
+      "site": "https://photogabble.co.uk",
+      "count": 11
+    },
+    {
+      "name": "Adam DJ Brett",
+      "site": "https://www.adamdjbrett.com",
+      "count": 10
+    },
+    {
+      "name": "Brennan Kenneth Brown",
+      "site": "https://brennan.day",
+      "count": 10
+    },
+    {
+      "name": "fLaMEd",
+      "site": "https://flamedfury.com",
+      "count": 10
+    },
+    {
+      "name": "Jérôme Coupé",
+      "site": "https://www.webstoemp.com",
+      "count": 10
+    },
+    {
+      "name": "Tom Doe",
+      "site": "https://ttntm.me",
+      "count": 10
+    },
+    {
+      "name": "Al Power",
+      "site": "https://www.alpower.com",
+      "count": 9
+    },
+    {
+      "name": "Florian Eckerstorfer",
+      "site": "https://florian.ec",
+      "count": 9
+    },
+    {
+      "name": "Martin Gunnarsson",
+      "site": "https://www.martingunnarsson.com",
+      "count": 9
+    },
+    {
+      "name": "Ashur Cabrera",
+      "site": "https://multiline.co",
+      "count": 8
+    },
+    {
+      "name": "Benny Powers",
+      "site": "https://bennypowers.dev",
+      "count": 8
+    },
+    {
+      "name": "Bernard Nijenhuis",
+      "site": "https://bnijenhuis.nl",
+      "count": 8
+    },
+    {
+      "name": "Chris Burnell",
+      "site": "https://chrisburnell.com",
+      "count": 8
+    },
+    {
+      "name": "Dana Byerly",
+      "site": "https://danabyerly.com",
+      "count": 8
+    },
+    {
+      "name": "Evan Sheehan",
+      "site": "https://darthmall.net",
+      "count": 8
+    },
+    {
+      "name": "Jeremy Faucher",
+      "site": "https://design2seo.com",
+      "count": 8
+    },
+    {
+      "name": "Jordan Kohl",
+      "site": "https://simpixelated.com",
+      "count": 8
+    },
+    {
+      "name": "Max Böck",
+      "site": "https://mxb.dev",
+      "count": 8
+    },
+    {
+      "name": "Thomas Rigby",
+      "site": "https://thomasrigby.com",
+      "count": 8
+    },
+    {
+      "name": "Trevor Morris",
+      "site": "https://www.trovster.com",
+      "count": 8
+    },
+    {
+      "name": "Chris McLeod",
+      "site": "https://chrismcleod.dev",
+      "count": 7
+    },
+    {
+      "name": "Ginger",
+      "site": "https://ginger.wtf",
+      "count": 7
+    },
+    {
+      "name": "Helen Chong",
+      "site": "https://helenchong.dev",
+      "count": 7
+    },
+    {
+      "name": "Lea Rosema",
+      "site": "https://lea.codes",
+      "count": 7
+    },
+    {
+      "name": "Mark Llobrera",
+      "site": "https://www.markllobrera.com",
+      "count": 7
+    },
+    {
+      "name": "Martin Schneider",
+      "site": "https://martinschneider.me",
+      "count": 7
+    },
+    {
+      "name": "Matt Hobbs",
+      "site": "https://nooshu.com",
+      "count": 7
+    },
+    {
+      "name": "Michael Chan",
+      "site": "https://events.lunch.dev",
+      "count": 7
+    },
+    {
+      "name": "Tobias Fedder",
+      "site": "https://tfedder.de",
+      "count": 7
+    },
+    {
+      "name": "Ben Myers",
+      "site": "https://benmyers.dev",
+      "count": 6
+    },
+    {
+      "name": "Brian Cantoni",
+      "site": "https://www.cantoni.org",
+      "count": 6
+    },
+    {
+      "name": "Dan Cătălin Burzo",
+      "site": "https://danburzo.ro",
+      "count": 6
+    },
+    {
+      "name": "Danial Zahid",
+      "site": "https://w3things.com",
+      "count": 6
+    },
+    {
+      "name": "Harris Lapiroff",
+      "site": "https://chromamine.com",
+      "count": 6
+    },
+    {
+      "name": "Lene Saile",
+      "site": "https://www.lenesaile.com",
+      "count": 6
+    },
+    {
+      "name": "Phil Hawksworth",
+      "site": "https://philhawksworth.dev",
+      "count": 6
+    },
+    {
+      "name": "Sami Määttä",
+      "site": "https://samimaatta.fi",
+      "count": 6
+    },
+    {
+      "name": "Sean Davis",
+      "site": "https://www.seancdavis.com",
+      "count": 6
+    },
+    {
+      "name": "Steven Woodson",
+      "site": "https://stevenwoodson.com",
+      "count": 6
+    }
+  ],
+  "missingData": {
+    "totalAuthors": 482,
+    "totalBlogPosts": 1638,
+    "rssLink": {
+      "count": 125,
+      "percentage": 25.9,
+      "authors": [
+        {
+          "name": "Adrien",
+          "site": "https://www.statox.fr"
+        },
+        {
+          "name": "Alistair Deneys",
+          "site": "https://www.codeflood.net"
+        },
+        {
+          "name": "Alix Guillard",
+          "site": "https://alix.guillard.fr"
+        },
+        {
+          "name": "Amal Ayyash",
+          "site": "https://garage.sekrab.com"
+        },
+        {
+          "name": "Amber Wilson",
+          "site": "https://amberwilson.co.uk"
+        },
+        {
+          "name": "Andrea Berardi",
+          "site": "https://www.andberry.me"
+        },
+        {
+          "name": "Aninus Partikler",
+          "site": "https://aninus.com"
+        },
+        {
+          "name": "Anita Cheng",
+          "site": "https://anitacheng.com"
+        },
+        {
+          "name": "Anton Staroverov",
+          "site": "https://any.digital"
+        },
+        {
+          "name": "Arnaught",
+          "site": "https://arnaught.neocities.org"
+        },
+        {
+          "name": "Austin Carr",
+          "site": "https://www.simplethread.com"
+        },
+        {
+          "name": "Ayooluwa Isaiah",
+          "site": "https://www.digitalocean.com"
+        },
+        {
+          "name": "Azul Coding",
+          "site": "https://www.azulcoding.com/"
+        },
+        {
+          "name": "Benny Powers",
+          "site": "https://bennypowers.dev"
+        },
+        {
+          "name": "Bernard Nijenhuis",
+          "site": "https://bnijenhuis.nl"
+        },
+        {
+          "name": "Blake Watson",
+          "site": "https://blakewatson.com"
+        },
+        {
+          "name": "Brian Kardell",
+          "site": "https://bkardell.com"
+        },
+        {
+          "name": "Brian Perry",
+          "site": "https://www.brianperry.dev"
+        },
+        {
+          "name": "Brian Rinaldi",
+          "site": "https://remotesynthesis.com"
+        },
+        {
+          "name": "Bryan Robinson",
+          "site": "https://bryanlrobinson.com/"
+        },
+        {
+          "name": "Bryn Newell",
+          "site": "https://bryn.codes"
+        },
+        {
+          "name": "Callum Skeet",
+          "site": "https://www.fastmail.com"
+        },
+        {
+          "name": "Chad Schulz",
+          "site": "https://squalr.us"
+        },
+        {
+          "name": "Chip Cullen",
+          "site": "https://chipcullen.com"
+        },
+        {
+          "name": "Chris Coleman",
+          "site": "https://illtron.net"
+        },
+        {
+          "name": "Chris Free",
+          "site": "https://chromatichq.com"
+        },
+        {
+          "name": "Chris Hayes",
+          "site": "https://www.hayes.software"
+        },
+        {
+          "name": "Chris Smith",
+          "site": "https://chrissmith.xyz"
+        },
+        {
+          "name": "Cody Sand",
+          "site": "https://sandtoken.com"
+        },
+        {
+          "name": "Conor C. Peterson",
+          "site": "https://www.conor.zone"
+        },
+        {
+          "name": "Contentful",
+          "site": "https://www.contentful.com"
+        },
+        {
+          "name": "crossingtheruby",
+          "site": "https://www.crossingtheruby.com"
+        },
+        {
+          "name": "Dan Denney",
+          "site": "https://www.dandenney.com"
+        },
+        {
+          "name": "Dan Webb",
+          "site": "https://etch.co"
+        },
+        {
+          "name": "Danial Zahid",
+          "site": "https://w3things.com"
+        },
+        {
+          "name": "David East",
+          "site": "https://davidea.st"
+        },
+        {
+          "name": "Dennis Hendricks",
+          "site": "https://www.hendricks.rocks"
+        },
+        {
+          "name": "Desmond Rivet",
+          "site": "https://desmondrivet.com"
+        },
+        {
+          "name": "Dipesh Kumar",
+          "site": "https://dipeshkr.me"
+        },
+        {
+          "name": "Don Hamilton",
+          "site": "https://tiiny.host"
+        },
+        {
+          "name": "DSri Seah",
+          "site": "https://dsriseah.com"
+        },
+        {
+          "name": "Eevis",
+          "site": "https://eevis.codes"
+        },
+        {
+          "name": "Emiliano Soravia",
+          "site": "https://emilianosoravia.com/"
+        },
+        {
+          "name": "Eystein Mack Alnaes",
+          "site": "https://eystein.no"
+        },
+        {
+          "name": "Fershad Irani",
+          "site": "https://fershad.com"
+        },
+        {
+          "name": "Fictive Kin",
+          "site": "https://fictivekin.com"
+        },
+        {
+          "name": "Frank Fuchs",
+          "site": "https://frankfuchs.net"
+        },
+        {
+          "name": "Full Stack Digital",
+          "site": "https://fullstackdigital.io"
+        },
+        {
+          "name": "Gerard Hynes",
+          "site": "https://www.freecodecamp.org"
+        },
+        {
+          "name": "Ghost",
+          "site": "https://ghost.org"
+        },
+        {
+          "name": "Grigør",
+          "site": "https://grgml.xyz"
+        },
+        {
+          "name": "Henry Desroches",
+          "site": "https://henry.codes"
+        },
+        {
+          "name": "Heydon Pickering",
+          "site": "https://heydonworks.com"
+        },
+        {
+          "name": "Horacio Gonzalez",
+          "site": "https://lostinbrittany.dev"
+        },
+        {
+          "name": "Irina I.",
+          "site": "https://www.halo-lab.com"
+        },
+        {
+          "name": "Jack Baty",
+          "site": "https://baty.net"
+        },
+        {
+          "name": "Jaden Baptista",
+          "site": "https://www.algolia.com"
+        },
+        {
+          "name": "Jakub Iwanowski",
+          "site": "https://jakubiwanowski.dev"
+        },
+        {
+          "name": "Jan De Wilde",
+          "site": "https://jandewil.de"
+        },
+        {
+          "name": "Jaydan Urwin",
+          "site": "https://jaydanurw.in/"
+        },
+        {
+          "name": "Jeff Sheets",
+          "site": "https://sheetsj.com"
+        },
+        {
+          "name": "Joe Sahlsa",
+          "site": "https://joesahlsa.dev"
+        },
+        {
+          "name": "John Michael Swartz",
+          "site": "https://jjoohhnn.com"
+        },
+        {
+          "name": "John Skiles Skinner",
+          "site": "https://skiles.blue"
+        },
+        {
+          "name": "Jon Duek",
+          "site": "https://jondueck.ca"
+        },
+        {
+          "name": "Jon Mircha",
+          "site": "https://jonmircha.com/"
+        },
+        {
+          "name": "Jordan Kohl",
+          "site": "https://simpixelated.com"
+        },
+        {
+          "name": "Josh Ghent",
+          "site": "https://joshghent.com"
+        },
+        {
+          "name": "Justus Grunow",
+          "site": "https://www.justus.ws"
+        },
+        {
+          "name": "Kaj Kandler",
+          "site": "https://kajkandler.github.io"
+        },
+        {
+          "name": "Keith Kurson",
+          "site": "https://keith.is"
+        },
+        {
+          "name": "Kevin Powell",
+          "site": "https://www.kevinpowell.co/"
+        },
+        {
+          "name": "Khalid Abuhakmeh",
+          "site": "https://khalidabuhakmeh.com/"
+        },
+        {
+          "name": "Leonardo Silveira",
+          "site": "https://sombriks.com.br"
+        },
+        {
+          "name": "Liam Bigelow",
+          "site": "https://bigelow.io/"
+        },
+        {
+          "name": "Luke Bonaccorsi",
+          "site": "https://lukeb.co.uk"
+        },
+        {
+          "name": "Luke Harris",
+          "site": "https://www.lkhrs.com"
+        },
+        {
+          "name": "Mark Thomas Miller",
+          "site": "https://mtm.dev"
+        },
+        {
+          "name": "Matt Warner & Quinn Dombrowski",
+          "site": "https://litlab.stanford.edu"
+        },
+        {
+          "name": "Matthew",
+          "site": "https://www.mathew-paul.nz"
+        },
+        {
+          "name": "Matthew Paul",
+          "site": "https://www.mathew-paul.nz"
+        },
+        {
+          "name": "Maurice King",
+          "site": "https://www.webiny.com"
+        },
+        {
+          "name": "Max Kohler",
+          "site": "https://www.maxkohler.com"
+        },
+        {
+          "name": "Michael Chan",
+          "site": "https://events.lunch.dev"
+        },
+        {
+          "name": "Michael Delaney",
+          "site": "https://mwdelaney.me/"
+        },
+        {
+          "name": "Michael Engen",
+          "site": "https://michaelengen.com"
+        },
+        {
+          "name": "Michele Nasti",
+          "site": "https://michelenasti.com"
+        },
+        {
+          "name": "Mike Aparicio",
+          "site": "https://www.mikeaparicio.com"
+        },
+        {
+          "name": "Mike Neumegen",
+          "site": "https://mikeneumegen.com/"
+        },
+        {
+          "name": "Minesh Shah",
+          "site": "https://world.optimizely.com"
+        },
+        {
+          "name": "Morten Birch",
+          "site": "https://morten.dk"
+        },
+        {
+          "name": "Neal Gamradt",
+          "site": "https://nealgamradt.com"
+        },
+        {
+          "name": "Nelson Michael",
+          "site": "https://blog.logrocket.com"
+        },
+        {
+          "name": "Nicolás Erramuspe",
+          "site": "https://minimo.io"
+        },
+        {
+          "name": "Nicolas Hery",
+          "site": "https://nicolashery.com"
+        },
+        {
+          "name": "pariskasid",
+          "site": "https://withlogic.co"
+        },
+        {
+          "name": "Peter Sefton",
+          "site": "https://ptsefton.com"
+        },
+        {
+          "name": "Piper Haywood",
+          "site": "https://piperhaywood.com"
+        },
+        {
+          "name": "Ramon Lapenta",
+          "site": "https://ramono.me"
+        },
+        {
+          "name": "Reg Hunt",
+          "site": "https://rphunt.github.io"
+        },
+        {
+          "name": "Rigotti",
+          "site": "https://rigotti.nl"
+        },
+        {
+          "name": "Rob Wood",
+          "site": "https://robwood.uk"
+        },
+        {
+          "name": "Robin Hoover",
+          "site": "https://moosedog.io"
+        },
+        {
+          "name": "Rosenqvist",
+          "site": "https://rosenqvist.design"
+        },
+        {
+          "name": "Ryan Boone",
+          "site": "https://www.falldowngoboone.com"
+        },
+        {
+          "name": "Ryan Gittings",
+          "site": "https://www.ryangittings.co.uk"
+        },
+        {
+          "name": "Ryan Himmelwright",
+          "site": "https://ryan.himmelwright.net"
+        },
+        {
+          "name": "Sainthood",
+          "site": "https://sainthood.xyz"
+        },
+        {
+          "name": "Sam D King",
+          "site": "https://samdking.co.uk"
+        },
+        {
+          "name": "Sam Thorogood",
+          "site": "https://web.dev"
+        },
+        {
+          "name": "Sami Määttä",
+          "site": "https://samimaatta.fi"
+        },
+        {
+          "name": "Samuel J. Huskey",
+          "site": "https://sjhuskey.info"
+        },
+        {
+          "name": "Schalk Neethling",
+          "site": "https://schalkneethling.com/"
+        },
+        {
+          "name": "Simon McManus",
+          "site": "https://simonmcmanus.com"
+        },
+        {
+          "name": "Simon Rosenqvist",
+          "site": "https://rosenqvist.design"
+        },
+        {
+          "name": "Stefan Zweifel",
+          "site": "https://stefanzweifel.dev"
+        },
+        {
+          "name": "Steven Hicks",
+          "site": "https://www.stevenhicks.me"
+        },
+        {
+          "name": "Tailscale",
+          "site": "https://tailscale.com/"
+        },
+        {
+          "name": "Tanner Dolby",
+          "site": "https://tannerdolby.com"
+        },
+        {
+          "name": "Tim Klapdor",
+          "site": "https://timklapdor.me/"
+        },
+        {
+          "name": "Tim Kleyersburg",
+          "site": "https://www.tim-kleyersburg.de"
+        },
+        {
+          "name": "TJ Addison",
+          "site": "https://tjaddison.com"
+        },
+        {
+          "name": "tlohde",
+          "site": "https://tlohde.com"
+        },
+        {
+          "name": "Tomi Chen",
+          "site": "https://tomichen.com"
+        },
+        {
+          "name": "Webpixels",
+          "site": "https://webpixels.io"
+        }
+      ]
+    },
+    "favicon": {
+      "count": 46,
+      "percentage": 9.5,
+      "authors": [
+        {
+          "name": "Andrea Berardi",
+          "site": "https://www.andberry.me"
+        },
+        {
+          "name": "Ari Prakash",
+          "site": "https://ariscript.org"
+        },
+        {
+          "name": "Ashur Cabrera",
+          "site": "https://multiline.co"
+        },
+        {
+          "name": "Brian Kardell",
+          "site": "https://bkardell.com"
+        },
+        {
+          "name": "Chris Coleman",
+          "site": "https://illtron.net"
+        },
+        {
+          "name": "crossingtheruby",
+          "site": "https://www.crossingtheruby.com"
+        },
+        {
+          "name": "David East",
+          "site": "https://davidea.st"
+        },
+        {
+          "name": "David Hayes",
+          "site": "https://drhayes.io"
+        },
+        {
+          "name": "Denis Ricard",
+          "site": "https://hexaedre.com"
+        },
+        {
+          "name": "DSri Seah",
+          "site": "https://dsriseah.com"
+        },
+        {
+          "name": "Eystein Mack Alnaes",
+          "site": "https://eystein.no"
+        },
+        {
+          "name": "Glyn Normington",
+          "site": "https://underlap.org"
+        },
+        {
+          "name": "Graham F. Scott",
+          "site": "https://gfscott.com"
+        },
+        {
+          "name": "Jay Hannah",
+          "site": "https://notes.jays.net"
+        },
+        {
+          "name": "Josh Ghent",
+          "site": "https://joshghent.com"
+        },
+        {
+          "name": "Keenan Payne",
+          "site": "https://keenanpayne.com"
+        },
+        {
+          "name": "Lewis Dale",
+          "site": "https://lewisdale.dev"
+        },
+        {
+          "name": "Liam Bigelow",
+          "site": "https://bigelow.io/"
+        },
+        {
+          "name": "Luis de la Rosa",
+          "site": "https://www.luisdelarosa.com"
+        },
+        {
+          "name": "Martin Hähnel",
+          "site": "https://blog.martin-haehnel.de"
+        },
+        {
+          "name": "Matt B",
+          "site": "https://blog.embee.co"
+        },
+        {
+          "name": "Matthew",
+          "site": "https://www.mathew-paul.nz"
+        },
+        {
+          "name": "Matthew Paul",
+          "site": "https://www.mathew-paul.nz"
+        },
+        {
+          "name": "Michael Engen",
+          "site": "https://michaelengen.com"
+        },
+        {
+          "name": "Mike Neumegen",
+          "site": "https://mikeneumegen.com/"
+        },
+        {
+          "name": "Nathan Bottomley",
+          "site": "https://gunsandfrocks.com/"
+        },
+        {
+          "name": "Nathan Smith",
+          "site": "https://nathan-smith.org"
+        },
+        {
+          "name": "Nicholas Clooney",
+          "site": "https://blog.nicholas.clooney.io"
+        },
+        {
+          "name": "Nick Taylor",
+          "site": "https://nickyt.online/"
+        },
+        {
+          "name": "Nicki Hoffman",
+          "site": "https://arestelle.net"
+        },
+        {
+          "name": "Paul Capewell",
+          "site": "https://paulcapewell.com"
+        },
+        {
+          "name": "Peter Sefton",
+          "site": "https://ptsefton.com"
+        },
+        {
+          "name": "Quinn Dombrowski",
+          "site": "https://quinndombrowski.com"
+        },
+        {
+          "name": "Reg Hunt",
+          "site": "https://rphunt.github.io"
+        },
+        {
+          "name": "Rob Wood",
+          "site": "https://robwood.uk"
+        },
+        {
+          "name": "Ryan Boone",
+          "site": "https://www.falldowngoboone.com"
+        },
+        {
+          "name": "Ryan Killeen",
+          "site": "https://ryankilleen.com"
+        },
+        {
+          "name": "Sam D King",
+          "site": "https://samdking.co.uk"
+        },
+        {
+          "name": "Samuel J. Huskey",
+          "site": "https://sjhuskey.info"
+        },
+        {
+          "name": "Stefan Burke",
+          "site": "https://blog.chobble.com"
+        },
+        {
+          "name": "Steven Harland",
+          "site": "https://donutsec.fun"
+        },
+        {
+          "name": "Thomas Broyer",
+          "site": "https://blog.ltgt.net"
+        },
+        {
+          "name": "Tim Klapdor",
+          "site": "https://timklapdor.me/"
+        },
+        {
+          "name": "Tom Doe",
+          "site": "https://ttntm.me"
+        },
+        {
+          "name": "Whiona",
+          "site": "https://whiona.weblog.lol"
+        },
+        {
+          "name": "zmknox",
+          "site": "https://zmknox.com"
+        }
+      ]
+    },
+    "authorDescription": {
+      "count": 54,
+      "percentage": 11.2,
+      "authors": [
+        {
+          "name": "Aaron Morey",
+          "site": "https://aaronmorey.com"
+        },
+        {
+          "name": "Abdullah Yahya",
+          "site": "https://abdullahyahya.com"
+        },
+        {
+          "name": "Albrecht Kohnlein",
+          "site": "https://www.koehnlein.eu"
+        },
+        {
+          "name": "Andrea Berardi",
+          "site": "https://www.andberry.me"
+        },
+        {
+          "name": "Anton Staroverov",
+          "site": "https://any.digital"
+        },
+        {
+          "name": "Antonio Rodrigues",
+          "site": "https://antonio.is"
+        },
+        {
+          "name": "Arnaught",
+          "site": "https://arnaught.neocities.org"
+        },
+        {
+          "name": "Austin Carr",
+          "site": "https://www.simplethread.com"
+        },
+        {
+          "name": "Brian Kardell",
+          "site": "https://bkardell.com"
+        },
+        {
+          "name": "crossingtheruby",
+          "site": "https://www.crossingtheruby.com"
+        },
+        {
+          "name": "Dan Sinker",
+          "site": "https://dansinker.com"
+        },
+        {
+          "name": "Denis Ricard",
+          "site": "https://hexaedre.com"
+        },
+        {
+          "name": "Deniz Akşimşek",
+          "site": "https://www.denizaksimsek.com"
+        },
+        {
+          "name": "Dipesh Kumar",
+          "site": "https://dipeshkr.me"
+        },
+        {
+          "name": "DSri Seah",
+          "site": "https://dsriseah.com"
+        },
+        {
+          "name": "Full Stack Digital",
+          "site": "https://fullstackdigital.io"
+        },
+        {
+          "name": "Greg Wolanski",
+          "site": "https://css-tricks.com"
+        },
+        {
+          "name": "Grigør",
+          "site": "https://grgml.xyz"
+        },
+        {
+          "name": "Harris Lapiroff",
+          "site": "https://chromamine.com"
+        },
+        {
+          "name": "Heydon Pickering",
+          "site": "https://heydonworks.com"
+        },
+        {
+          "name": "Horacio Gonzalez",
+          "site": "https://lostinbrittany.dev"
+        },
+        {
+          "name": "Jeremy Epstein",
+          "site": "https://greenash.net.au"
+        },
+        {
+          "name": "Josh Cunningham",
+          "site": "https://www.joshcanhelp.com"
+        },
+        {
+          "name": "Josh Ghent",
+          "site": "https://joshghent.com"
+        },
+        {
+          "name": "Josh Sherman",
+          "site": "https://joshtronic.com"
+        },
+        {
+          "name": "Keith Wagner",
+          "site": "https://kpwags.com"
+        },
+        {
+          "name": "La màquina de Turing",
+          "site": "https://lamaquinadeturing.su"
+        },
+        {
+          "name": "Lea Verou",
+          "site": "https://lea.verou.me"
+        },
+        {
+          "name": "Lewis Dale",
+          "site": "https://lewisdale.dev"
+        },
+        {
+          "name": "Liam Bigelow",
+          "site": "https://bigelow.io/"
+        },
+        {
+          "name": "Michael Chan",
+          "site": "https://events.lunch.dev"
+        },
+        {
+          "name": "Michael Delaney",
+          "site": "https://mwdelaney.me/"
+        },
+        {
+          "name": "Michael Engen",
+          "site": "https://michaelengen.com"
+        },
+        {
+          "name": "Michele Nasti",
+          "site": "https://michelenasti.com"
+        },
+        {
+          "name": "Minesh Shah",
+          "site": "https://world.optimizely.com"
+        },
+        {
+          "name": "Nathan Smith",
+          "site": "https://nathan-smith.org"
+        },
+        {
+          "name": "Oliver Boermans",
+          "site": "https://ollicle.com"
+        },
+        {
+          "name": "Ondřej Mirtes",
+          "site": "https://phpstan.org"
+        },
+        {
+          "name": "Peter Sefton",
+          "site": "https://ptsefton.com"
+        },
+        {
+          "name": "Piper Haywood",
+          "site": "https://piperhaywood.com"
+        },
+        {
+          "name": "Reg Hunt",
+          "site": "https://rphunt.github.io"
+        },
+        {
+          "name": "Rigotti",
+          "site": "https://rigotti.nl"
+        },
+        {
+          "name": "Rob Anderson",
+          "site": "https://blog.r0b.io"
+        },
+        {
+          "name": "Ryan Himmelwright",
+          "site": "https://ryan.himmelwright.net"
+        },
+        {
+          "name": "Sacha Chua",
+          "site": "https://sachachua.com"
+        },
+        {
+          "name": "Sainthood",
+          "site": "https://sainthood.xyz"
+        },
+        {
+          "name": "Sam Ruby",
+          "site": "https://intertwingly.net"
+        },
+        {
+          "name": "SamJC",
+          "site": "https://thetangent.space"
+        },
+        {
+          "name": "Sandro Roth",
+          "site": "https://sandroroth.com"
+        },
+        {
+          "name": "Schalk Neethling",
+          "site": "https://schalkneethling.com/"
+        },
+        {
+          "name": "Sebin Nyshkim",
+          "site": "https://blog.sebin-nyshkim.net"
+        },
+        {
+          "name": "Thomas Broyer",
+          "site": "https://blog.ltgt.net"
+        },
+        {
+          "name": "Tim Klapdor",
+          "site": "https://timklapdor.me/"
+        },
+        {
+          "name": "Whiona",
+          "site": "https://whiona.weblog.lol"
+        }
+      ]
+    },
+    "blogDescription": {
+      "count": 96,
+      "percentage": 5.9,
+      "posts": [
+        {
+          "title": "🛳️ Migrating my website from Next.js to 11ty",
+          "link": "https://www.conor.zone/en/blog/migrating-my-website-from-next-to-11ty.html"
+        },
+        {
+          "title": "11ty and Observable",
+          "link": "https://chromamine.com/2023/11/11ty-and-observable/"
+        },
+        {
+          "title": "11ty or Bust",
+          "link": "https://joshghent.com/11ty-or-bust/"
+        },
+        {
+          "title": "11ty Simplicity",
+          "link": "https://www.crossingtheruby.com/2021/05/19/11ty-simplicity.html"
+        },
+        {
+          "title": "6 Months with 11ty",
+          "link": "https://kpwags.com/posts/2024/06/11/6-months-with-11ty/"
+        },
+        {
+          "title": "A brief update to how I write these posts",
+          "link": "https://paulcapewell.com/blog/250411_1426/"
+        },
+        {
+          "title": "A Complete Guide to Building a Blog with Eleventy",
+          "link": "https://cfjedimaster.github.io/eleventy-blog-guide/guide.html"
+        },
+        {
+          "title": "Added a 'uses' Page Archive",
+          "link": "https://ryan.himmelwright.net/post/added-uses-page-archive/"
+        },
+        {
+          "title": "Added Timestamp to My Eleventy New Post Utility",
+          "link": "https://johnwargo.com/posts/2024/new-post-timestamp/"
+        },
+        {
+          "title": "Added Timestamp to Posts",
+          "link": "https://johnwargo.com/posts/2024/added-timestamp-to-posts/"
+        },
+        {
+          "title": "Adding figures with captions to images in markdown with eleventy",
+          "link": "https://www.alpower.com/tutorials/adding-figures-with-captions-to-images-in-markdown-with-eleventy"
+        },
+        {
+          "title": "Adding Sidebars to an Eleventy Site",
+          "link": "https://johnwargo.com/posts/2024/adding-sidebars-eleventy/"
+        },
+        {
+          "title": "Adding subheadings and sketches to my blog page navigation",
+          "link": "https://sachachua.com/blog/2025/04/adding-subheadings-and-sketches-to-my-blog-page-navigation/"
+        },
+        {
+          "title": "Automating Eleventy Server with Visual Studio Code Tasks",
+          "link": "https://dryan.com/articles/11ty-tasks-vs-code/"
+        },
+        {
+          "title": "Bringing my omg.lol Now page into Eleventy",
+          "link": "https://lewisdale.dev/post/bringing-my-omg-lol-now-page-into-eleventy/"
+        },
+        {
+          "title": "Build JAMstack-ready sites with Bootstrap and 11ty (Eleventy)",
+          "link": "https://webpixels.io/blog/how-to-get-started-with-bootstrap-and-eleventy"
+        },
+        {
+          "title": "Building a Lightweight Optimizely SaaS CMS Solution with 11ty",
+          "link": "https://world.optimizely.com/blogs/Minesh-Shah/Dates/2025/12/building-a-lightweight-optimizely-saas-cms-solution-with-11ty/"
+        },
+        {
+          "title": "Building a Town that Doesn't Exist",
+          "link": "https://dansinker.com/posts/2024-05-10-doesntexist/"
+        },
+        {
+          "title": "Building My Resume in HTML using Eleventy",
+          "link": "https://michaelengen.com/posts/my-eleventy-resume/"
+        },
+        {
+          "title": "Category and Tag Pages with Eleventy",
+          "link": "https://joshtronic.com/2025/09/07/eleventy-category-tag-pages/"
+        },
+        {
+          "title": "Configure markdown footnotes in eleventy",
+          "link": "https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/"
+        },
+        {
+          "title": "Controlling whitespace in 11ty with Nunjucks",
+          "link": "https://www.alpower.com/tutorials/2024-05-11-controlling-whitespace-in-11ty/"
+        },
+        {
+          "title": "Creating a 'new blog entry' shortcut for creating blog posts in nano for eleventy",
+          "link": "https://paulcapewell.com/blog/250129/"
+        },
+        {
+          "title": "Creating a Journal With Eleventy",
+          "link": "https://www.simplethread.com/creating-a-journal-with-eleventy/"
+        },
+        {
+          "title": "Custom collection list markup in Eleventy",
+          "link": "https://www.dandenney.com/posts/front-end-dev/custom-collection-list-markup-in-eleventy/"
+        },
+        {
+          "title": "Detecting Markdown titles with Eleventy",
+          "link": "https://lewisdale.dev/post/detecting-markdown-titles-with-eleventy/"
+        },
+        {
+          "title": "Ditching WordPress for Eleventy",
+          "link": "https://joshtronic.com/2025/05/25/ditching-wordpress-for-eleventy/"
+        },
+        {
+          "title": "Eleventy",
+          "link": "https://chromamine.com/2023/10/eleventy/"
+        },
+        {
+          "title": "Eleventy — Using A Layout As A Partial (The Most Useful Things...)",
+          "link": "https://www.denizaksimsek.com/2020/11ty-layout-as-partial/"
+        },
+        {
+          "title": "Eleventy (11ty) setup for multilingual component-based flexible pages",
+          "link": "https://www.andberry.me/blog/11ty-multilanguage-multi-sections-components-setup"
+        },
+        {
+          "title": "Eleventy (11ty), Vite, Tailwind, and Alpine.js – Rapid static site starter framework",
+          "link": "https://fullstackdigital.io/blog/eleventy-vite-tailwind-and-alpine-js-rapid-static-site-starter-framework/"
+        },
+        {
+          "title": "Eleventy GitHub Repositories Plugin",
+          "link": "https://johnwargo.com/posts/2023/eleventy-plugin-github-repositories/"
+        },
+        {
+          "title": "Eleventy Grey-Matter Engine Not Registered Error",
+          "link": "https://randomerrors.dev/posts/2023/eleventy-grey-matter-engine-not-registered-error/"
+        },
+        {
+          "title": "Eleventy Last Post Date Using Liquid",
+          "link": "https://randomerrors.dev/posts/2023/eleventy-last-post-date-liquid/"
+        },
+        {
+          "title": "Eleventy Navigation Set URL to First Item in Collection",
+          "link": "https://johnwargo.com/posts/2024/eleventy-navigation-set-url/"
+        },
+        {
+          "title": "Eleventy Not A Supported MIME Type",
+          "link": "https://randomerrors.dev/posts/2023/not-a-supported-mime-type/"
+        },
+        {
+          "title": "Eleventy Pagination Before Callback Not Working",
+          "link": "https://randomerrors.dev/posts/2023/eleventy-pagination-before-callback/"
+        },
+        {
+          "title": "Eleventy Posts not Sorting CorrectlN",
+          "link": "https://randomerrors.dev/posts/2023/eleventy-reversed-not/"
+        },
+        {
+          "title": "Eleventy Splitting Category Data Across Two Table Columns",
+          "link": "https://johnwargo.com/posts/2023/eleventy-two-table-columns/"
+        },
+        {
+          "title": "Eleventy Templates for Atom Feeds",
+          "link": "https://dsriseah.com/journal/2025/1016/"
+        },
+        {
+          "title": "Eleventy Walkthrough",
+          "link": "https://rphunt.github.io/eleventy-walkthrough/"
+        },
+        {
+          "title": "Fix dates on Eleventy RSS feeds",
+          "link": "https://saneef.com/blog/fix-dates-on-eleventy-rss-feeds/"
+        },
+        {
+          "title": "Flexible components in Eleventy with Nunjucks macros",
+          "link": "https://iainbean.com/posts/2020/flexible-components-in-eleventy-with-nunjucks-macros/"
+        },
+        {
+          "title": "From Gatsby to Eleventy",
+          "link": "https://amberwilson.co.uk/blog/from-gatsby-to-eleventy/"
+        },
+        {
+          "title": "From Gatsby to Eleventy",
+          "link": "https://steele.blue/gatsby-to-eleventy/"
+        },
+        {
+          "title": "Generating Custom OpenGraph Cards with Gatsby and the 11ty Screenshot Service",
+          "link": "https://steele.blue/gatsby-opengraph-11ty-screenshots/"
+        },
+        {
+          "title": "Grow the IndieWeb with Webmentions",
+          "link": "https://amberwilson.co.uk/blog/grow-the-indieweb-with-webmentions/"
+        },
+        {
+          "title": "Hiding posts with future dates in Eleventy",
+          "link": "https://saneef.com/blog/hiding-posts-with-future-dates-in-eleventy/"
+        },
+        {
+          "title": "How to access post content in template listing files",
+          "link": "https://www.alpower.com/tutorials/access-eleventy-post-content-in-listing/"
+        },
+        {
+          "title": "How to use CSV data with Eleventy",
+          "link": "https://www.maxkohler.com/posts/eleventy-csv/"
+        },
+        {
+          "title": "I changed my mind, my CMS adventure",
+          "link": "https://steveabraham.com/notes/i-changed-my-mind/"
+        },
+        {
+          "title": "I've added webmentions to this blog",
+          "link": "https://fershad.com/notes/webmentions/"
+        },
+        {
+          "title": "Inexactly benchmarking Eleventy vs Astro build times",
+          "link": "https://piperhaywood.com/inexactly-benchmarking-eleventy-vs-astro-build-times/"
+        },
+        {
+          "title": "KDL works great in eleventy",
+          "link": "https://ollicle.com/2024/dec/31/11ty-kdl/"
+        },
+        {
+          "title": "Last modified date of Eleventy posts",
+          "link": "https://joshtronic.com/2025/07/20/last-modified-date-eleventy/"
+        },
+        {
+          "title": "Making blog post source files available with 11ty",
+          "link": "https://chromamine.com/2024/08/making-blog-post-source-files-available-with-11ty/"
+        },
+        {
+          "title": "Managing drafts for Eleventy",
+          "link": "https://nathan-smith.org/posts/blog/eleventy-drafts/"
+        },
+        {
+          "title": "Media Diary with Eleventy",
+          "link": "https://anhvn.com/posts/2021/2021-09-21-media-diary-eleventy/"
+        },
+        {
+          "title": "Migrating from Jekyll to Eleventy",
+          "link": "https://blog.ltgt.net/from-jekyll-to-eleventy/"
+        },
+        {
+          "title": "Moving 18 years of comments out of Disqus and into my 11ty static site",
+          "link": "https://sachachua.com/blog/2025/03/moving-18-years-of-comments-out-of-disqus-and-into-my-11ty-static-site/"
+        },
+        {
+          "title": "Moving to Eleventy",
+          "link": "https://jondueck.ca/journal/2023/moving-to-eleventy/"
+        },
+        {
+          "title": "My Journey with 11ty and Tailwind CSS: Building a Personal Website",
+          "link": "https://dipeshkr.me/blog/journey-with-11ty-and-tailwind/"
+        },
+        {
+          "title": "My Neocities workflow: using Eleventy and the CLI to speed up development",
+          "link": "https://whiona.weblog.lol/2023/10/my-neocities-workflow:-using-eleventy-and-the-cli-to-speed-up-development"
+        },
+        {
+          "title": "Netlify Eleventy Build Failire",
+          "link": "https://randomerrors.dev/posts/2023/netlify-eleventy-build-failure/"
+        },
+        {
+          "title": "Notes on Upgrading to Eleventy 3.0",
+          "link": "https://chromamine.com/2024/11/notes-on-upgrading-to-eleventy-3.0/"
+        },
+        {
+          "title": "Nunjucks Tricks",
+          "link": "https://any.digital/tricks/njk/"
+        },
+        {
+          "title": "Obsidian bases work great with Eleventy",
+          "link": "https://thetangent.space/2025/obsidian-bases/"
+        },
+        {
+          "title": "On Eleventy",
+          "link": "https://greenash.net.au/thoughts/2021/04/on-eleventy/"
+        },
+        {
+          "title": "On this day",
+          "link": "https://sachachua.com/blog/2025/03/on-this-day/"
+        },
+        {
+          "title": "Problem Writing Eleventy Templates",
+          "link": "https://randomerrors.dev/posts/2023/problem-writing-eleventy-templates/"
+        },
+        {
+          "title": "Sanity with 11ty",
+          "link": "https://www.crossingtheruby.com/2021/05/16/sanity-with-eleventy.html"
+        },
+        {
+          "title": "Sanity with 11ty: Paginating Data",
+          "link": "https://www.crossingtheruby.com/2021/05/17/sanity-with-11ty-paginating-data.html"
+        },
+        {
+          "title": "Separating Code From Content in Eleventy",
+          "link": "https://aaronmorey.com/posts/2025/separating-code-from-content-in-eleventy/"
+        },
+        {
+          "title": "Setting a timestamp for posts and RSS feeds in eleventy",
+          "link": "https://www.alpower.com/tutorials/setting-a-timestamp-for-posts-in-eleventy"
+        },
+        {
+          "title": "Sunsets eleventy-plugin-img2picture",
+          "link": "https://saneef.com/blog/sunsets-eleventy-plugin-img2picture/"
+        },
+        {
+          "title": "Switching to WebC",
+          "link": "https://chromamine.com/2025/07/switching-to-webc/"
+        },
+        {
+          "title": "Syntax highlighting for AsciiDoc with Eleventy",
+          "link": "https://saneef.com/blog/asciidoc-syntax-highlighting/"
+        },
+        {
+          "title": "Syntax highlighting in Eleventy",
+          "link": "https://nathan-smith.org/posts/blog/syntax-highlighting-eleventy/"
+        },
+        {
+          "title": "Table of Contents in Eleventy",
+          "link": "https://anhvn.com/posts/2021/2021-10-10-table-of-contents-in-eleventy/"
+        },
+        {
+          "title": "The Process of Switching to 11ty",
+          "link": "https://kpwags.com/posts/2023/12/28/the-process-of-switching-to-11ty/"
+        },
+        {
+          "title": "This blog's comments are powered by Webmentions",
+          "link": "https://steele.blue/webmentions/"
+        },
+        {
+          "title": "This Is An Eleventy Blog Now!",
+          "link": "https://arnaught.neocities.org/blog/2024/08/25/this-is-an-eleventy-blog-now"
+        },
+        {
+          "title": "This post has been generated with Eleventy",
+          "link": "https://lamaquinadeturing.su/en/2025/02/this-post-has-been-generated-with-eleventy/"
+        },
+        {
+          "title": "Tweaking my 11ty blog to link to the Mastodon post defined in an Org Mode property",
+          "link": "https://sachachua.com/blog/2025/03/tweaking-my-11ty-blog-to-link-to-the-mastodon-post-defined-in-an-org-mode-property/"
+        },
+        {
+          "title": "Twenty year celebration: Site update number three",
+          "link": "https://ptsefton.com/2024/06/24/update/"
+        },
+        {
+          "title": "TypeScript Mini Apps in Eleventy",
+          "link": "https://dsriseah.com/journal/2025/1014/"
+        },
+        {
+          "title": "Updated Eleventy Future Post Plugin",
+          "link": "https://johnwargo.com/posts/2024/updated-eleventy-future-post-plugin/"
+        },
+        {
+          "title": "Updated Eleventy Generate Posts Utility",
+          "link": "https://johnwargo.com/posts/2023/updated-eleventy-generate-posts/"
+        },
+        {
+          "title": "Updated My Eleventy New Post Module",
+          "link": "https://johnwargo.com/posts/2023/updated-eleventy-new-post/"
+        },
+        {
+          "title": "Updating my website",
+          "link": "https://hexaedre.com/hexa01/"
+        },
+        {
+          "title": "Upgrading Eleventy After 5 Years",
+          "link": "https://intertwingly.net/blog/2025/10/05/Upgrading-Eleventy-After-5-Years.html"
+        },
+        {
+          "title": "Using Notion as CMS with Eleventy",
+          "link": "https://vrugtehagel.nl/posts/using-notion-as-cms-with-eleventy/"
+        },
+        {
+          "title": "Using WebC for progressively-enhanced UI elements",
+          "link": "https://lewisdale.dev/post/using-webc-for-progressively-enhanced-ui-elements/"
+        },
+        {
+          "title": "WebC Quirks",
+          "link": "https://chromamine.com/2025/07/webc-quirks/"
+        },
+        {
+          "title": "Website Improvement: Social Post Preview Image",
+          "link": "https://phpstan.org/blog/website-improvement-social-post-preview-image"
+        },
+        {
+          "title": "Why 11ty?",
+          "link": "https://www.crossingtheruby.com/2021/05/18/why-11ty.html"
+        }
+      ]
+    }
+  }
+}

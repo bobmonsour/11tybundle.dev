@@ -1,0 +1,434 @@
+/* ==========================================================================
+   Insights page styles
+   Uses existing design tokens from variables.css to align styles
+   ========================================================================== */
+
+/* Channel-style header */
+.insights {
+  --header-bg: var(--insights-colour-4);
+  --header-border: var(--insights-colour-5);
+  --header-content: var(--insights-colour-1);
+  --header-accent: var(--insights-colour-2);
+}
+
+/* Tighter vertical rhythm for headings/subheadings/charts */
+.section[data-pagefind-ignore] > .flow {
+  gap: var(--space-xs);
+}
+
+/* Stat cards grid */
+.insights-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-s);
+}
+
+.insights-stat-card {
+  background: var(--surface-mid);
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-m);
+  padding: var(--space-s);
+  text-align: center;
+}
+
+.insights-stat-card__value {
+  font-family: var(--font-display-extrablack);
+  font-size: var(--step-3);
+  color: var(--heading-colour-1);
+  line-height: 1.1;
+}
+
+.insights-stat-card__label {
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+  margin-top: var(--space-3xs);
+}
+
+/* Chart containers */
+.insights-chart {
+  margin-block: var(--space-xs);
+}
+
+
+.insights-chart svg {
+  width: 100%;
+  height: auto;
+}
+
+/* SVG chart shared styles */
+.chart-svg text {
+  font-family: var(--font-default);
+}
+
+.chart-grid {
+  stroke: var(--surface-fore);
+  stroke-width: 1;
+}
+
+.chart-axis-label {
+  font-size: 11px;
+  fill: var(--text-colour-2);
+}
+
+/* Line chart series */
+.chart-line {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-line--blog {
+  stroke: var(--blog-colour-4);
+}
+
+.chart-line--showcase {
+  stroke: var(--showcase-colour-4);
+}
+
+.chart-line--releases {
+  stroke: var(--categories-colour-4);
+}
+
+/* Category growth series (cycling hues, then alternate lightness) */
+.chart-line--series-0 {
+  stroke: var(--senary-5);
+}
+.chart-line--series-1 {
+  stroke: var(--quaternary-5);
+}
+.chart-line--series-2 {
+  stroke: var(--secondary-5);
+}
+.chart-line--series-3 {
+  stroke: var(--tertiary-5);
+}
+.chart-line--series-4 {
+  stroke: var(--quinary-5);
+}
+.chart-line--series-5 {
+  stroke: var(--septenary-5);
+}
+.chart-line--series-6 {
+  stroke: var(--primary-5);
+}
+.chart-line--series-7 {
+  stroke: var(--senary-7);
+}
+.chart-line--series-8 {
+  stroke: var(--quaternary-7);
+}
+.chart-line--series-9 {
+  stroke: var(--secondary-7);
+}
+.chart-line--series-10 {
+  stroke: var(--tertiary-7);
+}
+.chart-line--series-11 {
+  stroke: var(--quinary-7);
+}
+.chart-line--series-12 {
+  stroke: var(--septenary-7);
+}
+.chart-line--series-13 {
+  stroke: var(--primary-7);
+}
+.chart-line--series-14 {
+  stroke: var(--greyscale-5);
+}
+
+/* End labels inherit series color as fill */
+.chart-end-label {
+  font-size: 12px;
+  font-weight: 100;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.chart-legend-label {
+  font-size: 11px;
+  font-weight: normal;
+  fill: var(--text-colour-1);
+}
+
+.chart-end-label.chart-line--blog {
+  fill: var(--text-colour-1);
+}
+.chart-end-label.chart-line--showcase {
+  fill: var(--text-colour-1);
+}
+.chart-end-label.chart-line--releases {
+  fill: var(--text-colour-1);
+}
+.chart-end-label.chart-line--series-0 {
+  fill: var(--senary-5);
+}
+.chart-end-label.chart-line--series-1 {
+  fill: var(--quaternary-5);
+}
+.chart-end-label.chart-line--series-2 {
+  fill: var(--secondary-5);
+}
+.chart-end-label.chart-line--series-3 {
+  fill: var(--tertiary-5);
+}
+.chart-end-label.chart-line--series-4 {
+  fill: var(--quinary-5);
+}
+.chart-end-label.chart-line--series-5 {
+  fill: var(--septenary-5);
+}
+
+/* Milestones */
+.chart-milestone {
+  stroke: var(--text-colour-3);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+}
+
+.chart-milestone--major {
+  stroke: var(--heading-colour-1);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 3;
+}
+
+.chart-milestone-label {
+  font-size: 9px;
+  fill: var(--text-colour-2);
+  font-family: var(--font-display-bold);
+}
+
+.chart-milestone-label--major {
+  font-size: 11px;
+}
+
+.chart-annotation {
+  font-size: 9px;
+  fill: var(--text-colour-3);
+  font-style: italic;
+}
+
+/* Bar charts */
+.chart-bar {
+  fill: var(--categories-colour-4);
+}
+
+.chart-bar--authors {
+  fill: var(--authors-colour-4);
+}
+
+.chart-bar-label {
+  font-size: 12px;
+  fill: var(--text-colour-1);
+}
+
+.chart-bar-value {
+  font-size: 11px;
+  fill: var(--text-colour-2);
+  font-family: var(--font-display-bold);
+}
+
+/* Prolific authors */
+.insights-author-tier h4 {
+  font-family: var(--font-display-bold);
+  font-size: var(--step-0);
+  color: var(--heading-colour-1);
+  margin-bottom: var(--space-2xs);
+}
+
+.insights-author-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-s);
+}
+
+.insights-author-list li {
+  font-size: var(--step--1);
+}
+
+.insights-author-list a {
+  color: var(--authors-colour-4);
+}
+
+.insights-author-list .author-count {
+  color: var(--text-colour-2);
+}
+
+/* Completeness stat cards */
+.completeness-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-m);
+}
+
+.completeness-stat-card {
+  background: var(--surface-mid);
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-m);
+  padding: var(--space-s);
+  text-align: center;
+}
+
+.completeness-stat-card__value {
+  font-family: var(--font-display-extrablack);
+  font-size: var(--step-3);
+  color: var(--insights-colour-4);
+  line-height: 1.1;
+}
+
+.completeness-stat-card__pct {
+  font-family: var(--font-default);
+  font-size: var(--step-0);
+  color: var(--text-colour-2);
+}
+
+.completeness-stat-card__label {
+  font-size: var(--step--1);
+  color: var(--text-colour-1);
+  margin-top: var(--space-3xs);
+}
+
+.completeness-stat-card__total {
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+}
+
+/* Missing data disclosure sections */
+.disclosure {
+  background: var(--surface-mid);
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-m);
+  margin-bottom: var(--space-xs);
+}
+
+.disclosure summary {
+  padding: var(--space-s);
+  padding-inline-start: calc(var(--space-s) + 1.5em);
+  cursor: pointer;
+  color: var(--insights-colour-4);
+  list-style: none;
+}
+
+.disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.disclosure summary::before {
+  content: "▶";
+  background-color: transparent;
+  mask-image: none;
+  width: auto;
+  height: auto;
+  left: var(--space-s);
+  color: var(--insights-colour-4);
+  font-size: 1em;
+  transition: transform 0.2s ease;
+}
+
+.disclosure[open] summary::before {
+  transform: translate(0, -50%) rotate(90deg);
+}
+
+.disclosure summary:hover {
+  background: var(--surface-fore);
+}
+
+.disclosure summary:focus-visible {
+  outline: 2px dotted var(--primary-5);
+  outline-offset: 2px;
+}
+
+.disclosure__note {
+  margin: var(--space-2xs) var(--space-s) 0;
+  padding: var(--space-s);
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+  background: var(--surface-fore);
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-s);
+}
+
+.disclosure__note a {
+  color: var(--text-colour-1);
+}
+
+.disclosure .missing-list {
+  padding: var(--space-xs) var(--space-s) var(--space-s);
+  list-style: none;
+  columns: 2;
+  column-gap: var(--space-m);
+  font-size: var(--step--1);
+}
+
+.insights-missing {
+  margin-top: calc(var(--space-m) - var(--space-xs));
+}
+
+.insights-missing .missing-list li {
+  break-inside: avoid;
+  padding-block: 2px;
+}
+
+.insights-missing .missing-list a {
+  color: var(--text-colour-1);
+}
+
+/* Chart footnotes */
+.insights-footnotes {
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+  padding-left: 1.5em;
+  margin-top: var(--space-3xs);
+}
+
+.insights-footnotes li {
+  padding-left: 0.25em;
+  margin-bottom: var(--space-3xs);
+}
+
+.insights-footnote {
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+  margin-top: var(--space-3xs);
+}
+
+/* Generated date */
+.insights-meta {
+  font-size: var(--step--1);
+  color: var(--text-colour-2);
+}
+
+.main-header .insights-meta {
+  color: var(--header-accent);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .insights-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-axis-label {
+    font-size: 9px;
+  }
+
+  .chart-end-label {
+    font-size: 9px;
+  }
+
+  .chart-milestone-label {
+    font-size: 8px;
+  }
+
+  .chart-bar-label {
+    font-size: 10px;
+  }
+
+  .completeness-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insights-missing .missing-list {
+    columns: 1;
+  }
+}

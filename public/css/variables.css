@@ -221,6 +221,13 @@
     --firehose-colour-5: var(--septenary-7);
     --firehose-colour-6: var(--septenary-8);
     --firehose-colour-7: var(--septenary-9);
+    --insights-colour-1: var(--primary-1);
+    --insights-colour-2: var(--primary-2);
+    --insights-colour-3: var(--primary-3);
+    --insights-colour-4: var(--primary-5);
+    --insights-colour-5: var(--primary-7);
+    --insights-colour-6: var(--primary-8);
+    --insights-colour-7: var(--primary-9);
   }
   [data-theme=dark] {
     --surface-back: var(--greyscale-9);
@@ -273,5 +280,12 @@
     --firehose-colour-5: var(--septenary-3);
     --firehose-colour-6: var(--septenary-2);
     --firehose-colour-7: var(--septenary-1);
+    --insights-colour-1: var(--primary-9);
+    --insights-colour-2: var(--primary-8);
+    --insights-colour-3: var(--primary-7);
+    --insights-colour-4: var(--primary-5);
+    --insights-colour-5: var(--primary-3);
+    --insights-colour-6: var(--primary-2);
+    --insights-colour-7: var(--primary-1);
   }
 }

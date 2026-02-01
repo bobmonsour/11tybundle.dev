@@ -22,6 +22,8 @@ import { postYearsInCategory } from "./postyearsincategory.js";
 import { postYearsInFirehose } from "./postyearsinfirehose.js";
 import { getScreenshotpath } from "./getscreenshotpath.js";
 import { toSocialHandle } from "./tosocialhandle.js";
+import { lineChart } from "./linechart.js";
+import { barChart } from "./barchart.js";
 
 export const filters = {
   blogTitleToList,
@@ -50,6 +52,8 @@ export const filters = {
   postYearsInFirehose,
   singleComma,
   toSocialHandle,
+  lineChart,
+  barChart,
 };
 
 export default (eleventyConfig) => {

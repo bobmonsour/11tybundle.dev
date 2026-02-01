@@ -8,16 +8,16 @@
     "start": "npx @11ty/eleventy --serve --incremental --ignore-initial",
     "postdev": "npx -y pagefind --site _site --force-language unknown --serve",
     "rs": "npm run start && npm run postdev",
-    "build": "npx @11ty/eleventy",
+    "build": "npm run clean && npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
     "upload": "npx wrangler deploy --assets=./_site",
-    "startns": "npx @11ty/eleventy --serve",
+    "startns": "npm run clean && npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy --serve",
     "perf": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "perf:file": "npm run perf > perf-output.txt 2>&1",
-    "latest": "cross-env USE_LATEST_DATA=true npx @11ty/eleventy --serve",
-    "clean": "rimraf ./_site"
+    "latest": "cross-env USE_LATEST_DATA=true npm run clean && npx @11ty/eleventy --serve",
+    "clean": "rimraf ./_site/css/"
   },
   "engines": {
     "node": "^22.0.0"

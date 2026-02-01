@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="/css/channel-{{ 'css' | getBundleTimestamp }}.css">
   {%endif %}
 
+  {# conditionally load the insights css file #}
+  {% if insightsPage %}
+    <link rel="stylesheet" href="/css/insights-{{ 'css' | getBundleTimestamp }}.css">
+  {% endif %}
+
 	<script src="https://cdn.usefathom.com/script.js" data-site="AHYVTZHH" defer></script>
 
   <script type="module" src="/js/global-{{ 'js' | getBundleTimestamp }}.js"></script>

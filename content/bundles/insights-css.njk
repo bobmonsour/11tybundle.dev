@@ -1,0 +1,12 @@
+---
+layout: null
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: "/css/insights-{{ 'css' | getBundleTimestamp }}.css"
+---
+{# bundle the insights-related css files #}
+{% css "insights" %}
+  {% include "public/css/insights.css" %}
+{% endcss %}
+
+{% getBundle "css", "insights" %}
