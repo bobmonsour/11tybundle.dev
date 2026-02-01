@@ -46,8 +46,8 @@ permalink: /insights/
 {# ===== Cumulative Growth ===== #}
 <section class="section" data-pagefind-ignore="all">
   <div class="container flow">
-    <h2>Growth over time</h2>
-    <h3>Cumulative entries</h3>
+    {# <h2>Growth over time</h2> #}
+    <h2>Cumulative entries</h2>
     <div class="insights-chart">
       {{ insightsdata.cumulativeGrowth | lineChart({
         title: "Cumulative growth of blog posts, sites, and releases over time",
@@ -92,7 +92,8 @@ permalink: /insights/
 {# ===== Category Growth ===== #}
 <section class="section" data-pagefind-ignore="all">
   <div class="container flow">
-    <h3>Category growth (top 15)</h3>
+    <h2>Category growth (top 15)</h2>
+    <p>Excludes the &ldquo;How to...&rdquo; category.</p>
     <div class="insights-chart">
       {{ insightsdata.categoryGrowth | lineChart({
         title: "Growth of the top 15 categories over time",
@@ -102,7 +103,6 @@ permalink: /insights/
         seriesClasses: ["chart-line--series-0", "chart-line--series-1", "chart-line--series-2", "chart-line--series-3", "chart-line--series-4", "chart-line--series-5", "chart-line--series-6", "chart-line--series-7", "chart-line--series-8", "chart-line--series-9", "chart-line--series-10", "chart-line--series-11", "chart-line--series-12", "chart-line--series-13", "chart-line--series-14"],
         legendStyle: "box"
       }) | safe }}
-      <p class="insights-footnote">Excludes the &ldquo;How to...&rdquo; category.</p>
     </div>
     <table class="visually-hidden">
       <caption>Category growth data for top 15 categories</caption>
@@ -155,8 +155,9 @@ permalink: /insights/
 {# ===== Category Ranking ===== #}
 <section class="section" data-pagefind-ignore="all">
   <div class="container flow">
-    <h2>Categories</h2>
-    <h3>Top 15 categories</h3>
+    {# <h2>Categories</h2> #}
+    <h2>Top 15 categories</h2>
+    <p>Excludes the &ldquo;How to...&rdquo; category.</p>
     <div class="insights-chart">
       {{ insightsdata.categoryRanking | barChart({
         title: "Top 15 categories by post count",
@@ -167,7 +168,6 @@ permalink: /insights/
         labelKey: "name",
         valueKey: "count"
       }) | safe }}
-      <p class="insights-footnote">Excludes the &ldquo;How to...&rdquo; category.</p>
     </div>
     <table class="visually-hidden">
       <caption>Top 15 categories by number of posts</caption>
@@ -187,8 +187,8 @@ permalink: /insights/
 <section class="section" data-pagefind-ignore="all">
   <div class="container flow">
     <h2>Authors</h2>
-    <h3>Author contribution distribution</h3>
-    <p>How many posts each author has contributed, grouped into ranges.</p>
+    {# <h3>Author contribution distribution</h3> #}
+    <p>Distribution of authors by number of contributions.</p>
     <div class="insights-chart">
       {{ insightsdata.authorDistribution | barChart({
         title: "Distribution of author contribution counts",
@@ -218,41 +218,16 @@ permalink: /insights/
 {# ===== Prolific Authors ===== #}
 <section class="section" data-pagefind-ignore="all">
   <div class="container flow">
-    <h3>Prolific authors</h3>
-    <p>{{ insightsdata.stats.prolificAuthorCount }} authors have contributed 6 or more posts.</p>
+    <h2>Authors with 6+ contributions</h2>
 
-    <div class="insights-author-tier">
-      <h4>21+ posts</h4>
-      <ul class="insights-author-list" role="list">
-        {%- for author in insightsdata.prolificAuthors %}
-          {%- if author.count >= 21 %}
-        <li><a href="{{ author.site }}">{{ author.name }}</a> <span class="author-count">({{ author.count }})</span></li>
-          {%- endif %}
-        {%- endfor %}
-      </ul>
-    </div>
-
-    <div class="insights-author-tier">
-      <h4>11&ndash;20 posts</h4>
-      <ul class="insights-author-list" role="list">
-        {%- for author in insightsdata.prolificAuthors %}
-          {%- if author.count >= 11 and author.count <= 20 %}
-        <li><a href="{{ author.site }}">{{ author.name }}</a> <span class="author-count">({{ author.count }})</span></li>
-          {%- endif %}
-        {%- endfor %}
-      </ul>
-    </div>
-
-    <div class="insights-author-tier">
-      <h4>6&ndash;10 posts</h4>
-      <ul class="insights-author-list" role="list">
-        {%- for author in insightsdata.prolificAuthors %}
-          {%- if author.count >= 6 and author.count <= 10 %}
-        <li><a href="{{ author.site }}">{{ author.name }}</a> <span class="author-count">({{ author.count }})</span></li>
-          {%- endif %}
-        {%- endfor %}
-      </ul>
-    </div>
+    <ul class="insights-author-list" role="list">
+      {%- for author in insightsdata.prolificAuthors %}
+        {%- if author.count >= 6 %}
+        {%- set authorRecord = bundledata.authors | getAuthorRecord(author.name) %}
+      <li><a href="/authors/{{ authorRecord.slugifiedAuthor }}/">{{ author.name }}</a> <span class="author-count">({{ author.count }})</span></li>
+        {%- endif %}
+      {%- endfor %}
+    </ul>
   </div>
 </section>
 
@@ -328,3 +303,13 @@ permalink: /insights/
     </div>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('.disclosure[name="completeness"]').forEach(details => {
+  details.addEventListener('toggle', () => {
+    if (details.open) {
+      details.querySelector('summary').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>

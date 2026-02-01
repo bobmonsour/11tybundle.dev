@@ -18,6 +18,7 @@
 
 /* Stat cards grid */
 .insights-stats {
+  padding-block-start: var(--space-s);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-s);
@@ -48,7 +49,6 @@
 .insights-chart {
   margin-block: var(--space-xs);
 }
-
 
 .insights-chart svg {
   width: 100%;
@@ -227,19 +227,13 @@
 }
 
 /* Prolific authors */
-.insights-author-tier h4 {
-  font-family: var(--font-display-bold);
-  font-size: var(--step-0);
-  color: var(--heading-colour-1);
-  margin-bottom: var(--space-2xs);
-}
-
 .insights-author-list {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs) var(--space-s);
+  padding-block-start: var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xs) var(--space-l);
 }
 
 .insights-author-list li {
@@ -247,7 +241,7 @@
 }
 
 .insights-author-list a {
-  color: var(--authors-colour-4);
+  color: var(--text-colour-1);
 }
 
 .insights-author-list .author-count {
@@ -259,6 +253,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-m);
+  margin-top: var(--space-xs);
 }
 
 .completeness-stat-card {
@@ -405,6 +400,7 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .insights-stats {
+    padding-block-start: var(--space-s);
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -425,6 +421,11 @@
   }
 
   .completeness-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insights-author-list {
+    padding-block-start: var(--space-m);
     grid-template-columns: repeat(2, 1fr);
   }
 
