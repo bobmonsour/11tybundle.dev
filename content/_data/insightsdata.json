@@ -1,5 +1,5 @@
 {
-  "generatedDate": "2026-02-01T20:56:34.814Z",
+  "generatedDate": "2026-02-01T21:50:55.517Z",
   "stats": {
     "totalEntries": 3268,
     "blogPosts": 1639,
@@ -3224,388 +3224,580 @@
       "percentage": 5.9,
       "posts": [
         {
-          "title": "🛳️ Migrating my website from Next.js to 11ty",
-          "link": "https://www.conor.zone/en/blog/migrating-my-website-from-next-to-11ty.html"
-        },
-        {
-          "title": "11ty and Observable",
-          "link": "https://chromamine.com/2023/11/11ty-and-observable/"
-        },
-        {
-          "title": "11ty or Bust",
-          "link": "https://joshghent.com/11ty-or-bust/"
-        },
-        {
-          "title": "11ty Simplicity",
-          "link": "https://www.crossingtheruby.com/2021/05/19/11ty-simplicity.html"
-        },
-        {
-          "title": "6 Months with 11ty",
-          "link": "https://kpwags.com/posts/2024/06/11/6-months-with-11ty/"
-        },
-        {
-          "title": "A brief update to how I write these posts",
-          "link": "https://paulcapewell.com/blog/250411_1426/"
-        },
-        {
-          "title": "A Complete Guide to Building a Blog with Eleventy",
-          "link": "https://cfjedimaster.github.io/eleventy-blog-guide/guide.html"
-        },
-        {
-          "title": "Added a 'uses' Page Archive",
-          "link": "https://ryan.himmelwright.net/post/added-uses-page-archive/"
-        },
-        {
-          "title": "Added Timestamp to My Eleventy New Post Utility",
-          "link": "https://johnwargo.com/posts/2024/new-post-timestamp/"
-        },
-        {
-          "title": "Added Timestamp to Posts",
-          "link": "https://johnwargo.com/posts/2024/added-timestamp-to-posts/"
+          "title": "Separating Code From Content in Eleventy",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2025-01-15-separating-code-from-content-in-eleventy-aaron-morey",
+          "author": "Aaron Morey",
+          "slugifiedAuthor": "aaron-morey"
         },
         {
           "title": "Adding figures with captions to images in markdown with eleventy",
-          "link": "https://www.alpower.com/tutorials/adding-figures-with-captions-to-images-in-markdown-with-eleventy"
-        },
-        {
-          "title": "Adding Sidebars to an Eleventy Site",
-          "link": "https://johnwargo.com/posts/2024/adding-sidebars-eleventy/"
-        },
-        {
-          "title": "Adding subheadings and sketches to my blog page navigation",
-          "link": "https://sachachua.com/blog/2025/04/adding-subheadings-and-sketches-to-my-blog-page-navigation/"
-        },
-        {
-          "title": "Automating Eleventy Server with Visual Studio Code Tasks",
-          "link": "https://dryan.com/articles/11ty-tasks-vs-code/"
-        },
-        {
-          "title": "Bringing my omg.lol Now page into Eleventy",
-          "link": "https://lewisdale.dev/post/bringing-my-omg-lol-now-page-into-eleventy/"
-        },
-        {
-          "title": "Build JAMstack-ready sites with Bootstrap and 11ty (Eleventy)",
-          "link": "https://webpixels.io/blog/how-to-get-started-with-bootstrap-and-eleventy"
-        },
-        {
-          "title": "Building a Lightweight Optimizely SaaS CMS Solution with 11ty",
-          "link": "https://world.optimizely.com/blogs/Minesh-Shah/Dates/2025/12/building-a-lightweight-optimizely-saas-cms-solution-with-11ty/"
-        },
-        {
-          "title": "Building a Town that Doesn't Exist",
-          "link": "https://dansinker.com/posts/2024-05-10-doesntexist/"
-        },
-        {
-          "title": "Building My Resume in HTML using Eleventy",
-          "link": "https://michaelengen.com/posts/my-eleventy-resume/"
-        },
-        {
-          "title": "Category and Tag Pages with Eleventy",
-          "link": "https://joshtronic.com/2025/09/07/eleventy-category-tag-pages/"
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2021-07-25-adding-figures-with-captions-to-images-in-markdown-with-eleventy-al-power",
+          "author": "Al Power",
+          "slugifiedAuthor": "al-power"
         },
         {
           "title": "Configure markdown footnotes in eleventy",
-          "link": "https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/"
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2021-01-23-configure-markdown-footnotes-in-eleventy-al-power",
+          "author": "Al Power",
+          "slugifiedAuthor": "al-power"
         },
         {
           "title": "Controlling whitespace in 11ty with Nunjucks",
-          "link": "https://www.alpower.com/tutorials/2024-05-11-controlling-whitespace-in-11ty/"
-        },
-        {
-          "title": "Creating a 'new blog entry' shortcut for creating blog posts in nano for eleventy",
-          "link": "https://paulcapewell.com/blog/250129/"
-        },
-        {
-          "title": "Creating a Journal With Eleventy",
-          "link": "https://www.simplethread.com/creating-a-journal-with-eleventy/"
-        },
-        {
-          "title": "Custom collection list markup in Eleventy",
-          "link": "https://www.dandenney.com/posts/front-end-dev/custom-collection-list-markup-in-eleventy/"
-        },
-        {
-          "title": "Detecting Markdown titles with Eleventy",
-          "link": "https://lewisdale.dev/post/detecting-markdown-titles-with-eleventy/"
-        },
-        {
-          "title": "Ditching WordPress for Eleventy",
-          "link": "https://joshtronic.com/2025/05/25/ditching-wordpress-for-eleventy/"
-        },
-        {
-          "title": "Eleventy",
-          "link": "https://chromamine.com/2023/10/eleventy/"
-        },
-        {
-          "title": "Eleventy — Using A Layout As A Partial (The Most Useful Things...)",
-          "link": "https://www.denizaksimsek.com/2020/11ty-layout-as-partial/"
-        },
-        {
-          "title": "Eleventy (11ty) setup for multilingual component-based flexible pages",
-          "link": "https://www.andberry.me/blog/11ty-multilanguage-multi-sections-components-setup"
-        },
-        {
-          "title": "Eleventy (11ty), Vite, Tailwind, and Alpine.js – Rapid static site starter framework",
-          "link": "https://fullstackdigital.io/blog/eleventy-vite-tailwind-and-alpine-js-rapid-static-site-starter-framework/"
-        },
-        {
-          "title": "Eleventy GitHub Repositories Plugin",
-          "link": "https://johnwargo.com/posts/2023/eleventy-plugin-github-repositories/"
-        },
-        {
-          "title": "Eleventy Grey-Matter Engine Not Registered Error",
-          "link": "https://randomerrors.dev/posts/2023/eleventy-grey-matter-engine-not-registered-error/"
-        },
-        {
-          "title": "Eleventy Last Post Date Using Liquid",
-          "link": "https://randomerrors.dev/posts/2023/eleventy-last-post-date-liquid/"
-        },
-        {
-          "title": "Eleventy Navigation Set URL to First Item in Collection",
-          "link": "https://johnwargo.com/posts/2024/eleventy-navigation-set-url/"
-        },
-        {
-          "title": "Eleventy Not A Supported MIME Type",
-          "link": "https://randomerrors.dev/posts/2023/not-a-supported-mime-type/"
-        },
-        {
-          "title": "Eleventy Pagination Before Callback Not Working",
-          "link": "https://randomerrors.dev/posts/2023/eleventy-pagination-before-callback/"
-        },
-        {
-          "title": "Eleventy Posts not Sorting CorrectlN",
-          "link": "https://randomerrors.dev/posts/2023/eleventy-reversed-not/"
-        },
-        {
-          "title": "Eleventy Splitting Category Data Across Two Table Columns",
-          "link": "https://johnwargo.com/posts/2023/eleventy-two-table-columns/"
-        },
-        {
-          "title": "Eleventy Templates for Atom Feeds",
-          "link": "https://dsriseah.com/journal/2025/1016/"
-        },
-        {
-          "title": "Eleventy Walkthrough",
-          "link": "https://rphunt.github.io/eleventy-walkthrough/"
-        },
-        {
-          "title": "Fix dates on Eleventy RSS feeds",
-          "link": "https://saneef.com/blog/fix-dates-on-eleventy-rss-feeds/"
-        },
-        {
-          "title": "Flexible components in Eleventy with Nunjucks macros",
-          "link": "https://iainbean.com/posts/2020/flexible-components-in-eleventy-with-nunjucks-macros/"
-        },
-        {
-          "title": "From Gatsby to Eleventy",
-          "link": "https://amberwilson.co.uk/blog/from-gatsby-to-eleventy/"
-        },
-        {
-          "title": "From Gatsby to Eleventy",
-          "link": "https://steele.blue/gatsby-to-eleventy/"
-        },
-        {
-          "title": "Generating Custom OpenGraph Cards with Gatsby and the 11ty Screenshot Service",
-          "link": "https://steele.blue/gatsby-opengraph-11ty-screenshots/"
-        },
-        {
-          "title": "Grow the IndieWeb with Webmentions",
-          "link": "https://amberwilson.co.uk/blog/grow-the-indieweb-with-webmentions/"
-        },
-        {
-          "title": "Hiding posts with future dates in Eleventy",
-          "link": "https://saneef.com/blog/hiding-posts-with-future-dates-in-eleventy/"
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2024-05-11-controlling-whitespace-in-11ty-with-nunjucks-al-power",
+          "author": "Al Power",
+          "slugifiedAuthor": "al-power"
         },
         {
           "title": "How to access post content in template listing files",
-          "link": "https://www.alpower.com/tutorials/access-eleventy-post-content-in-listing/"
-        },
-        {
-          "title": "How to use CSV data with Eleventy",
-          "link": "https://www.maxkohler.com/posts/eleventy-csv/"
-        },
-        {
-          "title": "I changed my mind, my CMS adventure",
-          "link": "https://steveabraham.com/notes/i-changed-my-mind/"
-        },
-        {
-          "title": "I've added webmentions to this blog",
-          "link": "https://fershad.com/notes/webmentions/"
-        },
-        {
-          "title": "Inexactly benchmarking Eleventy vs Astro build times",
-          "link": "https://piperhaywood.com/inexactly-benchmarking-eleventy-vs-astro-build-times/"
-        },
-        {
-          "title": "KDL works great in eleventy",
-          "link": "https://ollicle.com/2024/dec/31/11ty-kdl/"
-        },
-        {
-          "title": "Last modified date of Eleventy posts",
-          "link": "https://joshtronic.com/2025/07/20/last-modified-date-eleventy/"
-        },
-        {
-          "title": "Making blog post source files available with 11ty",
-          "link": "https://chromamine.com/2024/08/making-blog-post-source-files-available-with-11ty/"
-        },
-        {
-          "title": "Managing drafts for Eleventy",
-          "link": "https://nathan-smith.org/posts/blog/eleventy-drafts/"
-        },
-        {
-          "title": "Media Diary with Eleventy",
-          "link": "https://anhvn.com/posts/2021/2021-09-21-media-diary-eleventy/"
-        },
-        {
-          "title": "Migrating from Jekyll to Eleventy",
-          "link": "https://blog.ltgt.net/from-jekyll-to-eleventy/"
-        },
-        {
-          "title": "Moving 18 years of comments out of Disqus and into my 11ty static site",
-          "link": "https://sachachua.com/blog/2025/03/moving-18-years-of-comments-out-of-disqus-and-into-my-11ty-static-site/"
-        },
-        {
-          "title": "Moving to Eleventy",
-          "link": "https://jondueck.ca/journal/2023/moving-to-eleventy/"
-        },
-        {
-          "title": "My Journey with 11ty and Tailwind CSS: Building a Personal Website",
-          "link": "https://dipeshkr.me/blog/journey-with-11ty-and-tailwind/"
-        },
-        {
-          "title": "My Neocities workflow: using Eleventy and the CLI to speed up development",
-          "link": "https://whiona.weblog.lol/2023/10/my-neocities-workflow:-using-eleventy-and-the-cli-to-speed-up-development"
-        },
-        {
-          "title": "Netlify Eleventy Build Failire",
-          "link": "https://randomerrors.dev/posts/2023/netlify-eleventy-build-failure/"
-        },
-        {
-          "title": "Notes on Upgrading to Eleventy 3.0",
-          "link": "https://chromamine.com/2024/11/notes-on-upgrading-to-eleventy-3.0/"
-        },
-        {
-          "title": "Nunjucks Tricks",
-          "link": "https://any.digital/tricks/njk/"
-        },
-        {
-          "title": "Obsidian bases work great with Eleventy",
-          "link": "https://thetangent.space/2025/obsidian-bases/"
-        },
-        {
-          "title": "On Eleventy",
-          "link": "https://greenash.net.au/thoughts/2021/04/on-eleventy/"
-        },
-        {
-          "title": "On this day",
-          "link": "https://sachachua.com/blog/2025/03/on-this-day/"
-        },
-        {
-          "title": "Problem Writing Eleventy Templates",
-          "link": "https://randomerrors.dev/posts/2023/problem-writing-eleventy-templates/"
-        },
-        {
-          "title": "Sanity with 11ty",
-          "link": "https://www.crossingtheruby.com/2021/05/16/sanity-with-eleventy.html"
-        },
-        {
-          "title": "Sanity with 11ty: Paginating Data",
-          "link": "https://www.crossingtheruby.com/2021/05/17/sanity-with-11ty-paginating-data.html"
-        },
-        {
-          "title": "Separating Code From Content in Eleventy",
-          "link": "https://aaronmorey.com/posts/2025/separating-code-from-content-in-eleventy/"
+          "link": "/categories/data-cascade/?bundleitem_highlight=#post-2022-11-06-how-to-access-post-content-in-template-listing-files-al-power",
+          "author": "Al Power",
+          "slugifiedAuthor": "al-power"
         },
         {
           "title": "Setting a timestamp for posts and RSS feeds in eleventy",
-          "link": "https://www.alpower.com/tutorials/setting-a-timestamp-for-posts-in-eleventy"
+          "link": "/categories/dates/?bundleitem_highlight=#post-2021-12-29-setting-a-timestamp-for-posts-and-rss-feeds-in-eleventy-al-power",
+          "author": "Al Power",
+          "slugifiedAuthor": "al-power"
         },
         {
-          "title": "Sunsets eleventy-plugin-img2picture",
-          "link": "https://saneef.com/blog/sunsets-eleventy-plugin-img2picture/"
+          "title": "From Gatsby to Eleventy",
+          "link": "/categories/migrating-to-eleventy/?bundleitem_highlight=#post-2020-11-20-from-gatsby-to-eleventy-amber-wilson",
+          "author": "Amber Wilson",
+          "slugifiedAuthor": "amber-wilson"
         },
         {
-          "title": "Switching to WebC",
-          "link": "https://chromamine.com/2025/07/switching-to-webc/"
+          "title": "Grow the IndieWeb with Webmentions",
+          "link": "/categories/webmentions/?bundleitem_highlight=#post-2020-12-08-grow-the-indieweb-with-webmentions-amber-wilson",
+          "author": "Amber Wilson",
+          "slugifiedAuthor": "amber-wilson"
         },
         {
-          "title": "Syntax highlighting for AsciiDoc with Eleventy",
-          "link": "https://saneef.com/blog/asciidoc-syntax-highlighting/"
+          "title": "Eleventy (11ty) setup for multilingual component-based flexible pages",
+          "link": "/categories/internationalization/?bundleitem_highlight=#post-2022-03-11-eleventy-11ty-setup-for-multilingual-component-based-flexible-pages-andrea-berardi",
+          "author": "Andrea Berardi",
+          "slugifiedAuthor": "andrea-berardi"
         },
         {
-          "title": "Syntax highlighting in Eleventy",
-          "link": "https://nathan-smith.org/posts/blog/syntax-highlighting-eleventy/"
+          "title": "Media Diary with Eleventy",
+          "link": "/categories/data-cascade/?bundleitem_highlight=#post-2021-09-21-media-diary-with-eleventy-anh",
+          "author": "anh",
+          "slugifiedAuthor": "anh"
         },
         {
           "title": "Table of Contents in Eleventy",
-          "link": "https://anhvn.com/posts/2021/2021-10-10-table-of-contents-in-eleventy/"
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2021-10-10-table-of-contents-in-eleventy-anh",
+          "author": "anh",
+          "slugifiedAuthor": "anh"
         },
         {
-          "title": "The Process of Switching to 11ty",
-          "link": "https://kpwags.com/posts/2023/12/28/the-process-of-switching-to-11ty/"
-        },
-        {
-          "title": "This blog's comments are powered by Webmentions",
-          "link": "https://steele.blue/webmentions/"
+          "title": "Nunjucks Tricks",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2026-01-29-nunjucks-tricks-anton-staroverov",
+          "author": "Anton Staroverov",
+          "slugifiedAuthor": "anton-staroverov"
         },
         {
           "title": "This Is An Eleventy Blog Now!",
-          "link": "https://arnaught.neocities.org/blog/2024/08/25/this-is-an-eleventy-blog-now"
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2024-08-25-this-is-an-eleventy-blog-now-arnaught",
+          "author": "Arnaught",
+          "slugifiedAuthor": "arnaught"
         },
         {
-          "title": "This post has been generated with Eleventy",
-          "link": "https://lamaquinadeturing.su/en/2025/02/this-post-has-been-generated-with-eleventy/"
+          "title": "Creating a Journal With Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-03-25-creating-a-journal-with-eleventy-austin-carr",
+          "author": "Austin Carr",
+          "slugifiedAuthor": "austin-carr"
         },
         {
-          "title": "Tweaking my 11ty blog to link to the Mastodon post defined in an Org Mode property",
-          "link": "https://sachachua.com/blog/2025/03/tweaking-my-11ty-blog-to-link-to-the-mastodon-post-defined-in-an-org-mode-property/"
+          "title": "🛳️ Migrating my website from Next.js to 11ty",
+          "link": "/categories/internationalization/?bundleitem_highlight=#post-2024-05-14-migrating-my-website-from-nextjs-to-11ty-conor-c-peterson",
+          "author": "Conor C. Peterson",
+          "slugifiedAuthor": "conor-c-peterson"
         },
         {
-          "title": "Twenty year celebration: Site update number three",
-          "link": "https://ptsefton.com/2024/06/24/update/"
+          "title": "11ty Simplicity",
+          "link": "/categories/why-eleventy/?bundleitem_highlight=#post-2021-05-19-11ty-simplicity-crossingtheruby",
+          "author": "crossingtheruby",
+          "slugifiedAuthor": "crossingtheruby"
         },
         {
-          "title": "TypeScript Mini Apps in Eleventy",
-          "link": "https://dsriseah.com/journal/2025/1014/"
+          "title": "Sanity with 11ty",
+          "link": "/categories/cms/?bundleitem_highlight=#post-2021-05-16-sanity-with-11ty-crossingtheruby",
+          "author": "crossingtheruby",
+          "slugifiedAuthor": "crossingtheruby"
         },
         {
-          "title": "Updated Eleventy Future Post Plugin",
-          "link": "https://johnwargo.com/posts/2024/updated-eleventy-future-post-plugin/"
-        },
-        {
-          "title": "Updated Eleventy Generate Posts Utility",
-          "link": "https://johnwargo.com/posts/2023/updated-eleventy-generate-posts/"
-        },
-        {
-          "title": "Updated My Eleventy New Post Module",
-          "link": "https://johnwargo.com/posts/2023/updated-eleventy-new-post/"
-        },
-        {
-          "title": "Updating my website",
-          "link": "https://hexaedre.com/hexa01/"
-        },
-        {
-          "title": "Upgrading Eleventy After 5 Years",
-          "link": "https://intertwingly.net/blog/2025/10/05/Upgrading-Eleventy-After-5-Years.html"
-        },
-        {
-          "title": "Using Notion as CMS with Eleventy",
-          "link": "https://vrugtehagel.nl/posts/using-notion-as-cms-with-eleventy/"
-        },
-        {
-          "title": "Using WebC for progressively-enhanced UI elements",
-          "link": "https://lewisdale.dev/post/using-webc-for-progressively-enhanced-ui-elements/"
-        },
-        {
-          "title": "WebC Quirks",
-          "link": "https://chromamine.com/2025/07/webc-quirks/"
-        },
-        {
-          "title": "Website Improvement: Social Post Preview Image",
-          "link": "https://phpstan.org/blog/website-improvement-social-post-preview-image"
+          "title": "Sanity with 11ty: Paginating Data",
+          "link": "/categories/pagination/?bundleitem_highlight=#post-2021-05-17-sanity-with-11ty-paginating-data-crossingtheruby",
+          "author": "crossingtheruby",
+          "slugifiedAuthor": "crossingtheruby"
         },
         {
           "title": "Why 11ty?",
-          "link": "https://www.crossingtheruby.com/2021/05/18/why-11ty.html"
+          "link": "/categories/why-eleventy/?bundleitem_highlight=#post-2021-05-18-why-11ty-crossingtheruby",
+          "author": "crossingtheruby",
+          "slugifiedAuthor": "crossingtheruby"
+        },
+        {
+          "title": "Custom collection list markup in Eleventy",
+          "link": "/categories/collections/?bundleitem_highlight=#post-2020-12-15-custom-collection-list-markup-in-eleventy-dan-denney",
+          "author": "Dan Denney",
+          "slugifiedAuthor": "dan-denney"
+        },
+        {
+          "title": "Automating Eleventy Server with Visual Studio Code Tasks",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2023-11-28-automating-eleventy-server-with-visual-studio-code-tasks-dan-ryan",
+          "author": "Dan Ryan",
+          "slugifiedAuthor": "dan-ryan"
+        },
+        {
+          "title": "Building a Town that Doesn't Exist",
+          "link": "/categories/the-11ty-conference-2024/?bundleitem_highlight=#post-2024-05-10-building-a-town-that-doesnt-exist-dan-sinker",
+          "author": "Dan Sinker",
+          "slugifiedAuthor": "dan-sinker"
+        },
+        {
+          "title": "Updating my website",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-03-28-updating-my-website-denis-ricard",
+          "author": "Denis Ricard",
+          "slugifiedAuthor": "denis-ricard"
+        },
+        {
+          "title": "Eleventy — Using A Layout As A Partial (The Most Useful Things...)",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2020-06-08-eleventy-using-a-layout-as-a-partial-the-most-useful-things-deniz-aksimsek",
+          "author": "Deniz Akşimşek",
+          "slugifiedAuthor": "deniz-aksimsek"
+        },
+        {
+          "title": "My Journey with 11ty and Tailwind CSS: Building a Personal Website",
+          "link": "/categories/css-sass/?bundleitem_highlight=#post-2024-01-07-my-journey-with-11ty-and-tailwind-css-building-a-personal-website-dipesh-kumar",
+          "author": "Dipesh Kumar",
+          "slugifiedAuthor": "dipesh-kumar"
+        },
+        {
+          "title": "Eleventy Templates for Atom Feeds",
+          "link": "/categories/filters/?bundleitem_highlight=#post-2025-10-16-eleventy-templates-for-atom-feeds-dsri-seah",
+          "author": "DSri Seah",
+          "slugifiedAuthor": "dsri-seah"
+        },
+        {
+          "title": "TypeScript Mini Apps in Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-10-14-typescript-mini-apps-in-eleventy-dsri-seah",
+          "author": "DSri Seah",
+          "slugifiedAuthor": "dsri-seah"
+        },
+        {
+          "title": "I've added webmentions to this blog",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2025-07-23-ive-added-webmentions-to-this-blog-fershad-irani",
+          "author": "Fershad Irani",
+          "slugifiedAuthor": "fershad-irani"
+        },
+        {
+          "title": "Eleventy (11ty), Vite, Tailwind, and Alpine.js – Rapid static site starter framework",
+          "link": "/categories/getting-started/?bundleitem_highlight=#post-2023-05-06-eleventy-11ty-vite-tailwind-and-alpinejs-rapid-static-site-starter-framework-full-stack-digital",
+          "author": "Full Stack Digital",
+          "slugifiedAuthor": "full-stack-digital"
+        },
+        {
+          "title": "11ty and Observable",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2023-11-11-11ty-and-observable-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "Eleventy",
+          "link": "/categories/why-eleventy/?bundleitem_highlight=#post-2023-10-07-eleventy-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "Making blog post source files available with 11ty",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2024-08-31-making-blog-post-source-files-available-with-11ty-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "Notes on Upgrading to Eleventy 3.0",
+          "link": "/categories/css-sass/?bundleitem_highlight=#post-2024-11-21-notes-on-upgrading-to-eleventy-30-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "Switching to WebC",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-07-13-switching-to-webc-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "WebC Quirks",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2025-07-15-webc-quirks-harris-lapiroff",
+          "author": "Harris Lapiroff",
+          "slugifiedAuthor": "harris-lapiroff"
+        },
+        {
+          "title": "Flexible components in Eleventy with Nunjucks macros",
+          "link": "/categories/nunjucks-macros/?bundleitem_highlight=#post-2020-12-04-flexible-components-in-eleventy-with-nunjucks-macros-iain-bean",
+          "author": "Iain Bean",
+          "slugifiedAuthor": "iain-bean"
+        },
+        {
+          "title": "On Eleventy",
+          "link": "/categories/why-eleventy/?bundleitem_highlight=#post-2021-04-14-on-eleventy-jeremy-epstein",
+          "author": "Jeremy Epstein",
+          "slugifiedAuthor": "jeremy-epstein"
+        },
+        {
+          "title": "Added Timestamp to My Eleventy New Post Utility",
+          "link": "/categories/dates/?bundleitem_highlight=#post-2024-04-06-added-timestamp-to-my-eleventy-new-post-utility-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Added Timestamp to Posts",
+          "link": "/categories/dates/?bundleitem_highlight=#post-2024-04-07-added-timestamp-to-posts-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Adding Sidebars to an Eleventy Site",
+          "link": "/categories/css-sass/?bundleitem_highlight=#post-2024-11-03-adding-sidebars-to-an-eleventy-site-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy GitHub Repositories Plugin",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2023-12-27-eleventy-github-repositories-plugin-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Grey-Matter Engine Not Registered Error",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-05-17-eleventy-grey-matter-engine-not-registered-error-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Last Post Date Using Liquid",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-04-25-eleventy-last-post-date-using-liquid-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Navigation Set URL to First Item in Collection",
+          "link": "/categories/collections/?bundleitem_highlight=#post-2024-03-24-eleventy-navigation-set-url-to-first-item-in-collection-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Not A Supported MIME Type",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-07-09-eleventy-not-a-supported-mime-type-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Pagination Before Callback Not Working",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-04-16-eleventy-pagination-before-callback-not-working-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Posts not Sorting CorrectlN",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-03-11-eleventy-posts-not-sorting-correctln-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Eleventy Splitting Category Data Across Two Table Columns",
+          "link": "/categories/collections/?bundleitem_highlight=#post-2023-11-18-eleventy-splitting-category-data-across-two-table-columns-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Netlify Eleventy Build Failire",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-04-03-netlify-eleventy-build-failire-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Problem Writing Eleventy Templates",
+          "link": "/categories/debugging/?bundleitem_highlight=#post-2023-07-07-problem-writing-eleventy-templates-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Updated Eleventy Future Post Plugin",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2024-01-11-updated-eleventy-future-post-plugin-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Updated Eleventy Generate Posts Utility",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2023-07-01-updated-eleventy-generate-posts-utility-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Updated My Eleventy New Post Module",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2023-12-30-updated-my-eleventy-new-post-module-john-m-wargo",
+          "author": "John M. Wargo",
+          "slugifiedAuthor": "john-m-wargo"
+        },
+        {
+          "title": "Moving to Eleventy",
+          "link": "/categories/migrating-to-eleventy/?bundleitem_highlight=#post-2023-01-09-moving-to-eleventy-jon-duek",
+          "author": "Jon Duek",
+          "slugifiedAuthor": "jon-duek"
+        },
+        {
+          "title": "11ty or Bust",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2024-01-03-11ty-or-bust-josh-ghent",
+          "author": "Josh Ghent",
+          "slugifiedAuthor": "josh-ghent"
+        },
+        {
+          "title": "Category and Tag Pages with Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-09-07-category-and-tag-pages-with-eleventy-josh-sherman",
+          "author": "Josh Sherman",
+          "slugifiedAuthor": "josh-sherman"
+        },
+        {
+          "title": "Ditching WordPress for Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-05-28-ditching-wordpress-for-eleventy-josh-sherman",
+          "author": "Josh Sherman",
+          "slugifiedAuthor": "josh-sherman"
+        },
+        {
+          "title": "Last modified date of Eleventy posts",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-07-20-last-modified-date-of-eleventy-posts-josh-sherman",
+          "author": "Josh Sherman",
+          "slugifiedAuthor": "josh-sherman"
+        },
+        {
+          "title": "6 Months with 11ty",
+          "link": "/categories/why-eleventy/?bundleitem_highlight=#post-2024-06-11-6-months-with-11ty-keith-wagner",
+          "author": "Keith Wagner",
+          "slugifiedAuthor": "keith-wagner"
+        },
+        {
+          "title": "The Process of Switching to 11ty",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2023-12-28-the-process-of-switching-to-11ty-keith-wagner",
+          "author": "Keith Wagner",
+          "slugifiedAuthor": "keith-wagner"
+        },
+        {
+          "title": "This post has been generated with Eleventy",
+          "link": "/categories/migrating-to-eleventy/?bundleitem_highlight=#post-2025-02-12-this-post-has-been-generated-with-eleventy-la-maquina-de-turing",
+          "author": "La màquina de Turing",
+          "slugifiedAuthor": "la-maquina-de-turing"
+        },
+        {
+          "title": "Bringing my omg.lol Now page into Eleventy",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2023-03-07-bringing-my-omglol-now-page-into-eleventy-lewis-dale",
+          "author": "Lewis Dale",
+          "slugifiedAuthor": "lewis-dale"
+        },
+        {
+          "title": "Detecting Markdown titles with Eleventy",
+          "link": "/categories/front-matter/?bundleitem_highlight=#post-2024-01-10-detecting-markdown-titles-with-eleventy-lewis-dale",
+          "author": "Lewis Dale",
+          "slugifiedAuthor": "lewis-dale"
+        },
+        {
+          "title": "Using WebC for progressively-enhanced UI elements",
+          "link": "/categories/web-c/?bundleitem_highlight=#post-2023-02-23-using-webc-for-progressively-enhanced-ui-elements-lewis-dale",
+          "author": "Lewis Dale",
+          "slugifiedAuthor": "lewis-dale"
+        },
+        {
+          "title": "From Gatsby to Eleventy",
+          "link": "/categories/migrating-to-eleventy/?bundleitem_highlight=#post-2024-11-25-from-gatsby-to-eleventy-matt-steele",
+          "author": "Matt Steele",
+          "slugifiedAuthor": "matt-steele"
+        },
+        {
+          "title": "Generating Custom OpenGraph Cards with Gatsby and the 11ty Screenshot Service",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2023-03-13-generating-custom-opengraph-cards-with-gatsby-and-the-11ty-screenshot-service-matt-steele",
+          "author": "Matt Steele",
+          "slugifiedAuthor": "matt-steele"
+        },
+        {
+          "title": "This blog's comments are powered by Webmentions",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-01-19-this-blogs-comments-are-powered-by-webmentions-matt-steele",
+          "author": "Matt Steele",
+          "slugifiedAuthor": "matt-steele"
+        },
+        {
+          "title": "How to use CSV data with Eleventy",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2021-02-06-how-to-use-csv-data-with-eleventy-max-kohler",
+          "author": "Max Kohler",
+          "slugifiedAuthor": "max-kohler"
+        },
+        {
+          "title": "Building My Resume in HTML using Eleventy",
+          "link": "/categories/css-sass/?bundleitem_highlight=#post-2024-11-03-building-my-resume-in-html-using-eleventy-michael-engen",
+          "author": "Michael Engen",
+          "slugifiedAuthor": "michael-engen"
+        },
+        {
+          "title": "Building a Lightweight Optimizely SaaS CMS Solution with 11ty",
+          "link": "/categories/cms/?bundleitem_highlight=#post-2025-12-04-building-a-lightweight-optimizely-saas-cms-solution-with-11ty-minesh-shah",
+          "author": "Minesh Shah",
+          "slugifiedAuthor": "minesh-shah"
+        },
+        {
+          "title": "Managing drafts for Eleventy",
+          "link": "/categories/drafts/?bundleitem_highlight=#post-2024-08-01-managing-drafts-for-eleventy-nathan-smith",
+          "author": "Nathan Smith",
+          "slugifiedAuthor": "nathan-smith"
+        },
+        {
+          "title": "Syntax highlighting in Eleventy",
+          "link": "/categories/css-sass/?bundleitem_highlight=#post-2024-07-31-syntax-highlighting-in-eleventy-nathan-smith",
+          "author": "Nathan Smith",
+          "slugifiedAuthor": "nathan-smith"
+        },
+        {
+          "title": "KDL works great in eleventy",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2024-12-31-kdl-works-great-in-eleventy-oliver-boermans",
+          "author": "Oliver Boermans",
+          "slugifiedAuthor": "oliver-boermans"
+        },
+        {
+          "title": "Website Improvement: Social Post Preview Image",
+          "link": "/categories/social-media/?bundleitem_highlight=#post-2023-03-13-website-improvement-social-post-preview-image-ondrej-mirtes",
+          "author": "Ondřej Mirtes",
+          "slugifiedAuthor": "ondrej-mirtes"
+        },
+        {
+          "title": "A brief update to how I write these posts",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-04-11-a-brief-update-to-how-i-write-these-posts-paul-capewell",
+          "author": "Paul Capewell",
+          "slugifiedAuthor": "paul-capewell"
+        },
+        {
+          "title": "Creating a 'new blog entry' shortcut for creating blog posts in nano for eleventy",
+          "link": "/categories/front-matter/?bundleitem_highlight=#post-2025-01-29-creating-a-new-blog-entry-shortcut-for-creating-blog-posts-in-nano-for-eleventy-paul-capewell",
+          "author": "Paul Capewell",
+          "slugifiedAuthor": "paul-capewell"
+        },
+        {
+          "title": "Twenty year celebration: Site update number three",
+          "link": "/categories/collections/?bundleitem_highlight=#post-2024-06-23-twenty-year-celebration-site-update-number-three-peter-sefton",
+          "author": "Peter Sefton",
+          "slugifiedAuthor": "peter-sefton"
+        },
+        {
+          "title": "Inexactly benchmarking Eleventy vs Astro build times",
+          "link": "/categories/performance/?bundleitem_highlight=#post-2024-02-28-inexactly-benchmarking-eleventy-vs-astro-build-times-piper-haywood",
+          "author": "Piper Haywood",
+          "slugifiedAuthor": "piper-haywood"
+        },
+        {
+          "title": "A Complete Guide to Building a Blog with Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2023-03-04-a-complete-guide-to-building-a-blog-with-eleventy-raymond-camden",
+          "author": "Raymond Camden",
+          "slugifiedAuthor": "raymond-camden"
+        },
+        {
+          "title": "Eleventy Walkthrough",
+          "link": "/categories/getting-started/?bundleitem_highlight=#post-2020-02-01-eleventy-walkthrough-reg-hunt",
+          "author": "Reg Hunt",
+          "slugifiedAuthor": "reg-hunt"
+        },
+        {
+          "title": "Added a 'uses' Page Archive",
+          "link": "/categories/collections/?bundleitem_highlight=#post-2025-03-16-added-a-uses-page-archive-ryan-himmelwright",
+          "author": "Ryan Himmelwright",
+          "slugifiedAuthor": "ryan-himmelwright"
+        },
+        {
+          "title": "Adding subheadings and sketches to my blog page navigation",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-04-03-adding-subheadings-and-sketches-to-my-blog-page-navigation-sacha-chua",
+          "author": "Sacha Chua",
+          "slugifiedAuthor": "sacha-chua"
+        },
+        {
+          "title": "Moving 18 years of comments out of Disqus and into my 11ty static site",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-03-30-moving-18-years-of-comments-out-of-disqus-and-into-my-11ty-static-site-sacha-chua",
+          "author": "Sacha Chua",
+          "slugifiedAuthor": "sacha-chua"
+        },
+        {
+          "title": "On this day",
+          "link": "/categories/dates/?bundleitem_highlight=#post-2025-03-23-on-this-day-sacha-chua",
+          "author": "Sacha Chua",
+          "slugifiedAuthor": "sacha-chua"
+        },
+        {
+          "title": "Tweaking my 11ty blog to link to the Mastodon post defined in an Org Mode property",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-03-27-tweaking-my-11ty-blog-to-link-to-the-mastodon-post-defined-in-an-org-mode-property-sacha-chua",
+          "author": "Sacha Chua",
+          "slugifiedAuthor": "sacha-chua"
+        },
+        {
+          "title": "Upgrading Eleventy After 5 Years",
+          "link": "/categories/configuration/?bundleitem_highlight=#post-2025-10-05-upgrading-eleventy-after-5-years-sam-ruby",
+          "author": "Sam Ruby",
+          "slugifiedAuthor": "sam-ruby"
+        },
+        {
+          "title": "Obsidian bases work great with Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-10-11-obsidian-bases-work-great-with-eleventy-samjc",
+          "author": "SamJC",
+          "slugifiedAuthor": "samjc"
+        },
+        {
+          "title": "Fix dates on Eleventy RSS feeds",
+          "link": "/categories/dates/?bundleitem_highlight=#post-2021-08-20-fix-dates-on-eleventy-rss-feeds-saneef-h-ansari",
+          "author": "Saneef H. Ansari",
+          "slugifiedAuthor": "saneef-h-ansari"
+        },
+        {
+          "title": "Hiding posts with future dates in Eleventy",
+          "link": "/categories/dates/?bundleitem_highlight=#post-2021-05-24-hiding-posts-with-future-dates-in-eleventy-saneef-h-ansari",
+          "author": "Saneef H. Ansari",
+          "slugifiedAuthor": "saneef-h-ansari"
+        },
+        {
+          "title": "Sunsets eleventy-plugin-img2picture",
+          "link": "/categories/images/?bundleitem_highlight=#post-2025-12-16-sunsets-eleventy-plugin-img2picture-saneef-h-ansari",
+          "author": "Saneef H. Ansari",
+          "slugifiedAuthor": "saneef-h-ansari"
+        },
+        {
+          "title": "Syntax highlighting for AsciiDoc with Eleventy",
+          "link": "/categories/how-to/?bundleitem_highlight=#post-2022-04-12-syntax-highlighting-for-asciidoc-with-eleventy-saneef-h-ansari",
+          "author": "Saneef H. Ansari",
+          "slugifiedAuthor": "saneef-h-ansari"
+        },
+        {
+          "title": "I changed my mind, my CMS adventure",
+          "link": "/categories/cms/?bundleitem_highlight=#post-2024-01-04-i-changed-my-mind-my-cms-adventure-steve-abraham",
+          "author": "Steve Abraham",
+          "slugifiedAuthor": "steve-abraham"
+        },
+        {
+          "title": "Migrating from Jekyll to Eleventy",
+          "link": "/categories/migrating-to-eleventy/?bundleitem_highlight=#post-2023-03-13-migrating-from-jekyll-to-eleventy-thomas-broyer",
+          "author": "Thomas Broyer",
+          "slugifiedAuthor": "thomas-broyer"
+        },
+        {
+          "title": "Using Notion as CMS with Eleventy",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2025-04-23-using-notion-as-cms-with-eleventy-vrugtehagel",
+          "author": "vrugtehagel",
+          "slugifiedAuthor": "vrugtehagel"
+        },
+        {
+          "title": "Build JAMstack-ready sites with Bootstrap and 11ty (Eleventy)",
+          "link": "/categories/getting-started/?bundleitem_highlight=#post-2022-01-05-build-jamstack-ready-sites-with-bootstrap-and-11ty-eleventy-webpixels",
+          "author": "Webpixels",
+          "slugifiedAuthor": "webpixels"
+        },
+        {
+          "title": "My Neocities workflow: using Eleventy and the CLI to speed up development",
+          "link": "/categories/blogging/?bundleitem_highlight=#post-2023-10-27-my-neocities-workflow-using-eleventy-and-the-cli-to-speed-up-development-whiona",
+          "author": "Whiona",
+          "slugifiedAuthor": "whiona"
         }
       ]
     }

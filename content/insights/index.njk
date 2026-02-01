@@ -294,9 +294,12 @@ permalink: /insights/
       <details class="disclosure" name="completeness">
         <summary>View {{ insightsdata.missingData.blogDescription.count }} blog posts missing description</summary>
         <p class="disclosure__note">I attempt to examine your site to find a description for your blog post or site, but sometimes I can&rsquo;t find it automatically. If you want to know how to add one, here are two resources that describe how to do this: <a href="https://learn-eleventy.pages.dev/lesson/17/">Lesson 17: Meta info, RSS feeds and module recap</a> and <a href="https://johnwargo.com/posts/2023/meta-keywords-in-eleventy/">Meta Description and Keywords in Eleventy</a> by John M. Wargo.</p>
-        <ul class="missing-list" role="list">
+        <ul class="missing-list missing-list--posts" role="list">
           {%- for post in insightsdata.missingData.blogDescription.posts %}
-          <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+          <li>
+            <a href="{{ post.link }}">{{ post.title }}</a>
+            <span class="missing-list__author">by <a href="/authors/{{ post.slugifiedAuthor }}/">{{ post.author }}</a></span>
+          </li>
           {%- endfor %}
         </ul>
       </details>

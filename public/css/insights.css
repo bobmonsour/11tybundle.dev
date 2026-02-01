@@ -370,6 +370,15 @@
   color: var(--text-colour-1);
 }
 
+.insights-missing .missing-list--posts li {
+  padding-block: var(--space-3xs);
+}
+
+.missing-list__author {
+  display: block;
+  color: var(--text-colour-2);
+}
+
 /* Chart footnotes */
 .insights-footnotes {
   font-size: var(--step--1);
