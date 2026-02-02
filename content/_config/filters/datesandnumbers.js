@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 // Format the date of blog posts for the site
 export const formatPostDate = (date) => {
   return DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
-    DateTime.DATE_MED
+    DateTime.DATE_MED,
   );
 };
 
@@ -11,9 +11,8 @@ export const formatPostDate = (date) => {
 // which arrive as strings, not dates; for use in the Bundle posts
 // dates are of the form of Dec 25, 2025
 export const formatItemDate = (date) => {
-  const itemDate = Date.parse(date);
-  return DateTime.fromMillis(itemDate, { zone: "utc" }).toLocaleString(
-    DateTime.DATE_MED
+  return DateTime.fromISO(date, { zone: "utc" }).toLocaleString(
+    DateTime.DATE_MED,
   );
 };
 
