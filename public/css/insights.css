@@ -43,7 +43,7 @@
 .insights-stat-card__label {
   font-size: var(--step--1);
   color: var(--text-colour-2);
-  margin-top: var(--space-3xs);
+  margin-block-start: var(--space-3xs);
 }
 
 /* Chart containers */
@@ -255,7 +255,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-m);
-  margin-top: var(--space-xs);
+  margin-block-start: var(--space-xs);
 }
 
 .completeness-stat-card {
@@ -282,7 +282,7 @@
 .completeness-stat-card__label {
   font-size: var(--step--1);
   color: var(--text-colour-1);
-  margin-top: var(--space-3xs);
+  margin-block-start: var(--space-3xs);
 }
 
 .completeness-stat-card__total {
@@ -295,7 +295,7 @@
   background: var(--surface-mid);
   border: 1px solid var(--surface-fore);
   border-radius: var(--radius-m);
-  margin-bottom: var(--space-xs);
+  margin-block-end: var(--space-xs);
 }
 
 .disclosure summary {
@@ -358,7 +358,7 @@
 }
 
 .insights-missing {
-  margin-top: calc(var(--space-m) - var(--space-xs));
+  margin-block-start: calc(var(--space-m) - var(--space-xs));
 }
 
 .insights-missing .missing-list li {
@@ -383,19 +383,19 @@
 .insights-footnotes {
   font-size: var(--step--1);
   color: var(--text-colour-2);
-  padding-left: 1.5em;
-  margin-top: var(--space-3xs);
+  padding-inline-start: 1.5em;
+  margin-block-start: var(--space-3xs);
 }
 
 .insights-footnotes li {
-  padding-left: 0.25em;
-  margin-bottom: var(--space-3xs);
+  padding-inline-start: 0.25em;
+  margin-block-end: var(--space-3xs);
 }
 
 .insights-footnote {
   font-size: var(--step--1);
   color: var(--text-colour-2);
-  margin-top: var(--space-3xs);
+  margin-block-start: var(--space-3xs);
 }
 
 /* Generated date */
