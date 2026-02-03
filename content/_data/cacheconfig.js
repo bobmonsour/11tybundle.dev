@@ -18,7 +18,7 @@ export const cacheDuration = {
   rssLinkHtml: "1y",
   socialHtml: "1y",
   socialLinks: "1y",
-  starters: "0s",
+  starters: "1w",
 };
 
 // Timeout settings for fetch operations, in milliseconds
