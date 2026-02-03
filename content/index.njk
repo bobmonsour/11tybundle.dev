@@ -107,7 +107,7 @@ issue: 80
           </a>
           <dl>
             <dt>Author:</dt><dd><a href="{{ item.OwnerUrl }}">{{ item.Owner }}</a></dd>
-            <dt>Updated:</dt><dd><time datetime="{{ item.Date | formatYMD }}">{{ item.LastUpdated | formatItemDate }}</time></dd>
+            <dt>Updated:</dt><dd><time datetime="{{ item.LastUpdated | formatYMD }}">{{ item.LastUpdated }}</time></dd>
             <dt>GitHub stars:</dt><dd><data value="{{ item.Stars }}">{{ item.Stars }}</data></dd>
             <dt>11ty version:</dt><dd><data value="{{ item.Version }}">{{ item.Version }}</data></dd>
           </dl>
