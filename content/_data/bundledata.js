@@ -278,7 +278,14 @@ export default async function () {
     const cache = new AssetCache(cacheKey, ".cache");
     if (cache.isCacheValid(cacheDuration.starters)) {
       const cachedStarters = await cache.getCachedValue();
-      if (cachedStarters) {
+      // if we've added new starters, ignore the cache
+      if (cachedStarters && cachedStarters.length <= rawStarters.length) {
+        console.log(
+          "cached starters length:",
+          cachedStarters.length,
+          "raw starters length:",
+          rawStarters.length,
+        );
         console.log(`Using cached starter project metadata`);
         return cachedStarters;
       }
