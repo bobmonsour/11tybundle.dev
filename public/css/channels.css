@@ -159,7 +159,8 @@
   --header-pill-active-bg: var(--categories-colour-3);
 }
 
-.authors {
+.authors,
+.insights {
   --header-bg: var(--authors-colour-4);
   --header-border: var(--authors-colour-5);
   --header-content: var(--authors-colour-1);
