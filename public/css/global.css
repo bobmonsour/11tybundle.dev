@@ -254,14 +254,14 @@ summary {
   &:before {
     z-index: 1;
     background-color: var(--primary-5);
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpolyline points='6 9 12 15 18 9' stroke='%23000' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3C/polyline%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpolygon points='2,1 9,5 2,9'/%3E%3C/svg%3E");
     mask-position: center;
     mask-repeat: no-repeat;
   }
 
   details[open] & {
     &:before {
-      transform: translate(0, -50%) rotate(180deg);
+      transform: translate(0, -50%) rotate(90deg);
     }
   }
   > h2 {
