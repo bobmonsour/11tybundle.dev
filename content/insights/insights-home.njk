@@ -38,9 +38,8 @@ permalink: /insights/
   </div>
 </div>
 
-
 <div class="section surface-mid" data-pagefind-ignore="all">
-  <div class="container prolific-authors-list">
+  <div class="container insights-items-list">
     <details>
       <summary><h2 class="h3">Authors with 6+ blog posts</h2></summary>
       <ul role="list">
@@ -51,8 +50,6 @@ permalink: /insights/
     </details>
   </div>
 </div>
-
-
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container">
@@ -82,6 +79,57 @@ permalink: /insights/
   </div>
 </div>
 
+<div class="section surface-mid" data-pagefind-ignore="all">
+  <div class="container insights-items-list">
+    <details>
+      <summary><h2 class="h3">{{ insightsdata.missingData.rssLink.count }} author sites missing RSS links</h2></summary>
+      <ul role="list">
+        {% for author in insightsdata.missingData.rssLink.authors %}
+          <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+</div>
+
+<div class="section" data-pagefind-ignore="all">
+  <div class="container insights-items-list">
+    <details>
+      <summary><h2 class="h3">{{ insightsdata.missingData.favicon.count }} author sites missing favicon</h2></summary>
+      <ul role="list">
+        {% for author in insightsdata.missingData.favicon.authors %}
+          <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+</div>
+
+<div class="section surface-mid" data-pagefind-ignore="all">
+  <div class="container insights-items-list">
+    <details>
+      <summary><h2 class="h3">{{ insightsdata.missingData.authorDescription.count }} author sites missing descriptions</h2></summary>
+      <ul role="list">
+        {% for author in insightsdata.missingData.authorDescription.authors %}
+          <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+</div>
+
+<div class="section" data-pagefind-ignore="all">
+  <div class="container insights-items-list">
+    <details>
+      <summary><h2 class="h3">{{ insightsdata.missingData.blogDescription.count }} blog posts missing descriptions</h2></summary>
+      <ul role="list">
+        {% for post in insightsdata.missingData.blogDescription.posts %}
+          <li><a href="{{ post.link }}/">{{ post.title }}</a> by <a href="/authors/{{ post.author | slugify }}">{{ post.author }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+</div>
 
 {# <div class="section surface-mid" data-pagefind-ignore="all">
   <div class="container">

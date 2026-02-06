@@ -503,7 +503,7 @@
   }
 }
 
-.prolific-authors-list ul {
+.insights-items-list ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xs) var(--space-s);
