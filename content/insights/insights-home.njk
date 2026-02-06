@@ -49,7 +49,7 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
-    <details>
+    <details name="insights">
       <summary><h2 class="h3">Authors with 6+ blog posts</h2></summary>
       <ul role="list">
         {% for author in insightsdata.prolificAuthors %}
@@ -90,7 +90,7 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
-    <details>
+    <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.rssLink.count }} author sites where I can't find the RSS feed</h2></summary>
       <p class="prose surface-mid">I attempt to examine your site to find an RSS link, but sometimes I can't find it automatically. If you know your site has an RSS feed, perhaps you're not using one of the well-known techniques for exposing it. Here are three blog posts that describe how to do this: <a href="https://chriscoyier.net/2024/01/13/exposed-rss/">Exposed RSS</a> by Chris Coyier, <a href="https://rknight.me/blog/please-expose-your-rss/">Please, Expose your RSS</a> by Robb Knight, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
@@ -104,7 +104,7 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
-    <details>
+    <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.favicon.count }} author sites where I can't find the favicon</h2></summary>
       <p class="prose surface-mid">I attempt to examine your site to find a favicon for your site, but sometimes I can't find it automatically. If you want to know how to add one, here are three blog posts that describe how to do this: <a href="https://equk.co.uk/2023/07/14/favicon-generation-in-eleventy/">Favicon Generation In Eleventy</a> by equilibriumuk, <a href="https://bnijenhuis.nl/notes/adding-a-favicon-in-eleventy/">Adding a favicon in Eleventy</a> by Bernard Nijenhuis, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
@@ -118,7 +118,7 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
-    <details>
+    <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.authorDescription.count }} author sites where I can't find the description</h2></summary>
       <p class="prose surface-mid">I attempt to examine your site to find a description, something that tells the reader something about who you are. But sometimes I can't find it automatically. If you want to know how to add one, here are three resources that describe how to do this: <a href="https://learn-eleventy.pages.dev/lesson/17/">Lesson 17: Meta info, RSS feeds and module recap</a>, <a href="https://johnwargo.com/posts/2023/meta-keywords-in-eleventy/">Meta Description and Keywords in Eleventy</a> by John M. Wargo, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
@@ -132,7 +132,7 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
-    <details>
+    <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.blogDescription.count }} blog posts where I can't find the description</h2></summary>
       <p class="prose surface-mid">I attempt to examine your blog posts to find a description, some words that summarize the content of you blog post. But sometimes I can't find it automatically. If you want to know how to add one, here are three resources that describe how to do this: <a href="https://learn-eleventy.pages.dev/lesson/17/">Lesson 17: Meta info, RSS feeds and module recap</a>, <a href="https://johnwargo.com/posts/2023/meta-keywords-in-eleventy/">Meta Description and Keywords in Eleventy</a> by John M. Wargo, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS links, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list" class="max-two-columns">
@@ -143,3 +143,12 @@ permalink: /insights/
     </details>
   </div>
 </div>
+
+<script>
+  document.addEventListener("toggle", (event) => {
+    const details = event.target;
+    if (details.matches(".js-scroll-top") && details.open) {
+      details.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, true);
+</script>
