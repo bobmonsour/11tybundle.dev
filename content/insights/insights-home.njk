@@ -1,14 +1,14 @@
 ---
 title: "Insights"
 eleventyComputed:
-  description: "Data-driven visualizations about the 11tybundle.dev ecosystem — growth trends, category popularity, author contributions, and data completeness."
+  description: "Here's some data about the ecosystem of web developers building sites with 11ty."
 permalink: /insights/
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
     <h1 data-pagefind-ignore>Bundle insights</h1>
     <div class="details" data-pagefind-ignore="all">
-      <p>What's the 11tybundle made of?</p>
+      <p>What is 11tybundle.dev made of?</p>
       <p>{{ insightsdata.generatedDate | formatItemDate }}</p>
     </div>
   </div>
@@ -16,7 +16,13 @@ permalink: /insights/
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container">
-    <h2 class="h3">Entry county by type</h2>
+    <p class="prose surface-mid">11tybundle.dev is more than just a directory of blog posts, sites, and authors — it's a dataset that offers insights into the community of web developers building sites with 11ty. This page explores the data collected from authors' sites and their blog posts to uncover patterns and areas for improvement.</p>
+  </div>
+</div>
+
+<div class="section" data-pagefind-ignore="all">
+  <div class="container">
+    <h2 class="h3">Entry count by type</h2>
     <div class="directory__statsgrid">
       <div class="directory__card directory--stats">
         <h3>{{ insightsdata.missingData.totalAuthors | singleComma }}</h3>
@@ -32,13 +38,16 @@ permalink: /insights/
       </div>
       <div class="directory__card directory--stats">
         <h3>{{ insightsdata.stats.releases | singleComma }}</h3>
-        <p>Releases</p>
+        <p>Releases *</p>
       </div>
+    </div>
+    <div class="footnote">
+      <p>* Releases represents a selected set of releases of various parts of the <a href="https://github.com/11ty">11ty project</a>.</p>
     </div>
   </div>
 </div>
 
-<div class="section surface-mid" data-pagefind-ignore="all">
+<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details>
       <summary><h2 class="h3">Authors with 6+ blog posts</h2></summary>
@@ -56,22 +65,22 @@ permalink: /insights/
     <h2 class="h3">Data completeness</h2>
     <div class="directory__statsgrid">
       <div class="directory__card directory--stats">
-        <p>Missing RSS link</p>
+        <p>can't find the RSS feed</p>
         <h3>{{ insightsdata.missingData.rssLink.count }} <span class="percentage">({{ insightsdata.missingData.rssLink.percentage }})%</span></h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>Missing favicon</p>
+        <p>can't find the favicon</p>
         <h3>{{ insightsdata.missingData.favicon.count }} <span class="percentage">({{ insightsdata.missingData.favicon.percentage }})%</span></h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>Missing description</p>
+        <p>can't find the description</p>
         <h3>{{ insightsdata.missingData.authorDescription.count }} <span class="percentage">({{ insightsdata.missingData.authorDescription.percentage }})%</span></h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>Missing description</p>
+        <p>can't find the description</p>
         <h3>{{ insightsdata.missingData.blogDescription.count }} <span class="percentage">({{ insightsdata.missingData.blogDescription.percentage }})%</span></h3>
         <p>of {{ insightsdata.missingData.totalBlogPosts | singleComma }} blog posts</p>
       </div>
@@ -79,10 +88,11 @@ permalink: /insights/
   </div>
 </div>
 
-<div class="section surface-mid" data-pagefind-ignore="all">
+<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details>
-      <summary><h2 class="h3">{{ insightsdata.missingData.rssLink.count }} author sites missing RSS links</h2></summary>
+      <summary><h2 class="h3">{{ insightsdata.missingData.rssLink.count }} author sites where I can't find the RSS feed</h2></summary>
+      <p class="prose surface-mid">I attempt to examine your site to find an RSS link, but sometimes I can't find it automatically. If you know your site has an RSS feed, perhaps you're not using one of the well-known techniques for exposing it. Here are three blog posts that describe how to do this: <a href="https://chriscoyier.net/2024/01/13/exposed-rss/">Exposed RSS</a> by Chris Coyier, <a href="https://rknight.me/blog/please-expose-your-rss/">Please, Expose your RSS</a> by Robb Knight, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
         {% for author in insightsdata.missingData.rssLink.authors %}
           <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
@@ -95,7 +105,8 @@ permalink: /insights/
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details>
-      <summary><h2 class="h3">{{ insightsdata.missingData.favicon.count }} author sites missing favicon</h2></summary>
+      <summary><h2 class="h3">{{ insightsdata.missingData.favicon.count }} author sites where I can't find the favicon</h2></summary>
+      <p class="prose surface-mid">I attempt to examine your site to find a favicon for your site, but sometimes I can't find it automatically. If you want to know how to add one, here are three blog posts that describe how to do this: <a href="https://equk.co.uk/2023/07/14/favicon-generation-in-eleventy/">Favicon Generation In Eleventy</a> by equilibriumuk, <a href="https://bnijenhuis.nl/notes/adding-a-favicon-in-eleventy/">Adding a favicon in Eleventy</a> by Bernard Nijenhuis, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
         {% for author in insightsdata.missingData.favicon.authors %}
           <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
@@ -105,10 +116,11 @@ permalink: /insights/
   </div>
 </div>
 
-<div class="section surface-mid" data-pagefind-ignore="all">
+<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details>
-      <summary><h2 class="h3">{{ insightsdata.missingData.authorDescription.count }} author sites missing descriptions</h2></summary>
+      <summary><h2 class="h3">{{ insightsdata.missingData.authorDescription.count }} author sites where I can't find the description</h2></summary>
+      <p class="prose surface-mid">I attempt to examine your site to find a description, something that tells the reader something about who you are. But sometimes I can't find it automatically. If you want to know how to add one, here are three resources that describe how to do this: <a href="https://learn-eleventy.pages.dev/lesson/17/">Lesson 17: Meta info, RSS feeds and module recap</a>, <a href="https://johnwargo.com/posts/2023/meta-keywords-in-eleventy/">Meta Description and Keywords in Eleventy</a> by John M. Wargo, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS feeds, favicons, and descriptions</a> by yours truly.</p>
       <ul role="list">
         {% for author in insightsdata.missingData.authorDescription.authors %}
           <li><a href="{{ author.site }}/">{{ author.name }}</a></li>
@@ -121,21 +133,13 @@ permalink: /insights/
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details>
-      <summary><h2 class="h3">{{ insightsdata.missingData.blogDescription.count }} blog posts missing descriptions</h2></summary>
-      <ul role="list">
+      <summary><h2 class="h3">{{ insightsdata.missingData.blogDescription.count }} blog posts where I can't find the description</h2></summary>
+      <p class="prose surface-mid">I attempt to examine your blog posts to find a description, some words that summarize the content of you blog post. But sometimes I can't find it automatically. If you want to know how to add one, here are three resources that describe how to do this: <a href="https://learn-eleventy.pages.dev/lesson/17/">Lesson 17: Meta info, RSS feeds and module recap</a>, <a href="https://johnwargo.com/posts/2023/meta-keywords-in-eleventy/">Meta Description and Keywords in Eleventy</a> by John M. Wargo, and <a href="https://bobmonsour.com/blog/seeking-rss-links-favicons-and-descriptions/">Seeking RSS links, favicons, and descriptions</a> by yours truly.</p>
+      <ul role="list" class="max-two-columns">
         {% for post in insightsdata.missingData.blogDescription.posts %}
-          <li><a href="{{ post.link }}/">{{ post.title }}</a> by <a href="/authors/{{ post.author | slugify }}">{{ post.author }}</a></li>
+          <li><a href="{{ post.link }}">{{ post.title }}</a> by <a href="/authors/{{ post.author | slugify }}">{{ post.author }}</a></li>
         {% endfor %}
       </ul>
     </details>
   </div>
 </div>
-
-{# <div class="section surface-mid" data-pagefind-ignore="all">
-  <div class="container">
-    <h2 class="h3">Post count by category</h2>
-    <div class="recent-starters">
-    </div>
-  </div>
-</div>
-#}
