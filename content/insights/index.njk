@@ -40,7 +40,7 @@ permalink: /insights/
       </div>
     </div>
     <div class="footnote">
-      <p>* Releases represents a selected set of releases of various parts of the <a href="https://github.com/11ty">11ty project</a>.</p>
+      <p>* Releases represents a "selected" set of releases of various parts of the <a href="https://github.com/11ty">11ty project</a>. By "selected," I am referring to more developer-facing functionality, such as versions of eleventy itself or things like <a href="https://github.com/11ty/eleventy-img/releases">eleventy-img</a> or <a href="https://github.com/11ty/eleventy-fetch/releases">eleventy-fetch</a>. Among those not "selected" are things like <a href="https://github.com/11ty/eleventy-utils/releases">eleventy-utils</a> or <a href="https://github.com/11ty/eleventy-dependency-tree/releases">eleventy-dependency-tree</a> </p>
     </div>
   </div>
 </div>
@@ -63,30 +63,28 @@ permalink: /insights/
     <h2 class="h3">Data completeness</h2>
     <div class="directory__statsgrid">
       <div class="directory__card directory--stats">
-        <p>can't find the RSS feed</p>
-        <h3>{{ insightsdata.missingData.rssLink.count }} <span class="percentage">({{ insightsdata.missingData.rssLink.percentage }})%</span></h3>
+        <p>RSS feed missing</p>
+        <h3>{{ insightsdata.missingData.rssLink.count }}</h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>can't find the favicon</p>
-        <h3>{{ insightsdata.missingData.favicon.count }} <span class="percentage">({{ insightsdata.missingData.favicon.percentage }})%</span></h3>
+        <p>favicon missing</p>
+        <h3>{{ insightsdata.missingData.favicon.count }}</h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>can't find the description</p>
-        <h3>{{ insightsdata.missingData.authorDescription.count }} <span class="percentage">({{ insightsdata.missingData.authorDescription.percentage }})%</span></h3>
+        <p>site description missing</p>
+        <h3>{{ insightsdata.missingData.authorDescription.count }}</h3>
         <p>of {{ insightsdata.missingData.totalAuthors | singleComma }} author sites</p>
       </div>
       <div class="directory__card directory--stats">
-        <p>can't find the description</p>
-        <h3>{{ insightsdata.missingData.blogDescription.count }} <span class="percentage">({{ insightsdata.missingData.blogDescription.percentage }})%</span></h3>
+        <p>post description missing</p>
+        <h3>{{ insightsdata.missingData.blogDescription.count }}</h3>
         <p>of {{ insightsdata.missingData.totalBlogPosts | singleComma }} blog posts</p>
       </div>
     </div>
   </div>
-</div>
 
-<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.rssLink.count }} author sites where I can't find the RSS feed</h2></summary>
@@ -98,9 +96,7 @@ permalink: /insights/
       </ul>
     </details>
   </div>
-</div>
 
-<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.favicon.count }} author sites where I can't find the favicon</h2></summary>
@@ -112,9 +108,7 @@ permalink: /insights/
       </ul>
     </details>
   </div>
-</div>
 
-<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.authorDescription.count }} author sites where I can't find the description</h2></summary>
@@ -126,9 +120,7 @@ permalink: /insights/
       </ul>
     </details>
   </div>
-</div>
 
-<div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details class="js-scroll-top" name="insights">
       <summary><h2 class="h3">{{ insightsdata.missingData.blogDescription.count }} blog posts where I can't find the description</h2></summary>
