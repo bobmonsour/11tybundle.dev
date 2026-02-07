@@ -36,12 +36,38 @@ permalink: /insights/
       </div>
       <div class="directory__card directory--stats">
         <h3>{{ insightsdata.stats.releases | singleComma }}</h3>
-        <p>Releases *</p>
+        <p>Releases*</p>
       </div>
     </div>
     <div class="footnote">
-      <p>* Releases represents a "selected" set of releases of various parts of the <a href="https://github.com/11ty">11ty project</a>. By "selected," I am referring to more developer-facing functionality, such as versions of eleventy itself or things like <a href="https://github.com/11ty/eleventy-img/releases">eleventy-img</a> or <a href="https://github.com/11ty/eleventy-fetch/releases">eleventy-fetch</a>. Among those not "selected" are things like <a href="https://github.com/11ty/eleventy-utils/releases">eleventy-utils</a>.</p>
+      <p>*Releases represents a "selected" set of releases of various parts of the <a href="https://github.com/11ty">11ty project</a>. By "selected," I am referring to more developer-facing functionality, such as versions of eleventy itself or things like <a href="https://github.com/11ty/eleventy-img/releases">eleventy-img</a> or <a href="https://github.com/11ty/eleventy-fetch/releases">eleventy-fetch</a>. Among those not "selected" are things like <a href="https://github.com/11ty/eleventy-utils/releases">eleventy-utils</a>.</p>
     </div>
+  </div>
+
+  <div class="container entryGrowth">
+    <h2 class="h3">Entry growth</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Blog Posts</th>
+          <th>Growth</th>
+          <th>Sites</th>
+          <th>Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in insightsdata.entriesByYear %}
+        <tr>
+          <td>{{ entry.year }}</td>
+          <td>{{ entry.blogPosts }}</td>
+          <td>{{ entry.blogPostsGrowth }}</td>
+          <td>{{ entry.sites }}</td>
+          <td>{{ entry.sitesGrowth }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
 

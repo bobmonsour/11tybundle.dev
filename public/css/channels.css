@@ -540,3 +540,11 @@
   max-width: 80ch;
   margin-inline: auto;
 }
+
+.entryGrowth {
+  margin-block: var(--space-l);
+  table {
+    margin-block-end: var(--space-l);
+    margin-inline: auto;
+  }
+}
