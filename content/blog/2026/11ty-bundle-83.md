@@ -1,7 +1,7 @@
 ---
 bundleIssue: 83
 eleventyComputed:
-  title: "Eleventy met-up, Brewventy starter, A chart plugin, Sveleven starter, 11tyCMS beta, Tricks of the trade, Eleventy survival, Bundle insights"
+  title: "Eleventy met-up, Brewventy starter, A chart plugin, Sveleven starter, 11tyCMS beta, Tricks of the trade, Eleventy survival, The Newsprint Theme, Bundle insights"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2026-02-11
 tags:
@@ -33,6 +33,8 @@ For some reason, it seems like a long time since the last issue. There's a ton o
 **Tricks of the trade.** [Anton Staroverov](https://any.digital/) shares some [Nunjucks & Liquid tips and tricks](https://any.digital/tricks/njk-liquid/).
 
 **Eleventy survival.** [Zach](https://zachleat.com) shared his thoughts on [How Eleventy Survived: Funding, Growth, and Open Source Reality](https://www.zachleat.com/web/podcast-awesome-eleventy-open-source/) on the Podcast Awesome podcast.
+
+**The Newsprint Theme.** [Brennan Brown](https://brennan.day/) brings us a new starter he calls [The Newsprint Theme](https://github.com/brennanbrown/newsprint#%EF%B8%8F-newsprint), _"A newspaper-style blog built with Eleventy (11ty) embracing a classic newspaper aesthetic while functioning as a newsletter-first publication."_ The [demo](https://newsprint.netlify.app/) looks fantastic.
 
 **Bundle insights.** And finally, I've created a [Bundle insights page](/insights/) that _"... explores the data collected from authors' sites and their blog posts to uncover patterns and areas for improvement."_
 

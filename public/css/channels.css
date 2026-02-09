@@ -543,8 +543,13 @@
 
 .entryGrowth {
   margin-block: var(--space-l);
+  max-width: fit-content;
   table {
     margin-block-end: var(--space-l);
     margin-inline: auto;
+  }
+  &.directory__statsgrid {
+    margin-inline: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
