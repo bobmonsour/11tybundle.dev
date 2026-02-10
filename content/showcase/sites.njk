@@ -65,25 +65,22 @@
     </figure>
 
     <nav>
-      {%- set previousPage = collections.showcasePage | getPreviousCollectionItem %}
-      {%- set nextPage = collections.showcasePage | getNextCollectionItem %}
-      {%- if nextPage or previousPage %}
+      {%- if pagination.href.next or pagination.href.previous %}
         <ol role="list" class="pagination">
-          {%- if previousPage %}<li><a href="{{ previousPage.url }}" class="button"><svg width="20" height="20"
+          {%- if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}" class="button"><svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-left"></use>
             </svg> Previous</a></li>
           {% else %}
             <li>&nbsp;&nbsp;</li>
           {% endif %}
-          {%- if nextPage %}<li><a href="{{ nextPage.url }}" class="button"> Next<svg width="20" height="20"
+          {%- if pagination.href.next %}<li><a href="{{ pagination.href.next }}" class="button"> Next<svg width="20" height="20"
               viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
               <use xlink:href="#icon-arrow-right"></use>
             </svg></a></li>{% endif %}
         </ol>
       {%- endif %}
     </nav>
-
 
   </div>
 </div>
