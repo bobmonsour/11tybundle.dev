@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const seenShowcaseUrls = new Set();
+
   new PagefindUI({
     element: "#search",
     translations: {
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showImages: false,
     showEmptyFilters: false,
     showSubResults: true,
+
     processResult: function (result) {
       // console.log("processResult called with:", result);
 
@@ -47,15 +50,29 @@ document.addEventListener("DOMContentLoaded", () => {
         delete result.meta.description;
       }
 
-      // use the meta description for the excerpt for the main result if it is a showcase page
+      // Showcase page deduplication and excerpt handling
       if (
         result.meta &&
         result.meta.title &&
-        result.meta.description &&
         result.meta.title.startsWith("Showcase: ")
       ) {
-        result.excerpt = result.meta.description;
-        delete result.meta.description;
+        const normalizedUrl = result.url
+          .split("?")[0]
+          .split("#")[0]
+          .replace(/\/$/, "");
+        if (seenShowcaseUrls.has(normalizedUrl)) {
+          result.meta.title = "";
+          result.excerpt = "";
+          result.sub_results = [];
+          result.url = "#showcase-duplicate";
+          return result;
+        }
+        seenShowcaseUrls.add(normalizedUrl);
+
+        if (result.meta.description) {
+          result.excerpt = result.meta.description;
+          delete result.meta.description;
+        }
       }
 
       // --- Remove Title from Main Result Excerpt ---
@@ -163,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (subResult.url.includes("#")) {
             subResult.url = subResult.url.replace(
               "#",
-              "&bundleitem_highlight#"
+              "&bundleitem_highlight#",
             );
           }
         });
@@ -186,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       // Prevent the default browser behavior
       const searchInput = document.querySelector(
-        "input.pagefind-ui__search-input"
+        "input.pagefind-ui__search-input",
       );
       if (searchInput) {
         focusTriggeredBySlash = true;
