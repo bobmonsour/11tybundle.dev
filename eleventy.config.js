@@ -21,6 +21,9 @@ export default function (eleventyConfig) {
     "./content/screenshots/": "screenshots",
   });
 
+  // for local development build performance improvements
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
   //adds the css and js bundles
   eleventyConfig.addBundle("css");
 
