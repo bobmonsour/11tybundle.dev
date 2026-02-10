@@ -1,6 +1,13 @@
 ---
 title: "Bundle insights"
 description: "Some data about the ecosystem of web developers building sites with 11ty."
+charts:
+  entry-growth:
+    type: line
+    file: charts/entry-growth.csv
+    format:
+      thousands: true
+    dots: false
 permalink: /insights/
 ---
 <header class="main-header" data-pagefind-body>
@@ -44,6 +51,8 @@ permalink: /insights/
     </div>
   </div>
 </div>
+
+{% chart "entry-growth" %}
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">

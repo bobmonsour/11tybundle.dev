@@ -50,6 +50,15 @@ export default function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addPlugin(uncharted, {
+    dataDir: '_data/charts',       // where to find CSV files
+    cssPath: '/css/uncharted.css', // output path for stylesheet
+    injectCss: true,               // disable automatic CSS handling
+    downloadData: false,           // enable download links globally
+    dataPassthrough: false,        // copy CSV files to public path
+    dataPath: '/data/'             // public URL path for CSV files
+  });
+
   // Add local filters and shortcodes
   eleventyConfig.addPlugin(filters);
 
