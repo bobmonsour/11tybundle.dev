@@ -58,7 +58,7 @@
   .meta {
     margin-block-start: unset;
   }
-   @media (width >=768px) {
+  @media (width >=768px) {
     grid-template-columns: repeat(8, 1fr);
     align-items: start;
 
@@ -89,5 +89,10 @@ aside {
     font-family: var(--font-display-bold);
     font-size: var(--step--1);
     padding: var(--space-3xs) var(--space-2xs);
+  }
+
+  a.button {
+    display: block;
+    margin: var(--space-m) auto;
   }
 }
