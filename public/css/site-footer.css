@@ -46,6 +46,7 @@
   grid-area: newsletter;
   background: var(--greyscale-8);
   border: 1px solid var(--greyscale-7);
+  border-radius: var(--radius-m);
   &:after {
     content: url("/img/balloon.svg");
     position: absolute;
