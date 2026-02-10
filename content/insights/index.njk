@@ -48,7 +48,7 @@ permalink: /insights/
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">
     <details name="insights">
-      <summary><h2 class="h3">{{ insightsdata.stats.prolificAuthorCount }} authors with 6+ blog posts</h2></summary>
+      <summary><h2 class="h3">{{ insightsdata.stats.prolificAuthorCount }} authors with 5+ blog posts</h2></summary>
       <ul role="list">
         {% for author in insightsdata.prolificAuthors %}
           <li><a href="/authors/{{ author.name | slugify }}/">{{ author.name }}</a><span> ({{ author.count }})</span></li>
