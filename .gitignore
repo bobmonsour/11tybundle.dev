@@ -11,3 +11,4 @@ scripts/
 .github/
 log/
 content/screenshots/*
+content/_data/entry-growth.csv
