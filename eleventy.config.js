@@ -52,7 +52,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(uncharted, {
-    dataDir: "_data/charts", // where to find CSV files
+    dataDir: "content/_data/charts", // where to find CSV files
     cssPath: "/css/uncharted.css", // output path for stylesheet
     injectCss: true, // disable automatic CSS handling
     downloadData: false, // enable download links globally

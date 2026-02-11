@@ -8,6 +8,7 @@ charts:
     format:
       thousands: true
     dots: false
+    injectCss: false
 permalink: /insights/
 ---
 <header class="main-header" data-pagefind-body>
@@ -52,7 +53,10 @@ permalink: /insights/
   </div>
 </div>
 
-{% chart "entry-growth" %}
+<div class="container">
+  {% chart "entry-growth" %}
+</div>
+
 
 <div class="section" data-pagefind-ignore="all">
   <div class="container insights-items-list">

@@ -35,6 +35,10 @@
     <script type="module" src="/js/blog-{{ 'js' | getBundleTimestamp }}.js"></script>
   {% endif %}
 
+  {% if bodyClass == "insights" %}
+    <link rel="stylesheet" href="/css/uncharted.css">
+  {% endif %}
+
 
 
   {# Improve RSS feed visibility #}
