@@ -6,7 +6,7 @@ export default {
   },
   tags: "post",
   image: {
-    source: "11tybundle-dev.png",
+    source: "opengraph-image.jpg",
     alt: "A cute graphic depicting the 11ty Bundle Dev logo",
   },
 };

@@ -52,7 +52,7 @@
 	<meta property="og:description" content="{{ description }}">
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content={{ site.url }}{% if ogImage %}{{ ogImage }}{% else %}"/img/opengraph-image.jpg"{% endif %}>
+	<meta property="og:image" content="{{ site.url }}{% if ogImage %}{{ ogImage }}{% else %}/img/opengraph-image.jpg"{% endif %}>
 	<meta property="og:image:alt" content="{% if ogImageAlt %}{{ ogImageAlt }}{% else %}a cute illustration of the 11ty Bundle website{% endif %}">
 
   {# Apple tags #}
