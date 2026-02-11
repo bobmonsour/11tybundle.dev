@@ -6,15 +6,13 @@ eleventyComputed:
 date: 2026-02-11
 tags:
   - 11ty Bundle
-draft: true
-eleventyExcludeFromCollections: true
 ---
 
 ---
 
 ## A note from Bob:
 
-For some reason, it seems like a long time since the last issue. There's a ton of content in this one, a boatload of posts, sites, and more. I hope you enjoy it! I may have to bump the frequency of these up so they're not so large, or have another way to dribble out the content. Those of you making good use of RSS may already be caught up as we have feeds for the [blog posts](/firehosefeed.xml), the [showcase entries](/showcasefeed.json), and the [releases](/releasefeed.xml).
+For some reason, it feels like a long time since the last issue. There's a ton of content in this one, a boatload of posts, sites, and more. I hope you enjoy it! I may have to bump the frequency of these up so they're not so large, or have another way to dribble out the content. Those of you making good use of RSS may already be caught up as we have feeds for the [blog posts](/firehosefeed.xml), the [showcase entries](/showcasefeed.json), and the [releases](/releasefeed.xml).
 
 ---
 
