@@ -18,7 +18,7 @@ For some reason, it feels like a long time since the last issue. There's a ton o
 
 ## Highlights
 
-**Eleventy met-up.** There were two great talks at the recent meetup. [Stefan Burke](https://chobble.com/) showed how to [Use guardrails with code-generating LLMs](https://www.youtube.com/watch?v=NLrQSRoVKSg) and [Josh Vickerson](https://softclay.software/) told us about [Incremental Content Management with Laravel & 11ty](https://www.youtube.com/watch?v=L95V4S0ooJ8).
+**Eleventy met-up.** There were two great talks at the recent meetup. [Stefan Burke](https://chobble.com/) showed how to [Use guardrails with code-generating LLMs](https://www.youtube.com/watch?v=NLrQSRoVKSg) and [Josh Vickerson](https://softclay.software/) told us about [Incremental Content Management with Laravel & 11ty](https://www.joshvickerson.com/posts/incremental-content-management-with-laravel-and-eleventy/).
 
 **Brewventy starter.** [Kyle Reddoch](https://www.kylereddoch.me/) brings us [Brewventy](https://github.com/kylereddoch/brewventy#brewventy-eleventy-starter), _"A coffee-themed, fully customizable Eleventy starter project combining elegant design with powerful functionality."_
 
