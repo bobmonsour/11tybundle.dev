@@ -41,14 +41,12 @@
     "cross-env": "^7.0.3",
     "cssnano": "^7.1.2",
     "dotenv": "^16.0.3",
+    "eleventy-plugin-uncharted": "^0.7.2",
     "luxon": "^3.7.2",
     "pagefind": "^1.4.0",
     "postcss": "^8.5.6",
     "rimraf": "^6.0.1",
     "terser": "^5.44.1",
     "wrangler": "^4.53.0"
-  },
-  "dependencies": {
-    "eleventy-plugin-uncharted": "^0.7.2"
   }
 }
