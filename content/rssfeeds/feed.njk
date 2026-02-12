@@ -20,8 +20,8 @@ permalink: /feed.xml
 	<entry>
 		<title>Issue {{ post.data.bundleIssue }}: {{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>
-		<updated>{% if latest_posts[0].data.bundleIssue == 83 %}2026-02-12T11:11:11Z{% else %}{{ post.date | dateToRfc3339 }}{% endif %}</updated>
-		<id>{% if latest_posts[0].data.bundleIssue == 83 %}Issue 83 at {{ absolutePostUrl }}{% else %}{{ absolutePostUrl }}{% endif %}</id>
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
+		<id>{{ absolutePostUrl }}</id>
 		<summary>{{ post.data.description | safe }}</summary>
 		<content
 			xml:lang="{{ site.locale }}"
