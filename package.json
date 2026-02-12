@@ -49,6 +49,6 @@
     "wrangler": "^4.53.0"
   },
   "dependencies": {
-    "eleventy-plugin-uncharted": "^0.6.3"
+    "eleventy-plugin-uncharted": "^0.7.2"
   }
 }
