@@ -537,19 +537,18 @@
 }
 
 .insights .footnote {
+  font-size: var(--step--1);
   max-width: 80ch;
   margin-inline: auto;
 }
 
-.entryGrowth {
-  margin-block: var(--space-l);
-  max-width: fit-content;
-  table {
-    margin-block-end: var(--space-l);
+.entry-growth {
+  .chart-container {
+    max-width: 100%;
     margin-inline: auto;
-  }
-  &.directory__statsgrid {
-    margin-inline: auto;
-    grid-template-columns: repeat(2, 1fr);
+
+    @media (width >=768px) {
+      max-width: 80%;
+    }
   }
 }

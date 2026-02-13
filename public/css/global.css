@@ -99,6 +99,10 @@ ol {
   }
 }
 
+sup {
+  font-size: 0.5em;
+}
+
 h1,
 h2,
 h3,
