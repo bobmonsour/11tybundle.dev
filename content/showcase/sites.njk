@@ -66,14 +66,14 @@
       {%- if pagination.href.next or pagination.href.previous %}
         <ol role="list" class="pagination">
           {%- if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}" class="button"><svg width="20" height="20"
-              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
+              viewBox="0 0 24 24" aria-hidden="true">
               <use xlink:href="#icon-arrow-left"></use>
             </svg> Previous</a></li>
           {% else %}
             <li>&nbsp;&nbsp;</li>
           {% endif %}
           {%- if pagination.href.next %}<li><a href="{{ pagination.href.next }}" class="button"> Next<svg width="20" height="20"
-              viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
+              viewBox="0 0 24 24" aria-hidden="true">
               <use xlink:href="#icon-arrow-right"></use>
             </svg></a></li>{% endif %}
         </ol>
