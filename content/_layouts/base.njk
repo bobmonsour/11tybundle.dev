@@ -18,6 +18,10 @@
   <link rel="preload" href="/fonts/Optima-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Optima-ExtraBlack.woff2" as="font" type="font/woff2" crossorigin>
 
+  {% if bodyClass == "insights" %}
+    <link rel="stylesheet" href="/css/uncharted.css">
+  {% endif %}
+
   {# load the global css file for all pages #}
   <link rel="stylesheet" href="/css/global-{{ 'css' | getBundleTimestamp }}.css">
 
@@ -34,12 +38,6 @@
   {% if pageHasCode or youtubeId %}
     <script type="module" src="/js/blog-{{ 'js' | getBundleTimestamp }}.js"></script>
   {% endif %}
-
-  {% if bodyClass == "insights" %}
-    <link rel="stylesheet" href="/css/uncharted.css">
-  {% endif %}
-
-
 
   {# Improve RSS feed visibility #}
 	<link rel="alternate" href="/feed.xml" title="RSS feed for the blog of the 11ty Bundle" type="application/rss+xml">

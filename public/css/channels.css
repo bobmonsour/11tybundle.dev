@@ -543,6 +543,9 @@
 }
 
 .entry-growth {
+  --chart-bg: var(--surface-mid);
+  --chart-dot-size: 0.5rem;
+
   .chart-container {
     max-width: 100%;
     margin-inline: auto;
