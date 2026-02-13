@@ -1,7 +1,7 @@
 ---
 bundleIssue: 83
 eleventyComputed:
-  title: "Eleventy met-up, Brewventy starter, A chart plugin, Sveleven starter, 11tyCMS beta, Tricks of the trade, Eleventy survival, The Newsprint Theme, Bundle insights"
+  title: "Eleventy met-up, Brewventy starter, Uncharted territory, Sveleven starter, 11tyCMS beta, Tricks of the trade, Eleventy survival, The Newsprint Theme, Bundle insights"
   description: "11ty Bundle Issue {{ bundleIssue }}"
 date: 2026-02-11
 tags:
@@ -22,7 +22,7 @@ For some reason, it feels like a long time since the last issue. There's a ton o
 
 **Brewventy starter.** [Kyle Reddoch](https://www.kylereddoch.me/) brings us [Brewventy](https://github.com/kylereddoch/brewventy#brewventy-eleventy-starter), _"A coffee-themed, fully customizable Eleventy starter project combining elegant design with powerful functionality."_
 
-**A chart plugin.** [Sean Lunsford](https://seanlunsford.com/) released [Uncharted](https://github.com/slunsford/uncharted#uncharted), _"A CSS-based chart plugin for Eleventy."_
+**Uncharted territory.** [Sean Lunsford](https://seanlunsford.com/) released [Uncharted](https://github.com/slunsford/uncharted#uncharted), _"A CSS-based chart plugin for Eleventy."_
 
 **Sveleven starter.** [Anton Staroverov](https://any.digital/) created [Sveleven](https://github.com/anydigital/sveleven#sveleven), an _"Ultra-lightweight, modern Eleventy v4 starter (with Tailwind & CMS included!)"_
 

@@ -3,6 +3,7 @@ import "dotenv/config";
 
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import uncharted from "eleventy-plugin-uncharted";
 
 import filters from "./content/_config/filters/index.js";
 
@@ -48,6 +49,15 @@ export default function (eleventyConfig) {
         sizes: "100vw",
       },
     },
+  });
+
+  eleventyConfig.addPlugin(uncharted, {
+    dataDir: "content/_data/charts", // where to find CSV files
+    cssPath: "/css/uncharted.css", // output path for stylesheet
+    injectCss: true, // disable automatic CSS handling
+    downloadData: false, // enable download links globally
+    dataPassthrough: false, // copy CSV files to public path
+    dataPath: "/data/", // public URL path for CSV files
   });
 
   // Add local filters and shortcodes
