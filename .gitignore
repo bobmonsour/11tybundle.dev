@@ -12,3 +12,4 @@ scripts/
 log/
 content/screenshots/*
 content/_data/charts/
+.wrangler/tmp/
