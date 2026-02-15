@@ -57,7 +57,6 @@ export default function (eleventyConfig) {
     injectCss: true, // disable automatic CSS handling
     downloadData: false, // enable download links globally
     dataPassthrough: false, // copy CSV files to public path
-    dataPath: "/data/", // public URL path for CSV files
   });
 
   // Add local filters and shortcodes
