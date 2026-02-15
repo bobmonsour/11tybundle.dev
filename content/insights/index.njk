@@ -8,6 +8,12 @@ charts:
     format:
       thousands: true
     injectCss: false
+  author-growth:
+    type: line
+    file: author-growth.csv
+    format:
+      thousands: true
+    injectCss: false
 permalink: /insights/
 ---
 <header class="main-header" data-pagefind-body>
@@ -64,9 +70,19 @@ permalink: /insights/
 
 
 <div class="section" data-pagefind-ignore="all">
+  <div class="container author-growth">
+    <h2>Cumulative author growth <sup>3</sup></h2>
+    <div class="chart-container">
+      {% chart "author-growth" %}
+    </div>
+    <div class="footnote">
+      <p><sup>3</sup> Data as of {{ insightsdata.generatedDate | formatItemDate }}.</p>
+    </div>
+  </div>
+
   <div class="container insights-items-list">
     <details name="insights">
-      <summary><h2>{{ insightsdata.stats.prolificAuthorCount }} authors with 5+ blog posts</h2></summary>
+      <summary><h3>{{ insightsdata.stats.prolificAuthorCount }} authors with 5+ blog posts</h3></summary>
       <ul role="list">
         {% for author in insightsdata.prolificAuthors %}
           <li><a href="/authors/{{ author.name | slugify }}/">{{ author.name }}</a><span> ({{ author.count }})</span></li>

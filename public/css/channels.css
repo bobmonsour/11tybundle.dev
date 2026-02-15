@@ -542,7 +542,8 @@
   margin-inline: auto;
 }
 
-.entry-growth {
+.entry-growth,
+.author-growth {
   --chart-bg: var(--surface-mid);
   --chart-dot-size: 0.5rem;
 
