@@ -41,7 +41,7 @@
     "cross-env": "^7.0.3",
     "cssnano": "^7.1.2",
     "dotenv": "^16.0.3",
-    "eleventy-plugin-uncharted": "^0.9.1",
+    "eleventy-plugin-uncharted": "^1.0.0-beta.1",
     "luxon": "^3.7.2",
     "pagefind": "^1.4.0",
     "postcss": "^8.5.6",
