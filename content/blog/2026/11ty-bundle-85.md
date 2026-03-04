@@ -29,8 +29,6 @@ A: Yes! We’ll keep the open source project on GitHub as before! As prior art, 
 
 Q: I assume that the free version will continue to make forward progress as it will be the underlying core for the Pro version. Correct.
 
-Q: Yes! We’ll keep the open source project on GitHub as before! As prior art, you can find the Web Awesome open source project lives here: https://github.com/shoelace-style/webawesome
-
 A: Correct!
 
 I do realize that this move has made some in the community quite uncomfortable and this is understandable. Eleventy has been a stellar open source project that many have come to rely on. And its stewardship by Zach has been exceptional for such a project.
