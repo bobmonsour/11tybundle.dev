@@ -14,12 +14,34 @@ tags:
 
 Well, yesterday was quite a day! It calls for yet another mid-month issue of the Bundle.
 
-There's more below in the first 3 highlights, but the major news of the day is that [Build Awesome](https://www.kickstarter.com/projects/fontawesome/build-awesome), the rebranding of Eleventy by [Font Awesome](https://fontawesome.com/), has launched via Kickstarter. There will also be a Pro version adding a bit of whipped cream on top, bringing a bunch of additional features and support. Amazingly, the Kickstarter has already reached its funding goal over the course of yesterday's launch, a great vote of support from the community.
+There's more below in the first 3 highlights, but the major news of the day is that [Build Awesome](https://www.kickstarter.com/projects/fontawesome/build-awesome), the rebranding of Eleventy by [Font Awesome](https://fontawesome.com/), has launched via Kickstarter. There will also be a Pro version adding a bit of whipped cream on top, bringing a bunch of additional features and support. The Kickstarter has already reached its funding goal over the course of yesterday's launch.
 
-While there are still a lot of questions about the path forward to those of us heavily invested in Eleventy, my take is that the non-Pro version, which is <strong>free</strong>, will be a continuation of Eleventy as we know it, with the Pro version being an optional upgrade for those who need the extra features and support. I'm excited to see how this evolves and will be keeping a close eye on the development of Build Awesome.
+```html
+<editorial>
+```
+While there are still a lot of questions about the path forward to those of us heavily invested in Eleventy, my take is that the non-Pro version, which is <strong>free</strong>, will be a continuation of Eleventy as we know it, with the Pro version being an optional upgrade for those who need the extra features and support. I'm looking forward to seeing how this evolves and will be keeping a close eye on the development of Build Awesome.
 
-My only "issue" is that now that we're in Build Awesome land, I've got to figure out whether or not, and when, to rebrand this site accordingly. The Mastodon community kicked around a few ideas, some funny, and some worthy of serious consideration. Stay tuned.
+I posed two questions to Zach in the comments on the Kickstarter page, and I want to share them here as well along with Zach's answers.
 
+Q: Will the free version still be something that has a repo on GitHub and it will just be renamed? or does it move elsewhere?
+
+A: Yes! We’ll keep the open source project on GitHub as before! As prior art, you can find the Web Awesome open source project lives here: [https://github.com/shoelace-style/webawesome](https://github.com/shoelace-style/webawesome)
+
+Q: I assume that the free version will continue to make forward progress as it will be the underlying core for the Pro version. Correct.
+
+Q: Yes! We’ll keep the open source project on GitHub as before! As prior art, you can find the Web Awesome open source project lives here: https://github.com/shoelace-style/webawesome
+
+A: Correct!
+
+I do realize that this move has made some in the community quite uncomfortable and this is understandable. Eleventy has been a stellar open source project that many have come to rely on. And its stewardship by Zach has been exceptional for such a project.
+
+I would take issue on the whole "selling our" or "corporate-izing" narrative. Font Awesome is not some big corporation. They are 25 people that have developed a business that allows them to support themselves while continuing to devellop projects that people love.
+
+I'd suggest taking a breath and giving it some time.
+
+```html
+</editorial>
+```
 ---
 
 ## Highlights
