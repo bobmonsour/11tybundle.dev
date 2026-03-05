@@ -259,6 +259,15 @@
   }
 }
 
+p.getting-started {
+  background: var(--surface-mid);
+  padding: var(--space-s);
+  border: 1px solid var(--surface-fore);
+  border-radius: var(--radius-m);
+  width: 80ch;
+  margin: 0 auto;
+}
+
 .directory--category {
   > h2,
   > h3 {
