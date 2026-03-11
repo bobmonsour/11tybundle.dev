@@ -16,6 +16,8 @@ First and foremost, the final episode of the [THE Eleventy Meetup](https://11tym
 
 [Sia](https://www.sia.codes/) has a lot on her plate and after 5 years of being the key organizer of the meetup, she wants to step back and make more time for her [artistic pursuits](https://sia.studio/) as well as her other tech service efforts. Tomorrow's episode will feature [Tyler Sticka](https://tylersticka.com/) of [Cloud Four](https://cloudfour.com/). Be sure to attend. Here are the [details for the meetup](https://11tymeetup.dev/events/ep-30-rapid-prototyping-helpers/). As always, a recording will be made available for those who can't attend live.
 
+> UPDATE: Zach will be joining the meetup for an open Q&A session. So if you have any questions about the Build Awesome rebrand, the Kickstarter campaign, or anything else related to this topic, be sure to attend and ask your questions live!
+
 Second, there's been a lot going on related to the re-branding of Eleventy to Build Awesome. Check out some of the highlights below.
 
 And while there has been some grumbling about it, I am willing to give Zach and the Font Awesome team the benefit of the doubt. I've read a lot about the history of this small, focused, and talented company and I see some great possibilities ahead. I'll share more details of my thoughts on this on my own blog before too long (probably when the Kickstarter campaign is back up and running). But for now, to give you an indication of my support, I've purchased the babundle.dev domain, and [here is the temporary page](https://babundle.bob-monsour.workers.dev/) that will soon show up there.
