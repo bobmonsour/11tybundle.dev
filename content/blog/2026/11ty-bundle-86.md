@@ -19,7 +19,7 @@ First and foremost, the final episode of the [THE Eleventy Meetup](https://11tym
 
 Second, there's been a lot going on related to the re-branding of Eleventy to Build Awesome. Check out some of the highlights below.
 
-And while there has been some grumbling about it, I am willing to give Zach and the Font Awesome team the benefit of the doubt. I've read a lot about the history of this small, focused, and talented company and I see some great possibilities ahead. I'll share more details of my thoughts on this on my own blog before too long (probably when the Kickstarter campaign is back up and running). But for now, just to give you an indication of my support, I've purchased [babundle.dev](https://babundle.bob-monsour.workers.dev/) in preparation.
+And while there has been some grumbling about it, I am willing to give Zach and the Font Awesome team the benefit of the doubt. I've read a lot about the history of this small, focused, and talented company and I see some great possibilities ahead. I'll share more details of my thoughts on this on my own blog before too long (probably when the Kickstarter campaign is back up and running). But for now, to give you an indication of my support, I've purchased the babundle.dev domain, and [here is the temporary page](https://babundle.bob-monsour.workers.dev/) that will soon show up there.
 
 ---
 
