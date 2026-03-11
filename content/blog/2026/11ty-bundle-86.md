@@ -19,12 +19,16 @@ First and foremost, the final episode of the [THE Eleventy Meetup](https://11tym
 
 Second, there's been a lot going on related to the re-branding of Eleventy to Build Awesome. Check out some of the highlights below.
 
+And while there has been some grumbling about it, I am willing to give Zach and the Font Awesome team the benefit of the doubt. I've read a lot about the history of this small, focused, and talented company and I see some great possibilities ahead. I'll share more details of my thoughts on this on my own blog before too long (probably when the Kickstarter campaign is back up and running). But for now, just to give you an indication of my support, I've purchased babundle.dev in preparation.
+
 ---
 
 ## Highlights
 
 
 **Recapping Eleventy becoming Build Awesome.** Zach wrote blog posts [on the 11ty website](https://www.11ty.dev/blog/build-awesome/) and [his own blog](https://www.zachleat.com/web/build-awesome/) titled Eleventy is now Build Awesome. Zach also did a 20 minute-ish view with Matt Johnson describing the rebrand, titling it [Eleventy Is Rebranding to Build Awesome: What Changes (and What Doesn’t](https://www.youtube.com/watch?v=QnnU_iguZ4I&t=1s). And while the initial Kickstarter campaign reached it's early goal, Font Awesome paused the campaign due to email delivery issues. Zach did [a brief video about the pause announcement](https://www.youtube.com/watch?v=EWqP9fX9xn4). And the Font Awesome gang wrote [a blog post about the pause](https://blog.fontawesome.com/pausing-kickstarter/).
+
+[Get notified when the Kickstarter campaign relaunches!](https://www.kickstarter.com/projects/fontawesome/build-awesome-pro).
 
 **React, Astro, and Eleventy walk into a bar.** [Daiana-Larisa Lucaciu](https://github.com/daia-code) brings us a [Comparative Study of React, Astro and Eleventy Technologies in Developing a Lottery Statistical Analysis Application](https://www.scirp.org/journal/paperinformation?paperid=149987). Diaiaa-Larisa, a student-researcher compares React, Astro, and Eleventy frameworks by building a lottery statistical analysis application, evaluating their performance, SEO optimization, and development ease. Needless to say, Eleventy shines in this comparison.
 
