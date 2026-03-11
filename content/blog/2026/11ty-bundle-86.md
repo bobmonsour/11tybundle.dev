@@ -6,7 +6,6 @@ eleventyComputed:
 date: 2026-03-11
 tags:
   - 11ty Bundle
-draft: true
 ---
 
 ---
