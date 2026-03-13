@@ -48,7 +48,7 @@
   border: 1px solid var(--greyscale-7);
   border-radius: var(--radius-m);
   &:after {
-    content: url("/img/balloon.svg");
+    content: url("/img/ba-balloon.svg");
     position: absolute;
     top: calc(var(--space-s) * -0.5);
     right: var(--space-s);
