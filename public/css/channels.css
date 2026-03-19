@@ -493,6 +493,10 @@ p.getting-started {
   gap: var(--space-xs);
   border-radius: var(--radius-m);
 
+  @media (width < 768px) {
+    border-radius: unset;
+  }
+
   h3 {
     font-family: var(--font-display-bold);
     color: inherit;
