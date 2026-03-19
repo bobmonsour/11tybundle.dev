@@ -439,7 +439,8 @@ mark,
     border-top-right-radius: calc(var(--border-radius) - var(--border-width));
     corner-shape: squircle;
     padding: var(--space-2xs);
-    background: oklch(0.7 0.15 20);
+    background: oklch(0.7317 0.1608 159.34);
+    /* background: oklch(0.7 0.15 20); */
     font-size: var(--step--1);
     text-transform: uppercase;
   }
