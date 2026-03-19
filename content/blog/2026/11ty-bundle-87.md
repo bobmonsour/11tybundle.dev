@@ -15,7 +15,7 @@ youtubeId: lA-wD89m6jM
 
 First off, Happy St. Patrick's Day to all!
 
-Well, we had the final Eleventy Meetup under Sia's great leadership. For all who attended this most recent (and maybe not final) episode, many thanks for being there. I think we peeked at around 42 attendees. Tyler Sticka gave a great talk and Zach treated us to an AMA about Build Awesome and the future of Eleventy. More on both of those below.
+Well, we had the final Eleventy Meetup under Sia's great leadership. For all who attended this most recent (and maybe not final) episode, many thanks for being there. I think we peaked at around 42 attendees. Tyler Sticka gave a great talk and Zach treated us to an AMA about Build Awesome and the future of Eleventy. More on both of those below.
 
 Separately, I've decided to put out these issues whenever it seems that there's enough content to justify one. As a result, I hope you'll find them a bit more digestable and less overwhelming. I've built a new local-only CMS that makes it clear how much content is ready for the next issue so it's easier for me to see on a regular basis.
 
