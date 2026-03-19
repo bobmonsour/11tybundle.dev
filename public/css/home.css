@@ -35,6 +35,7 @@
   @media (width <=768px) {
     border-left: unset;
     border-right: unset;
+    border-radius: unset;
   }
 
   @media (width >=768px) {
@@ -44,6 +45,12 @@
   > h2 {
     background: var(--surface-fore);
     padding: var(--space-s) var(--space-3xl) var(--space-s) var(--space-s);
+    border-top-left-radius: calc(var(--radius-m) - 2px);
+    border-top-right-radius: calc(var(--radius-m) - 2px);
+
+    @media (width <=768px) {
+      border-radius: unset;
+    }
   }
 
   .summary {
@@ -170,6 +177,10 @@
   &:first-of-type {
     background: var(--surface-mid);
     border-radius: var(--radius-m);
+
+    @media (width <=768px) {
+      border-radius: unset;
+    }
   }
 
   .favicon {
@@ -220,6 +231,7 @@
   @media (width <=768px) {
     border-left: none;
     border-right: none;
+    border-radius: unset;
 
     &:not(:last-of-type) {
       border-bottom: none;

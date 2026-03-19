@@ -56,6 +56,7 @@
   @media (width <=768px) {
     border-left: unset;
     border-right: unset;
+    border-radius: unset;
   }
 
   @media (width >=768px) {
