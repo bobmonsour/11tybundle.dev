@@ -24,7 +24,7 @@ Oh, and there's a new category: [Liquid](/catgories/liquid). Hat tip to [Anton S
 
 **The final canary.** [Pre-release: Eleventy v4.0.0-alpha.7](https://github.com/11ty/eleventy/releases/tag/v4.0.0-alpha.7) is out. As noted in the release notes, _Fair warning: this may be one of the last canary releases before you see some names start to change to Build Awesome._ I'm running it for this site.
 
-**Sharing is caring.** [Kyle Reddoch](https://www.kylereddoch.me) built an [Eleventy Plugin for Sharing Posts to Mastodon](https://www.kylereddoch.me/blog/i-built-an-eleventy-plugin-for-sharing-posts-to-mastodon/).
+**Sharing is caring.** [Kyle Reddoch](https://www.kylereddoch.me) built an [Eleventy Plugin for Sharing Posts to Mastodon](https://www.kylereddoch.me/blog/i-built-an-eleventy-plugin-for-sharing-posts-to-mastodon/). Kyle also released a new starter project, [Retro Garden](https://github.com/kylereddoch/retro-garden-eleventy-theme), with a very cool [demo site](https://retro-garden-eleventy-theme.vercel.app/).
 
 **The sky is blue.** [Steven Woodson](https://stevenwoodson.com) shows us how to [Add Bluesky Activity to an Eleventy Blog](https://stevenwoodson.com/blog/adding-bluesky-activity-to-an-eleventy-blog/).
 
