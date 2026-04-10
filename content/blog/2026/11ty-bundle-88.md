@@ -16,7 +16,7 @@ What a world! These are crazy times, and I am writing this to be distracted from
 
 Also, I'm giving a talk at [North Bay Python](https://northbaypython.org/) on April 25th. Check out the list of speakers at this 2-day event in Petaluma, CA. The title of my talk (seems to be the longest title in the bunch) is: _While I've changed gears every 4-5 years, in retirement, I've managed to find my web development tribe_. The talk will be recorded and I'll share it once it's available.
 
-Oh, and there's a new category: [Liquid](/catgories/liquid/). Hat tip to [Anton Staroverov](https://any.digital/), who goes by _anydigital_, for the suggestion.
+Oh, and there's a new category: [Liquid](/categories/liquid/). Hat tip to [Anton Staroverov](https://any.digital/), who goes by _anydigital_, for the suggestion.
 
 ---
 
