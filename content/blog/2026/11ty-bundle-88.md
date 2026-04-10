@@ -36,7 +36,7 @@ Oh, and there's a new category: [Liquid](/catgories/liquid). Hat tip to [Anton S
 
 **Careful with those blades.** [Anton Staroverov](https://any.digital/) brings us [Eleventy blades](https://blades.ninja/build-awesome-11ty/), with a variety of tools to add to your Eleventy toolkit.
 
-**Got comments.** [EchoThread](https://echothread.io/), in beta, brings comments to static sites. I just came across their [guide for adding comments to an Eleventy site](https://echothread.io/docs/guides/eleventy). It looks pretty interesting.
+**Got comments.** [EchoThread](https://echothread.io/), in beta, brings comments to static sites. I just came across their [guide for adding comments to an Eleventy site](https://echothread.io/docs/guides/eleventy). It looks pretty interesting. Note: According to their FAQ, _"EchoThread is completely free during the beta period...Pricing for post-beta plans will be announced later."_
 
 {% include "partials/rss-item-links.njk" %}
 
