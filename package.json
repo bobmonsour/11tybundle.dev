@@ -11,7 +11,6 @@
     "build": "npm run clean && npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "deploy": "npm run build && npx wrangler deploy",
-    "upload": "npx wrangler deploy --assets=./_site",
     "debug": "DEBUG=* npx @11ty/eleventy --serve",
     "perf": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "perf:file": "npm run perf > perf-output.txt 2>&1",
