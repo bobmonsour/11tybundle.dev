@@ -10,7 +10,7 @@
     "rs": "npm run start && npm run postdev",
     "build": "npm run clean && npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
-    "deploy": "npm run build && npm run postbuild && npx wrangler deploy --assets=./_site",
+    "deploy": "npm run build && npx wrangler deploy",
     "upload": "npx wrangler deploy --assets=./_site",
     "debug": "DEBUG=* npx @11ty/eleventy --serve",
     "perf": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
