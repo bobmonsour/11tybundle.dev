@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://github.com/bobmonsour/back-to-pasadena)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://github.com/bobmonsour/house-hunting)",
+      "Bash(curl -sI https://github.com/bobmonsour/back-to-pasadena)",
+      "Bash(curl -sI https://github.com/bobmonsour/house-hunting)",
+      "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena remote set-url origin https://github.com/bobmonsour/back-to-pasadena.git)",
+      "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena remote -v)",
+      "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena fetch --dry-run)",
+      "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena status)",
+      "Bash(git *)"
+    ]
+  }
+}
