@@ -354,14 +354,12 @@ function showUnavailable() {
 
 function openPanel() {
   panel.hidden = false;
-  navInput.setAttribute("aria-expanded", "true");
   toggleBtn.setAttribute("aria-expanded", "true");
   positionPanel();
 }
 
 function closePanel() {
   panel.hidden = true;
-  navInput.setAttribute("aria-expanded", "false");
   toggleBtn.setAttribute("aria-expanded", "false");
   if (debounceHandle) { clearTimeout(debounceHandle); debounceHandle = null; }
 }
