@@ -91,7 +91,9 @@ button.search-results-panel__close:focus-visible {
   outline-offset: 2px;
 }
 
-/* Result panel — mobile overlay */
+/* Result panel — mobile overlay.
+   Grid layout puts the input + close button on the same top row so the search
+   field sits near the top of the viewport, with results immediately below. */
 @media (max-width: 699px) {
   .search-results-panel {
     position: fixed;
@@ -107,13 +109,21 @@ button.search-results-panel__close:focus-visible {
     box-shadow: none;
     padding: var(--space-s);
     overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "input close"
+      "inner inner"
+      "announce announce";
+    column-gap: var(--space-xs);
+    row-gap: var(--space-s);
+    align-items: center;
   }
   .search-results-panel__input {
+    grid-area: input;
     display: block;
     width: 100%;
-    /* Push the input below the absolutely-positioned close button so the X
-       remains tap-targetable in the upper-right corner of the overlay. */
-    margin-block-start: 3rem;
+    margin-block-start: 0;
     font-size: var(--step-1);
     padding: var(--space-xs);
     background: var(--surface-fore);
@@ -125,6 +135,14 @@ button.search-results-panel__close:focus-visible {
     outline: 2px dotted var(--primary-5);
     outline-offset: 2px;
   }
+  /* Override the desktop close-button positioning — let the grid place it. */
+  button.search-results-panel__close {
+    grid-area: close;
+    position: static;
+    inset: auto;
+  }
+  .search-results-panel__inner    { grid-area: inner; }
+  .search-results-panel__announce { grid-area: announce; }
   body:has(.search-results-panel:not([hidden])) { overflow: hidden; }
 }
 
