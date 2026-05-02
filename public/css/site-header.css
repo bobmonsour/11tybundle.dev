@@ -10,10 +10,10 @@
     column-gap: var(--grid-gutter);
     grid-template-areas:
       "brand"
+      "search"
       "cta"
       "actions"
       "nav"
-      "search"
       "theme";
 
     @media (width >=1100px) {
@@ -21,9 +21,8 @@
       row-gap: unset;
       grid-template-columns: auto 1fr auto;
       grid-template-areas:
-        "brand cta cta"
-        "brand nav actions"
-        "search search search"
+        "brand search cta"
+        "brand nav   actions"
         "theme theme theme";
     }
   }

@@ -124,7 +124,14 @@ function onDocClick(e) {
 async function loadPagefind() {
   if (pagefind) return pagefind;
   if (!pagefindLoadPromise) {
-    pagefindLoadPromise = import(PAGEFIND_PATH).then((mod) => (pagefind = mod));
+    pagefindLoadPromise = import(PAGEFIND_PATH).then(async (mod) => {
+      // Long enough that sub-result excerpts cover the entire post description (titles +
+      // descriptions are typically <60 words combined; the title prefix is stripped at
+      // render time, leaving the full description as the excerpt body).
+      await mod.options({ excerptLength: 60 });
+      pagefind = mod;
+      return mod;
+    });
   }
   return pagefindLoadPromise;
 }
@@ -346,12 +353,12 @@ function closePanel() {
 function positionPanel() {
   if (panel.hidden) return;
   if (window.matchMedia(MOBILE_QUERY).matches) {
-    panel.style.left = "";
     panel.style.top = "";
     return;
   }
+  // CSS handles horizontal centering via left:50% + translateX(-50%).
+  // JS sets `top` to sit just below the input.
   const rect = navInput.getBoundingClientRect();
-  panel.style.left = `${rect.left}px`;
   panel.style.top = `${rect.bottom + 8}px`;
 }
 
