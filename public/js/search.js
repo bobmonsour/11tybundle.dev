@@ -258,12 +258,17 @@ function renderPageCard(r, q) {
   const m       = r.meta || {};
   const url     = appendHighlight(m.url || r.url, q);
   const title   = m.title || "Untitled";
-  const excerpt = r.excerpt || "";
+  // Prefer the explicit description meta when present (Author and Showcase pages set it)
+  // so the excerpt is the description text — not whatever Pagefind auto-extracted from
+  // the page body. We apply our own <mark> highlights for the query terms.
+  const excerpt = m.description
+    ? highlightInText(m.description, q)
+    : (r.excerpt || "");
 
   return `<li>
     <a class="search-result search-result--page" href="${escapeAttr(url)}">
       <h4 class="search-result__title">${escapeHtml(title)}</h4>
-      <p class="search-result__excerpt">${excerpt}</p>
+      ${excerpt ? `<p class="search-result__excerpt">${excerpt}</p>` : ""}
     </a>
   </li>`;
 }
@@ -409,3 +414,15 @@ function escapeHtml(s) {
   }[c]));
 }
 function escapeAttr(s) { return escapeHtml(s); }
+
+// Wrap each whitespace-separated query word in <mark>…</mark> within text. Case-insensitive,
+// word-boundary aware. Returns HTML-safe markup (input text is HTML-escaped first).
+function highlightInText(text, q) {
+  const escaped = escapeHtml(text || "");
+  if (!q) return escaped;
+  const words = q.trim().split(/\s+/).filter((w) => w.length > 1);
+  if (!words.length) return escaped;
+  const escapedWords = words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`\\b(${escapedWords.join("|")})`, "gi");
+  return escaped.replace(pattern, "<mark>$1</mark>");
+}

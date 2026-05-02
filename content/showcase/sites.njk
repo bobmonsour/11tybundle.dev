@@ -17,13 +17,14 @@
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
+    <span data-pagefind-meta="title:Showcase: {{ site.title | escape }}"></span>
+    <span data-pagefind-meta="url:/showcase/{{ site.link | getHostname | slugify }}/"></span>
+    <span class="visually-hidden" data-pagefind-filter="type">page</span>
     {{ site.favicon | genFaviconHtml(1) | safe }}
     <h1 data-pagefind-ignore>{{ site.title | safe }}</h1>
-    <p class="visually-hidden" data-pagefind-meta="title">Showcase: {{ site.title | safe }}</p>
-    <p class="visually-hidden" data-pagefind-meta="url">/showcase/{{ site.link | getHostname | slugify }}/</p>
-    <p class="visually-hidden" data-pagefind-filter="type">page</p>
+    {% if site.description %}<span class="visually-hidden" data-pagefind-meta="description">{{ site.description | safe }}</span>{% endif %}
 
-      <div class="details">
+      <div class="details" data-pagefind-ignore="all">
         {% if site.description %}
           <p>{{ site.description | truncate(140) | safe }}</p>
         {% else %}
@@ -32,7 +33,7 @@
       </div>
 
     {% if site.leaderboardLink %}
-      <nav>
+      <nav data-pagefind-ignore="all">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
           <use xlink:href="#icon-eleventy"></use>
         </svg>

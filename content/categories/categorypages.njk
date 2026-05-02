@@ -15,10 +15,10 @@
 ---
 <header class="main-header" data-pagefind-body>
   <div class="container">
+    <span data-pagefind-meta="title:Category: {{ category.name | escape }}"></span>
+    <span data-pagefind-meta="url:/categories/{{ category.name | slugify }}/"></span>
+    <span class="visually-hidden" data-pagefind-filter="type">page</span>
     <h1 data-pagefind-ignore>{{ category.name }} <data class="count" value="{{ category.count }}">{{ category.count | countLabel('post') }}</data></h1>
-    <p class="visually-hidden" data-pagefind-meta="title">Category: {{ category.name }}</p>
-    <p class="visually-hidden" data-pagefind-meta="url">/categories/{{ category.name | slugify }}/</p>
-    <p class="visually-hidden" data-pagefind-filter="type">page</p>
     {% if linkstodocs[category.name] %}
       <nav data-pagefind-ignore="all">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
