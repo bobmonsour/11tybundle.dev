@@ -68,6 +68,22 @@
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
   {%- include "partials/site-header.njk" -%}
+  <div id="search-results" class="search-results-panel" role="dialog" aria-label="Search results" hidden>
+    <button class="search-results-panel__close" type="button" aria-label="Close search">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <input
+      type="search"
+      class="search-results-panel__input"
+      placeholder="Type / to search"
+      autocomplete="off"
+      spellcheck="false"
+      aria-label="Search the 11ty Bundle">
+    <div class="search-results-panel__inner"></div>
+    <span class="search-results-panel__announce" aria-live="polite"></span>
+  </div>
   <main id="main" class="site-main">
   {{ content | safe }}
   </main>

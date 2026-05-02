@@ -55,7 +55,7 @@
         </svg>
         <span class="visually-hidden">Menu</span>
       </button>
-      <button class="toggle" aria-expanded="false" aria-controls="search" data-target="search" aria-label="Search">
+      <button class="toggle search-toggle" type="button" aria-expanded="false" aria-controls="search-results" aria-label="Search">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" eleventy:ignore>
           <use xlink:href="#icon-search"></use>
         </svg>
@@ -87,6 +87,15 @@
           </svg> Dark</label>
       </fieldset>
     </form>
+    <label class="visually-hidden" for="site-search">Search the 11ty Bundle</label>
+    <input
+      id="site-search"
+      class="site-header__search-input"
+      type="search"
+      placeholder="Type / to search"
+      autocomplete="off"
+      spellcheck="false"
+      aria-controls="search-results"
+      aria-expanded="false">
   </div>
-  <div id="search" class="site-header__search hidden"></div>
 </header>
