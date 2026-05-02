@@ -218,6 +218,32 @@ a.search-result:focus-visible {
   line-height: 1.5;
 }
 
+/* "Load more…" — initial render hides post cards beyond POSTS_INITIAL; the
+   button reveals them on click and is then removed. Element-qualified
+   selector to outweigh global.css's `button:not(.lyt-playbtn)` styles. */
+.search-result--post.is-hidden { display: none; }
+
+button.search-load-more {
+  display: block;
+  margin: var(--space-xs) auto 0;
+  padding: var(--space-2xs) var(--space-s);
+  font-family: var(--font-display-bold);
+  font-size: var(--step--1);
+  color: var(--text-colour-1);
+  background: transparent;
+  border: 1px solid var(--surface-fore);
+  border-radius: 999px;
+  cursor: pointer;
+}
+button.search-load-more:hover {
+  background: var(--surface-mid);
+  color: var(--text-colour-1);
+}
+button.search-load-more:focus-visible {
+  outline: 2px dotted var(--primary-5);
+  outline-offset: 2px;
+}
+
 /* Highlights */
 .search-results-panel mark {
   padding: 0 0.15em;

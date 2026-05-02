@@ -4,6 +4,7 @@ const HIGHLIGHT_PARAM     = "highlight";
 const DEBOUNCE_MS         = 200;
 const MOBILE_QUERY        = "(max-width: 699px)";
 const MAX_POSTS           = 15;
+const POSTS_INITIAL       = 5;
 const MAX_PAGES           = 5;
 const MAX_BUNDLES         = 5;
 const POST_ID_RE          = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
@@ -71,6 +72,8 @@ function bind() {
     closePanel();
     toggleBtn.focus();
   });
+
+  panelInner.addEventListener("click", onPanelInnerClick);
 
   document.addEventListener("keydown", onKeydown);
   document.addEventListener("click", onDocClick);
@@ -212,7 +215,7 @@ function render(q, posts, pages, bundles) {
   const sortedPages = [...pages].sort(byPagesGroupAndTitle);
 
   const sections = [];
-  if (posts.length)        sections.push(renderSection("Blog posts",   posts,       (p) => renderPostCard(p, q)));
+  if (posts.length)        sections.push(renderPostsSection(posts, q));
   if (sortedPages.length)  sections.push(renderSection("Pages",        sortedPages, (r) => renderPageCard(r, q)));
   if (bundles.length)      sections.push(renderSection("Bundle issues", bundles,    (r) => renderBundleCard(r, q)));
 
@@ -234,6 +237,40 @@ function renderSection(heading, results, cardFn) {
     <h3 class="search-section__heading">${escapeHtml(heading)}</h3>
     <ul class="search-results" role="list">${cards}</ul>
   </section>`;
+}
+
+// Posts section is custom because we render all results to the DOM but only
+// reveal the first POSTS_INITIAL. A "Load more…" button reveals the rest.
+function renderPostsSection(posts, q) {
+  const cards = posts.map((p, i) => {
+    const card = renderPostCard(p, q);
+    return i >= POSTS_INITIAL
+      ? card.replace(
+          `<li class="search-result search-result--post">`,
+          `<li class="search-result search-result--post is-hidden">`
+        )
+      : card;
+  }).join("");
+  const hasMore = posts.length > POSTS_INITIAL;
+  return `<section class="search-section">
+    <h3 class="search-section__heading">Blog posts</h3>
+    <ul class="search-results" role="list">${cards}</ul>
+    ${hasMore ? `<button type="button" class="search-load-more">Load more&hellip;</button>` : ""}
+  </section>`;
+}
+
+function onPanelInnerClick(e) {
+  const btn = e.target.closest(".search-load-more");
+  if (!btn) return;
+  e.preventDefault();
+  const hidden = [...panelInner.querySelectorAll(".search-result--post.is-hidden")];
+  hidden.forEach((el) => el.classList.remove("is-hidden"));
+  btn.remove();
+  // Move focus to the first newly-revealed card so keyboard users continue smoothly.
+  if (hidden.length) {
+    const firstNewLink = hidden[0].querySelector(".search-result__primary-link");
+    if (firstNewLink) firstNewLink.focus();
+  }
 }
 
 function renderPostCard(p, q) {
