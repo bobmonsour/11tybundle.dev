@@ -179,10 +179,11 @@ function derivePosts(pageResults) {
     const parentTitle = (page.meta && page.meta.title) || "";
     if (!parentTitle.startsWith("Author: ")) continue;
     const authorName = parentTitle.replace(/^Author:\s*/, "");
+    const authorUrl  = (page.meta && page.meta.url) || page.url || null;
     for (const sub of (page.sub_results || [])) {
       const m = (sub.url || "").match(POST_ID_RE);
       if (!m) continue;
-      authorByPostId.set(`${m[1]}-${m[2]}`, authorName);
+      authorByPostId.set(`${m[1]}-${m[2]}`, { name: authorName, url: authorUrl });
     }
   }
 
@@ -240,17 +241,25 @@ function renderPostCard(p, q) {
   const url     = appendHighlight(sub.url, q);
   const title   = sub.title || "Untitled";
   const dateIso = p.idDate || "";
-  const author  = p.author || "";
+  const author  = p.author || null;       // { name, url } | null
   const excerpt = stripTitlePrefix(sub.excerpt || "", title);
 
-  return `<li>
-    <a class="search-result search-result--post" href="${escapeAttr(url)}">
-      <h4 class="search-result__title">${escapeHtml(title)}</h4>
-      ${dateIso ? `<p class="search-result__meta">
-        <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>${author ? ` by ${escapeHtml(author)}` : ""}
-      </p>` : ""}
-      <p class="search-result__excerpt">${excerpt}</p>
-    </a>
+  // Card is an <li> (not an <a>) so we can nest two links inside: primary
+  // title link (whole-card click target via ::before) + inline author link.
+  const authorMarkup = author
+    ? (author.url
+        ? ` by <a class="search-result__author-link" href="${escapeAttr(author.url)}">${escapeHtml(author.name)}</a>`
+        : ` by ${escapeHtml(author.name)}`)
+    : "";
+
+  return `<li class="search-result search-result--post">
+    <h4 class="search-result__title">
+      <a class="search-result__primary-link" href="${escapeAttr(url)}">${escapeHtml(title)}</a>
+    </h4>
+    ${dateIso ? `<p class="search-result__meta">
+      <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>${authorMarkup}
+    </p>` : ""}
+    <p class="search-result__excerpt">${excerpt}</p>
   </li>`;
 }
 
@@ -370,7 +379,10 @@ function positionPanel() {
 }
 
 function handleArrow(e) {
-  const links = panel.querySelectorAll(".search-result");
+  // Walk only the primary card targets (post cards' inner title link, plus
+  // page/bundle cards which are themselves anchors). Skip secondary links
+  // like the author byline.
+  const links = panel.querySelectorAll(".search-result__primary-link, a.search-result");
   if (links.length === 0) return;
   const idx = Array.from(links).indexOf(document.activeElement);
   e.preventDefault();

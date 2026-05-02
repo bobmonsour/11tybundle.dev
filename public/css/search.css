@@ -148,14 +148,55 @@ button.search-results-panel__close:focus-visible {
   color: inherit;
   text-decoration: none;
 }
-.search-result:hover,
-.search-result:focus-visible {
+/* Anchor-style cards (page, bundle) — direct hover/focus on the link itself. */
+a.search-result:hover,
+a.search-result:focus-visible {
   background: var(--surface-mid);
   outline: none;
 }
-.search-result:focus-visible {
+a.search-result:focus-visible {
   outline: 2px dotted var(--primary-5);
   outline-offset: 1px;
+}
+
+/* Post cards are <li> with two links inside — primary (title) + secondary (author).
+   Use the "card pattern" so the whole card is clickable as the title link, while
+   the author link stays independently clickable. */
+.search-result--post {
+  position: relative;
+}
+.search-result--post:hover,
+.search-result--post:focus-within {
+  background: var(--surface-mid);
+}
+.search-result--post:focus-within {
+  outline: 2px dotted var(--primary-5);
+  outline-offset: 1px;
+}
+.search-result__primary-link {
+  color: var(--heading-colour-1);
+  text-decoration: none;
+}
+.search-result__primary-link:focus { outline: none; }
+.search-result__primary-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--radius-s);
+}
+.search-result__author-link {
+  position: relative;
+  z-index: 1;
+  color: var(--text-colour-2);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.search-result__author-link:hover { color: var(--primary-5); }
+.search-result__author-link:focus-visible {
+  outline: 2px dotted var(--primary-5);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
 }
 
 .search-result__title {
