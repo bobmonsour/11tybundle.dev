@@ -36,33 +36,26 @@
   </div>
 </nav>
 
-<div class="section">
+<div class="section" data-pagefind-ignore="all">
   <div class="flow container">
     {# button reveals popover with text from above div with id="info" #}
-    <button popovertarget="info" class="button--transparent" data-pagefind-ignore="all">
+    <button popovertarget="info" class="button--transparent">
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
         <use xlink:href="#icon-info"></use>
       </svg> About the firehose
     </button>
     {# Placed here, but referenced in button below #}
-    <div id="info" popover data-pagefind-ignore="all">We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
+    <div id="info" popover>We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
     </div>
 
     <div class="directory__layout">
-      <h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
+      <h2>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
       <div class="directory__grid">
       {% for item in yearlyPosts %}
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
         {% set cardCount = loop.index %}
 
-        <article class="directory__card directory--detail" data-pagefind-body>
-          <span class="visually-hidden" data-pagefind-meta="title">{{ item.Title | safe }}</span>
-          <span class="visually-hidden" data-pagefind-meta="author">{{ item.Author }}</span>
-          <span class="visually-hidden" data-pagefind-meta="date" data-pagefind-sort="date">{{ item.Date | formatYMD }}</span>
-          <span class="visually-hidden" data-pagefind-meta="url">{{ item.Link }}</span>
-          {% if item.description %}<span class="visually-hidden" data-pagefind-meta="description">{{ item.description | safe }}</span>{% endif %}
-          <span class="visually-hidden" data-pagefind-filter="type">post</span>
-
+        <div class="directory__card directory--detail">
           {{ item.favicon | genFaviconHtml(cardCount) | safe }}<h3><a href="{{ item.Link }}">{{ item.Title | safe }}</a></h3>
           <div class="details">
             {% if item.description %}
@@ -70,7 +63,7 @@
             {% endif %}
             <time datetime="{{ item.Date | formatYMD }}">{{ item.formattedDate }}</time>
             <p><a href="/authors/{{ item.slugifiedAuthor }}">{{ item.Author | safe }}</a> ({{ authorRecord.count }})</p>
-            <div class="categories-list" data-pagefind-ignore="all">
+            <div class="categories-list">
               <strong class="visually-hidden">Categories</strong>
               <ul role="list">
                 {% for category in item.Categories %}
@@ -79,7 +72,7 @@
               </ul>
             </div>
           </div>
-        </article>
+        </div>
       {% endfor %}
       </div>
     </div>
