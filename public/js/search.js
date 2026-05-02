@@ -263,6 +263,9 @@ function onPanelInnerClick(e) {
   const btn = e.target.closest(".search-load-more");
   if (!btn) return;
   e.preventDefault();
+  // Stop bubbling so the document-level outside-click handler doesn't see the
+  // about-to-be-removed button as "outside the panel" and close the panel.
+  e.stopPropagation();
   const hidden = [...panelInner.querySelectorAll(".search-result--post.is-hidden")];
   hidden.forEach((el) => el.classList.remove("is-hidden"));
   btn.remove();

@@ -12,7 +12,7 @@
   font-size: var(--step--1);
   color: var(--text-colour-1);
   background: transparent;
-  border: 1px solid var(--surface-fore);
+  border: 2px solid var(--surface-fore);
   border-radius: 999px;
 }
 .site-header__search-input::placeholder { color: var(--text-colour-2); }
@@ -22,8 +22,9 @@
   border-color: var(--primary-5);
 }
 
-/* Search-icon toggle: hidden on desktop, visible on mobile */
-.search-toggle { display: none; }
+/* Search-icon toggle: hidden on desktop, visible on mobile.
+   Element-qualified selector to outweigh global.css's `button:not(.lyt-playbtn)`. */
+button.search-toggle { display: none; }
 
 @media (max-width: 699px) {
   .site-header__search-input {
@@ -36,7 +37,7 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
   }
-  .search-toggle { display: inline-flex; }
+  button.search-toggle { display: inline-flex; }
 }
 
 /* Result panel — desktop dropdown.
