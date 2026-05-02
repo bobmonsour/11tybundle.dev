@@ -13,6 +13,7 @@
       "cta"
       "actions"
       "nav"
+      "search"
       "theme";
 
     @media (width >=1100px) {
@@ -22,6 +23,7 @@
       grid-template-areas:
         "brand cta cta"
         "brand nav actions"
+        "search search search"
         "theme theme theme";
     }
   }
@@ -248,10 +250,8 @@
   }
 }
 
-.site-header__search {
-  padding-block: var(--space-xs);
-  border-top: 1px solid var(--surface-fore);
-      background: var(--surface-mid);
+.site-header__search-input {
+  grid-area: search;
 }
 
 .site-header__theme {
