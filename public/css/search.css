@@ -117,6 +117,7 @@ button.search-results-panel__close:focus-visible {
       "announce announce";
     column-gap: var(--space-xs);
     row-gap: var(--space-s);
+    align-content: start;
     align-items: center;
   }
   .search-results-panel__input {
