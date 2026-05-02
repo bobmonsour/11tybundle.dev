@@ -48,16 +48,22 @@
     <div id="info" popover data-pagefind-ignore="all">We get it—not everyone knows what a firehose is. In computing, a firehose is an unfiltered, real-time stream of data. On the 11ty Bundle, it means everything added to the website across all categories, shown in reverse date order—most recent first. Fill your boots!
     </div>
 
-    <div class="directory__layout" data-pagefind-ignore="all">
+    <div class="directory__layout">
       <h2 data-pagefind-ignore>{{ current_year }}{%-include "partials/release-check.njk"-%}</h2>
       <div class="directory__grid">
       {% for item in yearlyPosts %}
         {% set authorRecord = bundledata.authors | getAuthorRecord(item.Author) %}
-        {# {% set authorIcons = authorRecord | getAuthorIcons %} #}
         {% set cardCount = loop.index %}
 
-        <div class="directory__card directory--detail">
-          {{ item.favicon | genFaviconHtml(cardCount) | safe }}<h3 id="post-{{ item.Date | formatYMD }}-{{ item.slugifiedTitle }}-{{ item.slugifiedAuthor }}" data-date="{{ item.Date | formatYMD }}" data-weight="{{ pfweights.individualPost }}" data-pagefind-sort="date[data-date], weight[data-weight]"><a href="{{ item.Link }}">{{ item.Title | safe }}</a></h3>
+        <article class="directory__card directory--detail" data-pagefind-body>
+          <span class="visually-hidden" data-pagefind-meta="title">{{ item.Title | safe }}</span>
+          <span class="visually-hidden" data-pagefind-meta="author">{{ item.Author }}</span>
+          <span class="visually-hidden" data-pagefind-meta="date" data-pagefind-sort="date">{{ item.Date | formatYMD }}</span>
+          <span class="visually-hidden" data-pagefind-meta="url">{{ item.Link }}</span>
+          {% if item.description %}<span class="visually-hidden" data-pagefind-meta="description">{{ item.description | safe }}</span>{% endif %}
+          <span class="visually-hidden" data-pagefind-filter="type">post</span>
+
+          {{ item.favicon | genFaviconHtml(cardCount) | safe }}<h3><a href="{{ item.Link }}">{{ item.Title | safe }}</a></h3>
           <div class="details">
             {% if item.description %}
               <p class="description">{{ item.description | safe }}</p>
@@ -73,9 +79,7 @@
               </ul>
             </div>
           </div>
-        </div>
-
-        {# {% include "partials/postitemdetail.njk" %} #}
+        </article>
       {% endfor %}
       </div>
     </div>
