@@ -208,7 +208,7 @@ function derivePosts(pageResults) {
 }
 
 function render(q, posts, pages, bundles) {
-  const sortedPages = [...pages].sort(byTitleAsc);
+  const sortedPages = [...pages].sort(byPagesGroupAndTitle);
 
   const sections = [];
   if (posts.length)        sections.push(renderSection("Blog posts",   posts,       (p) => renderPostCard(p, q)));
@@ -362,9 +362,11 @@ function positionPanel() {
     return;
   }
   // CSS handles horizontal centering via left:50% + translateX(-50%).
-  // JS sets `top` to sit just below the input.
-  const rect = navInput.getBoundingClientRect();
-  panel.style.top = `${rect.bottom + 8}px`;
+  // JS sets `top` to sit just below the entire header (so the navigation row
+  // stays visible above the open panel and the user can still click nav links).
+  const header = document.querySelector(".site-header");
+  const rect = header ? header.getBoundingClientRect() : navInput.getBoundingClientRect();
+  panel.style.top = `${Math.max(rect.bottom + 8, 16)}px`;
 }
 
 function handleArrow(e) {
@@ -393,6 +395,23 @@ function byTitleAsc(a, b) {
     undefined,
     { sensitivity: "base", numeric: true }
   );
+}
+
+// Pages bucket: group by prefix (Category before Author before Showcase),
+// then alphabetical within each group.
+function byPagesGroupAndTitle(a, b) {
+  const titleA = (a.meta && a.meta.title) || "";
+  const titleB = (b.meta && b.meta.title) || "";
+  const groupOrder = (t) => {
+    if (t.startsWith("Category: ")) return 1;
+    if (t.startsWith("Author: "))   return 2;
+    if (t.startsWith("Showcase: ")) return 3;
+    return 4;
+  };
+  const ga = groupOrder(titleA);
+  const gb = groupOrder(titleB);
+  if (ga !== gb) return ga - gb;
+  return titleA.localeCompare(titleB, undefined, { sensitivity: "base", numeric: true });
 }
 
 function formatDate(iso) {

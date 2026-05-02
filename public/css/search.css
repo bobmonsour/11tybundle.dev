@@ -1,16 +1,17 @@
-/* Header search input — sized and shaped to match the .button styles
-   used by .site-header__cta so the two sit inline at equal height. */
+/* Header search input — outlined-only (transparent background), centered in its
+   grid cell so it visually aligns across the navigation row below. Pill shape
+   and font sizing match the .button styles used by .site-header__cta so the
+   row reads as a balanced trio: brand · search · CTA. */
 .site-header__search-input {
   display: block;
   width: 100%;
   max-width: 28rem;
-  justify-self: end;
-  margin-inline-end: var(--space-xs);
+  justify-self: center;
   padding: var(--space-2xs) var(--space-xs);
   font-family: var(--font-display-bold);
   font-size: var(--step--1);
   color: var(--text-colour-1);
-  background: var(--surface-fore);
+  background: transparent;
   border: 1px solid var(--surface-fore);
   border-radius: 999px;
 }
@@ -60,8 +61,10 @@
 .search-results-panel[hidden] { display: none; }
 .search-results-panel__input { display: none; }
 
-/* Close button — always shown, upper right of the panel, icon-only (no border / background) */
-.search-results-panel__close {
+/* Close button — always shown, upper right of the panel, icon-only.
+   Selector includes the element type to outweigh global.css's
+   `button:not(.lyt-playbtn)` styles (which set a dark pill background). */
+button.search-results-panel__close {
   position: absolute;
   inset-block-start: var(--space-xs);
   inset-inline-end: var(--space-xs);
@@ -78,8 +81,11 @@
   cursor: pointer;
   z-index: 1;
 }
-.search-results-panel__close:hover { color: var(--primary-5); }
-.search-results-panel__close:focus-visible {
+button.search-results-panel__close:hover {
+  background: transparent;
+  color: var(--primary-5);
+}
+button.search-results-panel__close:focus-visible {
   outline: 2px dotted var(--primary-5);
   outline-offset: 2px;
 }
