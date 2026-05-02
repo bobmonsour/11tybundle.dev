@@ -1,10 +1,19 @@
-const PAGEFIND_PATH  = "/pagefind/pagefind.js";
-const DEBOUNCE_MS    = 200;
-const MOBILE_QUERY   = "(max-width: 699px)";
-const MAX_POSTS      = 15;
-const MAX_PAGES      = 5;
-const MAX_BUNDLES    = 5;
-const POST_ID_RE     = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
+const PAGEFIND_PATH       = "/pagefind/pagefind.js";
+const PAGEFIND_HIGHLIGHT  = "/pagefind/pagefind-highlight.js";
+const HIGHLIGHT_PARAM     = "highlight";
+const DEBOUNCE_MS         = 200;
+const MOBILE_QUERY        = "(max-width: 699px)";
+const MAX_POSTS           = 15;
+const MAX_PAGES           = 5;
+const MAX_BUNDLES         = 5;
+const POST_ID_RE          = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
+
+// Auto-highlight matched terms on the destination page when arrived via a search result.
+if (typeof window !== "undefined" && new URLSearchParams(window.location.search).has(HIGHLIGHT_PARAM)) {
+  import(PAGEFIND_HIGHLIGHT)
+    .then((mod) => { new mod.PagefindHighlight({ highlightParam: HIGHLIGHT_PARAM }); })
+    .catch(() => {});
+}
 
 const navInput   = document.getElementById("site-search");
 const toggleBtn  = document.querySelector(".search-toggle");
@@ -127,20 +136,40 @@ async function runQuery(q) {
   openPanel();
 }
 
-// Aggregate post sub-results across all type=page results, dedupe by post id, sort by date desc.
+// Aggregate post sub-results across all type=page results.
+// - Build an authorByPostId map from author-page sub-results (pages whose meta.title is "Author: …")
+// - Prefer category-page sub-results for the link target (so the user lands on a topic-related context)
+// - Dedupe by post id; sort by date desc
 function derivePosts(pageResults) {
-  const seen = new Map(); // id -> { idDate, sub_result, parentMetaTitle }
+  const authorByPostId = new Map();
   for (const page of pageResults) {
-    const subs = page.sub_results || [];
-    for (const sub of subs) {
+    const parentTitle = (page.meta && page.meta.title) || "";
+    if (!parentTitle.startsWith("Author: ")) continue;
+    const authorName = parentTitle.replace(/^Author:\s*/, "");
+    for (const sub of (page.sub_results || [])) {
       const m = (sub.url || "").match(POST_ID_RE);
       if (!m) continue;
-      const idDate = m[1];
-      const idSlug = m[2];
-      const id = `${idDate}-${idSlug}`;
-      if (seen.has(id)) continue;
-      seen.set(id, { idDate, sub, parentMetaTitle: page.meta && page.meta.title });
+      authorByPostId.set(`${m[1]}-${m[2]}`, authorName);
     }
+  }
+
+  const seen = new Map();
+  const harvest = (page) => {
+    for (const sub of (page.sub_results || [])) {
+      const m = (sub.url || "").match(POST_ID_RE);
+      if (!m) continue;
+      const id = `${m[1]}-${m[2]}`;
+      if (seen.has(id)) continue;
+      seen.set(id, { idDate: m[1], sub, author: authorByPostId.get(id) || null });
+    }
+  };
+  // Pass 1: category pages (preferred link target — surrounding posts share topic)
+  for (const page of pageResults) {
+    if (((page.meta && page.meta.title) || "").startsWith("Category: ")) harvest(page);
+  }
+  // Pass 2: anything else (e.g., a post seen only via its author page)
+  for (const page of pageResults) {
+    if (!((page.meta && page.meta.title) || "").startsWith("Category: ")) harvest(page);
   }
   return [...seen.values()].sort((a, b) => b.idDate.localeCompare(a.idDate));
 }
@@ -149,9 +178,9 @@ function render(q, posts, pages, bundles) {
   const sortedPages = [...pages].sort(byTitleAsc);
 
   const sections = [];
-  if (posts.length)        sections.push(renderSection("Blog posts",   posts,       renderPostCard));
-  if (sortedPages.length)  sections.push(renderSection("Pages",        sortedPages, renderPageCard));
-  if (bundles.length)      sections.push(renderSection("Bundle issues", bundles,    renderBundleCard));
+  if (posts.length)        sections.push(renderSection("Blog posts",   posts,       (p) => renderPostCard(p, q)));
+  if (sortedPages.length)  sections.push(renderSection("Pages",        sortedPages, (r) => renderPageCard(r, q)));
+  if (bundles.length)      sections.push(renderSection("Bundle issues", bundles,    (r) => renderBundleCard(r, q)));
 
   if (sections.length === 0) {
     panelInner.innerHTML = `<p class="search-empty">No results found for <em>${escapeHtml(q)}</em>.</p>`;
@@ -173,27 +202,28 @@ function renderSection(heading, results, cardFn) {
   </section>`;
 }
 
-function renderPostCard(p) {
+function renderPostCard(p, q) {
   const sub     = p.sub;
-  const url     = sub.url;
+  const url     = appendHighlight(sub.url, q);
   const title   = sub.title || "Untitled";
   const dateIso = p.idDate || "";
-  const excerpt = sub.excerpt || "";
+  const author  = p.author || "";
+  const excerpt = stripTitlePrefix(sub.excerpt || "", title);
 
   return `<li>
     <a class="search-result search-result--post" href="${escapeAttr(url)}">
       <h4 class="search-result__title">${escapeHtml(title)}</h4>
       ${dateIso ? `<p class="search-result__meta">
-        <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>
+        <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>${author ? ` by ${escapeHtml(author)}` : ""}
       </p>` : ""}
       <p class="search-result__excerpt">${excerpt}</p>
     </a>
   </li>`;
 }
 
-function renderPageCard(r) {
+function renderPageCard(r, q) {
   const m       = r.meta || {};
-  const url     = m.url || r.url;
+  const url     = appendHighlight(m.url || r.url, q);
   const title   = m.title || "Untitled";
   const excerpt = r.excerpt || "";
 
@@ -205,9 +235,9 @@ function renderPageCard(r) {
   </li>`;
 }
 
-function renderBundleCard(r) {
+function renderBundleCard(r, q) {
   const m       = r.meta || {};
-  const url     = m.url || r.url;
+  const url     = appendHighlight(m.url || r.url, q);
   const title   = m.title || "Issue";
   const dateIso = m.date || "";
   const excerpt = r.excerpt || "";
@@ -221,6 +251,50 @@ function renderBundleCard(r) {
       <p class="search-result__excerpt">${excerpt}</p>
     </a>
   </li>`;
+}
+
+// Append ?highlight=Q (or &highlight=Q) to a URL, placing the param BEFORE any #anchor.
+function appendHighlight(url, q) {
+  if (!q) return url;
+  const value = encodeURIComponent(q);
+  const hashIdx = url.indexOf("#");
+  const base = hashIdx === -1 ? url : url.slice(0, hashIdx);
+  const hash = hashIdx === -1 ? "" : url.slice(hashIdx);
+  const sep = base.includes("?") ? "&" : "?";
+  return `${base}${sep}${HIGHLIGHT_PARAM}=${value}${hash}`;
+}
+
+// If a Pagefind-generated excerpt begins with the heading title (which happens on
+// sub-results since the indexed body starts at the heading), strip that prefix so the
+// excerpt reads as the description text. Preserves <mark> highlights inside the excerpt.
+function stripTitlePrefix(excerpt, title) {
+  if (!excerpt || !title) return excerpt;
+  const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
+  if (!cleanExcerpt.startsWith(title)) return excerpt;
+
+  // Walk the excerpt, advancing one "real" character per non-tag step, until we've
+  // consumed enough characters to cover the title.
+  let charCount = 0;
+  let position = 0;
+  while (charCount < title.length && position < excerpt.length) {
+    if (excerpt.startsWith("<mark>", position)) position += 6;
+    else if (excerpt.startsWith("</mark>", position)) position += 7;
+    else { charCount++; position++; }
+  }
+
+  let trimmed = excerpt.slice(position).trim();
+  trimmed = trimmed.replace(/^(<\/?mark>)+/, "");
+  trimmed = trimmed.replace(/^[.,;:!?\s]+/, "");
+  if (trimmed.length === 0) return excerpt;
+
+  // Capitalize first real character (skipping a leading <mark> if present).
+  const m = trimmed.match(/^(<mark>)?(.)/);
+  if (m) {
+    const prefix = m[1] || "";
+    const firstChar = m[2].toUpperCase();
+    trimmed = prefix + firstChar + trimmed.slice(prefix.length + 1);
+  }
+  return trimmed;
 }
 
 function showUnavailable() {
