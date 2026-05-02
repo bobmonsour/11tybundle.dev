@@ -9,22 +9,27 @@ const MAX_BUNDLES         = 5;
 const POST_ID_RE          = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
 
 // On every page load, if the URL was arrived at from a search result (?highlight=…),
-// (1) load Pagefind's highlight plugin so matched terms are visibly marked in the body, and
-// (2) tag the targeted post anchor with the .bundleitem-highlight class so the surrounding
-// card gets the dotted outline (the CSS is in public/css/channels.css via :has selector).
+// (1) tag the targeted post anchor with the .bundleitem-highlight class so the surrounding
+//     card gets the dotted outline (CSS in public/css/channels.css via :has selector),
+// (2) load Pagefind's highlight plugin to visibly mark matched terms in the body, and
+// (3) re-scroll the anchor into view after marks land — mark injection grows content
+//     above the anchor, so the browser's initial scroll otherwise stops short.
 if (typeof window !== "undefined" && new URLSearchParams(window.location.search).has(HIGHLIGHT_PARAM)) {
+  const hash = window.location.hash;
+  const target = hash && hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+  if (target) target.classList.add("bundleitem-highlight");
+
   import(PAGEFIND_HIGHLIGHT)
     .then((mod) => {
       const Highlighter = mod.default || mod.PagefindHighlight;
       if (Highlighter) new Highlighter({ highlightParam: HIGHLIGHT_PARAM });
+      if (target) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          target.scrollIntoView({ block: "start" });
+        }));
+      }
     })
     .catch(() => {});
-
-  const hash = window.location.hash;
-  if (hash && hash.length > 1) {
-    const target = document.getElementById(hash.slice(1));
-    if (target) target.classList.add("bundleitem-highlight");
-  }
 }
 
 const navInput   = document.getElementById("site-search");
