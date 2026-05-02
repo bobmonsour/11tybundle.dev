@@ -1,230 +1,279 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const seenShowcaseUrls = new Set();
+const PAGEFIND_PATH  = "/pagefind/pagefind.js";
+const DEBOUNCE_MS    = 200;
+const MOBILE_QUERY   = "(max-width: 699px)";
+const MAX_POSTS      = 15;
+const MAX_PAGES      = 5;
+const MAX_BUNDLES    = 5;
 
-  new PagefindUI({
-    element: "#search",
-    translations: {
-      placeholder: "Type / to search",
-      zero_results: "Count not find [SEARCH_TERM]",
-    },
-    excerptLength: 100,
-    highlightParam: "highlight",
-    resetStyles: true,
-    pageSize: 5,
-    showImages: false,
-    showEmptyFilters: false,
-    showSubResults: true,
+const navInput   = document.getElementById("site-search");
+const toggleBtn  = document.querySelector(".search-toggle");
+const panel      = document.getElementById("search-results");
+const panelInput = panel ? panel.querySelector(".search-results-panel__input") : null;
+const panelInner = panel ? panel.querySelector(".search-results-panel__inner") : null;
+const announce   = panel ? panel.querySelector(".search-results-panel__announce") : null;
+const closeBtn   = panel ? panel.querySelector(".search-results-panel__close") : null;
 
-    processResult: function (result) {
-      // console.log("processResult called with:", result);
+let pagefind            = null;
+let pagefindLoadPromise = null;
+let lastQueryToken      = 0;
+let debounceHandle      = null;
 
-      // Special handling for blog posts
-      const isBlogPost = result.url && result.url.includes("/blog/");
-      if (isBlogPost) {
-        // Use full title as excerpt (untrimmed)
-        if (result.meta && result.meta.title) {
-          result.excerpt = result.meta.title;
-        }
-        // Remove all sub-results for blog posts
-        result.sub_results = [];
-        return result;
-      }
+if (navInput && toggleBtn && panel && panelInput && panelInner && announce && closeBtn) {
+  bind();
+}
 
-      // do not show an excerpt for the main result if it is a category page
-      if (
-        result.meta &&
-        result.meta.title &&
-        result.meta.title.startsWith("Category: ")
-      ) {
-        result.excerpt = "";
-      }
+function bind() {
+  navInput.addEventListener("input", onInput);
+  panelInput.addEventListener("input", onInput);
 
-      // use the meta description for the excerpt for the main result if it is an author page
-      if (
-        result.meta &&
-        result.meta.title &&
-        result.meta.description &&
-        result.meta.title.startsWith("Author: ")
-      ) {
-        result.excerpt = result.meta.description;
-        delete result.meta.description;
-      }
-
-      // Showcase page deduplication and excerpt handling
-      if (
-        result.meta &&
-        result.meta.title &&
-        result.meta.title.startsWith("Showcase: ")
-      ) {
-        const normalizedUrl = result.url
-          .split("?")[0]
-          .split("#")[0]
-          .replace(/\/$/, "");
-        if (seenShowcaseUrls.has(normalizedUrl)) {
-          result.meta.title = "";
-          result.excerpt = "";
-          result.sub_results = [];
-          result.url = "#showcase-duplicate";
-          return result;
-        }
-        seenShowcaseUrls.add(normalizedUrl);
-
-        if (result.meta.description) {
-          result.excerpt = result.meta.description;
-          delete result.meta.description;
-        }
-      }
-
-      // --- Remove Title from Main Result Excerpt ---
-      if (result.meta && result.meta.title && result.excerpt) {
-        const title = result.meta.title;
-        let excerpt = result.excerpt;
-
-        // Remove all <mark> and </mark> tags from excerpt for comparison
-        const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
-
-        // Check if cleaned excerpt starts with title
-        if (cleanExcerpt.startsWith(title)) {
-          // Find the position in the original excerpt where the title ends
-          let charCount = 0;
-          let position = 0;
-
-          while (charCount < title.length && position < excerpt.length) {
-            if (excerpt.substring(position).startsWith("<mark>")) {
-              position += 6; // Skip "<mark>"
-            } else if (excerpt.substring(position).startsWith("</mark>")) {
-              position += 7; // Skip "</mark>"
-            } else {
-              charCount++;
-              position++;
-            }
-          }
-
-          // Remove the title portion and trim
-          let newExcerpt = excerpt.substring(position).trim();
-
-          // Remove any leading <mark> or </mark> tags
-          newExcerpt = newExcerpt.replace(/^(<\/?mark>)+/, "");
-
-          // Remove leading punctuation and whitespace
-          newExcerpt = newExcerpt.replace(/^[.,;:!?\s]+/, "");
-
-          if (newExcerpt.length > 0) {
-            // Capitalize first letter (skip over any leading <mark> tag)
-            const markMatch = newExcerpt.match(/^(<mark>)?(.)/);
-            if (markMatch) {
-              const prefix = markMatch[1] || "";
-              const firstChar = markMatch[2].toUpperCase();
-              newExcerpt =
-                prefix + firstChar + newExcerpt.slice(prefix.length + 1);
-            }
-            result.excerpt = newExcerpt;
-          }
-        }
-      }
-
-      // Check if there are sub-results to process
-      if (result.sub_results && Array.isArray(result.sub_results)) {
-        // console.log("Processing sub_results:", result.sub_results.length);
-        result.sub_results.forEach((subResult) => {
-          // --- PART 1: Remove Title from Excerpt ---
-          const title = subResult.title;
-          let excerpt = subResult.excerpt;
-          // console.log("subresultTitle:", title);
-          // console.log("subresultExcerpt:", excerpt);
-
-          // Remove all <mark> and </mark> tags from excerpt for comparison
-          const cleanExcerpt = excerpt.replace(/<\/?mark>/g, "");
-
-          // Check if cleaned excerpt starts with title
-          if (cleanExcerpt.startsWith(title)) {
-            // Find the position in the original excerpt where the title ends
-            let charCount = 0;
-            let position = 0;
-
-            while (charCount < title.length && position < excerpt.length) {
-              if (excerpt.substring(position).startsWith("<mark>")) {
-                position += 6; // Skip "<mark>"
-              } else if (excerpt.substring(position).startsWith("</mark>")) {
-                position += 7; // Skip "</mark>"
-              } else {
-                charCount++;
-                position++;
-              }
-            }
-
-            // Remove the title portion and trim
-            let newExcerpt = excerpt.substring(position).trim();
-
-            // Remove any leading <mark> or </mark> tags
-            newExcerpt = newExcerpt.replace(/^(<\/?mark>)+/, "");
-
-            // Remove leading punctuation and whitespace
-            newExcerpt = newExcerpt.replace(/^[.,;:!?\s]+/, "");
-
-            if (newExcerpt.length > 0) {
-              // Capitalize first letter (skip over any leading <mark> tag)
-              const markMatch = newExcerpt.match(/^(<mark>)?(.)/);
-              if (markMatch) {
-                const prefix = markMatch[1] || "";
-                const firstChar = markMatch[2].toUpperCase();
-                newExcerpt =
-                  prefix + firstChar + newExcerpt.slice(prefix.length + 1);
-              }
-              subResult.excerpt = newExcerpt;
-            }
-          }
-
-          // --- PART 2: Add Custom Highlight Parameter ---
-          // Insert &bundleitem_highlight before hash
-          if (subResult.url.includes("#")) {
-            subResult.url = subResult.url.replace(
-              "#",
-              "&bundleitem_highlight#",
-            );
-          }
-        });
-      }
-
-      // Return the fully modified result object
-      return result;
-    },
+  toggleBtn.addEventListener("click", () => {
+    if (panel.hidden) { openPanel(); panelInput.focus(); }
+    else closePanel();
   });
 
-  new PagefindHighlight({ highlightParam: "highlight" });
+  closeBtn.addEventListener("click", () => {
+    closePanel();
+    toggleBtn.focus();
+  });
 
-  let focusTriggeredBySlash = false;
-  // Flag to track focus triggered by '/'
+  document.addEventListener("keydown", onKeydown);
+  document.addEventListener("click", onDocClick);
+  window.addEventListener("resize", positionPanel);
+  window.addEventListener("scroll", positionPanel, { passive: true });
+}
 
-  // Add event listener for the '/' key
-  document.addEventListener("keydown", (e) => {
-    // Check if the '/' key was pressed and no input or textarea is focused
-    if (e.key === "/" && !e.target.matches("input, textarea")) {
-      e.preventDefault();
-      // Prevent the default browser behavior
-      const searchInput = document.querySelector(
-        "input.pagefind-ui__search-input",
-      );
-      if (searchInput) {
-        focusTriggeredBySlash = true;
-        // Set the flag
-        searchInput.focus();
-        // Move focus to the search box
-      }
+function onInput(e) {
+  const value = e.target.value;
+  const q = value.trim();
+  if (e.target === navInput) panelInput.value = value;
+  else navInput.value = value;
+  if (debounceHandle) clearTimeout(debounceHandle);
+  if (q === "") { closePanel(); return; }
+  debounceHandle = setTimeout(() => runQuery(q), DEBOUNCE_MS);
+}
+
+function onKeydown(e) {
+  if (e.key === "/") {
+    const t = e.target;
+    if (t && t.matches && t.matches("input, textarea, [contenteditable=true]")) return;
+    e.preventDefault();
+    if (window.matchMedia(MOBILE_QUERY).matches) {
+      openPanel();
+      panelInput.focus();
+    } else {
+      navInput.focus();
     }
-  });
-
-  // Add event listener for the focus event on the input element
-  const searchInput = document.querySelector("input.pagefind-ui__search-input");
-  if (searchInput) {
-    searchInput.addEventListener("focus", () => {
-      if (focusTriggeredBySlash) {
-        fathom.trackEvent("search with keyboard shortcut");
-        focusTriggeredBySlash = false;
-        // Reset the flag
-      } else {
-        fathom.trackEvent("search without keyboard shortcut");
-      }
-    });
+    return;
   }
-});
+  if (e.key === "Escape" && !panel.hidden) {
+    closePanel();
+    if (window.matchMedia(MOBILE_QUERY).matches) toggleBtn.focus();
+    else navInput.focus();
+    return;
+  }
+  if ((e.key === "ArrowDown" || e.key === "ArrowUp") && !panel.hidden) {
+    handleArrow(e);
+  }
+}
+
+function onDocClick(e) {
+  if (panel.hidden) return;
+  if (window.matchMedia(MOBILE_QUERY).matches) return;
+  if (panel.contains(e.target)) return;
+  if (navInput.contains(e.target)) return;
+  if (toggleBtn.contains(e.target)) return;
+  closePanel();
+}
+
+async function loadPagefind() {
+  if (pagefind) return pagefind;
+  if (!pagefindLoadPromise) {
+    pagefindLoadPromise = import(PAGEFIND_PATH).then((mod) => (pagefind = mod));
+  }
+  return pagefindLoadPromise;
+}
+
+async function runQuery(q) {
+  const token = ++lastQueryToken;
+
+  let lib;
+  try { lib = await loadPagefind(); }
+  catch (err) { console.error("Pagefind failed to load", err); return showUnavailable(); }
+
+  let postRes, pageRes, bundleRes;
+  try {
+    [postRes, pageRes, bundleRes] = await Promise.all([
+      lib.search(q, { filters: { type: "post" }, sort: { date: "desc" } }),
+      lib.search(q, { filters: { type: "page" } }),
+      lib.search(q, { filters: { type: "blog" }, sort: { date: "desc" } }),
+    ]);
+  } catch (err) { console.error("Pagefind search failed", err); return showUnavailable(); }
+
+  if (token !== lastQueryToken) return;
+
+  const [posts, pages, bundles] = await Promise.all([
+    Promise.all(postRes.results.slice(0, MAX_POSTS).map((r) => r.data())),
+    Promise.all(pageRes.results.slice(0, MAX_PAGES).map((r) => r.data())),
+    Promise.all(bundleRes.results.slice(0, MAX_BUNDLES).map((r) => r.data())),
+  ]);
+
+  if (token !== lastQueryToken) return;
+
+  render(q, posts, pages, bundles);
+  openPanel();
+}
+
+function render(q, posts, pages, bundles) {
+  const sortedPages = [...pages].sort(byTitleAsc);
+
+  const sections = [];
+  if (posts.length)        sections.push(renderSection("Blog posts",   posts,       renderPostCard));
+  if (sortedPages.length)  sections.push(renderSection("Pages",        sortedPages, renderPageCard));
+  if (bundles.length)      sections.push(renderSection("Bundle issues", bundles,    renderBundleCard));
+
+  if (sections.length === 0) {
+    panelInner.innerHTML = `<p class="search-empty">No results found for <em>${escapeHtml(q)}</em>.</p>`;
+  } else {
+    panelInner.innerHTML = sections.join("");
+  }
+
+  announce.textContent =
+    `${posts.length} ${plural(posts.length, "blog post", "blog posts")}, ` +
+    `${sortedPages.length} ${plural(sortedPages.length, "page", "pages")}, and ` +
+    `${bundles.length} ${plural(bundles.length, "bundle issue", "bundle issues")} found.`;
+}
+
+function renderSection(heading, results, cardFn) {
+  const cards = results.map(cardFn).join("");
+  return `<section class="search-section">
+    <h3 class="search-section__heading">${escapeHtml(heading)}</h3>
+    <ul class="search-results" role="list">${cards}</ul>
+  </section>`;
+}
+
+function renderPostCard(r) {
+  const m       = r.meta || {};
+  const url     = m.url || r.url;
+  const title   = m.title || "Untitled";
+  const dateIso = m.date || "";
+  const author  = m.author || "";
+  const excerpt = r.excerpt || "";
+
+  return `<li>
+    <a class="search-result search-result--post" href="${escapeAttr(url)}" target="_blank" rel="noopener">
+      <h4 class="search-result__title">${escapeHtml(title)}</h4>
+      <p class="search-result__meta">
+        ${dateIso ? `<time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>` : ""}
+        ${author ? `<span class="search-result__author">${escapeHtml(author)}</span>` : ""}
+      </p>
+      <p class="search-result__excerpt">${excerpt}</p>
+    </a>
+  </li>`;
+}
+
+function renderPageCard(r) {
+  const m       = r.meta || {};
+  const url     = m.url || r.url;
+  const title   = m.title || "Untitled";
+  const excerpt = r.excerpt || "";
+
+  return `<li>
+    <a class="search-result search-result--page" href="${escapeAttr(url)}">
+      <h4 class="search-result__title">${escapeHtml(title)}</h4>
+      <p class="search-result__excerpt">${excerpt}</p>
+    </a>
+  </li>`;
+}
+
+function renderBundleCard(r) {
+  const m       = r.meta || {};
+  const url     = m.url || r.url;
+  const title   = m.title || "Issue";
+  const dateIso = m.date || "";
+  const excerpt = r.excerpt || "";
+
+  return `<li>
+    <a class="search-result search-result--bundle" href="${escapeAttr(url)}">
+      <h4 class="search-result__title">${escapeHtml(title)}</h4>
+      ${dateIso ? `<p class="search-result__meta">
+        <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>
+      </p>` : ""}
+      <p class="search-result__excerpt">${excerpt}</p>
+    </a>
+  </li>`;
+}
+
+function showUnavailable() {
+  panelInner.innerHTML = `<p class="search-empty">Search is unavailable right now.</p>`;
+  announce.textContent = "Search is unavailable.";
+  openPanel();
+}
+
+function openPanel() {
+  panel.hidden = false;
+  navInput.setAttribute("aria-expanded", "true");
+  toggleBtn.setAttribute("aria-expanded", "true");
+  positionPanel();
+}
+
+function closePanel() {
+  panel.hidden = true;
+  navInput.setAttribute("aria-expanded", "false");
+  toggleBtn.setAttribute("aria-expanded", "false");
+  if (debounceHandle) { clearTimeout(debounceHandle); debounceHandle = null; }
+}
+
+function positionPanel() {
+  if (panel.hidden) return;
+  if (window.matchMedia(MOBILE_QUERY).matches) {
+    panel.style.left = "";
+    panel.style.top = "";
+    return;
+  }
+  const rect = navInput.getBoundingClientRect();
+  panel.style.left = `${rect.left}px`;
+  panel.style.top = `${rect.bottom + 8}px`;
+}
+
+function handleArrow(e) {
+  const links = panel.querySelectorAll(".search-result");
+  if (links.length === 0) return;
+  const idx = Array.from(links).indexOf(document.activeElement);
+  e.preventDefault();
+  if (e.key === "ArrowDown") {
+    if (idx === -1) links[0].focus();
+    else if (idx < links.length - 1) links[idx + 1].focus();
+  } else {
+    if (idx <= 0) {
+      const target = window.matchMedia(MOBILE_QUERY).matches ? panelInput : navInput;
+      target.focus();
+    } else {
+      links[idx - 1].focus();
+    }
+  }
+}
+
+function plural(n, one, many) { return n === 1 ? one : many; }
+
+function byTitleAsc(a, b) {
+  return ((a.meta && a.meta.title) || "").localeCompare(
+    (b.meta && b.meta.title) || "",
+    undefined,
+    { sensitivity: "base", numeric: true }
+  );
+}
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return new Intl.DateTimeFormat(undefined, {
+    year: "numeric", month: "short", day: "numeric",
+  }).format(d);
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[c]));
+}
+function escapeAttr(s) { return escapeHtml(s); }
