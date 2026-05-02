@@ -4,6 +4,7 @@ const MOBILE_QUERY   = "(max-width: 699px)";
 const MAX_POSTS      = 15;
 const MAX_PAGES      = 5;
 const MAX_BUNDLES    = 5;
+const POST_ID_RE     = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
 
 const navInput   = document.getElementById("site-search");
 const toggleBtn  = document.querySelector(".search-toggle");
@@ -100,10 +101,9 @@ async function runQuery(q) {
   try { lib = await loadPagefind(); }
   catch (err) { console.error("Pagefind failed to load", err); return showUnavailable(); }
 
-  let postRes, pageRes, bundleRes;
+  let pageRes, bundleRes;
   try {
-    [postRes, pageRes, bundleRes] = await Promise.all([
-      lib.search(q, { filters: { type: "post" }, sort: { date: "desc" } }),
+    [pageRes, bundleRes] = await Promise.all([
       lib.search(q, { filters: { type: "page" } }),
       lib.search(q, { filters: { type: "blog" }, sort: { date: "desc" } }),
     ]);
@@ -111,16 +111,38 @@ async function runQuery(q) {
 
   if (token !== lastQueryToken) return;
 
-  const [posts, pages, bundles] = await Promise.all([
-    Promise.all(postRes.results.slice(0, MAX_POSTS).map((r) => r.data())),
-    Promise.all(pageRes.results.slice(0, MAX_PAGES).map((r) => r.data())),
+  // Pull data for ALL page results (not just MAX_PAGES) so we can mine post sub-results
+  // from across categories and authors. The page-bucket display is still capped to MAX_PAGES.
+  const [allPages, bundles] = await Promise.all([
+    Promise.all(pageRes.results.map((r) => r.data())),
     Promise.all(bundleRes.results.slice(0, MAX_BUNDLES).map((r) => r.data())),
   ]);
 
   if (token !== lastQueryToken) return;
 
+  const posts  = derivePosts(allPages).slice(0, MAX_POSTS);
+  const pages  = allPages.slice(0, MAX_PAGES);
+
   render(q, posts, pages, bundles);
   openPanel();
+}
+
+// Aggregate post sub-results across all type=page results, dedupe by post id, sort by date desc.
+function derivePosts(pageResults) {
+  const seen = new Map(); // id -> { idDate, sub_result, parentMetaTitle }
+  for (const page of pageResults) {
+    const subs = page.sub_results || [];
+    for (const sub of subs) {
+      const m = (sub.url || "").match(POST_ID_RE);
+      if (!m) continue;
+      const idDate = m[1];
+      const idSlug = m[2];
+      const id = `${idDate}-${idSlug}`;
+      if (seen.has(id)) continue;
+      seen.set(id, { idDate, sub, parentMetaTitle: page.meta && page.meta.title });
+    }
+  }
+  return [...seen.values()].sort((a, b) => b.idDate.localeCompare(a.idDate));
 }
 
 function render(q, posts, pages, bundles) {
@@ -151,21 +173,19 @@ function renderSection(heading, results, cardFn) {
   </section>`;
 }
 
-function renderPostCard(r) {
-  const m       = r.meta || {};
-  const url     = m.url || r.url;
-  const title   = m.title || "Untitled";
-  const dateIso = m.date || "";
-  const author  = m.author || "";
-  const excerpt = r.excerpt || "";
+function renderPostCard(p) {
+  const sub     = p.sub;
+  const url     = sub.url;
+  const title   = sub.title || "Untitled";
+  const dateIso = p.idDate || "";
+  const excerpt = sub.excerpt || "";
 
   return `<li>
-    <a class="search-result search-result--post" href="${escapeAttr(url)}" target="_blank" rel="noopener">
+    <a class="search-result search-result--post" href="${escapeAttr(url)}">
       <h4 class="search-result__title">${escapeHtml(title)}</h4>
-      <p class="search-result__meta">
-        ${dateIso ? `<time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>` : ""}
-        ${author ? `<span class="search-result__author">${escapeHtml(author)}</span>` : ""}
-      </p>
+      ${dateIso ? `<p class="search-result__meta">
+        <time datetime="${escapeAttr(dateIso)}">${escapeHtml(formatDate(dateIso))}</time>
+      </p>` : ""}
       <p class="search-result__excerpt">${excerpt}</p>
     </a>
   </li>`;
@@ -264,7 +284,12 @@ function byTitleAsc(a, b) {
 }
 
 function formatDate(iso) {
-  const d = new Date(iso);
+  // Parse YYYY-MM-DD as a local-time date so dates near midnight UTC don't
+  // shift to the previous day in negative-UTC timezones.
+  const ymd = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  const d = ymd
+    ? new Date(Number(ymd[1]), Number(ymd[2]) - 1, Number(ymd[3]))
+    : new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
   return new Intl.DateTimeFormat(undefined, {
     year: "numeric", month: "short", day: "numeric",
