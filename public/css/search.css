@@ -96,6 +96,10 @@ button.search-results-panel__close:focus-visible {
   .search-results-panel {
     position: fixed;
     inset: 0;
+    /* Override the desktop-rule centering (left:50% + translateX) so the panel
+       fills the viewport on mobile instead of shrinking to half-width. */
+    left: 0;
+    transform: none;
     width: auto;
     max-block-size: none;
     border: 0;
