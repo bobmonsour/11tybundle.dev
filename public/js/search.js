@@ -8,11 +8,23 @@ const MAX_PAGES           = 5;
 const MAX_BUNDLES         = 5;
 const POST_ID_RE          = /#post-(\d{4}-\d{2}-\d{2})-(.+)$/;
 
-// Auto-highlight matched terms on the destination page when arrived via a search result.
+// On every page load, if the URL was arrived at from a search result (?highlight=…),
+// (1) load Pagefind's highlight plugin so matched terms are visibly marked in the body, and
+// (2) tag the targeted post anchor with the .bundleitem-highlight class so the surrounding
+// card gets the dotted outline (the CSS is in public/css/channels.css via :has selector).
 if (typeof window !== "undefined" && new URLSearchParams(window.location.search).has(HIGHLIGHT_PARAM)) {
   import(PAGEFIND_HIGHLIGHT)
-    .then((mod) => { new mod.PagefindHighlight({ highlightParam: HIGHLIGHT_PARAM }); })
+    .then((mod) => {
+      const Highlighter = mod.default || mod.PagefindHighlight;
+      if (Highlighter) new Highlighter({ highlightParam: HIGHLIGHT_PARAM });
+    })
     .catch(() => {});
+
+  const hash = window.location.hash;
+  if (hash && hash.length > 1) {
+    const target = document.getElementById(hash.slice(1));
+    if (target) target.classList.add("bundleitem-highlight");
+  }
 }
 
 const navInput   = document.getElementById("site-search");
