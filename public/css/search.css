@@ -111,6 +111,9 @@ button.search-results-panel__close:focus-visible {
   .search-results-panel__input {
     display: block;
     width: 100%;
+    /* Push the input below the absolutely-positioned close button so the X
+       remains tap-targetable in the upper-right corner of the overlay. */
+    margin-block-start: 3rem;
     font-size: var(--step-1);
     padding: var(--space-xs);
     background: var(--surface-fore);
