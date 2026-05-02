@@ -10,7 +10,28 @@
       "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena remote -v)",
       "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena fetch --dry-run)",
       "Bash(git -C /Users/Bob/Dropbox/Docs/Sites/back-to-pasadena status)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(npm view *)",
+      "Bash(node -e ' *)",
+      "Bash(node *)",
+      "Bash(awk '/^## Task 8:/,/^## Task 9:/' /Users/Bob/Dropbox/Docs/Sites/11tybundle/11tybundle.dev/docs/superpowers/plans/2026-05-02-better-search.md)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(grep -E \"^\\\\s*$\" content/search-index/index.njk)",
+      "Bash(xargs -I{} wc -c {})",
+      "Bash(xargs rm *)",
+      "Bash(chflags -R nouchg _site)",
+      "Bash(pkill -f \"npm run build\")",
+      "Bash(pkill -f \"@11ty/eleventy\")",
+      "Bash(echo \"orphan check exit=$?\")",
+      "Bash(npm uninstall *)",
+      "Bash(awk '/<article class=\"directory__card directory--detail\" data-pagefind-body>/,/<\\\\/article>/' _site/firehose/index.html)",
+      "Bash(npm ls *)",
+      "Bash(npx -y pagefind --help)",
+      "Bash(npx -y pagefind --site _site --force-language unknown --verbose)",
+      "Bash(awk '/^button:not\\\\\\(.lyt-playbtn\\\\\\),/,/^[a-z\\\\.\\\\#]/' _site/css/global-*.css)",
+      "Bash(curl -s http://localhost:8080/pagefind/pagefind-entry.json)",
+      "Bash(curl -s http://localhost:8080/showcase/redfang-net/)"
     ]
   }
 }
