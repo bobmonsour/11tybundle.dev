@@ -267,12 +267,14 @@ function renderPageCard(r, q) {
   const m       = r.meta || {};
   const url     = appendHighlight(m.url || r.url, q);
   const title   = m.title || "Untitled";
-  // Prefer the explicit description meta when present (Author and Showcase pages set it)
-  // so the excerpt is the description text — not whatever Pagefind auto-extracted from
-  // the page body. We apply our own <mark> highlights for the query terms.
-  const excerpt = m.description
-    ? highlightInText(m.description, q)
-    : (r.excerpt || "");
+  // Category pages show title only — the page lists posts in the category, and the
+  // auto-extracted excerpt (post titles/descriptions) just adds noise. Author and
+  // Showcase pages prefer the explicit description meta when present, falling back
+  // to Pagefind's excerpt.
+  const isCategory = title.startsWith("Category: ");
+  const excerpt = isCategory
+    ? ""
+    : (m.description ? highlightInText(m.description, q) : (r.excerpt || ""));
 
   return `<li>
     <a class="search-result search-result--page" href="${escapeAttr(url)}">
