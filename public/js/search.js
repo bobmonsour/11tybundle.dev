@@ -23,11 +23,20 @@ if (typeof window !== "undefined" && new URLSearchParams(window.location.search)
     .then((mod) => {
       const Highlighter = mod.default || mod.PagefindHighlight;
       if (Highlighter) new Highlighter({ highlightParam: HIGHLIGHT_PARAM });
-      if (target) {
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          target.scrollIntoView({ block: "start" });
-        }));
-      }
+      if (!target) return;
+
+      // Mark injection may run across several microtasks/frames, shifting layout above
+      // the anchor. Watch for DOM mutations to settle, then re-scroll the target into
+      // view. Belt-and-suspenders: also scroll once after a hard timeout cap.
+      let settleTimer = null;
+      const rescroll = () => target.scrollIntoView({ block: "start" });
+      const observer = new MutationObserver(() => {
+        if (settleTimer) clearTimeout(settleTimer);
+        settleTimer = setTimeout(() => { observer.disconnect(); rescroll(); }, 80);
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+      // Cap: if no mutations arrive at all (sync mark.js path), still scroll.
+      setTimeout(() => { observer.disconnect(); rescroll(); }, 600);
     })
     .catch(() => {});
 }
