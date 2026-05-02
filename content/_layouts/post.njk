@@ -5,6 +5,10 @@ channelsPage: true
 ---
 {% include "partials/blog-header.njk" %}
 <div class="section" data-pagefind-body>
+  <span class="visually-hidden" data-pagefind-meta="title">Issue #{{ bundleIssue }}</span>
+  <span class="visually-hidden" data-pagefind-meta="date" data-pagefind-sort="date">{{ page.date | formatYMD }}</span>
+  <span class="visually-hidden" data-pagefind-meta="url">{{ page.url }}</span>
+  <span class="visually-hidden" data-pagefind-filter="type">blog</span>
   <div class="post__layout container">
     <dl class="calendar" data-pagefind-ignore="all">
       <dt>Issue</dt>
@@ -17,7 +21,7 @@ channelsPage: true
         {{ title | blogTitleToList | safe }}
         <h2 class="visually-hidden">{{ title | safe }}</h2>
       {% else %}
-        <h2 class="post__title" id="{{ title | slugify }}" data-date="{{ item.Date | formatYMD }}" data-weight="{{ pfweights.blogContent }}" data-pagefind-sort="date[data-date], weight[data-weight]">{{ title | safe }}</h2>
+        <h2 class="post__title" id="{{ title | slugify }}">{{ title | safe }}</h2>
       {% endif %}
 
       {% set releases = bundledata.releaseList | getBundleItems(bundleIssue, "release") %}
