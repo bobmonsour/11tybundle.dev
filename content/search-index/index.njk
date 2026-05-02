@@ -1,0 +1,46 @@
+---
+permalink: /search-index/
+eleventyExcludeFromCollections: true
+title: Search Index
+description: Hidden index page for Pagefind. Not for human visitors.
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Search Index</title>
+</head>
+<body data-pagefind-ignore="all">
+  <div data-pagefind-ignore="all" hidden>
+    {%- for category in bundledata.categories %}
+      <div data-pagefind-body>
+        <span data-pagefind-meta="title">Category: {{ category.name }}</span>
+        <span data-pagefind-meta="url">/categories/{{ category.name | slugify }}/</span>
+        <span data-pagefind-filter="type:page"></span>
+        Category: {{ category.name }}
+      </div>
+    {%- endfor %}
+
+    {%- for author in bundledata.authors %}
+      <div data-pagefind-body>
+        <span data-pagefind-meta="title">Author: {{ author.name }}</span>
+        <span data-pagefind-meta="url">/authors/{{ author.slugifiedAuthor }}/</span>
+        <span data-pagefind-filter="type:page"></span>
+        Author: {{ author.name }}
+        {%- if author.description %} {{ author.description | safe }}{%- endif %}
+      </div>
+    {%- endfor %}
+
+    {%- for site in showcasedata.sites %}
+      <div data-pagefind-body>
+        <span data-pagefind-meta="title">Showcase: {{ site.title }}</span>
+        <span data-pagefind-meta="url">/showcase/{{ site.link | getHostname | slugify }}/</span>
+        <span data-pagefind-filter="type:page"></span>
+        Showcase: {{ site.title }}
+        {%- if site.description %} {{ site.description | safe }}{%- endif %}
+      </div>
+    {%- endfor %}
+  </div>
+</body>
+</html>
