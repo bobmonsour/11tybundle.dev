@@ -11,5 +11,6 @@ scripts/
 .github/
 log/
 content/screenshots/*
+content/og-images/*
 content/_data/charts/
 .wrangler/tmp/
