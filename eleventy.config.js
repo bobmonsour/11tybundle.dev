@@ -20,6 +20,7 @@ export default function (eleventyConfig) {
     "./public/robots.txt": "/",
     "./content/img/": "img",
     "./content/screenshots/": "screenshots",
+    "./content/og-images/": "og-images",
   });
 
   // for local development build performance improvements

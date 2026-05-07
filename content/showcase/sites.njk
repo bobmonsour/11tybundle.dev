@@ -4,7 +4,7 @@
 		title: "{{ site.title }}",
 		description: "{{ site.description | safe }}",
 		permalink: "/showcase/{{ site.link | getHostname | slugify }}/",
-    ogImage: "{{ site.screenshotpath }}",
+    ogImage: "{{ site.screenshotpath | replace('/screenshots/', '/og-images/') | replace('-large.jpg', '-og.jpg') }}",
     ogImageAlt: "Screenshot of {{ site.link | safe }}",
 	},
 	pagination:	{
