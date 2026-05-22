@@ -8,7 +8,7 @@
     "start": "npx @11ty/eleventy --serve",
     "postdev": "npx -y pagefind --site _site --force-language unknown --serve",
     "rs": "npm run start && npm run postdev",
-    "build": "npm run clean && npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy",
     "postbuild": "npx -y pagefind --site _site --force-language unknown ",
     "deploy": "npm run build && npx wrangler deploy",
     "debug": "DEBUG=* npx @11ty/eleventy --serve",
