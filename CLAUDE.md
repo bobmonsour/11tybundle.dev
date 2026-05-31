@@ -295,3 +295,17 @@ Notes on specific fields:
 - **`milestones`** marks Eleventy version releases and the site launch — not currently annotated on the chart.
 - **`prolificAuthors`** is a flat sorted array (`name`, `site`, `count`); the page renders authors with 5+ posts.
 - **`missingData`** has four sections (`rssLink`, `favicon`, `authorDescription`, `blogDescription`), each with `count`, `percentage`, and an `authors` or `posts` array. `blogDescription.posts` entries include `author` and `slugifiedAuthor`, and `link` points to the post on a category page (using the first category) with a `bundleitem_highlight` query parameter and fragment ID, so the page can scroll and highlight the entry rather than send the visitor to the external site. Posts are sorted by author name, then title.
+
+<!-- worklog:start -->
+## Worklog
+
+When wrapping up a session here (I say "done" / "wrap up"), or when I say "log this",
+record a worklog entry to the projects registry — run from this directory so the slug
+auto-detects:
+
+    projects log-note "<one-sentence summary of what got done>
+    Next: <the next step to resume from>"
+
+This writes a dated entry to the project's Notes in the registry; it does not modify
+this repo. Keep it to the summary + Next line — detail lives in git history.
+<!-- worklog:end -->
