@@ -304,13 +304,34 @@ export default async function () {
         const repo = urlParts[urlParts.length - 1];
 
         // fetch repo metadata for this starter (per-starter concurrent calls)
-        const [repoData, commitsData, packageJsonData] = await Promise.all([
+        const [repoData, commitsData, rootPackageJson] = await Promise.all([
           octokit.repos.get({ owner, repo }),
           octokit.repos.listCommits({ owner, repo, per_page: 1 }),
           octokit.repos
             .getContent({ owner, repo, path: "package.json" })
             .catch(() => null),
         ]);
+
+        // package.json may live in a subdirectory rather than the repo root.
+        // If it isn't at the root, check the top-level directories in
+        // alphabetical order and use the first one that contains a package.json.
+        let packageJsonData = rootPackageJson;
+        if (!packageJsonData) {
+          const rootContents = await octokit.repos
+            .getContent({ owner, repo, path: "" })
+            .catch(() => null);
+          if (rootContents && Array.isArray(rootContents.data)) {
+            const dirs = rootContents.data
+              .filter((entry) => entry.type === "dir")
+              .sort((a, b) => a.name.localeCompare(b.name));
+            for (const dir of dirs) {
+              packageJsonData = await octokit.repos
+                .getContent({ owner, repo, path: `${dir.name}/package.json` })
+                .catch(() => null);
+              if (packageJsonData) break;
+            }
+          }
+        }
 
         const lastCommitDate = commitsData.data[0].commit.committer.date;
         const date = new Date(lastCommitDate);
