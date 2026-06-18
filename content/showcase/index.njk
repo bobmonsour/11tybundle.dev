@@ -24,10 +24,10 @@ permalink: /showcase/
             sizes="(min-width: 768px) 480px, 100vw"
             alt="Screenshot of {{ site.title | safe }}"
             eleventy:widths="640,1280,1920"
-            {% if loop.index < 9 %}loading="eager"{% else %}loading="lazy"{% endif %}
+            {% if loop.index > 9 %}loading="lazy"{% else %}loading="eager"{% endif %}
             >
           <figcaption>
-            {{ site.favicon | genFaviconHtml(1) | safe }}
+            {{ site.favicon | genFaviconHtml(loop.index) | safe }}
             <a href="/showcase/{{ site.link | getHostname | slugify }}">{{ site.link }}</a>
               <div class="details visually-hidden">
                 {% if site.description %}

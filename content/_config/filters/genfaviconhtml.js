@@ -2,8 +2,8 @@
 // Adds loading="lazy" when loop count exceeds 10
 
 export function genFaviconHtml(faviconRef, loopCount) {
-  const shouldLazyLoad = loopCount > 10;
-  const lazyAttr = shouldLazyLoad ? ' loading="lazy"' : "";
+  const shouldLazyLoad = loopCount > 9;
+  const lazyAttr = shouldLazyLoad ? ' loading="lazy"' : ' loading="eager"';
 
   // use the globe icon if no faviconRef is provided
   if (!faviconRef) {
