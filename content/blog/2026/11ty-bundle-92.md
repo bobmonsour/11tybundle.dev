@@ -14,7 +14,14 @@ tags:
 
 Well, we bought a house! And while I'm still busy dealing with that and an upcoming move, I've been feeling a bit more inspired to cover the 11ty beat again.
 
-On the Eleventy Discord front, Zach made some news. Rather than paraphrase, I'll just drop it here (the **bold** emphasis is mine).
+**THIS JUST IN:** No sooner than I thought I had put this issue to bed, I checked my GitHub email folder to find a message titled:
+
+_Pre-release v4.0.0-alpha.8 - Build Awesome v4.0.0-alpha.8_
+
+And here are [the release notes](https://github.com/11ty/buildawesome/releases/tag/v4.0.0-alpha.8).
+
+
+In other news, on the Eleventy Discord front, Zach made an announcement. Rather than paraphrase, I'll just drop it here (the **bold** emphasis is mine).
 
 _I did want to make a small announcement here that soon you’ll see some news about the Web Awesome Discord Server pivoting to include Font and Build Awesome channels (an Awesome Discord Server, if you will). Notably the Build Awesome channels will be primarily to facilitate the Kickstarter rewards for sponsors._
 
