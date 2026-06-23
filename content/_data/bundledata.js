@@ -339,14 +339,23 @@ export default async function () {
         const formattedDate = date.toLocaleDateString("en-US", options);
 
         let version = null;
+        let versionBrand = null;
         if (packageJsonData) {
           const content = Buffer.from(
             packageJsonData.data.content,
             "base64",
           ).toString("utf-8");
-          const regex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
-          const match = content.match(regex);
-          if (match) version = match[1];
+          const eleventyRegex = /"@11ty\/eleventy":\s*"\^?([^"]+)"/;
+          const awesomeRegex = /"@awesome\.me\/buildawesome":\s*"\^?([^"]+)"/;
+          const eleventyMatch = content.match(eleventyRegex);
+          const awesomeMatch = content.match(awesomeRegex);
+          if (eleventyMatch) {
+            version = eleventyMatch[1];
+            versionBrand = "11ty";
+          } else if (awesomeMatch) {
+            version = awesomeMatch[1];
+            versionBrand = "Build Awesome";
+          }
         }
 
         enrichedStarters.push({
@@ -354,8 +363,9 @@ export default async function () {
           Stars: repoData.data.stargazers_count,
           Date: date.toISOString().split("T")[0],
           LastUpdated: formattedDate,
-          description: starter.description || repoData.data.description,
+          description: repoData.data.description || starter.description,
           Version: version,
+          versionBrand: versionBrand,
           Owner: repoData.data.owner.login,
           OwnerUrl: repoData.data.owner.html_url,
         });
