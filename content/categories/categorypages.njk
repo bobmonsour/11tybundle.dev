@@ -2,7 +2,7 @@
 {
 	eleventyComputed: {
 		title: "{{ category.name }}",
-		description: "Posts in the 11ty Bundle with the category: {{ category.name }}",
+		description: "{{ category.count }} Posts in the 11ty Bundle with the category: {{ category.name }}",
 		permalink: "/categories/{{ category.name | slugify }}/",
 	},
 	pagination:	{
