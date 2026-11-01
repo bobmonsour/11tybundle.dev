@@ -1,7 +1,79 @@
 // Renders the Atom feed as a readable page without XSLT, see #264.
-// Layout mirrors the old public/css/feed.xsl; styles live in /css/feed.css.
+// Layout mirrors the old public/css/feed.xsl.
 const HTML = "http://www.w3.org/1999/xhtml";
 const ATOM = "http://www.w3.org/2005/Atom";
+
+// Styles are inlined (not a linked stylesheet) so the page is styled as soon
+// as it's built, with no extra request and no flash of unstyled content.
+const FEED_CSS = `
+:root {
+  /* Type scale from https://www.fluid-type-scale.com/, smallest to largest */
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  --body-background: #fff1e5;
+  --brand-font: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+  --brand-color: black;
+  --link-hover-color: yellow;
+  --dark-accent-color: #005bbb;
+}
+
+::selection {
+  background-color: var(--link-hover-color);
+  color: var(--brand-color);
+}
+
+html,
+body {
+  margin: auto;
+  padding: 20px;
+  max-width: 90ch;
+  background-color: var(--body-background);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--brand-color);
+  line-height: 1.6;
+}
+
+html,
+body,
+button,
+code,
+input {
+  font-family: var(--brand-font);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--brand-color);
+}
+
+h2 {
+  font-size: var(--font-size-md);
+  margin-block-end: 0;
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark-accent-color);
+}
+
+a:hover {
+  background-color: var(--link-hover-color);
+}
+
+p {
+  font-size: var(--font-size-md);
+}
+`;
 
 // RSS icon from https://commons.wikimedia.org/wiki/File:Feed-icon.svg
 const RSS_ICON = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="vertical-align: text-bottom; width: 1.2em; height: 1.2em;" class="pr-1" id="RSSicon" viewBox="0 0 256 256" aria-hidden="true">
@@ -81,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "viewport",
         content: "width=device-width, initial-scale=1",
       }),
-      h("link", { rel: "stylesheet", href: "/css/feed.css" }),
+      h("style", {}, FEED_CSS),
     ),
     h(
       "body",

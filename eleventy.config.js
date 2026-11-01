@@ -15,7 +15,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./public/fonts/": "/fonts/",
     "./public/css/feed.xsl": "/",
-    "./public/css/feed.css": "/css/feed.css",
     "./public/js/theme.js": "/js/theme.js",
     "./public/js/pretty-atom-feed.js": "/js/pretty-atom-feed.js",
     "./public/_redirects": "/",
