@@ -1,4 +1,11 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(pdfinfo *)",
+      "Bash(shasum *)",
+      "mcp__claude-in-chrome__tabs_context_mcp"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
