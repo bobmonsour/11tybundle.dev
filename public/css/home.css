@@ -3,6 +3,18 @@
      stays on one line from 768px up (tracks container width, ~4% headroom). */
   > h1 {
     font-size: clamp(1.9438rem, -0.05rem + 4.128vw, 3.47rem);
+
+    /* Smaller external-link icon with a tighter gap, so the heading
+       still fits on one line (default icon reserves 1.25em). */
+    a[href^="http"] {
+      padding-right: 0.5em;
+
+      &::after {
+        width: 0.4em;
+        margin-left: 0.08em;
+        transform: translateY(0.3em);
+      }
+    }
   }
 
   @media (width >=768px) {
