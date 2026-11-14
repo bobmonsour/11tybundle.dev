@@ -1,4 +1,10 @@
 .hero {
+  /* Smaller than the global h1 so "Bundles of 11ty (Build Awesome) know-how"
+     stays on one line from 768px up (tracks container width, ~4% headroom). */
+  > h1 {
+    font-size: clamp(1.9438rem, -0.05rem + 4.128vw, 3.47rem);
+  }
+
   @media (width >=768px) {
     display: grid;
     grid-template-columns: 2fr 4fr;
