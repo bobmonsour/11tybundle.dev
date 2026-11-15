@@ -13,8 +13,28 @@ import { cacheDuration } from "./cacheconfig.js";
 import { Octokit } from "@octokit/rest";
 import { Buffer } from "buffer";
 
+// Octokit's request-log plugin logs every failed request before our .catch()
+// runs. A 404 on a /contents/ path is expected (probing for package.json in
+// starter repos, with a subdirectory fallback), so skip that one case and
+// keep logging all other errors.
+const octokitLog = {
+  debug: () => {},
+  info: () => {},
+  warn: console.warn,
+  error: (message, ...rest) => {
+    if (
+      typeof message === "string" &&
+      /^GET \/repos\/[^/]+\/[^/]+\/contents\/\S* - 404 /.test(message)
+    ) {
+      return;
+    }
+    console.error(message, ...rest);
+  },
+};
+
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN, // personal access token
+  log: octokitLog,
 });
 
 // main function to generate and return the bundle data
